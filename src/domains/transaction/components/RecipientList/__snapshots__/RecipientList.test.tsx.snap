@@ -3,10 +3,10 @@
 exports[`RecipientList > should conditionally disable remove button 1`] = `
 <div>
   <div
-    class="css-1sfei0c"
+    class="recipient-list w-full"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -110,7 +110,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -215,7 +215,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -319,7 +319,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -486,10 +486,10 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
 exports[`RecipientList > should render condensed variant 1`] = `
 <div>
   <div
-    class="css-1sfei0c"
+    class="recipient-list w-full"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -589,7 +589,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -661,7 +661,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -733,7 +733,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -840,10 +840,10 @@ exports[`RecipientList > should render condensed variant 1`] = `
 exports[`RecipientList > should render editable 1`] = `
 <div>
   <div
-    class="css-1sfei0c"
+    class="recipient-list w-full"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -947,7 +947,7 @@ exports[`RecipientList > should render editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -1051,7 +1051,7 @@ exports[`RecipientList > should render editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -1155,7 +1155,7 @@ exports[`RecipientList > should render editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -1322,10 +1322,10 @@ exports[`RecipientList > should render editable 1`] = `
 exports[`RecipientList > should render non-editable 1`] = `
 <div>
   <div
-    class="css-1sfei0c"
+    class="recipient-list w-full"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -1413,7 +1413,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -1468,7 +1468,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -1523,7 +1523,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -1592,10 +1592,10 @@ exports[`RecipientList > should render non-editable 1`] = `
 exports[`RecipientList > should render without amount column 1`] = `
 <div>
   <div
-    class="css-1sfei0c"
+    class="recipient-list w-full"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -1699,7 +1699,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -1775,7 +1775,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -1851,7 +1851,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3

@@ -443,7 +443,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
         class="flex flex-col"
       >
         <span
-          class="inline-block sm:hidden mx-auto text-theme-secondary-text font-semibold mb-2"
+          class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
         />
         <ul
           class="flex space-x-3"
@@ -1042,7 +1042,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
         class="flex flex-col"
       >
         <span
-          class="inline-block sm:hidden mx-auto text-theme-secondary-text font-semibold mb-2"
+          class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
         />
         <ul
           class="flex space-x-3"
@@ -1677,7 +1677,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
         class="flex flex-col"
       >
         <span
-          class="inline-block sm:hidden mx-auto text-theme-secondary-text font-semibold mb-2"
+          class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
         />
         <ul
           class="flex space-x-3"

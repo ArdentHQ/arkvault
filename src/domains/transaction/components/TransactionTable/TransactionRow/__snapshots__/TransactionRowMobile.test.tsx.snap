@@ -5,7 +5,7 @@ exports[`TransactionRowMobile > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="group group !border-b-0 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group !border-b-0"
         data-testid="TableRow"
       >
         <td
@@ -28,7 +28,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                 >
                   <span
-                    class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                    class="no-ligatures cursor-pointer text-theme-primary-600"
                     data-testid="TruncateMiddle"
                   >
                     ea63b…5c79b
@@ -87,7 +87,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -172,7 +172,7 @@ exports[`TransactionRowMobile > should render 2`] = `
   <table>
     <tbody>
       <tr
-        class="group group !border-b-0 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group !border-b-0"
         data-testid="TableRow"
       >
         <td
@@ -195,7 +195,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                 >
                   <span
-                    class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                    class="no-ligatures cursor-pointer text-theme-primary-600"
                     data-testid="TruncateMiddle"
                   >
                     ea63b…5c79b
@@ -254,7 +254,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -339,7 +339,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class="group group !border-b-0 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group !border-b-0"
         data-testid="TableRow"
       >
         <td
@@ -485,7 +485,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="group group !border-b-0 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group !border-b-0"
         data-testid="TableRow"
       >
         <td
@@ -631,7 +631,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class="group group !border-b-0 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group !border-b-0"
         data-testid="TableRow"
       >
         <td
@@ -654,7 +654,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                 >
                   <span
-                    class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                    class="no-ligatures cursor-pointer text-theme-primary-600"
                     data-testid="TruncateMiddle"
                   >
                     ea63b…5c79b
@@ -787,7 +787,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
   <table>
     <tbody>
       <tr
-        class="group group !border-b-0 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group !border-b-0"
         data-testid="TableRow"
       >
         <td
@@ -810,7 +810,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                 >
                   <span
-                    class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                    class="no-ligatures cursor-pointer text-theme-primary-600"
                     data-testid="TruncateMiddle"
                   >
                     ea63b…5c79b

@@ -79,7 +79,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -281,7 +281,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -298,7 +298,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -346,7 +346,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -363,7 +363,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -502,7 +502,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -704,7 +704,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -721,7 +721,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -769,7 +769,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -786,7 +786,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -925,7 +925,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -1127,7 +1127,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -1144,7 +1144,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -1190,7 +1190,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -1207,7 +1207,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -1462,7 +1462,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -1784,7 +1784,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -2106,7 +2106,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -2312,7 +2312,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -2514,7 +2514,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -2660,7 +2660,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -2862,7 +2862,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -2879,7 +2879,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -2925,7 +2925,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -2942,7 +2942,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -3081,7 +3081,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -3283,7 +3283,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -3300,7 +3300,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -3348,7 +3348,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -3365,7 +3365,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -3504,7 +3504,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -3755,7 +3755,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -3772,7 +3772,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -3834,7 +3834,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -3851,7 +3851,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -4004,7 +4004,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -4255,7 +4255,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -4272,7 +4272,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -4334,7 +4334,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -4351,7 +4351,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -4504,7 +4504,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -4755,7 +4755,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -4772,7 +4772,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -4832,7 +4832,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -4849,7 +4849,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -5118,7 +5118,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -5440,7 +5440,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -5762,7 +5762,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -5968,7 +5968,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -6219,7 +6219,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -6379,7 +6379,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -6630,7 +6630,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -6647,7 +6647,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -6707,7 +6707,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -6724,7 +6724,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -6877,7 +6877,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="table-wrapper with-x-padding"
                   role="table"
                 >
                   <table
@@ -7128,7 +7128,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -7145,7 +7145,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   Sample Wallet
@@ -7207,7 +7207,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td
@@ -7224,7 +7224,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2

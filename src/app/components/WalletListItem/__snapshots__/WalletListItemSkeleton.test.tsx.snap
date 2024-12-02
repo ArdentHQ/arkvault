@@ -7,7 +7,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       data-testid="WalletListSkeleton"
     >
       <tr
-        class="group css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
         data-testid="TableRow"
       >
         <td>
@@ -207,7 +207,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       data-testid="WalletListSkeleton"
     >
       <tr
-        class="group css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
         data-testid="TableRow"
       >
         <td>

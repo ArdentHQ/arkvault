@@ -6,7 +6,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -178,8 +178,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
           role="rowgroup"
         >
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -284,8 +284,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -390,8 +390,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -496,8 +496,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -602,8 +602,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -708,8 +708,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -814,8 +814,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -920,8 +920,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1026,8 +1026,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1132,8 +1132,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1238,8 +1238,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1344,8 +1344,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1450,8 +1450,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1556,8 +1556,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1662,8 +1662,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1768,8 +1768,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1874,8 +1874,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -1980,8 +1980,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2086,8 +2086,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2192,8 +2192,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2298,8 +2298,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2404,8 +2404,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2510,8 +2510,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2616,8 +2616,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2722,8 +2722,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2828,8 +2828,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -2934,8 +2934,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3040,8 +3040,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3146,8 +3146,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3252,8 +3252,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3358,8 +3358,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3464,8 +3464,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3570,8 +3570,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3676,8 +3676,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3782,8 +3782,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3888,8 +3888,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -3994,8 +3994,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4100,8 +4100,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4206,8 +4206,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4312,8 +4312,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4418,8 +4418,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4524,8 +4524,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4630,8 +4630,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4736,8 +4736,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4842,8 +4842,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -4948,8 +4948,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -5054,8 +5054,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -5160,8 +5160,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -5266,8 +5266,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -5372,8 +5372,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -5478,8 +5478,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -5627,7 +5627,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -5760,7 +5760,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -5932,8 +5932,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
           role="rowgroup"
         >
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6038,8 +6038,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6144,8 +6144,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6250,8 +6250,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6356,8 +6356,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6462,8 +6462,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6568,8 +6568,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6674,8 +6674,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6780,8 +6780,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6886,8 +6886,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -6992,8 +6992,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7098,8 +7098,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7204,8 +7204,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7310,8 +7310,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7416,8 +7416,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7522,8 +7522,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7628,8 +7628,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7734,8 +7734,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7840,8 +7840,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -7946,8 +7946,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8052,8 +8052,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8158,8 +8158,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8264,8 +8264,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8370,8 +8370,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8476,8 +8476,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8582,8 +8582,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8688,8 +8688,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8794,8 +8794,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -8900,8 +8900,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9006,8 +9006,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9112,8 +9112,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9218,8 +9218,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9324,8 +9324,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9430,8 +9430,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9536,8 +9536,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9642,8 +9642,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9748,8 +9748,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9854,8 +9854,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -9960,8 +9960,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10066,8 +10066,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10172,8 +10172,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10278,8 +10278,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10384,8 +10384,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10490,8 +10490,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10596,8 +10596,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10702,8 +10702,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10808,8 +10808,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -10914,8 +10914,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -11020,8 +11020,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -11126,8 +11126,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -11232,8 +11232,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -11381,7 +11381,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -11514,7 +11514,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -11739,8 +11739,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
           role="rowgroup"
         >
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -11866,8 +11866,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -11993,8 +11993,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -12120,8 +12120,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -12247,8 +12247,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -12374,8 +12374,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -12501,8 +12501,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -12628,8 +12628,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -12755,8 +12755,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -12882,8 +12882,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -13009,8 +13009,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -13136,8 +13136,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -13263,8 +13263,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -13390,8 +13390,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -13517,8 +13517,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -13644,8 +13644,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -13771,8 +13771,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -13898,8 +13898,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -14025,8 +14025,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -14152,8 +14152,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -14279,8 +14279,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -14406,8 +14406,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -14533,8 +14533,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -14660,8 +14660,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -14787,8 +14787,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -14914,8 +14914,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -15041,8 +15041,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -15168,8 +15168,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -15295,8 +15295,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -15422,8 +15422,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -15549,8 +15549,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -15676,8 +15676,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -15803,8 +15803,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -15930,8 +15930,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -16057,8 +16057,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -16184,8 +16184,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -16311,8 +16311,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -16438,8 +16438,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -16565,8 +16565,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -16692,8 +16692,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -16819,8 +16819,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -16946,8 +16946,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -17073,8 +17073,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -17200,8 +17200,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -17327,8 +17327,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -17454,8 +17454,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -17581,8 +17581,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -17708,8 +17708,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -17835,8 +17835,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -17962,8 +17962,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -18089,8 +18089,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -18259,7 +18259,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -18412,7 +18412,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -18637,8 +18637,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
           role="rowgroup"
         >
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -18764,8 +18764,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -18891,8 +18891,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -19018,8 +19018,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -19145,8 +19145,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -19272,8 +19272,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -19399,8 +19399,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -19526,8 +19526,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -19653,8 +19653,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -19780,8 +19780,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -19907,8 +19907,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -20034,8 +20034,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -20161,8 +20161,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -20288,8 +20288,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -20415,8 +20415,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -20542,8 +20542,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -20669,8 +20669,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -20796,8 +20796,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -20923,8 +20923,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -21050,8 +21050,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -21177,8 +21177,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -21304,8 +21304,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -21431,8 +21431,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -21558,8 +21558,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -21685,8 +21685,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -21812,8 +21812,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -21939,8 +21939,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -22066,8 +22066,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -22193,8 +22193,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -22320,8 +22320,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -22447,8 +22447,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -22574,8 +22574,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -22701,8 +22701,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -22828,8 +22828,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -22955,8 +22955,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -23082,8 +23082,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -23209,8 +23209,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -23336,8 +23336,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -23463,8 +23463,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -23590,8 +23590,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -23717,8 +23717,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -23844,8 +23844,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -23971,8 +23971,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -24098,8 +24098,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -24225,8 +24225,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -24352,8 +24352,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -24479,8 +24479,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -24606,8 +24606,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -24733,8 +24733,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -24860,8 +24860,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -24987,8 +24987,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
-            data-testid="ValidatorRowSkeleton"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+            data-testid="DelegateRowSkeleton"
           >
             <td>
               <div
@@ -25157,7 +25157,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -25310,7 +25310,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -25482,7 +25482,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -25631,7 +25631,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -25780,7 +25780,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -25972,7 +25972,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -26103,7 +26103,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -26275,7 +26275,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -26424,7 +26424,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -26573,7 +26573,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -26765,7 +26765,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -26896,7 +26896,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -27068,7 +27068,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -27217,7 +27217,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -27366,7 +27366,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -27558,7 +27558,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -27689,7 +27689,7 @@ exports[`ValidatorsTable > should render 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -27861,7 +27861,7 @@ exports[`ValidatorsTable > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -28010,7 +28010,7 @@ exports[`ValidatorsTable > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -28159,7 +28159,7 @@ exports[`ValidatorsTable > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -28351,7 +28351,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -28484,7 +28484,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -28709,7 +28709,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -28904,7 +28904,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -29099,7 +29099,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -29337,7 +29337,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -29490,7 +29490,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -29662,7 +29662,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -29811,7 +29811,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -29960,7 +29960,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -30152,7 +30152,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -30283,7 +30283,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -30455,7 +30455,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -30604,7 +30604,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -30753,7 +30753,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -30950,7 +30950,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -31080,7 +31080,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -31252,7 +31252,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -31401,7 +31401,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -31550,7 +31550,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -31742,7 +31742,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -32374,7 +32374,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
       test
     </p>
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -32546,7 +32546,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -32695,7 +32695,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -32844,7 +32844,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -33036,7 +33036,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -33169,7 +33169,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -33394,7 +33394,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -33588,7 +33588,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -33783,7 +33783,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -34021,7 +34021,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -34174,7 +34174,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -34346,7 +34346,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -34495,7 +34495,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -34644,7 +34644,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -34836,7 +34836,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -34969,7 +34969,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -35141,7 +35141,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -35290,7 +35290,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -35439,7 +35439,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -35636,7 +35636,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -35766,7 +35766,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -35938,7 +35938,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -36087,7 +36087,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -36236,7 +36236,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -36428,7 +36428,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -36561,7 +36561,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -36786,7 +36786,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -36980,7 +36980,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -37175,7 +37175,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -37413,7 +37413,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -37566,7 +37566,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -37738,7 +37738,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -37887,7 +37887,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -38036,7 +38036,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -38228,7 +38228,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -38358,7 +38358,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -38530,7 +38530,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -38679,7 +38679,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -38828,7 +38828,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -39020,7 +39020,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -39153,7 +39153,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -39325,7 +39325,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -39474,7 +39474,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -39623,7 +39623,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -39815,7 +39815,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1

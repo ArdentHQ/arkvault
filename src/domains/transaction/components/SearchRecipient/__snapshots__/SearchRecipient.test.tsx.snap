@@ -79,7 +79,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -281,7 +281,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -296,7 +296,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -349,7 +349,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -364,7 +364,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -510,7 +510,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -712,7 +712,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -727,7 +727,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -780,7 +780,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -795,7 +795,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -939,7 +939,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -1141,7 +1141,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -1156,7 +1156,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -1209,7 +1209,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -1224,7 +1224,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -1368,7 +1368,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -1570,7 +1570,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -1585,7 +1585,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -1777,6 +1777,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
@@ -1844,7 +1845,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -1875,7 +1876,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                                   class="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                 >
                                   <span
-                                    class="no-ligatures css-9nx3be"
+                                    class="no-ligatures transition-colors duration-200"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet…
@@ -2030,7 +2031,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -2232,7 +2233,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -2247,7 +2248,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -2439,6 +2440,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
@@ -2506,7 +2508,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -2537,7 +2539,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                                   class="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                 >
                                   <span
-                                    class="no-ligatures css-9nx3be"
+                                    class="no-ligatures transition-colors duration-200"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet…
@@ -2692,7 +2694,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -2894,7 +2896,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3042,7 +3044,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -3244,7 +3246,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3259,7 +3261,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -3312,7 +3314,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3327,7 +3329,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -3471,7 +3473,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -3673,7 +3675,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3688,7 +3690,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -3741,7 +3743,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-16ynu5g"
+                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3756,7 +3758,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -3948,6 +3950,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
@@ -4015,7 +4018,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="table-wrapper"
                   role="table"
                 >
                   <table
@@ -4046,7 +4049,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                                   class="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                 >
                                   <span
-                                    class="no-ligatures css-9nx3be"
+                                    class="no-ligatures transition-colors duration-200"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet…
@@ -4130,7 +4133,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                                   class="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                 >
                                   <span
-                                    class="no-ligatures css-9nx3be"
+                                    class="no-ligatures transition-colors duration-200"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet…
