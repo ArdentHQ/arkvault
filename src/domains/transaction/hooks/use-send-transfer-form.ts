@@ -71,7 +71,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			clearErrors("mnemonic");
 
 			const {
-				fee,
 				mnemonic,
 				secondMnemonic,
 				recipients,

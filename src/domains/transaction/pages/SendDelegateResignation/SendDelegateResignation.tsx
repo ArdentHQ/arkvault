@@ -89,7 +89,7 @@ export const SendDelegateResignation = () => {
 	};
 
 	const handleSubmit = async () => {
-		const { fee, mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } =
+		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } =
 			getValues();
 
 		try {

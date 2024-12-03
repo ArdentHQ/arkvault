@@ -267,7 +267,6 @@ export const SendVote = () => {
 	const submitForm = async () => {
 		clearErrors("mnemonic");
 		const {
-			fee,
 			mnemonic,
 			network,
 			senderAddress,
