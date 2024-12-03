@@ -298,7 +298,8 @@ export const SendVote = () => {
 			});
 
 			const voteTransactionInput: Services.TransactionInput = {
-				fee: +fee,
+				// @TODO: Remove hardcoded fee once fees are implemented for evm.
+				fee: 5,
 				signatory,
 			};
 

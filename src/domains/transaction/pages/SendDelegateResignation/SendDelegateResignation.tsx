@@ -104,7 +104,8 @@ export const SendDelegateResignation = () => {
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signDelegateResignation({
-				fee: +fee,
+				// @TODO: Remove hardcoded fee once fees are implemented for evm.
+				fee: 5,
 				signatory,
 			});
 

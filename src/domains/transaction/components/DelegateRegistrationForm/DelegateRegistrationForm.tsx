@@ -66,7 +66,8 @@ export const signDelegateRegistration = async ({ env, form, profile, signatory }
 		data: {
 			validatorPublicKey,
 		},
-		fee: +fee,
+		// @TODO: Remove hardcoded fee once fees are implemented for evm.
+		fee: 5,
 		signatory,
 	});
 

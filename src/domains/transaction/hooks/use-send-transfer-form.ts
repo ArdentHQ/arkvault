@@ -102,7 +102,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			setLastEstimatedExpiration(data.expiration);
 
-			const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
+			// @TODO: Remove hardcoded fee once fees are implemented for evm.
+			const transactionInput: Services.TransactionInputs = { data, fee: 5, signatory };
 
 			const abortSignal = abortReference.current.signal;
 			const { uuid, transaction } = await transactionBuilder.build(
