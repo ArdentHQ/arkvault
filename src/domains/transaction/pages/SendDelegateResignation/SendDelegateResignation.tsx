@@ -89,8 +89,7 @@ export const SendDelegateResignation = () => {
 	};
 
 	const handleSubmit = async () => {
-		const { fee, mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } =
-			getValues();
+		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } = getValues();
 
 		try {
 			const signatory = await activeWallet.signatoryFactory().make({
@@ -104,7 +103,8 @@ export const SendDelegateResignation = () => {
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({
-				fee: +fee,
+				// @TODO: Remove hardcoded fee once fees are implemented for evm.
+				fee: 5,
 				signatory,
 			});
 

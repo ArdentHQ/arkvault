@@ -15,7 +15,6 @@ describe("FilterTransactions", () => {
 		"multiSignature",
 		"transfer",
 		"vote",
-		"magistrate",
 	];
 
 	beforeAll(async () => {
@@ -248,7 +247,7 @@ describe("FilterTransactions", () => {
 				value: expect.any(String),
 			},
 			undefined,
-			["delegateRegistration", "delegateResignation", "multiSignature", "magistrate"],
+			["delegateRegistration", "delegateResignation", "multiSignature"],
 		);
 	});
 
@@ -259,12 +258,7 @@ describe("FilterTransactions", () => {
 			<FilterTransactions
 				wallets={profile.wallets().values()}
 				onSelect={onSelect}
-				selectedTransactionTypes={[
-					"delegateRegistration",
-					"delegateResignation",
-					"multiSignature",
-					"magistrate",
-				]}
+				selectedTransactionTypes={["delegateRegistration", "delegateResignation", "multiSignature"]}
 			/>,
 		);
 
