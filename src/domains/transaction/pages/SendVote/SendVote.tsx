@@ -133,7 +133,7 @@ export const SendVote = () => {
 			}
 
 			const isFullyRestoredAndSynced =
-				senderWallet?.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
+				senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
 
 			if (!isFullyRestoredAndSynced) {
 				syncProfileWallets(true);
@@ -279,9 +279,12 @@ export const SendVote = () => {
 			secondSecret,
 		} = getValues();
 
-		const abortSignal = abortReference.current?.signal;
+		const abortSignal = abortReference.current.signal;
 
 		assertWallet(activeWallet);
+
+
+		console.log("submitting")
 
 		try {
 			const signatory = await activeWallet.signatoryFactory().make({
@@ -312,11 +315,11 @@ export const SendVote = () => {
 							data: {
 								unvotes: unvotes.map((unvote) => ({
 									amount: unvote.amount,
-									id: unvote.wallet?.governanceIdentifier(),
+									id: unvote.wallet?.address()
 								})),
 								votes: votes.map((vote) => ({
 									amount: vote.amount,
-									id: vote.wallet?.governanceIdentifier(),
+									id: vote.wallet?.address()
 								})),
 							},
 						},
@@ -340,6 +343,7 @@ export const SendVote = () => {
 				}
 
 				if (senderWallet.network().votingMethod() === "split") {
+					console.log("split")
 					const unvoteResult = await transactionBuilder.build(
 						"vote",
 						{
@@ -347,7 +351,7 @@ export const SendVote = () => {
 							data: {
 								unvotes: unvotes.map((unvote) => ({
 									amount: unvote.amount,
-									id: unvote.wallet?.governanceIdentifier(),
+									id: unvote.wallet?.address()
 								})),
 							},
 						},
@@ -372,7 +376,7 @@ export const SendVote = () => {
 							data: {
 								votes: votes.map((vote) => ({
 									amount: vote.amount,
-									id: vote.wallet?.governanceIdentifier(),
+									id: vote.wallet?.address()
 								})),
 							},
 						},
@@ -395,6 +399,7 @@ export const SendVote = () => {
 					await confirmSendVote(activeWallet, "vote");
 				}
 			} else {
+				console.log("split")
 				const isUnvote = unvotes.length > 0;
 				const { uuid, transaction } = await transactionBuilder.build(
 					"vote",
@@ -402,17 +407,17 @@ export const SendVote = () => {
 						...voteTransactionInput,
 						data: isUnvote
 							? {
-									unvotes: unvotes.map((unvote) => ({
-										amount: unvote.amount,
-										id: unvote.wallet?.governanceIdentifier(),
-									})),
-								}
+								unvotes: unvotes.map((unvote) => ({
+									amount: unvote.amount,
+									id: unvote.wallet?.address(),
+								})),
+							}
 							: {
-									votes: votes.map((vote) => ({
-										amount: vote.amount,
-										id: vote.wallet?.governanceIdentifier(),
-									})),
-								},
+								votes: votes.map((vote) => ({
+									amount: vote.amount,
+									id: vote.wallet?.address(),
+								})),
+							},
 					},
 					senderWallet,
 					{ abortSignal },

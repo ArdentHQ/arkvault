@@ -167,6 +167,7 @@ export const SendTransfer = () => {
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
 			} catch (error) {
+				throw error
 				setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
