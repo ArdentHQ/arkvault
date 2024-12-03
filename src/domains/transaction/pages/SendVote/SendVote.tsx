@@ -284,8 +284,6 @@ export const SendVote = () => {
 		assertWallet(activeWallet);
 
 
-		console.log("submitting")
-
 		try {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
@@ -344,7 +342,6 @@ export const SendVote = () => {
 				}
 
 				if (senderWallet.network().votingMethod() === "split") {
-					console.log("split")
 					const unvoteResult = await transactionBuilder.build(
 						"vote",
 						{
@@ -400,7 +397,6 @@ export const SendVote = () => {
 					await confirmSendVote(activeWallet, "vote");
 				}
 			} else {
-				console.log("split")
 				const isUnvote = unvotes.length > 0;
 				const { uuid, transaction } = await transactionBuilder.build(
 					"vote",
