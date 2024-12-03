@@ -37,7 +37,7 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 const renderPage = () => {
-	const path = "/profiles/:profileId/wallets/:walletId/send-delegate-resignation";
+	const path = "/profiles/:profileId/wallets/:walletId/send-validator-resignation";
 
 	return render(
 		<Route path={path}>
@@ -92,7 +92,7 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 let mnemonicMock;
 
-describe("SendDelegateResignation", () => {
+describe("SendValidatorResignation", () => {
 	beforeAll(async () => {
 		vi.useFakeTimers({
 			shouldAdvanceTime: true,
@@ -122,9 +122,9 @@ describe("SendDelegateResignation", () => {
 		vi.useRealTimers();
 	});
 
-	describe("Delegate Resignation", () => {
+	describe("Validator Resignation", () => {
 		beforeEach(() => {
-			resignationUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
+			resignationUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-validator-resignation`;
 			history.push(resignationUrl);
 
 			mnemonicMock = vi
@@ -321,7 +321,7 @@ describe("SendDelegateResignation", () => {
 		it("should show error step and go back", async () => {
 			// Run signDelegate once to prevent assertion error (sdk).
 			try {
-				await wallet.transaction().signDelegateResignation({
+				await wallet.transaction().signValidatorResignation({
 					fee: 4,
 					signatory: await wallet.signatoryFactory().make({
 						mnemonic: MNEMONICS[1],
@@ -387,7 +387,7 @@ describe("SendDelegateResignation", () => {
 			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
 			const signMock = vi
-				.spyOn(wallet.transaction(), "signDelegateResignation")
+				.spyOn(wallet.transaction(), "signValidatorResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
@@ -436,7 +436,7 @@ describe("SendDelegateResignation", () => {
 			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
 			const signMock = vi
-				.spyOn(wallet.transaction(), "signDelegateResignation")
+				.spyOn(wallet.transaction(), "signValidatorResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
@@ -482,7 +482,7 @@ describe("SendDelegateResignation", () => {
 			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
 			const signMock = vi
-				.spyOn(wallet.transaction(), "signDelegateResignation")
+				.spyOn(wallet.transaction(), "signValidatorResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
@@ -544,7 +544,7 @@ describe("SendDelegateResignation", () => {
 
 			const secondPublicKeyMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 			const signMock = vi
-				.spyOn(wallet.transaction(), "signDelegateResignation")
+				.spyOn(wallet.transaction(), "signValidatorResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
@@ -553,11 +553,11 @@ describe("SendDelegateResignation", () => {
 			});
 			const transactionMock = createTransactionMock(wallet);
 
-			const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
+			const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-validator-resignation`;
 			history.push(resignationEncryptedUrl);
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/send-delegate-resignation">
+				<Route path="/profiles/:profileId/wallets/:walletId/send-validator-resignation">
 					<SendDelegateResignation />
 				</Route>,
 				{

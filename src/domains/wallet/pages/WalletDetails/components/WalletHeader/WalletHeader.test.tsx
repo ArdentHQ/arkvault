@@ -283,7 +283,7 @@ describe("WalletHeader", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should handle delegate registration", async () => {
+	it("should handle validator registration", async () => {
 		history.push(walletUrl);
 
 		const historySpy = vi.spyOn(history, "push");
@@ -307,10 +307,10 @@ describe("WalletHeader", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should handle delegate resignation", async () => {
+	it("should handle validator resignation", async () => {
 		history.push(walletUrl);
 
-		const walletSpy = vi.spyOn(wallet, "isDelegate").mockReturnValue(true);
+		const walletSpy = vi.spyOn(wallet, "isValidator").mockReturnValue(true);
 		const historySpy = vi.spyOn(history, "push");
 
 		render(
@@ -326,7 +326,7 @@ describe("WalletHeader", () => {
 		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR);
 
 		expect(historySpy).toHaveBeenCalledWith(
-			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-delegate-resignation`,
+			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-validator-resignation`,
 		);
 
 		historySpy.mockRestore();
