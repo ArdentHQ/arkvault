@@ -132,8 +132,7 @@ export const SendVote = () => {
 				return;
 			}
 
-			const isFullyRestoredAndSynced =
-				senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
+			const isFullyRestoredAndSynced = senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
 
 			if (!isFullyRestoredAndSynced) {
 				syncProfileWallets(true);
@@ -282,7 +281,6 @@ export const SendVote = () => {
 
 		assertWallet(activeWallet);
 
-
 		try {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
@@ -313,11 +311,11 @@ export const SendVote = () => {
 							data: {
 								unvotes: unvotes.map((unvote) => ({
 									amount: unvote.amount,
-									id: unvote.wallet?.address()
+									id: unvote.wallet?.address(),
 								})),
 								votes: votes.map((vote) => ({
 									amount: vote.amount,
-									id: vote.wallet?.address()
+									id: vote.wallet?.address(),
 								})),
 							},
 						},
@@ -348,7 +346,7 @@ export const SendVote = () => {
 							data: {
 								unvotes: unvotes.map((unvote) => ({
 									amount: unvote.amount,
-									id: unvote.wallet?.address()
+									id: unvote.wallet?.address(),
 								})),
 							},
 						},
@@ -373,7 +371,7 @@ export const SendVote = () => {
 							data: {
 								votes: votes.map((vote) => ({
 									amount: vote.amount,
-									id: vote.wallet?.address()
+									id: vote.wallet?.address(),
 								})),
 							},
 						},
@@ -403,17 +401,17 @@ export const SendVote = () => {
 						...voteTransactionInput,
 						data: isUnvote
 							? {
-								unvotes: unvotes.map((unvote) => ({
-									amount: unvote.amount,
-									id: unvote.wallet?.address(),
-								})),
-							}
+									unvotes: unvotes.map((unvote) => ({
+										amount: unvote.amount,
+										id: unvote.wallet?.address(),
+									})),
+								}
 							: {
-								votes: votes.map((vote) => ({
-									amount: vote.amount,
-									id: vote.wallet?.address(),
-								})),
-							},
+									votes: votes.map((vote) => ({
+										amount: vote.amount,
+										id: vote.wallet?.address(),
+									})),
+								},
 					},
 					senderWallet,
 					{ abortSignal },

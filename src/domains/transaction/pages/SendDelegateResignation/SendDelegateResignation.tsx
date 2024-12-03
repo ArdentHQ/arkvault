@@ -89,8 +89,7 @@ export const SendDelegateResignation = () => {
 	};
 
 	const handleSubmit = async () => {
-		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } =
-			getValues();
+		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } = getValues();
 
 		try {
 			const signatory = await activeWallet.signatoryFactory().make({

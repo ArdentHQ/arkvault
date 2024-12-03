@@ -64,7 +64,7 @@ export class HttpClient extends Http.AbstractRequest {
 			// Temporarily requesting fees from the old mainsail url, in order to mock transaction flow validations and allow the user to send transactions.
 			// @TODO: Remove it once fees are implemented in evm.
 			if (url.includes("fees")) {
-				const ur = url.replaceAll('dwallets-evm', 'dwallets')
+				const ur = url.replaceAll("dwallets-evm", "dwallets");
 				const response = await fetch(ur, options);
 
 				return new Http.Response({
