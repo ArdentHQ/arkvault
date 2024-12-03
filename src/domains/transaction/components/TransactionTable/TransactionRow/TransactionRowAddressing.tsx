@@ -113,18 +113,22 @@ export const TransactionRowAddressing = ({
 	}
 
 	if (transaction.isVoteCombination() || transaction.isVote() || transaction.isUnvote()) {
+		const username = delegates[
+			transaction.isVote() || transaction.isVoteCombination() ? "votes" : "unvotes"
+		][0]?.username()
+
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+					{username &&
 						(
-						{delegates[
-							transaction.isVote() || transaction.isVoteCombination() ? "votes" : "unvotes"
-						][0]?.username()}
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+								({username})
+							</span>
 						)
-					</span>
+					}
 				</span>
 			</div>
 		);
@@ -147,9 +151,12 @@ export const TransactionRowAddressing = ({
 				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-						({transaction.username()})
-					</span>
+					{transaction.username() && (
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+							({transaction.username()})
+						</span>
+					)
+					}
 				</span>
 			</div>
 		);
@@ -161,9 +168,11 @@ export const TransactionRowAddressing = ({
 				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-						({transaction.wallet().username()})
-					</span>
+					{transaction.wallet().username() && (
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+							({transaction.wallet().username()})
+						</span>
+					)}
 				</span>
 			</div>
 		);
