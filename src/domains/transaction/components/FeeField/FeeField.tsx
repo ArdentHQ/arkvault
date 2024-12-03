@@ -79,7 +79,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			return true;
 		}
 
-		if (type === "delegateRegistration" && !data.username) {
+		if (type === "validatorRegistration" && !data.username) {
 			resetFees();
 			return true;
 		}

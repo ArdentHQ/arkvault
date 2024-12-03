@@ -45,17 +45,17 @@ const transactionDetails = ({
 	</>
 );
 
-component.displayName = "DelegateRegistrationForm";
-transactionDetails.displayName = "DelegateRegistrationFormTransactionDetails";
+component.displayName = "ValidatorRegistrationForm";
+transactionDetails.displayName = "ValidatorRegistrationFormTransactionDetails";
 
-export const DelegateRegistrationForm: SendRegistrationForm = {
+export const ValidatorRegistrationForm: SendRegistrationForm = {
 	component,
 	formFields: ["validatorPublicKey"],
 	tabSteps: 2,
 	transactionDetails,
 };
 
-export const signDelegateRegistration = async ({ env, form, profile, signatory }: any) => {
+export const signValidatorRegistration = async ({ env, form, profile, signatory }: any) => {
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");

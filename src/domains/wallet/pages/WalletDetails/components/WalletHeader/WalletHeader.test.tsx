@@ -301,7 +301,7 @@ describe("WalletHeader", () => {
 		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR);
 
 		expect(historySpy).toHaveBeenCalledWith(
-			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/delegateRegistration`,
+			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/validatorRegistration`,
 		);
 
 		historySpy.mockRestore();
