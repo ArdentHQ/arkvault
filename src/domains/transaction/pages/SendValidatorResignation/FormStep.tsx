@@ -1,35 +1,28 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect } from "react";
-import { useFormContext } from "react-hook-form";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { Alert } from "@/app/components/Alert";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { FeeField } from "@/domains/transaction/components/FeeField";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
-import { ThemeIcon } from "@/app/components/Icon";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
+import { ThemeIcon } from "@/app/components/Icon";
 
-export const ReviewStep = ({
-	senderWallet,
-	profile,
-}: {
-	senderWallet: Contracts.IReadWriteWallet;
-	profile: Contracts.IProfile;
-}) => {
+interface FormStepProperties {
+	senderWallet: ProfilesContracts.IReadWriteWallet;
+	profile: ProfilesContracts.IProfile;
+}
+
+export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister } = useFormContext();
-
-	useEffect(() => {
-		unregister("mnemonic");
-	}, [unregister]);
-
 	return (
-		<section data-testid="SendDelegateResignation__review-step">
+		<section data-testid="SendValidatorResignation__form-step" className="space-y-6 sm:space-y-4">
 			<StepHeader
-				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
+				title={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE")}
 				titleIcon={
 					<ThemeIcon
 						dimensions={[24, 24]}
@@ -39,16 +32,21 @@ export const ReviewStep = ({
 						greenLightIcon="SendTransactionLightGreen"
 					/>
 				}
+				subtitle={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
-				<TransactionAddresses
-					labelClassName="w-auto sm:min-w-28"
-					senderAddress={senderWallet.address()}
-					network={senderWallet.network()}
-					recipients={[]}
-					profile={profile}
-				/>
+			<Alert>{t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.WARNING")}</Alert>
+
+			<div className="space-y-3 sm:space-y-4">
+				<FormField name="senderAddress">
+					<TransactionAddresses
+						senderAddress={senderWallet.address()}
+						network={senderWallet.network()}
+						recipients={[]}
+						profile={profile}
+						labelClassName="w-auto sm:min-w-32"
+					/>
+				</FormField>
 
 				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 					<div className="space-y-3 sm:space-y-0">
@@ -74,9 +72,15 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				<div className="mx-3 mt-2 sm:mx-0">
-					<TotalAmountBox amount={0} fee={getValues("fee")} ticker={senderWallet.currency()} />
-				</div>
+				<FormField name="fee">
+					<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
+					<FeeField
+						type="delegateResignation"
+						data={undefined}
+						network={senderWallet.network()}
+						profile={profile}
+					/>
+				</FormField>
 			</div>
 		</section>
 	);

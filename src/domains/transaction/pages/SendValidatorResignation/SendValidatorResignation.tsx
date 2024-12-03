@@ -28,7 +28,7 @@ enum Step {
 	ErrorStep,
 }
 
-export const SendDelegateResignation = () => {
+export const SendValidatorResignation = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 

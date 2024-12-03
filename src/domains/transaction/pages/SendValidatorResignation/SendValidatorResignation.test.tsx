@@ -4,7 +4,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SendDelegateResignation } from "./SendDelegateResignation";
+import { SendValidatorResignation } from "./SendValidatorResignation";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
@@ -41,7 +41,7 @@ const renderPage = () => {
 
 	return render(
 		<Route path={path}>
-			<SendDelegateResignation />
+			<SendValidatorResignation />
 		</Route>,
 		{
 			history,
@@ -85,9 +85,9 @@ const transactionResponse = {
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transactionResponse as any);
 
-const reviewStep = () => screen.findByTestId("SendDelegateResignation__review-step");
+const reviewStep = () => screen.findByTestId("SendValidatorResignation__review-step");
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
-const formStep = () => screen.findByTestId("SendDelegateResignation__form-step");
+const formStep = () => screen.findByTestId("SendValidatorResignation__form-step");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 let mnemonicMock;
@@ -558,7 +558,7 @@ describe("SendValidatorResignation", () => {
 
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-validator-resignation">
-					<SendDelegateResignation />
+					<SendValidatorResignation />
 				</Route>,
 				{
 					history,
