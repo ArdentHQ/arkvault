@@ -76,7 +76,7 @@ export const TransactionRowAddressing = ({
 		[profile, getWalletAlias, transaction],
 	);
 
-	const [delegates, setDelegates] = useState<{
+	const [_delegates, setDelegates] = useState<{
 		votes: Contracts.IReadOnlyWallet[];
 		unvotes: Contracts.IReadOnlyWallet[];
 	}>({
