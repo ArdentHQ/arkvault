@@ -5,6 +5,7 @@ import { Icon } from "@/app/components/Icon";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/app/hooks/use-theme";
 import Truncate from "@konforti/react-truncate";
+import { twMerge } from "tailwind-merge";
 
 export const AddressLink = ({ children, explorerLink }: { explorerLink: string; children: React.ReactNode }) => (
 	<Link to={explorerLink} showExternalIcon={false} isExternal>
@@ -12,8 +13,8 @@ export const AddressLink = ({ children, explorerLink }: { explorerLink: string; 
 	</Link>
 );
 
-export const AddressLabel = ({ children }: { children: React.ReactNode }) => (
-	<div className="text-theme-secondary-900 dark:text-theme-text">
+export const AddressLabel = ({ children, className }: { children: React.ReactNode; className?: string }) => (
+	<div className={twMerge("text-theme-secondary-900 dark:text-theme-text", className)}>
 		<Truncate truncFrom="middle">{children}</Truncate>
 	</div>
 );
