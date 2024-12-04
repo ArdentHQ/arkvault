@@ -92,6 +92,6 @@ export const DetailPadded = ({ children }: { children: React.ReactNode }) => (
 				<div className="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800" />
 			</div>
 		</div>
-		<div className="w-full sm:flex-row min-w-0">{children}</div>
+		<div className="w-full min-w-0 sm:flex-row">{children}</div>
 	</div>
 );
