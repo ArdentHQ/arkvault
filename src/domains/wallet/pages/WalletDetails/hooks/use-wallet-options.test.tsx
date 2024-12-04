@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { renderHook } from "@testing-library/react";
 import { useWalletOptions } from "./use-wallet-options";
-import { env, getDefaultProfileId, getMainsailProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
