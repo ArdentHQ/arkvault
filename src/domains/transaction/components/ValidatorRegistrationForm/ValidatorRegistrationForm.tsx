@@ -38,7 +38,7 @@ const transactionDetails = ({
 }) => (
 	<>
 		<TransactionDetail label={translations("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
-			{transaction.validatorPublicKey() as string}
+			{transaction.validatorPublicKey()}
 		</TransactionDetail>
 
 		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
