@@ -286,6 +286,8 @@ describe("WalletHeader", () => {
 	it("should handle validator registration", async () => {
 		history.push(walletUrl);
 
+		const featureFlagSpy= vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+
 		const historySpy = vi.spyOn(history, "push");
 
 		render(
@@ -305,10 +307,13 @@ describe("WalletHeader", () => {
 		);
 
 		historySpy.mockRestore();
+		featureFlagSpy.mockRestore();
 	});
 
 	it("should handle validator resignation", async () => {
 		history.push(walletUrl);
+
+		const featureFlagSpy= vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
 
 		const walletSpy = vi.spyOn(wallet, "isValidator").mockReturnValue(true);
 		const historySpy = vi.spyOn(history, "push");
@@ -331,6 +336,7 @@ describe("WalletHeader", () => {
 
 		historySpy.mockRestore();
 		walletSpy.mockRestore();
+		featureFlagSpy.mockRestore();
 	});
 
 	it("should handle isMultiSignature exception", async () => {

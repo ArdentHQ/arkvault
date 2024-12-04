@@ -7,6 +7,7 @@ import { Label } from "@/app/components/Label";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { MusigGeneratedAddress } from "@/domains/transaction/components/TransactionDetail/MusigGeneratedAddress/MusigGeneratedAddress";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { Address } from "@/app/components/Address";
 
 export const TransactionType = ({
 	transaction,
@@ -30,27 +31,21 @@ export const TransactionType = ({
 						</Label>
 					</div>
 
-					{transaction.isDelegateRegistration() && (
+					{transaction.isValidatorRegistration() && (
 						<>
 							<DetailDivider />
 
 							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText>{t("COMMON.VALIDATOR")}</DetailLabelText>
-								<div className="font-semibold leading-5">{transaction.username()}</div>
+								<DetailLabelText>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
+								<Address
+									truncateOnTable
+									address={transaction.validatorPublicKey()}
+									wrapperClass="justify-end sm:justify-start"
+									addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+								/>
 							</div>
 						</>
-					)}
-
-					{transaction.isDelegateResignation() && (
-						<>
-							<DetailDivider />
-
-							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText>{t("COMMON.VALIDATOR")}</DetailLabelText>
-								<div className="font-semibold leading-5"> {transaction.wallet().username()} </div>
-							</div>
-						</>
-					)}
+						)}
 
 					{transaction.isMultiSignatureRegistration() && (
 						<>
