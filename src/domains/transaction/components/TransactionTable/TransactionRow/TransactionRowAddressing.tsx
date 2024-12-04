@@ -94,10 +94,15 @@ export const TransactionRowAddressing = ({
 	}, [env, transaction]);
 
 	const RecipientContract = () => (
-		<Link to={transaction.wallet().coin().link().wallet(transaction.recipient())} isExternal showExternalIcon={false} className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-200">
+		<Link
+			to={transaction.wallet().coin().link().wallet(transaction.recipient())}
+			isExternal
+			showExternalIcon={false}
+			className="dark:text-theme-dark-200 text-sm font-semibold text-theme-secondary-900"
+		>
 			{t("COMMON.CONTRACT")}
 		</Link>
-	)
+	);
 
 	if (transaction.isMultiPayment()) {
 		return (
