@@ -45,7 +45,7 @@ export const TransactionType = ({
 								/>
 							</div>
 						</>
-						)}
+					)}
 
 					{transaction.isMultiSignatureRegistration() && (
 						<>

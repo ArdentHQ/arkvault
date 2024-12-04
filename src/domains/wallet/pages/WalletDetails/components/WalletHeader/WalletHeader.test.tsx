@@ -286,7 +286,7 @@ describe("WalletHeader", () => {
 	it("should handle validator registration", async () => {
 		history.push(walletUrl);
 
-		const featureFlagSpy= vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+		const featureFlagSpy = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
 
 		const historySpy = vi.spyOn(history, "push");
 
@@ -313,7 +313,7 @@ describe("WalletHeader", () => {
 	it("should handle validator resignation", async () => {
 		history.push(walletUrl);
 
-		const featureFlagSpy= vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+		const featureFlagSpy = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
 
 		const walletSpy = vi.spyOn(wallet, "isValidator").mockReturnValue(true);
 		const historySpy = vi.spyOn(history, "push");
