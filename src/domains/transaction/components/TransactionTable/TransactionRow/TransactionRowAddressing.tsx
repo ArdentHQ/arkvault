@@ -1,10 +1,9 @@
 import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
-import { useEnvironmentContext } from "@/app/contexts";
 import { useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";
@@ -45,7 +44,6 @@ export const TransactionRowAddressing = ({
 }: {
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
-	// eslint-disable-next-line sonarjs/cognitive-complexity
 }): JSX.Element => {
 	const isMusigTransfer = [
 		!!transaction.usesMultiSignature?.(),
@@ -63,7 +61,6 @@ export const TransactionRowAddressing = ({
 		direction = "return";
 	}
 
-	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 	const { alias } = useMemo(
@@ -76,22 +73,12 @@ export const TransactionRowAddressing = ({
 		[profile, getWalletAlias, transaction],
 	);
 
-	const [_delegates, setDelegates] = useState<{
-		votes: Contracts.IReadOnlyWallet[];
-		unvotes: Contracts.IReadOnlyWallet[];
-	}>({
-		unvotes: [],
-		votes: [],
-	});
-
-	useEffect(() => {
-		if (transaction.isVote() || transaction.isUnvote()) {
-			setDelegates({
-				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes()),
-				votes: env.delegates().map(transaction.wallet(), transaction.votes()),
-			});
-		}
-	}, [env, transaction]);
+	const isContract = [
+		transaction.isDelegateRegistration(),
+		transaction.isDelegateResignation(),
+		transaction.isVote(),
+		transaction.isUnvote(),
+	].some(Boolean);
 
 	const RecipientContract = () => (
 		<Link to={transaction.wallet().coin().link().wallet(transaction.recipient())} isExternal showExternalIcon={false} className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-200">
@@ -119,38 +106,13 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (transaction.isVoteCombination() || transaction.isVote() || transaction.isUnvote()) {
+	if (isContract) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<TransactionRowLabel direction={direction} />
-				<RecipientContract />
-			</div>
-		);
-	}
-
-	if (transaction.isMultiSignatureRegistration()) {
-		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__musig_registration">
-				<TransactionRowLabel direction={direction} />
-				<RecipientContract />
-			</div>
-		);
-	}
-
-	if (transaction.isDelegateRegistration()) {
-		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__validator_registration">
-				<TransactionRowLabel direction={direction} />
-				<RecipientContract />
-			</div>
-		);
-	}
-
-	if (transaction.isDelegateResignation()) {
-		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__validator_resignation">
-				<TransactionRowLabel direction={direction} />
-				<RecipientContract />
+				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					{t("COMMON.CONTRACT")}
+				</span>
 			</div>
 		);
 	}
