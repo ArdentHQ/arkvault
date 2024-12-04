@@ -8,6 +8,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";
+import { Link } from "@/app/components/Link";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
@@ -92,6 +93,12 @@ export const TransactionRowAddressing = ({
 		}
 	}, [env, transaction]);
 
+	const RecipientContract = () => (
+		<Link to={transaction.wallet().coin().link().wallet(transaction.recipient())} isExternal showExternalIcon={false} className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-200">
+			{t("COMMON.CONTRACT")}
+		</Link>
+	)
+
 	if (transaction.isMultiPayment()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
@@ -116,16 +123,7 @@ export const TransactionRowAddressing = ({
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<TransactionRowLabel direction={direction} />
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-					{t("COMMON.CONTRACT")}{" "}
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-						(
-						{delegates[
-							transaction.isVote() || transaction.isVoteCombination() ? "votes" : "unvotes"
-						][0]?.username()}
-						)
-					</span>
-				</span>
+				<RecipientContract />
 			</div>
 		);
 	}
@@ -134,9 +132,7 @@ export const TransactionRowAddressing = ({
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__musig_registration">
 				<TransactionRowLabel direction={direction} />
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-					{t("COMMON.CONTRACT")}
-				</span>
+				<RecipientContract />
 			</div>
 		);
 	}
@@ -145,12 +141,7 @@ export const TransactionRowAddressing = ({
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__validator_registration">
 				<TransactionRowLabel direction={direction} />
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-					{t("COMMON.CONTRACT")}{" "}
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-						({transaction.username()})
-					</span>
-				</span>
+				<RecipientContract />
 			</div>
 		);
 	}
@@ -159,12 +150,7 @@ export const TransactionRowAddressing = ({
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__validator_resignation">
 				<TransactionRowLabel direction={direction} />
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-					{t("COMMON.CONTRACT")}{" "}
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-						({transaction.wallet().username()})
-					</span>
-				</span>
+				<RecipientContract />
 			</div>
 		);
 	}
