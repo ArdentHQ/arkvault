@@ -80,12 +80,6 @@ export const TransactionRowAddressing = ({
 		transaction.isUnvote(),
 	].some(Boolean);
 
-	const RecipientContract = () => (
-		<Link to={transaction.wallet().coin().link().wallet(transaction.recipient())} isExternal showExternalIcon={false} className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-200">
-			{t("COMMON.CONTRACT")}
-		</Link>
-	)
-
 	if (transaction.isMultiPayment()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
@@ -110,9 +104,9 @@ export const TransactionRowAddressing = ({
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<TransactionRowLabel direction={direction} />
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+				<Link to={transaction.wallet().coin().link().wallet(transaction.recipient())} isExternal showExternalIcon={false} className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-200">
 					{t("COMMON.CONTRACT")}
-				</span>
+				</Link>
 			</div>
 		);
 	}
