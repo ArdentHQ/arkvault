@@ -532,7 +532,7 @@ exports[`Exchange > should render empty 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1190,7 +1190,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1310,7 +1310,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             >
               <div>
                 <button
-                  class="css-31qpo4"
+                  class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800"
                   data-testid="Card"
                   type="button"
                 >
@@ -1347,7 +1347,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             >
               <div>
                 <button
-                  class="css-31qpo4"
+                  class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800"
                   data-testid="Card"
                   type="button"
                 >

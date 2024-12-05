@@ -156,7 +156,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
                 </div>
               </div>
               <span
-                class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+                class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
               >
                 <span />
               </span>

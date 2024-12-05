@@ -530,7 +530,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1378,7 +1378,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1ha4taj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-[25px] w-[25px] text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div

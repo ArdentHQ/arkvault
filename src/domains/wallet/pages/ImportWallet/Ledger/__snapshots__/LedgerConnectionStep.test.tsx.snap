@@ -52,7 +52,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
       class="flex flex-col overflow-hidden rounded-xl"
     >
       <div
-        class="css-1o2lvkz"
+        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
       >
         <div
           class="css-v0ob3f"
@@ -91,7 +91,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
         </span>
       </div>
       <div
-        class="css-1n20uf5"
+        class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
       >
         Successfully connected
       </div>

@@ -116,7 +116,7 @@ exports[`DeleteProfile > should render 1`] = `
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-rzhg83"
+                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
                 <div
                   class="css-v0ob3f"
@@ -160,7 +160,7 @@ exports[`DeleteProfile > should render 1`] = `
                 </span>
               </div>
               <div
-                class="css-trjt6n"
+                class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
               >
                 Do you really want to delete this profile? Once deleted, you will not be able to restore it.
               </div>

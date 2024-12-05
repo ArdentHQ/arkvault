@@ -534,7 +534,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1418,7 +1418,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -2277,7 +2277,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -3167,7 +3167,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -4053,7 +4053,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -4941,7 +4941,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -5129,7 +5129,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                         class="flex flex-col overflow-hidden rounded-xl"
                       >
                         <div
-                          class="css-6pjap5"
+                          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
                         >
                           <div
                             class="css-v0ob3f"
@@ -5168,7 +5168,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                           </span>
                         </div>
                         <div
-                          class="css-1y2ht9o"
+                          class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
                         >
                           An error occurred while creating your new address, please try again. If the error persists, kindly get in touch with our support team.
                         </div>
@@ -5346,7 +5346,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                           class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
                         >
                           <div
-                            class="css-1nn240v"
+                            class="h-6 w-6 animate-spin rounded-full border-4 border-theme-primary-700 border-l-white"
                           />
                         </div>
                       </div>
