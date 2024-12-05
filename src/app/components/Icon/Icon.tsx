@@ -13,11 +13,11 @@ type IconProperties = {
 	as?: React.ElementType;
 	fallback?: React.ReactNode;
 	dimensions?: [number, number];
-} & Omit<React.HTMLProps<any>, "size" | "width" | "height">;
+} & Omit<React.HTMLProps<any>, "size">;
 
 interface WrapperProperties {
-	width: number;
-	height: number;
+	width: string | number;
+	height: string | number;
 }
 
 const Wrapper = styled.div(({ width, height }: WrapperProperties) => ({

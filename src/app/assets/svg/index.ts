@@ -117,6 +117,7 @@ import PersonLight from "./person-light.svg?react";
 import PersonDark from "./person-dark.svg?react";
 import PersonDarkGreen from "./person-dark-green.svg?react";
 import PersonLightGreen from "./person-light-green.svg?react";
+import CircleMinus from "./circle-minus.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -139,6 +140,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	CircleCross,
 	CircleExclamationMark,
 	CircleInfo,
+	CircleMinus,
 	CircleQuestionMark,
 	Clock,
 	ClockError,
