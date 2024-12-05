@@ -21,11 +21,11 @@ export const TransactionConfirmations = ({
 
 	if (confirmations && confirmations > 1 && !transaction.isSuccess()) {
 		return (
-
-			<div data-testid="TransactionFailedAlert" className="rounded-xl border border-theme-danger-200 dark:border-theme-danger-info-border dark:bg-transparent bg-theme-danger-50 py-2 dark:bg-transparent max-sm:text-sm sm:py-4 sm:leading-5">
-				<div
-					className="flex items-center space-x-3 sm:px-6 px-3"
-				>
+			<div
+				data-testid="TransactionFailedAlert"
+				className="rounded-xl border border-theme-danger-200 bg-theme-danger-50 py-2 dark:border-theme-danger-info-border dark:bg-transparent max-sm:text-sm sm:py-4 sm:leading-5"
+			>
+				<div className="flex items-center space-x-3 px-3 sm:px-6">
 					<div className="flex items-center space-x-2 text-theme-danger-700 dark:text-theme-danger-info-border">
 						<Icon name="CircleMinus" size="lg" className="h-5" />
 						<p className="font-semibold">{t("COMMON.ALERT.FAILED")}</p>
@@ -36,16 +36,15 @@ export const TransactionConfirmations = ({
 					<p className="font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 						<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
 					</p>
-
 				</div>
 
 				<Divider type="horizontal" className="text-theme-danger-200 dark:text-theme-secondary-800" />
 
-				<p className="font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:px-6 px-3">
+				<p className="px-3 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:px-6">
 					{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR")}
 				</p>
 			</div>
-		)
+		);
 	}
 
 	return (
