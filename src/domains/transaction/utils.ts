@@ -28,14 +28,13 @@ export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => 
 export const getTransferType = ({ recipients }: { recipients: RecipientItem[] }): "multiPayment" | "transfer" =>
 	recipients.length > 1 ? "multiPayment" : "transfer";
 
-export const isContractTransaction = (transaction: DTO.RawTransactionData) => {
-	return [
+export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
+	[
 		transaction.isDelegateRegistration(),
 		transaction.isDelegateResignation(),
 		transaction.isVote(),
 		transaction.isUnvote(),
 	].some(Boolean);
-}
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>

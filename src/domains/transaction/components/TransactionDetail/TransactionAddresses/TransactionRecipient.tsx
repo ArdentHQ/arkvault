@@ -14,19 +14,21 @@ import { Label } from "@/app/components/Label";
 const ContractLabel = () => {
 	const { t } = useTranslation();
 
-	return <Label
-		color="neutral"
-		size="xs"
-		noBorder
-		className="rounded px-1 py-[2px] dark:border"
-		data-testid="TransactionRow__type"
-	>
-		<div className="flex space-x-1.5 items-center">
-			<Icon name="Contract" dimensions={[12, 12]} />
-			<span className="font-semibold">{t('COMMON.CONTRACT')}</span>
-		</div>
-	</Label>;
-}
+	return (
+		<Label
+			color="neutral"
+			size="xs"
+			noBorder
+			className="rounded px-1 py-[2px] dark:border"
+			data-testid="TransactionRow__type"
+		>
+			<div className="flex items-center space-x-1.5">
+				<Icon name="Contract" dimensions={[12, 12]} />
+				<span className="font-semibold">{t("COMMON.CONTRACT")}</span>
+			</div>
+		</Label>
+	);
+};
 
 export const TransactionRecipient = ({
 	recipient,
@@ -65,12 +67,13 @@ export const TransactionRecipient = ({
 						wrapperClass="justify-end sm:justify-start"
 					/>
 
-					{recipient?.isContract && <div className="flex items-center">
-						<Divider type="vertical"/>
-						<ContractLabel />
-					</div>}
+					{recipient?.isContract && (
+						<div className="flex items-center">
+							<Divider type="vertical" />
+							<ContractLabel />
+						</div>
+					)}
 				</div>
-
 			</div>
 		</>
 	);
