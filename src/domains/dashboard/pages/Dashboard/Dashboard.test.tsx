@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
