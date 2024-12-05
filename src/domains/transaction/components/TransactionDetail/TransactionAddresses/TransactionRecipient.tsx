@@ -8,6 +8,25 @@ import { Link } from "@/app/components/Link";
 import cn from "classnames";
 import { Button } from "@/app/components/Button";
 import { RecipientsModal } from "@/domains/transaction/components/RecipientsModal";
+import { Icon } from "@/app/components/Icon";
+import { Label } from "@/app/components/Label";
+
+const ContractLabel = () => {
+	const { t } = useTranslation();
+
+	return <Label
+		color="neutral"
+		size="xs"
+		noBorder
+		className="rounded px-1 py-[2px] dark:border"
+		data-testid="TransactionRow__type"
+	>
+		<div className="flex space-x-1.5 items-center">
+			<Icon name="Contract" dimensions={[12, 12]} />
+			<span className="font-semibold">{t('COMMON.CONTRACT')}</span>
+		</div>
+	</Label>;
+}
 
 export const TransactionRecipient = ({
 	recipient,
@@ -33,17 +52,25 @@ export const TransactionRecipient = ({
 					{t("COMMON.TO")}
 				</DetailTitle>
 
-				<Address
-					truncateOnTable
-					address={recipient?.address}
-					walletName={recipient?.alias}
-					showCopyButton
-					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-					addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base", {
-						"text-theme-secondary-500 dark:text-theme-secondary-700 ": !!recipient?.alias,
-					})}
-					wrapperClass="justify-end sm:justify-start"
-				/>
+				<div className="flex w-full">
+					<Address
+						truncateOnTable
+						address={recipient?.address}
+						walletName={recipient?.alias}
+						showCopyButton
+						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+						addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base", {
+							"text-theme-secondary-500 dark:text-theme-secondary-700 ": !!recipient?.alias,
+						})}
+						wrapperClass="justify-end sm:justify-start"
+					/>
+
+					{recipient?.isContract && <div className="flex items-center">
+						<Divider type="vertical"/>
+						<ContractLabel />
+					</div>}
+				</div>
+
 			</div>
 		</>
 	);

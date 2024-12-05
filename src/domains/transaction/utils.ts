@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { DTO, Services } from "@ardenthq/sdk";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const isNoDeviceError = (error: any) => {
@@ -27,6 +27,15 @@ export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => 
 
 export const getTransferType = ({ recipients }: { recipients: RecipientItem[] }): "multiPayment" | "transfer" =>
 	recipients.length > 1 ? "multiPayment" : "transfer";
+
+export const isContractTransaction = (transaction: DTO.RawTransactionData) => {
+	return [
+		transaction.isDelegateRegistration(),
+		transaction.isDelegateResignation(),
+		transaction.isVote(),
+		transaction.isUnvote(),
+	].some(Boolean);
+}
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>

@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";
 import { Link } from "@/app/components/Link";
+import { isContractTransaction } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
@@ -73,12 +74,7 @@ export const TransactionRowAddressing = ({
 		[profile, getWalletAlias, transaction],
 	);
 
-	const isContract = [
-		transaction.isDelegateRegistration(),
-		transaction.isDelegateResignation(),
-		transaction.isVote(),
-		transaction.isUnvote(),
-	].some(Boolean);
+	const isContract = isContractTransaction(transaction);
 
 	if (transaction.isMultiPayment()) {
 		return (

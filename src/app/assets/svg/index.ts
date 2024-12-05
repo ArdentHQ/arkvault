@@ -29,6 +29,7 @@ import Cloud from "./cloud.svg?react";
 import Code from "./code.svg?react";
 import Copy from "./copy.svg?react";
 import CopyKey from "./copy-key.svg?react";
+import Contract from "./contract.svg?react";
 import CopySuccess from "./copy-success.svg?react";
 import Cross from "./cross.svg?react";
 import Download from "./download.svg?react";
@@ -147,6 +148,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Code,
 	Completed,
 	ConfirmYourPassphrase,
+	Contract,
 	Copy,
 	CopyKey,
 	CopySuccess,
