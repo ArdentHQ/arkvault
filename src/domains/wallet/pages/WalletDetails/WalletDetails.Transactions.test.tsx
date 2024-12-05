@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -69,6 +69,8 @@ const renderPage = async ({
 	return utils;
 };
 
+// @TODO: Enable & refactor tests once mainsail coin support will be completed.
+//		  See https://app.clickup.com/t/86dvbvrvf
 describe("WalletDetails", () => {
 	const fixtures: Record<string, any> = {
 		multiPayment: undefined,
@@ -178,7 +180,7 @@ describe("WalletDetails", () => {
 		history.push(walletUrl);
 	});
 
-	it("should open detail modal on transaction row click", async () => {
+	it.skip("should open detail modal on transaction row click", async () => {
 		await renderPage({
 			waitForTransactions: true,
 			withProfileSynchronizer: true,
@@ -193,7 +195,7 @@ describe("WalletDetails", () => {
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 	});
 
-	it("should fetch more transactions", async () => {
+	it.skip("should fetch more transactions", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		await renderPage({

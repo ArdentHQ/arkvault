@@ -610,6 +610,7 @@ jobs:
                   command: pnpm test:coverage src/domains/profile
 
     # @TODO: Enable & refactor transaction & network tests once mainsail coin support will be completed.
+    #        See https://app.clickup.com/t/86dvbvrvf
     # domains-setting:
     #     runs-on: ubuntu-latest
     #     env:

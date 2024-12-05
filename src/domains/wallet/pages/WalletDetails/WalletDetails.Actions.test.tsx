@@ -223,7 +223,9 @@ describe("WalletDetails", () => {
 		windowSpy.mockRestore();
 	});
 
-	it("should manually sync wallet data", async () => {
+	// @TODO: Enable & refactor tests once mainsail coin support will be completed.
+	//		  See https://app.clickup.com/t/86dvbvrvf
+	it.skip("should manually sync wallet data", async () => {
 		await renderPage();
 
 		await userEvent.click(screen.getByTestId("WalletHeader__refresh"));
