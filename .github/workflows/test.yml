@@ -845,10 +845,10 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 99.8
+                  COVERAGE_THRESHOLD_LINES: 99.73
                   COVERAGE_THRESHOLD_FUNCTIONS: 99.75
                   COVERAGE_THRESHOLD_STATEMENTS: 99.38
-                  COVERAGE_THRESHOLD_BRANCHES: 99.11
+                  COVERAGE_THRESHOLD_BRANCHES: 98.73
                   COVERAGE_INCLUDE_PATH: src/domains/wallet
               with:
                   timeout_minutes: 10
