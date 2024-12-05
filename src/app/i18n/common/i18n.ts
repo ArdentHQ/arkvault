@@ -12,6 +12,7 @@ export const translations = {
 	AGREE_DO_NOT_SHOW_AGAIN: "I agree, do not show this message again",
 	ALERT: {
 		DANGER: "Error",
+		FAILED: "Failed",
 		HINT: "Help",
 		INFO: "Information",
 		SUCCESS: "Success",
