@@ -1,6 +1,7 @@
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
+import { isContractTransaction } from "@/domains/transaction/utils";
 
 export const useTransactionRecipients = ({
 	transaction,
@@ -14,7 +15,7 @@ export const useTransactionRecipients = ({
 	const recipients: WalletAliasResult[] = useMemo(() => {
 		const recipients: WalletAliasResult[] = [];
 
-		if (transaction.isTransfer()) {
+		if (transaction.isTransfer() || isContractTransaction(transaction)) {
 			recipients.push(
 				getWalletAlias({
 					address: transaction.recipient(),
