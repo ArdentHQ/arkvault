@@ -4,11 +4,9 @@ import { useTranslation } from "react-i18next";
 import { TransactionRowSkeleton } from "./TransactionRowSkeleton";
 import { TransactionRowProperties } from "./TransactionRow.contracts";
 import { TransactionRowMobile } from "./TransactionRowMobile";
-import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
-import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Label } from "@/app/components/Label";
@@ -16,6 +14,7 @@ import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount } from "@/app/components/Amount";
 import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
+import { TransactionRowId } from "./TransactionRowId";
 
 export const TransactionRow = memo(
 	({
@@ -56,16 +55,7 @@ export const TransactionRow = memo(
 					innerClassName="items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:pt-2.5"
 				>
 					<div className="flex flex-col gap-1 font-semibold">
-						<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
-							<span className="text-sm">
-								<TruncateMiddle
-									className="cursor-pointer text-theme-primary-600"
-									text={transaction.id()}
-									maxChars={isLgAndAbove ? 14 : 12}
-									data-testid="TransactionRow__id"
-								/>
-							</span>
-						</Link>
+						<TransactionRowId transaction={transaction} />
 						<span className="text-xs text-theme-secondary-700 xl:hidden">
 							{timeStamp ? (
 								<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
