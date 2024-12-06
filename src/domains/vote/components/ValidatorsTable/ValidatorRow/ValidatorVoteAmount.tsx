@@ -18,14 +18,14 @@ interface DelegateVoteAmountProperties {
 	selectedVotes: VoteValidatorProperties[];
 	selectedUnvotes: VoteValidatorProperties[];
 	voted?: Contracts.VoteRegistryItem;
-	delegateAddress: string;
+	validatorAddress: string;
 	availableBalance: number;
 	setAvailableBalance: (balance: number) => void;
 	toggleUnvotesSelected: (address: string, voteAmount?: number) => void;
 	toggleVotesSelected: (address: string, voteAmount?: number) => void;
 }
 
-export const DelegateVoteAmount = ({
+export const ValidatorVoteAmount = ({
 	voted,
 	rowColor,
 	selectedWallet,
@@ -33,7 +33,7 @@ export const DelegateVoteAmount = ({
 	isSelectedUnvote,
 	selectedVotes,
 	selectedUnvotes,
-	delegateAddress,
+	validatorAddress,
 	availableBalance,
 	setAvailableBalance,
 	toggleUnvotesSelected,
@@ -74,35 +74,35 @@ export const DelegateVoteAmount = ({
 
 	const updateSelectedVotes = (inputValue: number) => {
 		if (!voted) {
-			return toggleVotesSelected(delegateAddress, inputValue);
+			return toggleVotesSelected(validatorAddress, inputValue);
 		}
 
 		const wasGreaterThanAmountVoted = amount > voted.amount;
 
 		if (voted.amount === inputValue) {
 			if (wasGreaterThanAmountVoted) {
-				return toggleVotesSelected(delegateAddress);
+				return toggleVotesSelected(validatorAddress);
 			}
 
-			return toggleUnvotesSelected(delegateAddress);
+			return toggleUnvotesSelected(validatorAddress);
 		}
 
 		// is less than the amount voted
 		if (voted.amount > inputValue) {
 			if (wasGreaterThanAmountVoted) {
-				toggleVotesSelected(delegateAddress);
+				toggleVotesSelected(validatorAddress);
 			}
 
-			return toggleUnvotesSelected(delegateAddress, inputValue > 0 ? voted.amount - inputValue : 0);
+			return toggleUnvotesSelected(validatorAddress, inputValue > 0 ? voted.amount - inputValue : 0);
 		}
 
 		// is more than the amount voted
 		const wasLessThanAmountVoted = amount < voted.amount;
 		if (wasLessThanAmountVoted) {
-			toggleUnvotesSelected(delegateAddress);
+			toggleUnvotesSelected(validatorAddress);
 		}
 
-		return toggleVotesSelected(delegateAddress, inputValue - voted.amount);
+		return toggleVotesSelected(validatorAddress, inputValue - voted.amount);
 	};
 
 	const inputConditions = (inputValue: number, amountVoted: number, isDisabled: boolean) => ({
@@ -217,8 +217,8 @@ export const DelegateVoteAmount = ({
 			delegateVoteAmount = voted.amount;
 		}
 
-		const alreadyExistsInVotes = validatorExistsInVotes(selectedVotes, delegateAddress);
-		const alreadyExistsInUnvotes = validatorExistsInVotes(selectedUnvotes, delegateAddress);
+		const alreadyExistsInVotes = validatorExistsInVotes(selectedVotes, validatorAddress);
+		const alreadyExistsInUnvotes = validatorExistsInVotes(selectedUnvotes, validatorAddress);
 		// Calculate the changed amount
 		if (alreadyExistsInVotes) {
 			if (alreadyExistsInVotes.amount === 0) {
@@ -266,7 +266,7 @@ export const DelegateVoteAmount = ({
 		<TableCell
 			className="w-68"
 			innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor)}
-			data-testid="DelegateVoteAmount"
+			data-testid="ValidatorVoteAmount"
 		>
 			<div className="relative flex-1 px-3">
 				<InputCurrency

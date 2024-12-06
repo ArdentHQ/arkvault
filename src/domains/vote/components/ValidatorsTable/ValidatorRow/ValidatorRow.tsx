@@ -2,9 +2,9 @@ import React, { useMemo } from "react";
 import { TableCell, TableRow } from "@/app/components/Table";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
-import { DelegateVoteAmount } from "./DelegateVoteAmount";
-import { DelegateVoteButton } from "./DelegateVoteButton";
+import { ValidatorRowSkeleton } from "./ValidatorRowSkeleton";
+import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
+import { ValidatorVoteButton } from "./ValidatorVoteButton";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -99,7 +99,7 @@ export const useDelegateRow = ({
 	const renderButton = () => {
 		if (isChanged) {
 			return (
-				<DelegateVoteButton
+				<ValidatorVoteButton
 					index={index}
 					variant="warning"
 					compactClassName="text-theme-warning-700 hover:text-theme-warning-800"
@@ -112,14 +112,14 @@ export const useDelegateRow = ({
 					}}
 				>
 					{t("COMMON.CHANGED")}
-				</DelegateVoteButton>
+				</ValidatorVoteButton>
 			);
 		}
 
 		if (voted) {
 			if (isSelectedUnvote) {
 				return (
-					<DelegateVoteButton
+					<ValidatorVoteButton
 						index={index}
 						variant="danger"
 						compactClassName={`
@@ -131,12 +131,12 @@ export const useDelegateRow = ({
 						onClick={() => toggleUnvotesSelected?.(validator.address())}
 					>
 						{t("COMMON.UNSELECTED")}
-					</DelegateVoteButton>
+					</ValidatorVoteButton>
 				);
 			}
 
 			return (
-				<DelegateVoteButton
+				<ValidatorVoteButton
 					index={index}
 					variant="primary"
 					compactClassName={`
@@ -148,13 +148,13 @@ export const useDelegateRow = ({
 					onClick={() => toggleUnvotesSelected?.(validator.address())}
 				>
 					{t("COMMON.CURRENT")}
-				</DelegateVoteButton>
+				</ValidatorVoteButton>
 			);
 		}
 
 		if (isVoteDisabled && !isSelectedVote) {
 			return (
-				<DelegateVoteButton
+				<ValidatorVoteButton
 					index={index}
 					disabled
 					compactClassName={`
@@ -165,13 +165,13 @@ export const useDelegateRow = ({
 					`}
 				>
 					{t("COMMON.SELECT")}
-				</DelegateVoteButton>
+				</ValidatorVoteButton>
 			);
 		}
 
 		if (isSelectedVote) {
 			return (
-				<DelegateVoteButton
+				<ValidatorVoteButton
 					index={index}
 					variant="reverse"
 					compactClassName={`
@@ -183,12 +183,12 @@ export const useDelegateRow = ({
 					onClick={() => toggleVotesSelected?.(validator.address())}
 				>
 					{t("COMMON.SELECTED")}
-				</DelegateVoteButton>
+				</ValidatorVoteButton>
 			);
 		}
 
 		return (
-			<DelegateVoteButton
+			<ValidatorVoteButton
 				index={index}
 				variant="secondary"
 				compactClassName={`
@@ -200,7 +200,7 @@ export const useDelegateRow = ({
 				onClick={() => toggleVotesSelected?.(validator.address())}
 			>
 				{t("COMMON.SELECT")}
-			</DelegateVoteButton>
+			</ValidatorVoteButton>
 		);
 	};
 
@@ -244,7 +244,7 @@ export const ValidatorRow = ({
 	});
 
 	if (isLoading) {
-		return <DelegateRowSkeleton requiresStakeAmount={requiresStakeAmount} />;
+		return <ValidatorRowSkeleton requiresStakeAmount={requiresStakeAmount} />;
 	}
 
 	return (
@@ -315,14 +315,14 @@ export const ValidatorRow = ({
 			</TableCell>
 
 			{requiresStakeAmount && (
-				<DelegateVoteAmount
+				<ValidatorVoteAmount
 					voted={voted}
 					selectedWallet={selectedWallet}
 					isSelectedVote={isSelectedVote}
 					isSelectedUnvote={isSelectedUnvote}
 					selectedVotes={selectedVotes}
 					selectedUnvotes={selectedUnvotes}
-					delegateAddress={validator.address()}
+					validatorAddress={validator.address()}
 					availableBalance={availableBalance}
 					setAvailableBalance={setAvailableBalance}
 					toggleUnvotesSelected={toggleUnvotesSelected}

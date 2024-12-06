@@ -417,7 +417,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
         </td>
         <td
           class="w-68"
-          data-testid="DelegateVoteAmount"
+          data-testid="ValidatorVoteAmount"
         >
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
@@ -1768,7 +1768,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
         </td>
         <td
           class="w-68"
-          data-testid="DelegateVoteAmount"
+          data-testid="ValidatorVoteAmount"
         >
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"

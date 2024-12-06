@@ -1,5 +1,5 @@
 import { appendParameters, getParameters, ParameterNameProperties } from "./url-parameters";
-import { VoteValidatorProperties } from "../components/ValidatorsTable/ValidatorsTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 
 describe("#urlParameters", () => {
@@ -10,11 +10,11 @@ describe("#urlParameters", () => {
 			const votes: VoteValidatorProperties[] = [
 				{
 					amount: 10,
-					delegateAddress: data[0].address,
+					validatorAddress: data[0].address,
 				},
 				{
 					amount: 20,
-					delegateAddress: data[1].address,
+					validatorAddress: data[1].address,
 				},
 			];
 
@@ -31,11 +31,11 @@ describe("#urlParameters", () => {
 			const votes: VoteValidatorProperties[] = [
 				{
 					amount: 10,
-					delegateAddress: data[0].address,
+					validatorAddress: data[0].address,
 				},
 				{
 					amount: 20,
-					delegateAddress: data[1].address,
+					validatorAddress: data[1].address,
 				},
 			];
 

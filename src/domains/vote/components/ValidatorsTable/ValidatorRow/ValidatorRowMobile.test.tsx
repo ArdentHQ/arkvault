@@ -66,6 +66,6 @@ describe("DelegateRowMobile", () => {
 			</table>,
 		);
 
-		expect(screen.getAllByTestId("DelegateRowMobileSkeleton")[0]).toBeInTheDocument();
+		expect(screen.getAllByTestId("ValidatorRowMobileSkeleton")[0]).toBeInTheDocument();
 	});
 });

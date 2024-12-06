@@ -4,14 +4,14 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { DelegateVoteAmount } from "./DelegateVoteAmount";
+import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
-let delegate: Contracts.IReadOnlyWallet;
+let validator: Contracts.IReadOnlyWallet;
 
 let Component: () => JSX.Element;
 let walletBalanceMock: vi.SpyInstance;
@@ -31,7 +31,7 @@ describe("DelegateVoteAmount", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
 
-		delegate = new ReadOnlyWallet({
+		validator = new ReadOnlyWallet({
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
@@ -48,14 +48,14 @@ describe("DelegateVoteAmount", () => {
 		const selectedVotes: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 
 		// eslint-disable-next-line react/display-name
 		Component = () => (
 			<Wrapper>
-				<DelegateVoteAmount
+				<ValidatorVoteAmount
 					isSelectedVote={true}
 					isSelectedUnvote={false}
 					selectedWallet={wallet}
@@ -63,7 +63,7 @@ describe("DelegateVoteAmount", () => {
 					selectedVotes={selectedVotes}
 					toggleUnvotesSelected={vi.fn()}
 					toggleVotesSelected={vi.fn()}
-					delegateAddress={delegate.address()}
+					validatorAddress={validator.address()}
 					availableBalance={wallet.balance()}
 					setAvailableBalance={vi.fn()}
 				/>
@@ -80,7 +80,7 @@ describe("DelegateVoteAmount", () => {
 	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
 		const { asFragment } = render(
 			<Wrapper>
-				<DelegateVoteAmount
+				<ValidatorVoteAmount
 					isSelectedVote={true}
 					isSelectedUnvote={false}
 					selectedWallet={wallet}
@@ -88,7 +88,7 @@ describe("DelegateVoteAmount", () => {
 					selectedVotes={[]}
 					toggleUnvotesSelected={vi.fn()}
 					toggleVotesSelected={vi.fn()}
-					delegateAddress={delegate.address()}
+					validatorAddress={validator.address()}
 					availableBalance={wallet.balance()}
 					setAvailableBalance={vi.fn()}
 					isCompact={isCompact}
@@ -116,7 +116,7 @@ describe("DelegateVoteAmount", () => {
 	it("should focus on the input by clicking on ticker", async () => {
 		render(
 			<Wrapper>
-				<DelegateVoteAmount
+				<ValidatorVoteAmount
 					isSelectedVote={true}
 					isSelectedUnvote={false}
 					selectedWallet={wallet}
@@ -124,7 +124,7 @@ describe("DelegateVoteAmount", () => {
 					selectedVotes={[]}
 					toggleUnvotesSelected={vi.fn()}
 					toggleVotesSelected={vi.fn()}
-					delegateAddress={delegate.address()}
+					validatorAddress={validator.address()}
 					availableBalance={wallet.balance()}
 					setAvailableBalance={vi.fn()}
 				/>
@@ -141,7 +141,7 @@ describe("DelegateVoteAmount", () => {
 	it("should not focus on the input by clicking on ticker if it is selected unvote", async () => {
 		render(
 			<Wrapper>
-				<DelegateVoteAmount
+				<ValidatorVoteAmount
 					isSelectedVote={true}
 					isSelectedUnvote={true}
 					selectedWallet={wallet}
@@ -149,7 +149,7 @@ describe("DelegateVoteAmount", () => {
 					selectedVotes={[]}
 					toggleUnvotesSelected={vi.fn()}
 					toggleVotesSelected={vi.fn()}
-					delegateAddress={delegate.address()}
+					validatorAddress={validator.address()}
 					availableBalance={wallet.balance()}
 					setAvailableBalance={vi.fn()}
 				/>
@@ -267,13 +267,13 @@ describe("DelegateVoteAmount", () => {
 			const selectedVotes: VoteValidatorProperties[] = [
 				{
 					amount: 10,
-					delegateAddress: delegate.address(),
+					validatorAddress: validator.address(),
 				},
 			];
 
 			render(
 				<Wrapper>
-					<DelegateVoteAmount
+					<ValidatorVoteAmount
 						isSelectedVote={true}
 						isSelectedUnvote={false}
 						selectedWallet={wallet}
@@ -281,7 +281,7 @@ describe("DelegateVoteAmount", () => {
 						selectedVotes={selectedVotes}
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
-						delegateAddress={delegate.address()}
+						validatorAddress={validator.address()}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 					/>
@@ -294,18 +294,18 @@ describe("DelegateVoteAmount", () => {
 		it("should render with selectedUnvotes", async () => {
 			const voted: Contracts.VoteRegistryItem = {
 				amount: 30,
-				wallet: delegate,
+				wallet: validator,
 			};
 			const selectedUnvotes: VoteValidatorProperties[] = [
 				{
 					amount: 20,
-					delegateAddress: delegate.address(),
+					validatorAddress: validator.address(),
 				},
 			];
 
 			render(
 				<Wrapper>
-					<DelegateVoteAmount
+					<ValidatorVoteAmount
 						isSelectedVote={true}
 						isSelectedUnvote={false}
 						selectedWallet={wallet}
@@ -314,7 +314,7 @@ describe("DelegateVoteAmount", () => {
 						voted={voted}
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
-						delegateAddress={delegate.address()}
+						validatorAddress={validator.address()}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 					/>
@@ -324,15 +324,15 @@ describe("DelegateVoteAmount", () => {
 			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 		});
 
-		it("should render with voted delegate", async () => {
+		it("should render with voted validator", async () => {
 			const voted: Contracts.VoteRegistryItem = {
 				amount: 30,
-				wallet: delegate,
+				wallet: validator,
 			};
 
 			render(
 				<Wrapper>
-					<DelegateVoteAmount
+					<ValidatorVoteAmount
 						isSelectedVote={true}
 						isSelectedUnvote={false}
 						selectedWallet={wallet}
@@ -341,7 +341,7 @@ describe("DelegateVoteAmount", () => {
 						voted={voted}
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
-						delegateAddress={delegate.address()}
+						validatorAddress={validator.address()}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 					/>
@@ -351,10 +351,10 @@ describe("DelegateVoteAmount", () => {
 			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("30"));
 		});
 
-		it("should render with changed the amount voted when there is voted delegate", async () => {
+		it("should render with changed the amount voted when there is voted validator", async () => {
 			const voted: Contracts.VoteRegistryItem = {
 				amount: 30,
-				wallet: delegate,
+				wallet: validator,
 			};
 
 			const VoteAmount = ({
@@ -365,7 +365,7 @@ describe("DelegateVoteAmount", () => {
 				selectedVotes: VoteValidatorProperties[];
 			}) => (
 				<Wrapper>
-					<DelegateVoteAmount
+					<ValidatorVoteAmount
 						isSelectedVote={true}
 						isSelectedUnvote={false}
 						selectedWallet={wallet}
@@ -374,7 +374,7 @@ describe("DelegateVoteAmount", () => {
 						voted={voted}
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
-						delegateAddress={delegate.address()}
+						validatorAddress={validator.address()}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 					/>
@@ -384,7 +384,7 @@ describe("DelegateVoteAmount", () => {
 			const selectedVotes: VoteValidatorProperties[] = [
 				{
 					amount: 20,
-					delegateAddress: delegate.address(),
+					validatorAddress: validator.address(),
 				},
 			];
 			const { unmount } = render(<VoteAmount selectedUnvotes={[]} selectedVotes={selectedVotes} />);
@@ -405,7 +405,7 @@ describe("DelegateVoteAmount", () => {
 			const selectedUnvotes: VoteValidatorProperties[] = [
 				{
 					amount: 20,
-					delegateAddress: delegate.address(),
+					validatorAddress: validator.address(),
 				},
 			];
 
@@ -431,13 +431,13 @@ describe("DelegateVoteAmount", () => {
 		const selectedVotes: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 
 		const VoteAmount = () => (
 			<Wrapper>
-				<DelegateVoteAmount
+				<ValidatorVoteAmount
 					isSelectedVote={true}
 					isSelectedUnvote={false}
 					selectedWallet={wallet}
@@ -445,7 +445,7 @@ describe("DelegateVoteAmount", () => {
 					selectedVotes={selectedVotes}
 					toggleUnvotesSelected={vi.fn()}
 					toggleVotesSelected={toggleVotesSelected}
-					delegateAddress={delegate.address()}
+					validatorAddress={validator.address()}
 					availableBalance={availableBalance}
 					setAvailableBalance={setAvailableBalance}
 				/>
@@ -459,7 +459,7 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "10");
 
-		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10));
+		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 10));
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
@@ -469,7 +469,7 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "20");
 
-		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20));
+		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20));
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(60);
 	});
@@ -480,7 +480,7 @@ describe("DelegateVoteAmount", () => {
 
 		const VoteAmount = () => (
 			<Wrapper>
-				<DelegateVoteAmount
+				<ValidatorVoteAmount
 					isSelectedVote={true}
 					isSelectedUnvote={false}
 					selectedWallet={wallet}
@@ -488,7 +488,7 @@ describe("DelegateVoteAmount", () => {
 					selectedVotes={[]}
 					toggleUnvotesSelected={vi.fn()}
 					toggleVotesSelected={vi.fn()}
-					delegateAddress={delegate.address()}
+					validatorAddress={validator.address()}
 					availableBalance={availableBalance}
 					setAvailableBalance={setAvailableBalance}
 				/>
@@ -521,7 +521,7 @@ describe("DelegateVoteAmount", () => {
 		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(50));
 	});
 
-	it("should calculate net amount when there is a voted delegate", async () => {
+	it("should calculate net amount when there is a voted validator", async () => {
 		let availableBalance = wallet.balance();
 
 		const toggleUnvotesSelected = vi.fn();
@@ -530,12 +530,12 @@ describe("DelegateVoteAmount", () => {
 
 		const voted: Contracts.VoteRegistryItem = {
 			amount: 30,
-			wallet: delegate,
+			wallet: validator,
 		};
 
 		const VoteAmount = () => (
 			<Wrapper>
-				<DelegateVoteAmount
+				<ValidatorVoteAmount
 					isSelectedVote={true}
 					isSelectedUnvote={false}
 					selectedWallet={wallet}
@@ -544,7 +544,7 @@ describe("DelegateVoteAmount", () => {
 					voted={voted}
 					toggleUnvotesSelected={toggleUnvotesSelected}
 					toggleVotesSelected={toggleVotesSelected}
-					delegateAddress={delegate.address()}
+					validatorAddress={validator.address()}
 					availableBalance={availableBalance}
 					setAvailableBalance={setAvailableBalance}
 				/>
@@ -564,7 +564,7 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.type(amountField, "40");
 
 		await waitFor(() => {
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10);
+			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 10);
 		});
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
@@ -575,7 +575,7 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.type(amountField, "50");
 
 		await waitFor(() => {
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20);
+			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20);
 		});
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(60);
@@ -586,9 +586,9 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "0");
 
-		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 0));
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address(), 0));
 
-		expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address());
+		expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address());
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
 		rerender(<VoteAmount />);
@@ -597,7 +597,7 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "10");
 
-		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20));
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address(), 20));
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
@@ -607,7 +607,7 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "30");
 
-		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address()));
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
@@ -617,7 +617,7 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "20");
 
-		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10));
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address(), 10));
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
@@ -627,9 +627,9 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "60");
 
-		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address()));
 
-		expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 30);
+		expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 30);
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(50);
 
 		rerender(<VoteAmount />);
@@ -638,7 +638,7 @@ describe("DelegateVoteAmount", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "30");
 
-		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address()));
 
 		await waitFor(() => {
 			expect(setAvailableBalance).toHaveBeenLastCalledWith(50);
@@ -649,7 +649,7 @@ describe("DelegateVoteAmount", () => {
 		it("should render disabled", () => {
 			render(
 				<Wrapper>
-					<DelegateVoteAmount
+					<ValidatorVoteAmount
 						isSelectedVote={false}
 						isSelectedUnvote={false}
 						selectedWallet={wallet}
@@ -657,7 +657,7 @@ describe("DelegateVoteAmount", () => {
 						selectedVotes={[]}
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
-						delegateAddress={delegate.address()}
+						validatorAddress={validator.address()}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 					/>
@@ -670,7 +670,7 @@ describe("DelegateVoteAmount", () => {
 		it("should hide error after disabled", async () => {
 			const VoteAmount = ({ isSelectedVote }: { isSelectedVote: boolean }) => (
 				<Wrapper>
-					<DelegateVoteAmount
+					<ValidatorVoteAmount
 						isSelectedVote={isSelectedVote}
 						isSelectedUnvote={false}
 						selectedWallet={wallet}
@@ -678,7 +678,7 @@ describe("DelegateVoteAmount", () => {
 						selectedVotes={[]}
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
-						delegateAddress={delegate.address()}
+						validatorAddress={validator.address()}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 					/>
@@ -704,7 +704,7 @@ describe("DelegateVoteAmount", () => {
 
 			const VoteAmount = ({ isSelectedVote }: { isSelectedVote: boolean }) => (
 				<Wrapper>
-					<DelegateVoteAmount
+					<ValidatorVoteAmount
 						isSelectedVote={isSelectedVote}
 						isSelectedUnvote={false}
 						selectedWallet={wallet}
@@ -712,7 +712,7 @@ describe("DelegateVoteAmount", () => {
 						selectedVotes={[]}
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={toggleVotesSelected}
-						delegateAddress={delegate.address()}
+						validatorAddress={validator.address()}
 						availableBalance={availableBalance}
 						setAvailableBalance={setAvailableBalance}
 					/>
@@ -737,17 +737,17 @@ describe("DelegateVoteAmount", () => {
 			expect(toggleVotesSelected).toHaveBeenCalledTimes(1);
 		});
 
-		it("should reset fields and calculate remaining balance when unvote if there is voted delegate", async () => {
+		it("should reset fields and calculate remaining balance when unvote if there is voted validator", async () => {
 			let availableBalance = wallet.balance();
 			const setAvailableBalance = vi.fn((balance: number) => (availableBalance = balance));
 			const voted: Contracts.VoteRegistryItem = {
 				amount: 30,
-				wallet: delegate,
+				wallet: validator,
 			};
 
 			const VoteAmount = ({ isSelectedUnvote }: { isSelectedUnvote: boolean }) => (
 				<Wrapper>
-					<DelegateVoteAmount
+					<ValidatorVoteAmount
 						isSelectedVote={true}
 						isSelectedUnvote={isSelectedUnvote}
 						selectedWallet={wallet}
@@ -756,7 +756,7 @@ describe("DelegateVoteAmount", () => {
 						voted={voted}
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
-						delegateAddress={delegate.address()}
+						validatorAddress={validator.address()}
 						availableBalance={availableBalance}
 						setAvailableBalance={setAvailableBalance}
 					/>

@@ -4,14 +4,14 @@ import React from "react";
 
 import { ValidatorRow } from "./ValidatorRow";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { VoteValidatorProperties } from "../ValidatorsTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;
 
-const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
+const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
 
 describe("ValidatorRow", () => {
 	beforeAll(() => {
@@ -72,7 +72,7 @@ describe("ValidatorRow", () => {
 			</table>,
 		);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(container).toBeInTheDocument();
 		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());
@@ -106,7 +106,7 @@ describe("ValidatorRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -180,7 +180,7 @@ describe("ValidatorRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.CURRENT);
+		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CURRENT);
 		expect(screen.getByTestId("DelegateRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
 		expect(screen.getByTestId("DelegateRow__toggle-2")).toBeDisabled();
 
@@ -219,7 +219,7 @@ describe("ValidatorRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.UNSELECTED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.UNSELECTED);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -287,7 +287,7 @@ describe("ValidatorRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
 
 		expect(asFragment()).toMatchSnapshot();
 

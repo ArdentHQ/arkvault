@@ -1,13 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
+exports[`ValidatorVoteAmount > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
       <tr>
         <td
           class="w-68"
-          data-testid="DelegateVoteAmount"
+          data-testid="ValidatorVoteAmount"
         >
           <div
             class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
@@ -107,14 +107,14 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
+exports[`ValidatorVoteAmount > should render when isCompact = true 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
       <tr>
         <td
           class="w-68"
-          data-testid="DelegateVoteAmount"
+          data-testid="ValidatorVoteAmount"
         >
           <div
             class="justify-center border-t-2 border-b-2 border-transparent css-12appi5"
