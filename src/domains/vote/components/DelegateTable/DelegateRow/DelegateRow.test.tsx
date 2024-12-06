@@ -35,7 +35,7 @@ describe("DelegateRow", () => {
 				<tbody>
 					<DelegateRow
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -59,7 +59,7 @@ describe("DelegateRow", () => {
 				<tbody>
 					<DelegateRow
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -92,7 +92,7 @@ describe("DelegateRow", () => {
 				<tbody>
 					<DelegateRow
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						selectedVotes={selected}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -136,7 +136,7 @@ describe("DelegateRow", () => {
 				<tbody>
 					<DelegateRow
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						voted={{
 							amount: 10,
 							wallet: delegate,
@@ -152,7 +152,7 @@ describe("DelegateRow", () => {
 					/>
 					<DelegateRow
 						index={1}
-						delegate={secondDelegate}
+						validator={secondDelegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -164,7 +164,7 @@ describe("DelegateRow", () => {
 					/>
 					<DelegateRow
 						index={2}
-						delegate={thirdDelegate}
+						validator={thirdDelegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						isVoteDisabled={true}
@@ -204,7 +204,7 @@ describe("DelegateRow", () => {
 				<tbody>
 					<DelegateRow
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						voted={voted}
 						selectedVotes={[]}
 						selectedUnvotes={selectedUnvotes}
@@ -232,7 +232,7 @@ describe("DelegateRow", () => {
 				<tbody>
 					<DelegateRow
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -272,7 +272,7 @@ describe("DelegateRow", () => {
 				<tbody>
 					<DelegateRow
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						voted={voted}
 						selectedVotes={selectedVotes}
 						selectedUnvotes={[]}

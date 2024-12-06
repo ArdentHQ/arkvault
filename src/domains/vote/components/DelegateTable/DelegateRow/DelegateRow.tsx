@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 
 export interface DelegateRowProperties {
 	index: number;
-	delegate: Contracts.IReadOnlyWallet;
+	validator: Contracts.IReadOnlyWallet;
 	selectedUnvotes: VoteDelegateProperties[];
 	selectedVotes: VoteDelegateProperties[];
 	voted?: Contracts.VoteRegistryItem;
@@ -33,7 +33,7 @@ type UseDelegateRowProperties = Omit<DelegateRowProperties, "isLoading" | "avail
 export const useDelegateRow = ({
 	index,
 	voted,
-	delegate,
+	validator,
 	selectedUnvotes,
 	selectedVotes,
 	isVoteDisabled = false,
@@ -48,7 +48,7 @@ export const useDelegateRow = ({
 	const isSelectedUnvote = useMemo(
 		() =>
 			!!selectedUnvotes?.find((unvote) => {
-				const isEqualToDelegate = unvote.delegateAddress === delegate?.address?.();
+				const isEqualToDelegate = unvote.delegateAddress === validator?.address?.();
 
 				if (isEqualToDelegate && requiresStakeAmount) {
 					return unvote.amount === voted?.amount;
@@ -56,29 +56,29 @@ export const useDelegateRow = ({
 
 				return isEqualToDelegate;
 			}),
-		[delegate, requiresStakeAmount, selectedUnvotes, voted],
+		[validator, requiresStakeAmount, selectedUnvotes, voted],
 	);
 
 	const isSelectedVote = useMemo(
-		() => !!voted || !!delegateExistsInVotes(selectedVotes, delegate?.address?.()),
-		[delegate, voted, selectedVotes],
+		() => !!voted || !!delegateExistsInVotes(selectedVotes, validator?.address?.()),
+		[validator, voted, selectedVotes],
 	);
 
 	const isActive = useMemo(() => {
-		const rank = delegate?.rank?.();
+		const rank = validator?.rank?.();
 		if (rank !== undefined) {
 			return rank <= selectedWallet.network().delegateCount();
 		}
 		return false;
-	}, [delegate, selectedWallet]);
+	}, [validator, selectedWallet]);
 
 	const isChanged = useMemo(() => {
-		const alreadyExistsInVotes = !!delegateExistsInVotes(selectedVotes, delegate?.address?.());
+		const alreadyExistsInVotes = !!delegateExistsInVotes(selectedVotes, validator?.address?.());
 		const alreadyExistsInUnvotes =
-			!!delegateExistsInVotes(selectedUnvotes, delegate?.address?.()) && !isSelectedUnvote;
+			!!delegateExistsInVotes(selectedUnvotes, validator?.address?.()) && !isSelectedUnvote;
 
 		return !!voted && (alreadyExistsInVotes || alreadyExistsInUnvotes);
-	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, delegate]);
+	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, validator]);
 
 	const rowColor = useMemo(() => {
 		if (isChanged) {
@@ -104,11 +104,11 @@ export const useDelegateRow = ({
 					variant="warning"
 					compactClassName="text-theme-warning-700 hover:text-theme-warning-800"
 					onClick={() => {
-						if (delegateExistsInVotes(selectedVotes, delegate?.address?.())) {
-							toggleVotesSelected?.(delegate.address());
+						if (delegateExistsInVotes(selectedVotes, validator?.address?.())) {
+							toggleVotesSelected?.(validator.address());
 						}
 
-						toggleUnvotesSelected?.(delegate.address(), voted!.amount);
+						toggleUnvotesSelected?.(validator.address(), voted!.amount);
 					}}
 				>
 					{t("COMMON.CHANGED")}
@@ -128,7 +128,7 @@ export const useDelegateRow = ({
 							text-theme-danger-400 hover:text-theme-danger-500
 							dark:text-white dark:sm:text-theme-danger-400 dark:sm:hover:text-theme-danger-500
 					`}
-						onClick={() => toggleUnvotesSelected?.(delegate.address())}
+						onClick={() => toggleUnvotesSelected?.(validator.address())}
 					>
 						{t("COMMON.UNSELECTED")}
 					</DelegateVoteButton>
@@ -145,7 +145,7 @@ export const useDelegateRow = ({
 						text-theme-primary-600 hover:text-theme-primary-700
 						dark:text-white dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
 					`}
-					onClick={() => toggleUnvotesSelected?.(delegate.address())}
+					onClick={() => toggleUnvotesSelected?.(validator.address())}
 				>
 					{t("COMMON.CURRENT")}
 				</DelegateVoteButton>
@@ -180,7 +180,7 @@ export const useDelegateRow = ({
 						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
 						dark:text-white dark:sm:text-theme-primary-reverse-600 dark:sm:hover:text-theme-primary-reverse-700
 					`}
-					onClick={() => toggleVotesSelected?.(delegate.address())}
+					onClick={() => toggleVotesSelected?.(validator.address())}
 				>
 					{t("COMMON.SELECTED")}
 				</DelegateVoteButton>
@@ -197,7 +197,7 @@ export const useDelegateRow = ({
 					text-theme-primary-600 hover:text-theme-primary-700
 					dark:text-theme-secondary-200 dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
 				`}
-				onClick={() => toggleVotesSelected?.(delegate.address())}
+				onClick={() => toggleVotesSelected?.(validator.address())}
 			>
 				{t("COMMON.SELECT")}
 			</DelegateVoteButton>
@@ -218,7 +218,7 @@ export const useDelegateRow = ({
 export const DelegateRow = ({
 	index,
 	voted,
-	delegate,
+	validator,
 	selectedUnvotes,
 	selectedVotes,
 	isVoteDisabled = false,
@@ -232,7 +232,7 @@ export const DelegateRow = ({
 	const { t } = useTranslation();
 
 	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useDelegateRow({
-		delegate,
+		validator,
 		index,
 		isVoteDisabled,
 		selectedUnvotes,
@@ -249,7 +249,7 @@ export const DelegateRow = ({
 
 	return (
 		<TableRow
-			key={delegate.address()}
+			key={validator.address()}
 			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
 		>
 			<TableCell
@@ -259,7 +259,7 @@ export const DelegateRow = ({
 					rowColor,
 				)}
 			>
-				<span>{delegate.rank()}</span>
+				<span>{validator.rank()}</span>
 			</TableCell>
 
 			<TableCell
@@ -270,7 +270,7 @@ export const DelegateRow = ({
 			>
 				<div className="relative h-[17px] grow">
 					<div className="absolute flex w-full items-center">
-						<div className="truncate"> {delegate.username()} </div>
+						<div className="truncate"> {validator.address()} </div>
 					</div>
 				</div>
 			</TableCell>
@@ -305,7 +305,7 @@ export const DelegateRow = ({
 				)}
 			>
 				<Link
-					to={delegate.explorerLink()}
+					to={validator.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 					isExternal
 					className="w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -322,7 +322,7 @@ export const DelegateRow = ({
 					isSelectedUnvote={isSelectedUnvote}
 					selectedVotes={selectedVotes}
 					selectedUnvotes={selectedUnvotes}
-					delegateAddress={delegate.address()}
+					delegateAddress={validator.address()}
 					availableBalance={availableBalance}
 					setAvailableBalance={setAvailableBalance}
 					toggleUnvotesSelected={toggleUnvotesSelected}

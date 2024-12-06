@@ -106,9 +106,9 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				delegateAddress: address,
 			};
 
-			const delegate = votes.find(({ wallet }) => wallet?.address() === address);
-			if (delegate?.amount && voteAmount === undefined) {
-				voteDelegate.amount = delegate.amount;
+			const validator = votes.find(({ wallet }) => wallet?.address() === address);
+			if (validator?.amount && voteAmount === undefined) {
+				voteDelegate.amount = validator.amount;
 			}
 
 			if (maxVotes === 1) {
@@ -181,12 +181,12 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	}, [delegates, showSkeleton]);
 
 	const renderTableRow = useCallback(
-		(delegate: Contracts.IReadOnlyWallet, index: number) => {
+		(validator: Contracts.IReadOnlyWallet, index: number) => {
 			let voted: Contracts.VoteRegistryItem | undefined;
 
 			if (hasVotes) {
 				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-				voted = votes.find(({ wallet }) => wallet?.address() === delegate?.address?.());
+				voted = votes.find(({ wallet }) => wallet?.address() === validator?.address?.());
 			}
 
 			const View = isXs ? DelegateRowMobile : DelegateRow;
@@ -194,7 +194,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			return (
 				<View
 					index={index}
-					delegate={delegate}
+					validator={validator}
 					selectedUnvotes={selectedUnvotes}
 					selectedVotes={selectedVotes}
 					selectedWallet={selectedWallet}

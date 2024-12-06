@@ -30,7 +30,7 @@ describe("DelegateRowMobile", () => {
 				<tbody>
 					<DelegateRowMobile
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -52,7 +52,7 @@ describe("DelegateRowMobile", () => {
 				<tbody>
 					<DelegateRowMobile
 						index={0}
-						delegate={delegate}
+						validator={delegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						isLoading={true}
