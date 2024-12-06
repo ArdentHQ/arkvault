@@ -16,7 +16,7 @@ let delegates: Contracts.IReadOnlyWallet[];
 let votes: Contracts.VoteRegistryItem[];
 
 const pressingContinueButton = async () => await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
-const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
+const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
 const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
 const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
 
@@ -176,14 +176,14 @@ describe("ValidatorsTable", () => {
 			/>,
 		);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerVotes()).toHaveTextContent("1");
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.SELECT);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.SELECT);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -223,14 +223,14 @@ describe("ValidatorsTable", () => {
 			/>,
 		);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -255,14 +255,14 @@ describe("ValidatorsTable", () => {
 			/>,
 		);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(asFragment()).toMatchSnapshot();
 
 		votesAmountMinimumMock.mockRestore();
@@ -302,16 +302,16 @@ describe("ValidatorsTable", () => {
 			expect(footerVotes()).toHaveTextContent("1");
 		});
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CHANGED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CHANGED);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(amountField).toHaveValue("20");
 
 		rerender(<Table />);
@@ -323,16 +323,16 @@ describe("ValidatorsTable", () => {
 			expect(footerUnvotes()).toHaveTextContent("1");
 		});
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CHANGED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CHANGED);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(amountField).toHaveValue("20");
 		expect(asFragment()).toMatchSnapshot();
 
@@ -353,7 +353,7 @@ describe("ValidatorsTable", () => {
 		);
 		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		await userEvent.click(selectVoteButton);
 
@@ -361,9 +361,9 @@ describe("ValidatorsTable", () => {
 		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(footerVotes()).toHaveTextContent("1");
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(selectVoteButton).toHaveTextContent(translations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -381,14 +381,14 @@ describe("ValidatorsTable", () => {
 		);
 		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 		await userEvent.click(selectVoteButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(footerVotes()).toHaveTextContent("1");
 
-		expect(firstDelegateVoteButton()).toHaveTextContent(translations.UNSELECTED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.UNSELECTED);
 		expect(selectVoteButton).toHaveTextContent(translations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -437,7 +437,7 @@ describe("ValidatorsTable", () => {
 			/>,
 		);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
@@ -615,7 +615,7 @@ describe("ValidatorsTable", () => {
 			/>,
 		);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
@@ -640,7 +640,7 @@ describe("ValidatorsTable", () => {
 			/>,
 		);
 
-		expect(firstDelegateVoteButton()).toBeInTheDocument();
+		expect(firstValidatorVoteButton()).toBeInTheDocument();
 
 		expect(screen.queryByTestId("DelegateRow__toggle-51")).not.toBeInTheDocument();
 
@@ -650,7 +650,7 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(screen.getByTestId("Pagination__previous"));
 
-		expect(firstDelegateVoteButton()).toBeInTheDocument();
+		expect(firstValidatorVoteButton()).toBeInTheDocument();
 	});
 
 	it("should change pagination size from network validator count", async () => {
@@ -669,7 +669,7 @@ describe("ValidatorsTable", () => {
 			/>,
 		);
 
-		expect(firstDelegateVoteButton()).toBeInTheDocument();
+		expect(firstValidatorVoteButton()).toBeInTheDocument();
 
 		expect(screen.queryByTestId("DelegateRow__toggle-11")).not.toBeInTheDocument();
 
@@ -679,7 +679,7 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(screen.getByTestId("Pagination__previous"));
 
-		expect(firstDelegateVoteButton()).toBeInTheDocument();
+		expect(firstValidatorVoteButton()).toBeInTheDocument();
 
 		delegateCountSpy.mockRestore();
 	});
