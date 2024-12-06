@@ -1,15 +1,15 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "@/app/components/Link";
-import { DelegateRowProperties, useDelegateRow } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRow";
+import { ValidatorRowProperties, useValidatorRow } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRow";
 import { ValidatorRowMobileSkeleton } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobileSkeleton";
 
-export const ValidatorRowMobile = (properties: DelegateRowProperties) => {
+export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
 	const { isLoading, validator } = properties;
 
-	const { renderButton } = useDelegateRow({ ...properties });
+	const { renderButton } = useValidatorRow({ ...properties });
 
 	if (isLoading) {
 		return <ValidatorRowMobileSkeleton />;

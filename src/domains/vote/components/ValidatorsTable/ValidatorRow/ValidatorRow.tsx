@@ -13,7 +13,7 @@ import cn from "classnames";
 import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.helpers";
 import { useTranslation } from "react-i18next";
 
-export interface DelegateRowProperties {
+export interface ValidatorRowProperties {
 	index: number;
 	validator: Contracts.IReadOnlyWallet;
 	selectedUnvotes: VoteValidatorProperties[];
@@ -28,9 +28,9 @@ export interface DelegateRowProperties {
 	toggleVotesSelected: (address: string, voteAmount?: number) => void;
 }
 
-type UseDelegateRowProperties = Omit<DelegateRowProperties, "isLoading" | "availableBalance" | "setAvailableBalance">;
+type UseValidatorRowProperties = Omit<ValidatorRowProperties, "isLoading" | "availableBalance" | "setAvailableBalance">;
 
-export const useDelegateRow = ({
+export const useValidatorRow = ({
 	index,
 	voted,
 	validator,
@@ -40,7 +40,7 @@ export const useDelegateRow = ({
 	selectedWallet,
 	toggleUnvotesSelected,
 	toggleVotesSelected,
-}: UseDelegateRowProperties) => {
+}: UseValidatorRowProperties) => {
 	const { t } = useTranslation();
 
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
@@ -228,10 +228,10 @@ export const ValidatorRow = ({
 	setAvailableBalance,
 	toggleUnvotesSelected,
 	toggleVotesSelected,
-}: DelegateRowProperties) => {
+}: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useDelegateRow({
+	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useValidatorRow({
 		validator,
 		index,
 		isVoteDisabled,

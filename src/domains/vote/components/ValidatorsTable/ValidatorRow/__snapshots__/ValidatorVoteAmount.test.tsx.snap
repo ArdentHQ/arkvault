@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ValidatorVoteAmount > should render when isCompact = false 1`] = `
+exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -10,7 +10,7 @@ exports[`ValidatorVoteAmount > should render when isCompact = false 1`] = `
           data-testid="ValidatorVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
           >
             <div
               class="relative flex-1 px-3"
@@ -19,7 +19,7 @@ exports[`ValidatorVoteAmount > should render when isCompact = false 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-gggz8v"
+                  class="css-y7w7zz"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -27,7 +27,7 @@ exports[`ValidatorVoteAmount > should render when isCompact = false 1`] = `
                     <input
                       aria-invalid="true"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-12 css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12 css-1937ogs"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"
@@ -107,7 +107,7 @@ exports[`ValidatorVoteAmount > should render when isCompact = false 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorVoteAmount > should render when isCompact = true 1`] = `
+exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -117,7 +117,7 @@ exports[`ValidatorVoteAmount > should render when isCompact = true 1`] = `
           data-testid="ValidatorVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-12appi5"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
           >
             <div
               class="relative flex-1 px-3"
@@ -134,7 +134,7 @@ exports[`ValidatorVoteAmount > should render when isCompact = true 1`] = `
                     <input
                       aria-invalid="true"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-12 css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12 css-1937ogs"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"

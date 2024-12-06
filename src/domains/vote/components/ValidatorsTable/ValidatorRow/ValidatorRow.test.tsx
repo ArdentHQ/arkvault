@@ -83,7 +83,7 @@ describe("ValidatorRow", () => {
 		const selected = [
 			{
 				amount: 0,
-				delegateAddress: delegate.address(),
+				validatorAddress: delegate.address(),
 			},
 		];
 
@@ -191,7 +191,7 @@ describe("ValidatorRow", () => {
 		const selectedUnvotes: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegate.address(),
+				validatorAddress: delegate.address(),
 			},
 		];
 		const voted: Contracts.VoteRegistryItem = {
@@ -245,7 +245,7 @@ describe("ValidatorRow", () => {
 			</table>,
 		);
 
-		expect(screen.getByTestId("DelegateVoteAmount")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorVoteAmount")).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -259,7 +259,7 @@ describe("ValidatorRow", () => {
 		const selectedVotes: VoteValidatorProperties[] = [
 			{
 				amount: 20,
-				delegateAddress: delegate.address(),
+				validatorAddress: delegate.address(),
 			},
 		];
 		const voted: Contracts.VoteRegistryItem = {

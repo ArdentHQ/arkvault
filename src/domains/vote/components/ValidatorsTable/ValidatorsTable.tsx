@@ -235,7 +235,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	}
 
 	return (
-		<div data-testid="DelegateTable">
+		<div data-testid="ValidatorsTable">
 			{!!subtitle && subtitle}
 
 			<Table
