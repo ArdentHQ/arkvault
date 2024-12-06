@@ -19,14 +19,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "DelegateResignation",
 			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION"),
 		},
-		usernameRegistration: {
-			icon: "UsernameRegistration",
-			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
-		},
-		usernameResignation: {
-			icon: "UsernameResignation",
-			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION"),
-		},
 		htlcClaim: {
 			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_CLAIM"),
@@ -59,6 +51,14 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "Unvote",
 			label: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
 		},
+		usernameRegistration: {
+			icon: "UsernameRegistration",
+			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
+		},
+		usernameResignation: {
+			icon: "UsernameResignation",
+			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION"),
+		},
 		vote: {
 			icon: "Vote",
 			label: t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
@@ -73,7 +73,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		getIcon: (type: string): string => transactionTypes[type]?.icon,
 		getLabel: (type: string) => {
 			if (transactionTypes[type]) {
-				return transactionTypes[type].label
+				return transactionTypes[type].label;
 			}
 
 			return type;
