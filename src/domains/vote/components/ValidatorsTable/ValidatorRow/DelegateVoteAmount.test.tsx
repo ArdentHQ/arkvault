@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import { VoteValidatorProperties } from "../ValidatorsTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 

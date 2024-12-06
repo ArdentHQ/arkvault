@@ -44,7 +44,7 @@ export const useValidators = ({
 		const voteWallets: Contracts.IReadOnlyWallet[] = [];
 
 		for (const { wallet } of currentVotes) {
-			if (wallet && !wallet.isResignedValidator()) {
+			if (wallet && !wallet.isResignedDelegate()) {
 				voteWallets.push(wallet);
 			}
 		}

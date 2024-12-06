@@ -17,10 +17,10 @@ export const getParameters = (
 	parameterName: ParameterNameProperties,
 ): VoteValidatorProperties[] =>
 	parameters.getAll(parameterName)?.map((vote) => {
-		const voteDelegate = vote.split(",");
+		const voteValidator = vote.split(",");
 
 		return {
-			amount: +voteDelegate[1],
-			validatorAddress: voteDelegate[0],
+			amount: +voteValidator[1],
+			validatorAddress: voteValidator[0],
 		};
 	});

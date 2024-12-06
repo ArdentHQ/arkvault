@@ -7,7 +7,7 @@ import { Alert } from "@/app/components/Alert";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
-import { ValidatorsTable } from "domains/vote/components/ValidatorsTable";
+import { ValidatorsTable } from "@/domains/vote/components/ValidatorsTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
 import { VotesHeader } from "@/domains/vote/components/VotesHeader";
 import { VotingWallets } from "@/domains/vote/components/VotingWallets/VotingWallets";
@@ -181,7 +181,7 @@ export const Votes: FC = () => {
 											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
 											values={{
 												name: currentVotes
-													.find(({ wallet }) => wallet!.isResignedValidator())
+													.find(({ wallet }) => wallet!.isResignedDelegate())
 													?.wallet!.username(),
 											}}
 											components={{ bold: <strong /> }}
