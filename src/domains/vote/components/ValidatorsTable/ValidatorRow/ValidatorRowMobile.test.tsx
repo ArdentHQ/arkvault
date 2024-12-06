@@ -6,14 +6,14 @@ import { env, getDefaultProfileId, render, screen } from "@/utils/testing-librar
 import { ValidatorRowMobile } from "./ValidatorRowMobile";
 
 let wallet: Contracts.IReadWriteWallet;
-let delegate: Contracts.IReadOnlyWallet;
+let validator: Contracts.IReadOnlyWallet;
 
 describe("DelegateRowMobile", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
 
-		delegate = new ReadOnlyWallet({
+		validator = new ReadOnlyWallet({
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
@@ -30,7 +30,7 @@ describe("DelegateRowMobile", () => {
 				<tbody>
 					<ValidatorRowMobile
 						index={0}
-						validator={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -52,7 +52,7 @@ describe("DelegateRowMobile", () => {
 				<tbody>
 					<ValidatorRowMobile
 						index={0}
-						validator={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						isLoading={true}

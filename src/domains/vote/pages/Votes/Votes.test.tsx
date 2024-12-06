@@ -316,7 +316,7 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select an address and delegate", async () => {
+	it("should select an address and validator", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
@@ -377,7 +377,7 @@ describe("Votes", () => {
 		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 	});
 
-	it("should select a delegate", async () => {
+	it("should select a validator", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		const { asFragment } = renderPage(route);
 
@@ -400,7 +400,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 
 		const walletVoteMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => {
-			throw new Error("delegate error");
+			throw new Error("validator error");
 		});
 
 		renderPage(route);
@@ -421,7 +421,7 @@ describe("Votes", () => {
 		walletVoteMock.mockRestore();
 	});
 
-	it("should handle resigned delegate and show empty results", async () => {
+	it("should handle resigned validator and show empty results", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
@@ -625,7 +625,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 	});
 
-	it("should show resigned delegate notice", async () => {
+	it("should show resigned validator notice", async () => {
 		const currentWallet = profile.wallets().first();
 		const walletSpy = vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{

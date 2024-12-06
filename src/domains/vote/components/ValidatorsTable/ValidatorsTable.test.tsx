@@ -164,7 +164,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate to vote", async () => {
+	it("should select a validator to vote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
 				validators={delegates}
@@ -187,7 +187,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should unselect a delegate to vote", async () => {
+	it("should unselect a validator to vote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
 				validators={delegates}
@@ -211,7 +211,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate to unvote", async () => {
+	it("should select a validator to unvote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
 				validators={delegates}
@@ -234,7 +234,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate with vote amount and make it unvote", async () => {
+	it("should select a validator with vote amount and make it unvote", async () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const votes: Contracts.VoteRegistryItem[] = [
@@ -268,7 +268,7 @@ describe("ValidatorsTable", () => {
 		votesAmountMinimumMock.mockRestore();
 	});
 
-	it("should select a changed delegate to unvote", async () => {
+	it("should select a changed validator to unvote", async () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 		const votesAmountStepMock = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
 
@@ -340,7 +340,7 @@ describe("ValidatorsTable", () => {
 		votesAmountStepMock.mockRestore();
 	});
 
-	it("should unselect a delegate to unvote", async () => {
+	it("should unselect a validator to unvote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
 				validators={delegates}
@@ -368,7 +368,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate to unvote/vote", async () => {
+	it("should select a validator to unvote/vote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
 				validators={delegates}
@@ -448,7 +448,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should add resigned delegate to the unvote list", () => {
+	it("should add resigned validator to the unvote list", () => {
 		const resignedDelegates: Contracts.VoteRegistryItem[] = [
 			{
 				amount: 0,
@@ -496,7 +496,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with a delegate to vote", async () => {
+	it("should render with a validator to vote", async () => {
 		const voteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
@@ -526,7 +526,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with a delegate to unvote", async () => {
+	it("should render with a validator to unvote", async () => {
 		const unvoteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
@@ -556,7 +556,7 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with a delegate to unvote/vote", async () => {
+	it("should render with a validator to unvote/vote", async () => {
 		const unvoteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
@@ -653,7 +653,7 @@ describe("ValidatorsTable", () => {
 		expect(firstDelegateVoteButton()).toBeInTheDocument();
 	});
 
-	it("should change pagination size from network delegate count", async () => {
+	it("should change pagination size from network validator count", async () => {
 		const delegateCountSpy = vi.spyOn(wallet.network(), "delegateCount").mockReturnValue(10);
 
 		const delegatesList = Array.from({ length: 12 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];

@@ -25278,7 +25278,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should add resigned delegate to the unvote list 1`] = `
+exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -25473,7 +25473,7 @@ exports[`ValidatorsTable > should add resigned delegate to the unvote list 1`] =
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -25612,7 +25612,7 @@ exports[`ValidatorsTable > should add resigned delegate to the unvote list 1`] =
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -25751,7 +25751,7 @@ exports[`ValidatorsTable > should add resigned delegate to the unvote list 1`] =
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -26230,7 +26230,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -26369,7 +26369,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -26508,7 +26508,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -26987,7 +26987,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -27126,7 +27126,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -27265,7 +27265,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -27744,7 +27744,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -27883,7 +27883,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -28022,7 +28022,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -28555,7 +28555,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -28741,7 +28741,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -28927,7 +28927,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -29280,7 +29280,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should render with a delegate to unvote 1`] = `
+exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -29475,7 +29475,7 @@ exports[`ValidatorsTable > should render with a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -29614,7 +29614,7 @@ exports[`ValidatorsTable > should render with a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -29753,7 +29753,7 @@ exports[`ValidatorsTable > should render with a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -30037,7 +30037,7 @@ exports[`ValidatorsTable > should render with a delegate to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should render with a delegate to unvote/vote 1`] = `
+exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -30232,7 +30232,7 @@ exports[`ValidatorsTable > should render with a delegate to unvote/vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -30371,7 +30371,7 @@ exports[`ValidatorsTable > should render with a delegate to unvote/vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -30510,7 +30510,7 @@ exports[`ValidatorsTable > should render with a delegate to unvote/vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -30798,7 +30798,7 @@ exports[`ValidatorsTable > should render with a delegate to unvote/vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should render with a delegate to vote 1`] = `
+exports[`ValidatorsTable > should render with a validator to vote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -30993,7 +30993,7 @@ exports[`ValidatorsTable > should render with a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -31132,7 +31132,7 @@ exports[`ValidatorsTable > should render with a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -31271,7 +31271,7 @@ exports[`ValidatorsTable > should render with a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -32251,7 +32251,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -32390,7 +32390,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -32529,7 +32529,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -32815,7 +32815,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should select a changed delegate to unvote 1`] = `
+exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -33062,7 +33062,7 @@ exports[`ValidatorsTable > should select a changed delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -33246,7 +33246,7 @@ exports[`ValidatorsTable > should select a changed delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -33432,7 +33432,7 @@ exports[`ValidatorsTable > should select a changed delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -33785,7 +33785,7 @@ exports[`ValidatorsTable > should select a changed delegate to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should select a delegate to unvote 1`] = `
+exports[`ValidatorsTable > should select a validator to unvote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -33980,7 +33980,7 @@ exports[`ValidatorsTable > should select a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -34119,7 +34119,7 @@ exports[`ValidatorsTable > should select a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -34258,7 +34258,7 @@ exports[`ValidatorsTable > should select a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -34544,7 +34544,7 @@ exports[`ValidatorsTable > should select a delegate to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should select a delegate to unvote/vote 1`] = `
+exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -34739,7 +34739,7 @@ exports[`ValidatorsTable > should select a delegate to unvote/vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -34878,7 +34878,7 @@ exports[`ValidatorsTable > should select a delegate to unvote/vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -35017,7 +35017,7 @@ exports[`ValidatorsTable > should select a delegate to unvote/vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -35305,7 +35305,7 @@ exports[`ValidatorsTable > should select a delegate to unvote/vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should select a delegate to vote 1`] = `
+exports[`ValidatorsTable > should select a validator to vote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -35500,7 +35500,7 @@ exports[`ValidatorsTable > should select a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -35639,7 +35639,7 @@ exports[`ValidatorsTable > should select a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -35778,7 +35778,7 @@ exports[`ValidatorsTable > should select a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -36064,7 +36064,7 @@ exports[`ValidatorsTable > should select a delegate to vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should select a delegate with vote amount and make it unvote 1`] = `
+exports[`ValidatorsTable > should select a validator with vote amount and make it unvote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -36311,7 +36311,7 @@ exports[`ValidatorsTable > should select a delegate with vote amount and make it
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -36495,7 +36495,7 @@ exports[`ValidatorsTable > should select a delegate with vote amount and make it
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -36681,7 +36681,7 @@ exports[`ValidatorsTable > should select a delegate with vote amount and make it
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -37229,7 +37229,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -37368,7 +37368,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -37507,7 +37507,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -37790,7 +37790,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should unselect a delegate to unvote 1`] = `
+exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -37985,7 +37985,7 @@ exports[`ValidatorsTable > should unselect a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -38124,7 +38124,7 @@ exports[`ValidatorsTable > should unselect a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -38263,7 +38263,7 @@ exports[`ValidatorsTable > should unselect a delegate to unvote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>
@@ -38549,7 +38549,7 @@ exports[`ValidatorsTable > should unselect a delegate to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ValidatorsTable > should unselect a delegate to vote 1`] = `
+exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
 <DocumentFragment>
   <div
     data-testid="ValidatorsTable"
@@ -38744,7 +38744,7 @@ exports[`ValidatorsTable > should unselect a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib 
+                       arkx 
                     </div>
                   </div>
                 </div>
@@ -38883,7 +38883,7 @@ exports[`ValidatorsTable > should unselect a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr 
+                       genesis_42 
                     </div>
                   </div>
                 </div>
@@ -39022,7 +39022,7 @@ exports[`ValidatorsTable > should unselect a delegate to vote 1`] = `
                     <div
                       class="truncate"
                     >
-                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES 
+                       genesis_17 
                     </div>
                   </div>
                 </div>

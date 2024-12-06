@@ -20,7 +20,7 @@ export const useValidators = ({
 	const [isLoadingValidators, setIsLoadingValidators] = useState(false);
 
 	const currentVotes = useMemo(
-		() => votes.filter((vote) => validators.some((delegate) => vote.wallet?.address() === delegate.address())),
+		() => votes.filter((vote) => validators.some((validator) => vote.wallet?.address() === validator.address())),
 		[votes, validators],
 	);
 
@@ -38,7 +38,7 @@ export const useValidators = ({
 
 	const filteredValidatorsVotes = useMemo(() => {
 		if (voteFilter === "all") {
-			return validators.filter((delegate) => !delegate.isResignedDelegate());
+			return validators.filter((validator) => !validator.isResignedDelegate());
 		}
 
 		const voteWallets: Contracts.IReadOnlyWallet[] = [];
@@ -59,8 +59,8 @@ export const useValidators = ({
 
 		const query = searchQuery.toLowerCase();
 		return filteredValidatorsVotes.filter(
-			(delegate) =>
-				delegate.address().toLowerCase().includes(query) || delegate.username()?.toLowerCase()?.includes(query),
+			(validator) =>
+				validator.address().toLowerCase().includes(query) || validator.username()?.toLowerCase()?.includes(query),
 		);
 	}, [filteredValidatorsVotes, searchQuery]);
 

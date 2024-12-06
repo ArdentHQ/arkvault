@@ -10,7 +10,7 @@ import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
-let delegate: Contracts.IReadOnlyWallet;
+let validator: Contracts.IReadOnlyWallet;
 
 const translations = buildTranslations();
 
@@ -21,7 +21,7 @@ describe("ValidatorFooter", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
 
-		delegate = new ReadOnlyWallet({
+		validator = new ReadOnlyWallet({
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
@@ -103,11 +103,11 @@ describe("ValidatorFooter", () => {
 		votesAmountMinimumMock.mockRestore();
 	});
 
-	it("should disable continue button with tooltip if user doesn't select a delegate", async () => {
+	it("should disable continue button with tooltip if user doesn't select a validator", async () => {
 		const selectedDelegate: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 
@@ -163,7 +163,7 @@ describe("ValidatorFooter", () => {
 		const selectedDelegate: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 
@@ -191,7 +191,7 @@ describe("ValidatorFooter", () => {
 				selectedVotes={[
 					{
 						amount: 10,
-						delegateAddress: delegate.address(),
+						validatorAddress: validator.address(),
 					},
 				]}
 				selectedUnvotes={[]}

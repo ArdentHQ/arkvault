@@ -489,7 +489,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
 </DocumentFragment>
 `;
 
-exports[`ValidatorRow > should render the selected delegate 1`] = `
+exports[`ValidatorRow > should render the selected validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>

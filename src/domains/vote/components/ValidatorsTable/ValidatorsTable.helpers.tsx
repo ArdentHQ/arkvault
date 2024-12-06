@@ -25,7 +25,7 @@ export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTabl
 			},
 			{
 				Header: t("VOTE.VALIDATOR_TABLE.NAME"),
-				accessor: (delegate) => isLoading || delegate.username(),
+				accessor: (validator) => isLoading || validator.username(),
 				className: "justify-start",
 				headerClassName: "w-3/4 sm:w-auto, no-border",
 			},
@@ -39,7 +39,7 @@ export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTabl
 			},
 			{
 				Header: t("COMMON.EXPLORER"),
-				accessor: (delegate) => isLoading || delegate.explorerLink(),
+				accessor: (validator) => isLoading || validator.explorerLink(),
 				className: "justify-center",
 				disableSortBy: true,
 				headerClassName: "hidden sm:table-cell no-border",

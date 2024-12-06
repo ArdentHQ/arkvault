@@ -9,7 +9,7 @@ import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
-let delegate: Contracts.IReadOnlyWallet;
+let validator: Contracts.IReadOnlyWallet;
 
 const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
 
@@ -18,7 +18,7 @@ describe("ValidatorRow", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
 
-		delegate = new ReadOnlyWallet({
+		validator = new ReadOnlyWallet({
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
@@ -35,7 +35,7 @@ describe("ValidatorRow", () => {
 				<tbody>
 					<ValidatorRow
 						index={0}
-						validator={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -59,7 +59,7 @@ describe("ValidatorRow", () => {
 				<tbody>
 					<ValidatorRow
 						index={0}
-						validator={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -75,15 +75,15 @@ describe("ValidatorRow", () => {
 		await userEvent.click(firstValidatorVoteButton());
 
 		expect(container).toBeInTheDocument();
-		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());
+		expect(toggleVotesSelected).toHaveBeenCalledWith(validator.address());
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render the selected delegate", () => {
+	it("should render the selected validator", () => {
 		const selected = [
 			{
 				amount: 0,
-				validatorAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 
@@ -92,7 +92,7 @@ describe("ValidatorRow", () => {
 				<tbody>
 					<ValidatorRow
 						index={0}
-						validator={delegate}
+						validator={validator}
 						selectedVotes={selected}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -136,10 +136,10 @@ describe("ValidatorRow", () => {
 				<tbody>
 					<ValidatorRow
 						index={0}
-						validator={delegate}
+						validator={validator}
 						voted={{
 							amount: 10,
-							wallet: delegate,
+							wallet: validator,
 						}}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
@@ -191,12 +191,12 @@ describe("ValidatorRow", () => {
 		const selectedUnvotes: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				validatorAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 		const voted: Contracts.VoteRegistryItem = {
 			amount: 10,
-			wallet: delegate,
+			wallet: validator,
 		};
 
 		const { container, asFragment } = render(
@@ -204,7 +204,7 @@ describe("ValidatorRow", () => {
 				<tbody>
 					<ValidatorRow
 						index={0}
-						validator={delegate}
+						validator={validator}
 						voted={voted}
 						selectedVotes={[]}
 						selectedUnvotes={selectedUnvotes}
@@ -232,7 +232,7 @@ describe("ValidatorRow", () => {
 				<tbody>
 					<ValidatorRow
 						index={0}
-						validator={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -259,12 +259,12 @@ describe("ValidatorRow", () => {
 		const selectedVotes: VoteValidatorProperties[] = [
 			{
 				amount: 20,
-				validatorAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 		const voted: Contracts.VoteRegistryItem = {
 			amount: 10,
-			wallet: delegate,
+			wallet: validator,
 		};
 
 		const { container, asFragment } = render(
@@ -272,7 +272,7 @@ describe("ValidatorRow", () => {
 				<tbody>
 					<ValidatorRow
 						index={0}
-						validator={delegate}
+						validator={validator}
 						voted={voted}
 						selectedVotes={selectedVotes}
 						selectedUnvotes={[]}

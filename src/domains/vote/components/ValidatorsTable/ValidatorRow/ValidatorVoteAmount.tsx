@@ -211,10 +211,10 @@ export const ValidatorVoteAmount = ({
 			return;
 		}
 
-		let delegateVoteAmount = 0;
+		let validatorVoteAmount = 0;
 
 		if (voted) {
-			delegateVoteAmount = voted.amount;
+			validatorVoteAmount = voted.amount;
 		}
 
 		const alreadyExistsInVotes = validatorExistsInVotes(selectedVotes, validatorAddress);
@@ -225,18 +225,18 @@ export const ValidatorVoteAmount = ({
 				return;
 			}
 
-			delegateVoteAmount += alreadyExistsInVotes.amount;
+			validatorVoteAmount += alreadyExistsInVotes.amount;
 		} else if (alreadyExistsInUnvotes) {
 			if (alreadyExistsInUnvotes.amount === 0) {
 				return;
 			}
 
-			delegateVoteAmount -= alreadyExistsInUnvotes.amount;
+			validatorVoteAmount -= alreadyExistsInUnvotes.amount;
 		}
 
-		if (delegateVoteAmount > 0) {
-			setAmountField(delegateVoteAmount);
-			setAmount(delegateVoteAmount);
+		if (validatorVoteAmount > 0) {
+			setAmountField(validatorVoteAmount);
+			setAmount(validatorVoteAmount);
 		}
 	}, [isSelectedUnvote]); // eslint-disable-line react-hooks/exhaustive-deps
 
