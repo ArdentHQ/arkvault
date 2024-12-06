@@ -134,7 +134,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
-const formStep = () => screen.findByTestId("DelegateRegistrationForm__form-step");
+const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 const reviewStepID = "DelegateRegistrationForm__review-step";
@@ -203,7 +203,7 @@ describe("Registration", () => {
 	});
 
 	it.each([
-		["delegateRegistration", "Register Delegate"],
+		["validatorRegistration", "Register Validator"],
 		["multiSignature", multisignatureTitle],
 	])("should handle registrationType param (%s)", async (type, label) => {
 		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;

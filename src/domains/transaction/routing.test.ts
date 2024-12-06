@@ -6,7 +6,7 @@ describe("routing", () => {
 	it("should have transaction routes", () => {
 		expect(TransactionRoutes).toStrictEqual([
 			expect.objectContaining({ path: ProfilePaths.SendRegistration }),
-			expect.objectContaining({ path: ProfilePaths.SendDelegateResignation }),
+			expect.objectContaining({ path: ProfilePaths.SendValidatorResignation }),
 			expect.objectContaining({ path: ProfilePaths.SendTransferWallet }),
 			expect.objectContaining({ path: ProfilePaths.SendTransfer }),
 			expect.objectContaining({ path: ProfilePaths.SendVoteWallet }),

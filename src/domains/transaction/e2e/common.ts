@@ -31,7 +31,7 @@ export const goToRegistrationPage = async (t: any) => {
 	await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
 };
 
-export const goToDelegateRegistrationPage = async (t: any) => {
+export const goToValidatorRegistrationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(
@@ -44,7 +44,7 @@ export const goToDelegateRegistrationPage = async (t: any) => {
 		.ok();
 };
 
-export const goToDelegateResignationPage = async (t: any) => {
+export const goToValidatorResignationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(

@@ -80,7 +80,7 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
-				{ label: "Validator", value: "delegate-registration" },
+				// { label: "Validator", value: "delegate-registration" },
 				{ label: "Multisignature", value: "multi-signature" },
 			],
 			title: "Register",
@@ -96,7 +96,7 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
-				{ label: "Validator", value: "delegate-registration" },
+				// { label: "Validator", value: "delegate-registration" },
 				{ label: "Multisignature", value: "multi-signature" },
 			],
 			title: "Register",
@@ -141,7 +141,8 @@ describe("Wallet Options Hook", () => {
 
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
-			options: [{ label: "Validator", value: "delegate-registration" }],
+			options: [],
+			// options: [{ label: "Validator", value: "delegate-registration" }],
 			title: "Register",
 		});
 

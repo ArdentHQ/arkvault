@@ -1,3 +1,3 @@
-export * from "./DelegateRegistrationForm";
+export * from "./ValidatorRegistrationForm";
 export * from "./FormStep";
 export * from "./ReviewStep";

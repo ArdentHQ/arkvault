@@ -118,7 +118,7 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 
 			if (option.value === "delegate-resignation") {
 				history.push(
-					generatePath(ProfilePaths.SendDelegateResignation, {
+					generatePath(ProfilePaths.SendValidatorResignation, {
 						profileId: profile.id(),
 						walletId: wallet.id(),
 					}),

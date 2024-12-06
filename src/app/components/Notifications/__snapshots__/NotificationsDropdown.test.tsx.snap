@@ -237,7 +237,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -440,7 +440,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="TransactionType"
@@ -505,7 +505,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -632,7 +632,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -776,7 +776,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -822,7 +822,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"

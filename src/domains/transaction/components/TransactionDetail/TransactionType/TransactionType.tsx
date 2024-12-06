@@ -30,24 +30,16 @@ export const TransactionType = ({
 						</Label>
 					</div>
 
-					{transaction.isDelegateRegistration() && (
+					{transaction.isValidatorRegistration() && (
 						<>
 							<DetailDivider />
 
 							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText>{t("COMMON.VALIDATOR")}</DetailLabelText>
-								<div className="font-semibold leading-5">{transaction.username()}</div>
-							</div>
-						</>
-					)}
+								<DetailLabelText>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
-					{transaction.isDelegateResignation() && (
-						<>
-							<DetailDivider />
-
-							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText>{t("COMMON.VALIDATOR")}</DetailLabelText>
-								<div className="font-semibold leading-5"> {transaction.wallet().username()} </div>
+								<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
+									{transaction.validatorPublicKey()}
+								</div>
 							</div>
 						</>
 					)}

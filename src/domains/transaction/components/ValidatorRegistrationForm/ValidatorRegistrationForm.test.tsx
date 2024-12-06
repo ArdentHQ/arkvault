@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { DelegateRegistrationForm, signDelegateRegistration } from "./DelegateRegistrationForm";
+import { ValidatorRegistrationForm, signValidatorRegistration } from "./ValidatorRegistrationForm";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { translations } from "@/domains/transaction/i18n";
 import delegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
@@ -45,7 +45,7 @@ const renderComponent = (properties?: any) => {
 
 		return (
 			<FormProvider {...form}>
-				<DelegateRegistrationForm.component profile={profile} activeTab={activeTab} wallet={wallet} />
+				<ValidatorRegistrationForm.component profile={profile} activeTab={activeTab} wallet={wallet} />
 			</FormProvider>
 		);
 	};
@@ -75,9 +75,9 @@ const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 		username: () => delegateRegistrationFixture.data.asset.delegate.username,
 	});
 
-const formStepID = "DelegateRegistrationForm__form-step";
+const formStepID = "ValidatorRegistrationForm_form-step";
 
-describe("DelegateRegistrationForm", () => {
+describe("ValidatorRegistrationForm", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
@@ -174,7 +174,7 @@ describe("DelegateRegistrationForm", () => {
 			setValue: vi.fn(),
 		};
 		const signMock = vi
-			.spyOn(wallet.transaction(), "signDelegateRegistration")
+			.spyOn(wallet.transaction(), "signValidatorRegistration")
 			.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [delegateRegistrationFixture.data.id],
@@ -183,7 +183,7 @@ describe("DelegateRegistrationForm", () => {
 		});
 		const transactionMock = createTransactionMock(wallet);
 
-		await signDelegateRegistration({
+		await signValidatorRegistration({
 			env,
 			form,
 			profile,
@@ -213,7 +213,7 @@ describe("DelegateRegistrationForm", () => {
 		} as Contracts.SignedTransactionData;
 
 		render(
-			<DelegateRegistrationForm.transactionDetails
+			<ValidatorRegistrationForm.transactionDetails
 				transaction={transaction}
 				translations={translations}
 				wallet={wallet}
@@ -244,7 +244,7 @@ describe("DelegateRegistrationForm", () => {
 			setValue: vi.fn(),
 		};
 		const signMock = vi
-			.spyOn(wallet.transaction(), "signDelegateRegistration")
+			.spyOn(wallet.transaction(), "signValidatorRegistration")
 			.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [delegateRegistrationFixture.data.id],
@@ -253,7 +253,7 @@ describe("DelegateRegistrationForm", () => {
 		});
 		const transactionMock = createTransactionMock(wallet);
 
-		await signDelegateRegistration({
+		await signValidatorRegistration({
 			env,
 			form,
 			profile,
