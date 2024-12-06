@@ -148,7 +148,7 @@ describe("SendVote Combined", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				validatorAddress: delegateData[1].address,
 			},
 		];
 
@@ -157,7 +157,7 @@ describe("SendVote Combined", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 

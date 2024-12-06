@@ -8,7 +8,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
 import { SendVote } from "./SendVote";
-import { VoteValidatorProperties } from "../../../vote/components/ValidatorsTable/ValidatorsTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
@@ -152,7 +152,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
