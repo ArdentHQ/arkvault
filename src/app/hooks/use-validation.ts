@@ -16,7 +16,6 @@ import {
 	sendVote,
 	validatorRegistration,
 } from "@/domains/transaction/validations";
-import { receiveFunds } from "@/domains/wallet/validations";
 
 export const useValidation = () => {
 	const { t } = useTranslation();
@@ -32,7 +31,6 @@ export const useValidation = () => {
 			multiSignatureRegistration: multiSignatureRegistration(t),
 			network: network(t),
 			password: password(t),
-			receiveFunds: receiveFunds(t),
 			sendTransfer: sendTransfer(t),
 			sendVote: sendVote(t),
 			server: server(t),
