@@ -232,7 +232,6 @@ export const ValidatorRow = ({
 	const { t } = useTranslation();
 
 	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useDelegateRow({
-		validator,
 		index,
 		isVoteDisabled,
 		selectedUnvotes,
@@ -240,6 +239,7 @@ export const ValidatorRow = ({
 		selectedWallet,
 		toggleUnvotesSelected,
 		toggleVotesSelected,
+		validator,
 		voted,
 	});
 

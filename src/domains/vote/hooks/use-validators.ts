@@ -90,12 +90,12 @@ export const useValidators = ({
 
 	return {
 		currentVotes,
-		validators,
 		fetchValidators,
 		fetchVotes,
 		filteredValidators,
 		isLoadingValidators,
 		resignedValidatorVotes,
+		validators,
 		votes,
 	};
 };
