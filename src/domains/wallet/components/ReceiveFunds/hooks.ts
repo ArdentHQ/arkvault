@@ -8,20 +8,17 @@ interface QRCodeProperties {
 	nethash: string;
 	coin: string;
 	amount: string;
-	memo: string;
 	address: string;
 	method?: string;
 }
 
-export const useQRCode = ({ amount, address, memo, coin, nethash }: QRCodeProperties) => {
+export const useQRCode = ({ amount, address, coin, nethash }: QRCodeProperties) => {
 	const [data, setData] = useState<{ uri?: string; image?: string }>({
 		image: undefined,
 		uri: undefined,
 	});
 
-	const maxLength = 255;
-
-	const formatQR = useCallback(({ amount, address, memo, coin, nethash }: QRCodeProperties) => {
+	const formatQR = useCallback(({ amount, address, coin, nethash }: QRCodeProperties) => {
 		const urlBuilder = new URLBuilder(`${window.location.origin}/#/`);
 
 		urlBuilder.setCoin(coin);
@@ -29,23 +26,22 @@ export const useQRCode = ({ amount, address, memo, coin, nethash }: QRCodeProper
 
 		return urlBuilder.generateTransfer(address, {
 			amount: +amount,
-			memo: memo?.slice(0, maxLength),
 		});
 	}, []);
 
 	useEffect(() => {
 		const color = shouldUseDarkColors()
 			? {
-					dark: "#212225",
-					light: "#eef3f5",
-				}
+				dark: "#212225",
+				light: "#eef3f5",
+			}
 			: {
-					dark: "#212225",
-					light: "#fff",
-				};
+				dark: "#212225",
+				light: "#fff",
+			};
 
 		const generateQRCode = async () => {
-			const uri = address ? formatQR({ address, amount, coin, memo, nethash }) : undefined;
+			const uri = address ? formatQR({ address, amount, coin, nethash }) : undefined;
 
 			let image: string | undefined;
 
@@ -62,7 +58,7 @@ export const useQRCode = ({ amount, address, memo, coin, nethash }: QRCodeProper
 		};
 
 		generateQRCode();
-	}, [amount, memo, nethash, address, formatQR, coin]);
+	}, [amount, nethash, address, formatQR, coin]);
 
 	return data;
 };
