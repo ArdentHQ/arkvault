@@ -101,23 +101,6 @@ export const TransactionDetailContent = ({
 					/>
 				</DetailPadded>
 
-				{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (
-					<DetailPadded>
-						<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-							{transaction.memo() && (
-								<p className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
-									{transaction.memo()}
-								</p>
-							)}
-							{!transaction.memo() && (
-								<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
-									{t("COMMON.NOT_AVAILABLE")}
-								</p>
-							)}
-						</DetailWrapper>
-					</DetailPadded>
-				)}
-
 				<DetailPadded>
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 					<div className="mt-2">

@@ -45,7 +45,7 @@ export const FormStep = ({
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
 	const { getValues, setValue, watch } = useFormContext();
-	const { recipients, memo = "" } = getValues();
+	const { recipients } = getValues();
 	const { network, senderAddress } = watch();
 
 	const senderWallet = useMemo(() => {
@@ -66,7 +66,6 @@ export const FormStep = ({
 		const updateFeeTransactionData = async () => {
 			const transferData = await buildTransferData({
 				coin: profile.coins().get(network.coin(), network.id()),
-				memo,
 				recipients,
 			});
 
@@ -77,7 +76,7 @@ export const FormStep = ({
 		};
 
 		updateFeeTransactionData();
-	}, [network, memo, recipients, profile, isMounted]);
+	}, [network, recipients, profile, isMounted]);
 
 	useEffect(() => {
 		if (!network) {
@@ -206,22 +205,6 @@ export const FormStep = ({
 						wallet={senderWallet}
 					/>
 				</div>
-
-				{network?.usesMemo() && (
-					<FormField name="memo" className="relative">
-						<FormLabel label={t("COMMON.MEMO")} optional />
-						<InputCounter
-							data-testid="Input__memo"
-							type="text"
-							placeholder=" "
-							maxLengthLabel="255"
-							value={memo}
-							onChange={(event: ChangeEvent<HTMLInputElement>) =>
-								setValue("memo", event.target.value, { shouldDirty: true, shouldValidate: true })
-							}
-						/>
-					</FormField>
-				)}
 
 				{showFeeInput && (
 					<FormField name="fee">

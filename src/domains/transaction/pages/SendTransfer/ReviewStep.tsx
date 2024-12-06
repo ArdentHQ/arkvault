@@ -18,7 +18,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch } = useFormContext();
-	const { fee, recipients, memo } = watch();
+	const { fee, recipients } = watch();
 	const profile = useActiveProfile();
 
 	let amount = 0;
@@ -53,12 +53,6 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 					network={wallet.network()}
 					labelClassName="w-14 sm:w-20"
 				/>
-
-				{memo && (
-					<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-						<p>{memo}</p>
-					</DetailWrapper>
-				)}
 
 				<div className="space-y-3 sm:space-y-2">
 					<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
