@@ -17,7 +17,7 @@
 			"senderPublicKey": "02de179a4f7be8eda70aae17857643c45644186e3a854fb32154809e50e79ed452",
 			"recipient": "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"signature": "a953fbfee1b2b013d05c60e7de5b3a44377bf3dace0f38e286f82cd0bab73b80f106a2403879f67bb55f053b561d0f901265ee661df3c14808e0668043006da1",
-			"confirmations": 1569089,
+			"confirmations": 1,
 			"timestamp": {
 				"epoch": 97815416,
 				"unix": 1587916616,
@@ -38,7 +38,7 @@
 			"recipient": "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"signature": "3045022100f2a58a13ac75b922d6621600012ad24e13684137e56c477bb4a2e7de335e0926022066b492da15145d492e7c9c313a0e9221717b991b7dae8de3e4619ba498223df4",
 			"vendorField": "Java ? ? ? ?",
-			"confirmations": 1977539,
+			"confirmations": 1,
 			"timestamp": {
 				"epoch": 94507360,
 				"unix": 1584608560,
@@ -60,7 +60,7 @@
 			"signature": "d05e0b484e05de1e818b830ea1e56ca5c25e717c22d27b66f70a27bc8687b29c356dc2ce10954d72440e03f9d88d4c941bf3b90613f47de4994058cc7ccd0a3c",
 			"signSignature": "7402021f6958227333c753b992fdca94c472381ad45c2eeb4b9d2991205b4fa807e1ca794d998adb1a8923139bece5956a617d14690d3caa939e5b3b27b9acd9",
 			"vendorField": "test",
-			"confirmations": 398,
+			"confirmations": 1,
 			"timestamp": {
 				"epoch": 111541712,
 				"unix": 1601642912,

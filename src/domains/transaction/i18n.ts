@@ -326,6 +326,7 @@ export const translations = {
 	TRANSACTIONS_AMOUNT: "Transaction(s) Amount",
 	TRANSACTION_AMOUNT: "Transaction Amount",
 	TRANSACTION_DETAILS: "Transaction Details",
+	TRANSACTION_EXECUTION_ERROR: "Error encountered during contract execution.",
 	TRANSACTION_FEE: "Transaction Fee",
 	TRANSACTION_ID: "Transaction ID",
 	TRANSACTION_REMOVED: "Transaction successfully removed",

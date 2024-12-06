@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Spinner } from "@/app/components/Spinner";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@ardenthq/sdk";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 
 export const TransactionConfirmations = ({
@@ -14,10 +14,36 @@ export const TransactionConfirmations = ({
 }: {
 	isConfirmed: boolean;
 	confirmations?: number;
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: DTO.RawTransactionData;
 }) => {
 	const { t } = useTranslation();
 	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
+
+	if (confirmations && confirmations > 1 && !transaction.isSuccess()) {
+		return (
+			<div
+				data-testid="TransactionFailedAlert"
+				className="rounded-xl border border-theme-danger-200 bg-theme-danger-50 py-2 dark:border-theme-danger-info-border dark:bg-transparent max-sm:text-sm sm:py-4 sm:leading-5"
+			>
+				<div className="mb-2 flex items-center space-x-3 px-3 sm:mb-4 sm:px-6">
+					<div className="flex items-center space-x-2 text-theme-danger-700 dark:text-theme-danger-info-border">
+						<Icon name="CircleMinus" size="lg" className="h-5" />
+						<p className="font-semibold">{t("COMMON.ALERT.FAILED")}</p>
+					</div>
+
+					<Divider type="vertical" className="h-5 text-theme-danger-200 dark:text-theme-secondary-800" />
+
+					<p className="font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+						<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
+					</p>
+				</div>
+
+				<p className="border-t border-theme-danger-200 px-3 pt-2 font-semibold text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 sm:px-6 sm:pt-4">
+					{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR")}
+				</p>
+			</div>
+		);
+	}
 
 	return (
 		<div className="mt-3 sm:mt-2">
