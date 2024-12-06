@@ -340,6 +340,8 @@ export const translations = {
 		TRANSFER: "Transfer",
 		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",
+		USERNAME_REGISTRATION: "Username Registration",
+		USERNAME_RESIGNATION: "Username Resignation",
 		VALIDATOR_REGISTRATION: "Registration",
 		VALIDATOR_RESIGNATION: "Resignation",
 		VOTE: "Vote",
