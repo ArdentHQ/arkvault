@@ -270,7 +270,7 @@ export const DelegateRow = ({
 			>
 				<div className="relative h-[17px] grow">
 					<div className="absolute flex w-full items-center">
-						<div className="truncate"> {delegate.username()} </div>
+						<div className="truncate"> {delegate.address()} </div>
 					</div>
 				</div>
 			</TableCell>

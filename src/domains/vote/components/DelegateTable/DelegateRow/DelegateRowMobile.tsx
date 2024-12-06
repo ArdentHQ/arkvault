@@ -24,7 +24,7 @@ export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 							<div className="flex flex-1 space-x-3 overflow-hidden text-sm font-semibold leading-[17px]">
 								<span>{delegate.rank()}</span>
 								<div className="relative w-full">
-									<div className="absolute flex w-full items-center">{delegate.username()}</div>
+									<div className="absolute flex w-full items-center">{delegate.address()}</div>
 								</div>
 							</div>
 
