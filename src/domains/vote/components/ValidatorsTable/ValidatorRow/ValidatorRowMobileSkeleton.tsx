@@ -3,11 +3,11 @@ import { Skeleton } from "@/app/components/Skeleton";
 
 import { useRandomNumber } from "@/app/hooks";
 
-export const DelegateRowMobileSkeleton = () => {
+export const ValidatorRowMobileSkeleton = () => {
 	const nameWidth = useRandomNumber(80, 120);
 
 	return (
-		<tr data-testid="DelegateRowMobileSkeleton">
+		<tr data-testid="ValidatorRowMobileSkeleton">
 			<td className="pt-3">
 				<div className="w-full overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">

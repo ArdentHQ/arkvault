@@ -155,7 +155,7 @@ describe("AddressRowMobile", () => {
 		votesMock.mockRestore();
 	});
 
-	it("should not render delegate name if name is not provided", async () => {
+	it("should not render validator name if name is not provided", async () => {
 		const { asFragment } = render(<AddressRowMobileDelegateName />, {
 			route: `/profiles/${profile.id()}/votes`,
 		});
@@ -223,7 +223,7 @@ describe("AddressRowMobile", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with active delegate", async () => {
+	it("should render with active validator", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
@@ -258,7 +258,7 @@ describe("AddressRowMobile", () => {
 		votesMock.mockRestore();
 	});
 
-	it("should render with standby delegate", async () => {
+	it("should render with standby validator", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
@@ -293,7 +293,7 @@ describe("AddressRowMobile", () => {
 		votesMock.mockRestore();
 	});
 
-	it("should render with resigned delegate", async () => {
+	it("should render with resigned validator", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,

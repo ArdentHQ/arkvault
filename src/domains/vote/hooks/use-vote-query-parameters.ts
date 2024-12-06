@@ -8,11 +8,11 @@ import { getParameters } from "@/domains/vote/utils/url-parameters";
 
 export const useVoteQueryParameters = () => {
 	const queryParameters = useQueryParameters();
-	const unvoteDelegates = getParameters(queryParameters, "unvote");
-	const voteDelegates = getParameters(queryParameters, "vote");
+	const unvoteValidators = getParameters(queryParameters, "unvote");
+	const voteValidators = getParameters(queryParameters, "vote");
 	const filter = (queryParameters.get("filter") || "all") as FilterOption;
 
-	return useMemo(() => ({ filter, unvoteDelegates, voteDelegates }), [filter, unvoteDelegates, voteDelegates]);
+	return useMemo(() => ({ filter, unvoteValidators, voteValidators }), [filter, unvoteValidators, voteValidators]);
 };
 
 export const useDelegatesFromURL = ({
@@ -24,7 +24,7 @@ export const useDelegatesFromURL = ({
 	profile: Contracts.IProfile;
 	network: Networks.Network;
 }) => {
-	const { voteDelegates, unvoteDelegates } = useVoteQueryParameters();
+	const { voteValidators, unvoteValidators } = useVoteQueryParameters();
 
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
@@ -32,7 +32,7 @@ export const useDelegatesFromURL = ({
 	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
-		const updateDelegates = async () => {
+		const updateValidators = async () => {
 			setIsLoading(true);
 
 			try {
@@ -41,19 +41,19 @@ export const useDelegatesFromURL = ({
 				await env.delegates().sync(profile, network.coin(), network.id());
 			}
 
-			if (unvoteDelegates.length > 0 && unvotes.length === 0) {
-				const unvotesList: Contracts.VoteRegistryItem[] = unvoteDelegates?.map((unvote) => ({
+			if (unvoteValidators.length > 0 && unvotes.length === 0) {
+				const unvotesList: Contracts.VoteRegistryItem[] = unvoteValidators?.map((unvote) => ({
 					amount: unvote.amount,
-					wallet: env.delegates().findByAddress(network.coin(), network.id(), unvote.delegateAddress),
+					wallet: env.delegates().findByAddress(network.coin(), network.id(), unvote.validatorAddress),
 				}));
 
 				setUnvotes(unvotesList);
 			}
 
-			if (voteDelegates.length > 0 && votes.length === 0) {
-				const votesList: Contracts.VoteRegistryItem[] = voteDelegates?.map((vote) => ({
+			if (voteValidators.length > 0 && votes.length === 0) {
+				const votesList: Contracts.VoteRegistryItem[] = voteValidators?.map((vote) => ({
 					amount: vote.amount,
-					wallet: env.delegates().findByAddress(network.coin(), network.id(), vote.delegateAddress),
+					wallet: env.delegates().findByAddress(network.coin(), network.id(), vote.validatorAddress),
 				}));
 
 				setVotes(votesList);
@@ -62,16 +62,16 @@ export const useDelegatesFromURL = ({
 			setIsLoading(false);
 		};
 
-		updateDelegates();
-	}, [env, voteDelegates, votes, unvoteDelegates, unvotes]);
+		updateValidators();
+	}, [env, voteValidators, votes, unvoteValidators, unvotes]);
 
 	return {
 		isLoading,
 		setUnvotes,
 		setVotes,
-		unvoteDelegates,
+		unvoteValidators,
 		unvotes,
-		voteDelegates,
+		voteValidators,
 		votes,
 	};
 };

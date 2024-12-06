@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DelegateFooter > should render 1`] = `
+exports[`ValidatorFooter > should render 1`] = `
 <DocumentFragment>
   <div
     class="fixed inset-x-0 bottom-0 mb-14 h-auto w-screen bg-theme-background py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:mb-0 md:py-4"

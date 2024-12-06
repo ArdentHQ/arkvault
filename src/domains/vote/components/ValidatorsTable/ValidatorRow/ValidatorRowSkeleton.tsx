@@ -8,11 +8,11 @@ interface DelegateRowSkeletonProperties {
 	requiresStakeAmount?: boolean;
 }
 
-export const DelegateRowSkeleton = ({ requiresStakeAmount }: DelegateRowSkeletonProperties) => {
+export const ValidatorRowSkeleton = ({ requiresStakeAmount }: DelegateRowSkeletonProperties) => {
 	const nameWidth = useRandomNumber(120, 150);
 
 	return (
-		<TableRow data-testid="DelegateRowSkeleton">
+		<TableRow data-testid="ValidatorRowSkeleton">
 			<TableCell variant="start">
 				<Skeleton height={16} width={22} />
 			</TableCell>

@@ -3,17 +3,17 @@ import React from "react";
 
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-import { DelegateRowMobile } from "./DelegateRowMobile";
+import { ValidatorRowMobile } from "./ValidatorRowMobile";
 
 let wallet: Contracts.IReadWriteWallet;
-let delegate: Contracts.IReadOnlyWallet;
+let validator: Contracts.IReadOnlyWallet;
 
 describe("DelegateRowMobile", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
 
-		delegate = new ReadOnlyWallet({
+		validator = new ReadOnlyWallet({
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
@@ -28,9 +28,9 @@ describe("DelegateRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<DelegateRowMobile
+					<ValidatorRowMobile
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -50,9 +50,9 @@ describe("DelegateRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<DelegateRowMobile
+					<ValidatorRowMobile
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						isLoading={true}
@@ -66,6 +66,6 @@ describe("DelegateRowMobile", () => {
 			</table>,
 		);
 
-		expect(screen.getAllByTestId("DelegateRowMobileSkeleton")[0]).toBeInTheDocument();
+		expect(screen.getAllByTestId("ValidatorRowMobileSkeleton")[0]).toBeInTheDocument();
 	});
 });

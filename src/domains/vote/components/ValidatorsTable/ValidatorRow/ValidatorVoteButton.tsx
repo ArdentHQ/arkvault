@@ -31,7 +31,7 @@ const CompactButton = ({ index, disabled, compactClassName, onClick, children }:
 	</Button>
 );
 
-export const DelegateVoteButton = ({ index, disabled, compactClassName, onClick, children }: VoteButtonProperties) => {
+export const ValidatorVoteButton = ({ index, disabled, compactClassName, onClick, children }: VoteButtonProperties) => {
 	const { t } = useTranslation();
 
 	if (disabled) {

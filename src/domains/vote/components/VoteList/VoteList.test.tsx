@@ -25,9 +25,9 @@ describe("VoteList", () => {
 
 		votes = delegates;
 
-		votesWithAmount = delegates.map((delegate) => ({
+		votesWithAmount = delegates.map((validator) => ({
 			amount: 10,
-			wallet: delegate,
+			wallet: validator,
 		}));
 	});
 

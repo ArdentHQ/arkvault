@@ -7,11 +7,11 @@ import { Alert } from "@/app/components/Alert";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
-import { DelegateTable } from "@/domains/vote/components/DelegateTable";
+import { ValidatorsTable } from "@/domains/vote/components/ValidatorsTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
 import { VotesHeader } from "@/domains/vote/components/VotesHeader";
 import { VotingWallets } from "@/domains/vote/components/VotingWallets/VotingWallets";
-import { useDelegates } from "@/domains/vote/hooks/use-delegates";
+import { useValidators } from "@/domains/vote/hooks/use-validators";
 import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
@@ -34,7 +34,7 @@ export const Votes: FC = () => {
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
-	const { filter, voteDelegates, unvoteDelegates } = useVoteQueryParameters();
+	const { filter, voteValidators, unvoteValidators } = useVoteQueryParameters();
 
 	const {
 		filterProperties,
@@ -60,14 +60,14 @@ export const Votes: FC = () => {
 	});
 
 	const {
-		isLoadingDelegates,
-		fetchDelegates,
+		isLoadingValidators,
+		fetchValidators,
 		currentVotes,
-		filteredDelegates,
+		filteredValidators,
 		fetchVotes,
 		votes,
-		resignedDelegateVotes,
-	} = useDelegates({
+		resignedValidatorVotes,
+	} = useValidators({
 		env,
 		profile: activeProfile,
 		searchQuery,
@@ -90,9 +90,9 @@ export const Votes: FC = () => {
 
 	useEffect(() => {
 		if (hasWalletId) {
-			fetchDelegates(activeWallet!);
+			fetchValidators(activeWallet!);
 		}
-	}, [activeWallet, fetchDelegates, hasWalletId]);
+	}, [activeWallet, fetchValidators, hasWalletId]);
 
 	useEffect(() => {
 		if (votes.length === 0) {
@@ -121,21 +121,21 @@ export const Votes: FC = () => {
 			setSelectedWallet(wallet);
 			setMaxVotes(wallet.network().maximumVotesPerWallet());
 
-			await fetchDelegates(wallet);
+			await fetchValidators(wallet);
 		},
-		[activeProfile, fetchDelegates, setMaxVotes, setSearchQuery, setSelectedAddress, setSelectedNetwork],
+		[activeProfile, fetchValidators, setMaxVotes, setSearchQuery, setSelectedAddress, setSelectedNetwork],
 	);
 
-	const isSelectDelegateStep = !!selectedAddress;
+	const isSelectValidatorStep = !!selectedAddress;
 
 	return (
-		<Page pageTitle={isSelectDelegateStep ? t("VOTE.VALIDATOR_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
+		<Page pageTitle={isSelectValidatorStep ? t("VOTE.VALIDATOR_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
 			<VotesHeader
 				profile={activeProfile}
 				setSearchQuery={setSearchQuery}
 				selectedAddress={selectedAddress}
 				isFilterChanged={isFilterChanged}
-				isSelectDelegateStep={isSelectDelegateStep}
+				isSelectDelegateStep={isSelectValidatorStep}
 				filterProperties={filterProperties}
 				totalCurrentVotes={currentVotes.length}
 				selectedFilter={voteFilter}
@@ -151,7 +151,7 @@ export const Votes: FC = () => {
 				</Section>
 			)}
 
-			{hasWallets && !isSelectDelegateStep && (
+			{hasWallets && !isSelectValidatorStep && (
 				<VotingWallets
 					showEmptyResults={hasEmptyResults}
 					walletsByCoin={filteredWalletsByCoin}
@@ -160,21 +160,21 @@ export const Votes: FC = () => {
 				/>
 			)}
 
-			{isSelectDelegateStep && (
+			{isSelectValidatorStep && (
 				<Section innerClassName="lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18">
-					<DelegateTable
+					<ValidatorsTable
 						searchQuery={searchQuery}
-						delegates={filteredDelegates}
-						isLoading={isLoadingDelegates}
+						validators={filteredValidators}
+						isLoading={isLoadingValidators}
 						maxVotes={maxVotes!}
 						votes={votes}
-						resignedDelegateVotes={resignedDelegateVotes}
-						unvoteDelegates={unvoteDelegates}
-						voteDelegates={voteDelegates}
+						resignedValidatorVotes={resignedValidatorVotes}
+						unvoteValidators={unvoteValidators}
+						voteValidators={voteValidators}
 						selectedWallet={selectedWallet!}
 						onContinue={navigateToSendVote}
 						subtitle={
-							resignedDelegateVotes.length > 0 ? (
+							resignedValidatorVotes.length > 0 ? (
 								<Alert className="mb-4">
 									<div data-testid="Votes__resigned-vote">
 										<Trans

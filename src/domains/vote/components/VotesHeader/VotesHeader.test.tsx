@@ -30,7 +30,7 @@ describe("VotesHeader", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render a different title if on select delegate step", async () => {
+	it("should render a different title if on select validator step", async () => {
 		const { asFragment } = renderResponsive(
 			<VotesHeader
 				profile={profile}

@@ -6,7 +6,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendVote } from "./SendVote";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import {
@@ -145,19 +145,19 @@ describe("SendVote Combined", () => {
 
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [
+		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				validatorAddress: delegateData[1].address,
 			},
 		];
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 

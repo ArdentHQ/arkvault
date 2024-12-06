@@ -1,18 +1,21 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "@/app/components/Link";
-import { DelegateRowProperties, useDelegateRow } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRow";
-import { DelegateRowMobileSkeleton } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRowMobileSkeleton";
+import {
+	ValidatorRowProperties,
+	useValidatorRow,
+} from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRow";
+import { ValidatorRowMobileSkeleton } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobileSkeleton";
 
-export const DelegateRowMobile = (properties: DelegateRowProperties) => {
+export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const { isLoading, delegate } = properties;
+	const { isLoading, validator } = properties;
 
-	const { renderButton } = useDelegateRow({ ...properties });
+	const { renderButton } = useValidatorRow({ ...properties });
 
 	if (isLoading) {
-		return <DelegateRowMobileSkeleton />;
+		return <ValidatorRowMobileSkeleton />;
 	}
 
 	return (
@@ -22,14 +25,14 @@ export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<div className="flex flex-1 space-x-3 overflow-hidden text-sm font-semibold leading-[17px]">
-								<span>{delegate.rank()}</span>
+								<span>{validator.rank()}</span>
 								<div className="relative w-full">
-									<div className="absolute flex w-full items-center">{delegate.username()}</div>
+									<div className="absolute flex w-full items-center">{validator.username()}</div>
 								</div>
 							</div>
 
 							<Link
-								to={delegate.explorerLink()}
+								to={validator.explorerLink()}
 								tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 								isExternal
 								className="text-sm leading-[17px] [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"

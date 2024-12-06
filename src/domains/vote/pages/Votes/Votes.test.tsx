@@ -104,7 +104,7 @@ describe("Votes", () => {
 		const { asFragment, container } = renderPage(route);
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
@@ -121,7 +121,7 @@ describe("Votes", () => {
 		const { asFragment, container } = renderPage(route);
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
@@ -275,7 +275,7 @@ describe("Votes", () => {
 		const { asFragment, container } = renderPage(route);
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
@@ -316,7 +316,7 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select an address and delegate", async () => {
+	it("should select an address and validator", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
@@ -345,7 +345,7 @@ describe("Votes", () => {
 
 		await userEvent.click(selectAddressButton);
 
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
@@ -374,14 +374,14 @@ describe("Votes", () => {
 
 		await userEvent.click(selectAddressButton);
 
-		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 	});
 
-	it("should select a delegate", async () => {
+	it("should select a validator", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		const { asFragment } = renderPage(route);
 
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
@@ -400,12 +400,12 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 
 		const walletVoteMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => {
-			throw new Error("delegate error");
+			throw new Error("validator error");
 		});
 
 		renderPage(route);
 
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
@@ -421,7 +421,7 @@ describe("Votes", () => {
 		walletVoteMock.mockRestore();
 	});
 
-	it("should handle resigned delegate and show empty results", async () => {
+	it("should handle resigned validator and show empty results", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
@@ -442,7 +442,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		renderPage(route);
 
-		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
@@ -481,7 +481,7 @@ describe("Votes", () => {
 			withProfileSynchronizer: true,
 		});
 
-		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
 		await waitFor(() => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
@@ -507,7 +507,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		const { asFragment } = renderPage(route);
 
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
@@ -536,9 +536,9 @@ describe("Votes", () => {
 
 		await userEvent.click(selectAddressButton);
 
-		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
@@ -625,7 +625,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 	});
 
-	it("should show resigned delegate notice", async () => {
+	it("should show resigned validator notice", async () => {
 		const currentWallet = profile.wallets().first();
 		const walletSpy = vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
@@ -645,7 +645,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
 		renderPage(route);
 
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
 
 		await expect(screen.findByTestId("Votes__resigned-vote")).resolves.toBeVisible();
 
@@ -656,7 +656,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		renderPage(route);
 
-		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
@@ -677,7 +677,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		renderPage(route);
 
-		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 

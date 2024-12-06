@@ -2226,7 +2226,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow > should render with active delegate 1`] = `
+exports[`AddressRow > should render with active validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -3897,7 +3897,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
 </DocumentFragment>
 `;
 
-exports[`AddressRow > should render with resigned delegate 1`] = `
+exports[`AddressRow > should render with resigned validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -4172,7 +4172,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow > should render with standby delegate 1`] = `
+exports[`AddressRow > should render with standby validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
