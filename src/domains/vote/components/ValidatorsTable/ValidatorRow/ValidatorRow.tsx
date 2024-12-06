@@ -270,7 +270,7 @@ export const ValidatorRow = ({
 			>
 				<div className="relative h-[17px] grow">
 					<div className="absolute flex w-full items-center">
-						<div className="truncate"> {validator.address()} </div>
+						<div className="truncate"> {validator.username()} </div>
 					</div>
 				</div>
 			</TableCell>
