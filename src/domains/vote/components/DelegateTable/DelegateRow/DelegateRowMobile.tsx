@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "@/app/components/Link";
 import { DelegateRowProperties, useDelegateRow } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRow";
 import { DelegateRowMobileSkeleton } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRowMobileSkeleton";
+import { Address } from "@/app/components/Address";
 
 export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 	const { t } = useTranslation();
@@ -23,9 +24,12 @@ export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<div className="flex flex-1 space-x-3 overflow-hidden text-sm font-semibold leading-[17px]">
 								<span>{delegate.rank()}</span>
-								<div className="relative w-full">
-									<div className="absolute flex w-full items-center">{delegate.address()}</div>
-								</div>
+								<Address
+									truncateOnTable
+									address={delegate.address()}
+									wrapperClass="justify-start"
+									addressClass="leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700"
+								/>
 							</div>
 
 							<Link

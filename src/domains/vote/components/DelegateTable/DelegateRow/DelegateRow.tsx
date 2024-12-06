@@ -12,6 +12,7 @@ import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/
 import cn from "classnames";
 import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
 import { useTranslation } from "react-i18next";
+import { Address } from "@/app/components/Address";
 
 export interface DelegateRowProperties {
 	index: number;
@@ -268,11 +269,12 @@ export const DelegateRow = ({
 					rowColor,
 				)}
 			>
-				<div className="relative h-[17px] grow">
-					<div className="absolute flex w-full items-center">
-						<div className="truncate"> {delegate.address()} </div>
-					</div>
-				</div>
+				<Address
+					truncateOnTable
+					address={delegate.address()}
+					wrapperClass="justify-start"
+					addressClass="leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700"
+				/>
 			</TableCell>
 
 			<TableCell
