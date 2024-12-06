@@ -60,7 +60,8 @@ export const useValidators = ({
 		const query = searchQuery.toLowerCase();
 		return filteredValidatorsVotes.filter(
 			(validator) =>
-				validator.address().toLowerCase().includes(query) || validator.username()?.toLowerCase()?.includes(query),
+				validator.address().toLowerCase().includes(query) ||
+				validator.username()?.toLowerCase()?.includes(query),
 		);
 	}, [filteredValidatorsVotes, searchQuery]);
 
