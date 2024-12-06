@@ -6,7 +6,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendVote } from "./SendVote";
-import { VoteValidatorProperties } from "../../../vote/components/ValidatorsTable/ValidatorsTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import {
