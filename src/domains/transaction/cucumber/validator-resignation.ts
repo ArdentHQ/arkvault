@@ -19,7 +19,7 @@ const validatorFormStep = {
 };
 
 cucumber(
-	"@delegateResignation",
+	"@validatorResignation",
 	{
 		...validatorFormStep,
 		"When she completes the process with a valid mnemonic": async (t: TestController) => {
@@ -76,7 +76,7 @@ cucumber(
 	],
 );
 cucumber(
-	"@delegateResignation-invalidMnemonic",
+	"@validatorResignation-invalidMnemonic",
 	{
 		...validatorFormStep,
 		"When she attempts to complete the process with an invalid mnemonic": async (t: TestController) => {
