@@ -231,17 +231,19 @@ export const ValidatorRow = ({
 }: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useValidatorRow({
-		validator,
-		index,
-		isVoteDisabled,
-		selectedUnvotes,
-		selectedVotes,
-		selectedWallet,
-		toggleUnvotesSelected,
-		toggleVotesSelected,
-		voted,
-	});
+	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useValidatorRow(
+		{
+			index,
+			isVoteDisabled,
+			selectedUnvotes,
+			selectedVotes,
+			selectedWallet,
+			toggleUnvotesSelected,
+			toggleVotesSelected,
+			validator,
+			voted,
+		},
+	);
 
 	if (isLoading) {
 		return <ValidatorRowSkeleton requiresStakeAmount={requiresStakeAmount} />;
