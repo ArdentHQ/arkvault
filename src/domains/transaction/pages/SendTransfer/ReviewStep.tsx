@@ -8,7 +8,7 @@ import { TransactionAddresses } from "@/domains/transaction/components/Transacti
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile } from "@/app/hooks";
-import { DetailLabel, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabel } from "@/app/components/DetailWrapper";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;

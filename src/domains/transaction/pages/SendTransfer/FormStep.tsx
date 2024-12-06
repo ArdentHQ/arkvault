@@ -1,13 +1,12 @@
 import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
 import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { InputCounter } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";

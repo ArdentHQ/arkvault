@@ -13,7 +13,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 
-import { DetailLabel, DetailPadded, DetailsCondensed, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabel, DetailPadded, DetailsCondensed } from "@/app/components/DetailWrapper";
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";

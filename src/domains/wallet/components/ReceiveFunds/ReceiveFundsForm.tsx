@@ -1,12 +1,12 @@
 import { Networks } from "@ardenthq/sdk";
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { FormField, FormHelperText, FormLabel } from "@/app/components/Form";
-import { InputCounter, InputCurrency } from "@/app/components/Input";
+import { InputCurrency } from "@/app/components/Input";
 
-export const ReceiveFundsForm = ({ network }: { network?: Networks.Network }) => {
+export const ReceiveFundsForm = () => {
 	const { t } = useTranslation();
 
 	const form = useFormContext();
