@@ -25,7 +25,7 @@ export const TransactionConfirmations = ({
 				data-testid="TransactionFailedAlert"
 				className="rounded-xl border border-theme-danger-200 bg-theme-danger-50 py-2 dark:border-theme-danger-info-border dark:bg-transparent max-sm:text-sm sm:py-4 sm:leading-5"
 			>
-				<div className="flex items-center space-x-3 px-3 sm:px-6">
+				<div className="flex items-center space-x-3 px-3 sm:px-6 mb-2 sm:mb-4">
 					<div className="flex items-center space-x-2 text-theme-danger-700 dark:text-theme-danger-info-border">
 						<Icon name="CircleMinus" size="lg" className="h-5" />
 						<p className="font-semibold">{t("COMMON.ALERT.FAILED")}</p>
@@ -38,9 +38,7 @@ export const TransactionConfirmations = ({
 					</p>
 				</div>
 
-				<Divider type="horizontal" className="text-theme-danger-200 dark:text-theme-secondary-800" />
-
-				<p className="px-3 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:px-6">
+				<p className="px-3 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:px-6 pt-2 sm:pt-4 border-t border-theme-danger-200 dark:border-theme-secondary-800">
 					{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR")}
 				</p>
 			</div>
