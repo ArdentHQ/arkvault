@@ -2,9 +2,9 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { DelegateRow } from "./DelegateRow";
+import { ValidatorRow } from "./ValidatorRow";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "../ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
@@ -13,7 +13,7 @@ let delegate: Contracts.IReadOnlyWallet;
 
 const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
 
-describe("DelegateRow", () => {
+describe("ValidatorRow", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
@@ -33,7 +33,7 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
 						validator={delegate}
 						selectedVotes={[]}
@@ -57,7 +57,7 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
 						validator={delegate}
 						selectedVotes={[]}
@@ -90,7 +90,7 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
 						validator={delegate}
 						selectedVotes={selected}
@@ -134,7 +134,7 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
 						validator={delegate}
 						voted={{
@@ -150,7 +150,7 @@ describe("DelegateRow", () => {
 						selectedWallet={wallet}
 						isCompact={isCompact}
 					/>
-					<DelegateRow
+					<ValidatorRow
 						index={1}
 						validator={secondDelegate}
 						selectedVotes={[]}
@@ -162,7 +162,7 @@ describe("DelegateRow", () => {
 						selectedWallet={wallet}
 						isCompact={isCompact}
 					/>
-					<DelegateRow
+					<ValidatorRow
 						index={2}
 						validator={thirdDelegate}
 						selectedVotes={[]}
@@ -188,7 +188,7 @@ describe("DelegateRow", () => {
 	});
 
 	it("should render the unselected vote", () => {
-		const selectedUnvotes: VoteDelegateProperties[] = [
+		const selectedUnvotes: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				delegateAddress: delegate.address(),
@@ -202,7 +202,7 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
 						validator={delegate}
 						voted={voted}
@@ -230,7 +230,7 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
 						validator={delegate}
 						selectedVotes={[]}
@@ -256,7 +256,7 @@ describe("DelegateRow", () => {
 	it("should render changed style when network requires vote amount", () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
-		const selectedVotes: VoteDelegateProperties[] = [
+		const selectedVotes: VoteValidatorProperties[] = [
 			{
 				amount: 20,
 				delegateAddress: delegate.address(),
@@ -270,7 +270,7 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
 						validator={delegate}
 						voted={voted}

@@ -2,53 +2,53 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { DelegateFooter } from "./DelegateFooter";
-import { DelegateRow } from "./DelegateRow";
-import { DelegateTableProperties, VoteDelegateProperties } from "./DelegateTable.contracts";
-import { delegateExistsInVotes, useDelegateTableColumns } from "./DelegateTable.helpers";
+import { ValidatorFooter } from "./ValidatorFooter";
+import { ValidatorRow } from "./ValidatorRow";
+import { ValidatorsTableProperties, VoteValidatorProperties } from "./ValidatorsTable.contracts";
+import { validatorExistsInVotes, useValidatorsTableColumns } from "./ValidatorsTable.helpers";
 import { Table } from "@/app/components/Table";
 import { Pagination } from "@/app/components/Pagination";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { useBreakpoint } from "@/app/hooks";
-import { DelegateRowMobile } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRowMobile";
+import { ValidatorRowMobile } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobile";
 
-export const DelegateTable: FC<DelegateTableProperties> = ({
-	delegates,
+export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
+	validators,
 	isLoading = false,
 	maxVotes,
-	unvoteDelegates,
-	voteDelegates,
+	unvoteValidators,
+	voteValidators,
 	selectedWallet,
 	votes,
-	resignedDelegateVotes,
+	resignedValidatorVotes,
 	onContinue,
 	subtitle,
 	searchQuery,
 }) => {
 	const { t } = useTranslation();
 	const [currentPage, setCurrentPage] = useState(1);
-	const [selectedUnvotes, setSelectedUnvotes] = useState<VoteDelegateProperties[]>(unvoteDelegates);
-	const [selectedVotes, setSelectedVotes] = useState<VoteDelegateProperties[]>(voteDelegates);
+	const [selectedUnvotes, setSelectedUnvotes] = useState<VoteValidatorProperties[]>(unvoteValidators);
+	const [selectedVotes, setSelectedVotes] = useState<VoteValidatorProperties[]>(voteValidators);
 	const [isVoteDisabled, setIsVoteDisabled] = useState(false);
 	const [availableBalance, setAvailableBalance] = useState(selectedWallet.balance());
 	const { isXs } = useBreakpoint();
 
-	const columns = useDelegateTableColumns({ isLoading, network: selectedWallet.network() });
+	const columns = useValidatorsTableColumns({ isLoading, network: selectedWallet.network() });
 
-	const delegatesPerPage = useMemo(() => selectedWallet.network().delegateCount(), [selectedWallet]);
-	const totalDelegates = useMemo(() => delegates.length, [delegates.length]);
-	const hasMoreDelegates = useMemo(() => totalDelegates > delegatesPerPage, [totalDelegates]);
+	const validatorsPerPage = useMemo(() => selectedWallet.network().delegateCount(), [selectedWallet]);
+	const totalValidators = useMemo(() => validators.length, [validators.length]);
+	const hasMoreValidators = useMemo(() => totalValidators > validatorsPerPage, [totalValidators]);
 	const hasVotes = votes.length > 0;
 
 	useEffect(() => {
-		if (voteDelegates.length === 0) {
+		if (voteValidators.length === 0) {
 			return;
 		}
 
 		let totalVotesAmount = 0;
 
-		for (const delegate of voteDelegates) {
-			totalVotesAmount += delegate.amount;
+		for (const validator of voteValidators) {
+			totalVotesAmount += validator.amount;
 		}
 
 		setAvailableBalance(availableBalance - totalVotesAmount);
@@ -65,18 +65,18 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), [currentPage]);
 
 	useEffect(() => {
-		if (!resignedDelegateVotes?.length) {
+		if (!resignedValidatorVotes?.length) {
 			return;
 		}
 
-		for (const { wallet } of resignedDelegateVotes) {
-			if (delegateExistsInVotes(selectedUnvotes, wallet!.address())) {
+		for (const { wallet } of resignedValidatorVotes) {
+			if (validatorExistsInVotes(selectedUnvotes, wallet!.address())) {
 				continue;
 			}
 
 			toggleUnvotesSelected(wallet!.address());
 		}
-	}, [resignedDelegateVotes, selectedUnvotes]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [resignedValidatorVotes, selectedUnvotes]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {
 		setCurrentPage(1);
@@ -85,13 +85,13 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	const toggleUnvotesSelected = useCallback(
 		(address: string, voteAmount?: number) => {
 			let unvotesInstance = selectedUnvotes;
-			const delegateAlreadyExists = delegateExistsInVotes(selectedUnvotes, address);
+			const validatorAlreadyExists = validatorExistsInVotes(selectedUnvotes, address);
 
-			if (delegateAlreadyExists) {
-				unvotesInstance = selectedUnvotes.filter(({ delegateAddress }) => delegateAddress !== address);
+			if (validatorAlreadyExists) {
+				unvotesInstance = selectedUnvotes.filter(({ validatorAddress }) => validatorAddress !== address);
 			}
 
-			if (delegateAlreadyExists && voteAmount === undefined) {
+			if (validatorAlreadyExists && voteAmount === undefined) {
 				setSelectedUnvotes(unvotesInstance);
 
 				if (maxVotes === 1 && selectedVotes.length > 0) {
@@ -101,20 +101,20 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				return;
 			}
 
-			const voteDelegate: VoteDelegateProperties = {
+			const voteValidator: VoteValidatorProperties = {
 				amount: voteAmount ?? 0,
-				delegateAddress: address,
+				validatorAddress: address,
 			};
 
 			const validator = votes.find(({ wallet }) => wallet?.address() === address);
 			if (validator?.amount && voteAmount === undefined) {
-				voteDelegate.amount = validator.amount;
+				voteValidator.amount = validator.amount;
 			}
 
 			if (maxVotes === 1) {
-				setSelectedUnvotes([voteDelegate]);
+				setSelectedUnvotes([voteValidator]);
 			} else {
-				setSelectedUnvotes([...unvotesInstance, voteDelegate]);
+				setSelectedUnvotes([...unvotesInstance, voteValidator]);
 			}
 		},
 		[selectedUnvotes, votes, setSelectedUnvotes, setSelectedVotes, maxVotes, selectedVotes.length],
@@ -123,13 +123,13 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	const toggleVotesSelected = useCallback(
 		(address: string, voteAmount?: number) => {
 			let votesInstance = selectedVotes;
-			const delegateAlreadyExists = delegateExistsInVotes(selectedVotes, address);
+			const validatorAlreadyExists = validatorExistsInVotes(selectedVotes, address);
 
-			if (delegateAlreadyExists) {
-				votesInstance = selectedVotes.filter(({ delegateAddress }) => delegateAddress !== address);
+			if (validatorAlreadyExists) {
+				votesInstance = selectedVotes.filter(({ validatorAddress }) => validatorAddress !== address);
 			}
 
-			if (delegateAlreadyExists && voteAmount === undefined) {
+			if (validatorAlreadyExists && voteAmount === undefined) {
 				setSelectedVotes(votesInstance);
 
 				if (maxVotes === 1 && hasVotes) {
@@ -139,24 +139,24 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				return;
 			}
 
-			const voteDelegate: VoteDelegateProperties = {
+			const voteValidator: VoteValidatorProperties = {
 				amount: voteAmount ?? 0,
-				delegateAddress: address,
+				validatorAddress: address,
 			};
 
 			if (maxVotes === 1) {
-				setSelectedVotes([voteDelegate]);
+				setSelectedVotes([voteValidator]);
 
 				if (hasVotes) {
 					setSelectedUnvotes(
 						votes.map((vote) => ({
 							amount: vote.amount,
-							delegateAddress: vote.wallet!.address(),
+							validatorAddress: vote.wallet!.address(),
 						})),
 					);
 				}
 			} else {
-				setSelectedVotes([...votesInstance, voteDelegate]);
+				setSelectedVotes([...votesInstance, voteValidator]);
 			}
 		},
 		[selectedVotes, hasVotes, setSelectedUnvotes, maxVotes, votes],
@@ -169,16 +169,16 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 		[setCurrentPage],
 	);
 
-	const showSkeleton = useMemo(() => totalDelegates === 0 && isLoading, [totalDelegates, isLoading]);
+	const showSkeleton = useMemo(() => totalValidators === 0 && isLoading, [totalValidators, isLoading]);
 	const tableData = useMemo<Contracts.IReadOnlyWallet[]>(() => {
 		if (!showSkeleton) {
-			return delegates;
+			return validators;
 		}
 
-		return Array.from<Contracts.IReadOnlyWallet>({ length: delegatesPerPage }).fill(
+		return Array.from<Contracts.IReadOnlyWallet>({ length: validatorsPerPage }).fill(
 			{} as Contracts.IReadOnlyWallet,
 		);
-	}, [delegates, showSkeleton]);
+	}, [validators, showSkeleton]);
 
 	const renderTableRow = useCallback(
 		(validator: Contracts.IReadOnlyWallet, index: number) => {
@@ -189,7 +189,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				voted = votes.find(({ wallet }) => wallet?.address() === validator?.address?.());
 			}
 
-			const View = isXs ? DelegateRowMobile : DelegateRow;
+			const View = isXs ? ValidatorRowMobile : ValidatorRow;
 
 			return (
 				<View
@@ -224,7 +224,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 		],
 	);
 
-	if (!isLoading && totalDelegates === 0) {
+	if (!isLoading && totalValidators === 0) {
 		return (
 			<EmptyResults
 				className="mt-16"
@@ -242,7 +242,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				className="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
 				columns={columns}
 				data={tableData}
-				rowsPerPage={delegatesPerPage}
+				rowsPerPage={validatorsPerPage}
 				currentPage={currentPage}
 				hideHeader={isXs}
 			>
@@ -250,17 +250,17 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			</Table>
 
 			<div className="mt-8 flex w-full justify-center">
-				{hasMoreDelegates && (
+				{hasMoreValidators && (
 					<Pagination
-						totalCount={totalDelegates}
-						itemsPerPage={delegatesPerPage}
+						totalCount={totalValidators}
+						itemsPerPage={validatorsPerPage}
 						currentPage={currentPage}
 						onSelectPage={handleSelectPage}
 					/>
 				)}
 			</div>
 
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={selectedWallet}
 				availableBalance={availableBalance}
 				selectedVotes={selectedVotes}

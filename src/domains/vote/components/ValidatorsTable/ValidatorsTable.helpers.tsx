@@ -3,11 +3,11 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
-import { DelegateTableColumnsProperties, VoteDelegateProperties } from "./DelegateTable.contracts";
+import { ValidatorsTableColumnsProperties, VoteValidatorProperties } from "./ValidatorsTable.contracts";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 
-export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableColumnsProperties) => {
+export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTableColumnsProperties) => {
 	const { t } = useTranslation();
 
 	return useMemo<Column<Contracts.IReadOnlyWallet>[]>(() => {
@@ -83,7 +83,7 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 	}, [t, network, isLoading]);
 };
 
-export const delegateExistsInVotes = (
-	votes: VoteDelegateProperties[],
+export const validatorExistsInVotes = (
+	votes: VoteValidatorProperties[],
 	address: string,
-): VoteDelegateProperties | undefined => votes.find(({ delegateAddress }) => delegateAddress === address);
+): VoteValidatorProperties | undefined => votes.find(({ validatorAddress }) => validatorAddress === address);

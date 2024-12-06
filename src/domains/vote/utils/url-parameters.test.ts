@@ -1,5 +1,5 @@
 import { appendParameters, getParameters, ParameterNameProperties } from "./url-parameters";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "../components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 
 describe("#urlParameters", () => {
@@ -7,7 +7,7 @@ describe("#urlParameters", () => {
 		it(`should append ${parameterName} parameters`, () => {
 			const parameters = new URLSearchParams();
 
-			const votes: VoteDelegateProperties[] = [
+			const votes: VoteValidatorProperties[] = [
 				{
 					amount: 10,
 					delegateAddress: data[0].address,
@@ -28,7 +28,7 @@ describe("#urlParameters", () => {
 		it(`should get ${parameterName} parameters`, () => {
 			const parameters = new URLSearchParams();
 
-			const votes: VoteDelegateProperties[] = [
+			const votes: VoteValidatorProperties[] = [
 				{
 					amount: 10,
 					delegateAddress: data[0].address,

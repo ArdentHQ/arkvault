@@ -55,7 +55,7 @@ export const SendVote = () => {
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 	const wallet = useActiveWalletWhenNeeded(false);
 
-	const { votes, unvotes, voteDelegates, unvoteDelegates, setUnvotes, isLoading } = useDelegatesFromURL({
+	const { votes, unvotes, voteValidators, unvoteValidators, setUnvotes, isLoading } = useDelegatesFromURL({
 		env,
 		network: activeNetwork,
 		profile: activeProfile,
@@ -184,8 +184,8 @@ export const SendVote = () => {
 				return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 			}
 
-			appendParameters(parameters, "unvote", unvoteDelegates);
-			appendParameters(parameters, "vote", voteDelegates);
+			appendParameters(parameters, "unvote", unvoteValidators);
+			appendParameters(parameters, "vote", voteValidators);
 
 			return history.push({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,

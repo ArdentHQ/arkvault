@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "@/app/components/Link";
-import { DelegateRowProperties, useDelegateRow } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRow";
-import { DelegateRowMobileSkeleton } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRowMobileSkeleton";
+import { DelegateRowProperties, useDelegateRow } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRow";
+import { DelegateRowMobileSkeleton } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/DelegateRowMobileSkeleton";
 
-export const DelegateRowMobile = (properties: DelegateRowProperties) => {
+export const ValidatorRowMobile = (properties: DelegateRowProperties) => {
 	const { t } = useTranslation();
 
 	const { isLoading, validator } = properties;

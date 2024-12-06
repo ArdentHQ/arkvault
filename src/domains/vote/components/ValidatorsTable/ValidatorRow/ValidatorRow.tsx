@@ -8,16 +8,16 @@ import { DelegateVoteButton } from "./DelegateVoteButton";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import cn from "classnames";
-import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
+import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.helpers";
 import { useTranslation } from "react-i18next";
 
 export interface DelegateRowProperties {
 	index: number;
 	validator: Contracts.IReadOnlyWallet;
-	selectedUnvotes: VoteDelegateProperties[];
-	selectedVotes: VoteDelegateProperties[];
+	selectedUnvotes: VoteValidatorProperties[];
+	selectedVotes: VoteValidatorProperties[];
 	voted?: Contracts.VoteRegistryItem;
 	isVoteDisabled?: boolean;
 	isLoading?: boolean;
@@ -48,7 +48,7 @@ export const useDelegateRow = ({
 	const isSelectedUnvote = useMemo(
 		() =>
 			!!selectedUnvotes?.find((unvote) => {
-				const isEqualToDelegate = unvote.delegateAddress === validator?.address?.();
+				const isEqualToDelegate = unvote.validatorAddress === validator?.address?.();
 
 				if (isEqualToDelegate && requiresStakeAmount) {
 					return unvote.amount === voted?.amount;
@@ -60,7 +60,7 @@ export const useDelegateRow = ({
 	);
 
 	const isSelectedVote = useMemo(
-		() => !!voted || !!delegateExistsInVotes(selectedVotes, validator?.address?.()),
+		() => !!voted || !!validatorExistsInVotes(selectedVotes, validator?.address?.()),
 		[validator, voted, selectedVotes],
 	);
 
@@ -73,9 +73,9 @@ export const useDelegateRow = ({
 	}, [validator, selectedWallet]);
 
 	const isChanged = useMemo(() => {
-		const alreadyExistsInVotes = !!delegateExistsInVotes(selectedVotes, validator?.address?.());
+		const alreadyExistsInVotes = !!validatorExistsInVotes(selectedVotes, validator?.address?.());
 		const alreadyExistsInUnvotes =
-			!!delegateExistsInVotes(selectedUnvotes, validator?.address?.()) && !isSelectedUnvote;
+			!!validatorExistsInVotes(selectedUnvotes, validator?.address?.()) && !isSelectedUnvote;
 
 		return !!voted && (alreadyExistsInVotes || alreadyExistsInUnvotes);
 	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, validator]);
@@ -104,7 +104,7 @@ export const useDelegateRow = ({
 					variant="warning"
 					compactClassName="text-theme-warning-700 hover:text-theme-warning-800"
 					onClick={() => {
-						if (delegateExistsInVotes(selectedVotes, validator?.address?.())) {
+						if (validatorExistsInVotes(selectedVotes, validator?.address?.())) {
 							toggleVotesSelected?.(validator.address());
 						}
 
@@ -215,7 +215,7 @@ export const useDelegateRow = ({
 	};
 };
 
-export const DelegateRow = ({
+export const ValidatorRow = ({
 	index,
 	voted,
 	validator,

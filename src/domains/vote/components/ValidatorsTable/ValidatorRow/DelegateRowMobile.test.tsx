@@ -3,7 +3,7 @@ import React from "react";
 
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-import { DelegateRowMobile } from "./DelegateRowMobile";
+import { ValidatorRowMobile } from "./ValidatorRowMobile";
 
 let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;
@@ -28,7 +28,7 @@ describe("DelegateRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<DelegateRowMobile
+					<ValidatorRowMobile
 						index={0}
 						validator={delegate}
 						selectedVotes={[]}
@@ -50,7 +50,7 @@ describe("DelegateRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<DelegateRowMobile
+					<ValidatorRowMobile
 						index={0}
 						validator={delegate}
 						selectedVotes={[]}

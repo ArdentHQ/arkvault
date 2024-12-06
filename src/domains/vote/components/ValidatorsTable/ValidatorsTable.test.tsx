@@ -2,8 +2,8 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { DelegateTable } from "./DelegateTable";
-import { VoteDelegateProperties } from "./DelegateTable.contracts";
+import { ValidatorsTable } from "./ValidatorsTable";
+import { VoteValidatorProperties } from "./ValidatorsTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
@@ -20,7 +20,7 @@ const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0"
 const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
 const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
 
-describe("DelegateTable", () => {
+describe("ValidatorsTable", () => {
 	beforeAll(() => {
 		useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
@@ -54,11 +54,11 @@ describe("DelegateTable", () => {
 
 	it("should render", () => {
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -70,11 +70,11 @@ describe("DelegateTable", () => {
 
 	it("should render mobile view in XS screen", () => {
 		renderResponsive(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -88,11 +88,11 @@ describe("DelegateTable", () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -111,12 +111,12 @@ describe("DelegateTable", () => {
 				.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
 
 			const { container, asFragment } = render(
-				<DelegateTable
-					delegates={[]}
+				<ValidatorsTable
+					validators={[]}
 					votes={[]}
 					isLoading={true}
-					voteDelegates={[]}
-					unvoteDelegates={[]}
+					voteValidators={[]}
+					unvoteValidators={[]}
 					selectedWallet={wallet}
 					maxVotes={wallet.network().maximumVotesPerTransaction()}
 					isCompact={isCompact}
@@ -132,11 +132,11 @@ describe("DelegateTable", () => {
 
 	it("should render with empty list", () => {
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={[]}
+			<ValidatorsTable
+				validators={[]}
 				votes={[]}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -148,11 +148,11 @@ describe("DelegateTable", () => {
 
 	it("should render with subtitle", () => {
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 				subtitle={<p>test</p>}
@@ -166,11 +166,11 @@ describe("DelegateTable", () => {
 
 	it("should select a delegate to vote", async () => {
 		const { asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -189,11 +189,11 @@ describe("DelegateTable", () => {
 
 	it("should unselect a delegate to vote", async () => {
 		const { asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -213,11 +213,11 @@ describe("DelegateTable", () => {
 
 	it("should select a delegate to unvote", async () => {
 		const { asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -245,11 +245,11 @@ describe("DelegateTable", () => {
 		];
 
 		const { asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -280,11 +280,11 @@ describe("DelegateTable", () => {
 		];
 
 		const Table = () => (
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>
@@ -342,11 +342,11 @@ describe("DelegateTable", () => {
 
 	it("should unselect a delegate to unvote", async () => {
 		const { asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -370,11 +370,11 @@ describe("DelegateTable", () => {
 
 	it("should select a delegate to unvote/vote", async () => {
 		const { asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -395,11 +395,11 @@ describe("DelegateTable", () => {
 
 	it("should select multiple delegates to unvote/vote", async () => {
 		const { asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={10}
 			/>,
@@ -417,21 +417,21 @@ describe("DelegateTable", () => {
 	});
 
 	it("should emit action on continue button to vote", async () => {
-		const voteDelegates: VoteDelegateProperties[] = [
+		const voteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegates[0].address(),
+				validatorAddress: delegates[0].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
 				onContinue={onContinue}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -455,21 +455,21 @@ describe("DelegateTable", () => {
 				wallet: delegates[1],
 			},
 		];
-		const unvoteDelegates: VoteDelegateProperties[] = [
+		const unvoteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegates[1].address(),
+				validatorAddress: delegates[1].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { asFragment, rerender } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
-				resignedDelegateVotes={resignedDelegates}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				resignedValidatorVotes={resignedDelegates}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
@@ -480,12 +480,12 @@ describe("DelegateTable", () => {
 		expect(footerUnvotes()).toHaveTextContent("1");
 
 		rerender(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
-				resignedDelegateVotes={resignedDelegates}
-				voteDelegates={[]}
-				unvoteDelegates={unvoteDelegates}
+				resignedValidatorVotes={resignedDelegates}
+				voteValidators={[]}
+				unvoteValidators={unvoteDelegates}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
@@ -497,20 +497,20 @@ describe("DelegateTable", () => {
 	});
 
 	it("should render with a delegate to vote", async () => {
-		const voteDelegates: VoteDelegateProperties[] = [
+		const voteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegates[0].address(),
+				validatorAddress: delegates[0].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={[]}
-				voteDelegates={voteDelegates}
-				unvoteDelegates={[]}
+				voteValidators={voteDelegates}
+				unvoteValidators={[]}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
@@ -527,20 +527,20 @@ describe("DelegateTable", () => {
 	});
 
 	it("should render with a delegate to unvote", async () => {
-		const unvoteDelegates: VoteDelegateProperties[] = [
+		const unvoteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegates[0].address(),
+				validatorAddress: delegates[0].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
-				voteDelegates={[]}
+			<ValidatorsTable
+				validators={delegates}
+				voteValidators={[]}
 				votes={[]}
-				unvoteDelegates={unvoteDelegates}
+				unvoteValidators={unvoteDelegates}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
@@ -557,26 +557,26 @@ describe("DelegateTable", () => {
 	});
 
 	it("should render with a delegate to unvote/vote", async () => {
-		const unvoteDelegates: VoteDelegateProperties[] = [
+		const unvoteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegates[0].address(),
+				validatorAddress: delegates[0].address(),
 			},
 		];
-		const voteDelegates: VoteDelegateProperties[] = [
+		const voteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegates[1].address(),
+				validatorAddress: delegates[1].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={voteDelegates}
-				unvoteDelegates={unvoteDelegates}
+				voteValidators={voteDelegates}
+				unvoteValidators={unvoteDelegates}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
@@ -595,20 +595,20 @@ describe("DelegateTable", () => {
 	});
 
 	it("should emit action on continue button to unvote", async () => {
-		const voteDelegates: VoteDelegateProperties[] = [
+		const voteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: votes[0].wallet!.address(),
+				validatorAddress: votes[0].wallet!.address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
@@ -630,11 +630,11 @@ describe("DelegateTable", () => {
 		const delegatesList = Array.from({ length: 52 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
-			<DelegateTable
-				delegates={delegatesList}
+			<ValidatorsTable
+				validators={delegatesList}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -659,11 +659,11 @@ describe("DelegateTable", () => {
 		const delegatesList = Array.from({ length: 12 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
-			<DelegateTable
-				delegates={delegatesList}
+			<ValidatorsTable
+				validators={delegatesList}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -686,11 +686,11 @@ describe("DelegateTable", () => {
 
 	it("should not show pagination", () => {
 		render(
-			<DelegateTable
-				delegates={delegates}
+			<ValidatorsTable
+				validators={delegates}
 				votes={votes}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,

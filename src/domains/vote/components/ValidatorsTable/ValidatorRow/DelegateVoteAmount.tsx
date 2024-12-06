@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
 import { InputCurrency } from "@/app/components/Input";
 import { TableCell } from "@/app/components/Table";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
-import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
+import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.helpers";
 import { VoteAmount } from "@/domains/vote/validations/VoteAmount";
 
 interface DelegateVoteAmountProperties {
@@ -15,8 +15,8 @@ interface DelegateVoteAmountProperties {
 	isSelectedVote: boolean;
 	isSelectedUnvote: boolean;
 	selectedWallet: Contracts.IReadWriteWallet;
-	selectedVotes: VoteDelegateProperties[];
-	selectedUnvotes: VoteDelegateProperties[];
+	selectedVotes: VoteValidatorProperties[];
+	selectedUnvotes: VoteValidatorProperties[];
 	voted?: Contracts.VoteRegistryItem;
 	delegateAddress: string;
 	availableBalance: number;
@@ -217,8 +217,8 @@ export const DelegateVoteAmount = ({
 			delegateVoteAmount = voted.amount;
 		}
 
-		const alreadyExistsInVotes = delegateExistsInVotes(selectedVotes, delegateAddress);
-		const alreadyExistsInUnvotes = delegateExistsInVotes(selectedUnvotes, delegateAddress);
+		const alreadyExistsInVotes = validatorExistsInVotes(selectedVotes, delegateAddress);
+		const alreadyExistsInUnvotes = validatorExistsInVotes(selectedUnvotes, delegateAddress);
 		// Calculate the changed amount
 		if (alreadyExistsInVotes) {
 			if (alreadyExistsInVotes.amount === 0) {

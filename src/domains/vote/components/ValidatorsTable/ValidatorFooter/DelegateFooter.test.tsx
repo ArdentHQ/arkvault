@@ -2,9 +2,9 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { DelegateFooter } from "./DelegateFooter";
+import { ValidatorFooter } from "./ValidatorFooter";
 import { buildTranslations } from "@/app/i18n/helpers";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "../ValidatorsTable.contracts";
 import { translations as voteTranslations } from "@/domains/vote/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
@@ -16,7 +16,7 @@ const translations = buildTranslations();
 
 const continueButton = () => screen.getByTestId("DelegateTable__continue-button");
 
-describe("DelegateFooter", () => {
+describe("ValidatorFooter", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
@@ -34,7 +34,7 @@ describe("DelegateFooter", () => {
 
 	it("should render", () => {
 		const { container, asFragment } = render(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={[]}
@@ -49,7 +49,7 @@ describe("DelegateFooter", () => {
 
 	it("should show available balance if network requires vote amount", () => {
 		const { rerender } = render(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={[]}
@@ -63,7 +63,7 @@ describe("DelegateFooter", () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		rerender(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={[]}
@@ -81,7 +81,7 @@ describe("DelegateFooter", () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		render(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance() / 2}
 				selectedVotes={[]}
@@ -104,7 +104,7 @@ describe("DelegateFooter", () => {
 	});
 
 	it("should disable continue button with tooltip if user doesn't select a delegate", async () => {
-		const selectedDelegate: VoteDelegateProperties[] = [
+		const selectedDelegate: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				delegateAddress: delegate.address(),
@@ -112,7 +112,7 @@ describe("DelegateFooter", () => {
 		];
 
 		const { rerender, baseElement } = render(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={[]}
@@ -129,7 +129,7 @@ describe("DelegateFooter", () => {
 		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR);
 
 		rerender(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={selectedDelegate}
@@ -141,7 +141,7 @@ describe("DelegateFooter", () => {
 		expect(continueButton()).not.toBeDisabled();
 
 		rerender(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={[]}
@@ -160,7 +160,7 @@ describe("DelegateFooter", () => {
 	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", async () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
-		const selectedDelegate: VoteDelegateProperties[] = [
+		const selectedDelegate: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				delegateAddress: delegate.address(),
@@ -168,7 +168,7 @@ describe("DelegateFooter", () => {
 		];
 
 		const { rerender, baseElement } = render(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={selectedDelegate}
@@ -185,7 +185,7 @@ describe("DelegateFooter", () => {
 		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.INVALID_AMOUNT);
 
 		rerender(
-			<DelegateFooter
+			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={[

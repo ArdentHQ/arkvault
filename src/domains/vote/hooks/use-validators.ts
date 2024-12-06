@@ -4,7 +4,7 @@ import { useCallback, useMemo, useState } from "react";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
 import { assertWallet } from "@/utils/assertions";
 
-export const useDelegates = ({
+export const useValidators = ({
 	env,
 	profile,
 	searchQuery,
@@ -15,54 +15,54 @@ export const useDelegates = ({
 	searchQuery: string;
 	voteFilter: FilterOption;
 }) => {
-	const [delegates, setDelegates] = useState<Contracts.IReadOnlyWallet[]>([]);
+	const [validators, setValidators] = useState<Contracts.IReadOnlyWallet[]>([]);
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
-	const [isLoadingDelegates, setIsLoadingDelegates] = useState(false);
+	const [isLoadingValidators, setIsLoadingValidators] = useState(false);
 
 	const currentVotes = useMemo(
-		() => votes.filter((vote) => delegates.some((delegate) => vote.wallet?.address() === delegate.address())),
-		[votes, delegates],
+		() => votes.filter((vote) => validators.some((delegate) => vote.wallet?.address() === delegate.address())),
+		[votes, validators],
 	);
 
-	const fetchDelegates = useCallback(
+	const fetchValidators = useCallback(
 		async (wallet) => {
-			setIsLoadingDelegates(true);
+			setIsLoadingValidators(true);
 			await env.delegates().sync(profile, wallet.coinId(), wallet.networkId());
 			const delegates = env.delegates().all(wallet.coinId(), wallet.networkId());
 
-			setDelegates(delegates);
-			setIsLoadingDelegates(false);
+			setValidators(delegates);
+			setIsLoadingValidators(false);
 		},
 		[env, profile],
 	);
 
-	const filteredDelegatesVotes = useMemo(() => {
+	const filteredValidatorsVotes = useMemo(() => {
 		if (voteFilter === "all") {
-			return delegates.filter((delegate) => !delegate.isResignedDelegate());
+			return validators.filter((delegate) => !delegate.isResignedDelegate());
 		}
 
 		const voteWallets: Contracts.IReadOnlyWallet[] = [];
 
 		for (const { wallet } of currentVotes) {
-			if (wallet && !wallet.isResignedDelegate()) {
+			if (wallet && !wallet.isResignedValidator()) {
 				voteWallets.push(wallet);
 			}
 		}
 
 		return voteWallets;
-	}, [delegates, currentVotes, voteFilter]);
+	}, [validators, currentVotes, voteFilter]);
 
-	const filteredDelegates = useMemo(() => {
+	const filteredValidators = useMemo(() => {
 		if (searchQuery.length === 0) {
-			return filteredDelegatesVotes;
+			return filteredValidatorsVotes;
 		}
 
 		const query = searchQuery.toLowerCase();
-		return filteredDelegatesVotes.filter(
+		return filteredValidatorsVotes.filter(
 			(delegate) =>
 				delegate.address().toLowerCase().includes(query) || delegate.username()?.toLowerCase()?.includes(query),
 		);
-	}, [filteredDelegatesVotes, searchQuery]);
+	}, [filteredValidatorsVotes, searchQuery]);
 
 	const fetchVotes = useCallback(
 		(address, network) => {
@@ -83,19 +83,19 @@ export const useDelegates = ({
 		[profile],
 	);
 
-	const resignedDelegateVotes = useMemo(
+	const resignedValidatorVotes = useMemo(
 		() => currentVotes.filter(({ wallet }) => wallet?.isResignedDelegate()),
 		[currentVotes],
 	);
 
 	return {
 		currentVotes,
-		delegates,
-		fetchDelegates,
+		validators,
+		fetchValidators,
 		fetchVotes,
-		filteredDelegates,
-		isLoadingDelegates,
-		resignedDelegateVotes,
+		filteredValidators,
+		isLoadingValidators,
+		resignedValidatorVotes,
 		votes,
 	};
 };

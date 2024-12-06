@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "../ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
@@ -45,7 +45,7 @@ describe("DelegateVoteAmount", () => {
 		votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 		votesAmountStepMock = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
 
-		const selectedVotes: VoteDelegateProperties[] = [
+		const selectedVotes: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				delegateAddress: delegate.address(),
@@ -264,7 +264,7 @@ describe("DelegateVoteAmount", () => {
 
 	describe("Rendering initial amount", () => {
 		it("should render with selectedVotes", async () => {
-			const selectedVotes: VoteDelegateProperties[] = [
+			const selectedVotes: VoteValidatorProperties[] = [
 				{
 					amount: 10,
 					delegateAddress: delegate.address(),
@@ -296,7 +296,7 @@ describe("DelegateVoteAmount", () => {
 				amount: 30,
 				wallet: delegate,
 			};
-			const selectedUnvotes: VoteDelegateProperties[] = [
+			const selectedUnvotes: VoteValidatorProperties[] = [
 				{
 					amount: 20,
 					delegateAddress: delegate.address(),
@@ -361,8 +361,8 @@ describe("DelegateVoteAmount", () => {
 				selectedUnvotes,
 				selectedVotes,
 			}: {
-				selectedUnvotes: VoteDelegateProperties[];
-				selectedVotes: VoteDelegateProperties[];
+				selectedUnvotes: VoteValidatorProperties[];
+				selectedVotes: VoteValidatorProperties[];
 			}) => (
 				<Wrapper>
 					<DelegateVoteAmount
@@ -381,7 +381,7 @@ describe("DelegateVoteAmount", () => {
 				</Wrapper>
 			);
 
-			const selectedVotes: VoteDelegateProperties[] = [
+			const selectedVotes: VoteValidatorProperties[] = [
 				{
 					amount: 20,
 					delegateAddress: delegate.address(),
@@ -402,7 +402,7 @@ describe("DelegateVoteAmount", () => {
 
 			unmount();
 
-			const selectedUnvotes: VoteDelegateProperties[] = [
+			const selectedUnvotes: VoteValidatorProperties[] = [
 				{
 					amount: 20,
 					delegateAddress: delegate.address(),
@@ -428,7 +428,7 @@ describe("DelegateVoteAmount", () => {
 		const toggleVotesSelected = vi.fn();
 		let availableBalance = wallet.balance();
 		const setAvailableBalance = vi.fn((balance: number) => (availableBalance = balance));
-		const selectedVotes: VoteDelegateProperties[] = [
+		const selectedVotes: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				delegateAddress: delegate.address(),
