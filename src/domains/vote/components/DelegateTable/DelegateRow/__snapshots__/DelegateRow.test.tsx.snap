@@ -26,7 +26,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -178,7 +178,7 @@ exports[`DelegateRow > should render 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -330,7 +330,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -527,7 +527,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -679,7 +679,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -822,7 +822,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -965,7 +965,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -1122,7 +1122,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1265,7 +1265,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -1408,7 +1408,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -1565,7 +1565,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1717,7 +1717,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib

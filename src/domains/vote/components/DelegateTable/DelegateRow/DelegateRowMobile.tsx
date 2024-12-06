@@ -28,7 +28,7 @@ export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 									truncateOnTable
 									address={delegate.address()}
 									wrapperClass="justify-start"
-									addressClass="leading-[17px] text-sm w-full 1text-theme-secondary-500 1dark:text-theme-secondary-700"
+									addressClass="leading-[17px] text-sm w-full"
 								/>
 							</div>
 
