@@ -20,9 +20,15 @@ export function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistry
 	return "unvote";
 }
 
-export const VoteTransactionType = (
-	{ unvotes, votes, showValidator }: { unvotes: VoteRegistryItem[]; votes: VoteRegistryItem[]; showValidator?: boolean }
-) => {
+export const VoteTransactionType = ({
+	unvotes,
+	votes,
+	showValidator,
+}: {
+	unvotes: VoteRegistryItem[];
+	votes: VoteRegistryItem[];
+	showValidator?: boolean;
+}) => {
 	const { t } = useTranslation();
 
 	const voteCategory = getVoteCategory(votes, unvotes);
@@ -52,7 +58,7 @@ export const VoteTransactionType = (
 					</Label>
 				</div>
 
-				{(showValidatorField || voteCategory === "swap") && <DetailDivider /> }
+				{(showValidatorField || voteCategory === "swap") && <DetailDivider />}
 
 				{voteCategory === "swap" && (
 					<>
@@ -88,7 +94,9 @@ export const VoteTransactionType = (
 
 						<Address
 							truncateOnTable
-							address={voteCategory === "vote" ? votes[0]?.wallet?.address() : unvotes[0]?.wallet?.address()}
+							address={
+								voteCategory === "vote" ? votes[0]?.wallet?.address() : unvotes[0]?.wallet?.address()
+							}
 							wrapperClass="justify-start"
 							addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
 						/>
