@@ -4,12 +4,12 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { DefaultTReturn, TOptions } from "i18next";
-import { LabelWrapper, TextWrapper } from "./DelegateFooter.styles";
+import { LabelWrapper, TextWrapper } from "./ValidatorFooter.styles";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { Tooltip } from "@/app/components/Tooltip";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
 
 interface FooterContentProperties {
@@ -32,23 +32,23 @@ const FooterContent = ({ label, value, disabled, className }: FooterContentPrope
 	</div>
 );
 
-interface DelegateFooterProperties {
+interface ValidatorFooterProperties {
 	selectedWallet: Contracts.IReadWriteWallet;
 	availableBalance: number;
-	selectedVotes: VoteDelegateProperties[];
-	selectedUnvotes: VoteDelegateProperties[];
+	selectedVotes: VoteValidatorProperties[];
+	selectedUnvotes: VoteValidatorProperties[];
 	maxVotes: number;
-	onContinue?: (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => void;
+	onContinue?: (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => void;
 }
 
-export const DelegateFooter = ({
+export const ValidatorFooter = ({
 	selectedWallet,
 	availableBalance,
 	selectedVotes,
 	selectedUnvotes,
 	maxVotes,
 	onContinue,
-}: DelegateFooterProperties) => {
+}: ValidatorFooterProperties) => {
 	const { t } = useTranslation();
 	const [tooltipContent, setTooltipContent] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isContinueDisabled, setIsContinueDisabled] = useState(true);

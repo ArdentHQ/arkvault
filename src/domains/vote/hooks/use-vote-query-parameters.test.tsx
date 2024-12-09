@@ -65,7 +65,7 @@ describe("useWalletFromQueryParameters hook", () => {
 		expect(screen.getByTestId("unvotes-0")).toBeInTheDocument();
 	});
 
-	it("should find vote delegate from url", () => {
+	it("should find vote validator from url", () => {
 		history.push(`/?vote=${delegateAddresses[0]},2&nethash=${nethash}`);
 
 		render(<TestComponent />, { history, withProviders: false });
@@ -74,7 +74,7 @@ describe("useWalletFromQueryParameters hook", () => {
 		expect(screen.getByTestId("unvotes-0")).toBeInTheDocument();
 	});
 
-	it("should find unvote delegate from url", () => {
+	it("should find unvote validator from url", () => {
 		history.push(`/?unvote=${delegateAddresses[0]},2&nethash=${nethash}`);
 
 		render(<TestComponent />, { history, withProviders: false });

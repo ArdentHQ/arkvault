@@ -2,23 +2,23 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { DelegateRow } from "./DelegateRow";
+import { ValidatorRow } from "./ValidatorRow";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
-let delegate: Contracts.IReadOnlyWallet;
+let validator: Contracts.IReadOnlyWallet;
 
-const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
+const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
 
-describe("DelegateRow", () => {
+describe("ValidatorRow", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
 
-		delegate = new ReadOnlyWallet({
+		validator = new ReadOnlyWallet({
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
@@ -33,9 +33,9 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -57,9 +57,9 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -72,27 +72,27 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstValidatorVoteButton());
 
 		expect(container).toBeInTheDocument();
-		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());
+		expect(toggleVotesSelected).toHaveBeenCalledWith(validator.address());
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render the selected delegate", () => {
+	it("should render the selected validator", () => {
 		const selected = [
 			{
 				amount: 0,
-				delegateAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						selectedVotes={selected}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -106,7 +106,7 @@ describe("DelegateRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -134,12 +134,12 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						voted={{
 							amount: 10,
-							wallet: delegate,
+							wallet: validator,
 						}}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
@@ -150,9 +150,9 @@ describe("DelegateRow", () => {
 						selectedWallet={wallet}
 						isCompact={isCompact}
 					/>
-					<DelegateRow
+					<ValidatorRow
 						index={1}
-						delegate={secondDelegate}
+						validator={secondDelegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -162,9 +162,9 @@ describe("DelegateRow", () => {
 						selectedWallet={wallet}
 						isCompact={isCompact}
 					/>
-					<DelegateRow
+					<ValidatorRow
 						index={2}
-						delegate={thirdDelegate}
+						validator={thirdDelegate}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						isVoteDisabled={true}
@@ -180,7 +180,7 @@ describe("DelegateRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.CURRENT);
+		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CURRENT);
 		expect(screen.getByTestId("DelegateRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
 		expect(screen.getByTestId("DelegateRow__toggle-2")).toBeDisabled();
 
@@ -188,23 +188,23 @@ describe("DelegateRow", () => {
 	});
 
 	it("should render the unselected vote", () => {
-		const selectedUnvotes: VoteDelegateProperties[] = [
+		const selectedUnvotes: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				delegateAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 		const voted: Contracts.VoteRegistryItem = {
 			amount: 10,
-			wallet: delegate,
+			wallet: validator,
 		};
 
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						voted={voted}
 						selectedVotes={[]}
 						selectedUnvotes={selectedUnvotes}
@@ -219,7 +219,7 @@ describe("DelegateRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.UNSELECTED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.UNSELECTED);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -230,9 +230,9 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -245,7 +245,7 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		expect(screen.getByTestId("DelegateVoteAmount")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorVoteAmount")).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -256,23 +256,23 @@ describe("DelegateRow", () => {
 	it("should render changed style when network requires vote amount", () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
-		const selectedVotes: VoteDelegateProperties[] = [
+		const selectedVotes: VoteValidatorProperties[] = [
 			{
 				amount: 20,
-				delegateAddress: delegate.address(),
+				validatorAddress: validator.address(),
 			},
 		];
 		const voted: Contracts.VoteRegistryItem = {
 			amount: 10,
-			wallet: delegate,
+			wallet: validator,
 		};
 
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow
+					<ValidatorRow
 						index={0}
-						delegate={delegate}
+						validator={validator}
 						voted={voted}
 						selectedVotes={selectedVotes}
 						selectedUnvotes={[]}
@@ -287,7 +287,7 @@ describe("DelegateRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
+		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
 
 		expect(asFragment()).toMatchSnapshot();
 

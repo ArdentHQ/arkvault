@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`VotesHeader > should render a different title if on select delegate step 1`] = `
+exports[`VotesHeader > should render a different title if on select validator step 1`] = `
 <DocumentFragment>
   <section
     class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-1.5 dark:bg-black"

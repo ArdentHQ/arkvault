@@ -1,9 +1,9 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DelegateTable > loading state for base > should render when isCompact = false 1`] = `
+exports[`ValidatorsTable > loading state for base > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -173,7 +173,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
         >
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -279,7 +279,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -385,7 +385,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -491,7 +491,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -597,7 +597,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -703,7 +703,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -809,7 +809,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -915,7 +915,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1021,7 +1021,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1127,7 +1127,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1233,7 +1233,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1339,7 +1339,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1445,7 +1445,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1551,7 +1551,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1657,7 +1657,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1763,7 +1763,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1869,7 +1869,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -1975,7 +1975,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2081,7 +2081,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2187,7 +2187,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2293,7 +2293,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2399,7 +2399,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2505,7 +2505,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2611,7 +2611,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2717,7 +2717,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2823,7 +2823,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -2929,7 +2929,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3035,7 +3035,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3141,7 +3141,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3247,7 +3247,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3353,7 +3353,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3459,7 +3459,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3565,7 +3565,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3671,7 +3671,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3777,7 +3777,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3883,7 +3883,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -3989,7 +3989,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4095,7 +4095,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4201,7 +4201,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4307,7 +4307,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4413,7 +4413,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4519,7 +4519,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4625,7 +4625,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4731,7 +4731,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4837,7 +4837,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -4943,7 +4943,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -5049,7 +5049,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -5155,7 +5155,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -5261,7 +5261,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -5367,7 +5367,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -5473,7 +5473,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -5748,10 +5748,10 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > loading state for base > should render when isCompact = true 1`] = `
+exports[`ValidatorsTable > loading state for base > should render when isCompact = true 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -5921,7 +5921,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
         >
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6027,7 +6027,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6133,7 +6133,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6239,7 +6239,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6345,7 +6345,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6451,7 +6451,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6557,7 +6557,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6663,7 +6663,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6769,7 +6769,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6875,7 +6875,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -6981,7 +6981,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7087,7 +7087,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7193,7 +7193,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7299,7 +7299,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7405,7 +7405,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7511,7 +7511,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7617,7 +7617,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7723,7 +7723,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7829,7 +7829,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -7935,7 +7935,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8041,7 +8041,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8147,7 +8147,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8253,7 +8253,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8359,7 +8359,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8465,7 +8465,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8571,7 +8571,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8677,7 +8677,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8783,7 +8783,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8889,7 +8889,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -8995,7 +8995,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9101,7 +9101,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9207,7 +9207,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9313,7 +9313,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9419,7 +9419,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9525,7 +9525,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9631,7 +9631,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9737,7 +9737,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9843,7 +9843,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -9949,7 +9949,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10055,7 +10055,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10161,7 +10161,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10267,7 +10267,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10373,7 +10373,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10479,7 +10479,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10585,7 +10585,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10691,7 +10691,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10797,7 +10797,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -10903,7 +10903,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -11009,7 +11009,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -11115,7 +11115,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -11221,7 +11221,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -11496,10 +11496,10 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > loading state for requiresAmount > should render when isCompact = false 1`] = `
+exports[`ValidatorsTable > loading state for requiresAmount > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -11721,7 +11721,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
         >
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -11848,7 +11848,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -11975,7 +11975,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -12102,7 +12102,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -12229,7 +12229,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -12356,7 +12356,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -12483,7 +12483,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -12610,7 +12610,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -12737,7 +12737,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -12864,7 +12864,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -12991,7 +12991,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -13118,7 +13118,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -13245,7 +13245,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -13372,7 +13372,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -13499,7 +13499,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -13626,7 +13626,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -13753,7 +13753,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -13880,7 +13880,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -14007,7 +14007,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -14134,7 +14134,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -14261,7 +14261,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -14388,7 +14388,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -14515,7 +14515,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -14642,7 +14642,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -14769,7 +14769,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -14896,7 +14896,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -15023,7 +15023,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -15150,7 +15150,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -15277,7 +15277,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -15404,7 +15404,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -15531,7 +15531,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -15658,7 +15658,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -15785,7 +15785,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -15912,7 +15912,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -16039,7 +16039,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -16166,7 +16166,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -16293,7 +16293,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -16420,7 +16420,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -16547,7 +16547,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -16674,7 +16674,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -16801,7 +16801,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -16928,7 +16928,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -17055,7 +17055,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -17182,7 +17182,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -17309,7 +17309,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -17436,7 +17436,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -17563,7 +17563,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -17690,7 +17690,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -17817,7 +17817,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -17944,7 +17944,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -18071,7 +18071,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -18387,10 +18387,10 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > loading state for requiresAmount > should render when isCompact = true 1`] = `
+exports[`ValidatorsTable > loading state for requiresAmount > should render when isCompact = true 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -18612,7 +18612,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
         >
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -18739,7 +18739,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -18866,7 +18866,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -18993,7 +18993,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -19120,7 +19120,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -19247,7 +19247,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -19374,7 +19374,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -19501,7 +19501,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -19628,7 +19628,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -19755,7 +19755,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -19882,7 +19882,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -20009,7 +20009,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -20136,7 +20136,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -20263,7 +20263,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -20390,7 +20390,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -20517,7 +20517,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -20644,7 +20644,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -20771,7 +20771,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -20898,7 +20898,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -21025,7 +21025,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -21152,7 +21152,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -21279,7 +21279,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -21406,7 +21406,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -21533,7 +21533,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -21660,7 +21660,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -21787,7 +21787,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -21914,7 +21914,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -22041,7 +22041,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -22168,7 +22168,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -22295,7 +22295,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -22422,7 +22422,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -22549,7 +22549,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -22676,7 +22676,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -22803,7 +22803,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -22930,7 +22930,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -23057,7 +23057,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -23184,7 +23184,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -23311,7 +23311,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -23438,7 +23438,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -23565,7 +23565,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -23692,7 +23692,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -23819,7 +23819,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -23946,7 +23946,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -24073,7 +24073,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -24200,7 +24200,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -24327,7 +24327,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -24454,7 +24454,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -24581,7 +24581,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -24708,7 +24708,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -24835,7 +24835,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -24962,7 +24962,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           </tr>
           <tr
             class="group css-16ynu5g"
-            data-testid="DelegateRowSkeleton"
+            data-testid="ValidatorRowSkeleton"
           >
             <td>
               <div
@@ -25278,10 +25278,10 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
+exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -26047,10 +26047,10 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
+exports[`ValidatorsTable > should emit action on continue button to unvote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -26816,10 +26816,10 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should emit action on continue button to vote 1`] = `
+exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -27585,10 +27585,10 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should render 1`] = `
+exports[`ValidatorsTable > should render 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -28356,10 +28356,10 @@ exports[`DelegateTable > should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should render vote amount column 1`] = `
+exports[`ValidatorsTable > should render vote amount column 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -28700,7 +28700,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
@@ -28890,7 +28890,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
@@ -29080,7 +29080,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
@@ -29340,10 +29340,10 @@ exports[`DelegateTable > should render vote amount column 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should render with a delegate to unvote 1`] = `
+exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -30109,10 +30109,10 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
+exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -30882,10 +30882,10 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should render with a delegate to vote 1`] = `
+exports[`ValidatorsTable > should render with a validator to vote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -31651,7 +31651,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should render with empty list 1`] = `
+exports[`ValidatorsTable > should render with empty list 1`] = `
 <DocumentFragment>
   <div
     class="flex h-full flex-col justify-center bg-theme-background text-center mt-16"
@@ -32149,10 +32149,10 @@ exports[`DelegateTable > should render with empty list 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should render with subtitle 1`] = `
+exports[`ValidatorsTable > should render with subtitle 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <p>
       test
@@ -32923,10 +32923,10 @@ exports[`DelegateTable > should render with subtitle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
+exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -33267,7 +33267,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
@@ -33455,7 +33455,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
@@ -33645,7 +33645,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
@@ -33905,10 +33905,10 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should select a delegate to unvote 1`] = `
+exports[`ValidatorsTable > should select a validator to unvote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -34676,10 +34676,10 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
+exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -35449,10 +35449,10 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should select a delegate to vote 1`] = `
+exports[`ValidatorsTable > should select a validator to vote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -36220,10 +36220,10 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should select a delegate with vote amount and make it unvote 1`] = `
+exports[`ValidatorsTable > should select a validator with vote amount and make it unvote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -36564,7 +36564,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
@@ -36752,7 +36752,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
@@ -36942,7 +36942,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
             </td>
             <td
               class="w-68"
-              data-testid="DelegateVoteAmount"
+              data-testid="ValidatorVoteAmount"
             >
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
@@ -37202,10 +37202,10 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
+exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -37970,10 +37970,10 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
+exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -38741,10 +38741,10 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateTable > should unselect a delegate to vote 1`] = `
+exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
 <DocumentFragment>
   <div
-    data-testid="DelegateTable"
+    data-testid="ValidatorsTable"
   >
     <div
       class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"

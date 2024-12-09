@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DelegateRow > should emit action on select button 1`] = `
+exports[`ValidatorRow > should emit action on select button 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -152,7 +152,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow > should render 1`] = `
+exports[`ValidatorRow > should render 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -304,7 +304,7 @@ exports[`DelegateRow > should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow > should render changed style when network requires vote amount 1`] = `
+exports[`ValidatorRow > should render changed style when network requires vote amount 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -429,7 +429,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
         </td>
         <td
           class="w-68"
-          data-testid="DelegateVoteAmount"
+          data-testid="ValidatorVoteAmount"
         >
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
@@ -501,7 +501,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
 </DocumentFragment>
 `;
 
-exports[`DelegateRow > should render the selected delegate 1`] = `
+exports[`ValidatorRow > should render the selected validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -653,7 +653,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow > should render the selected vote 1`] = `
+exports[`ValidatorRow > should render the selected vote 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1096,7 +1096,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow > should render the selected vote 2`] = `
+exports[`ValidatorRow > should render the selected vote 2`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1539,7 +1539,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow > should render the unselected vote 1`] = `
+exports[`ValidatorRow > should render the unselected vote 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1691,7 +1691,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow > should render when network requires vote amount 1`] = `
+exports[`ValidatorRow > should render when network requires vote amount 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1816,7 +1816,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
         </td>
         <td
           class="w-68"
-          data-testid="DelegateVoteAmount"
+          data-testid="ValidatorVoteAmount"
         >
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
