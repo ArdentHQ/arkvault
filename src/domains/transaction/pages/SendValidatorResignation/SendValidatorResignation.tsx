@@ -28,7 +28,7 @@ enum Step {
 	ErrorStep,
 }
 
-export const SendDelegateResignation = () => {
+export const SendValidatorResignation = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 
@@ -102,7 +102,7 @@ export const SendDelegateResignation = () => {
 				wif,
 			});
 
-			const signedTransactionId = await activeWallet.transaction().signDelegateResignation({
+			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({
 				// @TODO: Remove hardcoded fee once fees are implemented for evm.
 				fee: 5,
 				signatory,
