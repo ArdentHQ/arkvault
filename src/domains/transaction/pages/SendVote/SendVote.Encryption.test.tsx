@@ -8,9 +8,9 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
 import { SendVote } from "./SendVote";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { data as validatorData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
 import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
 import {
@@ -107,7 +107,7 @@ describe("SendVote", () => {
 
 		for (const index of [0, 1]) {
 			/* eslint-disable-next-line testing-library/prefer-explicit-assert */
-			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
+			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), validatorData[index].address);
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
@@ -149,10 +149,10 @@ describe("SendVote", () => {
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -183,7 +183,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());

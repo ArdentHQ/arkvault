@@ -78,9 +78,9 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 
 	if (wallet.balance() > 0 && !wallet.isLedger() && !isMultiSignature(wallet) && isRestoredAndSynced(wallet)) {
 		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateRegistration) &&
-			!wallet.isDelegate() &&
-			!wallet.isResignedDelegate()
+			wallet.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
+			!wallet.isValidator() &&
+			!wallet.isResignedValidator()
 		) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR"),
@@ -89,9 +89,9 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		}
 
 		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateResignation) &&
-			wallet.isDelegate() &&
-			!wallet.isResignedDelegate()
+			wallet.network().allows(Enums.FeatureFlag.TransactionValidatorResignation) &&
+			wallet.isValidator() &&
+			!wallet.isResignedValidator()
 		) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR"),

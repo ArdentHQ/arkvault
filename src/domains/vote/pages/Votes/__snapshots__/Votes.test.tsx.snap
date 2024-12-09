@@ -741,7 +741,7 @@ exports[`Votes > should filter current delegates 1`] = `
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
-            data-testid="DelegateTable"
+            data-testid="ValidatorsTable"
           >
             <div
               class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -927,16 +927,20 @@ exports[`Votes > should filter current delegates 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               arkx 
-                            </div>
+                              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -1958,7 +1962,7 @@ exports[`Votes > should render 1`] = `
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
-            data-testid="DelegateTable"
+            data-testid="ValidatorsTable"
           >
             <div
               class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -2144,16 +2148,20 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               genesis_42 
-                            </div>
+                              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -2289,16 +2297,20 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               genesis_17 
-                            </div>
+                              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -2434,16 +2446,20 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               itsanametoo 
-                            </div>
+                              DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -3465,7 +3481,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
-            data-testid="DelegateTable"
+            data-testid="ValidatorsTable"
           >
             <div
               class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -3651,16 +3667,20 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               genesis_42 
-                            </div>
+                              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -3796,16 +3816,20 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               genesis_17 
-                            </div>
+                              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -3941,16 +3965,20 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               itsanametoo 
-                            </div>
+                              DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -4956,7 +4984,7 @@ exports[`Votes > should render with no wallets 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Votes > should select a delegate 1`] = `
+exports[`Votes > should select a validator 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -5685,7 +5713,7 @@ exports[`Votes > should select a delegate 1`] = `
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
-            data-testid="DelegateTable"
+            data-testid="ValidatorsTable"
           >
             <div
               class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
@@ -5871,16 +5899,20 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               genesis_42 
-                            </div>
+                              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -6016,16 +6048,20 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               genesis_17 
-                            </div>
+                              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -6161,16 +6197,20 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               itsanametoo 
-                            </div>
+                              DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -6461,7 +6501,7 @@ exports[`Votes > should select a delegate 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Votes > should select an address and delegate 1`] = `<DocumentFragment />`;
+exports[`Votes > should select an address and validator 1`] = `<DocumentFragment />`;
 
 exports[`Votes > should select ledger option in the wallets display type 1`] = `
 <DocumentFragment>
@@ -11061,7 +11101,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
-            data-testid="DelegateTable"
+            data-testid="ValidatorsTable"
           >
             <div
               class="flex flex-col overflow-hidden rounded-xl mb-4"
@@ -11308,16 +11348,20 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               genesis_42 
-                            </div>
+                              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -11453,16 +11497,20 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               genesis_17 
-                            </div>
+                              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -11598,16 +11646,20 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                       >
                         <div
-                          class="relative h-[17px] grow"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                         >
                           <div
-                            class="absolute flex w-full items-center"
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
-                            <div
-                              class="truncate"
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
                             >
-                               itsanametoo 
-                            </div>
+                              DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8
+                            </span>
+                            <span>
+                               
+                            </span>
                           </div>
                         </div>
                       </div>

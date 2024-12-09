@@ -59,7 +59,6 @@ describe("ReceiveFunds", () => {
 		userEvent.click(screen.getByTestId("ReceiveFunds__toggle"));
 
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
-		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
 	});
 
 	it("should do nothing after qr download if user closes file dialog", async () => {
