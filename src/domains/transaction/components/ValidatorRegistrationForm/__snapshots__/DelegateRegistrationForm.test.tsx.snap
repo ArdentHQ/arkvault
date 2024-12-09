@@ -7,7 +7,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
       data-testid="tab-pabel__active-panel"
     >
       <section
-        data-testid="DelegateRegistrationForm__form-step"
+        data-testid="ValidatorRegistrationForm_form-step"
       >
         <div
           class="flex items-end justify-between bg-theme-background"
