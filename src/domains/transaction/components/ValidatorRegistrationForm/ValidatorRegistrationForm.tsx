@@ -38,31 +38,31 @@ const transactionDetails = ({
 }) => (
 	<>
 		<TransactionDetail label={translations("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
-			{transaction.data().data().asset.validatorPublicKey as string}
+			{transaction.validatorPublicKey()}
 		</TransactionDetail>
 
 		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
 	</>
 );
 
-component.displayName = "DelegateRegistrationForm";
-transactionDetails.displayName = "DelegateRegistrationFormTransactionDetails";
+component.displayName = "ValidatorRegistrationForm";
+transactionDetails.displayName = "ValidatorRegistrationFormTransactionDetails";
 
-export const DelegateRegistrationForm: SendRegistrationForm = {
+export const ValidatorRegistrationForm: SendRegistrationForm = {
 	component,
 	formFields: ["validatorPublicKey"],
 	tabSteps: 2,
 	transactionDetails,
 };
 
-export const signDelegateRegistration = async ({ env, form, profile, signatory }: any) => {
+export const signValidatorRegistration = async ({ env, form, profile, signatory }: any) => {
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
 	const { network, senderAddress, validatorPublicKey } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
-	const transactionId = await senderWallet.transaction().signDelegateRegistration({
+	const transactionId = await senderWallet.transaction().signValidatorRegistration({
 		data: {
 			validatorPublicKey,
 		},
