@@ -70,7 +70,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 };
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
-const formStep = () => screen.findByTestId("DelegateRegistrationForm__form-step");
+const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");
 
 const reviewStepID = "DelegateRegistrationForm__review-step";
 

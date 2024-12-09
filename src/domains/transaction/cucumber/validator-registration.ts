@@ -4,7 +4,7 @@ import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../wallet/e2e/common";
-import { goToDelegateRegistrationPage } from "../e2e/common";
+import { goToValidatorRegistrationPage } from "../e2e/common";
 
 const translations = buildTranslations();
 
@@ -13,11 +13,11 @@ const preSteps = {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
 		await importWallet(t, MNEMONICS[0]);
-		await goToDelegateRegistrationPage(t);
+		await goToValidatorRegistrationPage(t);
 	},
 };
 cucumber(
-	"@delegateRegistration",
+	"@validatorRegistration",
 	{
 		...preSteps,
 		"When she enters valid delegate name": async (t: TestController) => {
@@ -67,7 +67,7 @@ cucumber(
 		),
 	],
 );
-cucumber("@delegateRegistration-invalidName", {
+cucumber("@validatorRegistration-invalidName", {
 	...preSteps,
 	"When she enters an invalid delegate name": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
@@ -80,7 +80,7 @@ cucumber("@delegateRegistration-invalidName", {
 		await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
 	},
 });
-cucumber("@delegateRegistration-nameLength", {
+cucumber("@validatorRegistration-nameLength", {
 	...preSteps,
 	"When she enters a delegate name that exceeds the character limit": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
