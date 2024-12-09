@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";
 import { Link } from "@/app/components/Link";
-import { isContractTransaction } from "@/domains/transaction/utils";
+import { isContractDeployment, isContractTransaction } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
@@ -96,7 +96,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (isContract) {
+	if (isContract || isContractDeployment(transaction)) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<TransactionRowLabel direction={direction} />
