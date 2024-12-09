@@ -12,6 +12,7 @@ import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTab
 import cn from "classnames";
 import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.helpers";
 import { useTranslation } from "react-i18next";
+import { Address } from "@/app/components/Address";
 
 export interface ValidatorRowProperties {
 	index: number;
@@ -270,11 +271,12 @@ export const ValidatorRow = ({
 					rowColor,
 				)}
 			>
-				<div className="relative h-[17px] grow">
-					<div className="absolute flex w-full items-center">
-						<div className="truncate"> {validator.username()} </div>
-					</div>
-				</div>
+				<Address
+					truncateOnTable
+					address={validator.address()}
+					wrapperClass="justify-start"
+					addressClass="leading-[17px] text-sm w-full"
+				/>
 			</TableCell>
 
 			<TableCell

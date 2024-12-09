@@ -20,16 +20,20 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   arkx 
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -168,16 +172,20 @@ exports[`ValidatorRow > should render 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   arkx 
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -316,16 +324,20 @@ exports[`ValidatorRow > should render changed style when network requires vote a
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   arkx 
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -509,16 +521,20 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   arkx 
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -657,16 +673,20 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   arkx 
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -796,16 +816,20 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   genesis_42 
-                </div>
+                  D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -935,16 +959,20 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   genesis_17 
-                </div>
+                  DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -1088,16 +1116,20 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   arkx 
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -1227,16 +1259,20 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   genesis_42 
-                </div>
+                  D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -1366,16 +1402,20 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   genesis_17 
-                </div>
+                  DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -1519,16 +1559,20 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   arkx 
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>
@@ -1667,16 +1711,20 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="relative h-[17px] grow"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="absolute flex w-full items-center"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <div
-                  class="truncate"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
                 >
-                   arkx 
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
+                <span>
+                   
+                </span>
               </div>
             </div>
           </div>

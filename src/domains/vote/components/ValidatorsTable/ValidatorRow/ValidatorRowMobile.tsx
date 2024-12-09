@@ -6,6 +6,7 @@ import {
 	useValidatorRow,
 } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRow";
 import { ValidatorRowMobileSkeleton } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobileSkeleton";
+import { Address } from "@/app/components/Address";
 
 export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 	const { t } = useTranslation();
@@ -26,9 +27,12 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<div className="flex flex-1 space-x-3 overflow-hidden text-sm font-semibold leading-[17px]">
 								<span>{validator.rank()}</span>
-								<div className="relative w-full">
-									<div className="absolute flex w-full items-center">{validator.username()}</div>
-								</div>
+								<Address
+									truncateOnTable
+									address={validator.address()}
+									wrapperClass="justify-start"
+									addressClass="leading-[17px] text-sm w-full"
+								/>
 							</div>
 
 							<Link
