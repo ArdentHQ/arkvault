@@ -82,7 +82,7 @@ export const TransactionDetailContent = ({
 
 				<DetailPadded>
 					{!isVoteTransaction && <TransactionType transaction={transaction} />}
-					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} />}
+					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} showValidator />}
 				</DetailPadded>
 
 				<DetailPadded>

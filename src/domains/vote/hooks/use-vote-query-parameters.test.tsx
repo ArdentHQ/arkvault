@@ -2,7 +2,7 @@ import { createHashHistory } from "history";
 import React from "react";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useDelegatesFromURL } from "./use-vote-query-parameters";
+import { useValidatorsFromURL } from "./use-vote-query-parameters";
 
 import {
 	render,
@@ -39,7 +39,7 @@ describe("useWalletFromQueryParameters hook", () => {
 	});
 
 	const TestComponent: React.FC = () => {
-		const { votes, unvotes, isLoading } = useDelegatesFromURL({
+		const { votes, unvotes, isLoading } = useValidatorsFromURL({
 			env,
 			network: profile.availableNetworks()[1],
 			profile,

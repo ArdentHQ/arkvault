@@ -15,7 +15,7 @@ export const useVoteQueryParameters = () => {
 	return useMemo(() => ({ filter, unvoteValidators, voteValidators }), [filter, unvoteValidators, voteValidators]);
 };
 
-export const useDelegatesFromURL = ({
+export const useValidatorsFromURL = ({
 	env,
 	profile,
 	network,
