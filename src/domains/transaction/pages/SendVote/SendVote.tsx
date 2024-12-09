@@ -28,7 +28,7 @@ import { useFeeConfirmation, useTransactionBuilder } from "@/domains/transaction
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
-import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
+import { useValidatorsFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
@@ -55,7 +55,7 @@ export const SendVote = () => {
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 	const wallet = useActiveWalletWhenNeeded(false);
 
-	const { votes, unvotes, voteValidators, unvoteValidators, setUnvotes, isLoading } = useDelegatesFromURL({
+	const { votes, unvotes, voteValidators, unvoteValidators, setUnvotes, isLoading } = useValidatorsFromURL({
 		env,
 		network: activeNetwork,
 		profile: activeProfile,

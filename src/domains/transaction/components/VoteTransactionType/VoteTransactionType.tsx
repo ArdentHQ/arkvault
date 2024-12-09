@@ -4,6 +4,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { Label } from "@/app/components/Label";
+import { Address } from "@/app/components/Address";
 
 type VoteRegistryItem = Contracts.VoteRegistryItem;
 
@@ -19,16 +20,20 @@ export function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistry
 	return "unvote";
 }
 
-export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryItem[]; votes: VoteRegistryItem[] }) => {
+export const VoteTransactionType = (
+	{ unvotes, votes, showValidator }: { unvotes: VoteRegistryItem[]; votes: VoteRegistryItem[]; showValidator?: boolean }
+) => {
 	const { t } = useTranslation();
 
 	const voteCategory = getVoteCategory(votes, unvotes);
 
 	const categoryLabels = {
-		swap: t("TRANSACTION.TRANSACTION_TYPES.VOTE_COMBINATION"),
+		swap: t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
 		unvote: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
 		vote: t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
 	};
+
+	const showValidatorField = showValidator ? voteCategory === "vote" : voteCategory !== "swap";
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
@@ -47,34 +52,46 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 					</Label>
 				</div>
 
-				<DetailDivider />
+				{(showValidatorField || voteCategory === "swap") && <DetailDivider /> }
 
 				{voteCategory === "swap" && (
 					<>
 						<div className="flex w-full items-center justify-between sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
-							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-								{unvotes[0].wallet?.username()}
-							</div>
+
+							<Address
+								truncateOnTable
+								address={unvotes[0].wallet?.address()}
+								wrapperClass="justify-start"
+								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+							/>
 						</div>
 
 						<DetailDivider />
 
 						<div className="flex w-full items-center justify-between sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
-							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-								{votes[0].wallet?.username()}
-							</div>
+
+							<Address
+								truncateOnTable
+								address={votes[0].wallet?.address()}
+								wrapperClass="justify-start"
+								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+							/>
 						</div>
 					</>
 				)}
 
-				{voteCategory !== "swap" && (
+				{showValidatorField && (
 					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.VALIDATOR")}</DetailTitle>
-						<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-							{voteCategory === "vote" ? votes[0]?.wallet?.username() : unvotes[0]?.wallet?.username()}
-						</div>
+
+						<Address
+							truncateOnTable
+							address={voteCategory === "vote" ? votes[0]?.wallet?.address() : unvotes[0]?.wallet?.address()}
+							wrapperClass="justify-start"
+							addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+						/>
 					</div>
 				)}
 			</div>
