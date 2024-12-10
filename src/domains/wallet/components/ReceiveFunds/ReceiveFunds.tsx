@@ -25,13 +25,12 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 
 	const { t } = useTranslation();
 	const form = useForm({ mode: "onChange" });
-	const { amount, memo } = form.watch();
+	const { amount } = form.watch();
 
 	const { uri, image } = useQRCode({
 		address,
 		amount,
 		coin: network.coin(),
-		memo,
 		nethash: network.meta().nethash,
 	});
 
@@ -84,7 +83,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 
 				{isFormOpen && (
 					<Form context={form}>
-						<ReceiveFundsForm network={network} />
+						<ReceiveFundsForm />
 					</Form>
 				)}
 			</div>

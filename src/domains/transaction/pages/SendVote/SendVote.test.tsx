@@ -10,7 +10,7 @@ import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
@@ -188,7 +188,7 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [{ amount: 10, delegateAddress: delegateData[1].address }];
+		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
 		const { container } = render(
@@ -214,10 +214,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [{ amount: 10, delegateAddress: delegateData[1].address }];
+		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
-		const votes: VoteDelegateProperties[] = [{ amount: 10, delegateAddress: delegateData[0].address }];
+		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[0].address }];
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
@@ -251,10 +251,10 @@ describe("SendVote", () => {
 
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -357,10 +357,10 @@ describe("SendVote", () => {
 
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -396,19 +396,19 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [
+		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				validatorAddress: delegateData[1].address,
 			},
 		];
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -648,10 +648,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [
+		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -705,10 +705,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [
+		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -806,10 +806,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [
+		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -882,10 +882,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -938,10 +938,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -994,10 +994,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -1054,10 +1054,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const votes: VoteDelegateProperties[] = [
+		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -1131,10 +1131,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [
+		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				validatorAddress: delegateData[1].address,
 			},
 		];
 
@@ -1223,10 +1223,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [
+		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 
@@ -1330,10 +1330,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [
+		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[0].address,
+				validatorAddress: delegateData[0].address,
 			},
 		];
 

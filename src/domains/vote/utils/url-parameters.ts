@@ -1,26 +1,26 @@
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 
 export type ParameterNameProperties = "vote" | "unvote";
 
 export const appendParameters = (
 	parameters: URLSearchParams,
 	parameterName: ParameterNameProperties,
-	votes: VoteDelegateProperties[],
+	votes: VoteValidatorProperties[],
 ) => {
-	for (const { delegateAddress, amount } of votes) {
-		parameters.append(parameterName, `${delegateAddress}, ${amount}`);
+	for (const { validatorAddress, amount } of votes) {
+		parameters.append(parameterName, `${validatorAddress}, ${amount}`);
 	}
 };
 
 export const getParameters = (
 	parameters: URLSearchParams,
 	parameterName: ParameterNameProperties,
-): VoteDelegateProperties[] =>
+): VoteValidatorProperties[] =>
 	parameters.getAll(parameterName)?.map((vote) => {
-		const voteDelegate = vote.split(",");
+		const voteValidator = vote.split(",");
 
 		return {
-			amount: +voteDelegate[1],
-			delegateAddress: voteDelegate[0],
+			amount: +voteValidator[1],
+			validatorAddress: voteValidator[0],
 		};
 	});
