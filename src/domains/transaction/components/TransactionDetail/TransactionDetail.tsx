@@ -1,9 +1,8 @@
 import cn from "classnames";
-import React from "react";
-import { styled } from "twin.macro";
-
+import React, { forwardRef } from "react";
 import { getStyles } from "./TransactionDetail.styles";
 import { SmAndBelow, MdAndAbove } from "@/app/components/Breakpoint";
+import { twMerge } from "tailwind-merge";
 
 export type TransactionDetailProperties = {
 	children?: React.ReactNode;
@@ -17,7 +16,18 @@ export type TransactionDetailProperties = {
 	useDesktop?: boolean;
 } & React.HTMLAttributes<any>;
 
-const TransactionDetailStyled = styled.div<TransactionDetailProperties>(getStyles);
+const TransactionDetailStyled = forwardRef<HTMLDivElement, TransactionDetailProperties>(
+    ({ border, borderPosition, padding, paddingPosition, className, ...properties }, ref) => (
+        <div
+            {...properties}
+            ref={ref}
+            className={twMerge(getStyles({ border, borderPosition, padding, paddingPosition }), className)}
+        />
+    )
+);
+
+TransactionDetailStyled.displayName = "TransactionDetailStyled";
+
 
 const RowLabel = ({ children }: { children: React.ReactNode }) => (
 	<div className="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500">
