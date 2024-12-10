@@ -193,7 +193,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	List,
 	LoaderLogo,
 	Lock,
-	LockOpen: TransactionIcons.UnlockToken,
 	MagnifyingGlass,
 	MagnifyingGlassAlt,
 	MagnifyingGlassId,
