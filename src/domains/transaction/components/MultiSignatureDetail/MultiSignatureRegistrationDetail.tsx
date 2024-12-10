@@ -16,7 +16,7 @@ import { TransactionDetailProperties } from "@/domains/transaction/components/Tr
 import { useBreakpoint } from "@/app/hooks";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
-import { TransactionDetailAddressList } from "@/domains/transaction/components/MultiPaymentDetail/components/TransactionDetailAddressList";
+import { TransactionDetailAddressList } from "@/domains/transaction/components/MultiSignatureDetail/components/TransactionDetailAddressList";
 import { RecipientList } from "@/domains/transaction/components/RecipientList";
 import { MdAndAbove, SmAndBelow } from "@/app/components/Breakpoint";
 
