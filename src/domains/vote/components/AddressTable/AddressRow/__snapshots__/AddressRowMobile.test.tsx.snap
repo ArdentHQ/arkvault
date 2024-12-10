@@ -219,7 +219,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRowMobile > should not render delegate name if name is not provided 1`] = `<DocumentFragment />`;
+exports[`AddressRowMobile > should not render validator name if name is not provided 1`] = `<DocumentFragment />`;
 
 exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
 <DocumentFragment>
@@ -2129,7 +2129,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRowMobile > should render with active delegate 1`] = `
+exports[`AddressRowMobile > should render with active validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -2348,7 +2348,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRowMobile > should render with resigned delegate 1`] = `
+exports[`AddressRowMobile > should render with resigned validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -2567,7 +2567,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRowMobile > should render with standby delegate 1`] = `
+exports[`AddressRowMobile > should render with standby validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>

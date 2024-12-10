@@ -13,7 +13,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 
-import { DetailLabel, DetailPadded, DetailsCondensed, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabel, DetailPadded, DetailsCondensed } from "@/app/components/DetailWrapper";
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
@@ -23,6 +23,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
 import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
 import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
+import { isContractTransaction } from "@/domains/transaction/utils";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -72,6 +73,7 @@ export const TransactionDetailContent = ({
 						recipients={recipients.map(({ address, alias, isDelegate }) => ({
 							address,
 							alias,
+							isContract: isContractTransaction(transaction),
 							isDelegate,
 						}))}
 						labelClassName={labelClassName}
@@ -98,23 +100,6 @@ export const TransactionDetailContent = ({
 						labelClassName={labelClassName}
 					/>
 				</DetailPadded>
-
-				{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (
-					<DetailPadded>
-						<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-							{transaction.memo() && (
-								<p className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
-									{transaction.memo()}
-								</p>
-							)}
-							{!transaction.memo() && (
-								<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
-									{t("COMMON.NOT_AVAILABLE")}
-								</p>
-							)}
-						</DetailWrapper>
-					</DetailPadded>
-				)}
 
 				<DetailPadded>
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>

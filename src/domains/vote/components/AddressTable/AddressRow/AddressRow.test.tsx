@@ -247,7 +247,7 @@ describe("AddressRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with active delegate", async () => {
+	it("should render with active validator", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
@@ -282,7 +282,7 @@ describe("AddressRow", () => {
 		votesMock.mockRestore();
 	});
 
-	it("should render with standby delegate", async () => {
+	it("should render with standby validator", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
@@ -317,7 +317,7 @@ describe("AddressRow", () => {
 		votesMock.mockRestore();
 	});
 
-	it("should render with resigned delegate", async () => {
+	it("should render with resigned validator", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,

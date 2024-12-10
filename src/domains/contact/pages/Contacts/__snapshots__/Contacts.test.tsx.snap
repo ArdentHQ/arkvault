@@ -2322,7 +2322,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         data-testid="ContactListMobile"
       >
         <div
-          class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+          class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
         >
           <div
             class="select-none cursor-pointer md:h-20 py-6 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b px-6 pb-3 pt-4"
@@ -2541,7 +2541,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+          class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
         >
           <div
             class="select-none cursor-pointer md:h-20 py-6 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b px-6 pb-3 pt-4"

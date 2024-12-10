@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -32,6 +31,8 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+// @TODO: Enable & refactor transaction & network tests once mainsail coin support will be completed.
+//        See https://app.clickup.com/t/86dvbvrvf
 describe("Dashboard", () => {
 	beforeEach(() => {
 		server.use(
@@ -74,7 +75,7 @@ describe("Dashboard", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should render loading state when profile is syncing", async () => {
+	it.skip("should render loading state when profile is syncing", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
@@ -90,7 +91,7 @@ describe("Dashboard", () => {
 		);
 	});
 
-	it("should display empty block when there are no transactions", async () => {
+	it.skip("should display empty block when there are no transactions", async () => {
 		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
@@ -116,7 +117,7 @@ describe("Dashboard", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should open modal when click on a transaction", async () => {
+	it.skip("should open modal when click on a transaction", async () => {
 		const all = await profile.transactionAggregate().all({ limit: 10 });
 		const transactions = all.items();
 

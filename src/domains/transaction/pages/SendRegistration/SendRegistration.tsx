@@ -15,9 +15,9 @@ import { useActiveProfile, useActiveWallet, useLedgerModelStatus, useValidation 
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
-	DelegateRegistrationForm,
-	signDelegateRegistration,
-} from "@/domains/transaction/components/DelegateRegistrationForm";
+	ValidatorRegistrationForm,
+	signValidatorRegistration,
+} from "domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
@@ -88,7 +88,7 @@ export const SendRegistration = () => {
 
 	useLayoutEffect(() => {
 		const registrations = {
-			default: () => setRegistrationForm(DelegateRegistrationForm),
+			default: () => setRegistrationForm(ValidatorRegistrationForm),
 			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
 		};
 
@@ -149,8 +149,8 @@ export const SendRegistration = () => {
 				return;
 			}
 
-			if (registrationType === "delegateRegistration") {
-				const transaction = await signDelegateRegistration({
+			if (registrationType === "validatorRegistration") {
+				const transaction = await signValidatorRegistration({
 					env,
 					form,
 					profile: activeProfile,
