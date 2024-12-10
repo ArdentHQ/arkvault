@@ -374,45 +374,47 @@ exports[`Welcome > should change route to create profile 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonLightGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                          fill="#E2F0E6"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
+                            fill="#E2F0E6"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -474,31 +476,34 @@ exports[`Welcome > should change route to create profile 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
                               data-testid="Icon__Lock"
-                              height="20"
-                              width="20"
                             >
-                              <svg
-                                id="lock"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="lock"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -515,37 +520,40 @@ exports[`Welcome > should change route to create profile 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -607,37 +615,40 @@ exports[`Welcome > should change route to create profile 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -652,31 +663,32 @@ exports[`Welcome > should change route to create profile 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"
@@ -1094,45 +1106,47 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonDarkGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                          fill="#26372B"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
+                            fill="#26372B"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -1208,37 +1222,40 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1286,31 +1303,34 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
                               data-testid="Icon__Lock"
-                              height="20"
-                              width="20"
                             >
-                              <svg
-                                id="lock"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="lock"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -1327,37 +1347,40 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1419,37 +1442,40 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1464,31 +1490,32 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"
@@ -1906,45 +1933,47 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonDarkGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                          fill="#26372B"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
+                            fill="#26372B"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -2020,37 +2049,40 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2098,31 +2130,34 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
                               data-testid="Icon__Lock"
-                              height="20"
-                              width="20"
                             >
-                              <svg
-                                id="lock"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="lock"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -2139,37 +2174,40 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2231,37 +2269,40 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2276,31 +2317,32 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"
@@ -2718,45 +2760,47 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonDarkGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                          fill="#26372B"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
+                            fill="#26372B"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -2832,37 +2876,40 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2910,31 +2957,34 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
                               data-testid="Icon__Lock"
-                              height="20"
-                              width="20"
                             >
-                              <svg
-                                id="lock"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="lock"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -2951,37 +3001,40 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3043,37 +3096,40 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3088,31 +3144,32 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"
@@ -3530,45 +3587,47 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonLightGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                          fill="#E2F0E6"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
+                            fill="#E2F0E6"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -3644,37 +3703,40 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3722,31 +3784,34 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
                               data-testid="Icon__Lock"
-                              height="20"
-                              width="20"
                             >
-                              <svg
-                                id="lock"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="lock"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -3763,37 +3828,40 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3855,37 +3923,40 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3900,31 +3971,32 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"
@@ -4342,45 +4414,47 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonDarkGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                          fill="#26372B"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
+                            fill="#26372B"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -4456,37 +4530,40 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -4534,31 +4611,34 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
                               data-testid="Icon__Lock"
-                              height="20"
-                              width="20"
                             >
-                              <svg
-                                id="lock"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="lock"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -4575,37 +4655,40 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -4667,37 +4750,40 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -4712,31 +4798,32 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"
@@ -5154,45 +5241,47 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonLightGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                          fill="#E2F0E6"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
+                            fill="#E2F0E6"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -5254,31 +5343,34 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
                               data-testid="Icon__Lock"
-                              height="20"
-                              width="20"
                             >
-                              <svg
-                                id="lock"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="lock"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -5295,37 +5387,40 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -5387,37 +5482,40 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -5432,31 +5530,32 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"
@@ -5874,45 +5973,47 @@ exports[`Welcome > should render with profiles 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonDarkGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                          fill="#26372B"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
+                            fill="#26372B"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -5988,37 +6089,40 @@ exports[`Welcome > should render with profiles 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -6066,31 +6170,34 @@ exports[`Welcome > should render with profiles 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
                               data-testid="Icon__Lock"
-                              height="20"
-                              width="20"
                             >
-                              <svg
-                                id="lock"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="lock"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -6107,37 +6214,40 @@ exports[`Welcome > should render with profiles 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -6199,37 +6309,40 @@ exports[`Welcome > should render with profiles 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <circle
-                                    cx="10.002"
-                                    cy="2.99609"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 2.99609)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="9.99805"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 9.99805)"
-                                  />
-                                  <circle
-                                    cx="10.002"
-                                    cy="17"
-                                    fill="currentColor"
-                                    r="2"
-                                    transform="rotate(90 10.002 17)"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle
+                                      cx="10.002"
+                                      cy="2.99609"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 2.99609)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="9.99805"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 9.99805)"
+                                    />
+                                    <circle
+                                      cx="10.002"
+                                      cy="17"
+                                      fill="currentColor"
+                                      r="2"
+                                      transform="rotate(90 10.002 17)"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -6244,31 +6357,32 @@ exports[`Welcome > should render with profiles 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"
@@ -6686,45 +6800,47 @@ exports[`Welcome > should render without profiles 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      class="css-h1kfx5"
                       data-testid="icon-PersonLightGreen"
-                      height="24"
-                      width="24"
                     >
-                      <svg
-                        fill="none"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        width="25"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 24px; width: 24px;"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                          fill="#E2F0E6"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                          fill-rule="evenodd"
-                          stroke="#289548"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          height="24"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 25 24"
+                          width="25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
+                            fill="#E2F0E6"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                            fill-rule="evenodd"
+                            stroke="#289548"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <h2
                       class="mx-4 text-2xl font-bold"
@@ -6752,31 +6868,32 @@ exports[`Welcome > should render without profiles 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="plus"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="plus"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M1 10h18M10 1v18"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 10h18M10 1v18"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                         <span
                           class="pl-2"

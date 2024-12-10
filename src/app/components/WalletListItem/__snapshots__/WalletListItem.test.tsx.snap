@@ -26,25 +26,28 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-                  height="18"
-                  width="18"
+                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
                 >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 18px; width: 18px;"
                   >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
+                    <svg
+                      id="star-filled"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,33 +116,36 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -235,38 +241,39 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <circle
-                          cx="10.002"
-                          cy="2.99609"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 2.99609)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="9.99805"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 9.99805)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="17"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 17)"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -300,31 +307,32 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="cross"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="cross"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -350,7 +358,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-ea0il3"
+                        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -382,7 +390,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -461,33 +469,36 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
             type="button"
           >
             <div
-              class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-              height="16"
-              width="16"
+              class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
             >
-              <svg
-                id="copy"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="copy"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                  />
-                  <path
-                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                    />
+                    <path
+                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -517,25 +528,28 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="WalletIcon__Starred"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-            height="18"
-            width="18"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 18px; width: 18px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -567,28 +581,29 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           disabled=""
           type="button"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="double-arrow-right"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="double-arrow-right"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -621,25 +636,28 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-                  height="18"
-                  width="18"
+                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
                 >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 18px; width: 18px;"
                   >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
+                    <svg
+                      id="star-filled"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -708,33 +726,36 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -829,38 +850,39 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <circle
-                          cx="10.002"
-                          cy="2.99609"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 2.99609)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="9.99805"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 9.99805)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="17"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 17)"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -894,31 +916,32 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="cross"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="cross"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -944,7 +967,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-ea0il3"
+                        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -976,7 +999,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1037,25 +1060,28 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-                  height="18"
-                  width="18"
+                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
                 >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 18px; width: 18px;"
                   >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
+                    <svg
+                      id="star-filled"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1124,33 +1150,36 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -1245,38 +1274,39 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <circle
-                          cx="10.002"
-                          cy="2.99609"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 2.99609)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="9.99805"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 9.99805)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="17"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 17)"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -1310,31 +1340,32 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="cross"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="cross"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1360,7 +1391,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-ea0il3"
+                        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1392,7 +1423,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1471,33 +1502,36 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
             type="button"
           >
             <div
-              class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-              height="16"
-              width="16"
+              class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
             >
-              <svg
-                id="copy"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="copy"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                  />
-                  <path
-                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                    />
+                    <path
+                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -1512,52 +1546,54 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
             class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
             data-testid="WalletIcon__Ledger"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="ledger"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="ledger"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
           <div
             class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
             data-testid="WalletIcon__TestNetwork"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="code"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="code"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -1566,25 +1602,28 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
           data-testid="WalletIcon__Starred"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-            height="18"
-            width="18"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 18px; width: 18px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -1615,28 +1654,29 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
           data-testid="WalletListItemMobile--button"
           type="button"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="double-arrow-right"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="double-arrow-right"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -1685,33 +1725,36 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
             type="button"
           >
             <div
-              class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-              height="16"
-              width="16"
+              class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
             >
-              <svg
-                id="copy"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="copy"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                  />
-                  <path
-                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                    />
+                    <path
+                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -1726,52 +1769,54 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
             class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
             data-testid="WalletIcon__Ledger"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="ledger"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="ledger"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
           <div
             class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
             data-testid="WalletIcon__TestNetwork"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="code"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="code"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -1780,25 +1825,28 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
           data-testid="WalletIcon__Starred"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-            height="18"
-            width="18"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 18px; width: 18px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -1837,28 +1885,29 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
           disabled=""
           type="button"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="double-arrow-right"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="double-arrow-right"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -1889,25 +1938,28 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-                  height="18"
-                  width="18"
+                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
                 >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 18px; width: 18px;"
                   >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
+                    <svg
+                      id="star-filled"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1976,33 +2028,36 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -2097,38 +2152,39 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <circle
-                          cx="10.002"
-                          cy="2.99609"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 2.99609)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="9.99805"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 9.99805)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="17"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 17)"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2162,31 +2218,32 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="cross"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="cross"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -2212,7 +2269,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-ea0il3"
+                        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2244,7 +2301,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2305,25 +2362,28 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-                  height="18"
-                  width="18"
+                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
                 >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 18px; width: 18px;"
                   >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
+                    <svg
+                      id="star-filled"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2392,33 +2452,36 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -2436,52 +2499,54 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                 class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                 data-testid="WalletIcon__Ledger"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="ledger"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
+                    <svg
+                      id="ledger"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
               <div
                 class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                 data-testid="WalletIcon__TestNetwork"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="code"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="code"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2561,38 +2626,39 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <circle
-                          cx="10.002"
-                          cy="2.99609"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 2.99609)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="9.99805"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 9.99805)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="17"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 17)"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2626,31 +2692,32 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="cross"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="cross"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -2676,7 +2743,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-ea0il3"
+                        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2708,7 +2775,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2769,25 +2836,28 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-                  height="18"
-                  width="18"
+                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
                 >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 18px; width: 18px;"
                   >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
+                    <svg
+                      id="star-filled"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2856,33 +2926,36 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -2977,38 +3050,39 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <circle
-                          cx="10.002"
-                          cy="2.99609"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 2.99609)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="9.99805"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 9.99805)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="17"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 17)"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -3042,31 +3116,32 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="cross"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="cross"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -3092,7 +3167,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-ea0il3"
+                        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3124,7 +3199,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3185,25 +3260,28 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-tuuiwl"
-                  height="18"
-                  width="18"
+                  class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
                 >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 18px; width: 18px;"
                   >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
+                    <svg
+                      id="star-filled"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3272,33 +3350,36 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -3393,38 +3474,39 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <circle
-                          cx="10.002"
-                          cy="2.99609"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 2.99609)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="9.99805"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 9.99805)"
-                        />
-                        <circle
-                          cx="10.002"
-                          cy="17"
-                          fill="currentColor"
-                          r="2"
-                          transform="rotate(90 10.002 17)"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -3458,31 +3540,32 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="cross"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="cross"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -3508,7 +3591,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-ea0il3"
+                        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3540,7 +3623,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                         </div>
                       </fieldset>
                       <div
-                        class="css-j6ajdm"
+                        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                       >
                         <button
                           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

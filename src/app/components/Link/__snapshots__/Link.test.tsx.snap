@@ -15,28 +15,31 @@ exports[`Link > should do nothing on click when disabled 1`] = `
       app.arkvault.io
     </span>
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
       data-testid="Link__external"
-      height="12"
-      width="12"
     >
-      <svg
-        id="arrow-external"
-        viewBox="0 0 20 20"
-        x="0"
-        xml:space="preserve"
-        xmlns="http://www.w3.org/2000/svg"
-        y="0"
+      <div
+        style="height: 12px; width: 12px;"
       >
-        <path
-          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        />
-      </svg>
+        <svg
+          id="arrow-external"
+          style="height: 100%; width: 100%;"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
     </div>
   </a>
 </DocumentFragment>
@@ -55,28 +58,31 @@ exports[`Link > should open an external link 1`] = `
       class="css-bxx244"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+      class="mb-[3px] shrink-0 align-middle duration-200"
       data-testid="Link__external"
-      height="12"
-      width="12"
     >
-      <svg
-        id="arrow-external"
-        viewBox="0 0 20 20"
-        x="0"
-        xml:space="preserve"
-        xmlns="http://www.w3.org/2000/svg"
-        y="0"
+      <div
+        style="height: 12px; width: 12px;"
       >
-        <path
-          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        />
-      </svg>
+        <svg
+          id="arrow-external"
+          style="height: 100%; width: 100%;"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
     </div>
   </a>
 </DocumentFragment>
@@ -112,28 +118,31 @@ exports[`Link > should render external without children 1`] = `
       class="css-bxx244"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+      class="mb-[3px] shrink-0 align-middle duration-200"
       data-testid="Link__external"
-      height="12"
-      width="12"
     >
-      <svg
-        id="arrow-external"
-        viewBox="0 0 20 20"
-        x="0"
-        xml:space="preserve"
-        xmlns="http://www.w3.org/2000/svg"
-        y="0"
+      <div
+        style="height: 12px; width: 12px;"
       >
-        <path
-          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        />
-      </svg>
+        <svg
+          id="arrow-external"
+          style="height: 100%; width: 100%;"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
     </div>
   </a>
 </DocumentFragment>
@@ -169,28 +178,31 @@ exports[`Link > should show a toast when trying to open an invalid external link
       class="css-bxx244"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+      class="mb-[3px] shrink-0 align-middle duration-200"
       data-testid="Link__external"
-      height="12"
-      width="12"
     >
-      <svg
-        id="arrow-external"
-        viewBox="0 0 20 20"
-        x="0"
-        xml:space="preserve"
-        xmlns="http://www.w3.org/2000/svg"
-        y="0"
+      <div
+        style="height: 12px; width: 12px;"
       >
-        <path
-          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        />
-      </svg>
+        <svg
+          id="arrow-external"
+          style="height: 100%; width: 100%;"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
     </div>
   </a>
 </DocumentFragment>

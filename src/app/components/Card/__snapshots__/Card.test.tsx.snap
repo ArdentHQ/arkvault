@@ -56,42 +56,45 @@ exports[`Card > should render with custom options 1`] = `
             class="flex w-4 justify-center overflow-hidden"
           >
             <div
-              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-v0ob3f"
-              height="16"
-              width="16"
+              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200"
             >
-              <svg
-                id="ellipsis-vertical"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="ellipsis-vertical"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <circle
-                    cx="10"
-                    cy="16.994"
-                    r="2.006"
-                  />
-                  <circle
-                    cx="10"
-                    cy="3"
-                    r="2"
-                  />
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="2"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="16.994"
+                      r="2.006"
+                    />
+                    <circle
+                      cx="10"
+                      cy="3"
+                      r="2"
+                    />
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="2"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

@@ -3,8 +3,7 @@
 exports[`Divider > should render 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
-    type="horizontal"
+    class="h-4 border-t border-solid clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </DocumentFragment>
 `;
@@ -12,8 +11,7 @@ exports[`Divider > should render 1`] = `
 exports[`Divider > should render a dashed 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-    type="horizontal"
+    class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -21,8 +19,7 @@ exports[`Divider > should render a dashed 1`] = `
 exports[`Divider > should render horizontal type 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
-    type="horizontal"
+    class="h-4 border-t border-solid clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -30,8 +27,7 @@ exports[`Divider > should render horizontal type 1`] = `
 exports[`Divider > should render horizontal with size default 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
-    type="horizontal"
+    class="h-4 border-t border-solid clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -39,8 +35,7 @@ exports[`Divider > should render horizontal with size default 1`] = `
 exports[`Divider > should render horizontal with size lg 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
-    type="horizontal"
+    class="h-4 border-t border-solid clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -48,8 +43,7 @@ exports[`Divider > should render horizontal with size lg 1`] = `
 exports[`Divider > should render horizontal with size md 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
-    type="horizontal"
+    class="h-4 border-t border-solid clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -57,8 +51,7 @@ exports[`Divider > should render horizontal with size md 1`] = `
 exports[`Divider > should render horizontal with size sm 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
-    type="horizontal"
+    class="h-4 border-t border-solid clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -66,8 +59,7 @@ exports[`Divider > should render horizontal with size sm 1`] = `
 exports[`Divider > should render horizontal with size xl 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
-    type="horizontal"
+    class="h-4 border-t border-solid clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -75,8 +67,7 @@ exports[`Divider > should render horizontal with size xl 1`] = `
 exports[`Divider > should render vertical type 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-    type="vertical"
+    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -84,8 +75,7 @@ exports[`Divider > should render vertical type 1`] = `
 exports[`Divider > should render vertical with size default 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-    type="vertical"
+    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -93,8 +83,7 @@ exports[`Divider > should render vertical with size default 1`] = `
 exports[`Divider > should render vertical with size lg 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-132iid3"
-    type="vertical"
+    class="h-8 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -102,8 +91,7 @@ exports[`Divider > should render vertical with size lg 1`] = `
 exports[`Divider > should render vertical with size md 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-    type="vertical"
+    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -111,8 +99,7 @@ exports[`Divider > should render vertical with size md 1`] = `
 exports[`Divider > should render vertical with size sm 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ginesk"
-    type="vertical"
+    class="h-2 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
@@ -120,8 +107,7 @@ exports[`Divider > should render vertical with size sm 1`] = `
 exports[`Divider > should render vertical with size xl 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
-    type="vertical"
+    class="h-10 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;

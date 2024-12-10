@@ -10,28 +10,29 @@ exports[`QRFileUpload > should render 1`] = `
     <div
       class="flex items-center space-x-2"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="arrow-up-bracket"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <path
-            d="M19 13.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9m9.05-.3V2m-4.7 4.7l4.7-4.7 4.6 4.7"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
+          <svg
+            id="arrow-up-bracket"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M19 13.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9m9.05-.3V2m-4.7 4.7l4.7-4.7 4.6 4.7"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
       </div>
       <span>
         Upload Image

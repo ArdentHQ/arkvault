@@ -52,7 +52,7 @@ describe("UserMenu", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Avatar")).toHaveStyle("width: 25px");
+		expect(screen.getByTestId("Avatar")).toHaveClass("w-[25px]");
 	});
 
 	it("should render the avatar with 44px on desktop", () => {
@@ -67,6 +67,6 @@ describe("UserMenu", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Avatar")).toHaveStyle("width: 2.75rem"); /* same as 44px */
+		expect(screen.getByTestId("Avatar")).toHaveClass("w-11");
 	});
 });
