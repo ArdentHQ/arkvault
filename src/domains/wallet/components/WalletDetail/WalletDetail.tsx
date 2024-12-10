@@ -1,10 +1,22 @@
 import cn from "classnames";
-import React from "react";
-import { styled } from "twin.macro";
+import React, { forwardRef } from "react";
 import { getStyles } from "@/domains/transaction/components/TransactionDetail/TransactionDetail.styles";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
+import { twMerge } from "tailwind-merge";
 
-const WalletDetailStyled = styled.div<TransactionDetailProperties>(getStyles);
+const WalletDetailStyled = forwardRef<HTMLDivElement, TransactionDetailProperties>(
+    ({ border, borderPosition, padding, paddingPosition, ...props }, ref) => {
+        return (
+            <div
+                {...props}
+                ref={ref}
+                className={twMerge(getStyles({ border, borderPosition, padding, paddingPosition }), props.className)}
+            />
+        );
+    }
+);
+
+WalletDetailStyled.displayName = "WalletDetailStyled";
 
 export const WalletDetail = React.forwardRef<HTMLDivElement, TransactionDetailProperties>(
 	(
