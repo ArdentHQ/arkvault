@@ -78,7 +78,7 @@ const ParticipantRow = ({
 	wallet: Contracts.IReadWriteWallet;
 	transaction: DTO.ExtendedSignedTransactionData;
 }) => (
-	<TableRow className="group relative max-md:!border-transparent" key={wallet.address()}>
+	<TableRow className="max-md:!border-transparent group relative" key={wallet.address()}>
 		<TableCell
 			variant="start"
 			innerClassName="text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
@@ -111,7 +111,7 @@ const ParticipantRow = ({
 );
 
 const ParticipantRowSkeleton = () => (
-	<TableRow className="group relative max-md:!border-transparent">
+	<TableRow className="max-md:!border-transparent group relative">
 		<TableCell
 			variant="start"
 			innerClassName="text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"

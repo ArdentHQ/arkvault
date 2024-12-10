@@ -188,7 +188,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -214,7 +214,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -561,7 +561,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -587,7 +587,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -863,7 +863,7 @@ exports[`WalletHeader > should render 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -889,7 +889,7 @@ exports[`WalletHeader > should render 1`] = `
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1135,7 +1135,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1161,7 +1161,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1426,7 +1426,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1452,7 +1452,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1725,7 +1725,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1751,7 +1751,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2023,7 +2023,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2049,7 +2049,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2350,7 +2350,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2376,7 +2376,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2586,7 +2586,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       >
         <button
           aria-busy="false"
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2612,7 +2612,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           </div>
         </button>
         <button
-          class="css-exkcd5"
+          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
           data-testid="WalletHeader__star-button"
           type="button"
         >

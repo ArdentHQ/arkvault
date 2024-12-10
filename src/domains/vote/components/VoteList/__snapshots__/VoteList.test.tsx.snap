@@ -3,13 +3,13 @@
 exports[`VoteList > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -52,7 +52,7 @@ exports[`VoteList > should render in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -95,7 +95,7 @@ exports[`VoteList > should render in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -141,13 +141,13 @@ exports[`VoteList > should render in lg 1`] = `
 exports[`VoteList > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -190,7 +190,7 @@ exports[`VoteList > should render in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -233,7 +233,7 @@ exports[`VoteList > should render in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -279,7 +279,7 @@ exports[`VoteList > should render in md 1`] = `
 exports[`VoteList > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
@@ -310,7 +310,7 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -353,7 +353,7 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -396,7 +396,7 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -417,13 +417,13 @@ exports[`VoteList > should render in sm 1`] = `
 exports[`VoteList > should render in xl 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -466,7 +466,7 @@ exports[`VoteList > should render in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -509,7 +509,7 @@ exports[`VoteList > should render in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -555,7 +555,7 @@ exports[`VoteList > should render in xl 1`] = `
 exports[`VoteList > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
@@ -586,7 +586,7 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -629,7 +629,7 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -672,7 +672,7 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -693,13 +693,13 @@ exports[`VoteList > should render in xs 1`] = `
 exports[`VoteList > should render with amount in lg 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -752,7 +752,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -805,7 +805,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -861,13 +861,13 @@ exports[`VoteList > should render with amount in lg 1`] = `
 exports[`VoteList > should render with amount in md 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -920,7 +920,7 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -973,7 +973,7 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1029,7 +1029,7 @@ exports[`VoteList > should render with amount in md 1`] = `
 exports[`VoteList > should render with amount in sm 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
@@ -1070,7 +1070,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1123,7 +1123,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1176,7 +1176,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1197,13 +1197,13 @@ exports[`VoteList > should render with amount in sm 1`] = `
 exports[`VoteList > should render with amount in xl 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1256,7 +1256,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1309,7 +1309,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="shrink-0 css-h8w6w0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1365,7 +1365,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
 exports[`VoteList > should render with amount in xs 1`] = `
 <DocumentFragment>
   <div
-    class="css-nxxg2"
+    class="-my-2 flex-1"
   >
     <div
       class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
@@ -1406,7 +1406,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1459,7 +1459,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -1512,7 +1512,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-1yk316i"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div

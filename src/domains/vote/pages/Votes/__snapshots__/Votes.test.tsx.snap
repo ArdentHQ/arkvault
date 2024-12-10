@@ -534,7 +534,7 @@ exports[`Votes > should filter current delegates 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1763,7 +1763,7 @@ exports[`Votes > should render 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -3282,7 +3282,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -4801,7 +4801,7 @@ exports[`Votes > should render with no wallets 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -5514,7 +5514,7 @@ exports[`Votes > should select a validator 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -7030,7 +7030,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -8267,7 +8267,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -9504,7 +9504,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -10902,7 +10902,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -11107,7 +11107,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               class="flex flex-col overflow-hidden rounded-xl mb-4"
             >
               <div
-                class="css-rzhg83"
+                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
                 <div
                   class="css-v0ob3f"
@@ -11151,7 +11151,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 </span>
               </div>
               <div
-                class="css-trjt6n"
+                class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
               >
                 <div
                   data-testid="Votes__resigned-vote"
