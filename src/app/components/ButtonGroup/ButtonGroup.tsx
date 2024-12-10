@@ -1,8 +1,7 @@
 import cn from "classnames";
 import React from "react";
-import tw, { css, styled } from "twin.macro";
-
 import { Tooltip } from "@/app/components/Tooltip";
+import { twMerge } from "tailwind-merge";
 
 export const ButtonGroup = ({ children, className }: React.PropsWithChildren<{ className?: string }>) => (
 	<div data-testid="ButtonGroup" role="radiogroup" className={cn("inline-flex w-full items-center", className)}>
@@ -12,36 +11,23 @@ export const ButtonGroup = ({ children, className }: React.PropsWithChildren<{ c
 
 type ButtonGroupOptionVariant = "default" | "modern";
 
-const ButtonGroupOptionStyled = styled.button<{ variant: ButtonGroupOptionVariant }>(({ variant }) => {
-	let styles = [
-		tw`flex items-center justify-center w-full h-full transition-colors duration-300`,
-		tw`p-3 font-semibold text-theme-secondary-700`,
-		tw`border-2 border-theme-primary-100`,
-		tw`dark:(border-theme-secondary-800 text-theme-secondary-500)`,
-		tw`focus:(outline-none ring-2 ring-theme-primary-400)`,
-		tw`disabled:(
-			border border-theme-secondary-300 text-theme-secondary-500 cursor-not-allowed
-			dark:(text-theme-secondary-700 border-theme-secondary-700)
-		)`,
-		tw`hover:(border-theme-primary-100 text-theme-primary-700 bg-theme-primary-100)`,
-		tw`dark:hover:(border-theme-secondary-800 text-theme-secondary-200 bg-theme-secondary-800)`,
-		css`
-			&[aria-checked="true"] {
-				${tw`text-theme-primary-700 border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900 dark:text-theme-primary-50 cursor-default`}
-			}
-		`,
-	];
+interface ButtonGroupOptionStyledProperties extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+	variant: ButtonGroupOptionVariant;
+}
 
-	if (variant === "default") {
-		styles = [...styles, tw`rounded`];
-	}
-
-	if (variant === "modern") {
-		styles = [...styles, tw`h-14 rounded-xl`];
-	}
-
-	return styles;
-});
+const ButtonGroupOptionStyled = ({ variant, ...props }: ButtonGroupOptionStyledProperties) => (
+	<button
+		{...props}
+		className={twMerge(
+			"flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50",
+			cn({
+				"h-14 rounded-xl": variant === "modern",
+				rounded: variant === "default",
+			}),
+			props.className,
+		)}
+	/>
+);
 
 interface ButtonGroupOptionProperties {
 	children: React.ReactNode;

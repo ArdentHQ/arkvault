@@ -1,11 +1,10 @@
-import { Helpers } from "@ardenthq/sdk-profiles";
-import cn from "classnames";
 import React from "react";
-import tw, { styled } from "twin.macro";
-
+import cn from "classnames";
+import { Helpers } from "@ardenthq/sdk-profiles";
 import { Size } from "@/types";
+import { twMerge } from "tailwind-merge";
 
-interface Properties {
+interface AvatarWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
 	address?: string;
 	className?: string;
 	innerClassName?: string;
@@ -16,35 +15,26 @@ interface Properties {
 	children?: React.ReactNode;
 }
 
-const AvatarWrapper = styled.div<Properties>`
-	${tw`transition-all duration-100 relative inline-flex items-center justify-center align-middle rounded-full`}
-
-	${({ size }) => {
-		const sizes = {
-			avatarMobile: () => tw`w-[25px] h-[25px] text-sm`,
-			default: () => tw`w-10 h-10`,
-			lg: () => tw`w-11 h-11 text-sm`,
-			sm: () => tw`w-8 h-8 text-sm`,
-			xl: () => tw`w-16 h-16 text-xl`,
-			xs: () => tw`w-5 h-5 text-sm`,
-		};
-
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-		return (sizes[size as keyof typeof sizes] || sizes.default)();
-	}}
-
-	${({ noShadow, shadowClassName }) => {
-		if (noShadow) {
-			return;
-		}
-
-		if (shadowClassName) {
-			return tw`ring-6`;
-		}
-
-		return tw`ring-6 ring-theme-background`;
-	}}
-`;
+const AvatarWrapper = ({ size, noShadow, shadowClassName, ...props }: AvatarWrapperProps) => (
+	<div
+		{...props}
+		className={twMerge(
+			"relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100",
+			cn({
+				"h-11 w-11 text-sm": size === "lg",
+				"h-16 w-16 text-xl": size === "xl",
+				"h-5 w-5 text-sm": size === "xs",
+				"h-8 w-8 text-sm": size === "sm",
+				"h-[25px] w-[25px] text-sm": size === "avatarMobile",
+				"ring-6": !noShadow && shadowClassName,
+				"ring-6 ring-theme-background": !noShadow && !shadowClassName,
+			}),
+			props.className,
+		)}
+	>
+		{props.children}
+	</div>
+);
 
 export const Avatar = ({
 	address = "",
@@ -55,7 +45,7 @@ export const Avatar = ({
 	shadowClassName,
 	size,
 	children,
-}: Properties) => {
+}: AvatarWrapperProps) => {
 	const svg = React.useMemo(() => (address ? Helpers.Avatar.make(address) : undefined), [address]);
 
 	return (

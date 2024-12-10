@@ -3,7 +3,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import tw, { styled } from "twin.macro";
 
 import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -17,14 +16,17 @@ import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
+import { twMerge } from "tailwind-merge";
 
-const QRCodeButton = styled.button`
-	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
-	${tw`border-2 border-theme-primary-100 dark:border-theme-secondary-800`}
-	${tw`hover:(bg-theme-primary-100 border-theme-primary-100) dark:hover:(bg-theme-secondary-800 border-theme-secondary-800)`}
-	${tw`focus:(outline-none ring-2 ring-theme-primary-400)`}
-	${tw`text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-secondary-500 dark:hover:text-white transition-colors`}
-`;
+const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+	<button
+		{...props}
+		className={twMerge(
+			"mt-auto flex w-full items-center space-x-2 rounded border-2 border-theme-primary-100 px-5 py-3 text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-600 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white sm:w-auto sm:py-5",
+			props.className,
+		)}
+	/>
+);
 
 export const FormStep = ({
 	profile,
