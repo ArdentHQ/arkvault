@@ -166,6 +166,7 @@ export const TabList = ({
 			cn({
 				"rounded-xl bg-theme-secondary-100 px-2 dark:bg-theme-secondary-background": !noBackground,
 			}),
+			properties.className,
 		)}
 	/>
 );
