@@ -52,9 +52,9 @@ const HandleInner = ({ alwaysOn, disabled, small, ...properties }: HandleInnerPr
 				"bg-theme-primary-100 dark:bg-theme-secondary-800": disabled,
 				"bg-theme-primary-600": !disabled && alwaysOn,
 				"bg-theme-secondary-400 dark:bg-theme-secondary-600": !disabled && !alwaysOn,
-				"handle-inner": !disabled,
 				"h-3 w-3": small,
 				"h-4 w-4": !small,
+				"handle-inner": !disabled,
 			}),
 		)}
 	/>
