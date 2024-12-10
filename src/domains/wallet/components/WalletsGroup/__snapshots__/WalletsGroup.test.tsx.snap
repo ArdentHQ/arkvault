@@ -504,7 +504,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
+            class="table-wrapper with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800"
             role="table"
           >
             <table
@@ -798,7 +798,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -859,7 +859,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               AAA
@@ -886,7 +886,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               AAA
@@ -1363,7 +1363,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding css-1m6rt2i"
+            class="table-wrapper with-x-padding"
             role="table"
           >
             <table
@@ -1657,7 +1657,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -1718,7 +1718,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               AAA
@@ -1745,7 +1745,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               AAA
@@ -1931,7 +1931,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -1992,7 +1992,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -2019,7 +2019,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -2204,7 +2204,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -2265,7 +2265,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -2292,7 +2292,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -2477,7 +2477,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -2538,7 +2538,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -2565,7 +2565,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -2750,7 +2750,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -2811,7 +2811,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -2838,7 +2838,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -3023,7 +3023,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -3084,7 +3084,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -3111,7 +3111,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -3296,7 +3296,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -3357,7 +3357,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -3384,7 +3384,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -3569,7 +3569,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -3630,7 +3630,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -3657,7 +3657,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -3842,7 +3842,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -3903,7 +3903,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -3930,7 +3930,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -4115,7 +4115,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -4176,7 +4176,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -4203,7 +4203,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -5105,7 +5105,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
         data-testid="WalletTable"
       >
         <div
-          class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
+          class="table-wrapper with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800"
           role="table"
         >
           <table
@@ -5399,7 +5399,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
               role="rowgroup"
             >
               <tr
-                class="group relative css-1tl8buz"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
@@ -5460,7 +5460,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -5487,7 +5487,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -5672,7 +5672,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
                 </td>
               </tr>
               <tr
-                class="group relative css-1tl8buz"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
@@ -5733,7 +5733,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -5760,7 +5760,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -6199,7 +6199,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
         data-testid="WalletTable"
       >
         <div
-          class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
+          class="table-wrapper with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800"
           role="table"
         >
           <table
@@ -6493,7 +6493,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
               role="rowgroup"
             >
               <tr
-                class="group relative css-1tl8buz"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
@@ -6554,7 +6554,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -6581,7 +6581,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -6766,7 +6766,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
                 </td>
               </tr>
               <tr
-                class="group relative css-1tl8buz"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
@@ -6827,7 +6827,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -6854,7 +6854,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -7295,7 +7295,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
         data-testid="WalletTable"
       >
         <div
-          class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
+          class="table-wrapper with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800"
           role="table"
         >
           <table
@@ -7589,7 +7589,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
               role="rowgroup"
             >
               <tr
-                class="group relative css-1tl8buz"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
@@ -7650,7 +7650,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -7677,7 +7677,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -7862,7 +7862,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
                 </td>
               </tr>
               <tr
-                class="group relative css-1tl8buz"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
@@ -7923,7 +7923,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -7950,7 +7950,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -8392,7 +8392,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
+            class="table-wrapper with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800"
             role="table"
           >
             <table
@@ -8686,7 +8686,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -9228,7 +9228,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding css-1m6rt2i"
+            class="table-wrapper with-x-padding"
             role="table"
           >
             <table
@@ -9522,7 +9522,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -9583,7 +9583,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -9610,7 +9610,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -9795,7 +9795,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -9856,7 +9856,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -9883,7 +9883,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -10068,7 +10068,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -10129,7 +10129,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -10156,7 +10156,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -10341,7 +10341,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -10402,7 +10402,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -10429,7 +10429,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -10614,7 +10614,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -10675,7 +10675,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -10702,7 +10702,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -10887,7 +10887,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -10948,7 +10948,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -10975,7 +10975,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -11160,7 +11160,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -11221,7 +11221,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -11248,7 +11248,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -11433,7 +11433,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -11494,7 +11494,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -11521,7 +11521,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -11706,7 +11706,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -11767,7 +11767,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -11794,7 +11794,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -11979,7 +11979,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -12040,7 +12040,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -12067,7 +12067,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -12803,7 +12803,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
+            class="table-wrapper with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800"
             role="table"
           >
             <table
@@ -13097,7 +13097,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -13639,7 +13639,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding css-1m6rt2i"
+            class="table-wrapper with-x-padding"
             role="table"
           >
             <table
@@ -13933,7 +13933,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -13994,7 +13994,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -14021,7 +14021,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -14206,7 +14206,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -14267,7 +14267,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -14294,7 +14294,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -14479,7 +14479,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -14540,7 +14540,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -14567,7 +14567,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -14752,7 +14752,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -14813,7 +14813,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -14840,7 +14840,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -15025,7 +15025,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -15086,7 +15086,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -15113,7 +15113,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -15298,7 +15298,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -15359,7 +15359,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -15386,7 +15386,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -15571,7 +15571,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -15632,7 +15632,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -15659,7 +15659,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -15844,7 +15844,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -15905,7 +15905,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -15932,7 +15932,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -16117,7 +16117,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -16178,7 +16178,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -16205,7 +16205,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -16390,7 +16390,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -16451,7 +16451,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -16478,7 +16478,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -17176,7 +17176,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
+            class="table-wrapper with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800"
             role="table"
           >
             <table
@@ -17470,7 +17470,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -17981,7 +17981,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding css-1m6rt2i"
+            class="table-wrapper with-x-padding"
             role="table"
           >
             <table
@@ -18275,7 +18275,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -18336,7 +18336,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -18363,7 +18363,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -18548,7 +18548,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -18609,7 +18609,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -18636,7 +18636,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -18821,7 +18821,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -18882,7 +18882,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -18909,7 +18909,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -19094,7 +19094,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -19155,7 +19155,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -19182,7 +19182,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -19367,7 +19367,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -19428,7 +19428,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -19455,7 +19455,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -19640,7 +19640,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -19701,7 +19701,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -19728,7 +19728,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -19913,7 +19913,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -19974,7 +19974,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -20001,7 +20001,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -20186,7 +20186,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -20247,7 +20247,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -20274,7 +20274,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -20459,7 +20459,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -20520,7 +20520,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -20547,7 +20547,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -20732,7 +20732,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="group relative css-1tl8buz"
+                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                   data-testid="TableRow"
                 >
                   <td
@@ -20793,7 +20793,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1
@@ -20820,7 +20820,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-9nx3be"
+                              class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
                               ARK Wallet 1

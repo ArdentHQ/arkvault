@@ -35,6 +35,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                 >
                   <input
                     aria-invalid="true"
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
@@ -120,6 +121,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
@@ -321,7 +323,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -421,6 +423,7 @@ exports[`Add Participant > should fail to find 1`] = `
                 >
                   <input
                     aria-invalid="true"
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
@@ -506,6 +509,7 @@ exports[`Add Participant > should fail to find 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
@@ -707,7 +711,7 @@ exports[`Add Participant > should fail to find 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -807,6 +811,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                 >
                   <input
                     aria-invalid="true"
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
@@ -893,7 +898,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                         class="flex items-center"
                       >
                         <span
-                          class="no-ligatures font-semibold css-9nx3be"
+                          class="no-ligatures transition-colors duration-200 font-semibold"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -907,6 +912,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
@@ -1207,6 +1213,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                 >
                   <input
                     aria-invalid="true"
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
@@ -1292,6 +1299,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
@@ -1493,7 +1501,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -1593,6 +1601,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                 >
                   <input
                     aria-invalid="true"
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
@@ -1678,6 +1687,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
@@ -1879,7 +1889,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -1979,6 +1989,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                 >
                   <input
                     aria-invalid="false"
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
@@ -2014,6 +2025,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="false"
                           aria-labelledby="SelectRecipient__dropdown-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
@@ -2258,6 +2270,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                 >
                   <input
                     aria-invalid="false"
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
@@ -2293,6 +2306,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="false"
                           aria-labelledby="SelectRecipient__dropdown-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
@@ -2450,7 +2464,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -2585,7 +2599,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 2

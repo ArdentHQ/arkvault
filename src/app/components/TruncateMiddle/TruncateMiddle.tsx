@@ -1,7 +1,5 @@
 import cn from "classnames";
 import React from "react";
-import { styled } from "twin.macro";
-
 import { Tooltip } from "@/app/components/Tooltip";
 
 type TruncateMiddleProperties = {
@@ -10,8 +8,6 @@ type TruncateMiddleProperties = {
 	as?: React.ElementType;
 	showTooltip?: boolean;
 } & React.HTMLProps<any>;
-
-const Wrapper = styled.span``;
 
 export const TruncateMiddle = React.forwardRef<HTMLElement, TruncateMiddleProperties>(
 	({ className, text, maxChars = 16, showTooltip = true, ...properties }: TruncateMiddleProperties, reference) => {
@@ -29,14 +25,14 @@ export const TruncateMiddle = React.forwardRef<HTMLElement, TruncateMiddleProper
 
 		return (
 			<Tooltip content={text} disabled={!showTooltip}>
-				<Wrapper
+				<span
 					ref={reference}
 					data-testid="TruncateMiddle"
 					className={cn("no-ligatures", className)}
 					{...properties}
 				>
 					{result}
-				</Wrapper>
+				</span>
 			</Tooltip>
 		);
 	},

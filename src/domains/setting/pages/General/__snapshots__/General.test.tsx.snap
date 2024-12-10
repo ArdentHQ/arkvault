@@ -631,7 +631,7 @@ exports[`General Settings > should disable submit button when profile is not res
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -1787,7 +1787,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     </div>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -1951,7 +1951,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     </ul>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -2690,7 +2690,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -3882,7 +3882,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     </div>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -4046,7 +4046,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     </ul>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -4784,7 +4784,7 @@ exports[`General Settings > should render 1`] = `
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -5940,7 +5940,7 @@ exports[`General Settings > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -6104,7 +6104,7 @@ exports[`General Settings > should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -6843,7 +6843,7 @@ exports[`General Settings > should show identicon when removing image if name is
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -7999,7 +7999,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     </div>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -8163,7 +8163,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     </ul>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -8902,7 +8902,7 @@ exports[`General Settings > should update profile 1`] = `
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -10058,7 +10058,7 @@ exports[`General Settings > should update profile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -10222,7 +10222,7 @@ exports[`General Settings > should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -10961,7 +10961,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -12117,7 +12117,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </div>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -12281,7 +12281,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -13019,7 +13019,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -14219,7 +14219,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </div>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"
@@ -14383,7 +14383,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-1elbhch"
+                    class="relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0"
                   >
                     <h2
                       class="mb-4 text-lg"

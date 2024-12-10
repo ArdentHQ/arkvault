@@ -44,7 +44,7 @@ exports[`AddressTable > should render 1`] = `
           </h2>
         </div>
         <div
-          class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
+          class="table-wrapper with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
           role="table"
         >
           <table
@@ -272,7 +272,7 @@ exports[`AddressTable > should render 1`] = `
               role="rowgroup"
             >
               <tr
-                class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                 data-testid="TableRow"
               >
                 <td
@@ -292,7 +292,7 @@ exports[`AddressTable > should render 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -548,7 +548,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
           </h2>
         </div>
         <div
-          class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
+          class="table-wrapper with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
           role="table"
         >
           <table
@@ -760,7 +760,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               role="rowgroup"
             >
               <tr
-                class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                 data-testid="TableRow"
               >
                 <td
@@ -780,7 +780,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -1006,7 +1006,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
           </h2>
         </div>
         <div
-          class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
+          class="table-wrapper with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
           role="table"
         >
           <table
@@ -1234,7 +1234,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
               role="rowgroup"
             >
               <tr
-                class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                 data-testid="TableRow"
               >
                 <td
@@ -1254,7 +1254,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1

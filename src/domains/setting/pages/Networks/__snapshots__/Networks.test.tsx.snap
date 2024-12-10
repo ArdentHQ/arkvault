@@ -627,7 +627,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
