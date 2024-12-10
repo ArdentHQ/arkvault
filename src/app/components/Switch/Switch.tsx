@@ -1,12 +1,14 @@
 import cn from "classnames";
-import React, { PropsWithChildren } from "react";
-import { styled } from "twin.macro";
-
+import React from "react";
 import { getSwitchTextStyles, SwitchTextType } from "./SwitchText.style";
 import { Toggle } from "@/app/components/Toggle";
 import { Size } from "@/types";
+import { twMerge } from "tailwind-merge";
 
-const SwitchText = styled.span<PropsWithChildren<SwitchTextType>>(getSwitchTextStyles);
+
+const SwitchText = ({ size, selected, disabled, ...props}: SwitchTextType & React.HTMLAttributes<HTMLButtonElement>) => {
+	return <button {...props} className={twMerge(getSwitchTextStyles({size, selected, disabled}))} />;
+}
 
 export interface SwitchOption<TValue = string> {
 	label: string;
@@ -34,7 +36,6 @@ export function Switch<TOptionValue = string>({
 }: Properties<TOptionValue>) {
 	const renderOption = (option: SwitchOption<TOptionValue>) => (
 		<SwitchText
-			role="button"
 			disabled={disabled}
 			size={size}
 			selected={option.value === value}
