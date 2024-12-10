@@ -16,7 +16,7 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
-		const updateDelegates = async () => {
+		const updateValidators = async () => {
 			setIsLoading(true);
 
 			try {
@@ -26,14 +26,14 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 			}
 
 			try {
-				const votesList = transaction.votes().map((publicKey: string) => ({
+				const votesList = transaction.votes().map((address: string) => ({
 					amount: transaction.amount(),
-					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey),
+					wallet: env.delegates().findByAddress(network.coin(), network.id(), address),
 				}));
 
-				const unvotesList = transaction.unvotes().map((publicKey: string) => ({
+				const unvotesList = transaction.unvotes().map((address: string) => ({
 					amount: transaction.amount(),
-					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey),
+					wallet: env.delegates().findByAddress(network.coin(), network.id(), address),
 				}));
 
 				setVotes(votesList);
@@ -45,7 +45,7 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 			setIsLoading(false);
 		};
 
-		updateDelegates();
+		updateValidators();
 	}, [transaction, profile, network]);
 
 	return {
