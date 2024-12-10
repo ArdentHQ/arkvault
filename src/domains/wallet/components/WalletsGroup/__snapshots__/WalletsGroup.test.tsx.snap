@@ -257,7 +257,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -1047,7 +1047,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -4733,7 +4733,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
 exports[`WalletsGroup > should render group with different widths 1`] = `
 <DocumentFragment>
   <div
-    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
     data-testid="WalletsGroup"
   >
     <div
@@ -5793,7 +5793,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
 exports[`WalletsGroup > should render group with different widths 2`] = `
 <DocumentFragment>
   <div
-    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
     data-testid="WalletsGroup"
   >
     <div
@@ -6853,7 +6853,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
 exports[`WalletsGroup > should render group with different widths 3`] = `
 <DocumentFragment>
   <div
-    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
     data-testid="WalletsGroup"
   >
     <div
@@ -7918,7 +7918,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -8685,7 +8685,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -12204,7 +12204,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -12971,7 +12971,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -16490,7 +16490,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -17226,7 +17226,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
