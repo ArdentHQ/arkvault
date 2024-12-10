@@ -25,10 +25,10 @@ export const StyledCircle = ({ disabled, ...props }: React.ComponentProps<typeof
 		{...props}
 		className={twMerge(
 			cn({
-				"border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-600 dark:text-theme-secondary-600":
-					!disabled,
 				"border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700":
 					disabled,
+				"border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-600 dark:text-theme-secondary-600":
+					!disabled,
 			}),
 		)}
 	/>
