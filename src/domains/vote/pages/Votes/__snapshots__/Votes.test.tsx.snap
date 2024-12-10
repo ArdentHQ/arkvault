@@ -846,7 +846,7 @@ exports[`Votes > should filter current delegates 1`] = `
                         <div
                           class=""
                         >
-                          Validator Name
+                          Validator
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -2098,7 +2098,7 @@ exports[`Votes > should render 1`] = `
                         <div
                           class=""
                         >
-                          Validator Name
+                          Validator
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -3660,7 +3660,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         <div
                           class=""
                         >
-                          Validator Name
+                          Validator
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -5955,7 +5955,7 @@ exports[`Votes > should select a validator 1`] = `
                         <div
                           class=""
                         >
-                          Validator Name
+                          Validator
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -11526,7 +11526,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         <div
                           class=""
                         >
-                          Validator Name
+                          Validator
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
