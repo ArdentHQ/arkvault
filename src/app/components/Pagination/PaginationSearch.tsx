@@ -9,7 +9,6 @@ import { Icon } from "@/app/components/Icon";
 import { clickOutsideHandler } from "@/app/hooks";
 import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.blocks";
 
-
 export const PaginationSearchForm = ({
 	onClose,
 	totalPages = Number.POSITIVE_INFINITY,
