@@ -2,6 +2,7 @@ import { Currency } from "@ardenthq/sdk-intl";
 import React, { useEffect, useState } from "react";
 
 import { Input } from "./Input";
+import { Networks } from "@ardenthq/sdk";
 
 type InputCurrencyProperties = {
 	addons?: any;
@@ -12,12 +13,13 @@ type InputCurrencyProperties = {
 	isInvalid?: boolean;
 	isCompact?: boolean;
 	noShadow?: boolean;
+	network?: Networks.Network;
 } & Omit<React.InputHTMLAttributes<any>, "onChange" | "defaultValue">;
 
 const sanitize = (value?: string, magnitude?: number) => Currency.fromString(value || "", magnitude).display;
 
 export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyProperties>(
-	({ onChange, value, onBlur, ...properties }: InputCurrencyProperties, reference) => {
+	({ onChange, value, onBlur, network, ...properties }: InputCurrencyProperties, reference) => {
 		const [amount, setAmount] = useState<string>(sanitize(value?.toString()));
 
 		useEffect(() => {
@@ -34,7 +36,7 @@ export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyPro
 		};
 
 		const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-			const sanitizedValue = sanitize(event.target.value);
+			const sanitizedValue = sanitize(event.target.value, network?.toObject().currency.decimals ?? 18);
 
 			setAmount(sanitizedValue);
 
