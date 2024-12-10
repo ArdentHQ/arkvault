@@ -14,6 +14,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	showConvertedValue,
 	step,
 	value,
+	network,
 }: InputFeeAdvancedProperties) => {
 	const { decrement, increment } = useStepMath(step, value);
 
@@ -47,6 +48,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 
 	return (
 		<InputCurrency
+			network={network}
 			addons={{
 				end: {
 					content: (
