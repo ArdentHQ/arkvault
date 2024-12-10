@@ -4,7 +4,6 @@ import { HashRouter, useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
-import { GlobalStyles as BaseStyles } from "twin.macro";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
@@ -71,7 +70,6 @@ const customStyles = css`
 
 const GlobalStyles: React.VFC = () => (
 	<>
-		<BaseStyles />
 		<Global styles={customStyles} />
 	</>
 );
