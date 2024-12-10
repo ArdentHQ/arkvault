@@ -10,7 +10,6 @@ export * from "./TransactionStatus";
 export * from "./TransactionTimestamp";
 export * from "./TransactionType";
 export * from "./TransactionVotes";
-export * from "./TransactionMultisignatureStatus";
 export * from "./TransactionAddresses";
 export * from "./TransactionDetails";
 export * from "./TransactionSummary";
