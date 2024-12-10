@@ -8,7 +8,7 @@ export const translations = {
 		COMMISSION: "Comm.",
 		COMMISSION_BY_PERIOD: "Commission ({{period}})",
 		MIN: "Min.",
-		NAME: "Validator Name",
+		NAME: "Validator",
 		PAYOUT_INTERVAL: "Payout",
 		TITLE: "Select Validator",
 		TOOLTIP: {
