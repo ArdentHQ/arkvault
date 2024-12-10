@@ -10,30 +10,33 @@ exports[`SearchBar > should render 1`] = `
       class="flex items-center rounded bg-theme-background px-10 py-6 shadow-xl"
     >
       <div
-        class="mr-8 w-4 text-theme-secondary-300 css-v0ob3f"
-        height="16"
-        width="16"
+        class="mr-8 w-4 text-theme-secondary-300"
       >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
       <div
         class="mr-4 flex-1 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800"

@@ -1,17 +1,27 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import tw, { styled } from "twin.macro";
-
 import { Icon } from "@/app/components/Icon";
+import { twMerge } from "tailwind-merge";
+import cn from "classnames";
 
-const ToggleIcon = styled.span<{ isOpen: boolean; isDisabled?: boolean }>`
-	${tw`inline-flex items-center justify-center rounded-full transition duration-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 text-theme-primary-600 dark:text-theme-secondary-200`}
-	${({ isOpen }) => (isOpen ? tw`md:bg-theme-primary-600 text-theme-primary-100 rotate-180` : "")}
-	${({ isDisabled }) =>
-		isDisabled
-			? tw`md:bg-theme-secondary-200 text-theme-secondary-400 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-700`
-			: ""}
-`;
+const ToggleIcon = ({
+	isOpen,
+	isDisabled,
+	...props
+}: { isOpen: boolean; isDisabled?: boolean } & React.HTMLAttributes<HTMLSpanElement>) => (
+	<span
+		{...props}
+		className={twMerge(
+			"inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800",
+			cn({
+				"rotate-180 text-theme-primary-100 md:bg-theme-primary-600": isOpen,
+				"text-theme-secondary-400 dark:text-theme-secondary-700 md:bg-theme-secondary-200 md:dark:bg-theme-secondary-800":
+					isDisabled,
+			}),
+			props.className,
+		)}
+	/>
+);
 
 type Properties = {
 	isOpen: boolean;

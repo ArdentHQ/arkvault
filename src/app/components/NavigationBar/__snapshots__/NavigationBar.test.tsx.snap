@@ -17,37 +17,37 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -57,34 +57,34 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -94,28 +94,29 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -132,30 +133,33 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -233,25 +237,26 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -277,23 +282,26 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -328,30 +336,33 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -386,30 +397,33 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -433,27 +447,30 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -589,37 +606,37 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -629,34 +646,34 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
@@ -667,28 +684,29 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -705,30 +723,33 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -806,25 +827,26 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -850,23 +872,26 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -901,30 +926,33 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -960,30 +988,33 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -1008,27 +1039,30 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -1120,37 +1154,37 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1160,34 +1194,34 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1197,28 +1231,29 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -1235,30 +1270,33 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -1336,25 +1374,26 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -1380,23 +1419,26 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1431,30 +1473,33 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1489,30 +1534,33 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -1536,27 +1584,30 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -1644,37 +1695,37 @@ exports[`NavigationBar > should render in lg 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1684,34 +1735,34 @@ exports[`NavigationBar > should render in lg 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1721,28 +1772,29 @@ exports[`NavigationBar > should render in lg 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -1759,30 +1811,33 @@ exports[`NavigationBar > should render in lg 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -1860,25 +1915,26 @@ exports[`NavigationBar > should render in lg 1`] = `
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -1904,23 +1960,26 @@ exports[`NavigationBar > should render in lg 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1955,30 +2014,33 @@ exports[`NavigationBar > should render in lg 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -2013,30 +2075,33 @@ exports[`NavigationBar > should render in lg 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2060,27 +2125,30 @@ exports[`NavigationBar > should render in lg 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2168,37 +2236,37 @@ exports[`NavigationBar > should render in md 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2208,34 +2276,34 @@ exports[`NavigationBar > should render in md 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2245,28 +2313,29 @@ exports[`NavigationBar > should render in md 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -2283,30 +2352,33 @@ exports[`NavigationBar > should render in md 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -2384,25 +2456,26 @@ exports[`NavigationBar > should render in md 1`] = `
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -2428,23 +2501,26 @@ exports[`NavigationBar > should render in md 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -2479,30 +2555,33 @@ exports[`NavigationBar > should render in md 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -2537,30 +2616,33 @@ exports[`NavigationBar > should render in md 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2584,27 +2666,30 @@ exports[`NavigationBar > should render in md 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2692,37 +2777,37 @@ exports[`NavigationBar > should render in sm 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2732,34 +2817,34 @@ exports[`NavigationBar > should render in sm 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2769,28 +2854,29 @@ exports[`NavigationBar > should render in sm 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -2807,30 +2893,33 @@ exports[`NavigationBar > should render in sm 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -2908,25 +2997,26 @@ exports[`NavigationBar > should render in sm 1`] = `
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -2952,23 +3042,26 @@ exports[`NavigationBar > should render in sm 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -3003,30 +3096,33 @@ exports[`NavigationBar > should render in sm 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -3061,30 +3157,33 @@ exports[`NavigationBar > should render in sm 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -3108,27 +3207,30 @@ exports[`NavigationBar > should render in sm 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -3216,37 +3318,37 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3256,34 +3358,34 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3293,28 +3395,29 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -3331,30 +3434,33 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -3432,25 +3538,26 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -3476,23 +3583,26 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -3527,30 +3637,33 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -3585,30 +3698,33 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -3632,27 +3748,30 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -3740,37 +3859,37 @@ exports[`NavigationBar > should render in xs 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3780,34 +3899,34 @@ exports[`NavigationBar > should render in xs 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3817,28 +3936,29 @@ exports[`NavigationBar > should render in xs 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -3855,30 +3975,33 @@ exports[`NavigationBar > should render in xs 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -3956,25 +4079,26 @@ exports[`NavigationBar > should render in xs 1`] = `
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -4000,23 +4124,26 @@ exports[`NavigationBar > should render in xs 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -4051,30 +4178,33 @@ exports[`NavigationBar > should render in xs 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -4109,30 +4239,33 @@ exports[`NavigationBar > should render in xs 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -4156,27 +4289,30 @@ exports[`NavigationBar > should render in xs 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -4264,37 +4400,37 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4304,34 +4440,34 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4341,28 +4477,29 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -4379,30 +4516,33 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -4480,25 +4620,26 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -4524,23 +4665,26 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -4575,30 +4719,33 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -4633,30 +4780,33 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -4680,27 +4830,30 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -4788,37 +4941,37 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="received"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="received"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4828,34 +4981,34 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 21 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4865,28 +5018,29 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="sent"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="sent"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -4903,30 +5057,33 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1i1c5eg"
+          class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
         >
           <div
-            class="mx-auto css-15txs7d"
-            height="10"
-            width="10"
+            class="mx-auto"
           >
-            <svg
-              id="chevron-left-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-left-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -5004,25 +5161,26 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
               class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 15.5h18M1 10h18M1 4.5h18"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -5048,23 +5206,26 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        fill="none"
-                        viewBox="0 0 20 15"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          fill="none"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -5099,30 +5260,33 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="bell"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="bell"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -5157,30 +5321,33 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="received"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -5204,27 +5371,30 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="p-1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>

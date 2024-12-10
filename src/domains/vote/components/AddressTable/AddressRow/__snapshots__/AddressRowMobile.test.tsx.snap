@@ -49,33 +49,36 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -124,69 +127,74 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-danger-400 css-v0ob3f"
+                      class="text-theme-danger-400"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-cross"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-cross"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M7 13l6-6M13 13L7 7"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M7 13l6-6M13 13L7 7"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -262,33 +270,36 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -337,69 +348,74 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-danger-400 css-v0ob3f"
+                      class="text-theme-danger-400"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-cross"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-cross"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M7 13l6-6M13 13L7 7"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M7 13l6-6M13 13L7 7"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -473,33 +489,36 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -548,69 +567,74 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-primary-600 css-v0ob3f"
+                      class="text-theme-primary-600"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -685,33 +709,36 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -760,69 +787,74 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-primary-600 css-v0ob3f"
+                      class="text-theme-primary-600"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -897,33 +929,36 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -972,69 +1007,74 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-primary-600 css-v0ob3f"
+                      class="text-theme-primary-600"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -1108,33 +1148,36 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -1183,69 +1226,74 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-primary-600 css-v0ob3f"
+                      class="text-theme-primary-600"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -1319,33 +1367,36 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -1394,69 +1445,74 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-danger-400 css-v0ob3f"
+                      class="text-theme-danger-400"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-cross"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-cross"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M7 13l6-6M13 13L7 7"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M7 13l6-6M13 13L7 7"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -1521,33 +1577,36 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -1569,7 +1628,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                   <span
                     class="text-theme-secondary-400"
@@ -1577,11 +1636,10 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     N/A
                   </span>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <div
-                    class="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                 </div>
               </div>
@@ -1654,33 +1712,36 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -1729,69 +1790,74 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-danger-400 css-v0ob3f"
+                      class="text-theme-danger-400"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-cross"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-cross"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M7 13l6-6M13 13L7 7"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M7 13l6-6M13 13L7 7"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -1845,33 +1911,36 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -1893,7 +1962,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                   <span
                     class="text-theme-secondary-400"
@@ -1901,11 +1970,10 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     N/A
                   </span>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <div
-                    class="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                 </div>
               </div>
@@ -1979,33 +2047,36 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -2027,15 +2098,14 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                   class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                     data-testid="AddressRowMobile--nowallet"
                   />
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <div
-                    class="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                 </div>
               </div>
@@ -2108,33 +2178,36 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -2183,69 +2256,74 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-primary-600 css-v0ob3f"
+                      class="text-theme-primary-600"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -2319,33 +2397,36 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -2394,69 +2475,74 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-danger-400 css-v0ob3f"
+                      class="text-theme-danger-400"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="circle-cross"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-cross"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M7 13l6-6M13 13L7 7"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M7 13l6-6M13 13L7 7"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -2530,33 +2616,36 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -2605,70 +2694,75 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                           </div>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
                         >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 12px; width: 12px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                    type="vertical"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
-                      class="text-theme-warning-300 css-v0ob3f"
+                      class="text-theme-warning-300"
                       data-testid="StatusIcon__icon"
-                      height="16"
-                      width="16"
                     >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
+                        <svg
+                          id="clock"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            transform="translate(1.5 1.5)"
+                          >
+                            <circle
+                              cx="8.5"
+                              cy="8.5"
+                              r="9"
+                            />
+                            <path
+                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>

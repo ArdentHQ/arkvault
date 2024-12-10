@@ -3,15 +3,15 @@
 exports[`DotNavigation > should render 1`] = `
 <DocumentFragment>
   <ul
-    class="css-xa5o6q"
+    class="flex space-x-3"
     data-testid="DotNavigation"
   >
     <li
-      class="css-1gle3x2"
+      class="h-2 w-2 flex-1 cursor-pointer rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
       data-testid="DotNavigation-Step-0"
     />
     <li
-      class="css-180h4b4"
+      class="h-2 w-2 flex-1 cursor-pointer rounded-lg transition-colors duration-300 bg-theme-primary-600 hover:bg-theme-primary-500"
       data-testid="DotNavigation-Step-1"
     />
   </ul>

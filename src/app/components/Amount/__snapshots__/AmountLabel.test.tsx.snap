@@ -58,33 +58,36 @@ exports[`AmountLabel > should render compact with hint 1`] = `
         data-testid="AmountLabel__hint"
       >
         <div
-          class="dark:text-white css-15txs7d"
-          height="10"
-          width="10"
+          class="dark:text-white"
         >
-          <svg
-            id="hint-small"
-            viewBox="0 0 10 10"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+          <div
+            style="height: 10px; width: 10px;"
           >
-            <path
-              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-            <circle
-              cx="4.5"
-              cy="1"
-              fill="currentColor"
-              r="1"
-            />
-          </svg>
+            <svg
+              id="hint-small"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <circle
+                cx="4.5"
+                cy="1"
+                fill="currentColor"
+                r="1"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <span
@@ -135,33 +138,36 @@ exports[`AmountLabel > should render with hint 1`] = `
         data-testid="AmountLabel__hint"
       >
         <div
-          class="dark:text-white css-15txs7d"
-          height="10"
-          width="10"
+          class="dark:text-white"
         >
-          <svg
-            id="hint-small"
-            viewBox="0 0 10 10"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+          <div
+            style="height: 10px; width: 10px;"
           >
-            <path
-              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-            <circle
-              cx="4.5"
-              cy="1"
-              fill="currentColor"
-              r="1"
-            />
-          </svg>
+            <svg
+              id="hint-small"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <circle
+                cx="4.5"
+                cy="1"
+                fill="currentColor"
+                r="1"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <span

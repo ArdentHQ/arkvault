@@ -47,33 +47,36 @@ exports[`WalletHeader > should handle locked balance 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
             <button
@@ -83,27 +86,30 @@ exports[`WalletHeader > should handle locked balance 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy-key"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="copy-key"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -153,31 +159,32 @@ exports[`WalletHeader > should handle locked balance 1`] = `
               >
                 10 DARK
               </span>
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="lock"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="lock"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -193,24 +200,27 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -219,25 +229,28 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -262,31 +275,32 @@ exports[`WalletHeader > should handle locked balance 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="lock"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="lock"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -306,38 +320,39 @@ exports[`WalletHeader > should handle locked balance 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -376,24 +391,25 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
               class="inline-block p-1 text-theme-secondary-text"
               data-testid="WalletIcon__Ledger"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -420,33 +436,36 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
             <button
@@ -456,27 +475,30 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy-key"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="copy-key"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -526,31 +548,32 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
               >
                 10 DARK
               </span>
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="lock"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="lock"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -566,24 +589,27 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -592,25 +618,28 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -635,31 +664,32 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="lock"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="lock"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </button>
@@ -679,38 +709,39 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -768,33 +799,36 @@ exports[`WalletHeader > should render 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
             <button
@@ -804,27 +838,30 @@ exports[`WalletHeader > should render 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy-key"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="copy-key"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -868,24 +905,27 @@ exports[`WalletHeader > should render 1`] = `
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -894,25 +934,28 @@ exports[`WalletHeader > should render 1`] = `
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -945,38 +988,39 @@ exports[`WalletHeader > should render 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -1034,33 +1078,36 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
             <button
@@ -1070,27 +1117,30 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy-key"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="copy-key"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -1140,24 +1190,27 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -1166,25 +1219,28 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -1217,38 +1273,39 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -1287,24 +1344,25 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
               class="inline-block p-1 text-theme-secondary-text"
               data-testid="WalletIcon__Ledger"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1331,33 +1389,36 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
             <button
@@ -1367,27 +1428,30 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy-key"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="copy-key"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -1431,24 +1495,27 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -1457,25 +1524,28 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -1509,38 +1579,39 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -1598,33 +1669,36 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
             <button
@@ -1634,27 +1708,30 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy-key"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="copy-key"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -1679,28 +1756,29 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           <span
             class="ml-2 inline-flex items-center text-theme-danger-500"
           >
-            <div
-              class="css-15txs7d"
-              height="10"
-              width="10"
-            >
-              <svg
-                id="chevron-down-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-down-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
             <span
               class="ml-1"
@@ -1730,24 +1808,27 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -1756,25 +1837,28 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -1807,38 +1891,39 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -1896,33 +1981,36 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
             <button
@@ -1932,27 +2020,30 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy-key"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="copy-key"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -1977,28 +2068,29 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           <span
             class="ml-2 inline-flex items-center text-theme-success-600"
           >
-            <div
-              class="css-15txs7d"
-              height="10"
-              width="10"
-            >
-              <svg
-                id="chevron-up-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-up-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
             <span
               class="ml-1"
@@ -2028,24 +2120,27 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -2054,25 +2149,28 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -2105,38 +2203,39 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -2175,60 +2274,62 @@ exports[`WalletHeader > should show modifiers 1`] = `
               class="inline-block p-1 text-theme-secondary-text"
               data-testid="WalletIcon__Ledger"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <div
               class="inline-block p-1 text-theme-secondary-text"
               data-testid="WalletIcon__Multisignature"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="multi-signature"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="multi-signature"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
-                    />
-                    <g>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
                       <path
-                        d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                        d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
                       />
+                      <g>
+                        <path
+                          d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                        />
+                      </g>
                     </g>
-                  </g>
-                </svg>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -2255,33 +2356,36 @@ exports[`WalletHeader > should show modifiers 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
             <button
@@ -2291,27 +2395,30 @@ exports[`WalletHeader > should show modifiers 1`] = `
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy-key"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="copy-key"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -2355,24 +2462,27 @@ exports[`WalletHeader > should show modifiers 1`] = `
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -2381,25 +2491,28 @@ exports[`WalletHeader > should show modifiers 1`] = `
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -2432,38 +2545,39 @@ exports[`WalletHeader > should show modifiers 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -2521,33 +2635,36 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
               type="button"
             >
               <div
-                class="hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -2591,24 +2708,27 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           type="button"
         >
           <div
-            class="hover:text-theme-secondary-200 css-v0ob3f"
-            height="16"
+            class="hover:text-theme-secondary-200"
             style="animation-direction: reverse;"
-            width="16"
           >
-            <svg
-              id="arrow-rotate-left"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="arrow-rotate-left"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </button>
         <button
@@ -2617,25 +2737,28 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           type="button"
         >
           <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
-            height="16"
-            width="16"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
           >
-            <svg
-              id="star-filled"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <path
-                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-              />
-            </svg>
+              <svg
+                id="star-filled"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                />
+              </svg>
+            </div>
           </div>
         </button>
       </div>
@@ -2668,38 +2791,39 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <circle
-                    cx="10.002"
-                    cy="2.99609"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 2.99609)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="9.99805"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 9.99805)"
-                  />
-                  <circle
-                    cx="10.002"
-                    cy="17"
-                    fill="currentColor"
-                    r="2"
-                    transform="rotate(90 10.002 17)"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>

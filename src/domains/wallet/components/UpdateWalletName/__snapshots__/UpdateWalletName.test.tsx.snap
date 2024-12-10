@@ -25,31 +25,32 @@ exports[`UpdateWalletName > should render 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -75,7 +76,7 @@ exports[`UpdateWalletName > should render 1`] = `
               data-testid="Form"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -107,7 +108,7 @@ exports[`UpdateWalletName > should render 1`] = `
                 </div>
               </fieldset>
               <div
-                class="css-j6ajdm"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -167,31 +168,32 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -217,7 +219,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
               data-testid="Form"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-s0h7ue"
+                class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -254,41 +256,44 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                         data-testid="Input__error"
                       >
                         <div
-                          class="text-theme-danger-500 css-1i4b0eq"
-                          height="20"
-                          width="20"
+                          class="text-theme-danger-500"
                         >
-                          <svg
-                            id="circle-exclamation-mark"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
+                            <svg
+                              id="circle-exclamation-mark"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="9"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 10.5v-5"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 14h0"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                       </span>
                     </div>
@@ -296,7 +301,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                 </div>
               </fieldset>
               <div
-                class="css-j6ajdm"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -356,31 +361,32 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -406,7 +412,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
               data-testid="Form"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-s0h7ue"
+                class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -443,41 +449,44 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                         data-testid="Input__error"
                       >
                         <div
-                          class="text-theme-danger-500 css-1i4b0eq"
-                          height="20"
-                          width="20"
+                          class="text-theme-danger-500"
                         >
-                          <svg
-                            id="circle-exclamation-mark"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
+                            <svg
+                              id="circle-exclamation-mark"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="9"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 10.5v-5"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 14h0"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                       </span>
                     </div>
@@ -485,7 +494,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                 </div>
               </fieldset>
               <div
-                class="css-j6ajdm"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -545,31 +554,32 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -595,7 +605,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
               data-testid="Form"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-s0h7ue"
+                class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -632,41 +642,44 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                         data-testid="Input__error"
                       >
                         <div
-                          class="text-theme-danger-500 css-1i4b0eq"
-                          height="20"
-                          width="20"
+                          class="text-theme-danger-500"
                         >
-                          <svg
-                            id="circle-exclamation-mark"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
+                            <svg
+                              id="circle-exclamation-mark"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="9"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 10.5v-5"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 14h0"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                       </span>
                     </div>
@@ -674,7 +687,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                 </div>
               </fieldset>
               <div
-                class="css-j6ajdm"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -734,31 +747,32 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -784,7 +798,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
               data-testid="Form"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-s0h7ue"
+                class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -821,41 +835,44 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                         data-testid="Input__error"
                       >
                         <div
-                          class="text-theme-danger-500 css-1i4b0eq"
-                          height="20"
-                          width="20"
+                          class="text-theme-danger-500"
                         >
-                          <svg
-                            id="circle-exclamation-mark"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
+                            <svg
+                              id="circle-exclamation-mark"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="9"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 10.5v-5"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 14h0"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                       </span>
                     </div>
@@ -863,7 +880,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                 </div>
               </fieldset>
               <div
-                class="css-j6ajdm"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -923,31 +940,32 @@ exports[`UpdateWalletName > should show error message when name consists only of
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -973,7 +991,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
               data-testid="Form"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-s0h7ue"
+                class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1010,41 +1028,44 @@ exports[`UpdateWalletName > should show error message when name consists only of
                         data-testid="Input__error"
                       >
                         <div
-                          class="text-theme-danger-500 css-1i4b0eq"
-                          height="20"
-                          width="20"
+                          class="text-theme-danger-500"
                         >
-                          <svg
-                            id="circle-exclamation-mark"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
+                            <svg
+                              id="circle-exclamation-mark"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="9"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 10.5v-5"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 14h0"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                       </span>
                     </div>
@@ -1052,7 +1073,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                 </div>
               </fieldset>
               <div
-                class="css-j6ajdm"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1112,31 +1133,32 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -1162,7 +1184,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
               data-testid="Form"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-s0h7ue"
+                class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1199,41 +1221,44 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                         data-testid="Input__error"
                       >
                         <div
-                          class="text-theme-danger-500 css-1i4b0eq"
-                          height="20"
-                          width="20"
+                          class="text-theme-danger-500"
                         >
-                          <svg
-                            id="circle-exclamation-mark"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
+                            <svg
+                              id="circle-exclamation-mark"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="9"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 10.5v-5"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                />
+                                <path
+                                  d="M10 14h0"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                       </span>
                     </div>
@@ -1241,7 +1266,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                 </div>
               </fieldset>
               <div
-                class="css-j6ajdm"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

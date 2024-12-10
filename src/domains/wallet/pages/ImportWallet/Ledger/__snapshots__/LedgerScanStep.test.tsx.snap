@@ -136,31 +136,32 @@ exports[`LedgerScanStep > should render ledger table in scanning mode 1`] = `
       <span
         class="invisible flex items-center space-x-2"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="plus"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+            <svg
+              id="plus"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <path
-                d="M1 10h18M10 1v18"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span
           class="pl-1"

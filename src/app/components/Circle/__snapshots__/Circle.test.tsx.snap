@@ -3,7 +3,7 @@
 exports[`Circle > should render 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-1oa5zbt"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-10 w-10 px-4 py-2 ring-6 ring-theme-background duration-100"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Circle > should render 1`] = `
 exports[`Circle > should render as avatar 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-18vj24t"
+    class="inline-flex items-center justify-center rounded-full align-middle transition-all border-0 bg-theme-info-200 h-10 w-10 px-4 py-2 ring-6 ring-theme-background duration-100"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`Circle > should render as avatar 1`] = `
 exports[`Circle > should render extra-large 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-1qtfeue"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-16 w-16 px-2 py-1 text-lg ring-6 ring-theme-background duration-100"
   />
 </div>
 `;
@@ -27,7 +27,7 @@ exports[`Circle > should render extra-large 1`] = `
 exports[`Circle > should render large 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-1nqcsx"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 ring-theme-background duration-100"
   />
 </div>
 `;
@@ -35,7 +35,7 @@ exports[`Circle > should render large 1`] = `
 exports[`Circle > should render small 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-y4ij4"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-6 ring-theme-background duration-100"
   />
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`Circle > should render small 1`] = `
 exports[`Circle > should render with content 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-y4ij4"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-6 ring-theme-background duration-100"
   >
     <div
       data-testid="circle__content"
@@ -55,7 +55,7 @@ exports[`Circle > should render with content 1`] = `
 exports[`Circle > should render with no shadow 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-cm9d5u"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 ring-theme-background duration-100"
   />
 </div>
 `;
