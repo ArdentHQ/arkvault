@@ -6,7 +6,7 @@ import { FormField, FormHelperText, FormLabel } from "@/app/components/Form";
 import { InputCurrency } from "@/app/components/Input";
 import { Networks } from "@ardenthq/sdk";
 
-export const ReceiveFundsForm = ({network}: {network: Networks.Network}) => {
+export const ReceiveFundsForm = ({ network }: { network: Networks.Network }) => {
 	const { t } = useTranslation();
 
 	const form = useFormContext();
