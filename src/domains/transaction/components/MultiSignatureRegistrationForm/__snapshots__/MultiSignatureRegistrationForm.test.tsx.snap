@@ -843,7 +843,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
 exports[`MultiSignature Registration Form > should render transaction details 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-1snru0x"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t pt-4 sm:pt-6 no-ligatures"
     data-testid="TransactionFee"
   >
     <div
