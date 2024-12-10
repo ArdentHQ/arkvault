@@ -616,7 +616,7 @@ exports[`Exchange > should render empty 1`] = `
             class="w-full"
           >
             <div
-              class="tab-list inline-flex items-stretch justify-start"
+              class="tab-list items-stretch justify-start flex h-[3.25rem] w-full flex-row gap-6"
             >
               <button
                 aria-selected="true"
@@ -1291,7 +1291,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             class="w-full"
           >
             <div
-              class="tab-list inline-flex items-stretch justify-start"
+              class="tab-list items-stretch justify-start flex h-[3.25rem] w-full flex-row gap-6"
             >
               <button
                 aria-selected="true"
