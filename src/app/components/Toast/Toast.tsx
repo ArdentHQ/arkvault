@@ -1,18 +1,22 @@
 import React from "react";
-import { styled } from "twin.macro";
 
 import { getBodyStyles, getIconStyles } from "./Toast.styles";
 import { Icon } from "@/app/components/Icon";
-
 import { Color } from "@/types";
+import { twMerge } from "tailwind-merge";
 
 interface ToastProperties {
 	children: React.ReactNode;
 	variant?: Color;
 }
 
-const ToastIconWrapper = styled.div<ToastProperties>(getIconStyles);
-const ToastBody = styled.div<ToastProperties>(getBodyStyles);
+const ToastIconWrapper = ({ variant, ...props }: ToastProperties) => {
+	return <div {...props} className={twMerge(getIconStyles({variant}))} />;
+}
+
+const ToastBody = ({ variant, ...props }: ToastProperties) => {
+	return <div {...props} className={twMerge(getBodyStyles({variant}))} />;
+}
 
 const ToastIcon = ({ variant }: { variant: string }) => {
 	const iconVariant: Record<Color, string> = {
