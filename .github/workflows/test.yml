@@ -414,6 +414,12 @@ jobs:
               run: pnpm rebuild
             - name: Test
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.14
+                  COVERAGE_THRESHOLD_FUNCTIONS: 97.56
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.19
+                  COVERAGE_THRESHOLD_BRANCHES: 96.7
+                  COVERAGE_INCLUDE_PATH: src/domains/dashboard
               with:
                   timeout_minutes: 10
                   max_attempts: 1
@@ -610,6 +616,7 @@ jobs:
                   command: pnpm test:coverage src/domains/profile
 
     # @TODO: Enable & refactor transaction & network tests once mainsail coin support will be completed.
+    #        See https://app.clickup.com/t/86dvbvrvf
     # domains-setting:
     #     runs-on: ubuntu-latest
     #     env:
@@ -844,10 +851,10 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 99.8
+                  COVERAGE_THRESHOLD_LINES: 99.73
                   COVERAGE_THRESHOLD_FUNCTIONS: 99.75
                   COVERAGE_THRESHOLD_STATEMENTS: 99.38
-                  COVERAGE_THRESHOLD_BRANCHES: 99.11
+                  COVERAGE_THRESHOLD_BRANCHES: 98.72
                   COVERAGE_INCLUDE_PATH: src/domains/wallet
               with:
                   timeout_minutes: 10

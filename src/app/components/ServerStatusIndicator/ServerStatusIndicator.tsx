@@ -50,8 +50,8 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 					</NavigationButtonWrapper>
 				}
 			>
-				<>
-					<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:w-128">
+				<div className="w-full sm:w-128">
+					<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dark:bg-black">
 						<div className="text-sm font-semibold text-theme-secondary-500">
 							{t("COMMON.NETWORK_STATUS")}
 						</div>
@@ -65,7 +65,7 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 						</div>
 						<div>{status.label}</div>
 					</div>
-				</>
+				</div>
 			</Dropdown>
 		</div>
 	);

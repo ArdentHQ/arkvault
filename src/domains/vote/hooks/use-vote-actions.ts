@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useHistory } from "react-router-dom";
 
 import { generatePath } from "react-router";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { ProfilePaths } from "@/router/paths";
 import { assertString } from "@/utils/assertions";
@@ -24,7 +24,7 @@ export const useVoteActions = ({
 }: VoteActionsProperties) => {
 	const history = useHistory();
 
-	const navigateToSendVote = (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => {
+	const navigateToSendVote = (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => {
 		const walletId = hasWalletId
 			? wallet.id()
 			: (profile.wallets().findByAddressWithNetwork(selectedAddress, selectedNetwork)?.id() as string);

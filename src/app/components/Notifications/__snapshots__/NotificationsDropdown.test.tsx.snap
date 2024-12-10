@@ -243,7 +243,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -358,71 +358,75 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               To
                             </div>
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                              class="flex w-full"
                             >
-                              <span
-                                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="no-ligatures css-9nx3be"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 2
-                                </span>
-                              </span>
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                  class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                                  data-testid="Address__alias"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  <span
+                                    class="no-ligatures css-9nx3be"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    ARK Wallet 2
+                                  </span>
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
-                              <button
-                                class="ring-focus relative focus:outline-none"
-                                data-ring-focus-margin="-m-1"
-                                data-testid="clipboard-icon__wrapper"
-                                type="button"
-                              >
                                 <div
-                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                >
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
+                                <button
+                                  class="ring-focus relative focus:outline-none"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
                                 >
                                   <div
-                                    style="height: 16px; width: 16px;"
+                                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                   >
-                                    <svg
-                                      id="copy"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
                                       >
-                                        <path
-                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                        />
-                                        <path
-                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                        />
-                                      </g>
-                                    </svg>
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
                                   </div>
-                                </div>
-                              </button>
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -447,7 +451,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="TransactionType"
@@ -511,7 +515,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -635,7 +639,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -780,53 +784,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-full sm:flex-row"
-                    >
-                      <div
-                        data-testid="DetailWrapper"
-                      >
-                        <div
-                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-                          data-testid="DetailLabel"
-                        >
-                          <div
-                            class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
-                            data-testid="DetailLabelText"
-                          >
-                            Memo (SmartBridge)
-                          </div>
-                        </div>
-                        <div
-                          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
-                        >
-                          <p
-                            class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
-                          >
-                            test
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="group flex"
-                  >
-                    <div
-                      class="hidden sm:ml-3 sm:flex"
-                    >
-                      <div
-                        class="min-w-9 flex-row pr-3"
-                      >
-                        <div
-                          class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
-                        />
-                        <div
-                          class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="w-full sm:flex-row"
+                      class="w-full min-w-0 sm:flex-row"
                     >
                       <div
                         class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
@@ -901,7 +859,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
                             >
                               <span>
-                                398 Confirmations
+                                1 Confirmations
                                  
                               </span>
                             </p>

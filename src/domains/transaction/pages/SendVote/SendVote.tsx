@@ -55,7 +55,7 @@ export const SendVote = () => {
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 	const wallet = useActiveWalletWhenNeeded(false);
 
-	const { votes, unvotes, voteDelegates, unvoteDelegates, setUnvotes, isLoading } = useDelegatesFromURL({
+	const { votes, unvotes, voteValidators, unvoteValidators, setUnvotes, isLoading } = useDelegatesFromURL({
 		env,
 		network: activeNetwork,
 		profile: activeProfile,
@@ -132,8 +132,7 @@ export const SendVote = () => {
 				return;
 			}
 
-			const isFullyRestoredAndSynced =
-				senderWallet?.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
+			const isFullyRestoredAndSynced = senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
 
 			if (!isFullyRestoredAndSynced) {
 				syncProfileWallets(true);
@@ -185,8 +184,8 @@ export const SendVote = () => {
 				return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 			}
 
-			appendParameters(parameters, "unvote", unvoteDelegates);
-			appendParameters(parameters, "vote", voteDelegates);
+			appendParameters(parameters, "unvote", unvoteValidators);
+			appendParameters(parameters, "vote", voteValidators);
 
 			return history.push({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,
@@ -267,7 +266,6 @@ export const SendVote = () => {
 	const submitForm = async () => {
 		clearErrors("mnemonic");
 		const {
-			fee,
 			mnemonic,
 			network,
 			senderAddress,
@@ -279,7 +277,7 @@ export const SendVote = () => {
 			secondSecret,
 		} = getValues();
 
-		const abortSignal = abortReference.current?.signal;
+		const abortSignal = abortReference.current.signal;
 
 		assertWallet(activeWallet);
 
@@ -295,7 +293,8 @@ export const SendVote = () => {
 			});
 
 			const voteTransactionInput: Services.TransactionInput = {
-				fee: +fee,
+				// @TODO: Remove hardcoded fee once fees are implemented for evm.
+				fee: 5,
 				signatory,
 			};
 
@@ -312,11 +311,11 @@ export const SendVote = () => {
 							data: {
 								unvotes: unvotes.map((unvote) => ({
 									amount: unvote.amount,
-									id: unvote.wallet?.governanceIdentifier(),
+									id: unvote.wallet?.address(),
 								})),
 								votes: votes.map((vote) => ({
 									amount: vote.amount,
-									id: vote.wallet?.governanceIdentifier(),
+									id: vote.wallet?.address(),
 								})),
 							},
 						},
@@ -347,7 +346,7 @@ export const SendVote = () => {
 							data: {
 								unvotes: unvotes.map((unvote) => ({
 									amount: unvote.amount,
-									id: unvote.wallet?.governanceIdentifier(),
+									id: unvote.wallet?.address(),
 								})),
 							},
 						},
@@ -372,7 +371,7 @@ export const SendVote = () => {
 							data: {
 								votes: votes.map((vote) => ({
 									amount: vote.amount,
-									id: vote.wallet?.governanceIdentifier(),
+									id: vote.wallet?.address(),
 								})),
 							},
 						},
@@ -404,13 +403,13 @@ export const SendVote = () => {
 							? {
 									unvotes: unvotes.map((unvote) => ({
 										amount: unvote.amount,
-										id: unvote.wallet?.governanceIdentifier(),
+										id: unvote.wallet?.address(),
 									})),
 								}
 							: {
 									votes: votes.map((vote) => ({
 										amount: vote.amount,
-										id: vote.wallet?.governanceIdentifier(),
+										id: vote.wallet?.address(),
 									})),
 								},
 					},

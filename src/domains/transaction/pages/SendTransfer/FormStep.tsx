@@ -1,12 +1,11 @@
 import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { InputCounter } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
@@ -47,7 +46,7 @@ export const FormStep = ({
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
 	const { getValues, setValue, watch } = useFormContext();
-	const { recipients, memo = "" } = getValues();
+	const { recipients } = getValues();
 	const { network, senderAddress } = watch();
 
 	const senderWallet = useMemo(() => {
@@ -68,7 +67,6 @@ export const FormStep = ({
 		const updateFeeTransactionData = async () => {
 			const transferData = await buildTransferData({
 				coin: profile.coins().get(network.coin(), network.id()),
-				memo,
 				recipients,
 			});
 
@@ -79,7 +77,7 @@ export const FormStep = ({
 		};
 
 		updateFeeTransactionData();
-	}, [network, memo, recipients, profile, isMounted]);
+	}, [network, recipients, profile, isMounted]);
 
 	useEffect(() => {
 		if (!network) {
@@ -208,22 +206,6 @@ export const FormStep = ({
 						wallet={senderWallet}
 					/>
 				</div>
-
-				{network?.usesMemo() && (
-					<FormField name="memo" className="relative">
-						<FormLabel label={t("COMMON.MEMO")} optional />
-						<InputCounter
-							data-testid="Input__memo"
-							type="text"
-							placeholder=" "
-							maxLengthLabel="255"
-							value={memo}
-							onChange={(event: ChangeEvent<HTMLInputElement>) =>
-								setValue("memo", event.target.value, { shouldDirty: true, shouldValidate: true })
-							}
-						/>
-					</FormField>
-				)}
 
 				{showFeeInput && (
 					<FormField name="fee">
