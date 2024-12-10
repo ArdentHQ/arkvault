@@ -57,7 +57,7 @@ exports[`WalletDetailAddress > should render 1`] = `
           class="flex items-center sm:hidden"
         >
           <div
-            class="shrink-0 css-1yk316i"
+            class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -75,7 +75,7 @@ exports[`WalletDetailAddress > should render 1`] = `
           class="hidden sm:flex sm:items-center"
         >
           <div
-            class="shrink-0 css-1n9jllj"
+            class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
             data-testid="Avatar"
           >
             <div

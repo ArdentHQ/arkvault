@@ -3,7 +3,7 @@
 exports[`Button > should hide the toggle button if no onClick method 1`] = `
 <div>
   <div
-    class="css-fvpuky"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
   >
     <div
       class="select-none md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -28,7 +28,7 @@ exports[`Button > should hide the toggle button if no onClick method 1`] = `
 exports[`Button > should render 1`] = `
 <div>
   <div
-    class="css-fvpuky"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
   >
     <div
       class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -40,10 +40,10 @@ exports[`Button > should render 1`] = `
         Header
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700 transition-all duration-100"
       >
         <div
-          class="css-tz6w2"
+          class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
           data-testid="Accordion__toggle"
         >
           <div
@@ -85,7 +85,7 @@ exports[`Button > should render 1`] = `
 exports[`Button > should render collapsed 1`] = `
 <div>
   <div
-    class="css-13o3tsw"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
   >
     <div
       class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -97,10 +97,10 @@ exports[`Button > should render collapsed 1`] = `
         Header
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700 transition-all duration-100"
       >
         <div
-          class="css-tz6w2"
+          class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
           data-testid="Accordion__toggle"
         >
           <div
@@ -142,7 +142,7 @@ exports[`Button > should render collapsed 1`] = `
 exports[`Button > should render expanded 1`] = `
 <div>
   <div
-    class="css-fvpuky"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
   >
     <div
       class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
@@ -154,10 +154,10 @@ exports[`Button > should render expanded 1`] = `
         Header
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700"
       >
         <div
-          class="css-tz6w2"
+          class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
           data-testid="Accordion__toggle"
         >
           <div
@@ -199,7 +199,7 @@ exports[`Button > should render expanded 1`] = `
 exports[`Button > should render inactive 1`] = `
 <div>
   <div
-    class="css-js68r5"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-secondary-300 dark:ring-theme-secondary-800 md:ring-1 transition-all"
   >
     <div
       class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -211,10 +211,10 @@ exports[`Button > should render inactive 1`] = `
         Header
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700 transition-all duration-100"
       >
         <div
-          class="css-tz6w2"
+          class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
           data-testid="Accordion__toggle"
         >
           <div
@@ -298,7 +298,7 @@ exports[`Button > should render skeleton wrapper 1`] = `
 exports[`Button > should toggle the accordion on click 1`] = `
 <div>
   <div
-    class="css-fvpuky"
+    class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
   >
     <div
       class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -310,10 +310,10 @@ exports[`Button > should toggle the accordion on click 1`] = `
         Header
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700 transition-all duration-100"
       >
         <div
-          class="css-tz6w2"
+          class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
           data-testid="Accordion__toggle"
         >
           <div

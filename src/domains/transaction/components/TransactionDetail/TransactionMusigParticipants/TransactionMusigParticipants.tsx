@@ -24,7 +24,7 @@ export const TransactionMusigParticipants = ({
 	const { participants } = useMusigParticipants({ network, profile, publicKeys });
 
 	const renderRow = (wallet: Contracts.IReadWriteWallet) => (
-		<TableRow className="group relative max-md:!border-transparent" key={wallet.address()}>
+		<TableRow className="max-md:!border-transparent group relative" key={wallet.address()}>
 			<TableCell
 				variant="start"
 				key={wallet.address()}

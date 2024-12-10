@@ -4,7 +4,7 @@ exports[`Card > should handle click 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="css-31qpo4"
+      class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800"
       data-testid="Card"
       type="button"
     >
@@ -21,7 +21,7 @@ exports[`Card > should render 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="css-1h3vw5n"
+      class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -38,7 +38,7 @@ exports[`Card > should render with custom options 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="css-31qpo4"
+      class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800"
       data-testid="Card"
       type="button"
     >

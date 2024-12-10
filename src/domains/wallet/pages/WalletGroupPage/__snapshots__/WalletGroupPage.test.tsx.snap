@@ -532,7 +532,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -574,7 +574,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                 class="flex flex-grow flex-row items-center"
               >
                 <div
-                  class="css-ziskls"
+                  class="relative flex h-11 flex-shrink-0 basis-11 items-center justify-center rounded-xl bg-clip-padding bg-theme-primary-100 text-theme-navy-600 transition-all duration-100"
                 >
                   <div
                     aria-label="ARK Devnet"
@@ -715,7 +715,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
+                  class="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700"
                 >
                   <span
                     class="hidden"

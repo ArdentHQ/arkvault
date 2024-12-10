@@ -106,7 +106,7 @@ exports[`ResetProfile > should render 1`] = `
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-rzhg83"
+                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
                 <div
                   class="css-v0ob3f"
@@ -150,7 +150,7 @@ exports[`ResetProfile > should render 1`] = `
                 </span>
               </div>
               <div
-                class="css-trjt6n"
+                class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
               >
                 By performing this action, all of your Profile settings will be restored to default. This won't delete your wallets. This action cannot be undone. Do you want to reset your settings?
               </div>

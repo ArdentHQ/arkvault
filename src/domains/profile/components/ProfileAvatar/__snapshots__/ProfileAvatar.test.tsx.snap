@@ -3,7 +3,7 @@
 exports[`Avatar > should render with profile image 1`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-1px82g5"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -24,7 +24,7 @@ exports[`Avatar > should render with profile image 1`] = `
 exports[`Avatar > should render with svg 1`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-1px82g5"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
     data-testid="Avatar"
   >
     <div

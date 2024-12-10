@@ -185,7 +185,7 @@ exports[`Button > should render loading with icon 1`] = `
           class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
         >
           <div
-            class="css-1nn240v"
+            class="h-6 w-6 animate-spin rounded-full border-4 border-theme-primary-700 border-l-white"
           />
         </div>
       </div>
@@ -338,7 +338,7 @@ exports[`Button > should render with loading state enabled 1`] = `
           class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
         >
           <div
-            class="css-1nn240v"
+            class="h-6 w-6 animate-spin rounded-full border-4 border-theme-primary-700 border-l-white"
           />
         </div>
       </div>
