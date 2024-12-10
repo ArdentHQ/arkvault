@@ -328,18 +328,18 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
             data-testid="ImportWallet__encryption"
           >
             <label
-              class="css-xklln0"
+              class="flex items-center cursor-pointer h-4"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 data-testid="ImportWallet__encryption-toggle"
                 type="checkbox"
               />
               <div
-                class="css-d8rk4r toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
               >
                 <span
-                  class="css-st84t0"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                 />
               </div>
             </label>
@@ -684,18 +684,18 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
             data-testid="ImportWallet__encryption"
           >
             <label
-              class="css-xklln0"
+              class="flex items-center cursor-pointer h-4"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 data-testid="ImportWallet__encryption-toggle"
                 type="checkbox"
               />
               <div
-                class="css-d8rk4r toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
               >
                 <span
-                  class="css-st84t0"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                 />
               </div>
             </label>
@@ -1040,18 +1040,18 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
             data-testid="ImportWallet__encryption"
           >
             <label
-              class="css-xklln0"
+              class="flex items-center cursor-pointer h-4"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 data-testid="ImportWallet__encryption-toggle"
                 type="checkbox"
               />
               <div
-                class="css-d8rk4r toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
               >
                 <span
-                  class="css-st84t0"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                 />
               </div>
             </label>
@@ -1396,18 +1396,18 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
             data-testid="ImportWallet__encryption"
           >
             <label
-              class="css-xklln0"
+              class="flex items-center cursor-pointer h-4"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 data-testid="ImportWallet__encryption-toggle"
                 type="checkbox"
               />
               <div
-                class="css-d8rk4r toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
               >
                 <span
-                  class="css-st84t0"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                 />
               </div>
             </label>
@@ -1783,21 +1783,19 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
             data-testid="ImportWallet__encryption"
           >
             <label
-              class="css-irspe1"
-              disabled=""
+              class="flex items-center cursor-not-allowed h-4"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 data-testid="ImportWallet__encryption-toggle"
                 disabled=""
                 type="checkbox"
               />
               <div
-                class="css-d8rk4r toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
               >
                 <span
-                  class="css-1nye29f"
-                  disabled=""
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 h-4 w-4"
                 />
               </div>
             </label>
@@ -3055,21 +3053,19 @@ exports[`ImportWallet > should render method step 1`] = `
             data-testid="ImportWallet__encryption"
           >
             <label
-              class="css-irspe1"
-              disabled=""
+              class="flex items-center cursor-not-allowed h-4"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 data-testid="ImportWallet__encryption-toggle"
                 disabled=""
                 type="checkbox"
               />
               <div
-                class="css-d8rk4r toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
               >
                 <span
-                  class="css-1nye29f"
-                  disabled=""
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 h-4 w-4"
                 />
               </div>
             </label>

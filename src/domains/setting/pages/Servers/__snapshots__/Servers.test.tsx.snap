@@ -994,20 +994,20 @@ exports[`Servers Settings > should render servers settings 1`] = `
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
                                   checked=""
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -2346,19 +2346,19 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -2965,18 +2965,18 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -3271,18 +3271,18 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -3547,18 +3547,18 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -4689,19 +4689,19 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -5214,18 +5214,18 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -5488,18 +5488,18 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -5732,18 +5732,18 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -6874,19 +6874,19 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -7160,7 +7160,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -7229,18 +7229,18 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -7516,7 +7516,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -7613,18 +7613,18 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -7918,7 +7918,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -7987,18 +7987,18 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -9362,19 +9362,19 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -9981,18 +9981,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -10287,18 +10287,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -10563,18 +10563,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -11705,19 +11705,19 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -12053,7 +12053,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -12154,18 +12154,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -12478,7 +12478,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -12607,18 +12607,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -12949,7 +12949,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -13050,18 +13050,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -14462,19 +14462,19 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -14810,7 +14810,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -14911,18 +14911,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -14973,7 +14973,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -15102,18 +15102,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -15444,7 +15444,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -15545,18 +15545,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -16957,19 +16957,19 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -17567,18 +17567,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -17870,18 +17870,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -18143,18 +18143,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                                         >
                                           <label
-                                            class="css-xklln0"
+                                            class="flex items-center cursor-pointer h-4"
                                           >
                                             <input
-                                              class="css-1r71f0z toggle-input"
+                                              class="toggle-input sr-only"
                                               data-testid="CustomPeers-toggle"
                                               type="checkbox"
                                             />
                                             <div
-                                              class="css-d8rk4r toggle-handle"
+                                              class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="css-st84t0"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                               />
                                             </div>
                                           </label>
@@ -19285,19 +19285,19 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -19627,7 +19627,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -19725,18 +19725,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -19787,7 +19787,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -19913,18 +19913,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -19975,7 +19975,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -20073,18 +20073,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -21205,19 +21205,19 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                             </span>
                             <span>
                               <label
-                                class="css-xklln0"
+                                class="flex items-center cursor-pointer h-4"
                               >
                                 <input
-                                  class="css-1r71f0z toggle-input"
+                                  class="toggle-input sr-only"
                                   data-testid="Plugin-settings__servers--fallback-to-default-nodes"
                                   name="fallbackToDefaultNodes"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-d8rk4r toggle-handle"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="css-st84t0"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                   />
                                 </div>
                               </label>
@@ -21547,7 +21547,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -21645,18 +21645,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -21966,7 +21966,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -22092,18 +22092,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
@@ -22154,7 +22154,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                               class="-mx-8"
                             >
                               <div
-                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+                                class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800"
                                 data-testid="CustomPeers-network-item--mobile"
                               >
                                 <div
@@ -22252,18 +22252,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                                       />
                                       <label
-                                        class="css-xklln0"
+                                        class="flex items-center cursor-pointer h-4"
                                       >
                                         <input
-                                          class="css-1r71f0z toggle-input"
+                                          class="toggle-input sr-only"
                                           data-testid="CustomPeers-toggle"
                                           type="checkbox"
                                         />
                                         <div
-                                          class="css-d8rk4r toggle-handle"
+                                          class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="css-st84t0"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                                           />
                                         </div>
                                       </label>
