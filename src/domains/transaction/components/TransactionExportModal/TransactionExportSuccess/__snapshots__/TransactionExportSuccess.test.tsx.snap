@@ -48,52 +48,53 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1o2lvkz"
+        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="circle-check-mark"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+            <svg
+              id="circle-check-mark"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <circle
-                cx="10"
-                cy="10"
-                r="9"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="9"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span>
           Success
         </span>
       </div>
       <div
-        class="css-1n20uf5"
+        class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -170,52 +171,53 @@ exports[`TransactionExportForm > should render in md 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1o2lvkz"
+        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="circle-check-mark"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+            <svg
+              id="circle-check-mark"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <circle
-                cx="10"
-                cy="10"
-                r="9"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="9"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span>
           Success
         </span>
       </div>
       <div
-        class="css-1n20uf5"
+        class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -292,52 +294,53 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1o2lvkz"
+        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="circle-check-mark"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+            <svg
+              id="circle-check-mark"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <circle
-                cx="10"
-                cy="10"
-                r="9"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="9"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span>
           Success
         </span>
       </div>
       <div
-        class="css-1n20uf5"
+        class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -414,52 +417,53 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1o2lvkz"
+        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="circle-check-mark"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+            <svg
+              id="circle-check-mark"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <circle
-                cx="10"
-                cy="10"
-                r="9"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="9"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span>
           Success
         </span>
       </div>
       <div
-        class="css-1n20uf5"
+        class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -536,52 +540,53 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1o2lvkz"
+        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="circle-check-mark"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+            <svg
+              id="circle-check-mark"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <circle
-                cx="10"
-                cy="10"
-                r="9"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="9"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span>
           Success
         </span>
       </div>
       <div
-        class="css-1n20uf5"
+        class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -654,57 +659,58 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-rzhg83"
+        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="circle-exclamation-mark"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+            <svg
+              id="circle-exclamation-mark"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <circle
-                cx="10"
-                cy="10"
-                r="9"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M10 10.5v-5"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M10 14h0"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="9"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M10 10.5v-5"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M10 14h0"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span>
           Warning
         </span>
       </div>
       <div
-        class="css-trjt6n"
+        class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
       >
         No transactions could be found for the selected period.
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

@@ -6,11 +6,12 @@ exports[`PageSkeleton > should render without profile 1`] = `
     data-testid="PageSkeleton"
   >
     <div
-      class="css-kmmje1"
+      class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+      style="min-height: -webkit-fill-available;"
     >
       <nav
         aria-labelledby="main menu"
-        class="css-1pyu5ft"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
       >
         <div
           class="relative flex h-14 sm:h-21"
@@ -62,7 +63,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
         class="flex flex-1 flex-col"
       >
         <div
-          class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+          class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
         >
           <div
             class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"

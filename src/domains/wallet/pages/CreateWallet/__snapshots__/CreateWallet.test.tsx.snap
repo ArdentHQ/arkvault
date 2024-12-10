@@ -3,10 +3,11 @@
 exports[`CreateWallet > should create a wallet 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -133,7 +134,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -304,7 +305,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -358,7 +359,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -419,7 +420,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -470,7 +471,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -577,7 +578,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -916,10 +917,11 @@ exports[`CreateWallet > should create a wallet 1`] = `
 exports[`CreateWallet > should create a wallet 2`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1044,7 +1046,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -1215,7 +1217,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1269,7 +1271,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1330,7 +1332,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1380,7 +1382,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1486,7 +1488,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -1794,10 +1796,11 @@ exports[`CreateWallet > should create a wallet 2`] = `
 exports[`CreateWallet > should create a wallet with encryption 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1924,7 +1927,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -2095,7 +2098,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2149,7 +2152,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2210,7 +2213,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -2261,7 +2264,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -2368,7 +2371,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -2709,10 +2712,11 @@ exports[`CreateWallet > should not have a pending wallet if leaving on step 1 1`
 exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2839,7 +2843,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -3010,7 +3014,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3064,7 +3068,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3125,7 +3129,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -3176,7 +3180,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -3283,7 +3287,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -3624,10 +3628,11 @@ exports[`CreateWallet > should remove pending wallet if not submitted 2`] = `<Do
 exports[`CreateWallet > should show an error message for duplicate name 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3752,7 +3757,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -3923,7 +3928,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3977,7 +3982,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4038,7 +4043,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4088,7 +4093,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4194,7 +4199,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -4533,10 +4538,11 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
 exports[`CreateWallet > should show an error message if wallet generation failed 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4663,7 +4669,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -4834,7 +4840,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4888,7 +4894,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4949,7 +4955,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -5000,7 +5006,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -5107,7 +5113,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"

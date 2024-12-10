@@ -46,14 +46,13 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
       class="relative"
     >
       <div
-        class="css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="InputCurrency"
             type="text"
             value="0.447"
@@ -77,28 +76,29 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
-                  <div
-                    class="css-15txs7d"
-                    height="10"
-                    width="10"
-                  >
-                    <svg
-                      id="chevron-up-small"
-                      viewBox="0 0 10 10"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        id="chevron-up-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </button>
                 <button
@@ -106,28 +106,29 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
-                  <div
-                    class="css-15txs7d"
-                    height="10"
-                    width="10"
-                  >
-                    <svg
-                      id="chevron-down-small"
-                      viewBox="0 0 10 10"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        id="chevron-down-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -186,14 +187,13 @@ exports[`InputFee > advanced view type > should display converted value when on 
       class="relative"
     >
       <div
-        class="css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="InputCurrency"
             type="text"
             value="0.3"
@@ -227,28 +227,29 @@ exports[`InputFee > advanced view type > should display converted value when on 
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
-                  <div
-                    class="css-15txs7d"
-                    height="10"
-                    width="10"
-                  >
-                    <svg
-                      id="chevron-up-small"
-                      viewBox="0 0 10 10"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        id="chevron-up-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </button>
                 <button
@@ -256,28 +257,29 @@ exports[`InputFee > advanced view type > should display converted value when on 
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
-                  <div
-                    class="css-15txs7d"
-                    height="10"
-                    width="10"
-                  >
-                    <svg
-                      id="chevron-down-small"
-                      viewBox="0 0 10 10"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        id="chevron-down-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -296,15 +298,13 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
     class="relative"
   >
     <div
-      class="css-4lfin5"
-      disabled=""
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
-          autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
           data-testid="InputCurrency"
           disabled=""
           type="text"
@@ -330,28 +330,29 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
                 disabled=""
                 type="button"
               >
-                <div
-                  class="css-15txs7d"
-                  height="10"
-                  width="10"
-                >
-                  <svg
-                    id="chevron-up-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-up-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
               <button
@@ -360,28 +361,29 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
                 disabled=""
                 type="button"
               >
-                <div
-                  class="css-15txs7d"
-                  height="10"
-                  width="10"
-                >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -438,14 +440,13 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       class="relative"
     >
       <div
-        class="css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="InputCurrency"
             type="text"
             value="0.3"
@@ -469,28 +470,29 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
-                  <div
-                    class="css-15txs7d"
-                    height="10"
-                    width="10"
-                  >
-                    <svg
-                      id="chevron-up-small"
-                      viewBox="0 0 10 10"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        id="chevron-up-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </button>
                 <button
@@ -498,28 +500,29 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
-                  <div
-                    class="css-15txs7d"
-                    height="10"
-                    width="10"
-                  >
-                    <svg
-                      id="chevron-down-small"
-                      viewBox="0 0 10 10"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        id="chevron-down-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -581,7 +584,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -603,7 +606,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -625,7 +628,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -695,14 +698,13 @@ exports[`InputFee > simple view type > should change fee option with converted v
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -731,7 +733,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
               0.006 DARK…
             </div>
             <div
-              class="relative css-14zfvme"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 relative"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -745,8 +747,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                   aria-autocomplete="list"
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -783,27 +784,30 @@ exports[`InputFee > simple view type > should change fee option with converted v
                         class="absolute inset-0 block cursor-pointer md:hidden"
                       />
                       <div
-                        class="transition-transform text-theme-secondary-500 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="transition-transform text-theme-secondary-500"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -869,14 +873,13 @@ exports[`InputFee > simple view type > should change fee option with converted v
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -905,7 +908,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
               0.006 DARK…
             </div>
             <div
-              class="relative css-14zfvme"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 relative"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -919,8 +922,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                   aria-autocomplete="list"
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -967,27 +969,30 @@ exports[`InputFee > simple view type > should change fee option with converted v
                         class="absolute inset-0 block cursor-pointer md:hidden"
                       />
                       <div
-                        class="transition-transform text-theme-secondary-500 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="transition-transform text-theme-secondary-500"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1056,7 +1061,7 @@ exports[`InputFee > simple view type > should display converted values when on l
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1084,7 +1089,7 @@ exports[`InputFee > simple view type > should display converted values when on l
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1112,7 +1117,7 @@ exports[`InputFee > simple view type > should display converted values when on l
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1196,7 +1201,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1225,7 +1230,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1254,7 +1259,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1396,7 +1401,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1418,7 +1423,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1440,7 +1445,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1513,7 +1518,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1535,7 +1540,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1557,7 +1562,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1630,7 +1635,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1652,7 +1657,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1674,7 +1679,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1747,7 +1752,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1769,7 +1774,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1791,7 +1796,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1861,14 +1866,13 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -1897,7 +1901,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               0.456 DARK…
             </div>
             <div
-              class="relative css-14zfvme"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 relative"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -1911,8 +1915,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                   aria-autocomplete="list"
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -1949,27 +1952,30 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                         class="absolute inset-0 block cursor-pointer md:hidden"
                       />
                       <div
-                        class="transition-transform text-theme-secondary-500 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="transition-transform text-theme-secondary-500"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2038,7 +2044,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2066,7 +2072,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2094,7 +2100,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2173,7 +2179,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2201,7 +2207,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2229,7 +2235,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2308,7 +2314,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2336,7 +2342,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2364,7 +2370,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2443,7 +2449,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2471,7 +2477,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2499,7 +2505,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2575,14 +2581,13 @@ exports[`InputFee > simple view type > should render simple view with converted 
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -2611,7 +2616,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               0.456 DARK…
             </div>
             <div
-              class="relative css-14zfvme"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 relative"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -2625,8 +2630,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                   aria-autocomplete="list"
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -2673,27 +2677,30 @@ exports[`InputFee > simple view type > should render simple view with converted 
                         class="absolute inset-0 block cursor-pointer md:hidden"
                       />
                       <div
-                        class="transition-transform text-theme-secondary-500 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="transition-transform text-theme-secondary-500"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2762,7 +2769,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2784,7 +2791,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2806,7 +2813,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2879,7 +2886,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2901,7 +2908,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2923,7 +2930,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="true"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2996,7 +3003,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="true"
         aria-label="0.006"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -3018,7 +3025,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.456"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -3040,7 +3047,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-19daxkr"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"

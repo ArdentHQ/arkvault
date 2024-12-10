@@ -19,41 +19,42 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                clip-path="url(#clip0_13768_41214)"
+              <svg
+                fill="none"
+                height="16"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.6"
-                />
-              </g>
-              <defs>
-                <clippath
-                  id="clip0_13768_41214"
+                <g
+                  clip-path="url(#clip0_13768_41214)"
                 >
-                  <rect
-                    fill="white"
-                    height="16"
-                    width="16"
+                  <path
+                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.6"
                   />
-                </clippath>
-              </defs>
-            </svg>
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_13768_41214"
+                  >
+                    <rect
+                      fill="white"
+                      height="16"
+                      width="16"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </div>
           </div>
           <span>
             Type
@@ -83,41 +84,42 @@ exports[`FilterTransactions > should render 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                clip-path="url(#clip0_13768_41214)"
+              <svg
+                fill="none"
+                height="16"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.6"
-                />
-              </g>
-              <defs>
-                <clippath
-                  id="clip0_13768_41214"
+                <g
+                  clip-path="url(#clip0_13768_41214)"
                 >
-                  <rect
-                    fill="white"
-                    height="16"
-                    width="16"
+                  <path
+                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.6"
                   />
-                </clippath>
-              </defs>
-            </svg>
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_13768_41214"
+                  >
+                    <rect
+                      fill="white"
+                      height="16"
+                      width="16"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </div>
           </div>
           <span>
             Type
@@ -148,41 +150,42 @@ exports[`FilterTransactions > should render with default selected option 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                clip-path="url(#clip0_13768_41214)"
+              <svg
+                fill="none"
+                height="16"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.6"
-                />
-              </g>
-              <defs>
-                <clippath
-                  id="clip0_13768_41214"
+                <g
+                  clip-path="url(#clip0_13768_41214)"
                 >
-                  <rect
-                    fill="white"
-                    height="16"
-                    width="16"
+                  <path
+                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.6"
                   />
-                </clippath>
-              </defs>
-            </svg>
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_13768_41214"
+                  >
+                    <rect
+                      fill="white"
+                      height="16"
+                      width="16"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </div>
           </div>
           <span>
             Type

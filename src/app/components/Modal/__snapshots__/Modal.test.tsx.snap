@@ -7,7 +7,7 @@ exports[`Modal > should closed by the Esc key 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -82,7 +82,7 @@ exports[`Modal > should render a 3x large one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-nyu9v6"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-3xl"
       tabindex="-1"
     >
       <div
@@ -155,7 +155,7 @@ exports[`Modal > should render a 4x large one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-12e1fbb"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-4xl"
       tabindex="-1"
     >
       <div
@@ -228,7 +228,7 @@ exports[`Modal > should render a 5x large one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-tciqjw"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -301,7 +301,7 @@ exports[`Modal > should render a large one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1uui4dw"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-lg"
       tabindex="-1"
     >
       <div
@@ -374,7 +374,7 @@ exports[`Modal > should render a medium one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-ue53ei"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-md"
       tabindex="-1"
     >
       <div
@@ -447,7 +447,7 @@ exports[`Modal > should render a modal with banner 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -530,7 +530,7 @@ exports[`Modal > should render a modal with content 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -605,7 +605,7 @@ exports[`Modal > should render a modal with description 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -684,7 +684,7 @@ exports[`Modal > should render a modal with overlay 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -759,7 +759,7 @@ exports[`Modal > should render a modal with overlay 2`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -834,7 +834,7 @@ exports[`Modal > should render a small one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1c3n8st"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-sm"
       tabindex="-1"
     >
       <div
@@ -907,7 +907,7 @@ exports[`Modal > should render a xlarge one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-uc6ifd"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-xl"
       tabindex="-1"
     >
       <div
@@ -980,7 +980,7 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -1055,7 +1055,7 @@ exports[`Modal > should render without close button 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -1089,7 +1089,7 @@ exports[`Modal > should render without offset for buttons 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
