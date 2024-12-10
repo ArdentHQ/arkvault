@@ -7,11 +7,12 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
     data-testid="Main"
   >
     <div
-      class="css-kmmje1"
+      class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+      style="min-height: -webkit-fill-available;"
     >
       <nav
         aria-labelledby="main menu"
-        class="css-1pyu5ft"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
       >
         <div
           class="relative flex h-14 sm:h-21"
@@ -63,7 +64,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
         class="flex flex-1 flex-col"
       >
         <div
-          class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center css-9mualq"
+          class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center"
         >
           <div
             class="mx-auto px-6 lg:container md:px-10"
@@ -269,15 +270,14 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                   class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
                 />
                 <div
-                  class="py-4 css-1prn1rr"
-                  disabled=""
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative py-4"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <textarea
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
+                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
                       data-testid="ErrorStep__errorMessage"
                       disabled=""
                       type="text"
@@ -333,11 +333,12 @@ exports[`ApplicationError > should render without error message 1`] = `
     data-testid="Main"
   >
     <div
-      class="css-kmmje1"
+      class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+      style="min-height: -webkit-fill-available;"
     >
       <nav
         aria-labelledby="main menu"
-        class="css-1pyu5ft"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
       >
         <div
           class="relative flex h-14 sm:h-21"
@@ -389,7 +390,7 @@ exports[`ApplicationError > should render without error message 1`] = `
         class="flex flex-1 flex-col"
       >
         <div
-          class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center css-9mualq"
+          class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center"
         >
           <div
             class="mx-auto px-6 lg:container md:px-10"

@@ -72,13 +72,13 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
         class="flex items-center font-semibold"
       >
         <div
-          class="css-nxxg2"
+          class="-my-2 flex-1"
         >
           <div
             class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
-              class="shrink-0 css-h8w6w0"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -121,7 +121,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
             class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
-              class="shrink-0 css-h8w6w0"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -181,13 +181,13 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
         class="flex items-center font-semibold"
       >
         <div
-          class="css-nxxg2"
+          class="-my-2 flex-1"
         >
           <div
             class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
-              class="shrink-0 css-h8w6w0"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -230,7 +230,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
             class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
-              class="shrink-0 css-h8w6w0"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -295,13 +295,13 @@ exports[`TransactionVotes > should render with unvotes 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-nxxg2"
+          class="-my-2 flex-1"
         >
           <div
             class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
-              class="shrink-0 css-h8w6w0"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -366,13 +366,13 @@ exports[`TransactionVotes > should render with votes 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-nxxg2"
+          class="-my-2 flex-1"
         >
           <div
             class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
-              class="shrink-0 css-h8w6w0"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -437,13 +437,13 @@ exports[`TransactionVotes > should render with votes and unvotes 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-nxxg2"
+          class="-my-2 flex-1"
         >
           <div
             class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
-              class="shrink-0 css-h8w6w0"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -503,13 +503,13 @@ exports[`TransactionVotes > should render with votes and unvotes 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-nxxg2"
+          class="-my-2 flex-1"
         >
           <div
             class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
           >
             <div
-              class="shrink-0 css-h8w6w0"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div

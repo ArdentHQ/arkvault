@@ -3,10 +3,11 @@
 exports[`Exchange > should render empty 1`] = `
 <div>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-wwznix"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -129,7 +130,7 @@ exports[`Exchange > should render empty 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -301,7 +302,7 @@ exports[`Exchange > should render empty 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -355,7 +356,7 @@ exports[`Exchange > should render empty 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -416,7 +417,7 @@ exports[`Exchange > should render empty 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -467,7 +468,7 @@ exports[`Exchange > should render empty 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -574,7 +575,7 @@ exports[`Exchange > should render empty 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -606,7 +607,7 @@ exports[`Exchange > should render empty 1`] = `
         </div>
       </div>
       <nav
-        class="css-h27fpz"
+        class="sticky top-21 z-10 -mt-0 mb-4 bg-theme-secondary-100 dark:bg-black md:mt-4"
       >
         <div
           class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
@@ -654,7 +655,7 @@ exports[`Exchange > should render empty 1`] = `
         </div>
       </nav>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 pt-2 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-2"
       >
         <div
           class="mx-auto lg:container md:px-10 px-6 lg:px-10"
@@ -677,10 +678,11 @@ exports[`Exchange > should render empty 1`] = `
 exports[`Exchange > should render with exchanges 1`] = `
 <div>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-wwznix"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -803,7 +805,7 @@ exports[`Exchange > should render with exchanges 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -975,7 +977,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1029,7 +1031,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1090,7 +1092,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -1141,7 +1143,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -1248,7 +1250,7 @@ exports[`Exchange > should render with exchanges 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -1280,7 +1282,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         </div>
       </div>
       <nav
-        class="css-h27fpz"
+        class="sticky top-21 z-10 -mt-0 mb-4 bg-theme-secondary-100 dark:bg-black md:mt-4"
       >
         <div
           class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
@@ -1328,7 +1330,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         </div>
       </nav>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 pt-2 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-2"
       >
         <div
           class="mx-auto lg:container md:px-10 px-6 lg:px-10"

@@ -102,14 +102,14 @@ exports[`AddressRow > should emit action on select button 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -388,14 +388,14 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -711,14 +711,14 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -998,14 +998,14 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -1284,14 +1284,14 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -1570,14 +1570,14 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -1996,14 +1996,14 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -2412,14 +2412,14 @@ exports[`AddressRow > should render with active validator 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -2913,14 +2913,14 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 </span>
               </div>
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -3169,14 +3169,14 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                 </span>
               </div>
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -3633,14 +3633,14 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 </span>
               </div>
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -3889,14 +3889,14 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                 </span>
               </div>
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -4136,14 +4136,14 @@ exports[`AddressRow > should render with resigned validator 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>
@@ -4422,14 +4422,14 @@ exports[`AddressRow > should render with standby validator 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <a
-                class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-bxx244"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   arkx
                 </span>

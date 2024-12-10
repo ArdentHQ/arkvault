@@ -64,33 +64,36 @@ exports[`TransferLedgerReview > should render 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -118,31 +121,32 @@ exports[`TransferLedgerReview > should render 1`] = `
             <div
               class="questionmark flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
             >
-              <div
-                class="css-15txs7d"
-                height="10"
-                width="10"
-              >
-                <svg
-                  id="question-mark-small"
-                  viewBox="0 0 10 10"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -170,7 +174,7 @@ exports[`TransferLedgerReview > should render 1`] = `
               class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
             >
               <span
-                class="css-1rmjubp"
+                class="text-sm font-semibold text-theme-secondary-500"
               >
                 Transaction(s) Amount
               </span>
@@ -185,7 +189,7 @@ exports[`TransferLedgerReview > should render 1`] = `
               class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
             >
               <span
-                class="css-1rmjubp"
+                class="text-sm font-semibold text-theme-secondary-500"
               >
                 Transaction Fee
               </span>
@@ -203,31 +207,32 @@ exports[`TransferLedgerReview > should render 1`] = `
             <div
               class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="plus"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M1 10h18M10 1v18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -236,7 +241,7 @@ exports[`TransferLedgerReview > should render 1`] = `
           class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Total Amount
           </span>
@@ -317,33 +322,36 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               type="button"
             >
               <div
-                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -371,31 +379,32 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             <div
               class="questionmark flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
             >
-              <div
-                class="css-15txs7d"
-                height="10"
-                width="10"
-              >
-                <svg
-                  id="question-mark-small"
-                  viewBox="0 0 10 10"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -440,7 +449,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
             >
               <span
-                class="css-1rmjubp"
+                class="text-sm font-semibold text-theme-secondary-500"
               >
                 Transaction(s) Amount
               </span>
@@ -455,7 +464,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
             >
               <span
-                class="css-1rmjubp"
+                class="text-sm font-semibold text-theme-secondary-500"
               >
                 Transaction Fee
               </span>
@@ -473,31 +482,32 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             <div
               class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="plus"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M1 10h18M10 1v18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -506,7 +516,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Total Amount
           </span>
@@ -587,33 +597,36 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
               >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -665,31 +678,32 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             <div
               class="questionmark flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
             >
-              <div
-                class="css-15txs7d"
-                height="10"
-                width="10"
-              >
-                <svg
-                  id="question-mark-small"
-                  viewBox="0 0 10 10"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -717,7 +731,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
             >
               <span
-                class="css-1rmjubp"
+                class="text-sm font-semibold text-theme-secondary-500"
               >
                 Transaction(s) Amount
               </span>
@@ -732,7 +746,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
             >
               <span
-                class="css-1rmjubp"
+                class="text-sm font-semibold text-theme-secondary-500"
               >
                 Transaction Fee
               </span>
@@ -750,31 +764,32 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             <div
               class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="plus"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M1 10h18M10 1v18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -783,7 +798,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
           class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Total Amount
           </span>

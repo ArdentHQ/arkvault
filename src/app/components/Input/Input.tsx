@@ -1,11 +1,11 @@
 import cn from "classnames";
-import React, { useEffect, useRef } from "react";
-import tw, { styled } from "twin.macro";
+import React, { forwardRef, useEffect, useRef } from "react";
 
 import { InputSuggestion } from "./InputSuggestion";
 import { useFormField } from "@/app/components/Form/useFormField";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { twMerge } from "tailwind-merge";
 
 interface AddonProperties {
 	wrapperClassName?: string;
@@ -32,7 +32,16 @@ type InputProperties = {
 	suggestion?: string;
 } & React.HTMLProps<any>;
 
-export const InputWrapperStyled = styled.div<{
+export const InputWrapperStyled = ({
+	noBorder,
+	noShadow,
+	valid,
+	invalid,
+	disabled,
+	isTextArea,
+	isCompact,
+	...props
+}: React.HTMLProps<HTMLDivElement> & {
 	disabled?: boolean;
 	invalid?: boolean;
 	valid?: boolean;
@@ -40,64 +49,51 @@ export const InputWrapperStyled = styled.div<{
 	isCompact?: boolean;
 	noBorder?: boolean;
 	noShadow?: boolean;
-}>`
-	${tw`flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text`}
+}) => (
+	<div
+		{...props}
+		className={twMerge(
+			"flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200",
+			cn({
+				border: !noBorder,
+				"border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500": invalid && !disabled,
+				"border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && invalid,
+				"border-theme-primary-600 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600":
+					valid && !disabled && !invalid,
+				"border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800":
+					disabled && !invalid,
+				"border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700":
+					!valid && !invalid && !disabled,
+				"focus-within:ring-1": !noShadow,
+				"h-12 overflow-hidden sm:h-14": !isTextArea && !isCompact,
+				"h-[34px] overflow-hidden": !isTextArea && isCompact,
+				relative: isTextArea,
+			}),
+			props.className,
+		)}
+	/>
+);
 
-	${({ noBorder }) => {
-		if (!noBorder) {
-			return tw`border`;
-		}
-	}}
+interface InputStyledProps {
+	autocomplete?: string;
+	as?: React.ElementType;
+}
 
-	${({ noShadow }) => {
-		if (!noShadow) {
-			return tw`focus-within:ring-1`;
-		}
-	}}
+const InputStyled = forwardRef<HTMLInputElement, InputStyledProps & React.ComponentPropsWithRef<"input">>(
+	({ autocomplete = "off", as: Component = "input", ...props }, ref) => (
+		<Component
+			{...props}
+			ref={ref}
+			autoComplete={autocomplete}
+			className={twMerge(
+				"!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none",
+				props.className,
+			)}
+		/>
+	),
+);
 
-	${({ disabled, invalid, valid }) => {
-		if (disabled && invalid) {
-			return tw`border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800`;
-		}
-
-		if (disabled) {
-			return tw`border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800`;
-		}
-
-		if (invalid) {
-			return tw`bg-theme-background border-theme-danger-500 focus-within:ring-theme-danger-500`;
-		}
-
-		if (valid) {
-			return tw`bg-theme-background border-theme-primary-600 focus-within:(border-theme-primary-600 ring-theme-primary-600)`;
-		}
-
-		return tw`bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:(border-theme-primary-600 ring-theme-primary-600)`;
-	}}
-
-	${({ isTextArea, isCompact }) => {
-		if (isTextArea) {
-			return tw`relative`;
-		}
-
-		if (isCompact) {
-			return tw`[height:34px] overflow-hidden`;
-		}
-
-		return tw`h-12 sm:h-14 overflow-hidden`;
-	}}
-`;
-
-const InputStyled = styled.input`
-	${tw`!bg-transparent !p-0`}
-
-	&:focus {
-		${tw`outline-none shadow-none (ring-0 ring-transparent)!`}
-	}
-	&.shadow-none {
-		${tw`shadow-none`}
-	}
-`;
+InputStyled.displayName = "InputStyled";
 
 type InputElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 

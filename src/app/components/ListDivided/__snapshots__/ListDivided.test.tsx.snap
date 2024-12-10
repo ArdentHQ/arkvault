@@ -13,7 +13,7 @@ exports[`ListDivided > should render an empty list divided 1`] = `
 exports[`ListDivided > should render an list divided with lastBorder = false 1`] = `
 <DocumentFragment>
   <ul
-    class="css-1hglnxc"
+    class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800"
     data-testid="list-divided__items"
   >
     <li
@@ -74,7 +74,7 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
 exports[`ListDivided > should render an list divided with lastBorder = true 1`] = `
 <DocumentFragment>
   <ul
-    class="css-1mq6i0h"
+    class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
     data-testid="list-divided__items"
   >
     <li

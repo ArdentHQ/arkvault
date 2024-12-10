@@ -9,7 +9,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -27,31 +27,32 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -100,34 +101,35 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span
                         class="sm:hidden"
@@ -144,28 +146,29 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -243,33 +246,36 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -281,8 +287,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="w-full [.condensed_&]:hidden"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                              type="horizontal"
+                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                           </div>
                         </div>
@@ -313,45 +318,47 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               class="hidden h-5 leading-[17px] sm:block sm:leading-5"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-                                type="vertical"
+                                class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                             <a
-                              class="ring-focus group/inner inline-block hidden h-5 text-sm leading-[17px] sm:block sm:text-base sm:leading-5 css-167zzsv"
+                              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner hidden h-5 text-sm leading-[17px] sm:block sm:text-base sm:leading-5"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-bxx244"
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                               >
                                 View Full List
                               </span>
                               <div
-                                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                                 data-testid="Link__external"
-                                height="12"
-                                width="12"
                               >
-                                <svg
-                                  id="arrow-external"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 12px; width: 12px;"
                                 >
-                                  <path
-                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="arrow-external"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </a>
                           </div>
@@ -412,12 +419,11 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               >
                                 Category
                               </div>
-                              <div
-                                class="css-1p04us5"
-                                color="neutral"
+                              <span
+                                class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Multipayment
-                              </div>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -474,9 +480,8 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             >
                               Amount
                             </div>
-                            <div
-                              class="flex items-center justify-center pr-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                              color="danger-bg"
+                            <span
+                              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center pr-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -487,33 +492,36 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                                   data-testid="AmountLabel__hint"
                                 >
                                   <div
-                                    class="dark:text-white css-15txs7d"
-                                    height="10"
-                                    width="10"
+                                    class="dark:text-white"
                                   >
-                                    <svg
-                                      id="hint-small"
-                                      viewBox="0 0 10 10"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      style="height: 10px; width: 10px;"
                                     >
-                                      <path
-                                        d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <circle
-                                        cx="4.5"
-                                        cy="1"
-                                        fill="currentColor"
-                                        r="1"
-                                      />
-                                    </svg>
+                                      <svg
+                                        id="hint-small"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <circle
+                                          cx="4.5"
+                                          cy="1"
+                                          fill="currentColor"
+                                          r="1"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                 </div>
                                 <span
@@ -523,7 +531,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                                   - 119 DARK
                                 </span>
                               </div>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -532,8 +540,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -560,8 +567,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -648,8 +654,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -663,38 +668,41 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               Block
                             </div>
                             <a
-                              class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-bxx244"
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                               />
                               <div
-                                class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                                class="mb-[3px] shrink-0 align-middle duration-200"
                                 data-testid="Link__external"
-                                height="12"
-                                width="12"
                               >
-                                <svg
-                                  id="arrow-external"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 12px; width: 12px;"
                                 >
-                                  <path
-                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="arrow-external"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </a>
                           </div>
@@ -705,8 +713,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -814,17 +821,14 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
+                          class="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="css-1m8vfsi"
-                            color="warning-alt"
-                            width="3"
+                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
-                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
-                            type="vertical"
+                            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
                           />
                           <p
                             class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
@@ -853,7 +857,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -871,31 +875,32 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -944,34 +949,35 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span
                         class="sm:hidden"
@@ -988,28 +994,29 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -1098,33 +1105,36 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -1136,8 +1146,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             class="w-full [.condensed_&]:hidden"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                              type="horizontal"
+                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                           </div>
                         </div>
@@ -1183,33 +1192,36 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -1270,12 +1282,11 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               >
                                 Category
                               </div>
-                              <div
-                                class="css-1p04us5"
-                                color="neutral"
+                              <span
+                                class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Multisignature
-                              </div>
+                              </span>
                             </div>
                             <div
                               class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -1284,8 +1295,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 class="w-full [.condensed_&]:hidden"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
+                                  class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                 />
                               </div>
                             </div>
@@ -1299,7 +1309,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 Address
                               </div>
                               <div
-                                class="font-semibold leading-5 max-sm:text-sm"
+                                class="max-sm:text-sm font-semibold leading-5"
                               >
                                 <div
                                   class="flex space-x-2"
@@ -1317,33 +1327,36 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                                      height="16"
-                                      width="16"
+                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                                     >
-                                      <svg
-                                        id="copy"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
                                         >
-                                          <path
-                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                          />
-                                          <path
-                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                          />
-                                        </g>
-                                      </svg>
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
                                     </div>
                                   </button>
                                 </div>
@@ -1356,8 +1369,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 class="w-full [.condensed_&]:hidden"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
+                                  class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                 />
                               </div>
                             </div>
@@ -1431,9 +1443,8 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             >
                               Amount
                             </div>
-                            <div
-                              class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                              color="danger-bg"
+                            <span
+                              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -1446,7 +1457,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                   - 121 DARK
                                 </span>
                               </div>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -1455,8 +1466,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -1483,8 +1493,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -1571,8 +1580,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -1586,38 +1594,41 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               Block
                             </div>
                             <a
-                              class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-bxx244"
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                               />
                               <div
-                                class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                                class="mb-[3px] shrink-0 align-middle duration-200"
                                 data-testid="Link__external"
-                                height="12"
-                                width="12"
                               >
-                                <svg
-                                  id="arrow-external"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 12px; width: 12px;"
                                 >
-                                  <path
-                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="arrow-external"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </a>
                           </div>
@@ -1628,8 +1639,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -1737,17 +1747,14 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
+                          class="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="css-1m8vfsi"
-                            color="warning-alt"
-                            width="3"
+                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
-                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
-                            type="vertical"
+                            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
                           />
                           <p
                             class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
@@ -1831,7 +1838,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               role="rowgroup"
                             >
                               <tr
-                                class="group group relative max-md:!border-transparent css-16ynu5g"
+                                class="group max-md:!border-transparent group relative css-16ynu5g"
                                 data-testid="TableRow"
                               >
                                 <td>
@@ -1842,14 +1849,14 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                       class="w-3/5 sm:w-auto"
                                     >
                                       <a
-                                        class="ring-focus group/inner inline-block css-167zzsv"
+                                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="Link"
                                         href="https://test.arkscan.io/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                                         rel="noopener noreferrer"
                                       >
                                         <span
-                                          class="css-1dlnsgk"
+                                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                         >
                                           D8rr7...6YUYD
                                         </span>
@@ -1862,40 +1869,43 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                       type="button"
                                     >
                                       <div
-                                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                                        height="16"
-                                        width="16"
+                                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                                       >
-                                        <svg
-                                          id="copy"
-                                          viewBox="0 0 20 20"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                        <div
+                                          style="height: 16px; width: 16px;"
                                         >
-                                          <g
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
+                                          <svg
+                                            id="copy"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 20 20"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                            />
-                                            <path
-                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                            />
-                                          </g>
-                                        </svg>
+                                            <g
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                              />
+                                              <path
+                                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </button>
                                   </div>
                                 </td>
                               </tr>
                               <tr
-                                class="group group relative max-md:!border-transparent css-16ynu5g"
+                                class="group max-md:!border-transparent group relative css-16ynu5g"
                                 data-testid="TableRow"
                               >
                                 <td>
@@ -1906,14 +1916,14 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                       class="w-3/5 sm:w-auto"
                                     >
                                       <a
-                                        class="ring-focus group/inner inline-block css-167zzsv"
+                                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="Link"
                                         href="https://test.arkscan.io/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                                         rel="noopener noreferrer"
                                       >
                                         <span
-                                          class="css-1dlnsgk"
+                                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                         >
                                           D5sRK...vJtwb
                                         </span>
@@ -1926,33 +1936,36 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                       type="button"
                                     >
                                       <div
-                                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                                        height="16"
-                                        width="16"
+                                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                                       >
-                                        <svg
-                                          id="copy"
-                                          viewBox="0 0 20 20"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                        <div
+                                          style="height: 16px; width: 16px;"
                                         >
-                                          <g
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
+                                          <svg
+                                            id="copy"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 20 20"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                            />
-                                            <path
-                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                            />
-                                          </g>
-                                        </svg>
+                                            <g
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                              />
+                                              <path
+                                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </button>
                                   </div>
@@ -1982,7 +1995,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -2000,31 +2013,32 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -2073,34 +2087,35 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span
                         class="sm:hidden"
@@ -2117,28 +2132,29 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -2216,33 +2232,36 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -2254,8 +2273,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="w-full [.condensed_&]:hidden"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                              type="horizontal"
+                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                           </div>
                         </div>
@@ -2290,33 +2308,36 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -2377,12 +2398,11 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               >
                                 Category
                               </div>
-                              <div
-                                class="css-1p04us5"
-                                color="neutral"
+                              <span
+                                class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Transfer
-                              </div>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -2439,9 +2459,8 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             >
                               Amount
                             </div>
-                            <div
-                              class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                              color="danger-bg"
+                            <span
+                              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -2454,7 +2473,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                                   - 121 DARK
                                 </span>
                               </div>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -2463,8 +2482,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -2491,8 +2509,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -2579,8 +2596,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -2594,38 +2610,41 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               Block
                             </div>
                             <a
-                              class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-bxx244"
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                               />
                               <div
-                                class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                                class="mb-[3px] shrink-0 align-middle duration-200"
                                 data-testid="Link__external"
-                                height="12"
-                                width="12"
                               >
-                                <svg
-                                  id="arrow-external"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 12px; width: 12px;"
                                 >
-                                  <path
-                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="arrow-external"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </a>
                           </div>
@@ -2636,8 +2655,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -2745,17 +2763,14 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
+                          class="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="css-1m8vfsi"
-                            color="warning-alt"
-                            width="3"
+                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
-                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
-                            type="vertical"
+                            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
                           />
                           <p
                             class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
@@ -2784,7 +2799,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -2802,31 +2817,32 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -2875,34 +2891,35 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span
                         class="sm:hidden"
@@ -2919,28 +2936,29 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -3018,33 +3036,36 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -3056,8 +3077,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="w-full [.condensed_&]:hidden"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                              type="horizontal"
+                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                           </div>
                         </div>
@@ -3092,33 +3112,36 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -3179,12 +3202,11 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               >
                                 Category
                               </div>
-                              <div
-                                class="css-1p04us5"
-                                color="neutral"
+                              <span
+                                class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Transfer
-                              </div>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3241,9 +3263,8 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             >
                               Amount
                             </div>
-                            <div
-                              class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                              color="danger-bg"
+                            <span
+                              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -3256,7 +3277,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                                   - 121 DARK
                                 </span>
                               </div>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -3265,8 +3286,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -3293,8 +3313,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -3381,8 +3400,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -3396,38 +3414,41 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               Block
                             </div>
                             <a
-                              class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-bxx244"
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                               />
                               <div
-                                class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                                class="mb-[3px] shrink-0 align-middle duration-200"
                                 data-testid="Link__external"
-                                height="12"
-                                width="12"
                               >
-                                <svg
-                                  id="arrow-external"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 12px; width: 12px;"
                                 >
-                                  <path
-                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="arrow-external"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </a>
                           </div>
@@ -3438,8 +3459,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -3547,17 +3567,14 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
+                          class="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="css-1m8vfsi"
-                            color="warning-alt"
-                            width="3"
+                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
-                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
-                            type="vertical"
+                            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
                           />
                           <p
                             class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
@@ -3586,7 +3603,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -3604,31 +3621,32 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -3677,34 +3695,35 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span
                         class="sm:hidden"
@@ -3721,28 +3740,29 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 16px; width: 16px;"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -3820,33 +3840,36 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -3907,12 +3930,11 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               >
                                 Category
                               </div>
-                              <div
-                                class="css-1p04us5"
-                                color="neutral"
+                              <span
+                                class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Unlock Balance
-                              </div>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3969,9 +3991,8 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             >
                               Amount
                             </div>
-                            <div
-                              class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                              color="danger-bg"
+                            <span
+                              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -3984,7 +4005,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                                   - 121 DARK
                                 </span>
                               </div>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -3993,8 +4014,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -4021,8 +4041,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -4109,8 +4128,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -4124,38 +4142,41 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               Block
                             </div>
                             <a
-                              class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-bxx244"
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                               />
                               <div
-                                class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                                class="mb-[3px] shrink-0 align-middle duration-200"
                                 data-testid="Link__external"
-                                height="12"
-                                width="12"
                               >
-                                <svg
-                                  id="arrow-external"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 12px; width: 12px;"
                                 >
-                                  <path
-                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="arrow-external"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </a>
                           </div>
@@ -4166,8 +4187,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               class="w-full [.condensed_&]:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                               />
                             </div>
                           </div>
@@ -4275,17 +4295,14 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
+                          class="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="css-1m8vfsi"
-                            color="warning-alt"
-                            width="3"
+                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
-                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
-                            type="vertical"
+                            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
                           />
                           <p
                             class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
