@@ -1,18 +1,13 @@
 import cn from "classnames";
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { styled } from "twin.macro";
 
 import { PaginationProperties } from "./Pagination.contracts";
-import { PaginationWrapper } from "./Pagination.styles";
 import { PaginationSearch } from "./PaginationSearch";
 import { Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { SmAndAbove, Xs } from "@/app/components/Breakpoint";
-
-const Wrapper = styled.nav`
-	${PaginationWrapper}
-`;
+import { PaginationWrapper } from "./Pagination.blocks";
 
 const Pagination = ({
 	totalCount,
@@ -43,7 +38,7 @@ const Pagination = ({
 	};
 
 	return (
-		<Wrapper data-testid="Pagination" className={cn("relative w-full sm:w-auto", className)}>
+		<PaginationWrapper data-testid="Pagination" className={cn("relative w-full sm:w-auto", className)}>
 			<SmAndAbove>
 				<Button
 					data-testid="Pagination__first"
@@ -144,7 +139,7 @@ const Pagination = ({
 					</Button>
 				</div>
 			</Xs>
-		</Wrapper>
+		</PaginationWrapper>
 	);
 };
 

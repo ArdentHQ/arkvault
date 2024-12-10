@@ -5349,7 +5349,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                   </span>
                 </div>
                 <nav
-                  class="relative w-full sm:w-auto css-4ybc2s"
+                  class="pagination-wrapper relative w-full sm:w-auto"
                   data-testid="Pagination"
                 >
                   <button
@@ -5405,7 +5405,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                     class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
                   >
                     <button
-                      class="group css-eti7fq"
+                      class="pagination-search-toggle-button group"
                       data-testid="PaginationSearchButton"
                       type="button"
                     >

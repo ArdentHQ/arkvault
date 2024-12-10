@@ -2,26 +2,12 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { styled } from "twin.macro";
-
 import { PaginationSearchFormProperties, PaginationSearchProperties } from "./Pagination.contracts";
-import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.styles";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { clickOutsideHandler } from "@/app/hooks";
-
-const PaginationSearchWrapperStyled = styled.span`
-	${PaginationSearchWrapper}
-`;
-
-export const PaginationSearchButtonStyled = styled.button`
-	${PaginationSearchToggleButton}
-`;
-
-export const SearchInputStyled = styled.input`
-	${SearchInput}
-`;
+import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.blocks";
 
 export const PaginationSearchForm = ({
 	onClose,
@@ -72,7 +58,7 @@ export const PaginationSearchForm = ({
 	}, [reference, onClose]);
 
 	return (
-		<PaginationSearchWrapperStyled>
+		<PaginationSearchWrapper>
 			<Form
 				data-testid="PaginationSearchForm"
 				context={form}
@@ -81,7 +67,7 @@ export const PaginationSearchForm = ({
 				className="search-form"
 				ref={reference}
 			>
-				<SearchInputStyled
+				<SearchInput
 					ref={register}
 					type="number"
 					min="1"
@@ -112,7 +98,7 @@ export const PaginationSearchForm = ({
 					<Icon name="Cross" />
 				</Button>
 			</Form>
-		</PaginationSearchWrapperStyled>
+		</PaginationSearchWrapper>
 	);
 };
 
@@ -127,7 +113,7 @@ export const PaginationSearch = ({
 
 	return (
 		<>
-			<PaginationSearchButtonStyled
+			<PaginationSearchToggleButton
 				data-testid="PaginationSearchButton"
 				className={`group${isFormVisible ? "invisible" : ""}`}
 				type="button"
@@ -146,7 +132,7 @@ export const PaginationSearch = ({
 				>
 					<Icon name="MagnifyingGlass" />
 				</span>
-			</PaginationSearchButtonStyled>
+			</PaginationSearchToggleButton>
 
 			{isFormVisible && (
 				<PaginationSearchForm

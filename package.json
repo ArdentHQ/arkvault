@@ -46,11 +46,11 @@
 		"@ardenthq/arkvault-url": "^1.2.0",
 		"@ardenthq/sdk": "2.0.0-alpha.28",
 		"@ardenthq/sdk-ark": "2.0.0-alpha.28",
-		"@ardenthq/sdk-mainsail": "2.0.0-alpha.28",
 		"@ardenthq/sdk-cryptography": "2.0.0-alpha.28",
 		"@ardenthq/sdk-helpers": "2.0.0-alpha.28",
 		"@ardenthq/sdk-intl": "2.0.0-alpha.28",
 		"@ardenthq/sdk-ledger": "2.0.0-alpha.28",
+		"@ardenthq/sdk-mainsail": "2.0.0-alpha.28",
 		"@ardenthq/sdk-profiles": "2.0.0-alpha.28",
 		"@emotion/cache": "^11.11.0",
 		"@emotion/react": "^11.11.4",
@@ -157,7 +157,6 @@
 		"rollup": "^4.18.1",
 		"rollup-plugin-visualizer": "^5.12.0",
 		"tailwindcss": "3.4.4",
-		"twin.macro": "3.4.0",
 		"typescript": "^5.5.3",
 		"typescript-eslint": "^7.16.0",
 		"vite": "^5.3.3",
@@ -223,7 +222,6 @@
 				"semver",
 				"socks-proxy-agent",
 				"string-hash",
-				"twin.macro",
 				"yup",
 				"react-zendesk"
 			]
