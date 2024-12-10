@@ -4,12 +4,9 @@ import Tippy from "@tippyjs/react";
 import { SelectDropdownDropdownProperties } from "./SelectDropdown.contracts";
 import { SelectDropdownRenderOptions as RenderOptions } from "./SelectDropdownRenderOptions";
 
-const SelectOptionsList = ({...props}: React.HTMLAttributes<HTMLUListElement>) => (
-	<ul
-		{...props}
-		className="select-options-list"
-	/>
-)
+const SelectOptionsList = ({ ...props }: React.HTMLAttributes<HTMLUListElement>) => (
+	<ul {...props} className="select-options-list" />
+);
 
 export const SelectDropdownDropdown = ({
 	reference,

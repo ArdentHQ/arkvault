@@ -10,13 +10,13 @@ interface ToastProperties {
 	variant?: Color;
 }
 
-const ToastIconWrapper = ({ variant, ...props }: ToastProperties) => {
-	return <div {...props} className={twMerge(getIconStyles({variant}))} />;
-}
+const ToastIconWrapper = ({ variant, ...props }: ToastProperties) => (
+	<div {...props} className={twMerge(getIconStyles({ variant }))} />
+);
 
-const ToastBody = ({ variant, ...props }: ToastProperties) => {
-	return <div {...props} className={twMerge(getBodyStyles({variant}))} />;
-}
+const ToastBody = ({ variant, ...props }: ToastProperties) => (
+	<div {...props} className={twMerge(getBodyStyles({ variant }))} />
+);
 
 const ToastIcon = ({ variant }: { variant: string }) => {
 	const iconVariant: Record<Color, string> = {

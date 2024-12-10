@@ -5,15 +5,13 @@ import { TransactionDetailProperties } from "@/domains/transaction/components/Tr
 import { twMerge } from "tailwind-merge";
 
 const WalletDetailStyled = forwardRef<HTMLDivElement, TransactionDetailProperties>(
-    ({ border, borderPosition, padding, paddingPosition, ...props }, ref) => {
-        return (
-            <div
-                {...props}
-                ref={ref}
-                className={twMerge(getStyles({ border, borderPosition, padding, paddingPosition }), props.className)}
-            />
-        );
-    }
+	({ border, borderPosition, padding, paddingPosition, ...props }, ref) => (
+		<div
+			{...props}
+			ref={ref}
+			className={twMerge(getStyles({ border, borderPosition, padding, paddingPosition }), props.className)}
+		/>
+	),
 );
 
 WalletDetailStyled.displayName = "WalletDetailStyled";
