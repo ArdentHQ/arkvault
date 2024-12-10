@@ -14,37 +14,40 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -55,37 +58,40 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -96,37 +102,40 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -137,37 +146,40 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -178,37 +190,40 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -230,37 +245,40 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -271,37 +289,40 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -312,37 +333,40 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -353,37 +377,40 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -394,37 +421,40 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -474,37 +504,40 @@ exports[`ProfileSliderSkeleton > should render with length 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
@@ -515,37 +548,40 @@ exports[`ProfileSliderSkeleton > should render with length 1`] = `
           class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
         />
         <div
-          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-          height="16"
-          width="16"
+          class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <circle
-              cx="10.002"
-              cy="2.99609"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 2.99609)"
-            />
-            <circle
-              cx="10.002"
-              cy="9.99805"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 9.99805)"
-            />
-            <circle
-              cx="10.002"
-              cy="17"
-              fill="currentColor"
-              r="2"
-              transform="rotate(90 10.002 17)"
-            />
-          </svg>
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10.002"
+                cy="2.99609"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 2.99609)"
+              />
+              <circle
+                cx="10.002"
+                cy="9.99805"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 9.99805)"
+              />
+              <circle
+                cx="10.002"
+                cy="17"
+                fill="currentColor"
+                r="2"
+                transform="rotate(90 10.002 17)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>

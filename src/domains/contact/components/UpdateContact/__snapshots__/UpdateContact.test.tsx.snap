@@ -25,31 +25,32 @@ exports[`UpdateContact > should render responsive 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -73,7 +74,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-ea0il3"
+                  class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -100,10 +101,10 @@ exports[`UpdateContact > should render responsive 1`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="!-mx-4 !mt-4 !p-4 css-1mwq138"
+                  class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background !-mx-4 !mt-4 !p-4"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -186,27 +187,30 @@ exports[`UpdateContact > should render responsive 1`] = `
                                         class="absolute inset-0 block cursor-pointer md:hidden"
                                       />
                                       <div
-                                        class="transition-transform text-theme-secondary-500 css-15txs7d"
-                                        height="10"
-                                        width="10"
+                                        class="transition-transform text-theme-secondary-500"
                                       >
-                                        <svg
-                                          id="chevron-down-small"
-                                          viewBox="0 0 10 10"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                        <div
+                                          style="height: 10px; width: 10px;"
                                         >
-                                          <path
-                                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                          />
-                                        </svg>
+                                          <svg
+                                            id="chevron-down-small"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
+                                          >
+                                            <path
+                                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            />
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -224,7 +228,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     data-testid="ContactForm__address"
                   >
                     <label
@@ -296,31 +300,32 @@ exports[`UpdateContact > should render responsive 1`] = `
                               <div
                                 class="flex items-center space-x-2"
                               >
-                                <div
-                                  class="css-1i4b0eq"
-                                  height="20"
-                                  width="20"
-                                >
-                                  <svg
-                                    id="trash"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                <div>
+                                  <div
+                                    style="height: 20px; width: 20px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <svg
+                                      id="trash"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <path
-                                        d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </div>
                             </button>
@@ -357,31 +362,32 @@ exports[`UpdateContact > should render responsive 1`] = `
                           <div
                             class="flex items-center space-x-2"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="trash"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="trash"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </button>
@@ -393,7 +399,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                   class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-between"
                 >
                   <div
-                    class="css-j6ajdm"
+                    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -454,31 +460,32 @@ exports[`UpdateContact > should render responsive 2`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -502,7 +509,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-ea0il3"
+                  class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -529,10 +536,10 @@ exports[`UpdateContact > should render responsive 2`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="!-mx-4 !mt-4 !p-4 css-1mwq138"
+                  class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background !-mx-4 !mt-4 !p-4"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -615,27 +622,30 @@ exports[`UpdateContact > should render responsive 2`] = `
                                         class="absolute inset-0 block cursor-pointer md:hidden"
                                       />
                                       <div
-                                        class="transition-transform text-theme-secondary-500 css-15txs7d"
-                                        height="10"
-                                        width="10"
+                                        class="transition-transform text-theme-secondary-500"
                                       >
-                                        <svg
-                                          id="chevron-down-small"
-                                          viewBox="0 0 10 10"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                        <div
+                                          style="height: 10px; width: 10px;"
                                         >
-                                          <path
-                                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                          />
-                                        </svg>
+                                          <svg
+                                            id="chevron-down-small"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
+                                          >
+                                            <path
+                                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            />
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -653,7 +663,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     data-testid="ContactForm__address"
                   >
                     <label
@@ -725,31 +735,32 @@ exports[`UpdateContact > should render responsive 2`] = `
                               <div
                                 class="flex items-center space-x-2"
                               >
-                                <div
-                                  class="css-1i4b0eq"
-                                  height="20"
-                                  width="20"
-                                >
-                                  <svg
-                                    id="trash"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                <div>
+                                  <div
+                                    style="height: 20px; width: 20px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <svg
+                                      id="trash"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <path
-                                        d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </div>
                             </button>
@@ -786,31 +797,32 @@ exports[`UpdateContact > should render responsive 2`] = `
                           <div
                             class="flex items-center space-x-2"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="trash"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="trash"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </button>
@@ -829,31 +841,32 @@ exports[`UpdateContact > should render responsive 2`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span>
                         Delete Contact
@@ -861,7 +874,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                     </div>
                   </button>
                   <div
-                    class="css-j6ajdm"
+                    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -922,31 +935,32 @@ exports[`UpdateContact > should render responsive 3`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -975,7 +989,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-ea0il3"
+                  class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1002,10 +1016,10 @@ exports[`UpdateContact > should render responsive 3`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="!-mx-4 !mt-4 !p-4 css-1mwq138"
+                  class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background !-mx-4 !mt-4 !p-4"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1088,27 +1102,30 @@ exports[`UpdateContact > should render responsive 3`] = `
                                         class="absolute inset-0 block cursor-pointer md:hidden"
                                       />
                                       <div
-                                        class="transition-transform text-theme-secondary-500 css-15txs7d"
-                                        height="10"
-                                        width="10"
+                                        class="transition-transform text-theme-secondary-500"
                                       >
-                                        <svg
-                                          id="chevron-down-small"
-                                          viewBox="0 0 10 10"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                        <div
+                                          style="height: 10px; width: 10px;"
                                         >
-                                          <path
-                                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                          />
-                                        </svg>
+                                          <svg
+                                            id="chevron-down-small"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
+                                          >
+                                            <path
+                                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            />
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -1126,7 +1143,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     data-testid="ContactForm__address"
                   >
                     <label
@@ -1198,31 +1215,32 @@ exports[`UpdateContact > should render responsive 3`] = `
                               <div
                                 class="flex items-center space-x-2"
                               >
-                                <div
-                                  class="css-1i4b0eq"
-                                  height="20"
-                                  width="20"
-                                >
-                                  <svg
-                                    id="trash"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                <div>
+                                  <div
+                                    style="height: 20px; width: 20px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <svg
+                                      id="trash"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <path
-                                        d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </div>
                             </button>
@@ -1259,31 +1277,32 @@ exports[`UpdateContact > should render responsive 3`] = `
                           <div
                             class="flex items-center space-x-2"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="trash"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="trash"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </button>
@@ -1302,31 +1321,32 @@ exports[`UpdateContact > should render responsive 3`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span>
                         Delete Contact
@@ -1334,7 +1354,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                     </div>
                   </button>
                   <div
-                    class="css-j6ajdm"
+                    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

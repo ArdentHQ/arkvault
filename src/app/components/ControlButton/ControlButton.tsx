@@ -1,57 +1,29 @@
 import cn from "classnames";
 import React from "react";
-import tw, { css, styled } from "twin.macro";
+import { twMerge } from "tailwind-merge";
 
-const ControlButtonStyled = styled.button<{ noBorder?: boolean; disabled?: boolean }>`
-	${tw`relative flex items-center justify-center py-2`}
-	${tw`font-semibold text-theme-secondary-700 dark:text-theme-secondary-500`}
-	${tw`transition-colors duration-200`}
-	${tw`cursor-pointer`}
-	${tw`focus:outline-none`}
-	${tw`disabled:(cursor-not-allowed text-theme-secondary-400 dark:text-theme-secondary-700)`}
-
-	${({ noBorder }) => {
-		if (noBorder) {
-			return tw`px-2 py-1.5 rounded`;
-		} else {
-			return tw`px-2.5 mx-0.5`;
-		}
-	}}
-
-	${({ disabled }) => {
-		if (!disabled) {
-			return css`
-				&:hover {
-					color: var(--theme-color-primary-400);
-				}
-			`;
-		}
-	}}
-
-	${({ noBorder, disabled }) => {
-		if (!noBorder && !disabled) {
-			return css`
-				&:hover {
-					border-bottom-color: var(--theme-color-primary-400);
-					color: var(--theme-color-primary-400);
-				}
-				&.active {
-					&[data-focus-visible-added] {
-						${tw`rounded`}
-					}
-					border-bottom-color: var(--theme-color-primary-600);
-					color: var(--theme-color-primary-600);
-				}
-			`;
-		} else {
-			return css`
-				&:hover {
-					${tw`text-theme-primary-700 bg-theme-primary-100 dark:text-white dark:text-theme-secondary-800`}
-				}
-			`;
-		}
-	}}
-`;
+const ControlButtonStyled = ({
+	noBorder,
+	disabled,
+	...properties
+}: React.ButtonHTMLAttributes<HTMLButtonElement> & ControlButtonProperties) => (
+	<button
+		{...properties}
+		className={twMerge(
+			"relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700",
+			cn({
+				"hover:bg-theme-primary-100 hover:text-theme-primary-700 hover:dark:text-theme-secondary-800 hover:dark:text-white":
+					disabled || noBorder,
+				"hover:border-b-theme-primary-400 hover:text-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded":
+					!noBorder && !disabled,
+				"hover:text-theme-primary-400": !disabled,
+				"mx-0.5 px-2.5": !noBorder,
+				"rounded px-2 py-1.5": noBorder,
+			}),
+			properties.className,
+		)}
+	/>
+);
 
 type ControlButtonProperties = {
 	isChanged?: boolean;

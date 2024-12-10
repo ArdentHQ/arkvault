@@ -27,34 +27,35 @@ exports[`CopyOrDownload > should render 1`] = `
         <div
           class="flex items-center space-x-2 font-semibold link"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="copy"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="copy"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                />
-                <path
-                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                  />
+                  <path
+                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
           <span>
             Copy
@@ -62,36 +63,36 @@ exports[`CopyOrDownload > should render 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-        type="vertical"
+        class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
         class="flex items-center space-x-2 font-semibold link"
         data-testid="CopyOrDownload__download"
         type="button"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="arrow-down-bracket"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <path
-              d="M19 13.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9M9.95 2v11.1m4.7-4.7l-4.7 4.7-4.6-4.7"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
+            <svg
+              id="arrow-down-bracket"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M19 13.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9M9.95 2v11.1m4.7-4.7l-4.7 4.7-4.6-4.7"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
         </div>
         <span>
           Download

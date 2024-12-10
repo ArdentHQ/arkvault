@@ -1,12 +1,9 @@
 import cn from "classnames";
 import React, { cloneElement, FC, useCallback, useState } from "react";
-import { styled } from "twin.macro";
 
 import { DropdownOption, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
-import { defaultClasses, getStyles } from "./Dropdown.styles";
 import { renderOptions } from "./Dropdown.helpers";
 import { Icon } from "@/app/components/Icon";
-import { Position } from "@/types";
 import {
 	useFloating,
 	autoUpdate,
@@ -21,7 +18,17 @@ import {
 } from "@floating-ui/react";
 import { twMerge } from "tailwind-merge";
 
-export const Wrapper = styled.div<{ position?: Position; variant: DropdownVariantType }>(getStyles);
+export const Wrapper = ({ variant, ...props }: { variant: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => (
+	<div
+		{...props}
+		className={twMerge(
+			cn({
+				"py-3 dark:bg-theme-secondary-800": variant === "options" || variant === "votesFilter",
+			}),
+			props.className,
+		)}
+	/>
+);
 
 export const Dropdown: FC<DropdownProperties> = ({
 	children,
@@ -118,7 +125,10 @@ export const Dropdown: FC<DropdownProperties> = ({
 						{...getFloatingProps()}
 						data-testid={"dropdown__content" + testIdSuffix}
 					>
-						<Wrapper variant={variant || options ? "options" : "custom"} className={cn(defaultClasses)}>
+						<Wrapper
+							variant={variant || options ? "options" : "custom"}
+							className="dropdown-body overflow-hidden rounded-xl bg-theme-background shadow-xl"
+						>
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
 							{clonedElement && <div>{clonedElement}</div>}
