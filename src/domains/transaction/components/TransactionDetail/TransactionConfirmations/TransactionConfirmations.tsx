@@ -23,7 +23,7 @@ export const TransactionConfirmations = ({
 		return (
 			<div
 				data-testid="TransactionFailedAlert"
-				className="rounded-xl border border-theme-danger-200 bg-theme-danger-50 py-2 dark:border-theme-danger-info-border dark:bg-transparent max-sm:text-sm sm:py-4 sm:leading-5"
+				className="max-sm:text-sm rounded-xl border border-theme-danger-200 bg-theme-danger-50 py-2 dark:border-theme-danger-info-border dark:bg-transparent sm:py-4 sm:leading-5"
 			>
 				<div className="mb-2 flex items-center space-x-3 px-3 sm:mb-4 sm:px-6">
 					<div className="flex items-center space-x-2 text-theme-danger-700 dark:text-theme-danger-info-border">
