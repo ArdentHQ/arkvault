@@ -87,7 +87,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     My Wallet

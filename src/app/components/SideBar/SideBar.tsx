@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import tw, { styled } from "twin.macro";
 import { SideBarItem } from "./SideBarItem";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
@@ -16,12 +15,6 @@ interface Properties {
 	handleActiveItem: (key: string) => void;
 	items: Item[];
 }
-
-const SideBarContainer = styled.div`
-	${tw`h-full hidden lg:block`}
-
-	width: 210px;
-`;
 
 export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, items }: Properties) => {
 	const options = useMemo<DropdownOption[]>(
@@ -67,7 +60,7 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 				/>
 			</div>
 
-			<SideBarContainer>
+			<div className="hidden h-full w-[210px] lg:block">
 				<ul>
 					{items.map(({ label, route, itemKey, icon }, index) => (
 						<SideBarItem
@@ -81,7 +74,7 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 						/>
 					))}
 				</ul>
-			</SideBarContainer>
+			</div>
 		</>
 	);
 };

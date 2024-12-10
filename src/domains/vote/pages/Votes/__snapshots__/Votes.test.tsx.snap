@@ -763,7 +763,7 @@ exports[`Votes > should filter current delegates 1`] = `
             data-testid="ValidatorsTable"
           >
             <div
-              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+              class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
               role="table"
             >
               <table
@@ -935,7 +935,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1129,7 +1129,7 @@ exports[`Votes > should filter current delegates 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -2015,7 +2015,7 @@ exports[`Votes > should render 1`] = `
             data-testid="ValidatorsTable"
           >
             <div
-              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+              class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
               role="table"
             >
               <table
@@ -2187,7 +2187,7 @@ exports[`Votes > should render 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2342,7 +2342,7 @@ exports[`Votes > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2497,7 +2497,7 @@ exports[`Votes > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2695,7 +2695,7 @@ exports[`Votes > should render 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -3577,7 +3577,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             data-testid="ValidatorsTable"
           >
             <div
-              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+              class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
               role="table"
             >
               <table
@@ -3749,7 +3749,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -3904,7 +3904,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -4059,7 +4059,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -4257,7 +4257,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -5872,7 +5872,7 @@ exports[`Votes > should select a validator 1`] = `
             data-testid="ValidatorsTable"
           >
             <div
-              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+              class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
               role="table"
             >
               <table
@@ -6044,7 +6044,7 @@ exports[`Votes > should select a validator 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -6199,7 +6199,7 @@ exports[`Votes > should select a validator 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -6354,7 +6354,7 @@ exports[`Votes > should select a validator 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -6552,7 +6552,7 @@ exports[`Votes > should select a validator 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -9981,7 +9981,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                 </h2>
               </div>
               <div
-                class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
+                class="table-wrapper with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
                 role="table"
               >
                 <table
@@ -10209,7 +10209,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                       data-testid="TableRow"
                     >
                       <td
@@ -10339,7 +10339,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                       data-testid="TableRow"
                     >
                       <td
@@ -10359,7 +10359,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -10479,7 +10479,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                       data-testid="TableRow"
                     >
                       <td
@@ -10499,7 +10499,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 2
@@ -11443,7 +11443,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               </div>
             </div>
             <div
-              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+              class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
               role="table"
             >
               <table
@@ -11615,7 +11615,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -11770,7 +11770,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -11925,7 +11925,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -12123,7 +12123,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-9nx3be"
+                                  class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1

@@ -5,7 +5,7 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -163,7 +163,7 @@ exports[`ValidatorRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -321,7 +321,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
   <table>
     <tbody>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -524,7 +524,7 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -682,7 +682,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -831,7 +831,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -980,7 +980,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -1143,7 +1143,7 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
   <table>
     <tbody>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -1292,7 +1292,7 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
         </td>
       </tr>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -1441,7 +1441,7 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
         </td>
       </tr>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -1604,7 +1604,7 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>
@@ -1762,7 +1762,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
         data-testid="TableRow"
       >
         <td>

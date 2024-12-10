@@ -713,7 +713,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
             data-testid="ContactList"
           >
             <div
-              class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
+              class="table-wrapper with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
               role="table"
             >
               <table
@@ -843,7 +843,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -855,7 +855,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             Brian
@@ -1042,7 +1042,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
+                    class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1054,7 +1054,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             Rok
@@ -1241,7 +1241,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
+                    class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1425,7 +1425,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -3680,7 +3680,7 @@ exports[`Contacts > should render with contacts 1`] = `
             data-testid="ContactList"
           >
             <div
-              class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
+              class="table-wrapper with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
               role="table"
             >
               <table
@@ -3810,7 +3810,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -3822,7 +3822,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             Brian
@@ -4009,7 +4009,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
+                    class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -4021,7 +4021,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             Rok
@@ -4208,7 +4208,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
+                    class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>
@@ -4392,7 +4392,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
                     data-testid="TableRow"
                   >
                     <td>

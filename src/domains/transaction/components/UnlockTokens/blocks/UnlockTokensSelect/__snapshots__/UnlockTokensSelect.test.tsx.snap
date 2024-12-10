@@ -33,7 +33,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
       class="relative border-b border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="css-1m6rt2i"
+        class="table-wrapper"
         role="table"
       >
         <table
@@ -172,7 +172,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
               data-testid="TableRow"
             >
               <td>
@@ -258,7 +258,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
               data-testid="TableRow"
             >
               <td>
@@ -344,7 +344,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
               data-testid="TableRow"
             >
               <td>
@@ -427,7 +427,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
               data-testid="TableRow"
             >
               <td>

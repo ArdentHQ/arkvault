@@ -597,24 +597,24 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                       class="flex flex-col"
                     >
                       <span
-                        class="css-tgbw37"
+                        class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
                       >
                         Transaction Confirmed
                       </span>
                       <ul
-                        class="css-xa5o6q"
+                        class="flex space-x-3"
                       >
                         <li
-                          class="css-11vjikd"
+                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="css-11vjikd"
+                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="css-11vjikd"
+                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="css-11vjikd"
+                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                         />
                       </ul>
                     </div>
@@ -2084,24 +2084,24 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                       class="flex flex-col"
                     >
                       <span
-                        class="css-tgbw37"
+                        class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
                       >
                         Transaction Confirmed
                       </span>
                       <ul
-                        class="css-xa5o6q"
+                        class="flex space-x-3"
                       >
                         <li
-                          class="css-11vjikd"
+                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="css-11vjikd"
+                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="css-11vjikd"
+                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="css-11vjikd"
+                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                         />
                       </ul>
                     </div>

@@ -177,7 +177,7 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-9nx3be"
+                class="no-ligatures transition-colors duration-200"
                 data-testid="TruncateEnd"
               >
                 test-alias
@@ -871,10 +871,10 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1sfei0c"
+          class="recipient-list w-full"
         >
           <div
-            class="css-1m6rt2i"
+            class="table-wrapper"
             role="table"
           >
             <table
@@ -1128,10 +1128,10 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1sfei0c"
+          class="recipient-list w-full"
         >
           <div
-            class="css-1m6rt2i"
+            class="table-wrapper"
             role="table"
           >
             <table
@@ -1524,10 +1524,10 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1sfei0c"
+          class="recipient-list w-full"
         >
           <div
-            class="css-1m6rt2i"
+            class="table-wrapper"
             role="table"
           >
             <table
@@ -1920,10 +1920,10 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1sfei0c"
+          class="recipient-list w-full"
         >
           <div
-            class="css-1m6rt2i"
+            class="table-wrapper"
             role="table"
           >
             <table
@@ -2177,10 +2177,10 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1sfei0c"
+          class="recipient-list w-full"
         >
           <div
-            class="css-1m6rt2i"
+            class="table-wrapper"
             role="table"
           >
             <table
@@ -2607,10 +2607,10 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1sfei0c"
+          class="recipient-list w-full"
         >
           <div
-            class="css-1m6rt2i"
+            class="table-wrapper"
             role="table"
           >
             <table
