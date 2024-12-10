@@ -345,9 +345,6 @@ importers:
       tailwindcss:
         specifier: 3.4.4
         version: 3.4.4
-      twin.macro:
-        specifier: 3.4.0
-        version: 3.4.0(tailwindcss@3.4.4)
       typescript:
         specifier: ^5.5.3
         version: 5.5.4
@@ -7246,12 +7243,6 @@ packages:
 
   tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
-
-  twin.macro@3.4.0:
-    resolution: {integrity: sha512-sOZN3PAlUpA/5ZITFkK1UjYhAKqKUGLrAbqviVagmd/B18Es6faozVdUceJTpMklD/dAjxhHCMPP2gwpJLCbyg==}
-    engines: {node: '>=16.14.0'}
-    peerDependencies:
-      tailwindcss: '>=3.3.1'
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -16181,16 +16172,6 @@ snapshots:
   tunnel-agent@0.6.0:
     dependencies:
       safe-buffer: 5.2.1
-
-  twin.macro@3.4.0(tailwindcss@3.4.4):
-    dependencies:
-      '@babel/template': 7.22.5
-      babel-plugin-macros: 3.1.0
-      chalk: 4.1.2
-      lodash.get: 4.4.2
-      lodash.merge: 4.6.2
-      postcss-selector-parser: 6.0.13
-      tailwindcss: 3.4.4
 
   type-check@0.4.0:
     dependencies:
