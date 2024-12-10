@@ -91,7 +91,11 @@ main {
   }
 
   .custom-nav-wrapper li a {
-	@apply border-t-2 border-t-transparent hover:border-b-theme-primary-600 hover:text-theme-text active:border-b-theme-primary-600 active:text-theme-text
+	@apply border-t-2 border-t-transparent border-b-2 border-b-transparent hover:border-b-theme-primary-600 hover:text-theme-text
+  }
+
+  .custom-nav-wrapper li a.active {
+	@apply border-b-theme-primary-600 text-theme-text
   }
   
   @supports (padding-bottom: env(safe-area-inset-bottom)) {
