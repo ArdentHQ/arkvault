@@ -7,6 +7,7 @@ import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
+import { AddressLabel } from "@/app/components/Address";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
@@ -166,7 +167,7 @@ const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) =>
 const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesProperties) => {
 	const { t } = useTranslation();
 
-	const delegate = votes[0].wallet!;
+	const validator = votes[0].wallet!;
 	const maxVotes = wallet.network().maximumVotesPerWallet();
 
 	return (
@@ -188,7 +189,7 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 					</span>
 
 					{votes.length === 1 ? (
-						<span>{delegate.username()}</span>
+						<AddressLabel>{validator.address()}</AddressLabel>
 					) : (
 						<span
 							className="cursor-pointer text-theme-primary-600 transition-colors duration-200 hover:text-theme-primary-700 active:text-theme-primary-500"
@@ -204,7 +205,7 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 						<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
 							{t("COMMON.RANK")}
 						</span>
-						<span>{delegate.rank() ? `#${delegate.rank()}` : t("COMMON.NOT_AVAILABLE")}</span>
+						<span>{validator.rank() ? `#${validator.rank()}` : t("COMMON.NOT_AVAILABLE")}</span>
 					</div>
 				)}
 

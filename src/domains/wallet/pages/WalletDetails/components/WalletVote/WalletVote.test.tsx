@@ -133,7 +133,6 @@ describe("WalletVote", () => {
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
 					rank: 1,
-					username: "arkx",
 				}),
 			},
 			{
@@ -141,7 +140,6 @@ describe("WalletVote", () => {
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
 					rank: 2,
-					username: "arky",
 				}),
 			},
 		];
@@ -164,7 +162,6 @@ describe("WalletVote", () => {
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
 					rank: 1,
-					username: "arkx",
 				}),
 			},
 			{
@@ -172,7 +169,6 @@ describe("WalletVote", () => {
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
 					rank: 2,
-					username: "arky",
 				}),
 			},
 		];
@@ -214,7 +210,6 @@ describe("WalletVote", () => {
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
 					rank: 10,
-					username: "arkx",
 				}),
 			};
 
@@ -224,7 +219,6 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(delegate.wallet.username()!)).toBeInTheDocument();
 			expect(screen.getByText(`#${delegate.wallet.rank()}`)).toBeInTheDocument();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: 1 }))).toBeInTheDocument();
@@ -241,7 +235,6 @@ describe("WalletVote", () => {
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
 					rank: 52,
-					username: "arkx",
 				}),
 			};
 
@@ -251,7 +244,6 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(delegate.wallet.username()!)).toBeInTheDocument();
 			expect(screen.getByText(`#${delegate.wallet.rank()}`)).toBeInTheDocument();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
@@ -269,7 +261,6 @@ describe("WalletVote", () => {
 					...defaultDelegate,
 					isDelegate: true,
 					isResignedDelegate: false,
-					username: "arkx",
 				}),
 			};
 
@@ -279,7 +270,6 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(delegate.wallet.username()!)).toBeInTheDocument();
 			expect(screen.getByText(t("COMMON.NOT_AVAILABLE"))).toBeInTheDocument();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
@@ -310,7 +300,6 @@ describe("WalletVote", () => {
 					wallet: new ReadOnlyWallet({
 						...defaultDelegate,
 						rank: 1,
-						username: "arkx",
 					}),
 				},
 				{
@@ -318,7 +307,6 @@ describe("WalletVote", () => {
 					wallet: new ReadOnlyWallet({
 						...defaultDelegate,
 						rank: 2,
-						username: "arky",
 					}),
 				},
 			];
@@ -346,14 +334,12 @@ describe("WalletVote", () => {
 					amount: 0,
 					wallet: new ReadOnlyWallet({
 						...defaultDelegate,
-						username: "arkx",
 					}),
 				},
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
 						...defaultDelegate,
-						username: "arky",
 					}),
 				},
 			];
@@ -382,14 +368,12 @@ describe("WalletVote", () => {
 					wallet: new ReadOnlyWallet({
 						...defaultDelegate,
 						rank: 1,
-						username: "arkx",
 					}),
 				},
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
 						...defaultDelegate,
-						username: "arky",
 					}),
 				},
 			];
@@ -424,7 +408,6 @@ describe("WalletVote", () => {
 						...defaultDelegate,
 						isDelegate: true,
 						rank: 1,
-						username: "arkx",
 					}),
 				},
 				{
@@ -433,7 +416,6 @@ describe("WalletVote", () => {
 						...defaultDelegate,
 						isDelegate: true,
 						isResignedDelegate: true,
-						username: "arky",
 					}),
 				},
 			];
@@ -464,7 +446,6 @@ describe("WalletVote", () => {
 					wallet: new ReadOnlyWallet({
 						...defaultDelegate,
 						isDelegate: true,
-						username: "arkx",
 					}),
 				},
 				{
@@ -473,7 +454,6 @@ describe("WalletVote", () => {
 						...defaultDelegate,
 						isDelegate: true,
 						isResignedDelegate: true,
-						username: "arky",
 					}),
 				},
 			];
@@ -505,7 +485,6 @@ describe("WalletVote", () => {
 						...defaultDelegate,
 						isDelegate: true,
 						rank: 1,
-						username: "arkx",
 					}),
 				},
 				{
@@ -513,7 +492,6 @@ describe("WalletVote", () => {
 					wallet: new ReadOnlyWallet({
 						...defaultDelegate,
 						isDelegate: true,
-						username: "arky",
 					}),
 				},
 				{
@@ -522,7 +500,6 @@ describe("WalletVote", () => {
 						...defaultDelegate,
 						isDelegate: true,
 						isResignedDelegate: true,
-						username: "arkz",
 					}),
 				},
 			];
@@ -555,7 +532,6 @@ describe("WalletVote", () => {
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
 					rank: 1,
-					username: "arkx",
 				}),
 			},
 			{
@@ -563,7 +539,6 @@ describe("WalletVote", () => {
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
 					rank: 2,
-					username: "arky",
 				}),
 			},
 		];
@@ -610,7 +585,6 @@ describe("WalletVote", () => {
 					...defaultDelegate,
 					isDelegate: true,
 					isResignedDelegate: true,
-					username: "arky",
 				}),
 			},
 			{
@@ -619,7 +593,6 @@ describe("WalletVote", () => {
 					...defaultDelegate,
 					isDelegate: true,
 					isResignedDelegate: true,
-					username: "arky",
 				}),
 			},
 		];
