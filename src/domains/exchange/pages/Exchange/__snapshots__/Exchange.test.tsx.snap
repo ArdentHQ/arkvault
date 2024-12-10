@@ -616,11 +616,11 @@ exports[`Exchange > should render empty 1`] = `
             class="w-full"
           >
             <div
-              class="flex h-[3.25rem] w-full flex-row gap-6 css-1uz5ade"
+              class="tab-list inline-flex items-stretch justify-start"
             >
               <button
                 aria-selected="true"
-                class="ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0 mr-6 css-0 tab-button"
+                class="tab-button ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0 mr-6"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -633,7 +633,7 @@ exports[`Exchange > should render empty 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0 css-0 tab-button"
+                class="tab-button ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
@@ -1291,11 +1291,11 @@ exports[`Exchange > should render with exchanges 1`] = `
             class="w-full"
           >
             <div
-              class="flex h-[3.25rem] w-full flex-row gap-6 css-1uz5ade"
+              class="tab-list inline-flex items-stretch justify-start"
             >
               <button
                 aria-selected="true"
-                class="ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0 mr-6 css-0 tab-button"
+                class="tab-button ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0 mr-6"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -1308,7 +1308,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0 css-0 tab-button"
+                class="tab-button ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"

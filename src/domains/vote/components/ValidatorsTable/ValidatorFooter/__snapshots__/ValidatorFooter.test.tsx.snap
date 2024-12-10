@@ -22,7 +22,7 @@ exports[`ValidatorFooter > should render 1`] = `
               class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
             >
               <div
-                class="hidden sm:block css-teg3sp"
+                class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
               >
                 Address
               </div>
@@ -71,14 +71,13 @@ exports[`ValidatorFooter > should render 1`] = `
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Votes
                 </div>
                 <div
-                  class="css-14p20u5"
+                  class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                   data-testid="DelegateTable__footer--votes"
-                  disabled=""
                 >
                   <div
                     class="flex items-center justify-start md:justify-end"
@@ -97,14 +96,13 @@ exports[`ValidatorFooter > should render 1`] = `
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Unvotes
                 </div>
                 <div
-                  class="css-14p20u5"
+                  class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                   data-testid="DelegateTable__footer--unvotes"
-                  disabled=""
                 >
                   <div
                     class="flex items-center justify-start md:justify-end"
@@ -123,12 +121,12 @@ exports[`ValidatorFooter > should render 1`] = `
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Total
                 </div>
                 <div
-                  class="css-1supm6x"
+                  class="leading-5 text-theme-text"
                   data-testid="DelegateTable__footer--total"
                 >
                   <div

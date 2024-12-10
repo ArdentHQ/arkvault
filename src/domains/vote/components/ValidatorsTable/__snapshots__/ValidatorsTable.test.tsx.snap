@@ -5609,7 +5609,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -5658,14 +5658,13 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -5684,14 +5683,13 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -5710,12 +5708,12 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -11363,7 +11361,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -11412,14 +11410,13 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -11438,14 +11435,13 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -11464,12 +11460,12 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -18241,7 +18237,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto w-36"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -18281,12 +18277,12 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
               data-testid="DelegateTable__available-balance"
             >
               <div
-                class="css-teg3sp"
+                class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
               >
                 Available To Vote (100%)
               </div>
               <div
-                class="css-1supm6x"
+                class="leading-5 text-theme-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -18310,14 +18306,13 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -18336,14 +18331,13 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -18362,12 +18356,12 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -25139,7 +25133,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto w-36"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -25179,12 +25173,12 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
               data-testid="DelegateTable__available-balance"
             >
               <div
-                class="css-teg3sp"
+                class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
               >
                 Available To Vote (100%)
               </div>
               <div
-                class="css-1supm6x"
+                class="leading-5 text-theme-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -25208,14 +25202,13 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -25234,14 +25227,13 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -25260,12 +25252,12 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -25954,7 +25946,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -26003,14 +25995,13 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -26029,12 +26020,12 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
@@ -26054,12 +26045,12 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -26747,7 +26738,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -26796,14 +26787,13 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -26822,12 +26812,12 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
@@ -26847,12 +26837,12 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -27540,7 +27530,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -27589,12 +27579,12 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
@@ -27614,14 +27604,13 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -27640,12 +27629,12 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -28333,7 +28322,7 @@ exports[`ValidatorsTable > should render 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -28382,14 +28371,13 @@ exports[`ValidatorsTable > should render 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -28408,14 +28396,13 @@ exports[`ValidatorsTable > should render 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -28434,12 +28421,12 @@ exports[`ValidatorsTable > should render 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -29319,7 +29306,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto w-36"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -29359,12 +29346,12 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
               data-testid="DelegateTable__available-balance"
             >
               <div
-                class="css-teg3sp"
+                class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
               >
                 Available To Vote (100%)
               </div>
               <div
-                class="css-1supm6x"
+                class="leading-5 text-theme-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -29388,14 +29375,13 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -29414,14 +29400,13 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -29440,12 +29425,12 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -30134,7 +30119,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -30183,14 +30168,13 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -30209,12 +30193,12 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
@@ -30234,12 +30218,12 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -30932,7 +30916,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -30981,12 +30965,12 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
@@ -31006,12 +30990,12 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
@@ -31031,12 +31015,12 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -31724,7 +31708,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -31773,12 +31757,12 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
@@ -31798,14 +31782,13 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -31824,12 +31807,12 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -33018,7 +33001,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -33067,14 +33050,13 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -33093,14 +33075,13 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -33119,12 +33100,12 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -34003,7 +33984,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto w-36"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -34043,12 +34024,12 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
               data-testid="DelegateTable__available-balance"
             >
               <div
-                class="css-teg3sp"
+                class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
               >
                 Available To Vote (100%)
               </div>
               <div
-                class="css-1supm6x"
+                class="leading-5 text-theme-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -34072,14 +34053,13 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -34098,14 +34078,13 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -34124,12 +34103,12 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -34818,7 +34797,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -34867,14 +34846,13 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -34893,14 +34871,13 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -34919,12 +34896,12 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -35618,7 +35595,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -35667,12 +35644,12 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
@@ -35692,12 +35669,12 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
@@ -35717,12 +35694,12 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -36410,7 +36387,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -36459,14 +36436,13 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -36485,14 +36461,13 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -36511,12 +36486,12 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -37395,7 +37370,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto w-36"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -37435,12 +37410,12 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
               data-testid="DelegateTable__available-balance"
             >
               <div
-                class="css-teg3sp"
+                class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
               >
                 Available To Vote (100%)
               </div>
               <div
-                class="css-1supm6x"
+                class="leading-5 text-theme-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -37464,14 +37439,13 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -37490,14 +37464,13 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -37516,12 +37489,12 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -38210,7 +38183,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -38259,12 +38232,12 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
@@ -38284,12 +38257,12 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
@@ -38309,12 +38282,12 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -39002,7 +38975,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -39051,14 +39024,13 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -39077,14 +39049,13 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -39103,12 +39074,12 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
@@ -39797,7 +39768,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                 class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
               >
                 <div
-                  class="hidden sm:block css-teg3sp"
+                  class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                 >
                   Address
                 </div>
@@ -39846,14 +39817,13 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Votes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--votes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -39872,14 +39842,13 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Unvotes
                   </div>
                   <div
-                    class="css-14p20u5"
+                    class="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="DelegateTable__footer--unvotes"
-                    disabled=""
                   >
                     <div
                       class="flex items-center justify-start md:justify-end"
@@ -39898,12 +39867,12 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                   class="flex flex-col justify-between sm:text-right"
                 >
                   <div
-                    class="css-teg3sp"
+                    class="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm"
                   >
                     Total
                   </div>
                   <div
-                    class="css-1supm6x"
+                    class="leading-5 text-theme-text"
                     data-testid="DelegateTable__footer--total"
                   >
                     <div

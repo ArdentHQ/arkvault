@@ -1,48 +1,64 @@
-import React from "react";
-import tw, { css, styled } from "twin.macro";
+import React, { forwardRef } from "react";
+import { twMerge } from "tailwind-merge";
+import cn from "classnames";
 
-const Wrapper = styled.label<{ disabled?: boolean; small?: boolean }>`
-	${tw`flex items-center`}
+interface WrapperProperties extends React.HTMLAttributes<HTMLLabelElement> {
+	disabled?: boolean;
+	small?: boolean;
+}
 
-	${({ disabled }) => (disabled ? tw`cursor-not-allowed` : tw`cursor-pointer`)}
+interface HandleProperties extends React.HTMLAttributes<HTMLDivElement> {
+	small?: boolean;
+}
 
-	${({ small }) => (small ? tw`h-3` : tw`h-4`)}
-`;
+interface HandleInnerProperties extends React.HTMLAttributes<HTMLSpanElement> {
+	alwaysOn?: boolean;
+	disabled?: boolean;
+	small?: boolean;
+}
 
-const Input = styled("input", { target: "toggle-input" })`
-	${tw`sr-only`}
-`;
+const Wrapper = ({ disabled, small, ...properties }: WrapperProperties) => (
+	<label
+		{...properties}
+		className={twMerge(
+			"flex items-center",
+			cn({ "cursor-not-allowed": disabled, "cursor-pointer": !disabled, "h-3": small, "h-4": !small }),
+		)}
+	/>
+);
 
-const Handle = styled("div", { target: "toggle-handle" })<{ small?: boolean }>`
-	${tw`inline-flex [height:5px] rounded-full relative bg-theme-primary-100 dark:bg-theme-secondary-800`}
+const Input = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>((props, ref) => (
+	<input {...props} ref={ref} className={twMerge("toggle-input sr-only", props.className)} />
+));
 
-	${({ small }) => (small ? tw`w-6` : tw`[width:30px]`)}
-`;
+Input.displayName = "Input";
 
-const HandleInner = styled.span<{ alwaysOn?: boolean; disabled?: boolean; small?: boolean }>`
-	${tw`absolute rounded-full top-1/2 -translate-y-1/2 transition transition-colors transition-transform ease-in-out duration-200`}
+const Handle = ({ small, ...properties }: HandleProperties) => (
+	<div
+		{...properties}
+		className={twMerge(
+			"toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800",
+			cn({ "w-6": small, "w-[30px]": !small }),
+		)}
+	/>
+);
 
-	${({ alwaysOn, disabled }) =>
-		disabled
-			? tw`bg-theme-primary-100 dark:bg-theme-secondary-800`
-			: css`
-					${alwaysOn ? tw`bg-theme-primary-600` : tw`bg-theme-secondary-400 dark:bg-theme-secondary-600`}
-
-					${Input}:checked ~ ${Handle} & {
-						${tw`translate-x-full bg-theme-primary-600`}
-					}
-
-					${Input}:hover ~ ${Handle} & {
-						${tw`shadow-outline`}
-					}
-
-					${Input}:focus ~ ${Handle} & {
-						${tw`shadow-outline`}
-					}
-				`}
-
-	${({ small }) => (small ? tw`w-3 h-3` : tw`w-4 h-4`)}
-`;
+const HandleInner = ({ alwaysOn, disabled, small, ...properties }: HandleInnerProperties) => (
+	<span
+		{...properties}
+		className={twMerge(
+			"absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out",
+			cn({
+				"bg-theme-primary-100 dark:bg-theme-secondary-800": disabled,
+				"bg-theme-primary-600": !disabled && alwaysOn,
+				"bg-theme-secondary-400 dark:bg-theme-secondary-600": !disabled && !alwaysOn,
+				"h-3 w-3": small,
+				"h-4 w-4": !small,
+				"handle-inner": !disabled,
+			}),
+		)}
+	/>
+);
 
 type ToggleProperties = { alwaysOn?: boolean; disabled?: boolean; small?: boolean } & React.InputHTMLAttributes<any>;
 
