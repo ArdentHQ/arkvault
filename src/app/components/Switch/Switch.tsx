@@ -5,10 +5,14 @@ import { Toggle } from "@/app/components/Toggle";
 import { Size } from "@/types";
 import { twMerge } from "tailwind-merge";
 
-
-const SwitchText = ({ size, selected, disabled, ...props}: SwitchTextType & React.HTMLAttributes<HTMLButtonElement>) => {
-	return <button {...props} className={twMerge(getSwitchTextStyles({size, selected, disabled}))} />;
-}
+const SwitchText = ({
+	size,
+	selected,
+	disabled,
+	...props
+}: SwitchTextType & React.HTMLAttributes<HTMLButtonElement>) => (
+	<button {...props} className={twMerge(getSwitchTextStyles({ disabled, selected, size }))} />
+);
 
 export interface SwitchOption<TValue = string> {
 	label: string;

@@ -2,7 +2,7 @@ import React, { forwardRef, useMemo } from "react";
 import { TabContext, TabId, useTab } from "./useTab";
 import { useTheme } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
-import cn from 'classnames';
+import cn from "classnames";
 
 interface TabsProperties {
 	id?: string;
@@ -42,19 +42,11 @@ interface TabProperties {
 	className?: string;
 }
 
-const TabButton = forwardRef<HTMLButtonElement, React.HTMLProps<HTMLButtonElement>>((properties, ref) => {
-    return (
-        <button
-            {...properties}
-            ref={ref}
-            type="button"
-            className={twMerge("tab-button", properties.className)}
-        />
-    );
-});
+const TabButton = forwardRef<HTMLButtonElement, React.HTMLProps<HTMLButtonElement>>((properties, ref) => (
+	<button {...properties} ref={ref} type="button" className={twMerge("tab-button", properties.className)} />
+));
 
 TabButton.displayName = "TabButton";
-
 
 type EventType = React.KeyboardEvent<HTMLButtonElement> & { target: Element };
 
@@ -88,9 +80,9 @@ const onKeyDown = {
 	},
 };
 
-const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => {
-	return <div {...properties} className={twMerge("[&::-webkit-scrollbar]:hidden", properties.className)} />;
-}
+const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => (
+	<div {...properties} className={twMerge("[&::-webkit-scrollbar]:hidden", properties.className)} />
+);
 
 export const TabScroll = ({ children }) => {
 	const { isDarkMode } = useTheme();
@@ -163,11 +155,20 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 
 Tab.displayName = "Tab";
 
-export const TabList = ({ noBackground, ...properties}: React.HTMLProps<HTMLDivElement> & {noBackground?: boolean}) => {
-	return <div {...properties} className={twMerge("inline-flex items-stretch justify-start tab-list", cn({
-		"px-2 rounded-xl bg-theme-secondary-100 dark:bg-theme-secondary-background": !noBackground,
-	}))} />;
-}
+export const TabList = ({
+	noBackground,
+	...properties
+}: React.HTMLProps<HTMLDivElement> & { noBackground?: boolean }) => (
+	<div
+		{...properties}
+		className={twMerge(
+			"tab-list inline-flex items-stretch justify-start",
+			cn({
+				"rounded-xl bg-theme-secondary-100 px-2 dark:bg-theme-secondary-background": !noBackground,
+			}),
+		)}
+	/>
+);
 
 type TabPanelProperties = {
 	children: React.ReactNode;

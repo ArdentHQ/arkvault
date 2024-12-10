@@ -15,13 +15,16 @@ interface SelectProfileImageProperties {
 	onSelect: (raw: string) => void;
 }
 
-const UploadButtonWrapper = ({...props}: React.HTMLAttributes<HTMLDivElement>) => {
-	return <div {...props} className="h-full w-full upload-button-wrapper" />;
-}
+const UploadButtonWrapper = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+	<div {...props} className="upload-button-wrapper h-full w-full" />
+);
 
-const ProfileImageStyled = ({...props}: React.HTMLAttributes<HTMLDivElement>) => {
-	return <div {...props} className="relative inline-flex items-center justify-center rounded-md overflow-hidden cursor-pointer h-full focus-within:ring-2 focus-within:ring-theme-primary-400 after:content-[''] after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:absolute after:inset-1 after:rounded-full profile-image" />;
-}
+const ProfileImageStyled = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+	<div
+		{...props}
+		className="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
+	/>
+);
 
 const ALLOWED_EXTENSIONS = ["png", "jpg", "jpeg", "bmp"];
 
