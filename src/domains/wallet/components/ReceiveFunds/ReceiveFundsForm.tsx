@@ -4,8 +4,9 @@ import { useTranslation } from "react-i18next";
 
 import { FormField, FormHelperText, FormLabel } from "@/app/components/Form";
 import { InputCurrency } from "@/app/components/Input";
+import { Networks } from "@ardenthq/sdk";
 
-export const ReceiveFundsForm = () => {
+export const ReceiveFundsForm = ({network}: {network: Networks.Network}) => {
 	const { t } = useTranslation();
 
 	const form = useFormContext();
@@ -21,6 +22,7 @@ export const ReceiveFundsForm = () => {
 				<FormField name="amount">
 					<FormLabel label={t("COMMON.AMOUNT")} optional />
 					<InputCurrency
+						network={network}
 						data-testid="ReceiveFundsForm__amount"
 						placeholder={t("COMMON.AMOUNT")}
 						className="pr-20"

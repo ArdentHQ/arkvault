@@ -97,6 +97,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const renderAdvanced = () => (
 			<InputFeeAdvanced
+				network={network}
 				convert={convert}
 				disabled={disabled || loading}
 				exchangeTicker={exchangeTicker!}
