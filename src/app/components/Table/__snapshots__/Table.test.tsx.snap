@@ -34,28 +34,31 @@ exports[`Table > should render 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,28 +83,31 @@ exports[`Table > should render 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -126,28 +132,31 @@ exports[`Table > should render 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -213,28 +222,31 @@ exports[`Table > should render empty rows if template is not provided 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -259,28 +271,31 @@ exports[`Table > should render empty rows if template is not provided 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -305,28 +320,31 @@ exports[`Table > should render empty rows if template is not provided 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -377,28 +395,31 @@ exports[`Table > should render empty table if pagination returns undefined rows 
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -423,28 +444,31 @@ exports[`Table > should render empty table if pagination returns undefined rows 
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -469,28 +493,31 @@ exports[`Table > should render empty table if pagination returns undefined rows 
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -539,28 +566,31 @@ exports[`Table > should split rows 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -585,28 +615,31 @@ exports[`Table > should split rows 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -631,28 +664,31 @@ exports[`Table > should split rows 1`] = `
                 class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
               >
                 <div
-                  class="transition-transform rotate-180 css-15txs7d"
-                  height="10"
+                  class="transition-transform rotate-180"
                   role="img"
-                  width="10"
                 >
-                  <svg
-                    id="chevron-down-small"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 10px; width: 10px;"
                   >
-                    <path
-                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="chevron-down-small"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>

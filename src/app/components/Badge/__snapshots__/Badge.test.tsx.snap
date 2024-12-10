@@ -15,11 +15,11 @@ exports[`Badge > should render with icon 1`] = `
   <span
     class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -30,11 +30,11 @@ exports[`Badge > should render with position 'bottom' 1`] = `
   <span
     class="absolute right-0 h-5 w-5 translate-x-1/2 transform bottom-1 translate-y-full shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -45,11 +45,11 @@ exports[`Badge > should render with position 'bottom-left' 1`] = `
   <span
     class="absolute right-0 h-5 w-5 transform bottom-0 left-0 -translate-x-1/2 translate-y-1/2 shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -60,11 +60,11 @@ exports[`Badge > should render with position 'bottom-right' 1`] = `
   <span
     class="absolute h-5 w-5 transform bottom-0 right-0 translate-x-1/2 translate-y-1/2 shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -75,11 +75,11 @@ exports[`Badge > should render with position 'left' 1`] = `
   <span
     class="absolute bottom-0 right-0 h-5 w-5 translate-y-1/2 transform left-1 -translate-x-full shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -90,11 +90,11 @@ exports[`Badge > should render with position 'right' 1`] = `
   <span
     class="absolute bottom-0 h-5 w-5 translate-y-1/2 transform right-1 translate-x-full shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -105,11 +105,11 @@ exports[`Badge > should render with position 'top' 1`] = `
   <span
     class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 transform shadow-[0_0_0_5px_theme-background] top-1 -translate-y-full flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -120,11 +120,11 @@ exports[`Badge > should render with position 'top-left' 1`] = `
   <span
     class="absolute bottom-0 right-0 h-5 w-5 transform left-0 top-0 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -135,11 +135,11 @@ exports[`Badge > should render with position 'top-right' 1`] = `
   <span
     class="absolute bottom-0 h-5 w-5 transform right-0 top-0 -translate-y-1/2 translate-x-1/2 shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -150,11 +150,11 @@ exports[`Badge > should render with size 'lg' 1`] = `
   <span
     class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 transform h-6 w-6 shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>
@@ -165,11 +165,11 @@ exports[`Badge > should render with size 'md' 1`] = `
   <span
     class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle"
   >
-    <div
-      class="css-15txs7d"
-      height="10"
-      width="10"
-    />
+    <div>
+      <div
+        style="height: 10px; width: 10px;"
+      />
+    </div>
     <span />
   </span>
 </div>

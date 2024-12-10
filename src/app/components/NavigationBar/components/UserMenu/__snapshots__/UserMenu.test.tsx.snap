@@ -12,7 +12,7 @@ exports[`UserMenu > should render with regular image 1`] = `
       data-testid="UserMenu"
     >
       <div
-        class="shrink-0 css-1n9jllj"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -42,7 +42,7 @@ exports[`UserMenu > should render with svg image 1`] = `
       data-testid="UserMenu"
     >
       <div
-        class="shrink-0 css-1n9jllj"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div

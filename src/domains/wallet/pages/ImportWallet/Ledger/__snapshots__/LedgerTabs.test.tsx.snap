@@ -53,91 +53,93 @@ exports[`LedgerTabs > should render connection step 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="css-h1kfx5"
                   data-testid="icon-SelectNetworkLightGreen"
-                  height="24"
-                  width="24"
                 >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    style="height: 24px; width: 24px;"
                   >
-                    <path
-                      d="M14 1.50781C9.02944 1.50781 5 5.53725 5 10.5078L9.5 10.5C9.5 10.8333 9.6 11.8 10 13C10.5 14.5 11 15.2538 13 15.2538H21.6484C22.5052 13.876 23 12.2497 23 10.5078C23 5.53725 18.9706 1.50781 14 1.50781Z"
-                      fill="#E2F0E6"
-                    />
-                    <path
-                      d="M5 10.5078C5 5.53725 9.02944 1.50781 14 1.50781C18.9706 1.50781 23 5.53725 23 10.5078C23 13.6332 21.4069 16.3865 18.9884 18"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M11.7969 1.78125C10.5969 3.58125 9.79688 6.90439 9.79688 10.5044C9.79688 11.2643 9.83252 12.0125 9.90006 12.7369"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M5 10.5078H23"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M12.5 15.2031H21.6816"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M6.45312 5.60938H21.5539"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M16.2031 1.78125C17.4031 3.58125 18.1031 6.81041 18.1031 10.5104C18.1031 12.9777 17.7919 15.2356 17.2286 17"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M9.25 16.2188H1.75"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M4.16667 18.6146L1.75 16.1979L4.16667 13.7812"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M8.75 20.1797L16.25 20.1797"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M13.8333 17.7839L16.25 20.2005L13.8333 22.6172"
-                      stroke="#289548"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14 1.50781C9.02944 1.50781 5 5.53725 5 10.5078L9.5 10.5C9.5 10.8333 9.6 11.8 10 13C10.5 14.5 11 15.2538 13 15.2538H21.6484C22.5052 13.876 23 12.2497 23 10.5078C23 5.53725 18.9706 1.50781 14 1.50781Z"
+                        fill="#E2F0E6"
+                      />
+                      <path
+                        d="M5 10.5078C5 5.53725 9.02944 1.50781 14 1.50781C18.9706 1.50781 23 5.53725 23 10.5078C23 13.6332 21.4069 16.3865 18.9884 18"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M11.7969 1.78125C10.5969 3.58125 9.79688 6.90439 9.79688 10.5044C9.79688 11.2643 9.83252 12.0125 9.90006 12.7369"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M5 10.5078H23"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M12.5 15.2031H21.6816"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M6.45312 5.60938H21.5539"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M16.2031 1.78125C17.4031 3.58125 18.1031 6.81041 18.1031 10.5104C18.1031 12.9777 17.7919 15.2356 17.2286 17"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M9.25 16.2188H1.75"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M4.16667 18.6146L1.75 16.1979L4.16667 13.7812"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M8.75 20.1797L16.25 20.1797"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M13.8333 17.7839L16.25 20.2005L13.8333 22.6172"
+                        stroke="#289548"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 <h1
                   class="mb-0 text-2xl leading-[29px]"
@@ -155,7 +157,7 @@ exports[`LedgerTabs > should render connection step 1`] = `
             </div>
           </div>
           <fieldset
-            class="mt-4 css-ea0il3"
+            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-4"
           >
             <div
               data-testid="SelectNetwork"
@@ -165,7 +167,7 @@ exports[`LedgerTabs > should render connection step 1`] = `
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

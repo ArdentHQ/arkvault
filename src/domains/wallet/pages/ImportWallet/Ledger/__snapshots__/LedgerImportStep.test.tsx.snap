@@ -15,46 +15,49 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="text-theme-success-100 dark:text-theme-success-900 css-mydt5v"
-            height="22"
-            width="22"
+            class="text-theme-success-100 dark:text-theme-success-900"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 22px; width: 22px;"
             >
-              <circle
-                cx="12"
-                cy="12.5"
-                fill="currentColor"
-                r="11"
-                stroke="#289548"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3912 8.76465L11.0312 13.2446"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 24 25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12.5"
+                  fill="currentColor"
+                  r="11"
+                  stroke="#289548"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M14.3912 8.76465L11.0312 13.2446"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -109,28 +112,29 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               <div
                 class="flex items-center space-x-2"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="pencil"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <path
-                      d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="pencil"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 <span>
                   Edit
@@ -168,33 +172,36 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -244,28 +251,29 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               <div
                 class="flex items-center space-x-2"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="pencil"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <path
-                      d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="pencil"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 <span>
                   Edit
@@ -303,33 +311,36 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -380,46 +391,49 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="text-theme-success-100 dark:text-theme-success-900 css-mydt5v"
-            height="22"
-            width="22"
+            class="text-theme-success-100 dark:text-theme-success-900"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 22px; width: 22px;"
             >
-              <circle
-                cx="12"
-                cy="12.5"
-                fill="currentColor"
-                r="11"
-                stroke="#289548"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3912 8.76465L11.0312 13.2446"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 24 25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12.5"
+                  fill="currentColor"
+                  r="11"
+                  stroke="#289548"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M14.3912 8.76465L11.0312 13.2446"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -487,28 +501,31 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                     >
                       <div
-                        class="transition-transform rotate-180 css-15txs7d"
-                        height="10"
+                        class="transition-transform rotate-180"
                         role="img"
-                        width="10"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -533,28 +550,31 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                     >
                       <div
-                        class="transition-transform rotate-180 css-15txs7d"
-                        height="10"
+                        class="transition-transform rotate-180"
                         role="img"
-                        width="10"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -609,33 +629,36 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                            height="16"
-                            width="16"
+                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                           >
-                            <svg
-                              id="copy"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="copy"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                />
-                                <path
-                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </button>
                       </div>
@@ -662,28 +685,29 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-1cn0px"
-                          height="14"
-                          width="14"
-                        >
-                          <svg
-                            id="pencil"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 14px; width: 14px;"
                           >
-                            <path
-                              d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="pencil"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -735,33 +759,36 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                            height="16"
-                            width="16"
+                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                           >
-                            <svg
-                              id="copy"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="copy"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                />
-                                <path
-                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </button>
                       </div>
@@ -788,28 +815,29 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       <div
                         class="flex items-center space-x-2"
                       >
-                        <div
-                          class="css-1cn0px"
-                          height="14"
-                          width="14"
-                        >
-                          <svg
-                            id="pencil"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                        <div>
+                          <div
+                            style="height: 14px; width: 14px;"
                           >
-                            <path
-                              d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="pencil"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -840,46 +868,49 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="text-theme-success-100 dark:text-theme-success-900 css-mydt5v"
-            height="22"
-            width="22"
+            class="text-theme-success-100 dark:text-theme-success-900"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 22px; width: 22px;"
             >
-              <circle
-                cx="12"
-                cy="12.5"
-                fill="currentColor"
-                r="11"
-                stroke="#289548"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3912 8.76465L11.0312 13.2446"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 24 25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12.5"
+                  fill="currentColor"
+                  r="11"
+                  stroke="#289548"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M14.3912 8.76465L11.0312 13.2446"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -942,33 +973,36 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1041,28 +1075,29 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="pencil"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <path
-                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="pencil"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <span>
                         Edit
@@ -1095,46 +1130,49 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="text-theme-success-100 dark:text-theme-success-900 css-mydt5v"
-            height="22"
-            width="22"
+            class="text-theme-success-100 dark:text-theme-success-900"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 22px; width: 22px;"
             >
-              <circle
-                cx="12"
-                cy="12.5"
-                fill="currentColor"
-                r="11"
-                stroke="#289548"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3912 8.76465L11.0312 13.2446"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 24 25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12.5"
+                  fill="currentColor"
+                  r="11"
+                  stroke="#289548"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M14.3912 8.76465L11.0312 13.2446"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -1200,33 +1238,36 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1296,28 +1337,29 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="pencil"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="pencil"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                     <span>
                       Edit
