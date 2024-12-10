@@ -19,7 +19,7 @@ const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionDat
 	return isMusig ? transaction.sender() === transaction.recipient() : false;
 };
 
-const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
+const calculateReturnedAmount = function(transaction: ExtendedTransactionData): number {
 	let returnedAmount = 0;
 
 	if (!transaction.isMultiPayment()) {
@@ -45,27 +45,16 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 
 	const currency = transaction.wallet().currency();
 
-	const returnedAmount = calculateReturnedAmount(transaction);
-
-	const isReturnMusigTx = isReturnUnconfirmedMusigTransaction(transaction);
-
-	const amount = isReturnMusigTx ? transaction.amount() - transaction.fee() : transaction.total() - returnedAmount;
-
-	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
-	const isMusigTransfer = [usesMultiSignature, !transaction.isMultiSignatureRegistration()].every(Boolean);
-
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
-
 	return (
 		<AmountLabel
-			value={amount}
-			isNegative={isNegative}
+			value={transaction.amount()}
+			isNegative={transaction.isSent()}
 			ticker={transaction.wallet().currency()}
-			hideSign={transaction.isReturn() || isReturnMusigTx}
+			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
-				returnedAmount
-					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
+				transaction.total() && transaction.isMultiPayment()
+					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: transaction.total(), currency })
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
