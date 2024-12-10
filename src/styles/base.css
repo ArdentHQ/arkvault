@@ -155,3 +155,120 @@ main {
   .tooltip-wrapper::after {
 	@apply border-t-8 border-t-theme-secondary-900 dark:border-t-theme-secondary-800
   }
+
+  .upload-button-wrapper button {
+	@apply h-full w-full focus:ring-0
+  }
+
+  .upload-button-wrapper button:not(:focus):hover:enabled {
+	@apply bg-theme-secondary-900 dark:bg-theme-secondary-600 opacity-85;
+  }
+
+  .profile-image:hover .upload-button-overlay {
+	@apply opacity-100
+  }
+
+  .toggle-input:checked ~ .toggle-handle .handle-inner {
+	@apply translate-x-full bg-theme-primary-600
+  }
+
+  .toggle-input:hover ~ .toggle-handle .handle-inner {
+	@apply shadow-outline
+  }
+
+  .toggle-input:focus ~ .toggle-handle .handle-inner {
+	@apply shadow-outline
+  }
+
+  .select-options-list {
+	@apply top-full py-2.5 sm:py-6 overflow-y-auto max-h-64 bg-theme-background dark:bg-theme-secondary-800 rounded-lg shadow-xl outline-none
+  }
+
+  .select-options-list .select-list-option-group:not(:last-child) {
+	@apply mb-3
+  }
+
+  .select-options-list .select-list-option-head,
+  .select-options-list .select-list-option {
+	@apply relative px-4 sm:px-10 border-0 
+  }
+ 
+  .select-options-list .select-list-option-head__label {
+	@apply text-xs font-bold text-theme-secondary-500 dark:text-theme-secondary-700 pb-1 uppercase select-none;
+  }
+ 
+  .select-options-list .select-list-option-head + .select-list-option .select-list-option__label {
+	@apply transition-colors duration-200 border-t !border-transparent;
+  }
+ 
+  .select-options-list .select-list-option {
+	@apply text-theme-secondary-900 dark:text-theme-secondary-200 cursor-pointer transition-colors duration-200;
+  }
+ 
+  .select-options-list .select-list-option__label {
+	@apply py-4;
+  }
+ 
+  .select-options-list .select-list-option:not(:first-child) .select-list-option__label {
+	@apply transition-colors duration-200 border-t border-theme-secondary-300 dark:border-theme-secondary-700;
+  }
+ 
+  .select-options-list .select-list-option.is-highlighted {
+	@apply bg-theme-secondary-100 dark:bg-theme-secondary-900 z-10;
+  }
+ 
+  .select-options-list .select-list-option.is-highlighted .select-list-option__label {
+	@apply border-theme-secondary-100 dark:border-theme-secondary-900;
+  }
+ 
+  .select-options-list .select-list-option.is-highlighted + .select-list-option .select-list-option__label {
+	@apply border-transparent;
+  }
+
+  .select-options-list .select-list-option.is-selected {
+    @apply bg-theme-primary-50 dark:bg-black text-theme-primary-600 font-semibold z-20;
+  }
+
+  .select-options-list .select-list-option.is-selected .select-list-option__label {
+    @apply border-theme-primary-50 dark:border-black;
+  }
+
+  .select-options-list .select-list-option.is-selected:before {
+    @apply content-[''] block absolute w-1 h-full inset-y-0 left-0 bg-theme-primary-600;
+  }
+
+  .select-options-list .select-list-option.is-selected + .select-list-option .select-list-option__label {
+    @apply border-transparent;
+  }
+
+  .select-options-list .select-list-option.is-empty {
+    @apply cursor-default;
+  }
+
+  .tab-list > .tab-button {
+	@apply relative font-semibold border-t-2 border-b-2 border-transparent text-theme-secondary-text transition-colors ease-in-out duration-300 focus:outline-none focus:text-theme-text hover:text-theme-text
+  }
+
+  .tab-list > .tab-button[aria-selected="true"] {
+	@apply text-theme-text border-b-theme-primary-600
+  }
+
+  .tab-list > .tab-button + .tab-button::before {
+	@apply content-[''] h-4 w-px absolute -left-6 top-1/2 -translate-y-1/2 block
+  }
+
+  .add-recipient-wrapper .select-buttons div:first-of-type button {
+	@apply rounded-tr-none rounded-br-none
+  }
+
+  .add-recipient-wrapper .select-buttons div:last-child button {
+	@apply rounded-tl-none rounded-bl-none
+  }
+
+  .add-recipient-wrapper .questionmark svg {
+	@apply fill-theme-primary-100
+  }
+
+  .add-recipient-wrapper .questionmark:hover svg {
+	@apply fill-theme-primary-600
+  }
