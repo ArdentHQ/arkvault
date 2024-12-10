@@ -715,34 +715,32 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   <div
                     class="flex items-center sm:mt-4"
                   >
-                    <span
-                      class="css-r1fv2b"
-                      role="button"
+                    <button
+                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
                     >
                       JSON
-                    </span>
+                    </button>
                     <label
-                      class="css-xklln0"
+                      class="flex items-center cursor-pointer h-4"
                     >
                       <input
                         checked=""
-                        class="css-1r71f0z toggle-input"
+                        class="toggle-input sr-only"
                         type="checkbox"
                       />
                       <div
-                        class="css-d8rk4r toggle-handle"
+                        class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                       >
                         <span
-                          class="css-1sm0bvz"
+                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-4 w-4"
                         />
                       </div>
                     </label>
-                    <span
-                      class="css-1ru5kr2"
-                      role="button"
+                    <button
+                      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
                     >
                       Manual
-                    </span>
+                    </button>
                   </div>
                   <div
                     class="mt-4 space-y-5"
@@ -1583,34 +1581,32 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   <div
                     class="flex items-center sm:mt-4"
                   >
-                    <span
-                      class="css-r1fv2b"
-                      role="button"
+                    <button
+                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
                     >
                       JSON
-                    </span>
+                    </button>
                     <label
-                      class="css-xklln0"
+                      class="flex items-center cursor-pointer h-4"
                     >
                       <input
                         checked=""
-                        class="css-1r71f0z toggle-input"
+                        class="toggle-input sr-only"
                         type="checkbox"
                       />
                       <div
-                        class="css-d8rk4r toggle-handle"
+                        class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                       >
                         <span
-                          class="css-1sm0bvz"
+                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-4 w-4"
                         />
                       </div>
                     </label>
-                    <span
-                      class="css-1ru5kr2"
-                      role="button"
+                    <button
+                      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
                     >
                       Manual
-                    </span>
+                    </button>
                   </div>
                   <div
                     class="mt-4 space-y-5"
