@@ -732,7 +732,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                       >
                         <span
-                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-4 w-4"
+                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-4 w-4 handle-inner"
                         />
                       </div>
                     </label>
@@ -1598,7 +1598,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                       >
                         <span
-                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-4 w-4"
+                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-4 w-4 handle-inner"
                         />
                       </div>
                     </label>
