@@ -1,7 +1,6 @@
 import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import tw, { styled } from "twin.macro";
 
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -16,35 +15,13 @@ interface SelectProfileImageProperties {
 	onSelect: (raw: string) => void;
 }
 
-const UploadButtonWrapper = styled.div`
-	${tw`h-full w-full`}
+const UploadButtonWrapper = ({...props}: React.HTMLAttributes<HTMLDivElement>) => {
+	return <div {...props} className="h-full w-full upload-button-wrapper" />;
+}
 
-	button {
-		${tw`h-full w-full`}
-		${tw`focus:ring-0!`}
-
-		&:not(:focus):hover:enabled {
-			${tw`bg-theme-secondary-900 dark:bg-theme-secondary-600 opacity-85`};
-		}
-	}
-`;
-
-const ProfileImageStyled = styled.div`
-	& {
-		${tw`relative inline-flex items-center justify-center rounded-md overflow-hidden cursor-pointer h-full`};
-		${tw`focus-within:(ring-2 ring-theme-primary-400)`};
-	}
-
-	&:after {
-		content: "";
-		box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.4);
-		${tw`absolute inset-1 rounded-full`};
-	}
-
-	&:hover .upload-button-overlay {
-		${tw`opacity-100`};
-	}
-`;
+const ProfileImageStyled = ({...props}: React.HTMLAttributes<HTMLDivElement>) => {
+	return <div {...props} className="relative inline-flex items-center justify-center rounded-md overflow-hidden cursor-pointer h-full focus-within:ring-2 focus-within:ring-theme-primary-400 after:content-[''] after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:absolute after:inset-1 after:rounded-full profile-image" />;
+}
 
 const ALLOWED_EXTENSIONS = ["png", "jpg", "jpeg", "bmp"];
 
