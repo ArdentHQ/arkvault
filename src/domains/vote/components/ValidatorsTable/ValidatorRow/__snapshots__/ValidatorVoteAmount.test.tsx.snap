@@ -1,0 +1,215 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          class="w-68"
+          data-testid="ValidatorVoteAmount"
+        >
+          <div
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
+          >
+            <div
+              class="relative flex-1 px-3"
+            >
+              <div
+                class="relative"
+              >
+                <div
+                  class="css-y7w7zz"
+                >
+                  <div
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-invalid="true"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12 css-1937ogs"
+                      data-testid="InputCurrency"
+                      name="amount"
+                      placeholder="0"
+                      type="text"
+                      value="0"
+                    />
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                    data-testid="Input__addon-end"
+                  >
+                    <span
+                      data-errortext="Minimum voting amount must be at least 10 ARK"
+                      data-testid="Input__error"
+                    >
+                      <div
+                        class="text-theme-danger-500 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="circle-exclamation-mark"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <span
+                class="absolute inset-y-0 flex items-center space-x-3 right-15"
+                data-testid="DelegateVoteAmount__ticker"
+              >
+                <span
+                  class="text-theme-secondary-400 dark:text-theme-secondary-700"
+                >
+                  ARK
+                </span>
+                <div
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
+                  type="vertical"
+                />
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          class="w-68"
+          data-testid="ValidatorVoteAmount"
+        >
+          <div
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
+          >
+            <div
+              class="relative flex-1 px-3"
+            >
+              <div
+                class="relative"
+              >
+                <div
+                  class="css-y7w7zz"
+                >
+                  <div
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-invalid="true"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12 css-1937ogs"
+                      data-testid="InputCurrency"
+                      name="amount"
+                      placeholder="0"
+                      type="text"
+                      value="0"
+                    />
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                    data-testid="Input__addon-end"
+                  >
+                    <span
+                      data-errortext="Minimum voting amount must be at least 10 ARK"
+                      data-testid="Input__error"
+                    >
+                      <div
+                        class="text-theme-danger-500 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="circle-exclamation-mark"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <span
+                class="absolute inset-y-0 flex items-center space-x-3 right-15"
+                data-testid="DelegateVoteAmount__ticker"
+              >
+                <span
+                  class="text-theme-secondary-400 dark:text-theme-secondary-700"
+                >
+                  ARK
+                </span>
+                <div
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
+                  type="vertical"
+                />
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

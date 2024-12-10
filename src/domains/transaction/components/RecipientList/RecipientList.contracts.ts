@@ -7,6 +7,7 @@ export interface RecipientItem {
 	alias?: string;
 	amount?: number;
 	isDelegate?: boolean;
+	isContract?: boolean;
 }
 
 export interface RecipientListItemProperties {

@@ -29,6 +29,7 @@ import Cloud from "./cloud.svg?react";
 import Code from "./code.svg?react";
 import Copy from "./copy.svg?react";
 import CopyKey from "./copy-key.svg?react";
+import Contract from "./contract.svg?react";
 import CopySuccess from "./copy-success.svg?react";
 import Cross from "./cross.svg?react";
 import Download from "./download.svg?react";
@@ -116,6 +117,7 @@ import PersonLight from "./person-light.svg?react";
 import PersonDark from "./person-dark.svg?react";
 import PersonDarkGreen from "./person-dark-green.svg?react";
 import PersonLightGreen from "./person-light-green.svg?react";
+import CircleMinus from "./circle-minus.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -138,6 +140,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	CircleCross,
 	CircleExclamationMark,
 	CircleInfo,
+	CircleMinus,
 	CircleQuestionMark,
 	Clock,
 	ClockError,
@@ -147,6 +150,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Code,
 	Completed,
 	ConfirmYourPassphrase,
+	Contract,
 	Copy,
 	CopyKey,
 	CopySuccess,

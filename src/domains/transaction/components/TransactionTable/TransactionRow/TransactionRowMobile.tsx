@@ -3,9 +3,7 @@ import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { TransactionRowMobileSkeleton } from "./TransactionRowMobileSkeleton";
 import { TransactionRowProperties } from "./TransactionRow.contracts";
-import { Link } from "@/app/components/Link";
 import { TableRow } from "@/app/components/Table";
-import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { TimeAgo } from "@/app/components/TimeAgo";
@@ -13,6 +11,7 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
+import { TransactionRowId } from "./TransactionRowId";
 
 export const TransactionRowMobile = memo(
 	({
@@ -38,21 +37,9 @@ export const TransactionRowMobile = memo(
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
 						<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
-							<Link
-								to={transaction.explorerLink()}
-								tooltip={transaction.id()}
-								showExternalIcon={false}
-								isExternal
-								className="text-sm font-semibold"
-							>
-								<TruncateMiddle
-									className="cursor-pointer text-theme-primary-600"
-									text={transaction.id()}
-									maxChars={14}
-									onClick={onClick}
-								/>
-							</Link>
-
+							<div className="max-w-32">
+								<TransactionRowId transaction={transaction} />
+							</div>
 							<div className="flex flex-row items-center">
 								<span
 									className="text-sm font-semibold text-theme-secondary-700 sm:block"
