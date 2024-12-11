@@ -1,4 +1,3 @@
-export * from "./TransactionAmount";
 export * from "./TransactionDetail";
 export * from "./TransactionExplorerLink";
 export * from "./TransactionFee";
