@@ -70,7 +70,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -85,7 +85,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               </div>
             </div>
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -108,7 +108,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -131,7 +131,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -318,7 +318,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -333,7 +333,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               </div>
             </div>
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -356,7 +356,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -379,7 +379,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -557,7 +557,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -572,7 +572,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               </div>
             </div>
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -595,7 +595,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -618,7 +618,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -796,7 +796,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -811,7 +811,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               </div>
             </div>
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded pr-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded pr-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -871,7 +871,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -894,7 +894,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded pr-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded pr-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1110,7 +1110,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1125,7 +1125,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               </div>
             </div>
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1148,7 +1148,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1171,7 +1171,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1354,7 +1354,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1369,7 +1369,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               </div>
             </div>
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1392,7 +1392,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1415,7 +1415,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1598,7 +1598,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1613,7 +1613,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               </div>
             </div>
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1636,7 +1636,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
@@ -1659,7 +1659,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
           >
             <div
-              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
+              class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
               data-testid="AmountLabel__wrapper"
             >
               <div
