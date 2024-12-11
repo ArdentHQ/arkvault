@@ -95,7 +95,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (isContract || (isContractDeployment(transaction) && transaction.type() !== "transfer")) {
+	if (isContract || isContractDeployment(transaction)) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<TransactionRowLabel direction={direction} />
