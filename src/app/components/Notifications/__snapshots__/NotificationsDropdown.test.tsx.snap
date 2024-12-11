@@ -559,7 +559,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    0.71370675 DARK
+                                    1 DARK
                                   </span>
                                 </div>
                               </div>
