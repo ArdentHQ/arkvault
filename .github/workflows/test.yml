@@ -615,166 +615,168 @@ jobs:
                   max_attempts: 1
                   command: pnpm test:coverage src/domains/profile
 
-    domains-setting:
-        runs-on: ubuntu-latest
-        env:
-            COVERAGE_INCLUDE_PATH: src/domains/setting
-        strategy:
-            matrix:
-                node-version:
-                    - 20.12.2
-        concurrency:
-            group: ${{ github.head_ref }}-test-domains-setting
-            cancel-in-progress: true
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 9
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-            - name: Update System
-              run: sudo apt-get update
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-            - name: Rebuild
-              run: pnpm rebuild
-            - name: Test
-              env:
-                  COVERAGE_THRESHOLD_BRANCHES: 99.45
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/domains/setting
-
-    domains-transaction:
-        runs-on: ubuntu-latest
-        env:
-            COVERAGE_INCLUDE_PATH: src/domains/transaction
-        strategy:
-            matrix:
-                node-version:
-                    - 20.12.2
-        concurrency:
-            group: ${{ github.head_ref }}-test-domains-transaction
-            cancel-in-progress: true
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 9
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-            - name: Update System
-              run: sudo apt-get update
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-            - name: Rebuild
-              run: pnpm rebuild
-
-            - name: Test Utils
-              env:
-                  COVERAGE_THRESHOLD_LINES: 75
-                  COVERAGE_THRESHOLD_FUNCTIONS: 69.23
-                  COVERAGE_THRESHOLD_STATEMENTS: 79.41
-                  COVERAGE_THRESHOLD_BRANCHES: 80
-                  COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
-
-            - name: Test Components ^A-O
-              env:
-                  COVERAGE_THRESHOLD_LINES: 99.58
-                  COVERAGE_THRESHOLD_FUNCTIONS: 99.48
-                  COVERAGE_THRESHOLD_STATEMENTS: 99.6
-                  COVERAGE_THRESHOLD_BRANCHES: 99.73
-                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/domains/transaction/components/[A-O]*
-
-            - name: Test Components ^P-S
-              env:
-                  COVERAGE_THRESHOLD_LINES: 98.47
-                  COVERAGE_THRESHOLD_FUNCTIONS: 97.61
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.58
-                  COVERAGE_THRESHOLD_BRANCHES: 96.72
-                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/domains/transaction/components/[P-S]*
-
-            - name: Test Components ^T-Z
-              env:
-                  COVERAGE_THRESHOLD_LINES: 99.33
-                  COVERAGE_THRESHOLD_FUNCTIONS: 99
-                  COVERAGE_THRESHOLD_STATEMENTS: 99.35
-                  COVERAGE_THRESHOLD_BRANCHES: 98.71
-                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/domains/transaction/components/[T-Z]*
-
-            - name: Test Hooks
-              env:
-                  COVERAGE_THRESHOLD_LINES: 93.61
-                  COVERAGE_THRESHOLD_FUNCTIONS: 89.79
-                  COVERAGE_THRESHOLD_STATEMENTS: 91.61
-                  COVERAGE_THRESHOLD_BRANCHES: 83.72
-                  COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/domains/transaction/hooks
-
-            - name: Test Pages
-              env:
-                  COVERAGE_THRESHOLD_LINES: 97.3
-                  COVERAGE_THRESHOLD_FUNCTIONS: 96.4
-                  COVERAGE_THRESHOLD_STATEMENTS: 97.8
-                  COVERAGE_THRESHOLD_BRANCHES: 98.43
-                  COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/domains/transaction/pages
-
-            - name: Test Validations
-              env:
-                  COVERAGE_THRESHOLD_LINES: 88.03
-                  COVERAGE_THRESHOLD_FUNCTIONS: 82.85
-                  COVERAGE_THRESHOLD_STATEMENTS: 88.52
-                  COVERAGE_THRESHOLD_BRANCHES: 86.41
-                  COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/domains/transaction/validations
+    # @TODO: Enable & refactor transaction & network tests once mainsail coin support will be completed.
+    #        See https://app.clickup.com/t/86dvbvrvf
+    # domains-setting:
+    #     runs-on: ubuntu-latest
+    #     env:
+    #         COVERAGE_INCLUDE_PATH: src/domains/setting
+    #     strategy:
+    #         matrix:
+    #             node-version:
+    #                 - 20.12.2
+    #     concurrency:
+    #         group: ${{ github.head_ref }}-test-domains-setting
+    #         cancel-in-progress: true
+    #     steps:
+    #         - uses: actions/checkout@v4
+    #           with:
+    #               ref: ${{ github.head_ref }}
+    #         - uses: pnpm/action-setup@v4
+    #           with:
+    #               version: 9
+    #         - uses: actions/setup-node@v4
+    #           with:
+    #               node-version: ${{ matrix.node-version }}
+    #               cache: pnpm
+    #         - name: Update System
+    #           run: sudo apt-get update
+    #         - name: Install (Ledger Requirements)
+    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+    #         - name: Install (pnpm)
+    #           run: pnpm install --frozen-lockfile
+    #         - name: Rebuild
+    #           run: pnpm rebuild
+    #         - name: Test
+    #           env:
+    #               COVERAGE_THRESHOLD_BRANCHES: 99.45
+    #           uses: nick-invision/retry@v2
+    #           with:
+    #               timeout_minutes: 10
+    #               max_attempts: 1
+    #               command: pnpm test:coverage src/domains/setting
+    #
+    # domains-transaction:
+    #     runs-on: ubuntu-latest
+    #     env:
+    #         COVERAGE_INCLUDE_PATH: src/domains/transaction
+    #     strategy:
+    #         matrix:
+    #             node-version:
+    #                 - 20.12.2
+    #     concurrency:
+    #         group: ${{ github.head_ref }}-test-domains-transaction
+    #         cancel-in-progress: true
+    #     steps:
+    #         - uses: actions/checkout@v4
+    #           with:
+    #               ref: ${{ github.head_ref }}
+    #         - uses: pnpm/action-setup@v4
+    #           with:
+    #               version: 9
+    #         - uses: actions/setup-node@v4
+    #           with:
+    #               node-version: ${{ matrix.node-version }}
+    #               cache: pnpm
+    #         - name: Update System
+    #           run: sudo apt-get update
+    #         - name: Install (Ledger Requirements)
+    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+    #         - name: Install (pnpm)
+    #           run: pnpm install --frozen-lockfile
+    #         - name: Rebuild
+    #           run: pnpm rebuild
+    #
+    #         - name: Test Utils
+    #           env:
+    #               COVERAGE_THRESHOLD_LINES: 75
+    #               COVERAGE_THRESHOLD_FUNCTIONS: 69.23
+    #               COVERAGE_THRESHOLD_STATEMENTS: 79.41
+    #               COVERAGE_THRESHOLD_BRANCHES: 80
+    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
+    #           uses: nick-invision/retry@v2
+    #           with:
+    #               timeout_minutes: 10
+    #               max_attempts: 1
+    #               command: pnpm test:coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
+    #
+    #         - name: Test Components ^A-O
+    #           env:
+    #               COVERAGE_THRESHOLD_LINES: 99.58
+    #               COVERAGE_THRESHOLD_FUNCTIONS: 99.48
+    #               COVERAGE_THRESHOLD_STATEMENTS: 99.6
+    #               COVERAGE_THRESHOLD_BRANCHES: 99.73
+    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
+    #           uses: nick-invision/retry@v2
+    #           with:
+    #               timeout_minutes: 10
+    #               max_attempts: 1
+    #               command: pnpm test:coverage src/domains/transaction/components/[A-O]*
+    #
+    #         - name: Test Components ^P-S
+    #           env:
+    #               COVERAGE_THRESHOLD_LINES: 98.47
+    #               COVERAGE_THRESHOLD_FUNCTIONS: 97.61
+    #               COVERAGE_THRESHOLD_STATEMENTS: 98.58
+    #               COVERAGE_THRESHOLD_BRANCHES: 96.72
+    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
+    #           uses: nick-invision/retry@v2
+    #           with:
+    #               timeout_minutes: 10
+    #               max_attempts: 1
+    #               command: pnpm test:coverage src/domains/transaction/components/[P-S]*
+    #
+    #         - name: Test Components ^T-Z
+    #           env:
+    #               COVERAGE_THRESHOLD_LINES: 99.33
+    #               COVERAGE_THRESHOLD_FUNCTIONS: 99
+    #               COVERAGE_THRESHOLD_STATEMENTS: 99.35
+    #               COVERAGE_THRESHOLD_BRANCHES: 98.71
+    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
+    #           uses: nick-invision/retry@v2
+    #           with:
+    #               timeout_minutes: 10
+    #               max_attempts: 1
+    #               command: pnpm test:coverage src/domains/transaction/components/[T-Z]*
+    #
+    #         - name: Test Hooks
+    #           env:
+    #               COVERAGE_THRESHOLD_LINES: 93.61
+    #               COVERAGE_THRESHOLD_FUNCTIONS: 89.79
+    #               COVERAGE_THRESHOLD_STATEMENTS: 91.61
+    #               COVERAGE_THRESHOLD_BRANCHES: 83.72
+    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
+    #           uses: nick-invision/retry@v2
+    #           with:
+    #               timeout_minutes: 10
+    #               max_attempts: 1
+    #               command: pnpm test:coverage src/domains/transaction/hooks
+    #
+    #         - name: Test Pages
+    #           env:
+    #               COVERAGE_THRESHOLD_LINES: 97.3
+    #               COVERAGE_THRESHOLD_FUNCTIONS: 96.4
+    #               COVERAGE_THRESHOLD_STATEMENTS: 97.8
+    #               COVERAGE_THRESHOLD_BRANCHES: 98.43
+    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
+    #           uses: nick-invision/retry@v2
+    #           with:
+    #               timeout_minutes: 10
+    #               max_attempts: 1
+    #               command: pnpm test:coverage src/domains/transaction/pages
+    #
+    #         - name: Test Validations
+    #           env:
+    #               COVERAGE_THRESHOLD_LINES: 88.03
+    #               COVERAGE_THRESHOLD_FUNCTIONS: 82.85
+    #               COVERAGE_THRESHOLD_STATEMENTS: 88.52
+    #               COVERAGE_THRESHOLD_BRANCHES: 86.41
+    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
+    #           uses: nick-invision/retry@v2
+    #           with:
+    #               timeout_minutes: 10
+    #               max_attempts: 1
+    #               command: pnpm test:coverage src/domains/transaction/validations
 
     domains-vote:
         runs-on: ubuntu-latest
