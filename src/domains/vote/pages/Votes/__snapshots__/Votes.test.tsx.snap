@@ -578,7 +578,7 @@ exports[`Votes > should filter current delegates 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -1836,7 +1836,7 @@ exports[`Votes > should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -3396,7 +3396,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -4954,7 +4954,7 @@ exports[`Votes > should render with no wallets 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -5689,7 +5689,7 @@ exports[`Votes > should select a validator 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -7247,7 +7247,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -8503,7 +8503,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -9759,7 +9759,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -11197,7 +11197,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
