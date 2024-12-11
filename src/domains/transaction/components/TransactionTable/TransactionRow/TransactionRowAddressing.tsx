@@ -107,7 +107,6 @@ export const TransactionRowAddressing = ({
 					className="text-sm font-semibold"
 				>
 					{t("COMMON.CONTRACT")}
-				
 				</Link>
 			</div>
 		);
