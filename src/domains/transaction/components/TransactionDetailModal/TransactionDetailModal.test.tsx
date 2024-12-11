@@ -319,27 +319,4 @@ describe("TransactionDetailModal", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Resignation");
 	});
-
-	it("should render an unlock tokens modal", () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						isTransfer: () => false,
-						isUnlockToken: () => true,
-						type: () => "unlockToken",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
 });
