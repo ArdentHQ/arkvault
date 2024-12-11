@@ -368,6 +368,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 					<FormField name="payinAmount">
 						<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")} />
 						<InputCurrency
+							network={senderNetwork}
 							placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
 							value={payinAmount}
 							onChange={async (amount: string) => await handlePayinAmountChange(amount)}
@@ -430,6 +431,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						<FormField name="payoutAmount">
 							<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")} />
 							<InputCurrency
+								network={recipientNetwork}
 								placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
 								value={payoutAmount}
 								onChange={async (amount: string) => await handlePayoutAmountChange(amount)}

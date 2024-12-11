@@ -2495,9 +2495,11 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
           >
             Voting for
           </span>
-          <span>
-            arkx
-          </span>
+          <div
+            class="text-theme-secondary-900 dark:text-theme-text"
+          >
+            D8rr7...6YUYD
+          </div>
         </div>
         <div
           class="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800"
@@ -2674,9 +2676,11 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
           >
             Voting for
           </span>
-          <span>
-            arkx
-          </span>
+          <div
+            class="text-theme-secondary-900 dark:text-theme-text"
+          >
+            D8rr7...6YUYD
+          </div>
         </div>
         <div
           class="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800"
@@ -2853,9 +2857,11 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
           >
             Voting for
           </span>
-          <span>
-            arkx
-          </span>
+          <div
+            class="text-theme-secondary-900 dark:text-theme-text"
+          >
+            D8rr7...6YUYD
+          </div>
         </div>
         <div
           class="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800"

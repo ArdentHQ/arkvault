@@ -20,10 +20,10 @@ const SectionWrapper = ({
 		{...props}
 		className={twMerge(
 			cn({
+				"!pb-8": !backgroundClassName && border,
+				"!pt-8": border && props.className?.includes("hasBorder"),
+				"!py-8": backgroundClassName && !border,
 				"border-b": border,
-				"pb-8": !backgroundClassName && border,
-				"pt-8": border && props.className?.includes("hasBorder"),
-				"py-8": backgroundClassName && !border,
 			}),
 			props.className,
 		)}
