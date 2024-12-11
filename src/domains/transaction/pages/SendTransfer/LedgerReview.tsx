@@ -57,12 +57,6 @@ export const TransferLedgerReview = ({
 				network={wallet.network()}
 			/>
 
-			{memo && (
-				<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-					<p data-testid="TransactionMemo">{memo}</p>
-				</DetailWrapper>
-			)}
-
 			<DetailWrapper
 				label={
 					<div data-testid="LedgerReview__expiration" className="flex items-center space-x-2">
