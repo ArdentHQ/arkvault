@@ -22,7 +22,7 @@ export const TransferLedgerReview = ({
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
 
-	const { fee, recipients, memo } = getValues();
+	const { fee, recipients } = getValues();
 
 	let amount = 0;
 	for (const recipient of recipients) {
