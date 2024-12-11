@@ -104,9 +104,10 @@ export const TransactionRowAddressing = ({
 					to={transaction.wallet().coin().link().wallet(transaction.recipient())}
 					isExternal
 					showExternalIcon={false}
-					className="dark:text-theme-dark-200 text-sm font-semibold text-theme-secondary-900"
+					className="text-sm font-semibold"
 				>
 					{t("COMMON.CONTRACT")}
+				
 				</Link>
 			</div>
 		);
