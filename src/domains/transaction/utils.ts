@@ -37,7 +37,7 @@ export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
 	].some(Boolean);
 
 export const isContractDeployment = (transaction: DTO.RawTransactionData) =>
-	[!isContractTransaction(transaction), !transaction.recipient()].some(Boolean);
+	[!isContractTransaction(transaction), !transaction.recipient()].every(Boolean);
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>
