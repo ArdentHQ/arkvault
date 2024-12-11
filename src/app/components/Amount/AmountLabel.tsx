@@ -71,7 +71,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 			color={labelColor as any}
 			noBorder
 			className={twMerge(
-				cn("flex h-full items-center justify-center rounded w-fit", {
+				cn("flex h-full w-fit items-center justify-center rounded", {
 					"pr-1.5": hint,
 					"px-1.5": !hint,
 				}),
