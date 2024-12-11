@@ -142,12 +142,7 @@ export const WalletBalance: VFC<WalletBalanceProperties> = ({ profile, wallet, c
 	);
 };
 
-export const WalletActions: VFC<WalletActionsProperties> = ({
-	profile,
-	wallet,
-	isUpdatingTransactions,
-	onUpdate,
-}) => {
+export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, isUpdatingTransactions, onUpdate }) => {
 	const { env } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const [isSyncing, setIsSyncing] = useState(false);
