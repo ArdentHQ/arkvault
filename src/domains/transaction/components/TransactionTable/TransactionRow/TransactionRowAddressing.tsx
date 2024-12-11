@@ -73,7 +73,7 @@ export const TransactionRowAddressing = ({
 			}),
 		[profile, getWalletAlias, transaction],
 	);
-
+console.log(transaction.type(), transaction.data(), transaction.isTransfer(), transaction.recipient(), transaction)
 	const isContract = isContractTransaction(transaction);
 
 	if (transaction.isMultiPayment()) {
@@ -96,7 +96,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (isContract || isContractDeployment(transaction)) {
+	if ((isContract || (isContractDeployment(transaction)) && transaction.type() !== "transfer")) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<TransactionRowLabel direction={direction} />
