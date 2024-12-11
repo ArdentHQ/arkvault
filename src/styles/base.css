@@ -116,11 +116,7 @@ main {
   }
 
   .table-row-selected:hover td {
-	@apply bg-theme-success-100
-  }
-
-  .table-row-unselected:hover td {
-	@apply dark:bg-theme-success-900
+	@apply bg-theme-success-100 dark:bg-theme-success-900
   }
 
   .table-row:last-of-type td:first-child {
