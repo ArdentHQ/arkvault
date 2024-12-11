@@ -22,7 +22,7 @@ const SectionWrapper = ({
 			cn({
 				"!pb-8": !backgroundClassName && border,
 				"!pt-8": border && props.className?.includes("hasBorder"),
-				"!py-8": backgroundClassName && !border,
+				"!py-8": backgroundClassName,
 				"border-b": border,
 			}),
 			props.className,
