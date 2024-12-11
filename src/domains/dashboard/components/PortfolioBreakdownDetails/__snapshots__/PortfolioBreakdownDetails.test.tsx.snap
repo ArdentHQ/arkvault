@@ -7,7 +7,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -654,7 +654,7 @@ exports[`PortfolioBreakdownDetails > should render responsive 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -1227,7 +1227,7 @@ exports[`PortfolioBreakdownDetails > should render responsive with other group 1
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -2008,7 +2008,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div

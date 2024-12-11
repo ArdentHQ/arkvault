@@ -9,7 +9,7 @@ exports[`WelcomeModal > should render a modal if user hasnt completed the tutori
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div

@@ -7,10 +7,11 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `<Do
 exports[`Votes > should filter current delegates 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -135,7 +136,7 @@ exports[`Votes > should filter current delegates 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -306,7 +307,7 @@ exports[`Votes > should filter current delegates 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -360,7 +361,7 @@ exports[`Votes > should filter current delegates 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -421,7 +422,7 @@ exports[`Votes > should filter current delegates 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -471,7 +472,7 @@ exports[`Votes > should filter current delegates 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -577,7 +578,7 @@ exports[`Votes > should filter current delegates 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -753,7 +754,7 @@ exports[`Votes > should filter current delegates 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
@@ -1017,14 +1018,14 @@ exports[`Votes > should filter current delegates 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href=""
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -1266,10 +1267,11 @@ exports[`Votes > should navigate to import wallet page 1`] = `<DocumentFragment 
 exports[`Votes > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1394,7 +1396,7 @@ exports[`Votes > should render 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -1565,7 +1567,7 @@ exports[`Votes > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1619,7 +1621,7 @@ exports[`Votes > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1680,7 +1682,7 @@ exports[`Votes > should render 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1730,7 +1732,7 @@ exports[`Votes > should render 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1836,7 +1838,7 @@ exports[`Votes > should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -2004,7 +2006,7 @@ exports[`Votes > should render 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
@@ -2272,14 +2274,14 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -2427,14 +2429,14 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -2582,14 +2584,14 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -2827,10 +2829,11 @@ exports[`Votes > should render 1`] = `
 exports[`Votes > should render and handle wallet current voting exception 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2955,7 +2958,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -3126,7 +3129,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3180,7 +3183,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3241,7 +3244,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3291,7 +3294,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3397,7 +3400,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -3565,7 +3568,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
@@ -3833,14 +3836,14 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -3988,14 +3991,14 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -4143,14 +4146,14 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -4388,10 +4391,11 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
 exports[`Votes > should render with no wallets 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-wwznix"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4514,7 +4518,7 @@ exports[`Votes > should render with no wallets 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -4686,7 +4690,7 @@ exports[`Votes > should render with no wallets 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4740,7 +4744,7 @@ exports[`Votes > should render with no wallets 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4794,7 +4798,7 @@ exports[`Votes > should render with no wallets 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -4845,7 +4849,7 @@ exports[`Votes > should render with no wallets 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -4956,7 +4960,7 @@ exports[`Votes > should render with no wallets 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -4988,7 +4992,7 @@ exports[`Votes > should render with no wallets 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -5120,10 +5124,11 @@ exports[`Votes > should render with no wallets 1`] = `
 exports[`Votes > should select a validator 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -5248,7 +5253,7 @@ exports[`Votes > should select a validator 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -5419,7 +5424,7 @@ exports[`Votes > should select a validator 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -5473,7 +5478,7 @@ exports[`Votes > should select a validator 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -5534,7 +5539,7 @@ exports[`Votes > should select a validator 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -5584,7 +5589,7 @@ exports[`Votes > should select a validator 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -5690,7 +5695,7 @@ exports[`Votes > should select a validator 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -5858,7 +5863,7 @@ exports[`Votes > should select a validator 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
@@ -6126,14 +6131,14 @@ exports[`Votes > should select a validator 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -6281,14 +6286,14 @@ exports[`Votes > should select a validator 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -6436,14 +6441,14 @@ exports[`Votes > should select a validator 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -6681,10 +6686,11 @@ exports[`Votes > should select an address and validator 1`] = `<DocumentFragment
 exports[`Votes > should select ledger option in the wallets display type 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-wwznix"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6805,7 +6811,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -6977,7 +6983,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -7031,7 +7037,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -7092,7 +7098,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -7142,7 +7148,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -7248,7 +7254,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -7428,7 +7434,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -7936,10 +7942,11 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
 exports[`Votes > should select starred option in the wallets display type 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-wwznix"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -8060,7 +8067,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -8232,7 +8239,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -8286,7 +8293,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -8347,7 +8354,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -8397,7 +8404,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -8503,7 +8510,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -8683,7 +8690,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -9191,10 +9198,11 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
 exports[`Votes > should toggle network selection from network filters 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-wwznix"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -9315,7 +9323,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -9487,7 +9495,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -9541,7 +9549,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -9602,7 +9610,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -9652,7 +9660,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -9758,7 +9766,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -9932,7 +9940,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
       </div>
       <div>
         <div
-          class="w-full last:pb-8 py-0 pt-0 first:pt-1 sm:first:pt-0 css-9mualq"
+          class="w-full last:pb-8 py-0 pt-0 first:pt-1 sm:first:pt-0"
         >
           <div
             class="mx-auto px-6 lg:container md:px-10"
@@ -10625,10 +10633,11 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
 exports[`Votes > should trigger network connection warning 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -10753,7 +10762,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -10924,7 +10933,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -10978,7 +10987,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -11039,7 +11048,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -11089,7 +11098,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -11195,7 +11204,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+        class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -11363,7 +11372,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
@@ -11693,14 +11702,14 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -11848,14 +11857,14 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
@@ -12003,14 +12012,14 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-bxx244"
+                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span>
                               View
