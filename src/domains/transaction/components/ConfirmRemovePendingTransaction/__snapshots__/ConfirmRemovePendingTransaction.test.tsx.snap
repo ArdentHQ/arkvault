@@ -9,7 +9,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
     data-testid="ConfirmRemovePendingTransaction__Multisignature-Registration"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -27,31 +27,32 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -118,51 +119,52 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-rzhg83"
+                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="circle-exclamation-mark"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
                 <span>
                   Warning
                 </span>
               </div>
               <div
-                class="css-trjt6n"
+                class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
               >
                 Are you sure you want to remove Multisignature Registration from the transaction pool? This action cannot be undone.
               </div>
@@ -179,7 +181,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                   data-testid="AuthenticationStep"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -189,14 +191,13 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                       Mnemonic
                     </label>
                     <div
-                      class="css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -216,34 +217,35 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                             data-testid="InputPassword__toggle"
                             type="button"
                           >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="eye"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="eye"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                                  />
-                                  <path
-                                    d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                                    />
+                                    <path
+                                      d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </button>
                         </div>
@@ -254,7 +256,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
               </div>
             </form>
             <div
-              class="css-j6ajdm"
+              class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
             >
               <button
                 class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -276,31 +278,32 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                   <span>
                     Delete
@@ -323,7 +326,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
     data-testid="ConfirmRemovePendingTransaction__Transfer-Transaction"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -341,31 +344,32 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -432,51 +436,52 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-rzhg83"
+                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="circle-exclamation-mark"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
                 <span>
                   Warning
                 </span>
               </div>
               <div
-                class="css-trjt6n"
+                class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
               >
                 Are you sure you want to remove Transfer Transaction from the transaction pool? This action cannot be undone.
               </div>
@@ -493,7 +498,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                   data-testid="AuthenticationStep"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -503,14 +508,13 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                       Mnemonic
                     </label>
                     <div
-                      class="css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -530,34 +534,35 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                             data-testid="InputPassword__toggle"
                             type="button"
                           >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="eye"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="eye"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                                  />
-                                  <path
-                                    d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                                    />
+                                    <path
+                                      d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </button>
                         </div>
@@ -568,7 +573,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
               </div>
             </form>
             <div
-              class="css-j6ajdm"
+              class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
             >
               <button
                 class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -590,31 +595,32 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                   <span>
                     Delete

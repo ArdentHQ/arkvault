@@ -2,10 +2,8 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, NavLink, useHistory } from "react-router-dom";
-import tw, { css, styled } from "twin.macro";
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
-import { defaultStyle } from "./NavigationBar.styles";
 import { Button } from "@/app/components/Button";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Divider } from "@/app/components/Divider";
@@ -29,32 +27,30 @@ import { Size } from "@/types";
 import { Logo } from "@/app/components/Logo";
 import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
+import { twMerge } from "tailwind-merge";
 
-const NavWrapper = styled.nav<{ noBorder?: boolean; noShadow?: boolean; scroll?: number }>`
-	${defaultStyle}
+const NavWrapper = ({
+	noBorder,
+	noShadow,
+	scroll,
+	...props
+}: React.HTMLProps<HTMLDivElement> & { noBorder?: boolean; noShadow?: boolean; scroll?: number }) => (
+	<nav
+		{...props}
+		className={twMerge(
+			"custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200",
+			cn({
+				"border-theme-secondary-300 dark:border-theme-secondary-800": !noBorder && !scroll,
+				"shadow-header-smooth dark:shadow-header-smooth-dark": !noShadow && scroll,
+			}),
+			props.className,
+		)}
+	/>
+);
 
-	${tw`sticky inset-x-0 top-0 transition-all duration-200 border-b border-theme-background bg-theme-background`}
-
-	${({ noBorder, scroll }) => {
-		if (!noBorder && !scroll) {
-			return tw`border-theme-secondary-300 dark:border-theme-secondary-800`;
-		}
-	}}
-
-	${({ noShadow, scroll }) => {
-		if (!noShadow && scroll) {
-			return tw`shadow-header-smooth dark:shadow-header-smooth-dark`;
-		}
-	}};
-`;
-
-export const NavigationButtonWrapper = styled.div`
-	${css`
-		button {
-			${tw`w-10 h-10 sm:w-11 sm:h-11 overflow-hidden rounded text-theme-secondary-700 dark:text-theme-secondary-600 not-disabled:(hover:text-theme-primary-600 hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-100)`};
-		}
-	`};
-`;
+export const NavigationButtonWrapper = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
+	<div {...props} className={twMerge("custom-button-wrapper", props.className)} />
+);
 
 const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	title,
@@ -97,17 +93,21 @@ export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> =
 	);
 };
 
-const NavigationBarMobileWrapper = styled.div<{
-	hasFixedFormButtons?: boolean;
-}>`
-	${({ hasFixedFormButtons }) => !hasFixedFormButtons && tw`shadow-footer-smooth dark:shadow-footer-smooth-dark`};
-	${tw`fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden`}
-	${css`
-		@supports (padding-bottom: env(safe-area-inset-bottom)) {
-			padding-bottom: env(safe-area-inset-bottom);
-		}
-	`}
-`;
+const NavigationBarMobileWrapper = ({
+	hasFixedFormButtons,
+	...props
+}: React.HTMLProps<HTMLDivElement> & { hasFixedFormButtons?: boolean }) => (
+	<div
+		{...props}
+		className={twMerge(
+			"fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden",
+			cn({
+				"shadow-footer-smooth dark:shadow-footer-smooth-dark": !hasFixedFormButtons,
+			}),
+			props.className,
+		)}
+	/>
+);
 
 const NavigationBarMobile: React.VFC<{
 	sendButtonClickHandler: () => void;

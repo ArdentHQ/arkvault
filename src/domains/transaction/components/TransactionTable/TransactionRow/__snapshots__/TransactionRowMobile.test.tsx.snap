@@ -18,14 +18,14 @@ exports[`TransactionRowMobile > should render 1`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group/inner inline-block text-sm font-semibold css-167zzsv"
+                class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-1dlnsgk"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                 >
                   <span
                     class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -70,8 +70,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -124,8 +123,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                    color="danger-bg"
+                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -187,14 +185,14 @@ exports[`TransactionRowMobile > should render 2`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group/inner inline-block text-sm font-semibold css-167zzsv"
+                class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-1dlnsgk"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                 >
                   <span
                     class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -239,8 +237,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -293,8 +290,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                    color="danger-bg"
+                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -648,14 +644,14 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group/inner inline-block text-sm font-semibold css-167zzsv"
+                class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-1dlnsgk"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                 >
                   <span
                     class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -700,8 +696,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -743,8 +738,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                    color="danger-bg"
+                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -806,14 +800,14 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group/inner inline-block text-sm font-semibold css-167zzsv"
+                class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-1dlnsgk"
+                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                 >
                   <span
                     class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -858,8 +852,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -901,8 +894,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                    color="danger-bg"
+                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div

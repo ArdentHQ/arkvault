@@ -7,7 +7,7 @@ exports[`UpdateWalletName > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -89,7 +89,7 @@ exports[`UpdateWalletName > should render 1`] = `
                   class="relative"
                 >
                   <div
-                    class="css-14zfvme"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -97,7 +97,7 @@ exports[`UpdateWalletName > should render 1`] = `
                       <input
                         aria-invalid="false"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -150,7 +150,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -232,7 +232,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                   class="relative"
                 >
                   <div
-                    class="css-1njetft"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -240,7 +240,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -343,7 +343,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -425,7 +425,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                   class="relative"
                 >
                   <div
-                    class="css-1njetft"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -433,7 +433,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -536,7 +536,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -618,7 +618,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                   class="relative"
                 >
                   <div
-                    class="css-1njetft"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -626,7 +626,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -729,7 +729,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -811,7 +811,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                   class="relative"
                 >
                   <div
-                    class="css-1njetft"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -819,7 +819,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -922,7 +922,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -1004,7 +1004,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                   class="relative"
                 >
                   <div
-                    class="css-1njetft"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -1012,7 +1012,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -1115,7 +1115,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -1197,7 +1197,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                   class="relative"
                 >
                   <div
-                    class="css-1njetft"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -1205,7 +1205,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"

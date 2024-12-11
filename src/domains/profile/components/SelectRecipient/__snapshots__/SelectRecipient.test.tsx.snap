@@ -12,14 +12,14 @@ exports[`SelectRecipient > should render disabled 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-14zfvme"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -43,8 +43,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-4lfin5"
-                disabled=""
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="flex items-center"
@@ -61,7 +60,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                     data-testid="SelectDropdown__input"
                     disabled=""
                     id="SelectRecipient__dropdown-input"
@@ -143,14 +142,14 @@ exports[`SelectRecipient > should render empty 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-14zfvme"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -174,7 +173,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-14zfvme"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="flex items-center"
@@ -191,7 +190,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -272,7 +271,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-1njetft"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
         >
           <div
             class="relative flex h-full flex-1"
@@ -280,7 +279,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
             <input
               aria-invalid="true"
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -353,7 +352,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-1njetft"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="flex items-center"
@@ -371,7 +370,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                     aria-invalid="true"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -496,14 +495,14 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-14zfvme"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -527,7 +526,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-14zfvme"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="flex items-center"
@@ -555,7 +554,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
