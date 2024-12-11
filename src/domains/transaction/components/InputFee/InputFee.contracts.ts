@@ -30,6 +30,7 @@ interface InputFeeAdvancedProperties {
 	onChange: (value: string) => void;
 	showConvertedValue: boolean;
 	step: number;
+	network: Networks.Network;
 	value: string;
 }
 
