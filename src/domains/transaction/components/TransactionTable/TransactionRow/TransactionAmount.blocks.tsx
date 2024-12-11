@@ -3,6 +3,9 @@ import React from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { Helpers } from "@ardenthq/sdk-profiles";
+import { Currency } from "@ardenthq/sdk-intl";
 
 type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
@@ -19,7 +22,7 @@ const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionDat
 	return isMusig ? transaction.sender() === transaction.recipient() : false;
 };
 
-const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
+const calculateReturnedAmount = function(transaction: ExtendedTransactionData): number {
 	let returnedAmount = 0;
 
 	if (!transaction.isMultiPayment()) {
@@ -45,16 +48,27 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 
 	const currency = transaction.wallet().currency();
 
+	const returnedAmount = calculateReturnedAmount(transaction);
+
+	const isReturnMusigTx = isReturnUnconfirmedMusigTransaction(transaction);
+
+	const amount = isReturnMusigTx ? transaction.amount() - transaction.fee() : transaction.amount() - returnedAmount;
+
+	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
+	const isMusigTransfer = [usesMultiSignature, !transaction.isMultiSignatureRegistration()].every(Boolean);
+
+	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+
 	return (
 		<AmountLabel
-			value={transaction.amount()}
-			isNegative={transaction.isSent()}
+			value={amount}
+			isNegative={isNegative}
 			ticker={transaction.wallet().currency()}
-			hideSign={transaction.isReturn()}
+			hideSign={transaction.isReturn() || isReturnMusigTx}
 			isCompact
 			hint={
-				transaction.total() && transaction.isMultiPayment()
-					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: transaction.total(), currency })
+				returnedAmount
+					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
