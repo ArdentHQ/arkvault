@@ -19,7 +19,7 @@ const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionDat
 	return isMusig ? transaction.sender() === transaction.recipient() : false;
 };
 
-const calculateReturnedAmount = function(transaction: ExtendedTransactionData): number {
+const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
 	let returnedAmount = 0;
 
 	if (!transaction.isMultiPayment()) {
