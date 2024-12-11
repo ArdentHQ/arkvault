@@ -1,8 +1,7 @@
-import React, { useCallback, useEffect, useState, VFC } from "react";
+import React, { useEffect, useState, VFC } from "react";
 import { useTranslation } from "react-i18next";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
-import { Enums } from "@ardenthq/sdk";
 import { useResizeDetector } from "react-resize-detector";
 import { WalletActionsProperties, WalletAddressProperties, WalletBalanceProperties } from "./WalletHeader.contracts";
 import { Amount } from "@/app/components/Amount";
@@ -28,19 +27,6 @@ const WalletHeaderButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonE
 		)}
 	/>
 );
-
-const isUnlockBalanceButtonVisible = (wallet: Contracts.IReadWriteWallet) => {
-	const hasLockedBalance = wallet.network().usesLockedBalance() && !!wallet.balance("locked");
-
-	if (!wallet.isLedger()) {
-		return hasLockedBalance && wallet.network().allows(Enums.FeatureFlag.TransactionUnlockToken);
-	}
-
-	return (
-		(hasLockedBalance && wallet.network().allows(Enums.FeatureFlag.TransactionUnlockTokenLedgerS)) ||
-		wallet.network().allows(Enums.FeatureFlag.TransactionUnlockTokenLedgerX)
-	);
-};
 
 export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet }) => {
 	const { t } = useTranslation();
@@ -118,26 +104,6 @@ export const WalletBalance: VFC<WalletBalanceProperties> = ({ profile, wallet, c
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 	assertString(exchangeCurrency);
 
-	const renderLockBalance = useCallback(() => {
-		if (!isUnlockBalanceButtonVisible(wallet)) {
-			return;
-		}
-
-		return (
-			<div className="ml-1 flex items-baseline space-x-1 text-theme-secondary-700">
-				<span className="text-lg font-semibold">/</span>
-				<div className="flex items-center space-x-2" data-testid="WalletHeader__balance-locked">
-					<Amount
-						value={wallet.balance("locked")}
-						ticker={wallet.currency()}
-						className="text-sm font-semibold"
-					/>
-					<Icon name="Lock" />
-				</div>
-			</div>
-		);
-	}, [wallet]);
-
 	return (
 		<div className="mr-auto flex flex-col">
 			<div className="flex items-center text-sm font-semibold text-theme-secondary-text">
@@ -171,20 +137,12 @@ export const WalletBalance: VFC<WalletBalanceProperties> = ({ profile, wallet, c
 					data-testid="WalletHeader__balance"
 					className="text-lg font-semibold text-white"
 				/>
-
-				{renderLockBalance()}
 			</div>
 		</div>
 	);
 };
 
-export const WalletActions: VFC<WalletActionsProperties> = ({
-	profile,
-	wallet,
-	isUpdatingTransactions,
-	onUpdate,
-	setActiveModal,
-}) => {
+export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, isUpdatingTransactions, onUpdate }) => {
 	const { env } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const [isSyncing, setIsSyncing] = useState(false);
@@ -212,26 +170,6 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 			onUpdate?.(false);
 		}
 	}, [isSyncing, previousIsUpdatingTransactions, isUpdatingTransactions, onUpdate]);
-
-	const renderLockedButton = useCallback(() => {
-		if (!isUnlockBalanceButtonVisible(wallet)) {
-			return;
-		}
-
-		return (
-			<Tooltip content={t("TRANSACTION.UNLOCK_TOKENS.LOCKED_BALANCE")} theme="dark">
-				<Button
-					variant="transparent"
-					size="icon"
-					className="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
-					data-testid="WalletHeader__locked-balance-button"
-					onClick={() => setActiveModal("unlockable-balances")}
-				>
-					<Icon name="Lock" size="lg" />
-				</Button>
-			</Tooltip>
-		);
-	}, [setActiveModal, t, wallet]);
 
 	return (
 		<>
@@ -298,7 +236,6 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 					</Button>
 				</div>
 			</Tooltip>
-			{renderLockedButton()}
 		</>
 	);
 };

@@ -229,7 +229,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"

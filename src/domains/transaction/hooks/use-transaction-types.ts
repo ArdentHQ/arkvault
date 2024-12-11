@@ -43,10 +43,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "Transfer",
 			label: t("TRANSACTION.TRANSACTION_TYPES.TRANSFER"),
 		},
-		unlockToken: {
-			icon: "UnlockToken",
-			label: t("TRANSACTION.TRANSACTION_TYPES.UNLOCK_TOKEN"),
-		},
 		unvote: {
 			icon: "Unvote",
 			label: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),

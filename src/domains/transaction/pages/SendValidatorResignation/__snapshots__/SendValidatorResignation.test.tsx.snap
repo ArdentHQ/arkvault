@@ -3,11 +3,12 @@
 exports[`SendValidatorResignation > Validator Resignation > should change fee 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -16,30 +17,33 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
-              class="mx-auto css-15txs7d"
-              height="10"
-              width="10"
+              class="mx-auto"
             >
-              <svg
-                id="chevron-left-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-left-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -141,25 +145,26 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -174,7 +179,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -185,23 +190,26 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -225,7 +233,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -236,30 +244,33 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="bell"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -283,7 +294,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -295,30 +306,33 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="received"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -331,7 +345,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -343,27 +357,30 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="sent"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="sent"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -409,7 +426,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -435,7 +452,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -493,65 +510,67 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                             class="flex items-center gap-3"
                           >
                             <div
-                              class="css-h1kfx5"
                               data-testid="icon-SendTransactionLightGreen"
-                              height="24"
-                              width="24"
                             >
-                              <svg
-                                fill="none"
-                                height="25"
-                                viewBox="0 0 24 25"
-                                width="24"
-                                xmlns="http://www.w3.org/2000/svg"
+                              <div
+                                style="height: 24px; width: 24px;"
                               >
-                                <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                <svg
+                                  fill="none"
+                                  height="25"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                  />
-                                  <path
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </g>
-                                <defs>
-                                  <clippath
-                                    id="clip0_18982_50179"
+                                  <g
+                                    clip-path="url(#clip0_18982_50179)"
                                   >
-                                    <rect
-                                      fill="white"
-                                      height="24"
-                                      transform="translate(24 24.5) rotate(-180)"
-                                      width="24"
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
                                     />
-                                  </clippath>
-                                </defs>
-                              </svg>
+                                    <path
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clippath
+                                      id="clip0_18982_50179"
+                                    >
+                                      <rect
+                                        fill="white"
+                                        height="24"
+                                        transform="translate(24 24.5) rotate(-180)"
+                                        width="24"
+                                      />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </div>
                             </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
@@ -574,51 +593,52 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     class="flex flex-col overflow-hidden rounded-xl"
                   >
                     <div
-                      class="css-rzhg83"
+                      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="circle-exclamation-mark"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
+                          <svg
+                            id="circle-exclamation-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M10 10.5v-5"
-                              stroke-linecap="round"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M10 14h0"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span>
                         Warning
                       </span>
                     </div>
                     <div
-                      class="css-trjt6n"
+                      class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
                     >
                       This action is permanent and cannot be undone. It is registered on the network.
                     </div>
@@ -627,7 +647,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     class="space-y-3 sm:space-y-4"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -688,33 +708,36 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                 type="button"
                               >
                                 <div
-                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                  height="16"
-                                  width="16"
+                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                 >
-                                  <svg
-                                    id="copy"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    style="height: 16px; width: 16px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <svg
+                                      id="copy"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                        />
+                                        <path
+                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </button>
                             </div>
@@ -764,8 +787,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                             class="hidden sm:block"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                              type="horizontal"
+                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                           </div>
                           <div
@@ -784,7 +806,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       </div>
                     </div>
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -836,14 +858,14 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                           class="relative"
                         >
                           <div
-                            class="css-14zfvme"
+                            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                                class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                                 data-testid="InputCurrency"
                                 name="fee"
                                 type="text"
@@ -868,28 +890,29 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                       data-testid="InputFeeAdvanced__up"
                                       type="button"
                                     >
-                                      <div
-                                        class="css-15txs7d"
-                                        height="10"
-                                        width="10"
-                                      >
-                                        <svg
-                                          id="chevron-up-small"
-                                          viewBox="0 0 10 10"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                      <div>
+                                        <div
+                                          style="height: 10px; width: 10px;"
                                         >
-                                          <path
-                                            d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                          />
-                                        </svg>
+                                          <svg
+                                            id="chevron-up-small"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
+                                          >
+                                            <path
+                                              d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            />
+                                          </svg>
+                                        </div>
                                       </div>
                                     </button>
                                     <button
@@ -897,28 +920,29 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                       data-testid="InputFeeAdvanced__down"
                                       type="button"
                                     >
-                                      <div
-                                        class="css-15txs7d"
-                                        height="10"
-                                        width="10"
-                                      >
-                                        <svg
-                                          id="chevron-down-small"
-                                          viewBox="0 0 10 10"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                      <div>
+                                        <div
+                                          style="height: 10px; width: 10px;"
                                         >
-                                          <path
-                                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                          />
-                                        </svg>
+                                          <svg
+                                            id="chevron-down-small"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
+                                          >
+                                            <path
+                                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            />
+                                          </svg>
+                                        </div>
                                       </div>
                                     </button>
                                   </div>
@@ -933,7 +957,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -970,10 +994,11 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
 exports[`SendValidatorResignation > Validator Resignation > should render 1st step 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -992,37 +1017,37 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="received"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="received"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1032,34 +1057,34 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                fill="none"
-                viewBox="0 0 21 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 21 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
@@ -1070,28 +1095,29 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="sent"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="sent"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -1099,7 +1125,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -1108,30 +1134,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
-              class="mx-auto css-15txs7d"
-              height="10"
-              width="10"
+              class="mx-auto"
             >
-              <svg
-                id="chevron-left-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-left-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -1233,25 +1262,26 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -1266,7 +1296,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1277,23 +1307,26 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1317,7 +1350,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1328,30 +1361,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="bell"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1375,7 +1411,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -1387,30 +1423,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="received"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1423,7 +1462,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -1435,27 +1474,30 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="sent"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="sent"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1501,7 +1543,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1527,7 +1569,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -1585,65 +1627,67 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                             class="flex items-center gap-3"
                           >
                             <div
-                              class="css-h1kfx5"
                               data-testid="icon-SendTransactionLightGreen"
-                              height="24"
-                              width="24"
                             >
-                              <svg
-                                fill="none"
-                                height="25"
-                                viewBox="0 0 24 25"
-                                width="24"
-                                xmlns="http://www.w3.org/2000/svg"
+                              <div
+                                style="height: 24px; width: 24px;"
                               >
-                                <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                <svg
+                                  fill="none"
+                                  height="25"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                  />
-                                  <path
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </g>
-                                <defs>
-                                  <clippath
-                                    id="clip0_18982_50179"
+                                  <g
+                                    clip-path="url(#clip0_18982_50179)"
                                   >
-                                    <rect
-                                      fill="white"
-                                      height="24"
-                                      transform="translate(24 24.5) rotate(-180)"
-                                      width="24"
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
                                     />
-                                  </clippath>
-                                </defs>
-                              </svg>
+                                    <path
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clippath
+                                      id="clip0_18982_50179"
+                                    >
+                                      <rect
+                                        fill="white"
+                                        height="24"
+                                        transform="translate(24 24.5) rotate(-180)"
+                                        width="24"
+                                      />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </div>
                             </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
@@ -1666,51 +1710,52 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                     class="flex flex-col overflow-hidden rounded-xl"
                   >
                     <div
-                      class="css-rzhg83"
+                      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="circle-exclamation-mark"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
+                          <svg
+                            id="circle-exclamation-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M10 10.5v-5"
-                              stroke-linecap="round"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M10 14h0"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <span>
                         Warning
                       </span>
                     </div>
                     <div
-                      class="css-trjt6n"
+                      class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
                     >
                       This action is permanent and cannot be undone. It is registered on the network.
                     </div>
@@ -1719,7 +1764,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                     class="space-y-3 sm:space-y-4"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -1780,33 +1825,36 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                                 type="button"
                               >
                                 <div
-                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                  height="16"
-                                  width="16"
+                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                 >
-                                  <svg
-                                    id="copy"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    style="height: 16px; width: 16px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <svg
+                                      id="copy"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                        />
+                                        <path
+                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </button>
                             </div>
@@ -1856,8 +1904,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                             class="hidden sm:block"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                              type="horizontal"
+                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                           </div>
                           <div
@@ -1876,7 +1923,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       </div>
                     </div>
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1932,7 +1979,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           <button
                             aria-checked="false"
                             aria-label="25"
-                            class="css-19daxkr"
+                            class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
                             data-testid="ButtonGroupOption"
                             role="radio"
                             type="button"
@@ -1954,7 +2001,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           <button
                             aria-checked="true"
                             aria-label="25"
-                            class="css-19daxkr"
+                            class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
                             data-testid="ButtonGroupOption"
                             role="radio"
                             type="button"
@@ -1976,7 +2023,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           <button
                             aria-checked="false"
                             aria-label="25"
-                            class="css-19daxkr"
+                            class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
                             data-testid="ButtonGroupOption"
                             role="radio"
                             type="button"
@@ -2002,7 +2049,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2039,10 +2086,11 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
 exports[`SendValidatorResignation > Validator Resignation > should render 2nd step 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2061,37 +2109,37 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="received"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="received"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2101,34 +2149,34 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                fill="none"
-                viewBox="0 0 21 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 21 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
@@ -2139,28 +2187,29 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="sent"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="sent"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -2168,7 +2217,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -2177,30 +2226,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
-              class="mx-auto css-15txs7d"
-              height="10"
-              width="10"
+              class="mx-auto"
             >
-              <svg
-                id="chevron-left-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-left-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -2302,25 +2354,26 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -2335,7 +2388,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2346,23 +2399,26 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -2386,7 +2442,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2397,30 +2453,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="bell"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -2444,7 +2503,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -2456,30 +2515,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="received"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -2492,7 +2554,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -2504,27 +2566,30 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="sent"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="sent"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -2570,7 +2635,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -2596,7 +2661,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -2653,65 +2718,67 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             class="flex items-center gap-3"
                           >
                             <div
-                              class="css-h1kfx5"
                               data-testid="icon-SendTransactionLightGreen"
-                              height="24"
-                              width="24"
                             >
-                              <svg
-                                fill="none"
-                                height="25"
-                                viewBox="0 0 24 25"
-                                width="24"
-                                xmlns="http://www.w3.org/2000/svg"
+                              <div
+                                style="height: 24px; width: 24px;"
                               >
-                                <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                <svg
+                                  fill="none"
+                                  height="25"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                  />
-                                  <path
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </g>
-                                <defs>
-                                  <clippath
-                                    id="clip0_18982_50179"
+                                  <g
+                                    clip-path="url(#clip0_18982_50179)"
                                   >
-                                    <rect
-                                      fill="white"
-                                      height="24"
-                                      transform="translate(24 24.5) rotate(-180)"
-                                      width="24"
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
                                     />
-                                  </clippath>
-                                </defs>
-                              </svg>
+                                    <path
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clippath
+                                      id="clip0_18982_50179"
+                                    >
+                                      <rect
+                                        fill="white"
+                                        height="24"
+                                        transform="translate(24 24.5) rotate(-180)"
+                                        width="24"
+                                      />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </div>
                             </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
@@ -2792,33 +2859,36 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </button>
                           </div>
@@ -2867,8 +2937,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             class="hidden sm:block"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                              type="horizontal"
+                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                           </div>
                           <div
@@ -2902,7 +2971,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
                             >
                               <span
-                                class="css-1rmjubp"
+                                class="text-sm font-semibold text-theme-secondary-500"
                               >
                                 Transaction(s) Amount
                               </span>
@@ -2917,7 +2986,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
                             >
                               <span
-                                class="css-1rmjubp"
+                                class="text-sm font-semibold text-theme-secondary-500"
                               >
                                 Transaction Fee
                               </span>
@@ -2935,31 +3004,32 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <div
                               class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
                             >
-                              <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
-                              >
-                                <svg
-                                  id="plus"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                              <div>
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="plus"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M1 10h18M10 1v18"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M1 10h18M10 1v18"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2968,7 +3038,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                           class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
                         >
                           <span
-                            class="css-1rmjubp"
+                            class="text-sm font-semibold text-theme-secondary-500"
                           >
                             Total Amount
                           </span>
@@ -2985,7 +3055,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3022,10 +3092,11 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
 exports[`SendValidatorResignation > Validator Resignation > should render 3rd step 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3044,37 +3115,37 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="received"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="received"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3084,34 +3155,34 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                fill="none"
-                viewBox="0 0 21 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 21 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
@@ -3122,28 +3193,29 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="sent"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="sent"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -3151,7 +3223,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -3160,30 +3232,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
-              class="mx-auto css-15txs7d"
-              height="10"
-              width="10"
+              class="mx-auto"
             >
-              <svg
-                id="chevron-left-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-left-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -3285,25 +3360,26 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -3318,7 +3394,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3329,23 +3405,26 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -3369,7 +3448,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3380,30 +3459,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="bell"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -3427,7 +3509,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -3439,30 +3521,33 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="received"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -3475,7 +3560,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -3487,27 +3572,30 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="sent"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="sent"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -3553,7 +3641,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -3579,7 +3667,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -3637,77 +3725,80 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                             class="flex items-center gap-3"
                           >
                             <div
-                              class="text-theme-primary-600 css-h1kfx5"
+                              class="text-theme-primary-600"
                               data-testid="icon-mnemonic"
-                              height="24"
-                              width="24"
                             >
-                              <svg
-                                fill="none"
-                                viewBox="0 0 25 25"
-                                xmlns="http://www.w3.org/2000/svg"
+                              <div
+                                style="height: 24px; width: 24px;"
                               >
-                                <g
-                                  clip-path="url(#clip0_13420_137872)"
+                                <svg
+                                  fill="none"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 25 25"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    d="M18.0078 14.9033H20.9411"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
-                                    fill-rule="evenodd"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M8.47526 11.2373L4.80859 14.904"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M8.47526 14.904L4.80859 11.2373"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M15.0729 11.2373L11.4062 14.904"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M15.0729 14.904L11.4062 11.2373"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </g>
-                                <defs>
-                                  <clippath
-                                    id="clip0_13420_137872"
+                                  <g
+                                    clip-path="url(#clip0_13420_137872)"
                                   >
-                                    <rect
-                                      fill="white"
-                                      height="24"
-                                      transform="translate(24.875 24.5) rotate(-180)"
-                                      width="24"
+                                    <path
+                                      d="M18.0078 14.9033H20.9411"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
                                     />
-                                  </clippath>
-                                </defs>
-                              </svg>
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
+                                      fill-rule="evenodd"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M8.47526 11.2373L4.80859 14.904"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M8.47526 14.904L4.80859 11.2373"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M15.0729 11.2373L11.4062 14.904"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M15.0729 14.904L11.4062 11.2373"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clippath
+                                      id="clip0_13420_137872"
+                                    >
+                                      <rect
+                                        fill="white"
+                                        height="24"
+                                        transform="translate(24.875 24.5) rotate(-180)"
+                                        width="24"
+                                      />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </div>
                             </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
@@ -3727,7 +3818,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                     </div>
                   </div>
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3737,14 +3828,14 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       Mnemonic
                     </label>
                     <div
-                      class="css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -3764,34 +3855,35 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                             data-testid="InputPassword__toggle"
                             type="button"
                           >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="eye"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="eye"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                                  />
-                                  <path
-                                    d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                                    />
+                                    <path
+                                      d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </button>
                         </div>
@@ -3801,7 +3893,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 </div>
               </div>
               <div
-                class="css-145pihz"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3826,28 +3918,29 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                     <span>
                       Send
                     </span>
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="double-arrow-right"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="double-arrow-right"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>

@@ -56,7 +56,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
           role="rowgroup"
         >
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -82,33 +82,36 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -121,13 +124,65 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
                   >
                     <div>
                       <div
-                        class="text-theme-primary-500 css-1i4b0eq"
+                        class="text-theme-primary-500"
                         data-testid="ParticipantStatus__signed"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-check-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500"
+                      data-testid="ParticipantStatus__signed"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -158,55 +213,9 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
                 </div>
               </div>
             </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-primary-500 css-1i4b0eq"
-                      data-testid="ParticipantStatus__signed"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
           </tr>
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -232,33 +241,36 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -271,13 +283,65 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
                   >
                     <div>
                       <div
-                        class="text-theme-primary-500 css-1i4b0eq"
+                        class="text-theme-primary-500"
                         data-testid="ParticipantStatus__signed"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-check-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500"
+                      data-testid="ParticipantStatus__signed"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -303,52 +367,6 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
                           </g>
                         </svg>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-primary-500 css-1i4b0eq"
-                      data-testid="ParticipantStatus__signed"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
                     </div>
                   </div>
                 </div>
@@ -418,7 +436,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           role="rowgroup"
         >
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -444,33 +462,36 @@ exports[`Signatures > should not require signature if waiting for final signatur
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -483,13 +504,65 @@ exports[`Signatures > should not require signature if waiting for final signatur
                   >
                     <div>
                       <div
-                        class="text-theme-primary-500 css-1i4b0eq"
+                        class="text-theme-primary-500"
                         data-testid="ParticipantStatus__signed"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-check-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500"
+                      data-testid="ParticipantStatus__signed"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -520,55 +593,9 @@ exports[`Signatures > should not require signature if waiting for final signatur
                 </div>
               </div>
             </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-primary-500 css-1i4b0eq"
-                      data-testid="ParticipantStatus__signed"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
           </tr>
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -594,33 +621,36 @@ exports[`Signatures > should not require signature if waiting for final signatur
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -633,13 +663,65 @@ exports[`Signatures > should not require signature if waiting for final signatur
                   >
                     <div>
                       <div
-                        class="text-theme-primary-500 css-1i4b0eq"
+                        class="text-theme-primary-500"
                         data-testid="ParticipantStatus__signed"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-check-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500"
+                      data-testid="ParticipantStatus__signed"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -665,52 +747,6 @@ exports[`Signatures > should not require signature if waiting for final signatur
                           </g>
                         </svg>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-primary-500 css-1i4b0eq"
-                      data-testid="ParticipantStatus__signed"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
                     </div>
                   </div>
                 </div>
@@ -780,7 +816,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           role="rowgroup"
         >
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -806,33 +842,36 @@ exports[`Signatures > should not require signature if waiting for final signatur
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -845,13 +884,66 @@ exports[`Signatures > should not require signature if waiting for final signatur
                   >
                     <div>
                       <div
-                        class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                        class="text-theme-secondary-500 dark:text-theme-secondary-700"
                         data-testid="ParticipantStatus__waiting"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="clock"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                              stroke-width="2"
+                              transform="translate(1.5 1.5)"
+                            >
+                              <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="9"
+                              />
+                              <path
+                                d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                      data-testid="ParticipantStatus__waiting"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="clock"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -883,56 +975,9 @@ exports[`Signatures > should not require signature if waiting for final signatur
                 </div>
               </div>
             </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
-                      data-testid="ParticipantStatus__waiting"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
           </tr>
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -958,33 +1003,36 @@ exports[`Signatures > should not require signature if waiting for final signatur
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -997,13 +1045,65 @@ exports[`Signatures > should not require signature if waiting for final signatur
                   >
                     <div>
                       <div
-                        class="text-theme-primary-500 css-1i4b0eq"
+                        class="text-theme-primary-500"
                         data-testid="ParticipantStatus__signed"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-check-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500"
+                      data-testid="ParticipantStatus__signed"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -1029,52 +1129,6 @@ exports[`Signatures > should not require signature if waiting for final signatur
                           </g>
                         </svg>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-primary-500 css-1i4b0eq"
-                      data-testid="ParticipantStatus__signed"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
                     </div>
                   </div>
                 </div>
@@ -1144,7 +1198,7 @@ exports[`Signatures > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -1170,33 +1224,36 @@ exports[`Signatures > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1209,13 +1266,66 @@ exports[`Signatures > should render 1`] = `
                   >
                     <div>
                       <div
-                        class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                        class="text-theme-secondary-500 dark:text-theme-secondary-700"
                         data-testid="ParticipantStatus__waiting"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="clock"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                              stroke-width="2"
+                              transform="translate(1.5 1.5)"
+                            >
+                              <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="9"
+                              />
+                              <path
+                                d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                      data-testid="ParticipantStatus__waiting"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="clock"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -1247,56 +1357,9 @@ exports[`Signatures > should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
-                      data-testid="ParticipantStatus__waiting"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
           </tr>
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -1322,33 +1385,36 @@ exports[`Signatures > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1361,13 +1427,65 @@ exports[`Signatures > should render 1`] = `
                   >
                     <div>
                       <div
-                        class="text-theme-primary-500 css-1i4b0eq"
+                        class="text-theme-primary-500"
                         data-testid="ParticipantStatus__signed"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-check-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500"
+                      data-testid="ParticipantStatus__signed"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -1393,52 +1511,6 @@ exports[`Signatures > should render 1`] = `
                           </g>
                         </svg>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-primary-500 css-1i4b0eq"
-                      data-testid="ParticipantStatus__signed"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
                     </div>
                   </div>
                 </div>
@@ -1508,7 +1580,7 @@ exports[`Signatures > should show all participants as signed when all signatures
           role="rowgroup"
         >
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -1534,33 +1606,36 @@ exports[`Signatures > should show all participants as signed when all signatures
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1573,13 +1648,65 @@ exports[`Signatures > should show all participants as signed when all signatures
                   >
                     <div>
                       <div
-                        class="text-theme-primary-500 css-1i4b0eq"
+                        class="text-theme-primary-500"
                         data-testid="ParticipantStatus__signed"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-check-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500"
+                      data-testid="ParticipantStatus__signed"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -1610,55 +1737,9 @@ exports[`Signatures > should show all participants as signed when all signatures
                 </div>
               </div>
             </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-primary-500 css-1i4b0eq"
-                      data-testid="ParticipantStatus__signed"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
           </tr>
           <tr
-            class="group group relative max-md:!border-transparent css-16ynu5g"
+            class="group max-md:!border-transparent group relative css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -1684,33 +1765,36 @@ exports[`Signatures > should show all participants as signed when all signatures
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
                     >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1723,13 +1807,65 @@ exports[`Signatures > should show all participants as signed when all signatures
                   >
                     <div>
                       <div
-                        class="text-theme-primary-500 css-1i4b0eq"
+                        class="text-theme-primary-500"
                         data-testid="ParticipantStatus__signed"
-                        height="20"
-                        width="20"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-check-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500"
+                      data-testid="ParticipantStatus__signed"
+                    >
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
                         <svg
                           id="circle-check-mark"
+                          style="height: 100%; width: 100%;"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -1755,52 +1891,6 @@ exports[`Signatures > should show all participants as signed when all signatures
                           </g>
                         </svg>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
-              >
-                <div
-                  class="relative"
-                  data-testid="Signatures__participant-status"
-                >
-                  <div>
-                    <div
-                      class="text-theme-primary-500 css-1i4b0eq"
-                      data-testid="ParticipantStatus__signed"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="circle-check-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
                     </div>
                   </div>
                 </div>

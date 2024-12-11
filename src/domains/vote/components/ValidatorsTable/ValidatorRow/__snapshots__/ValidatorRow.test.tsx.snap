@@ -86,14 +86,14 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -244,14 +244,14 @@ exports[`ValidatorRow > should render 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -402,14 +402,14 @@ exports[`ValidatorRow > should render changed style when network requires vote a
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -459,7 +459,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                 class="relative"
               >
                 <div
-                  class="css-yc1qjo"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -467,7 +467,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 css-1937ogs"
+                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"
@@ -605,14 +605,14 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -763,14 +763,14 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -912,14 +912,14 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -1061,14 +1061,14 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -1224,14 +1224,14 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -1373,14 +1373,14 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -1522,14 +1522,14 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -1685,14 +1685,14 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -1843,14 +1843,14 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-bxx244"
+                class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
@@ -1900,8 +1900,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-199q0uq"
-                  disabled=""
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1909,7 +1908,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
+                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text"
                       data-testid="InputCurrency"
                       disabled=""
                       name="amount"

@@ -1,5 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`Registration > should register delegate with keyboard 1`] = `<DocumentFragment />`;
-
-exports[`Registration > should register delegate without keyboard 1`] = `<DocumentFragment />`;

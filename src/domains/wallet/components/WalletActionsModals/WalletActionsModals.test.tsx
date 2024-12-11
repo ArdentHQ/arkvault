@@ -95,25 +95,6 @@ describe("WalletActionsModals", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should render `unlockable-balances` modal", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<WalletActionsModals
-					wallet={mainnetWallet}
-					activeModal={"unlockable-balances"}
-					setActiveModal={setActiveModal}
-				/>
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeInTheDocument();
-
-		expect(asFragment).toMatchSnapshot();
-	});
-
 	it("should render `transaction-history` modal", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">

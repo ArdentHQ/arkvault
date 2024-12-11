@@ -22,7 +22,7 @@ export const TransferLedgerReview = ({
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
 
-	const { fee, recipients, memo } = getValues();
+	const { fee, recipients } = getValues();
 
 	let amount = 0;
 	for (const recipient of recipients) {
@@ -56,12 +56,6 @@ export const TransferLedgerReview = ({
 				profile={profile}
 				network={wallet.network()}
 			/>
-
-			{memo && (
-				<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-					<p data-testid="TransactionMemo">{memo}</p>
-				</DetailWrapper>
-			)}
 
 			<DetailWrapper
 				label={

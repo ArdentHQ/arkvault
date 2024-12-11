@@ -50,7 +50,6 @@ describe("TransferLedgerReview", () => {
 		);
 
 		expect(screen.getByText("123")).toBeInTheDocument();
-		expect(screen.getByTestId("TransactionMemo")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

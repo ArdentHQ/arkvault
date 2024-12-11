@@ -7,7 +7,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-12e1fbb"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-4xl"
       tabindex="-1"
     >
       <div
@@ -25,31 +25,32 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -109,28 +110,31 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -155,28 +159,31 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -201,7 +208,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-46sfhd"
+                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -212,53 +219,54 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                       >
                                         Search
                                       </span>
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          fill="none"
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            clip-path="url(#clip0_13375_36442)"
-                                            id="Vertical container"
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <g
-                                              id="Vertical container_2"
+                                              clip-path="url(#clip0_13375_36442)"
+                                              id="Vertical container"
                                             >
-                                              <path
-                                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                                id="Vector"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
-                                              <path
-                                                d="M12.8281 12.7832L14.4281 14.3832"
-                                                id="Vector_2"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
+                                              <g
+                                                id="Vertical container_2"
+                                              >
+                                                <path
+                                                  d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                                  id="Vector"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                                <path
+                                                  d="M12.8281 12.7832L14.4281 14.3832"
+                                                  id="Vector_2"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                              </g>
                                             </g>
-                                          </g>
-                                          <defs>
-                                            <clippath
-                                              id="clip0_13375_36442"
-                                            >
-                                              <rect
-                                                fill="transparent"
-                                                height="16"
-                                                width="16"
-                                              />
-                                            </clippath>
-                                          </defs>
-                                        </svg>
+                                            <defs>
+                                              <clippath
+                                                id="clip0_13375_36442"
+                                              >
+                                                <rect
+                                                  fill="transparent"
+                                                  height="16"
+                                                  width="16"
+                                                />
+                                              </clippath>
+                                            </defs>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </button>
@@ -430,7 +438,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-12e1fbb"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-4xl"
       tabindex="-1"
     >
       <div
@@ -448,31 +456,32 @@ exports[`SearchRecipient > should render a modal 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -532,28 +541,31 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -578,28 +590,31 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -624,7 +639,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-46sfhd"
+                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -635,53 +650,54 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                       >
                                         Search
                                       </span>
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          fill="none"
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            clip-path="url(#clip0_13375_36442)"
-                                            id="Vertical container"
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <g
-                                              id="Vertical container_2"
+                                              clip-path="url(#clip0_13375_36442)"
+                                              id="Vertical container"
                                             >
-                                              <path
-                                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                                id="Vector"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
-                                              <path
-                                                d="M12.8281 12.7832L14.4281 14.3832"
-                                                id="Vector_2"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
+                                              <g
+                                                id="Vertical container_2"
+                                              >
+                                                <path
+                                                  d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                                  id="Vector"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                                <path
+                                                  d="M12.8281 12.7832L14.4281 14.3832"
+                                                  id="Vector_2"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                              </g>
                                             </g>
-                                          </g>
-                                          <defs>
-                                            <clippath
-                                              id="clip0_13375_36442"
-                                            >
-                                              <rect
-                                                fill="transparent"
-                                                height="16"
-                                                width="16"
-                                              />
-                                            </clippath>
-                                          </defs>
-                                        </svg>
+                                            <defs>
+                                              <clippath
+                                                id="clip0_13375_36442"
+                                              >
+                                                <rect
+                                                  fill="transparent"
+                                                  height="16"
+                                                  width="16"
+                                                />
+                                              </clippath>
+                                            </defs>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </button>
@@ -851,7 +867,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
     data-testid="Modal__overlay"
   >
     <div
-      class="css-12e1fbb"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-4xl"
       tabindex="-1"
     >
       <div
@@ -869,31 +885,32 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -953,28 +970,31 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -999,28 +1019,31 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1045,7 +1068,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-46sfhd"
+                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -1056,53 +1079,54 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                       >
                                         Search
                                       </span>
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          fill="none"
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            clip-path="url(#clip0_13375_36442)"
-                                            id="Vertical container"
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <g
-                                              id="Vertical container_2"
+                                              clip-path="url(#clip0_13375_36442)"
+                                              id="Vertical container"
                                             >
-                                              <path
-                                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                                id="Vector"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
-                                              <path
-                                                d="M12.8281 12.7832L14.4281 14.3832"
-                                                id="Vector_2"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
+                                              <g
+                                                id="Vertical container_2"
+                                              >
+                                                <path
+                                                  d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                                  id="Vector"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                                <path
+                                                  d="M12.8281 12.7832L14.4281 14.3832"
+                                                  id="Vector_2"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                              </g>
                                             </g>
-                                          </g>
-                                          <defs>
-                                            <clippath
-                                              id="clip0_13375_36442"
-                                            >
-                                              <rect
-                                                fill="transparent"
-                                                height="16"
-                                                width="16"
-                                              />
-                                            </clippath>
-                                          </defs>
-                                        </svg>
+                                            <defs>
+                                              <clippath
+                                                id="clip0_13375_36442"
+                                              >
+                                                <rect
+                                                  fill="transparent"
+                                                  height="16"
+                                                  width="16"
+                                                />
+                                              </clippath>
+                                            </defs>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </button>
@@ -1272,7 +1296,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -1290,31 +1314,32 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -1374,28 +1399,31 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1420,28 +1448,31 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1466,7 +1497,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-46sfhd"
+                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -1477,53 +1508,54 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                                       >
                                         Search
                                       </span>
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          fill="none"
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            clip-path="url(#clip0_13375_36442)"
-                                            id="Vertical container"
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <g
-                                              id="Vertical container_2"
+                                              clip-path="url(#clip0_13375_36442)"
+                                              id="Vertical container"
                                             >
-                                              <path
-                                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                                id="Vector"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
-                                              <path
-                                                d="M12.8281 12.7832L14.4281 14.3832"
-                                                id="Vector_2"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
+                                              <g
+                                                id="Vertical container_2"
+                                              >
+                                                <path
+                                                  d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                                  id="Vector"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                                <path
+                                                  d="M12.8281 12.7832L14.4281 14.3832"
+                                                  id="Vector_2"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                              </g>
                                             </g>
-                                          </g>
-                                          <defs>
-                                            <clippath
-                                              id="clip0_13375_36442"
-                                            >
-                                              <rect
-                                                fill="transparent"
-                                                height="16"
-                                                width="16"
-                                              />
-                                            </clippath>
-                                          </defs>
-                                        </svg>
+                                            <defs>
+                                              <clippath
+                                                id="clip0_13375_36442"
+                                              >
+                                                <rect
+                                                  fill="transparent"
+                                                  height="16"
+                                                  width="16"
+                                                />
+                                              </clippath>
+                                            </defs>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </button>
@@ -1625,7 +1657,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -1643,31 +1675,32 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -1696,7 +1729,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
+                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -1705,44 +1738,46 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-text transition-all duration-300 w-0 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-text transition-all duration-300 w-0"
                     >
-                      <svg
-                        id="cross"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="cross"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                   <div
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-1sdc56v"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
                           type="text"
@@ -1752,52 +1787,55 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
-                    height="20"
-                    width="20"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
                   >
-                    <svg
-                      fill="none"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <g
-                        clip-path="url(#clip0_13375_36442)"
-                        id="Vertical container"
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <g
-                          id="Vertical container_2"
+                          clip-path="url(#clip0_13375_36442)"
+                          id="Vertical container"
                         >
-                          <path
-                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                            id="Vector"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.6"
-                          />
-                          <path
-                            d="M12.8281 12.7832L14.4281 14.3832"
-                            id="Vector_2"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.6"
-                          />
+                          <g
+                            id="Vertical container_2"
+                          >
+                            <path
+                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                              id="Vector"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.6"
+                            />
+                            <path
+                              d="M12.8281 12.7832L14.4281 14.3832"
+                              id="Vector_2"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.6"
+                            />
+                          </g>
                         </g>
-                      </g>
-                      <defs>
-                        <clippath
-                          id="clip0_13375_36442"
-                        >
-                          <rect
-                            fill="transparent"
-                            height="16"
-                            width="16"
-                          />
-                        </clippath>
-                      </defs>
-                    </svg>
+                        <defs>
+                          <clippath
+                            id="clip0_13375_36442"
+                          >
+                            <rect
+                              fill="transparent"
+                              height="16"
+                              width="16"
+                            />
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1861,36 +1899,39 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                             >
                               <div>
                                 <div
-                                  class="text-theme-primary-50 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                  class="text-theme-primary-50"
                                 >
-                                  <svg
-                                    id="circle-check-mark"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    style="height: 20px; width: 20px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
+                                    <svg
+                                      id="circle-check-mark"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="10"
-                                        r="9"
-                                        stroke-miterlimit="10"
-                                      />
-                                      <path
-                                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                      >
+                                        <circle
+                                          cx="10"
+                                          cy="10"
+                                          r="9"
+                                          stroke-miterlimit="10"
+                                        />
+                                        <path
+                                          d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1917,7 +1958,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -1935,31 +1976,32 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -2019,28 +2061,31 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2065,28 +2110,31 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2111,7 +2159,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-46sfhd"
+                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -2122,53 +2170,54 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                                       >
                                         Search
                                       </span>
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          fill="none"
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            clip-path="url(#clip0_13375_36442)"
-                                            id="Vertical container"
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <g
-                                              id="Vertical container_2"
+                                              clip-path="url(#clip0_13375_36442)"
+                                              id="Vertical container"
                                             >
-                                              <path
-                                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                                id="Vector"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
-                                              <path
-                                                d="M12.8281 12.7832L14.4281 14.3832"
-                                                id="Vector_2"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
+                                              <g
+                                                id="Vertical container_2"
+                                              >
+                                                <path
+                                                  d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                                  id="Vector"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                                <path
+                                                  d="M12.8281 12.7832L14.4281 14.3832"
+                                                  id="Vector_2"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                              </g>
                                             </g>
-                                          </g>
-                                          <defs>
-                                            <clippath
-                                              id="clip0_13375_36442"
-                                            >
-                                              <rect
-                                                fill="transparent"
-                                                height="16"
-                                                width="16"
-                                              />
-                                            </clippath>
-                                          </defs>
-                                        </svg>
+                                            <defs>
+                                              <clippath
+                                                id="clip0_13375_36442"
+                                              >
+                                                <rect
+                                                  fill="transparent"
+                                                  height="16"
+                                                  width="16"
+                                                />
+                                              </clippath>
+                                            </defs>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </button>
@@ -2270,7 +2319,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -2288,31 +2337,32 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -2341,7 +2391,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
+                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -2350,44 +2400,46 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-text transition-all duration-300 w-0 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-text transition-all duration-300 w-0"
                     >
-                      <svg
-                        id="cross"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="cross"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                   <div
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-1sdc56v"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
                           type="text"
@@ -2397,52 +2449,55 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
-                    height="20"
-                    width="20"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
                   >
-                    <svg
-                      fill="none"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <g
-                        clip-path="url(#clip0_13375_36442)"
-                        id="Vertical container"
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <g
-                          id="Vertical container_2"
+                          clip-path="url(#clip0_13375_36442)"
+                          id="Vertical container"
                         >
-                          <path
-                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                            id="Vector"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.6"
-                          />
-                          <path
-                            d="M12.8281 12.7832L14.4281 14.3832"
-                            id="Vector_2"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.6"
-                          />
+                          <g
+                            id="Vertical container_2"
+                          >
+                            <path
+                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                              id="Vector"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.6"
+                            />
+                            <path
+                              d="M12.8281 12.7832L14.4281 14.3832"
+                              id="Vector_2"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.6"
+                            />
+                          </g>
                         </g>
-                      </g>
-                      <defs>
-                        <clippath
-                          id="clip0_13375_36442"
-                        >
-                          <rect
-                            fill="transparent"
-                            height="16"
-                            width="16"
-                          />
-                        </clippath>
-                      </defs>
-                    </svg>
+                        <defs>
+                          <clippath
+                            id="clip0_13375_36442"
+                          >
+                            <rect
+                              fill="transparent"
+                              height="16"
+                              width="16"
+                            />
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2506,36 +2561,39 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                             >
                               <div>
                                 <div
-                                  class="text-theme-primary-50 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                  class="text-theme-primary-50"
                                 >
-                                  <svg
-                                    id="circle-check-mark"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    style="height: 20px; width: 20px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
+                                    <svg
+                                      id="circle-check-mark"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="10"
-                                        r="9"
-                                        stroke-miterlimit="10"
-                                      />
-                                      <path
-                                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                      >
+                                        <circle
+                                          cx="10"
+                                          cy="10"
+                                          r="9"
+                                          stroke-miterlimit="10"
+                                        />
+                                        <path
+                                          d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -2562,7 +2620,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-12e1fbb"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-4xl"
       tabindex="-1"
     >
       <div
@@ -2580,31 +2638,32 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -2664,28 +2723,31 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2710,28 +2772,31 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2756,7 +2821,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-46sfhd"
+                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -2767,53 +2832,54 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                                       >
                                         Search
                                       </span>
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          fill="none"
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            clip-path="url(#clip0_13375_36442)"
-                                            id="Vertical container"
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <g
-                                              id="Vertical container_2"
+                                              clip-path="url(#clip0_13375_36442)"
+                                              id="Vertical container"
                                             >
-                                              <path
-                                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                                id="Vector"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
-                                              <path
-                                                d="M12.8281 12.7832L14.4281 14.3832"
-                                                id="Vector_2"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
+                                              <g
+                                                id="Vertical container_2"
+                                              >
+                                                <path
+                                                  d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                                  id="Vector"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                                <path
+                                                  d="M12.8281 12.7832L14.4281 14.3832"
+                                                  id="Vector_2"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                              </g>
                                             </g>
-                                          </g>
-                                          <defs>
-                                            <clippath
-                                              id="clip0_13375_36442"
-                                            >
-                                              <rect
-                                                fill="transparent"
-                                                height="16"
-                                                width="16"
-                                              />
-                                            </clippath>
-                                          </defs>
-                                        </svg>
+                                            <defs>
+                                              <clippath
+                                                id="clip0_13375_36442"
+                                              >
+                                                <rect
+                                                  fill="transparent"
+                                                  height="16"
+                                                  width="16"
+                                                />
+                                              </clippath>
+                                            </defs>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </button>
@@ -2904,7 +2970,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-12e1fbb"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-4xl"
       tabindex="-1"
     >
       <div
@@ -2922,31 +2988,32 @@ exports[`SearchRecipient > should render with selected address 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -3006,28 +3073,31 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3052,28 +3122,31 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3098,7 +3171,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-46sfhd"
+                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -3109,53 +3182,54 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                       >
                                         Search
                                       </span>
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          fill="none"
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            clip-path="url(#clip0_13375_36442)"
-                                            id="Vertical container"
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <g
-                                              id="Vertical container_2"
+                                              clip-path="url(#clip0_13375_36442)"
+                                              id="Vertical container"
                                             >
-                                              <path
-                                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                                id="Vector"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
-                                              <path
-                                                d="M12.8281 12.7832L14.4281 14.3832"
-                                                id="Vector_2"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
+                                              <g
+                                                id="Vertical container_2"
+                                              >
+                                                <path
+                                                  d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                                  id="Vector"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                                <path
+                                                  d="M12.8281 12.7832L14.4281 14.3832"
+                                                  id="Vector_2"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                              </g>
                                             </g>
-                                          </g>
-                                          <defs>
-                                            <clippath
-                                              id="clip0_13375_36442"
-                                            >
-                                              <rect
-                                                fill="transparent"
-                                                height="16"
-                                                width="16"
-                                              />
-                                            </clippath>
-                                          </defs>
-                                        </svg>
+                                            <defs>
+                                              <clippath
+                                                id="clip0_13375_36442"
+                                              >
+                                                <rect
+                                                  fill="transparent"
+                                                  height="16"
+                                                  width="16"
+                                                />
+                                              </clippath>
+                                            </defs>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </button>
@@ -3325,7 +3399,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -3343,31 +3417,32 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -3427,28 +3502,31 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3473,28 +3551,31 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
-                                class="transition-transform rotate-180 css-15txs7d"
-                                height="10"
+                                class="transition-transform rotate-180"
                                 role="img"
-                                width="10"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3519,7 +3600,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-46sfhd"
+                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -3530,53 +3611,54 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                       >
                                         Search
                                       </span>
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          fill="none"
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            clip-path="url(#clip0_13375_36442)"
-                                            id="Vertical container"
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <g
-                                              id="Vertical container_2"
+                                              clip-path="url(#clip0_13375_36442)"
+                                              id="Vertical container"
                                             >
-                                              <path
-                                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                                id="Vector"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
-                                              <path
-                                                d="M12.8281 12.7832L14.4281 14.3832"
-                                                id="Vector_2"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="1.6"
-                                              />
+                                              <g
+                                                id="Vertical container_2"
+                                              >
+                                                <path
+                                                  d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                                  id="Vector"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                                <path
+                                                  d="M12.8281 12.7832L14.4281 14.3832"
+                                                  id="Vector_2"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="1.6"
+                                                />
+                                              </g>
                                             </g>
-                                          </g>
-                                          <defs>
-                                            <clippath
-                                              id="clip0_13375_36442"
-                                            >
-                                              <rect
-                                                fill="transparent"
-                                                height="16"
-                                                width="16"
-                                              />
-                                            </clippath>
-                                          </defs>
-                                        </svg>
+                                            <defs>
+                                              <clippath
+                                                id="clip0_13375_36442"
+                                              >
+                                                <rect
+                                                  fill="transparent"
+                                                  height="16"
+                                                  width="16"
+                                                />
+                                              </clippath>
+                                            </defs>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </button>
@@ -3746,7 +3828,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
@@ -3764,31 +3846,32 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -3817,7 +3900,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
+                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -3826,44 +3909,46 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-text transition-all duration-300 w-0 css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="text-theme-text transition-all duration-300 w-0"
                     >
-                      <svg
-                        id="cross"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="cross"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                   <div
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-1sdc56v"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
                           type="text"
@@ -3873,52 +3958,55 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
-                    height="20"
-                    width="20"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
                   >
-                    <svg
-                      fill="none"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <g
-                        clip-path="url(#clip0_13375_36442)"
-                        id="Vertical container"
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <g
-                          id="Vertical container_2"
+                          clip-path="url(#clip0_13375_36442)"
+                          id="Vertical container"
                         >
-                          <path
-                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                            id="Vector"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.6"
-                          />
-                          <path
-                            d="M12.8281 12.7832L14.4281 14.3832"
-                            id="Vector_2"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.6"
-                          />
+                          <g
+                            id="Vertical container_2"
+                          >
+                            <path
+                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                              id="Vector"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.6"
+                            />
+                            <path
+                              d="M12.8281 12.7832L14.4281 14.3832"
+                              id="Vector_2"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.6"
+                            />
+                          </g>
                         </g>
-                      </g>
-                      <defs>
-                        <clippath
-                          id="clip0_13375_36442"
-                        >
-                          <rect
-                            fill="transparent"
-                            height="16"
-                            width="16"
-                          />
-                        </clippath>
-                      </defs>
-                    </svg>
+                        <defs>
+                          <clippath
+                            id="clip0_13375_36442"
+                          >
+                            <rect
+                              fill="transparent"
+                              height="16"
+                              width="16"
+                            />
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3982,36 +4070,39 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                             >
                               <div>
                                 <div
-                                  class="text-theme-primary-50 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                  class="text-theme-primary-50"
                                 >
-                                  <svg
-                                    id="circle-check-mark"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    style="height: 20px; width: 20px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
+                                    <svg
+                                      id="circle-check-mark"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="10"
-                                        r="9"
-                                        stroke-miterlimit="10"
-                                      />
-                                      <path
-                                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                      >
+                                        <circle
+                                          cx="10"
+                                          cy="10"
+                                          r="9"
+                                          stroke-miterlimit="10"
+                                        />
+                                        <path
+                                          d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -4063,36 +4154,39 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                             >
                               <div>
                                 <div
-                                  class="text-theme-primary-200 dark:text-theme-secondary-800 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                  class="text-theme-primary-200 dark:text-theme-secondary-800"
                                 >
-                                  <svg
-                                    id="circle-check-mark"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    style="height: 20px; width: 20px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
+                                    <svg
+                                      id="circle-check-mark"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="10"
-                                        r="9"
-                                        stroke-miterlimit="10"
-                                      />
-                                      <path
-                                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                      >
+                                        <circle
+                                          cx="10"
+                                          cy="10"
+                                          r="9"
+                                          stroke-miterlimit="10"
+                                        />
+                                        <path
+                                          d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </div>
                             </div>

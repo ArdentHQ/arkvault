@@ -3,10 +3,11 @@
 exports[`SendTransfer Fee Handling > should send a single transfer with a high fee by confirming the fee warning 1`] = `
 <div>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -24,37 +25,37 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="received"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="received"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -64,34 +65,34 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                fill="none"
-                viewBox="0 0 21 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 21 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -101,28 +102,29 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="sent"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="sent"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -130,7 +132,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -139,30 +141,33 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
-              class="mx-auto css-15txs7d"
-              height="10"
-              width="10"
+              class="mx-auto"
             >
-              <svg
-                id="chevron-left-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-left-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -264,25 +269,26 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                 class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -297,7 +303,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -308,23 +314,26 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -348,7 +357,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -359,30 +368,33 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="bell"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -406,7 +418,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -417,30 +429,33 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="received"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -453,7 +468,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -464,27 +479,30 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="sent"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="sent"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -530,7 +548,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -556,7 +574,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -613,47 +631,50 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             class="flex items-center gap-3"
                           >
                             <div
-                              class="text-theme-success-600 css-h1kfx5"
+                              class="text-theme-success-600"
                               data-testid="icon-PendingTransaction"
-                              height="24"
-                              width="24"
                             >
-                              <svg
-                                fill="none"
-                                viewBox="0 0 24 25"
-                                xmlns="http://www.w3.org/2000/svg"
+                              <div
+                                style="height: 24px; width: 24px;"
                               >
-                                <circle
-                                  cx="12"
-                                  cy="12.5"
-                                  fill="transparent"
-                                  r="11"
-                                  stroke="currentColor"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                                <path
-                                  d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                                <path
-                                  d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                                <path
-                                  d="M14.3932 8.76465L11.0332 13.2446"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
+                                <svg
+                                  fill="none"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="12"
+                                    cy="12.5"
+                                    fill="transparent"
+                                    r="11"
+                                    stroke="currentColor"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M14.3932 8.76465L11.0332 13.2446"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
@@ -699,34 +720,35 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             data-testid="clipboard-icon__wrapper"
                             type="button"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                             <span
                               class="sm:hidden"
@@ -742,28 +764,29 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             <div
                               class="flex items-center space-x-2"
                             >
-                              <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
-                              >
-                                <svg
-                                  id="arrow-external"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                              <div>
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <path
-                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="arrow-external"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </button>
@@ -841,33 +864,36 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                      height="16"
-                                      width="16"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                     >
-                                      <svg
-                                        id="copy"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
                                         >
-                                          <path
-                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                          />
-                                          <path
-                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                          />
-                                        </g>
-                                      </svg>
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
                                     </div>
                                   </button>
                                 </div>
@@ -879,8 +905,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                   class="w-full [.condensed_&]:hidden"
                                 >
                                   <div
-                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                    type="horizontal"
+                                    class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                   />
                                 </div>
                               </div>
@@ -915,33 +940,36 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                      height="16"
-                                      width="16"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                     >
-                                      <svg
-                                        id="copy"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
                                         >
-                                          <path
-                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                          />
-                                          <path
-                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                          />
-                                        </g>
-                                      </svg>
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
                                     </div>
                                   </button>
                                 </div>
@@ -1003,8 +1031,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                       Category
                                     </div>
                                     <div
-                                      class="css-1p04us5"
-                                      color="neutral"
+                                      class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
                                     </div>
@@ -1065,8 +1092,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     Amount
                                   </div>
                                   <div
-                                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                                    color="danger-bg"
+                                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
@@ -1088,8 +1114,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     class="w-full [.condensed_&]:hidden"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                      type="horizontal"
+                                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                     />
                                   </div>
                                 </div>
@@ -1116,8 +1141,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     class="w-full [.condensed_&]:hidden"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                      type="horizontal"
+                                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                     />
                                   </div>
                                 </div>
@@ -1204,8 +1228,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     class="w-full [.condensed_&]:hidden"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                      type="horizontal"
+                                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                     />
                                   </div>
                                 </div>
@@ -1219,38 +1242,41 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-bxx244"
+                                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                                      class="mb-[3px] shrink-0 align-middle duration-200"
                                       data-testid="Link__external"
-                                      height="12"
-                                      width="12"
                                     >
-                                      <svg
-                                        id="arrow-external"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
+                                      <div
+                                        style="height: 12px; width: 12px;"
                                       >
-                                        <path
-                                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        />
-                                      </svg>
+                                        <svg
+                                          id="arrow-external"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <path
+                                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          />
+                                        </svg>
+                                      </div>
                                     </div>
                                   </a>
                                 </div>
@@ -1261,8 +1287,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     class="w-full [.condensed_&]:hidden"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                      type="horizontal"
+                                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                     />
                                   </div>
                                 </div>
@@ -1370,44 +1395,47 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
+                                class="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="h-5 css-1i4b0eq"
-                                    height="20"
-                                    width="20"
+                                    class="h-5"
                                   >
-                                    <svg
-                                      fill="none"
-                                      viewBox="0 0 20 20"
-                                      xmlns="http://www.w3.org/2000/svg"
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <path
-                                        d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <path
-                                        d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <path
-                                        d="M12.9969 4.69922L8.79688 10.2992"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                    </svg>
+                                      <svg
+                                        fill="none"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <path
+                                          d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <path
+                                          d="M12.9969 4.69922L8.79688 10.2992"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                   <p
                                     class="font-semibold"
@@ -1416,8 +1444,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                   </p>
                                 </div>
                                 <div
-                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
-                                  type="vertical"
+                                  class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-success-200 dark:text-theme-secondary-800"
                                 />
                                 <p
                                   class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
@@ -1437,7 +1464,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1463,10 +1490,11 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
 exports[`SendTransfer Fee Handling > should send a single transfer with a low fee by confirming the fee warning 1`] = `
 <div>
   <div
-    class="css-w3nefz"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
     <div
-      class="css-sdeely"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1484,37 +1512,37 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="received"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="received"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1524,34 +1552,34 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                fill="none"
-                viewBox="0 0 21 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 21 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1561,28 +1589,29 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="sent"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="sent"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -1590,7 +1619,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1jzy9qi"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -1599,30 +1628,33 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
-              class="mx-auto css-15txs7d"
-              height="10"
-              width="10"
+              class="mx-auto"
             >
-              <svg
-                id="chevron-left-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-left-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -1724,25 +1756,26 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                 class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -1757,7 +1790,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1768,23 +1801,26 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1808,7 +1844,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-c93wvv"
+                  class="custom-button-wrapper group"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1819,30 +1855,33 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="bell"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1866,7 +1905,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1877,30 +1916,33 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="received"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1913,7 +1955,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                 class="flex items-center"
               >
                 <div
-                  class="css-c93wvv"
+                  class="custom-button-wrapper"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1924,27 +1966,30 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="sent"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="sent"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1990,7 +2035,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -2016,7 +2061,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -2073,47 +2118,50 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             class="flex items-center gap-3"
                           >
                             <div
-                              class="text-theme-success-600 css-h1kfx5"
+                              class="text-theme-success-600"
                               data-testid="icon-PendingTransaction"
-                              height="24"
-                              width="24"
                             >
-                              <svg
-                                fill="none"
-                                viewBox="0 0 24 25"
-                                xmlns="http://www.w3.org/2000/svg"
+                              <div
+                                style="height: 24px; width: 24px;"
                               >
-                                <circle
-                                  cx="12"
-                                  cy="12.5"
-                                  fill="transparent"
-                                  r="11"
-                                  stroke="currentColor"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                                <path
-                                  d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                                <path
-                                  d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                                <path
-                                  d="M14.3932 8.76465L11.0332 13.2446"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
+                                <svg
+                                  fill="none"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="12"
+                                    cy="12.5"
+                                    fill="transparent"
+                                    r="11"
+                                    stroke="currentColor"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M14.3932 8.76465L11.0332 13.2446"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
@@ -2159,34 +2207,35 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             data-testid="clipboard-icon__wrapper"
                             type="button"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                             <span
                               class="sm:hidden"
@@ -2202,28 +2251,29 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             <div
                               class="flex items-center space-x-2"
                             >
-                              <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
-                              >
-                                <svg
-                                  id="arrow-external"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                              <div>
+                                <div
+                                  style="height: 16px; width: 16px;"
                                 >
-                                  <path
-                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="arrow-external"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </button>
@@ -2301,33 +2351,36 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                      height="16"
-                                      width="16"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                     >
-                                      <svg
-                                        id="copy"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
                                         >
-                                          <path
-                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                          />
-                                          <path
-                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                          />
-                                        </g>
-                                      </svg>
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
                                     </div>
                                   </button>
                                 </div>
@@ -2339,8 +2392,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                   class="w-full [.condensed_&]:hidden"
                                 >
                                   <div
-                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                    type="horizontal"
+                                    class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                   />
                                 </div>
                               </div>
@@ -2375,33 +2427,36 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                                      height="16"
-                                      width="16"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                     >
-                                      <svg
-                                        id="copy"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
                                         >
-                                          <path
-                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                          />
-                                          <path
-                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                          />
-                                        </g>
-                                      </svg>
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
                                     </div>
                                   </button>
                                 </div>
@@ -2463,8 +2518,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                       Category
                                     </div>
                                     <div
-                                      class="css-1p04us5"
-                                      color="neutral"
+                                      class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
                                     </div>
@@ -2525,8 +2579,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     Amount
                                   </div>
                                   <div
-                                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                                    color="danger-bg"
+                                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
@@ -2548,8 +2601,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     class="w-full [.condensed_&]:hidden"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                      type="horizontal"
+                                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                     />
                                   </div>
                                 </div>
@@ -2576,8 +2628,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     class="w-full [.condensed_&]:hidden"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                      type="horizontal"
+                                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                     />
                                   </div>
                                 </div>
@@ -2664,8 +2715,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     class="w-full [.condensed_&]:hidden"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                      type="horizontal"
+                                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                     />
                                   </div>
                                 </div>
@@ -2679,38 +2729,41 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-bxx244"
+                                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                                      class="mb-[3px] shrink-0 align-middle duration-200"
                                       data-testid="Link__external"
-                                      height="12"
-                                      width="12"
                                     >
-                                      <svg
-                                        id="arrow-external"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
+                                      <div
+                                        style="height: 12px; width: 12px;"
                                       >
-                                        <path
-                                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        />
-                                      </svg>
+                                        <svg
+                                          id="arrow-external"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <path
+                                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          />
+                                        </svg>
+                                      </div>
                                     </div>
                                   </a>
                                 </div>
@@ -2721,8 +2774,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     class="w-full [.condensed_&]:hidden"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                      type="horizontal"
+                                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                     />
                                   </div>
                                 </div>
@@ -2830,44 +2882,47 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
+                                class="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="h-5 css-1i4b0eq"
-                                    height="20"
-                                    width="20"
+                                    class="h-5"
                                   >
-                                    <svg
-                                      fill="none"
-                                      viewBox="0 0 20 20"
-                                      xmlns="http://www.w3.org/2000/svg"
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <path
-                                        d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <path
-                                        d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <path
-                                        d="M12.9969 4.69922L8.79688 10.2992"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                    </svg>
+                                      <svg
+                                        fill="none"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <path
+                                          d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <path
+                                          d="M12.9969 4.69922L8.79688 10.2992"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                   <p
                                     class="font-semibold"
@@ -2876,8 +2931,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                   </p>
                                 </div>
                                 <div
-                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
-                                  type="vertical"
+                                  class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-success-200 dark:text-theme-secondary-800"
                                 />
                                 <p
                                   class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
@@ -2897,7 +2951,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

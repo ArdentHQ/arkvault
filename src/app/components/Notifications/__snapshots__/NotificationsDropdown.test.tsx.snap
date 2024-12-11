@@ -9,7 +9,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="group css-c93wvv"
+        class="custom-button-wrapper group"
       >
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -57,7 +57,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
       data-testid="Modal__overlay"
     >
       <div
-        class="css-1jzz0qm"
+        class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
         tabindex="-1"
       >
         <div
@@ -486,8 +486,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Category
                                 </div>
                                 <div
-                                  class="css-1p04us5"
-                                  color="neutral"
+                                  class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                 >
                                   Transfer
                                 </div>
@@ -548,8 +547,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 Amount
                               </div>
                               <div
-                                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1sycv4s"
-                                color="secondary"
+                                class="font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -699,14 +697,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 Block
                               </div>
                               <a
-                                class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/blocks/e6d4760c50419d8665731d3391ba209767f3073d4b2b6661078ff220034d197e"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-bxx244"
+                                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                 />
                                 <div
                                   class="mb-[3px] shrink-0 align-middle duration-200"
@@ -891,7 +889,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="group css-c93wvv"
+        class="custom-button-wrapper group"
       >
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -948,7 +946,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="group css-c93wvv"
+        class="custom-button-wrapper group"
       >
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1005,7 +1003,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="group css-c93wvv"
+        class="custom-button-wrapper group"
       >
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1062,7 +1060,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="group css-c93wvv"
+        class="custom-button-wrapper group"
       >
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1119,7 +1117,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="group css-c93wvv"
+        class="custom-button-wrapper group"
       >
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
