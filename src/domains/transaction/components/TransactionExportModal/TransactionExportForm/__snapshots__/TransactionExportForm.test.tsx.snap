@@ -6,7 +6,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
     data-testid="TransactionExportForm"
   >
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -44,7 +44,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -58,7 +58,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -72,7 +72,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -116,7 +116,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -136,30 +136,33 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                       />
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -176,7 +179,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       CSV Settings
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -252,7 +255,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -279,30 +282,33 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                       </span>
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -319,7 +325,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       Columns
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -554,7 +560,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       </li>
     </ul>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -589,7 +595,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -627,7 +633,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -641,7 +647,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -655,7 +661,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -699,7 +705,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -719,30 +725,33 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                       />
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -759,7 +768,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       CSV Settings
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -835,7 +844,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -862,30 +871,33 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                       </span>
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -902,7 +914,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       Columns
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1091,7 +1103,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       </li>
     </ul>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1126,7 +1138,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1164,7 +1176,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1178,7 +1190,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1192,7 +1204,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1236,7 +1248,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -1256,30 +1268,33 @@ exports[`TransactionExportForm > should render in md 1`] = `
                       />
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -1296,7 +1311,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       CSV Settings
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1372,7 +1387,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -1399,30 +1414,33 @@ exports[`TransactionExportForm > should render in md 1`] = `
                       </span>
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -1439,7 +1457,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       Columns
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1628,7 +1646,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       </li>
     </ul>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1663,7 +1681,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1701,7 +1719,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1715,7 +1733,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1729,7 +1747,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1773,7 +1791,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -1793,30 +1811,33 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                       />
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -1833,7 +1854,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       CSV Settings
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1909,7 +1930,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -1936,30 +1957,33 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                       </span>
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -1976,7 +2000,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       Columns
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2165,7 +2189,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       </li>
     </ul>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2200,7 +2224,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2238,7 +2262,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2252,7 +2276,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2266,7 +2290,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="css-1byvqk4"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2310,7 +2334,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -2330,30 +2354,33 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                       />
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -2370,7 +2397,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       CSV Settings
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2446,7 +2473,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -2473,30 +2500,33 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                       </span>
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -2513,7 +2543,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       Columns
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2702,7 +2732,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       </li>
     </ul>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -2737,7 +2767,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2776,7 +2806,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="Incoming"
-                class="css-1byvqk4"
+                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2790,7 +2820,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="Outgoing"
-                class="css-1byvqk4"
+                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2804,7 +2834,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="All"
-                class="css-1byvqk4"
+                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2846,7 +2876,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -2866,30 +2896,33 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                       />
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -2906,7 +2939,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       CSV Settings
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2982,7 +3015,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <div
                   aria-expanded="false"
@@ -3009,30 +3042,33 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                       </span>
                     </span>
                     <span
-                      class="css-1uvxu7z"
+                      class="inline-flex items-center justify-center rounded-full text-theme-primary-600 transition duration-200 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-15txs7d"
-                        height="10"
-                        width="10"
+                        class="p-1"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 10px; width: 10px;"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="chevron-down-small"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </span>
                   </button>
@@ -3049,7 +3085,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       Columns
     </div>
     <ul
-      class="css-1mq6i0h"
+      class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:border-b-0"
       data-testid="list-divided__items"
     >
       <li
@@ -3238,7 +3274,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       </li>
     </ul>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

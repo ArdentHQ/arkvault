@@ -9,7 +9,7 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1uui4dw"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-lg"
       tabindex="-1"
     >
       <div
@@ -27,31 +27,32 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -108,51 +109,52 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-rzhg83"
+                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="circle-exclamation-mark"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
                 <span>
                   Warning
                 </span>
               </div>
               <div
-                class="css-trjt6n"
+                class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
               >
                 You have selected a high fee. Your transaction can be confirmed with a lower fee. Do you wish to continue anyway?
               </div>
@@ -161,14 +163,13 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
               class="mt-4"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <label
                   class="flex w-max cursor-pointer items-center space-x-3"
                 >
                   <input
-                    class="css-kf7z38"
-                    color="success"
+                    class="custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-secondary-600 disabled:dark:bg-theme-secondary-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-secondary-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 [&:not(:checked)]:hover:border-theme-primary-600"
                     data-testid="FeeWarning__suppressWarning-toggle"
                     name="suppressWarning"
                     type="checkbox"
@@ -182,7 +183,7 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
               </fieldset>
             </div>
             <div
-              class="css-j6ajdm"
+              class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
             >
               <button
                 class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -222,7 +223,7 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1uui4dw"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-lg"
       tabindex="-1"
     >
       <div
@@ -240,31 +241,32 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="cross"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
@@ -321,51 +323,52 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-rzhg83"
+                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="circle-exclamation-mark"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
                 <span>
                   Warning
                 </span>
               </div>
               <div
-                class="css-trjt6n"
+                class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
               >
                 You have selected a low fee. Your transaction may never be confirmed. Do you wish to continue anyway?
               </div>
@@ -374,14 +377,13 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
               class="mt-4"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
               >
                 <label
                   class="flex w-max cursor-pointer items-center space-x-3"
                 >
                   <input
-                    class="css-kf7z38"
-                    color="success"
+                    class="custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-secondary-600 disabled:dark:bg-theme-secondary-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-secondary-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 [&:not(:checked)]:hover:border-theme-primary-600"
                     data-testid="FeeWarning__suppressWarning-toggle"
                     name="suppressWarning"
                     type="checkbox"
@@ -395,7 +397,7 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
               </fieldset>
             </div>
             <div
-              class="css-j6ajdm"
+              class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
             >
               <button
                 class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

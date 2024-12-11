@@ -15,7 +15,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Transaction(s) Amount
           </span>
@@ -30,7 +30,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Transaction Fee
           </span>
@@ -48,31 +48,32 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
         <div
           class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -81,7 +82,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
       class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
     >
       <span
-        class="css-1rmjubp"
+        class="text-sm font-semibold text-theme-secondary-500"
       >
         Total Amount
       </span>
@@ -111,7 +112,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Transaction(s) Amount
           </span>
@@ -126,7 +127,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Transaction Fee
           </span>
@@ -144,31 +145,32 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
         <div
           class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -177,7 +179,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
       class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
     >
       <span
-        class="css-1rmjubp"
+        class="text-sm font-semibold text-theme-secondary-500"
       >
         Total Amount
       </span>
@@ -207,7 +209,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Transaction(s) Amount
           </span>
@@ -222,7 +224,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Transaction Fee
           </span>
@@ -240,31 +242,32 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
         <div
           class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -273,7 +276,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
       class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
     >
       <span
-        class="css-1rmjubp"
+        class="text-sm font-semibold text-theme-secondary-500"
       >
         Total Amount
       </span>
@@ -303,7 +306,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Transaction(s) Amount
           </span>
@@ -318,7 +321,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
         >
           <span
-            class="css-1rmjubp"
+            class="text-sm font-semibold text-theme-secondary-500"
           >
             Transaction Fee
           </span>
@@ -336,31 +339,32 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
         <div
           class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -369,7 +373,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
       class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
     >
       <span
-        class="css-1rmjubp"
+        class="text-sm font-semibold text-theme-secondary-500"
       >
         Total Amount
       </span>

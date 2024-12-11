@@ -7,7 +7,7 @@ exports[`QRModal > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-12e1fbb"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-4xl"
       tabindex="-1"
     >
       <div

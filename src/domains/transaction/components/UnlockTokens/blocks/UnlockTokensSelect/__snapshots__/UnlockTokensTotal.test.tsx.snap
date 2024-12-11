@@ -15,8 +15,7 @@ exports[`UnlockTokensTotal > should render 1`] = `
         Total Amount
       </p>
       <div
-        class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
-        color="success-bg"
+        class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
         data-testid="AmountLabel__wrapper"
       >
         <div
@@ -41,8 +40,7 @@ exports[`UnlockTokensTotal > should render 1`] = `
         Transaction Fee
       </p>
       <div
-        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
-        color="danger-bg"
+        class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
         data-testid="AmountLabel__wrapper"
       >
         <div
@@ -131,8 +129,7 @@ exports[`UnlockTokensTotal > should render loading fee 1`] = `
         Total Amount
       </p>
       <div
-        class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
-        color="success-bg"
+        class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
         data-testid="AmountLabel__wrapper"
       >
         <div

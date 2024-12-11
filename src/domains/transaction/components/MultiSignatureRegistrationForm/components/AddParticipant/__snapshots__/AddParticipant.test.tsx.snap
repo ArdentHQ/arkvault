@@ -6,10 +6,10 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
     class="-mt-2 sm:mt-0"
   >
     <div
-      class="css-1mwq138"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-s0h7ue"
+        class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -28,15 +28,14 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1njetft"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     aria-invalid="true"
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -54,41 +53,44 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                     data-testid="Input__error"
                   >
                     <div
-                      class="text-theme-danger-500 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="text-theme-danger-500"
                     >
-                      <svg
-                        id="circle-exclamation-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 10.5v-5"
-                            stroke-linecap="round"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 14h0"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -108,7 +110,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1njetft"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -118,8 +120,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -137,57 +138,14 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                           data-testid="Input__error"
                         >
                           <div
-                            class="text-theme-danger-500 css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="circle-exclamation-mark"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 10.5v-5"
-                                  stroke-linecap="round"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 14h0"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </span>
-                        <div
-                          class="pl-3"
-                        >
-                          <div
-                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
-                            data-testid="SelectRecipient__select-recipient"
+                            class="text-theme-danger-500"
                           >
                             <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
+                              style="height: 20px; width: 20px;"
                             >
                               <svg
-                                id="user"
+                                id="circle-exclamation-mark"
+                                style="height: 100%; width: 100%;"
                                 viewBox="0 0 20 20"
                                 x="0"
                                 xml:space="preserve"
@@ -197,20 +155,67 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                                 <g
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
                                   stroke-width="2"
                                 >
                                   <circle
                                     cx="10"
-                                    cy="5"
-                                    r="4"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
                                   />
                                   <path
-                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    d="M10 10.5v-5"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 14h0"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <div
+                          class="pl-3"
+                        >
+                          <div
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            data-testid="SelectRecipient__select-recipient"
+                          >
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
+                              >
+                                <svg
+                                  id="user"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="5"
+                                      r="4"
+                                    />
+                                    <path
+                                      d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -269,31 +274,32 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -342,31 +348,32 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </button>
@@ -385,10 +392,10 @@ exports[`Add Participant > should fail to find 1`] = `
     class="-mt-2 sm:mt-0"
   >
     <div
-      class="css-1mwq138"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-s0h7ue"
+        class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -407,15 +414,14 @@ exports[`Add Participant > should fail to find 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1njetft"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     aria-invalid="true"
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -433,41 +439,44 @@ exports[`Add Participant > should fail to find 1`] = `
                     data-testid="Input__error"
                   >
                     <div
-                      class="text-theme-danger-500 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="text-theme-danger-500"
                     >
-                      <svg
-                        id="circle-exclamation-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 10.5v-5"
-                            stroke-linecap="round"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 14h0"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -487,7 +496,7 @@ exports[`Add Participant > should fail to find 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1njetft"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -497,8 +506,7 @@ exports[`Add Participant > should fail to find 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -516,57 +524,14 @@ exports[`Add Participant > should fail to find 1`] = `
                           data-testid="Input__error"
                         >
                           <div
-                            class="text-theme-danger-500 css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="circle-exclamation-mark"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 10.5v-5"
-                                  stroke-linecap="round"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 14h0"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </span>
-                        <div
-                          class="pl-3"
-                        >
-                          <div
-                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
-                            data-testid="SelectRecipient__select-recipient"
+                            class="text-theme-danger-500"
                           >
                             <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
+                              style="height: 20px; width: 20px;"
                             >
                               <svg
-                                id="user"
+                                id="circle-exclamation-mark"
+                                style="height: 100%; width: 100%;"
                                 viewBox="0 0 20 20"
                                 x="0"
                                 xml:space="preserve"
@@ -576,20 +541,67 @@ exports[`Add Participant > should fail to find 1`] = `
                                 <g
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
                                   stroke-width="2"
                                 >
                                   <circle
                                     cx="10"
-                                    cy="5"
-                                    r="4"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
                                   />
                                   <path
-                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    d="M10 10.5v-5"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 14h0"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <div
+                          class="pl-3"
+                        >
+                          <div
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            data-testid="SelectRecipient__select-recipient"
+                          >
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
+                              >
+                                <svg
+                                  id="user"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="5"
+                                      r="4"
+                                    />
+                                    <path
+                                      d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -648,31 +660,32 @@ exports[`Add Participant > should fail to find 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -721,31 +734,32 @@ exports[`Add Participant > should fail to find 1`] = `
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </button>
@@ -764,10 +778,10 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
     class="-mt-2 sm:mt-0"
   >
     <div
-      class="css-1mwq138"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-s0h7ue"
+        class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -786,15 +800,14 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1njetft"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     aria-invalid="true"
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -812,41 +825,44 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                     data-testid="Input__error"
                   >
                     <div
-                      class="text-theme-danger-500 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="text-theme-danger-500"
                     >
-                      <svg
-                        id="circle-exclamation-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 10.5v-5"
-                            stroke-linecap="round"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 14h0"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -871,7 +887,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD…
                     </div>
                     <div
-                      class="css-1njetft"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="flex items-center"
@@ -891,8 +907,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -920,57 +935,14 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           data-testid="Input__error"
                         >
                           <div
-                            class="text-theme-danger-500 css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="circle-exclamation-mark"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 10.5v-5"
-                                  stroke-linecap="round"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 14h0"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </span>
-                        <div
-                          class="pl-3"
-                        >
-                          <div
-                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
-                            data-testid="SelectRecipient__select-recipient"
+                            class="text-theme-danger-500"
                           >
                             <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
+                              style="height: 20px; width: 20px;"
                             >
                               <svg
-                                id="user"
+                                id="circle-exclamation-mark"
+                                style="height: 100%; width: 100%;"
                                 viewBox="0 0 20 20"
                                 x="0"
                                 xml:space="preserve"
@@ -980,20 +952,67 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                                 <g
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
                                   stroke-width="2"
                                 >
                                   <circle
                                     cx="10"
-                                    cy="5"
-                                    r="4"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
                                   />
                                   <path
-                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    d="M10 10.5v-5"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 14h0"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <div
+                          class="pl-3"
+                        >
+                          <div
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            data-testid="SelectRecipient__select-recipient"
+                          >
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
+                              >
+                                <svg
+                                  id="user"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="5"
+                                      r="4"
+                                    />
+                                    <path
+                                      d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1052,31 +1071,32 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1114,31 +1134,32 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </button>
@@ -1157,10 +1178,10 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
     class="-mt-2 sm:mt-0"
   >
     <div
-      class="css-1mwq138"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-s0h7ue"
+        class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1179,15 +1200,14 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1njetft"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     aria-invalid="true"
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1205,41 +1225,44 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                     data-testid="Input__error"
                   >
                     <div
-                      class="text-theme-danger-500 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="text-theme-danger-500"
                     >
-                      <svg
-                        id="circle-exclamation-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 10.5v-5"
-                            stroke-linecap="round"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 14h0"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -1259,7 +1282,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1njetft"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1269,8 +1292,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -1288,57 +1310,14 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                           data-testid="Input__error"
                         >
                           <div
-                            class="text-theme-danger-500 css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="circle-exclamation-mark"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 10.5v-5"
-                                  stroke-linecap="round"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 14h0"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </span>
-                        <div
-                          class="pl-3"
-                        >
-                          <div
-                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
-                            data-testid="SelectRecipient__select-recipient"
+                            class="text-theme-danger-500"
                           >
                             <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
+                              style="height: 20px; width: 20px;"
                             >
                               <svg
-                                id="user"
+                                id="circle-exclamation-mark"
+                                style="height: 100%; width: 100%;"
                                 viewBox="0 0 20 20"
                                 x="0"
                                 xml:space="preserve"
@@ -1348,20 +1327,67 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                                 <g
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
                                   stroke-width="2"
                                 >
                                   <circle
                                     cx="10"
-                                    cy="5"
-                                    r="4"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
                                   />
                                   <path
-                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    d="M10 10.5v-5"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 14h0"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <div
+                          class="pl-3"
+                        >
+                          <div
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            data-testid="SelectRecipient__select-recipient"
+                          >
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
+                              >
+                                <svg
+                                  id="user"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="5"
+                                      r="4"
+                                    />
+                                    <path
+                                      d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1420,31 +1446,32 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1493,31 +1520,32 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </button>
@@ -1536,10 +1564,10 @@ exports[`Add Participant > should handle exception on find and show address not 
     class="-mt-2 sm:mt-0"
   >
     <div
-      class="css-1mwq138"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-s0h7ue"
+        class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1558,15 +1586,14 @@ exports[`Add Participant > should handle exception on find and show address not 
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1njetft"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     aria-invalid="true"
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1584,41 +1611,44 @@ exports[`Add Participant > should handle exception on find and show address not 
                     data-testid="Input__error"
                   >
                     <div
-                      class="text-theme-danger-500 css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="text-theme-danger-500"
                     >
-                      <svg
-                        id="circle-exclamation-mark"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 10.5v-5"
-                            stroke-linecap="round"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 14h0"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -1638,7 +1668,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1njetft"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1648,8 +1678,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -1667,57 +1696,14 @@ exports[`Add Participant > should handle exception on find and show address not 
                           data-testid="Input__error"
                         >
                           <div
-                            class="text-theme-danger-500 css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="circle-exclamation-mark"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 10.5v-5"
-                                  stroke-linecap="round"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 14h0"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </span>
-                        <div
-                          class="pl-3"
-                        >
-                          <div
-                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
-                            data-testid="SelectRecipient__select-recipient"
+                            class="text-theme-danger-500"
                           >
                             <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
+                              style="height: 20px; width: 20px;"
                             >
                               <svg
-                                id="user"
+                                id="circle-exclamation-mark"
+                                style="height: 100%; width: 100%;"
                                 viewBox="0 0 20 20"
                                 x="0"
                                 xml:space="preserve"
@@ -1727,20 +1713,67 @@ exports[`Add Participant > should handle exception on find and show address not 
                                 <g
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
                                   stroke-width="2"
                                 >
                                   <circle
                                     cx="10"
-                                    cy="5"
-                                    r="4"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
                                   />
                                   <path
-                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    d="M10 10.5v-5"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 14h0"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <div
+                          class="pl-3"
+                        >
+                          <div
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            data-testid="SelectRecipient__select-recipient"
+                          >
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
+                              >
+                                <svg
+                                  id="user"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="5"
+                                      r="4"
+                                    />
+                                    <path
+                                      d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1799,31 +1832,32 @@ exports[`Add Participant > should handle exception on find and show address not 
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1872,31 +1906,32 @@ exports[`Add Participant > should handle exception on find and show address not 
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </button>
@@ -1915,10 +1950,10 @@ exports[`Add Participant > should render custom participants 1`] = `
     class="-mt-2 sm:mt-0"
   >
     <div
-      class="css-1mwq138"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1937,15 +1972,14 @@ exports[`Add Participant > should render custom participants 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-14zfvme"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     aria-invalid="false"
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1970,7 +2004,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1980,8 +2014,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="false"
                           aria-labelledby="SelectRecipient__dropdown-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -2001,36 +2034,37 @@ exports[`Add Participant > should render custom participants 1`] = `
                             class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                             data-testid="SelectRecipient__select-recipient"
                           >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="user"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="user"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <circle
-                                    cx="10"
-                                    cy="5"
-                                    r="4"
-                                  />
-                                  <path
-                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="5"
+                                      r="4"
+                                    />
+                                    <path
+                                      d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2089,31 +2123,32 @@ exports[`Add Participant > should render custom participants 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -2150,31 +2185,32 @@ exports[`Add Participant > should render custom participants 1`] = `
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </button>
@@ -2193,10 +2229,10 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
     class="-mt-2 sm:mt-0"
   >
     <div
-      class="css-1mwq138"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2215,15 +2251,14 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-14zfvme"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     aria-invalid="false"
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -2248,7 +2283,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2258,8 +2293,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                           aria-controls="SelectRecipient__dropdown-menu"
                           aria-invalid="false"
                           aria-labelledby="SelectRecipient__dropdown-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -2279,36 +2313,37 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                             class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                             data-testid="SelectRecipient__select-recipient"
                           >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="user"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="user"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <circle
-                                    cx="10"
-                                    cy="5"
-                                    r="4"
-                                  />
-                                  <path
-                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="5"
+                                      r="4"
+                                    />
+                                    <path
+                                      d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2368,31 +2403,32 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -2441,31 +2477,32 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </button>
@@ -2501,31 +2538,32 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                     <div
                       class="flex items-center space-x-2"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="trash"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -2573,31 +2611,32 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="trash"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="trash"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </button>
