@@ -270,6 +270,7 @@ export const ValidatorVoteAmount = ({
 		>
 			<div className="relative flex-1 px-3">
 				<InputCurrency
+					network={selectedWallet.network()}
 					ref={input}
 					disabled={isInputDisabled}
 					placeholder="0"

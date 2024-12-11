@@ -377,6 +377,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 						<div className="flex space-x-2">
 							<div className="flex-1">
 								<InputCurrency
+									network={network}
 									disabled={!isSenderFilled}
 									data-testid="AddRecipient__amount"
 									placeholder={t("COMMON.AMOUNT_PLACEHOLDER")}
