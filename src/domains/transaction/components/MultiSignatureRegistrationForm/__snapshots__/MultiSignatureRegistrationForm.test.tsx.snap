@@ -72,7 +72,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -363,7 +363,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -512,7 +512,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                         class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
                       >
                         <button
-                          class="border-r sm:border-r-0 css-jmpn15"
+                          class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
                           data-testid="InputFeeAdvanced__up"
                           disabled=""
                           type="button"
@@ -543,7 +543,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                           </div>
                         </button>
                         <button
-                          class="css-1ddtsjs"
+                          class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
                           data-testid="InputFeeAdvanced__down"
                           disabled=""
                           type="button"
@@ -659,7 +659,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1

@@ -1,9 +1,9 @@
 import cn from "classnames";
 import React from "react";
-import tw, { styled } from "twin.macro";
 
 import { Amount } from "@/app/components/Amount";
 import { Icon } from "@/app/components/Icon";
+import { twMerge } from "tailwind-merge";
 
 interface Properties {
 	convertedValue: number;
@@ -15,29 +15,23 @@ interface Properties {
 	showConvertedValue: boolean;
 }
 
-const ArrowButtonStyled = styled.button<{ isDownArrow?: boolean }>`
-	${tw`flex flex-1 justify-center items-center`}
-
-	${tw`hover:(
-		bg-theme-primary-100 dark:bg-theme-secondary-800
-		text-theme-primary-600 dark:text-theme-primary-200
-	)`}
-
-	${tw`active:(bg-theme-primary-700 text-white)`}
-
-	${tw`disabled:(
-		bg-theme-secondary-100 dark:bg-theme-secondary-800
-		text-theme-secondary-400 dark:text-theme-secondary-600
-		border-theme-secondary-300 dark:border-theme-secondary-700
-		cursor-default
-	)`}
-
-	${({ isDownArrow }) => {
-		if (!isDownArrow) {
-			return tw`border-b border-theme-secondary-400 dark:border-theme-secondary-700`;
-		}
-	}}
-`;
+const ArrowButtonStyled = ({
+	type = "button",
+	isDownArrow,
+	...props
+}: React.HTMLProps<HTMLButtonElement> & { type?: "button" | "submit" | "reset"; isDownArrow?: boolean }) => (
+	<button
+		type={type}
+		{...props}
+		className={twMerge(
+			"flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600",
+			cn({
+				"border-b border-theme-secondary-400 dark:border-theme-secondary-700": !isDownArrow,
+			}),
+			props.className,
+		)}
+	/>
+);
 
 export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 	convertedValue,

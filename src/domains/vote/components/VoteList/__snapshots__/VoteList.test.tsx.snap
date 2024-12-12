@@ -33,7 +33,7 @@ exports[`VoteList > should render in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -76,7 +76,7 @@ exports[`VoteList > should render in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -119,7 +119,7 @@ exports[`VoteList > should render in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -171,7 +171,7 @@ exports[`VoteList > should render in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -214,7 +214,7 @@ exports[`VoteList > should render in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -257,7 +257,7 @@ exports[`VoteList > should render in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -295,7 +295,7 @@ exports[`VoteList > should render in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -338,7 +338,7 @@ exports[`VoteList > should render in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -381,7 +381,7 @@ exports[`VoteList > should render in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -447,7 +447,7 @@ exports[`VoteList > should render in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -490,7 +490,7 @@ exports[`VoteList > should render in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -533,7 +533,7 @@ exports[`VoteList > should render in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -571,7 +571,7 @@ exports[`VoteList > should render in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -614,7 +614,7 @@ exports[`VoteList > should render in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -657,7 +657,7 @@ exports[`VoteList > should render in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -723,7 +723,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -776,7 +776,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -829,7 +829,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -891,7 +891,7 @@ exports[`VoteList > should render with amount in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -944,7 +944,7 @@ exports[`VoteList > should render with amount in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -997,7 +997,7 @@ exports[`VoteList > should render with amount in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -1055,7 +1055,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -1108,7 +1108,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -1161,7 +1161,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -1227,7 +1227,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -1280,7 +1280,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -1333,7 +1333,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17
@@ -1391,7 +1391,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               arkx
@@ -1444,7 +1444,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_42
@@ -1497,7 +1497,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               genesis_17

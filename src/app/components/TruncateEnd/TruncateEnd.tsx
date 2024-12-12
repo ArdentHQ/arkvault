@@ -1,7 +1,5 @@
 import cn from "classnames";
 import React from "react";
-import tw, { styled } from "twin.macro";
-
 import { Tooltip } from "@/app/components/Tooltip";
 
 type Properties = {
@@ -10,8 +8,6 @@ type Properties = {
 	as?: React.ElementType;
 	showTooltip?: boolean;
 } & React.HTMLProps<any>;
-
-const Wrapper = styled.span(() => tw`transition-colors duration-200`);
 
 export const TruncateEnd = ({ className, text, maxChars = 16, showTooltip = true, ...properties }: Properties) => {
 	const result = React.useMemo(() => {
@@ -26,9 +22,13 @@ export const TruncateEnd = ({ className, text, maxChars = 16, showTooltip = true
 
 	return (
 		<Tooltip content={text} disabled={!showTooltip}>
-			<Wrapper data-testid="TruncateEnd" className={cn("no-ligatures", className)} {...properties}>
+			<span
+				data-testid="TruncateEnd"
+				className={cn("no-ligatures transition-colors duration-200", className)}
+				{...properties}
+			>
 				{result}
-			</Wrapper>
+			</span>
 		</Tooltip>
 	);
 };

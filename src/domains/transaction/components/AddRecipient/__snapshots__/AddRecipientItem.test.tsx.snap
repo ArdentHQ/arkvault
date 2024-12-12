@@ -77,7 +77,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -108,7 +108,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -291,7 +291,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -322,7 +322,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1

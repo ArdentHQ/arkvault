@@ -2,16 +2,14 @@ import { chunk } from "@ardenthq/sdk-helpers";
 import cn from "classnames";
 import React, { useMemo } from "react";
 import { HeaderGroup, useSortBy, useTable } from "react-table";
-import { styled } from "twin.macro";
 
 import { TableProperties } from "./Table.contracts";
-import { defaultTableStyle } from "./Table.styles";
 import { Icon } from "@/app/components/Icon";
 import { twMerge } from "tailwind-merge";
 
-const TableWrapper = styled.div`
-	${defaultTableStyle}
-`;
+const TableWrapper = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
+	<div {...props} className={twMerge("table-wrapper", props.className)} />
+);
 
 export const Table = <RowDataType extends Record<never, unknown>>({
 	children,
