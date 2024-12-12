@@ -103,7 +103,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -262,10 +262,10 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-1sfei0c"
+                    class="recipient-list w-full"
                   >
                     <div
-                      class="css-1m6rt2i"
+                      class="table-wrapper"
                       role="table"
                     >
                       <table
@@ -544,7 +544,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                           class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <span
-                            class="no-ligatures css-0"
+                            class="no-ligatures"
                             data-testid="TruncateMiddle"
                           >
                             ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -725,7 +725,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -884,10 +884,10 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-1sfei0c"
+                    class="recipient-list w-full"
                   >
                     <div
-                      class="css-1m6rt2i"
+                      class="table-wrapper"
                       role="table"
                     >
                       <table
@@ -1166,7 +1166,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                           class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <span
-                            class="no-ligatures css-0"
+                            class="no-ligatures"
                             data-testid="TruncateMiddle"
                           >
                             ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -1350,7 +1350,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -1766,7 +1766,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                             class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               ea63bf9a4b3ea…1868681b5c79b
@@ -1948,7 +1948,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -2107,10 +2107,10 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-1sfei0c"
+                    class="recipient-list w-full"
                   >
                     <div
-                      class="css-1m6rt2i"
+                      class="table-wrapper"
                       role="table"
                     >
                       <table
@@ -2389,7 +2389,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                           class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <span
-                            class="no-ligatures css-0"
+                            class="no-ligatures"
                             data-testid="TruncateMiddle"
                           >
                             ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -2573,7 +2573,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -2989,7 +2989,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                             class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               ea63bf9…1b5c79b

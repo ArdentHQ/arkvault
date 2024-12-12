@@ -419,11 +419,11 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               >
                                 Category
                               </div>
-                              <span
+                              <div
                                 class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Multipayment
-                              </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -480,7 +480,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             >
                               Amount
                             </div>
-                            <span
+                            <div
                               class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center pr-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -531,7 +531,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                                   - 119 DARK
                                 </span>
                               </div>
-                            </span>
+                            </div>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -825,7 +825,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+                            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
                             class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
@@ -1079,7 +1079,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -1166,7 +1166,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -1282,11 +1282,11 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               >
                                 Category
                               </div>
-                              <span
+                              <div
                                 class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Multisignature
-                              </span>
+                              </div>
                             </div>
                             <div
                               class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -1443,7 +1443,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             >
                               Amount
                             </div>
-                            <span
+                            <div
                               class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -1457,7 +1457,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                   - 121 DARK
                                 </span>
                               </div>
-                            </span>
+                            </div>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -1751,7 +1751,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+                            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
                             class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
@@ -1805,7 +1805,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                         data-testid="TableWrapper"
                       >
                         <div
-                          class="css-1m6rt2i"
+                          class="table-wrapper"
                           role="table"
                         >
                           <table
@@ -1838,7 +1838,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               role="rowgroup"
                             >
                               <tr
-                                class="group max-md:!border-transparent group relative css-16ynu5g"
+                                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
                                 data-testid="TableRow"
                               >
                                 <td>
@@ -1905,7 +1905,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 </td>
                               </tr>
                               <tr
-                                class="group max-md:!border-transparent group relative css-16ynu5g"
+                                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
                                 data-testid="TableRow"
                               >
                                 <td>
@@ -2398,11 +2398,11 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               >
                                 Category
                               </div>
-                              <span
+                              <div
                                 class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Transfer
-                              </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2459,7 +2459,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             >
                               Amount
                             </div>
-                            <span
+                            <div
                               class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -2473,7 +2473,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                                   - 121 DARK
                                 </span>
                               </div>
-                            </span>
+                            </div>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -2767,7 +2767,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+                            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
                             class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
@@ -3202,11 +3202,11 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               >
                                 Category
                               </div>
-                              <span
+                              <div
                                 class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Transfer
-                              </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -3263,7 +3263,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             >
                               Amount
                             </div>
-                            <span
+                            <div
                               class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -3277,7 +3277,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                                   - 121 DARK
                                 </span>
                               </div>
-                            </span>
+                            </div>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -3571,7 +3571,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+                            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
                             class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"
@@ -3930,11 +3930,11 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               >
                                 Category
                               </div>
-                              <span
+                              <div
                                 class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                               >
                                 Unlock Balance
-                              </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -3991,7 +3991,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             >
                               Amount
                             </div>
-                            <span
+                            <div
                               class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -4005,7 +4005,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                                   - 121 DARK
                                 </span>
                               </div>
-                            </span>
+                            </div>
                           </div>
                           <div
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -4299,7 +4299,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
-                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+                            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
                           />
                           <div
                             class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-warning-200 dark:text-theme-secondary-800"

@@ -7,7 +7,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="with-x-padding css-1m6rt2i"
+      class="table-wrapper with-x-padding"
       role="table"
     >
       <table
@@ -219,7 +219,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -453,7 +453,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -687,7 +687,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -921,7 +921,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -1155,7 +1155,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -1402,7 +1402,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
     data-testid="TransactionTable"
   >
     <div
-      class="with-x-padding css-1m6rt2i"
+      class="table-wrapper with-x-padding"
       role="table"
     >
       <table
@@ -1614,7 +1614,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
           role="rowgroup"
         >
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -1848,7 +1848,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
           </tr>
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -2082,7 +2082,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
           </tr>
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -2316,7 +2316,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
           </tr>
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -2550,7 +2550,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
           </tr>
           <tr
-            class="group max-xl:h-[4.25rem] css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
             data-testid="TableRow"
           >
             <td>
@@ -2797,7 +2797,7 @@ exports[`TransactionTable > should render responsive 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -2808,7 +2808,7 @@ exports[`TransactionTable > should render responsive 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -2831,7 +2831,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         ea63b…5c79b
@@ -2955,7 +2955,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -2978,7 +2978,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         4425c…cd09d
@@ -3037,7 +3037,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -3113,7 +3113,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -3136,7 +3136,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         ee373…8f0dd
@@ -3260,7 +3260,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -3283,7 +3283,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         b0b40…b5320
@@ -3407,7 +3407,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -3430,7 +3430,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         91097…c6599
@@ -3554,7 +3554,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -3577,7 +3577,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         e6fcd…32d4b
@@ -3701,7 +3701,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -3724,7 +3724,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         59c88…18520
@@ -3848,7 +3848,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -3871,7 +3871,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         8c7b5…63ded
@@ -3995,7 +3995,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -4018,7 +4018,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         1a767…389f6
@@ -4142,7 +4142,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -4165,7 +4165,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         b233e…58428
@@ -4224,7 +4224,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -4313,7 +4313,7 @@ exports[`TransactionTable > should render responsive 2`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -4324,7 +4324,7 @@ exports[`TransactionTable > should render responsive 2`] = `
           role="rowgroup"
         >
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -4347,7 +4347,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         ea63b…5c79b
@@ -4471,7 +4471,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -4494,7 +4494,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         4425c…cd09d
@@ -4553,7 +4553,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -4629,7 +4629,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -4652,7 +4652,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         ee373…8f0dd
@@ -4776,7 +4776,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -4799,7 +4799,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         b0b40…b5320
@@ -4923,7 +4923,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -4946,7 +4946,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         91097…c6599
@@ -5070,7 +5070,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -5093,7 +5093,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         e6fcd…32d4b
@@ -5217,7 +5217,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -5240,7 +5240,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         59c88…18520
@@ -5364,7 +5364,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -5387,7 +5387,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         8c7b5…63ded
@@ -5511,7 +5511,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -5534,7 +5534,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         1a767…389f6
@@ -5658,7 +5658,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group !border-b-0"
             data-testid="TableRow"
           >
             <td
@@ -5681,7 +5681,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                     >
                       <span
-                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        class="no-ligatures cursor-pointer text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         b233e…58428
@@ -5740,7 +5740,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -5829,7 +5829,7 @@ exports[`TransactionTable > should render responsive 3`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="with-x-padding css-1m6rt2i"
+      class="table-wrapper with-x-padding"
       role="table"
     >
       <table
@@ -6041,7 +6041,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -6065,7 +6065,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           ea63…c79b
@@ -6226,7 +6226,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -6250,7 +6250,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           4425…d09d
@@ -6322,7 +6322,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -6422,7 +6422,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -6446,7 +6446,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           ee37…f0dd
@@ -6607,7 +6607,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -6631,7 +6631,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           b0b4…5320
@@ -6792,7 +6792,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -6816,7 +6816,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           9109…6599
@@ -6977,7 +6977,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -7001,7 +7001,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           e6fc…2d4b
@@ -7162,7 +7162,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -7186,7 +7186,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           59c8…8520
@@ -7347,7 +7347,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -7371,7 +7371,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           8c7b…3ded
@@ -7532,7 +7532,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -7556,7 +7556,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           1a76…89f6
@@ -7717,7 +7717,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -7741,7 +7741,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           b233…8428
@@ -7813,7 +7813,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -7926,7 +7926,7 @@ exports[`TransactionTable > should render responsive 4`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="with-x-padding css-1m6rt2i"
+      class="table-wrapper with-x-padding"
       role="table"
     >
       <table
@@ -8138,7 +8138,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -8162,7 +8162,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           ea63b…5c79b
@@ -8299,7 +8299,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -8323,7 +8323,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           4425c…cd09d
@@ -8395,7 +8395,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -8471,7 +8471,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -8495,7 +8495,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           ee373…8f0dd
@@ -8632,7 +8632,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -8656,7 +8656,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           b0b40…b5320
@@ -8793,7 +8793,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -8817,7 +8817,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           91097…c6599
@@ -8954,7 +8954,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -8978,7 +8978,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           e6fcd…32d4b
@@ -9115,7 +9115,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -9139,7 +9139,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           59c88…18520
@@ -9276,7 +9276,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -9300,7 +9300,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           8c7b5…63ded
@@ -9437,7 +9437,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -9461,7 +9461,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           1a767…389f6
@@ -9598,7 +9598,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -9622,7 +9622,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           b233e…58428
@@ -9694,7 +9694,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -9783,7 +9783,7 @@ exports[`TransactionTable > should render responsive 5`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="with-x-padding css-1m6rt2i"
+      class="table-wrapper with-x-padding"
       role="table"
     >
       <table
@@ -9995,7 +9995,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -10019,7 +10019,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           ea63b…5c79b
@@ -10156,7 +10156,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -10180,7 +10180,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           4425c…cd09d
@@ -10252,7 +10252,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -10328,7 +10328,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -10352,7 +10352,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           ee373…8f0dd
@@ -10489,7 +10489,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -10513,7 +10513,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           b0b40…b5320
@@ -10650,7 +10650,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -10674,7 +10674,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           91097…c6599
@@ -10811,7 +10811,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -10835,7 +10835,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           e6fcd…32d4b
@@ -10972,7 +10972,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -10996,7 +10996,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           59c88…18520
@@ -11133,7 +11133,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -11157,7 +11157,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           8c7b5…63ded
@@ -11294,7 +11294,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -11318,7 +11318,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           1a767…389f6
@@ -11455,7 +11455,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1tl8buz"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
             data-testid="TableRow"
           >
             <td>
@@ -11479,7 +11479,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                          class="no-ligatures cursor-pointer text-theme-primary-600"
                           data-testid="TransactionRow__id"
                         >
                           b233e…58428
@@ -11551,7 +11551,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1

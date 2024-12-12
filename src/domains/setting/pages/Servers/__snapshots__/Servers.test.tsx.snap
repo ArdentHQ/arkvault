@@ -623,7 +623,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -1975,7 +1975,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -2687,7 +2687,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <table
@@ -2784,7 +2784,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -2833,7 +2833,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK #1
@@ -3040,7 +3040,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -3119,7 +3119,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Devnet Musig #1
@@ -3346,7 +3346,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -3395,7 +3395,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Musig #1
@@ -4318,7 +4318,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -4968,7 +4968,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <table
@@ -5065,7 +5065,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -5114,7 +5114,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK #1
@@ -5289,7 +5289,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -5368,7 +5368,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Devnet Musig #1
@@ -5563,7 +5563,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -5612,7 +5612,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Musig #1
@@ -6503,7 +6503,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -7153,7 +7153,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <div
@@ -8991,7 +8991,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -9703,7 +9703,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <table
@@ -9800,7 +9800,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -9849,7 +9849,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK #1
@@ -10056,7 +10056,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -10135,7 +10135,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Devnet Musig #1
@@ -10362,7 +10362,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -10411,7 +10411,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Musig #1
@@ -11334,7 +11334,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -12046,7 +12046,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <div
@@ -14091,7 +14091,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -14803,7 +14803,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <div
@@ -16586,7 +16586,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -17292,7 +17292,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <table
@@ -17389,7 +17389,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -17438,7 +17438,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK #1
@@ -17642,7 +17642,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -17721,7 +17721,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Devnet Musig #1
@@ -17945,7 +17945,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -17994,7 +17994,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="no-ligatures css-9nx3be"
+                                              class="no-ligatures transition-colors duration-200"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Musig #1
@@ -18914,7 +18914,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -19620,7 +19620,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <div
@@ -20834,7 +20834,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="css-cb19tw"
+              class="hidden h-full w-[210px] lg:block"
             >
               <ul>
                 <li
@@ -21540,7 +21540,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <div

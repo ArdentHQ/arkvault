@@ -7,23 +7,23 @@ exports[`Range > should render 1`] = `
     data-testid="Range"
   >
     <div
-      class="css-1jodt7y"
+      class="flex h-px w-full rounded"
       data-testid="Range__track"
       style="transform: scale(1); cursor: pointer;"
     >
       <div
-        class="css-19l4gn6"
+        class="h-1 w-full self-center rounded border-0 p-0"
         data-testid="Range__track__filled"
       >
         <div
           aria-valuemax="100"
           aria-valuemin="1"
           aria-valuenow="10"
-          class="css-1dcoj83"
+          class="m-0 h-4 w-4 rounded-full border-3 border-theme-primary-600 bg-theme-background transition-colors duration-100 focus:shadow-outline focus:outline-none active:bg-theme-primary-600"
           data-testid="Range__thumb"
           draggable="false"
           role="slider"
-          style="position: absolute; z-index: 0; cursor: grab; user-select: none; transform: translate(0px, 0px);"
+          style="position: absolute; z-index: 0; cursor: grab; user-select: none; transform: translate(NaNpx, NaNpx);"
           tabindex="0"
         />
       </div>
@@ -39,23 +39,23 @@ exports[`Range > should render invalid 1`] = `
     data-testid="Range"
   >
     <div
-      class="css-1jodt7y"
+      class="flex h-px w-full rounded"
       data-testid="Range__track"
       style="transform: scale(1); cursor: pointer;"
     >
       <div
-        class="css-19l4gn6"
+        class="h-1 w-full self-center rounded border-0 p-0"
         data-testid="Range__track__filled"
       >
         <div
           aria-valuemax="100"
           aria-valuemin="1"
           aria-valuenow="10"
-          class="css-1dcoj83"
+          class="m-0 h-4 w-4 rounded-full border-3 border-theme-primary-600 bg-theme-background transition-colors duration-100 focus:shadow-outline focus:outline-none active:bg-theme-primary-600"
           data-testid="Range__thumb"
           draggable="false"
           role="slider"
-          style="position: absolute; z-index: 0; cursor: grab; user-select: none; transform: translate(0px, 0px);"
+          style="position: absolute; z-index: 0; cursor: grab; user-select: none; transform: translate(NaNpx, NaNpx);"
           tabindex="0"
         />
       </div>

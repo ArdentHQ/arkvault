@@ -1,7 +1,6 @@
 import cn from "classnames";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import tw, { styled } from "twin.macro";
 
 import type { LabelledTextProperties, LegendProperties, TooltipProperties } from "./PortfolioBreakdown.contracts";
 import { useTheme } from "@/app/hooks";
@@ -52,41 +51,15 @@ const LabelledText: React.FC<LabelledTextProperties> = ({ label, children }) => 
 	</div>
 );
 
-const TooltipWrapper = styled.div`
-	${tw`flex items-center bg-theme-secondary-900 dark:bg-theme-secondary-800 rounded px-3 py-2`}
-
-	&:after {
-		content: " ";
-		${tw`absolute block w-0 h-0 -bottom-2`}
-		border-left: 8px solid transparent;
-		border-right: 8px solid transparent;
-		left: calc(50% - 8px);
-	}
-
-	&.left:after {
-		right: auto;
-		left: 20px;
-	}
-
-	&.right:after {
-		left: auto;
-		right: 20px;
-	}
-
-	&[data-theme~="light"]:after {
-		border-top: 8px solid var(--theme-color-secondary-900);
-	}
-
-	&[data-theme~="dark"]:after {
-		border-top: 8px solid var(--theme-color-secondary-800);
-	}
-`;
-
 const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) => {
 	const { isDarkMode } = useTheme();
 
 	return (
-		<TooltipWrapper data-theme={isDarkMode ? "dark" : "light"} data-testid="PortfolioBreakdown__tooltip">
+		<div
+			className="tooltip-wrapper"
+			data-theme={isDarkMode ? "dark" : "light"}
+			data-testid="PortfolioBreakdown__tooltip"
+		>
 			<div className="flex space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold">
 				<div className="flex items-center space-x-2">
 					<div className={`h-3 w-1 rounded bg-theme-${color}`} />
@@ -97,7 +70,7 @@ const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) =
 
 				<span className="pl-3 text-theme-secondary-500">{data.percentFormatted}</span>
 			</div>
-		</TooltipWrapper>
+		</div>
 	);
 };
 

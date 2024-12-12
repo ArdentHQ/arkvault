@@ -43,7 +43,7 @@ exports[`SideBar > should render 1`] = `
     </div>
   </div>
   <div
-    class="css-cb19tw"
+    class="hidden h-full w-[210px] lg:block"
   >
     <ul>
       <li
@@ -236,7 +236,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
     </div>
   </div>
   <div
-    class="css-cb19tw"
+    class="hidden h-full w-[210px] lg:block"
   >
     <ul>
       <li
@@ -429,7 +429,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
     </div>
   </div>
   <div
-    class="css-cb19tw"
+    class="hidden h-full w-[210px] lg:block"
   >
     <ul>
       <li
@@ -622,7 +622,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
     </div>
   </div>
   <div
-    class="css-cb19tw"
+    class="hidden h-full w-[210px] lg:block"
   >
     <ul>
       <li
