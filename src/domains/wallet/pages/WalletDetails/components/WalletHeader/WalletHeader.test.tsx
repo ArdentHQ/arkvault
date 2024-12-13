@@ -355,66 +355,6 @@ describe("WalletHeader", () => {
 		multisigSpy.mockRestore();
 	});
 
-	it("should handle locked balance", async () => {
-		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
-		const balance = vi.spyOn(wallet, "balance").mockReturnValue(10);
-		const unlockableBalances = vi
-			.spyOn(wallet.coin().client(), "unlockableBalances")
-			.mockResolvedValue({ objects: [] } as any);
-		const allowsLockedBalance = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
-
-		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
-
-		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
-
-		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
-		expect(asFragment()).toMatchSnapshot();
-
-		await userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
-
-		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
-
-		closeModal();
-
-		await waitFor(() => expect(screen.queryByTestId("UnlockTokensModal")).not.toBeInTheDocument());
-
-		usesLockedBalance.mockRestore();
-		balance.mockRestore();
-		unlockableBalances.mockRestore();
-		allowsLockedBalance.mockRestore();
-	});
-
-	it("should handle locked balance when is ledger", async () => {
-		const ledgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
-		const balance = vi.spyOn(wallet, "balance").mockReturnValue(10);
-		const unlockableBalances = vi
-			.spyOn(wallet.coin().client(), "unlockableBalances")
-			.mockResolvedValue({ objects: [] } as any);
-		const allowsLockedBalance = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
-
-		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
-
-		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
-
-		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
-		expect(asFragment()).toMatchSnapshot();
-
-		await userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
-
-		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
-
-		closeModal();
-
-		await waitFor(() => expect(screen.queryByTestId("UnlockTokensModal")).not.toBeInTheDocument());
-
-		usesLockedBalance.mockRestore();
-		balance.mockRestore();
-		unlockableBalances.mockRestore();
-		allowsLockedBalance.mockRestore();
-		ledgerSpy.mockRestore();
-	});
-
 	it("should render with incompatible ledger wallet", async () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
 		const walletSpy = vi.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);

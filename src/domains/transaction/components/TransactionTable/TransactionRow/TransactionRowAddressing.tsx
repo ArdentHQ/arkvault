@@ -73,7 +73,6 @@ export const TransactionRowAddressing = ({
 			}),
 		[profile, getWalletAlias, transaction],
 	);
-
 	const isContract = isContractTransaction(transaction);
 
 	if (transaction.isMultiPayment()) {

@@ -13,7 +13,7 @@ import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount } from "@/app/components/Amount";
-import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
+import { TransactionTotalLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 import { TransactionRowId } from "./TransactionRowId";
 
 export const TransactionRow = memo(
@@ -99,7 +99,7 @@ export const TransactionRow = memo(
 					innerClassName="justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
 				>
 					<div className="flex flex-col items-end gap-1">
-						<TransactionAmountLabel transaction={transaction} />
+						<TransactionTotalLabel transaction={transaction} />
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
@@ -117,7 +117,7 @@ export const TransactionRow = memo(
 						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
 					) : (
 						<div className="flex flex-col items-end gap-1">
-							<TransactionAmountLabel transaction={transaction} />
+							<TransactionTotalLabel transaction={transaction} />
 							<span
 								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 								data-testid="TransactionRow__exchange-currency"

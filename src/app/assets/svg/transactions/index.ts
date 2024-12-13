@@ -9,7 +9,6 @@ import Return from "./return.svg?react";
 import Sent from "./sent.svg?react";
 import Timelock from "./timelock.svg?react";
 import Transfer from "./transfer.svg?react";
-import UnlockToken from "./unlock-token.svg?react";
 import Unvote from "./unvote.svg?react";
 import Vote from "./vote.svg?react";
 import VoteCombination from "./vote-combination.svg?react";
@@ -38,7 +37,6 @@ export const TransactionIcons: any = {
 	Sent,
 	Timelock,
 	Transfer,
-	UnlockToken,
 	Unvote,
 	Vote,
 	VoteCombination,

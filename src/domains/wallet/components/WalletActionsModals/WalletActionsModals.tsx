@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo, VFC } from "react";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
-import { UnlockTokensModal } from "@/domains/transaction/components/UnlockTokens";
 import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
@@ -72,10 +71,6 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 					}}
 					wallet={wallet}
 				/>
-			)}
-
-			{activeModal === "unlockable-balances" && (
-				<UnlockTokensModal profile={profile} wallet={wallet} onClose={hideActiveModal} />
 			)}
 
 			{activeModal === "transaction-history" && (
