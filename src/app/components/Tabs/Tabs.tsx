@@ -1,9 +1,8 @@
-import React, { useMemo } from "react";
-import tw, { styled } from "twin.macro";
-
+import React, { forwardRef, useMemo } from "react";
 import { TabContext, TabId, useTab } from "./useTab";
 import { useTheme } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
+import cn from "classnames";
 
 interface TabsProperties {
 	id?: string;
@@ -43,7 +42,11 @@ interface TabProperties {
 	className?: string;
 }
 
-const TabButton = styled("button", { target: "tab-button" })``;
+const TabButton = forwardRef<HTMLButtonElement, React.HTMLProps<HTMLButtonElement>>((properties, ref) => (
+	<button {...properties} ref={ref} type="button" className={twMerge("tab-button", properties.className)} />
+));
+
+TabButton.displayName = "TabButton";
 
 type EventType = React.KeyboardEvent<HTMLButtonElement> & { target: Element };
 
@@ -77,11 +80,9 @@ const onKeyDown = {
 	},
 };
 
-const TabScrollScroll = styled.div`
-	&::-webkit-scrollbar {
-		display: none;
-	}
-`;
+const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => (
+	<div {...properties} className={twMerge("[&::-webkit-scrollbar]:hidden", properties.className)} />
+);
 
 export const TabScroll = ({ children }) => {
 	const { isDarkMode } = useTheme();
@@ -154,28 +155,21 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 
 Tab.displayName = "Tab";
 
-export const TabList = styled.div<{ noBackground?: boolean }>`
-	${tw`inline-flex items-stretch justify-start`}
-
-	${({ noBackground }) => {
-		if (!noBackground) {
-			return tw`px-2 rounded-xl bg-theme-secondary-100 dark:bg-theme-secondary-background`;
-		}
-	}}
-
-	& > ${TabButton} {
-		${tw`relative font-semibold border-t-2 border-b-2 border-transparent text-theme-secondary-text transition-colors ease-in-out duration-300 focus:(outline-none text-theme-text) hover:text-theme-text`}
-
-		&[aria-selected="true"] {
-			border-bottom-color: var(--theme-color-primary-600);
-			${tw`text-theme-text`}
-		}
-
-		& + ${TabButton}:before {
-			${tw`content h-4 w-px absolute -left-6 top-1/2 -translate-y-1/2 block`};
-		}
-	}
-`;
+export const TabList = ({
+	noBackground,
+	...properties
+}: React.HTMLProps<HTMLDivElement> & { noBackground?: boolean }) => (
+	<div
+		{...properties}
+		className={twMerge(
+			"tab-list inline-flex items-stretch justify-start",
+			cn({
+				"rounded-xl bg-theme-secondary-100 px-2 dark:bg-theme-secondary-background": !noBackground,
+			}),
+			properties.className,
+		)}
+	/>
+);
 
 type TabPanelProperties = {
 	children: React.ReactNode;

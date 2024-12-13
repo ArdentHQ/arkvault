@@ -17,7 +17,7 @@ exports[`SelectProfileImage > should handle upload file 1`] = `
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-1vo35tn"
+          class="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
         >
           <img
             alt="Avatar"
@@ -126,7 +126,7 @@ exports[`SelectProfileImage > should not allow to upload an invalid file image 1
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-1vo35tn"
+          class="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
         >
           <img
             alt="Avatar"
@@ -235,7 +235,7 @@ exports[`SelectProfileImage > should not allow to upload when user aborted a req
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-1vo35tn"
+          class="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
         >
           <img
             alt="Avatar"
@@ -344,7 +344,7 @@ exports[`SelectProfileImage > should not handle upload file 1`] = `
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-1vo35tn"
+          class="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
         >
           <img
             alt="Avatar"
@@ -456,7 +456,7 @@ exports[`SelectProfileImage > should render 1`] = `
           class="h-full overflow-hidden rounded-full"
         >
           <div
-            class="css-1vxhzvl"
+            class="upload-button-wrapper h-full w-full"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -519,7 +519,7 @@ exports[`SelectProfileImage > should render with value svg 1`] = `
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-1vo35tn"
+          class="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
         >
           <img
             alt="Avatar"
@@ -590,7 +590,7 @@ exports[`SelectProfileImage > should render without value svg 1`] = `
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-1vo35tn"
+          class="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
         >
           <img
             alt="Avatar"

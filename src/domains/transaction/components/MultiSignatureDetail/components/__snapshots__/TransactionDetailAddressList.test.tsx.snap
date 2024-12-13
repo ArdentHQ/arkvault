@@ -3,7 +3,7 @@
 exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetailAddressList"
   >
     <div
@@ -156,7 +156,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
 exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetailAddressList"
   >
     <div
@@ -309,7 +309,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
 exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetailAddressList"
   >
     <div
@@ -458,7 +458,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
 exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetailAddressList"
   >
     <div
@@ -607,7 +607,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
 exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetailAddressList"
   >
     <div

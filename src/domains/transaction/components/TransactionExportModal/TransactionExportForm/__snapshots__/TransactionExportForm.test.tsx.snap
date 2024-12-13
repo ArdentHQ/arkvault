@@ -44,7 +44,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -58,7 +58,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -72,7 +72,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -209,18 +209,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -355,18 +355,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -401,18 +401,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -447,18 +447,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -493,18 +493,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -539,18 +539,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-fiat-amount"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -633,7 +633,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -647,7 +647,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -661,7 +661,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -798,18 +798,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -944,18 +944,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -990,18 +990,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -1036,18 +1036,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -1082,18 +1082,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -1176,7 +1176,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1190,7 +1190,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1204,7 +1204,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1341,18 +1341,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -1487,18 +1487,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -1533,18 +1533,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -1579,18 +1579,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -1625,18 +1625,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -1719,7 +1719,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1733,7 +1733,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1747,7 +1747,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1884,18 +1884,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2030,18 +2030,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2076,18 +2076,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2122,18 +2122,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2168,18 +2168,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2262,7 +2262,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2276,7 +2276,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2290,7 +2290,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2427,18 +2427,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2573,18 +2573,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2619,18 +2619,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2665,18 +2665,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2711,18 +2711,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -2806,7 +2806,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="Incoming"
-                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2820,7 +2820,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="Outgoing"
-                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2834,7 +2834,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="All"
-                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
+                class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2969,18 +2969,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -3115,18 +3115,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -3161,18 +3161,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -3207,18 +3207,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>
@@ -3253,18 +3253,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="css-xklln0"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
-                  class="css-1r71f0z toggle-input"
+                  class="toggle-input sr-only"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="css-d8rk4r toggle-handle"
+                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                 >
                   <span
-                    class="css-st84t0"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
                   />
                 </div>
               </label>

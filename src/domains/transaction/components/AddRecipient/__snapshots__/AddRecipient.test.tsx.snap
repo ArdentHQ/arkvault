@@ -3,7 +3,7 @@
 exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -20,33 +20,31 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           <div
             class="flex items-center"
           >
-            <span
-              class="css-1588dqn"
-              role="button"
+            <button
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
             >
               Single
-            </span>
+            </button>
             <label
-              class="css-1uxo3sa"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="css-10kxbe9 toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="css-14ojvms"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
                 />
               </div>
             </label>
-            <span
-              class="css-noruk0"
-              role="button"
+            <button
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
             >
               Multiple
-            </span>
+            </button>
           </div>
         </span>
         <div
@@ -324,7 +322,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
 exports[`AddRecipient > should render 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -341,33 +339,31 @@ exports[`AddRecipient > should render 1`] = `
           <div
             class="flex items-center"
           >
-            <span
-              class="css-1588dqn"
-              role="button"
+            <button
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
             >
               Single
-            </span>
+            </button>
             <label
-              class="css-1uxo3sa"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="css-10kxbe9 toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="css-14ojvms"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
                 />
               </div>
             </label>
-            <span
-              class="css-noruk0"
-              role="button"
+            <button
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
             >
               Multiple
-            </span>
+            </button>
           </div>
         </span>
         <div
@@ -630,7 +626,7 @@ exports[`AddRecipient > should render 1`] = `
 exports[`AddRecipient > should render with empty array of recipients as default 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -647,33 +643,31 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           <div
             class="flex items-center"
           >
-            <span
-              class="css-1588dqn"
-              role="button"
+            <button
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
             >
               Single
-            </span>
+            </button>
             <label
-              class="css-1uxo3sa"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="css-10kxbe9 toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="css-14ojvms"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
                 />
               </div>
             </label>
-            <span
-              class="css-noruk0"
-              role="button"
+            <button
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
             >
               Multiple
-            </span>
+            </button>
           </div>
         </span>
         <div
@@ -936,7 +930,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
 exports[`AddRecipient > should render with multiple recipients switch 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -953,33 +947,31 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           <div
             class="flex items-center"
           >
-            <span
-              class="css-1588dqn"
-              role="button"
+            <button
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
             >
               Single
-            </span>
+            </button>
             <label
-              class="css-1uxo3sa"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="css-10kxbe9 toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="css-14ojvms"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
                 />
               </div>
             </label>
-            <span
-              class="css-noruk0"
-              role="button"
+            <button
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
             >
               Multiple
-            </span>
+            </button>
           </div>
         </span>
         <div
@@ -1242,7 +1234,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
 exports[`AddRecipient > should render with single recipient data 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -1259,33 +1251,31 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           <div
             class="flex items-center"
           >
-            <span
-              class="css-1588dqn"
-              role="button"
+            <button
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
             >
               Single
-            </span>
+            </button>
             <label
-              class="css-1uxo3sa"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="css-10kxbe9 toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="css-14ojvms"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
                 />
               </div>
             </label>
-            <span
-              class="css-noruk0"
-              role="button"
+            <button
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
             >
               Multiple
-            </span>
+            </button>
           </div>
         </span>
         <div
@@ -1548,7 +1538,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
 exports[`AddRecipient > should render without the single & multiple switch 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -1786,7 +1776,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
 exports[`AddRecipient > should set available amount 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -1803,33 +1793,31 @@ exports[`AddRecipient > should set available amount 1`] = `
           <div
             class="flex items-center"
           >
-            <span
-              class="css-1588dqn"
-              role="button"
+            <button
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
             >
               Single
-            </span>
+            </button>
             <label
-              class="css-1uxo3sa"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="css-10kxbe9 toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="css-14ojvms"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
                 />
               </div>
             </label>
-            <span
-              class="css-noruk0"
-              role="button"
+            <button
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
             >
               Multiple
-            </span>
+            </button>
           </div>
         </span>
         <div
@@ -2092,7 +2080,7 @@ exports[`AddRecipient > should set available amount 1`] = `
 exports[`AddRecipient > should show available balance after fee 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -2109,33 +2097,31 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
           <div
             class="flex items-center"
           >
-            <span
-              class="css-1588dqn"
-              role="button"
+            <button
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
             >
               Single
-            </span>
+            </button>
             <label
-              class="css-1uxo3sa"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="css-10kxbe9 toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="css-14ojvms"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
                 />
               </div>
             </label>
-            <span
-              class="css-noruk0"
-              role="button"
+            <button
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
             >
               Multiple
-            </span>
+            </button>
           </div>
         </span>
         <div
@@ -2413,7 +2399,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
 exports[`AddRecipient > should show zero amount if wallet has zero or insufficient balance 1`] = `
 <div>
   <div
-    class="css-qb57lz"
+    class="add-recipient-wrapper"
   >
     <div
       class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
@@ -2430,33 +2416,31 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           <div
             class="flex items-center"
           >
-            <span
-              class="css-1588dqn"
-              role="button"
+            <button
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
             >
               Single
-            </span>
+            </button>
             <label
-              class="css-1uxo3sa"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="css-1r71f0z toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="css-10kxbe9 toggle-handle"
+                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="css-14ojvms"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
                 />
               </div>
             </label>
-            <span
-              class="css-noruk0"
-              role="button"
+            <button
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
             >
               Multiple
-            </span>
+            </button>
           </div>
         </span>
         <div
