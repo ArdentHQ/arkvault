@@ -6,7 +6,6 @@ export type WalletActionsModalType =
 	| "receive-funds"
 	| "wallet-name"
 	| "delete-wallet"
-	| "unlockable-balances"
 	| "second-signature"
 	| "transaction-history";
 

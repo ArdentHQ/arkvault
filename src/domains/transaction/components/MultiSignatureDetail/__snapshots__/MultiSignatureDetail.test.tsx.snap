@@ -509,7 +509,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       Amount
                                     </div>
                                     <div
-                                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                      class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                       data-testid="AmountLabel__wrapper"
                                     >
                                       <div
@@ -519,7 +519,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                           class="whitespace-nowrap text-sm"
                                           data-testid="Amount"
                                         >
-                                          - 2 DARK
+                                          + 1 DARK
                                         </span>
                                       </div>
                                     </div>
