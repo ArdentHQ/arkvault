@@ -10,7 +10,7 @@ import { TimeAgo } from "@/app/components/TimeAgo";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
+import { TransactionTotalLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 import { TransactionRowId } from "./TransactionRowId";
 
 export const TransactionRowMobile = memo(
@@ -67,7 +67,7 @@ export const TransactionRowMobile = memo(
 								title={`${t("COMMON.VALUE")} (${transaction.wallet().currency()})`}
 								className="w-full"
 							>
-								<TransactionAmountLabel transaction={transaction} />
+								<TransactionTotalLabel transaction={transaction} />
 							</MobileSection>
 
 							<MobileSection title={t("COMMON.FIAT_VALUE")} className="w-full">

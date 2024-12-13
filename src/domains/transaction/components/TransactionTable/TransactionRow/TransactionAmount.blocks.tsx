@@ -44,24 +44,37 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 	const { t } = useTranslation();
 
 	const currency = transaction.wallet().currency();
-
 	const returnedAmount = calculateReturnedAmount(transaction);
-
-	const isReturnMusigTx = isReturnUnconfirmedMusigTransaction(transaction);
-
-	const amount = isReturnMusigTx ? transaction.amount() - transaction.fee() : transaction.total() - returnedAmount;
-
-	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
-	const isMusigTransfer = [usesMultiSignature, !transaction.isMultiSignatureRegistration()].every(Boolean);
-
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 
 	return (
 		<AmountLabel
-			value={amount}
-			isNegative={isNegative}
-			ticker={transaction.wallet().currency()}
-			hideSign={transaction.isReturn() || isReturnMusigTx}
+			value={transaction.amount()}
+			isNegative={transaction.isSent()}
+			ticker={currency}
+			hideSign={transaction.isReturn()}
+			isCompact
+			hint={
+				returnedAmount
+					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
+					: undefined
+			}
+			className="h-[21px] rounded dark:border"
+		/>
+	);
+};
+
+export const TransactionTotalLabel = ({ transaction }: { transaction: ExtendedTransactionData }): JSX.Element => {
+	const { t } = useTranslation();
+
+	const currency = transaction.wallet().currency();
+	const returnedAmount = calculateReturnedAmount(transaction);
+
+	return (
+		<AmountLabel
+			value={transaction.total()}
+			isNegative={transaction.isSent()}
+			ticker={currency}
+			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
 				returnedAmount
