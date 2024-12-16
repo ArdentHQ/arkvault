@@ -614,7 +614,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                         type="button"
                       >
                         <div
@@ -2211,7 +2211,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="group"
               >
                 <button
-                  class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                  class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                   type="button"
                 >
                   <div
@@ -3581,7 +3581,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                         type="button"
                       >
                         <div

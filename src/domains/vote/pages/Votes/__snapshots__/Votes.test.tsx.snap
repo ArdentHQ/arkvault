@@ -612,7 +612,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -694,7 +694,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -1870,7 +1870,7 @@ exports[`Votes > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -1951,7 +1951,7 @@ exports[`Votes > should render 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -3430,7 +3430,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     class="group"
                   >
                     <button
-                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -3511,7 +3511,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -5723,7 +5723,7 @@ exports[`Votes > should select a validator 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -5804,7 +5804,7 @@ exports[`Votes > should select a validator 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -7287,7 +7287,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -7371,7 +7371,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -8543,7 +8543,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     class="group"
                   >
                     <button
-                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -8627,7 +8627,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -9799,7 +9799,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -9883,7 +9883,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div>
                           <div
@@ -11231,7 +11231,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -11312,7 +11312,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"

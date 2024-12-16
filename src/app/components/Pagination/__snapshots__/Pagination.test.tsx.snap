@@ -3,7 +3,7 @@
 exports[`Pagination > should handle first page click in lg 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -57,7 +57,7 @@ exports[`Pagination > should handle first page click in lg 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -158,7 +158,7 @@ exports[`Pagination > should handle first page click in lg 1`] = `
 exports[`Pagination > should handle first page click in md 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -212,7 +212,7 @@ exports[`Pagination > should handle first page click in md 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -313,7 +313,7 @@ exports[`Pagination > should handle first page click in md 1`] = `
 exports[`Pagination > should handle first page click in sm 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -367,7 +367,7 @@ exports[`Pagination > should handle first page click in sm 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -468,7 +468,7 @@ exports[`Pagination > should handle first page click in sm 1`] = `
 exports[`Pagination > should handle first page click in xl 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -522,7 +522,7 @@ exports[`Pagination > should handle first page click in xl 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -623,14 +623,14 @@ exports[`Pagination > should handle first page click in xl 1`] = `
 exports[`Pagination > should handle first page click in xs 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <div
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -840,7 +840,7 @@ exports[`Pagination > should handle first page click in xs 1`] = `
 exports[`Pagination > should handle last page click in lg 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -896,7 +896,7 @@ exports[`Pagination > should handle last page click in lg 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -997,7 +997,7 @@ exports[`Pagination > should handle last page click in lg 1`] = `
 exports[`Pagination > should handle last page click in md 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -1053,7 +1053,7 @@ exports[`Pagination > should handle last page click in md 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -1154,7 +1154,7 @@ exports[`Pagination > should handle last page click in md 1`] = `
 exports[`Pagination > should handle last page click in sm 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -1210,7 +1210,7 @@ exports[`Pagination > should handle last page click in sm 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -1311,7 +1311,7 @@ exports[`Pagination > should handle last page click in sm 1`] = `
 exports[`Pagination > should handle last page click in xl 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -1367,7 +1367,7 @@ exports[`Pagination > should handle last page click in xl 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -1468,14 +1468,14 @@ exports[`Pagination > should handle last page click in xl 1`] = `
 exports[`Pagination > should handle last page click in xs 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <div
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -1687,7 +1687,7 @@ exports[`Pagination > should handle last page click in xs 1`] = `
 exports[`Pagination > should handle next page click in lg 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -1741,7 +1741,7 @@ exports[`Pagination > should handle next page click in lg 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -1842,7 +1842,7 @@ exports[`Pagination > should handle next page click in lg 1`] = `
 exports[`Pagination > should handle next page click in md 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -1896,7 +1896,7 @@ exports[`Pagination > should handle next page click in md 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -1997,7 +1997,7 @@ exports[`Pagination > should handle next page click in md 1`] = `
 exports[`Pagination > should handle next page click in sm 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -2051,7 +2051,7 @@ exports[`Pagination > should handle next page click in sm 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -2152,7 +2152,7 @@ exports[`Pagination > should handle next page click in sm 1`] = `
 exports[`Pagination > should handle next page click in xl 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -2206,7 +2206,7 @@ exports[`Pagination > should handle next page click in xl 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -2307,14 +2307,14 @@ exports[`Pagination > should handle next page click in xl 1`] = `
 exports[`Pagination > should handle next page click in xs 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <div
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -2524,7 +2524,7 @@ exports[`Pagination > should handle next page click in xs 1`] = `
 exports[`Pagination > should handle pagination search icon click properly in lg 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -2578,7 +2578,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -2626,7 +2626,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -2634,7 +2634,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -2773,7 +2773,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
 exports[`Pagination > should handle pagination search icon click properly in lg 2`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -2827,7 +2827,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -2875,7 +2875,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -2883,7 +2883,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -3022,7 +3022,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
 exports[`Pagination > should handle pagination search icon click properly in md 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -3076,7 +3076,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -3124,7 +3124,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -3132,7 +3132,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -3271,7 +3271,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
 exports[`Pagination > should handle pagination search icon click properly in md 2`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -3325,7 +3325,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -3373,7 +3373,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -3381,7 +3381,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -3520,7 +3520,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
 exports[`Pagination > should handle pagination search icon click properly in sm 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -3574,7 +3574,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -3622,7 +3622,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -3630,7 +3630,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -3769,7 +3769,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
 exports[`Pagination > should handle pagination search icon click properly in sm 2`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -3823,7 +3823,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -3871,7 +3871,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -3879,7 +3879,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -4018,7 +4018,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
 exports[`Pagination > should handle pagination search icon click properly in xl 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -4072,7 +4072,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -4120,7 +4120,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -4128,7 +4128,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -4267,7 +4267,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
 exports[`Pagination > should handle pagination search icon click properly in xl 2`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -4321,7 +4321,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -4369,7 +4369,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -4377,7 +4377,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -4516,14 +4516,14 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
 exports[`Pagination > should handle pagination search icon click properly in xs 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <div
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -4571,7 +4571,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -4579,7 +4579,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -4827,14 +4827,14 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
 exports[`Pagination > should handle pagination search icon click properly in xs 2`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <div
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="groupinvisible css-eti7fq"
+        class="pagination-search-toggle-button groupinvisible"
         data-testid="PaginationSearchButton"
         disabled=""
         type="button"
@@ -4882,7 +4882,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
         </span>
       </button>
       <span
-        class="css-m8k9u5"
+        class="pagination-search-wrapper"
       >
         <form
           class="search-form"
@@ -4890,7 +4890,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
           name="searchForm"
         >
           <input
-            class="css-1mfqnhz"
+            class="search-input"
             data-testid="PaginationSearch__input"
             max="30"
             min="1"
@@ -5138,7 +5138,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
 exports[`Pagination > should handle previous page click in lg 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -5192,7 +5192,7 @@ exports[`Pagination > should handle previous page click in lg 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -5293,7 +5293,7 @@ exports[`Pagination > should handle previous page click in lg 1`] = `
 exports[`Pagination > should handle previous page click in md 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -5347,7 +5347,7 @@ exports[`Pagination > should handle previous page click in md 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -5448,7 +5448,7 @@ exports[`Pagination > should handle previous page click in md 1`] = `
 exports[`Pagination > should handle previous page click in sm 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -5502,7 +5502,7 @@ exports[`Pagination > should handle previous page click in sm 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -5603,7 +5603,7 @@ exports[`Pagination > should handle previous page click in sm 1`] = `
 exports[`Pagination > should handle previous page click in xl 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -5657,7 +5657,7 @@ exports[`Pagination > should handle previous page click in xl 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -5758,14 +5758,14 @@ exports[`Pagination > should handle previous page click in xl 1`] = `
 exports[`Pagination > should handle previous page click in xs 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <div
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -5985,7 +5985,7 @@ exports[`Pagination > should not render in xs 1`] = `<DocumentFragment />`;
 exports[`Pagination > should render in lg 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -6041,7 +6041,7 @@ exports[`Pagination > should render in lg 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -6142,7 +6142,7 @@ exports[`Pagination > should render in lg 1`] = `
 exports[`Pagination > should render in md 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -6198,7 +6198,7 @@ exports[`Pagination > should render in md 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -6299,7 +6299,7 @@ exports[`Pagination > should render in md 1`] = `
 exports[`Pagination > should render in sm 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -6355,7 +6355,7 @@ exports[`Pagination > should render in sm 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -6456,7 +6456,7 @@ exports[`Pagination > should render in sm 1`] = `
 exports[`Pagination > should render in xl 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -6512,7 +6512,7 @@ exports[`Pagination > should render in xl 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -6613,14 +6613,14 @@ exports[`Pagination > should render in xl 1`] = `
 exports[`Pagination > should render in xs 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <div
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -6832,7 +6832,7 @@ exports[`Pagination > should render in xs 1`] = `
 exports[`Pagination > should render pagination search buttons in lg 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -6886,7 +6886,7 @@ exports[`Pagination > should render pagination search buttons in lg 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -6987,7 +6987,7 @@ exports[`Pagination > should render pagination search buttons in lg 1`] = `
 exports[`Pagination > should render pagination search buttons in md 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -7041,7 +7041,7 @@ exports[`Pagination > should render pagination search buttons in md 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -7142,7 +7142,7 @@ exports[`Pagination > should render pagination search buttons in md 1`] = `
 exports[`Pagination > should render pagination search buttons in sm 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -7196,7 +7196,7 @@ exports[`Pagination > should render pagination search buttons in sm 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -7297,7 +7297,7 @@ exports[`Pagination > should render pagination search buttons in sm 1`] = `
 exports[`Pagination > should render pagination search buttons in xl 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <button
@@ -7351,7 +7351,7 @@ exports[`Pagination > should render pagination search buttons in xl 1`] = `
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >
@@ -7452,14 +7452,14 @@ exports[`Pagination > should render pagination search buttons in xl 1`] = `
 exports[`Pagination > should render pagination search buttons in xs 1`] = `
 <DocumentFragment>
   <nav
-    class="relative w-full sm:w-auto css-4ybc2s"
+    class="pagination-wrapper relative w-full sm:w-auto"
     data-testid="Pagination"
   >
     <div
       class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
     >
       <button
-        class="group css-eti7fq"
+        class="pagination-search-toggle-button group"
         data-testid="PaginationSearchButton"
         type="button"
       >

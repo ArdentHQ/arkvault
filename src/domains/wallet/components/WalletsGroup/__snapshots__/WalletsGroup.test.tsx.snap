@@ -4532,7 +4532,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </span>
           </div>
           <nav
-            class="relative w-full sm:w-auto css-4ybc2s"
+            class="pagination-wrapper relative w-full sm:w-auto"
             data-testid="Pagination"
           >
             <button
@@ -4588,7 +4588,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
             >
               <button
-                class="group css-eti7fq"
+                class="pagination-search-toggle-button group"
                 data-testid="PaginationSearchButton"
                 type="button"
               >
@@ -12396,7 +12396,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
             </span>
           </div>
           <nav
-            class="relative w-full sm:w-auto css-4ybc2s"
+            class="pagination-wrapper relative w-full sm:w-auto"
             data-testid="Pagination"
           >
             <button
@@ -12452,7 +12452,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
             >
               <button
-                class="group css-eti7fq"
+                class="pagination-search-toggle-button group"
                 data-testid="PaginationSearchButton"
                 type="button"
               >
@@ -16807,7 +16807,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
             </span>
           </div>
           <nav
-            class="relative w-full sm:w-auto css-4ybc2s"
+            class="pagination-wrapper relative w-full sm:w-auto"
             data-testid="Pagination"
           >
             <button
@@ -16863,7 +16863,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
             >
               <button
-                class="group css-eti7fq"
+                class="pagination-search-toggle-button group"
                 data-testid="PaginationSearchButton"
                 type="button"
               >
@@ -21149,7 +21149,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <nav
-            class="relative w-full sm:w-auto css-4ybc2s"
+            class="pagination-wrapper relative w-full sm:w-auto"
             data-testid="Pagination"
           >
             <button
@@ -21205,7 +21205,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               class="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
             >
               <button
-                class="group css-eti7fq"
+                class="pagination-search-toggle-button group"
                 data-testid="PaginationSearchButton"
                 type="button"
               >
