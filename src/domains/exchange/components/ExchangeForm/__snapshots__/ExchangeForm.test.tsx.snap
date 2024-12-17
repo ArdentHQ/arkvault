@@ -2613,7 +2613,7 @@ exports[`ReviewStep > should render 1`] = `
           class="absolute right-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800"
         >
           <div
-            class="text-theme-secondary-900"
+            class="text-theme-secondary-900 dark:text-white"
           >
             <div
               style="height: 20px; width: 20px;"
