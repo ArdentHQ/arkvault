@@ -1494,19 +1494,35 @@ exports[`WalletsList > should render 1`] = `
                   <div
                     class="inline-flex items-center space-x-1"
                   >
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                      data-testid="WalletIcon__TestNetwork"
                     >
-                      <span
-                        class="react-loading-skeleton"
-                        style="width: 54px; height: 20px;"
-                      >
-                        ‌
-                      </span>
-                      <br />
-                    </span>
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="code"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -1767,19 +1783,45 @@ exports[`WalletsList > should render 1`] = `
                   <div
                     class="inline-flex items-center space-x-1"
                   >
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                      data-testid="WalletIcon__SecondSignature"
                     >
-                      <span
-                        class="react-loading-skeleton"
-                        style="width: 54px; height: 20px;"
-                      >
-                        ‌
-                      </span>
-                      <br />
-                    </span>
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                      data-testid="WalletIcon__TestNetwork"
+                    >
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="code"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -3147,19 +3189,35 @@ exports[`WalletsList > should render responsive 1`] = `
               <div
                 class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
               >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                <div
+                  class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                  data-testid="WalletIcon__TestNetwork"
                 >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 54px; height: 20px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
+                    >
+                      <svg
+                        id="code"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -3324,19 +3382,45 @@ exports[`WalletsList > should render responsive 1`] = `
               <div
                 class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
               >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                <div
+                  class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                  data-testid="WalletIcon__SecondSignature"
                 >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 54px; height: 20px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                  data-testid="WalletIcon__TestNetwork"
+                >
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
+                    >
+                      <svg
+                        id="code"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
                 class="flex shrink-0 items-center justify-center"
