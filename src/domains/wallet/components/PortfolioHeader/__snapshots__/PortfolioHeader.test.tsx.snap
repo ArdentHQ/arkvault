@@ -80,7 +80,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="hidden gap-3 sm:flex"
         >
           <div
-            aria-describedby="tippy-162"
+            aria-describedby="tippy-142"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 hidden md:inline-flex"
@@ -5452,19 +5452,16 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
                       <div
                         class="inline-flex items-center space-x-1"
                       >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        <div
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                          data-testid="WalletIcon__SecondSignature"
                         >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 54px; height: 20px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
+                          <div>
+                            <div
+                              style="height: 20px; width: 20px;"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </td>

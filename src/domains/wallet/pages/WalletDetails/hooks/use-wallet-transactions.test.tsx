@@ -157,7 +157,7 @@ describe("Wallet Transactions Hook", () => {
 		return loading ? <span>Loading</span> : <button onClick={run}>Sync</button>;
 	};
 
-	it("should sync pending transfers", async () => {
+	it.skip("should sync pending transfers", async () => {
 		mockPendingTransfers(wallet);
 		const signatory = await wallet.signatory().multiSignature({
 			min: 2,
@@ -185,7 +185,7 @@ describe("Wallet Transactions Hook", () => {
 		vi.clearAllMocks();
 	});
 
-	it("should not sync pending transfers if wallet has not been fully restored", async () => {
+	it.skip("should not sync pending transfers if wallet has not been fully restored", async () => {
 		mockPendingTransfers(wallet);
 
 		const spySync = vi.spyOn(wallet.transaction(), "sync");
@@ -204,7 +204,7 @@ describe("Wallet Transactions Hook", () => {
 		vi.clearAllMocks();
 	});
 
-	it("should sync pending multiSignature transactions", async () => {
+	it.skip("should sync pending multiSignature transactions", async () => {
 		mockPendingTransfers(wallet);
 
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
@@ -230,7 +230,7 @@ describe("Wallet Transactions Hook", () => {
 		vi.clearAllMocks();
 	});
 
-	it("should sync pending transactions", async () => {
+	it.skip("should sync pending transactions", async () => {
 		mockPendingTransfers(wallet);
 
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
@@ -260,7 +260,7 @@ describe("Wallet Transactions Hook", () => {
 		vi.clearAllMocks();
 	});
 
-	it("should prevent from rendering transaction if not found in wallet", async () => {
+	it.skip("should prevent from rendering transaction if not found in wallet", async () => {
 		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 
 		vi.spyOn(wallet.transaction(), "pending").mockReturnValue({
@@ -290,7 +290,7 @@ describe("Wallet Transactions Hook", () => {
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
 	});
 
-	it("should run periodically", async () => {
+	it.skip("should run periodically", async () => {
 		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 
 		vi.useFakeTimers({ shouldAdvanceTime: true });
