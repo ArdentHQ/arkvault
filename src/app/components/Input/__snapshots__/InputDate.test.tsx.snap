@@ -3,7 +3,7 @@
 exports[`InputDate > should render 1`] = `
 <DocumentFragment>
   <fieldset
-    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+    class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 [&>.FormLabel]:text-theme-primary-600 dark:[&>.FormLabel]:text-theme-secondary-500 flex min-w-0 flex-col"
   >
     <div
       class="react-datepicker-wrapper"
