@@ -342,7 +342,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
-                              class="w-full [.condensed_&]:hidden"
+                              class="h-full w-full [.condensed_&]:hidden"
                             >
                               <div
                                 class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -566,7 +566,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                             >
                               <div
-                                class="w-full [.condensed_&]:hidden"
+                                class="h-full w-full [.condensed_&]:hidden"
                               >
                                 <div
                                   class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -593,7 +593,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                             >
                               <div
-                                class="w-full [.condensed_&]:hidden"
+                                class="h-full w-full [.condensed_&]:hidden"
                               >
                                 <div
                                   class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -680,7 +680,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                             >
                               <div
-                                class="w-full [.condensed_&]:hidden"
+                                class="h-full w-full [.condensed_&]:hidden"
                               >
                                 <div
                                   class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -739,7 +739,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                             >
                               <div
-                                class="w-full [.condensed_&]:hidden"
+                                class="h-full w-full [.condensed_&]:hidden"
                               >
                                 <div
                                   class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
