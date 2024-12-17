@@ -114,11 +114,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 
 export const Info = ({ wallet, isLargeScreen = true, className }: InfoProperties) => {
 	const { t } = useTranslation();
-	const { syncPending, hasUnsignedPendingTransaction, isLoading } = useWalletTransactions(wallet);
-
-	useEffect(() => {
-		syncPending();
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	const { hasUnsignedPendingTransaction, isLoading } = useWalletTransactions(wallet);
 
 	const renderIcons = () => (
 		<div className={cn("inline-flex items-center space-x-1", className)}>
