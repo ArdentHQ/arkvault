@@ -3,7 +3,7 @@
 exports[`Spinner > should render 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 css-gk3cnl"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Spinner > should render 1`] = `
 exports[`Spinner > should render a danger color 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-danger-400 dark:border-l-theme-danger-400"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-danger-400 dark:border-l-theme-danger-400 css-gk3cnl"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`Spinner > should render a danger color 1`] = `
 exports[`Spinner > should render a hint color 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-hint-500 dark:border-l-theme-hint-500"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-hint-500 dark:border-l-theme-hint-500 css-gk3cnl"
   />
 </div>
 `;
@@ -27,7 +27,7 @@ exports[`Spinner > should render a hint color 1`] = `
 exports[`Spinner > should render a info color 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 css-gk3cnl"
   />
 </div>
 `;
@@ -35,7 +35,7 @@ exports[`Spinner > should render a info color 1`] = `
 exports[`Spinner > should render a large one 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-12 h-12 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-12 h-12 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 css-gk3cnl"
   />
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`Spinner > should render a large one 1`] = `
 exports[`Spinner > should render a small one 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 css-gk3cnl"
   />
 </div>
 `;
@@ -51,7 +51,7 @@ exports[`Spinner > should render a small one 1`] = `
 exports[`Spinner > should render a success color 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-success-600 dark:border-l-theme-success-600"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-success-600 dark:border-l-theme-success-600 css-gk3cnl"
   />
 </div>
 `;
@@ -59,7 +59,7 @@ exports[`Spinner > should render a success color 1`] = `
 exports[`Spinner > should render a warning color 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-warning-600 dark:border-l-theme-warning-600"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-warning-600 dark:border-l-theme-warning-600 css-gk3cnl"
   />
 </div>
 `;
@@ -67,7 +67,7 @@ exports[`Spinner > should render a warning color 1`] = `
 exports[`Spinner > should render a warning-alt color 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 css-gk3cnl"
   />
 </div>
 `;
