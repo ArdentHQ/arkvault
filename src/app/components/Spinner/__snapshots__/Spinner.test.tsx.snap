@@ -3,7 +3,7 @@
 exports[`Spinner > should render 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
   />
 </div>
 `;
@@ -35,7 +35,7 @@ exports[`Spinner > should render a info color 1`] = `
 exports[`Spinner > should render a large one 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-12 h-12 border-theme-secondary-200 dark:border-black"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-12 h-12 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
   />
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`Spinner > should render a large one 1`] = `
 exports[`Spinner > should render a small one 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
   />
 </div>
 `;
