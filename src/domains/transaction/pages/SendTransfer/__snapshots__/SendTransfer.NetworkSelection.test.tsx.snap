@@ -651,7 +651,7 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 my-8"
+                    class="[&>.FormLabel]:text-theme-primary-600 dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 my-8"
                   >
                     <div
                       data-testid="SendTransfer__network-step__select"

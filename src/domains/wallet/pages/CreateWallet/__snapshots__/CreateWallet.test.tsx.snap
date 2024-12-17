@@ -736,7 +736,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 my-4"
+                      class="[&>.FormLabel]:text-theme-primary-600 dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 my-4"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -2529,7 +2529,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 my-4"
+                      class="[&>.FormLabel]:text-theme-primary-600 dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 my-4"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -3445,7 +3445,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 my-4"
+                      class="[&>.FormLabel]:text-theme-primary-600 dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 my-4"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -4357,7 +4357,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 my-4"
+                      class="[&>.FormLabel]:text-theme-primary-600 dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 my-4"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -5324,7 +5324,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                       </div>
                     </div>
                     <fieldset
-                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 my-4"
+                      class="[&>.FormLabel]:text-theme-primary-600 dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 my-4"
                     >
                       <div
                         data-testid="SelectNetwork"
