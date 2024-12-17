@@ -6,6 +6,4 @@ exports[`WalletActionsModals > should render \`receive-funds\` modal 1`] = `[Fun
 
 exports[`WalletActionsModals > should render \`transaction-history\` modal 1`] = `[Function]`;
 
-exports[`WalletActionsModals > should render \`unlockable-balances\` modal 1`] = `[Function]`;
-
 exports[`WalletActionsModals > should render \`wallet-name\` modal 1`] = `[Function]`;
