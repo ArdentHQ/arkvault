@@ -7,7 +7,7 @@ exports[`Loader > should render with custom class names 1`] = `
     data-testid="Loader__wrapper"
   >
     <div
-      class="animate-spin border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
+      class="animate-spin border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full css-1os7l12"
     />
     <hr
       class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
@@ -29,7 +29,7 @@ exports[`Loader > should render with custom text 1`] = `
     data-testid="Loader__wrapper"
   >
     <div
-      class="animate-spin border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
+      class="animate-spin border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full css-1os7l12"
     />
     <hr
       class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"

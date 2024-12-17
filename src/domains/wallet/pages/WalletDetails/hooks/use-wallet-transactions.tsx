@@ -101,6 +101,5 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 		pendingTransactions,
 		startSyncingPendingTransactions: start,
 		stopSyncingPendingTransactions: stop,
-		syncPending,
 	};
 };
