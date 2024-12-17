@@ -34,7 +34,7 @@ export const ReviewStep = () => {
 
 				<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="absolute right-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
-						<Icon name="DoubleArrowDashed" className="text-theme-secondary-900" size="lg" />
+						<Icon name="DoubleArrowDashed" className="text-theme-secondary-900 dark:text-white" size="lg" />
 					</div>
 				</div>
 
