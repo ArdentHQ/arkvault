@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { WalletListItemMobileProperties } from "@/app/components/WalletListItem";
