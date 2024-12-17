@@ -36,16 +36,7 @@ export const WalletDetails = () => {
 	const { profileIsSyncing } = useConfiguration();
 
 	const networkAllowsVoting = useMemo(() => activeWallet.network().allowsVoting(), [activeWallet]);
-	const { pendingTransactions, syncPending, startSyncingPendingTransactions, stopSyncingPendingTransactions } =
-		useWalletTransactions(activeWallet);
-
-	useEffect(() => {
-		syncPending();
-		startSyncingPendingTransactions();
-		return () => {
-			stopSyncingPendingTransactions();
-		};
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	const { pendingTransactions } = useWalletTransactions(activeWallet);
 
 	const handleVoteButton = (filter?: string) => {
 		/* istanbul ignore else -- @preserve */
@@ -60,9 +51,8 @@ export const WalletDetails = () => {
 	};
 
 	const onPendingTransactionRemove = useCallback(async () => {
-		await syncPending();
 		toasts.success(t("TRANSACTION.TRANSACTION_REMOVED"));
-	}, [syncPending, t]);
+	}, [t]);
 
 	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
 
@@ -73,7 +63,7 @@ export const WalletDetails = () => {
 	useEffect(() => {
 		const syncVotes = async () => {
 			try {
-				await env.delegates().sync(activeProfile, activeWallet?.coinId(), activeWallet?.networkId());
+				await env.delegates().sync(activeProfile, activeWallet.coinId(), activeWallet.networkId());
 				await activeWallet.synchroniser().votes();
 
 				setVotes(activeWallet.voting().current());
@@ -223,7 +213,6 @@ export const WalletDetails = () => {
 					isOpen={!!signedTransactionModalItem}
 					transaction={signedTransactionModalItem}
 					onClose={async () => {
-						syncPending();
 						setSignedTransactionModalItem(undefined);
 					}}
 				/>
