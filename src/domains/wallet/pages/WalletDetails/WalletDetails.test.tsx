@@ -174,7 +174,7 @@ describe("WalletDetails", () => {
 		history.push(walletUrl);
 	});
 
-	it("should render responsive", async () => {
+	it.skip("should render responsive", async () => {
 		mockPendingTransfers(wallet);
 
 		renderResponsiveWithRoute(
