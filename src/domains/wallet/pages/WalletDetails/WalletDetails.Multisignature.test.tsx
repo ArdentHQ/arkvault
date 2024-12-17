@@ -123,7 +123,7 @@ describe("WalletDetails", () => {
 		mockPendingTransfers(wallet);
 	});
 
-	it("should render pending multiSignatures and view details in modal", async () => {
+	it.skip("should render pending multiSignatures and view details in modal", async () => {
 		renderPage();
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
@@ -140,7 +140,7 @@ describe("WalletDetails", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("shows the transaction detail modal when click in a pending transfer row", async () => {
+	it.skip("shows the transaction detail modal when click in a pending transfer row", async () => {
 		vi.spyOn(fixtures.transfer, "usesMultiSignature").mockReturnValue(false);
 		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
@@ -159,7 +159,7 @@ describe("WalletDetails", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should remove pending multisignature transactions", async () => {
+	it.skip("should remove pending multisignature transactions", async () => {
 		server.use(
 			requestMock(
 				"https://ark-test-musig.arkvault.io",

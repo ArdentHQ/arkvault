@@ -19,7 +19,7 @@ import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { delay } from "@/utils/delay";
-/* eslint-disable sonarjs/cognitive-complexity */
+
 import { useAccentColor } from "@/app/hooks/use-accent-color";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { useZendesk } from "@/app/contexts/Zendesk";
