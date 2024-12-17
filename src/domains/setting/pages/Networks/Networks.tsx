@@ -57,7 +57,6 @@ export const NetworksSettings = () => {
 	const [networkToUpdate, setNetworkToUpdate] = useState<Networks.NetworkManifest | undefined>(undefined);
 	const [networkToShowDetails, setNetworkToShowDetails] = useState<Networks.NetworkManifest | undefined>(undefined);
 	const { setValue: setWalletConfig } = useWalletConfig({ profile });
-	console.log({ selectedNetworks });
 
 	const defaultNetworks = useMemo(
 		() => env.availableNetworks().filter((item) => ["mainsail.devnet"].includes(item.id())),
