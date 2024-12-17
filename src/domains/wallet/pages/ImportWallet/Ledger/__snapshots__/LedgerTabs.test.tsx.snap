@@ -157,7 +157,7 @@ exports[`LedgerTabs > should render connection step 1`] = `
             </div>
           </div>
           <fieldset
-            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 [&>.FormLabel]:text-theme-primary-600 dark:[&>.FormLabel]:text-theme-secondary-500 mt-4"
+            class="[&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 [&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 mt-4"
           >
             <div
               data-testid="SelectNetwork"
