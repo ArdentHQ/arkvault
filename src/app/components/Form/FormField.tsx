@@ -24,7 +24,7 @@ export const FormFieldStyled = ({
 				"[&:focus-within_.FormLabel]:text-theme-secondary-text":
 					!isInvalid && disableHover,
 				"[&>.FormLabel]:text-theme-danger-500": isInvalid,
-				"[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500":
+				"[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500":
 					!isInvalid && !disableHover,
 			}),
 			props.className,
