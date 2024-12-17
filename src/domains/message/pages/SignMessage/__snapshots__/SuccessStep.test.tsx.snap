@@ -147,7 +147,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
       </div>
       <div>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 [&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div
             class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
@@ -341,7 +341,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
       </div>
       <div>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 [&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div
             class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"

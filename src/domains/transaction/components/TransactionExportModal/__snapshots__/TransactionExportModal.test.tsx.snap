@@ -193,7 +193,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -335,7 +335,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -830,7 +830,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -972,7 +972,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -1467,7 +1467,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -1609,7 +1609,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -2680,7 +2680,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -2822,7 +2822,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -3317,7 +3317,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -3459,7 +3459,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                                class="[&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 [&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"

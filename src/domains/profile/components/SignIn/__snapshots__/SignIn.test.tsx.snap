@@ -125,10 +125,10 @@ exports[`SignIn > should render a modal 1`] = `
               data-testid="Form"
             >
               <fieldset
-                class="[&:focus-within_.FormLabel]:text-theme-secondary-text dark:[&:focus-within_.FormLabel]:text-theme-primary-500 [&>.FormLabel]:text-theme-secondary-text dark:[&>.FormLabel]:text-theme-secondary-500 flex min-w-0 flex-col"
+                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                   data-testid="FormLabel"
                   for="password"
                 >
