@@ -14,7 +14,7 @@ export const Spinner = ({ color = "info", size, theme, width, ...props }: Spinne
 	<div
 		{...props}
 		className={twMerge(getStyles({ color, size, theme }), props.className)}
-		style={{
+		css={{
 			borderWidth: `${width}px !important`,
 		}}
 	/>
