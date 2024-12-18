@@ -2102,7 +2102,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                     class="flex min-w-0 flex-col css-s0h7ue"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
@@ -2446,7 +2446,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="senderAddress"
         >
@@ -2749,7 +2749,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 class="flex min-w-0 flex-col css-ea0il3"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                   data-testid="FormLabel"
                   for="amount"
                 >
@@ -2809,7 +2809,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         class="relative css-ea0il3"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="memo"
         >
@@ -2858,7 +2858,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="fee"
         >
@@ -3152,7 +3152,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="senderAddress"
         >
@@ -3455,7 +3455,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 class="flex min-w-0 flex-col css-ea0il3"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                   data-testid="FormLabel"
                   for="amount"
                 >
@@ -3515,7 +3515,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         class="relative css-ea0il3"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="memo"
         >
@@ -3564,7 +3564,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="fee"
         >
@@ -4553,7 +4553,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
       class="mt-8 css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="network"
       >

@@ -10,7 +10,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
         class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="address"
         >
@@ -398,7 +398,7 @@ exports[`Add Participant > should fail to find 1`] = `
         class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="address"
         >
@@ -786,7 +786,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
         class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="address"
         >
@@ -1184,7 +1184,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
         class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="address"
         >
@@ -1572,7 +1572,7 @@ exports[`Add Participant > should handle exception on find and show address not 
         class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="address"
         >
@@ -1960,7 +1960,7 @@ exports[`Add Participant > should render custom participants 1`] = `
         class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="address"
         >
@@ -2237,7 +2237,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
         class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="address"
         >

@@ -98,10 +98,10 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for=""
         >
@@ -238,10 +238,10 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="value"
         >
@@ -454,10 +454,10 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for=""
         >
@@ -594,10 +594,10 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="value"
         >
@@ -810,10 +810,10 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for=""
         >
@@ -950,10 +950,10 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="value"
         >
@@ -1166,10 +1166,10 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for=""
         >
@@ -1306,10 +1306,10 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="value"
         >
@@ -1522,10 +1522,10 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for=""
         >
@@ -1662,10 +1662,10 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="encryptedWif"
         >
@@ -1693,10 +1693,10 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="value"
         >
@@ -2743,10 +2743,10 @@ exports[`ImportWallet > should render method step 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for=""
         >
@@ -2883,10 +2883,10 @@ exports[`ImportWallet > should render method step 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="value"
         >
@@ -3201,10 +3201,10 @@ exports[`ImportWallet > should render network step 1`] = `
       </div>
     </div>
     <fieldset
-      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-4"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-4"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="network"
       >

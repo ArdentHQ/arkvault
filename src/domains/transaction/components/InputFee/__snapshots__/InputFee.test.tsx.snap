@@ -29,7 +29,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -169,7 +169,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -422,7 +422,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -561,7 +561,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -676,7 +676,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -851,7 +851,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1036,7 +1036,7 @@ exports[`InputFee > simple view type > should display converted values when on l
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1362,7 +1362,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1477,7 +1477,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1592,7 +1592,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1707,7 +1707,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1822,7 +1822,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1997,7 +1997,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2130,7 +2130,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2263,7 +2263,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2396,7 +2396,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2529,7 +2529,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2714,7 +2714,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2829,7 +2829,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2944,7 +2944,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
