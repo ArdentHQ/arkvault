@@ -52,7 +52,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 						>
 							<div className="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2">
 								<div
-									className={cn("text-sm leading-5", {
+									className={cn("text-sm leading-[17px] sm:leading-5", {
 										"text-theme-navy-700 dark:text-theme-dark-50": isSelected,
 									})}
 								>
