@@ -1,6 +1,5 @@
 import React from "react";
 
-import { InputFeeSimpleSelect } from "./InputFeeSimpleSelect";
 import { Amount } from "@/app/components/Amount";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { Skeleton } from "@/app/components/Skeleton";
