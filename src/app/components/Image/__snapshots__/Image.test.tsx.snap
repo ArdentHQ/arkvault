@@ -403,6 +403,7 @@ exports[`Image > should render with string 1`] = `
 <DocumentFragment>
   <img
     alt=""
+    loading="lazy"
     src="/src/domains/profile/images/welcome-modal-step-1-banner-light-green.png"
   />
 </DocumentFragment>
