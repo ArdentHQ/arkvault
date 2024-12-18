@@ -57,11 +57,12 @@ export const translations = {
 	COMPLETE: "Complete",
 	COMPLETED: "Completed",
 	CONFIRM: "Confirm",
-	CONFIRMATION_DURATION: "~{{duration}}s",
 	CONFIRMATION_MODAL: {
 		DESCRIPTION: "Are you sure you wish to navigate away from this page without saving?",
 		TITLE: "Confirmation",
 	},
+	CONFIRMATION_TIME: "~{{time}}s",
+	CONFIRMATION_TIME_LABEL: "Confirmation time",
 	CONTACT: "Contact",
 	CONTACTS: "Contacts",
 	CONTACT_US: "Contact Us",

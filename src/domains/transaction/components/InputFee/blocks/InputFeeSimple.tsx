@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 
 type ConfirmationSpeed = "Slow" | "Average" | "Fast";
 
-const confirmationDuration: Record<ConfirmationSpeed, number> = {
+const confirmationTimes: Record<ConfirmationSpeed, number> = {
 	Average: 5,
 	Fast: 2,
 	Slow: 10,
@@ -44,12 +44,19 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 						setSelectedValue={() => onChange(optionValue as InputFeeSimpleValue)}
 					>
 						<div
-							className={cn("flex w-full flex-col transition-all dark:text-theme-dark-200", {
-								"dark:group-hover:text-theme-dark-50": !isSelected,
-							})}
+							className={cn(
+								"flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200",
+								{
+									"dark:group-hover:text-theme-dark-50": !isSelected,
+								},
+							)}
 						>
 							<div className="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2">
-								<div className={cn("text-sm leading-5", { "dark:text-theme-dark-50": isSelected })}>
+								<div
+									className={cn("text-sm leading-5", {
+										"text-theme-navy-700 dark:text-theme-dark-50": isSelected,
+									})}
+								>
 									{label}
 								</div>
 
@@ -57,38 +64,40 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 
 								{!loading && (
 									<div className="flex justify-between sm:w-full">
+										{showConvertedValues && (
+											<span className="text-xs leading-[15px]">
+												~
+												<Amount ticker={exchangeTicker} value={displayValueConverted} />
+											</span>
+										)}
 										<Amount
 											ticker={ticker}
 											value={displayValue}
-											className="hidden text-xs leading-[15px] sm:block"
-										/>
-										{showConvertedValues && (
-											<Amount
-												ticker={exchangeTicker}
-												value={displayValueConverted}
-												className={cn("text-xs leading-[15px] transition-all", {
+											className={cn(
+												"hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500",
+												{
 													"dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500":
 														!isSelected,
-												})}
-											/>
-										)}
+												},
+											)}
+										/>
 									</div>
 								)}
 							</div>
 							<div
 								className={cn(
-									"flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-dark-200 transition-all",
+									"flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200",
 									{
-										"dark:bg-theme-dark-500": isSelected,
-										"dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50":
+										"bg-theme-navy-100 dark:bg-theme-dark-500": isSelected,
+										"bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50":
 											!isSelected,
 									},
 								)}
 							>
-								<span>Confirmation time</span>
+								<span>{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>
 								<span>
-									{t("COMMON.CONFIRMATION_DURATION", {
-										duration: confirmationDuration[label as ConfirmationSpeed],
+									{t("COMMON.CONFIRMATION_TIME", {
+										time: confirmationTimes[label as ConfirmationSpeed],
 									}).toString()}
 								</span>
 							</div>
