@@ -48,7 +48,7 @@ export const ButtonGroupOption = ({
 	tooltipContent,
 	value,
 	variant = "default",
-	className
+	className,
 }: ButtonGroupOptionProperties) => {
 	/* istanbul ignore next -- @preserve */
 	const label = tooltipContent ?? `${value ?? ""}`;

@@ -11,13 +11,13 @@ import {
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 
-type ConfirmationSpeed = "Slow"|"Average"|"Fast";
+type ConfirmationSpeed = "Slow" | "Average" | "Fast";
 
-const confirmationDuration:Record<ConfirmationSpeed, number> = {
-	"Average": 5,
-	"Fast": 2,
-	"Slow": 10,
-}
+const confirmationDuration: Record<ConfirmationSpeed, number> = {
+	Average: 5,
+	Fast: 2,
+	Slow: 10,
+};
 
 export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	options,
@@ -28,56 +28,74 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	showConvertedValues,
 	loading,
 }: InputFeeSimpleProperties) => {
-	const {t} = useTranslation();
+	const { t } = useTranslation();
 
 	return (
-		<ButtonGroup className="space-y-2 sm:space-y-0 sm:space-x-2 flex-col sm:flex-row">
+		<ButtonGroup className="flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
 			{Object.entries(options).map(([optionValue, { label, displayValue, displayValueConverted }]) => {
 				const isSelected = optionValue === value;
 
-				return (<ButtonGroupOption
-					key={optionValue}
-					value={displayValue}
-					isSelected={() => optionValue === value}
-					className="group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:border-theme-dark-400"
-					setSelectedValue={() => onChange(optionValue as InputFeeSimpleValue)}
-				>
-					<div className={cn("flex flex-col w-full  transition-all dark:text-theme-dark-200", {
-						"dark:group-hover:text-theme-dark-50": !isSelected,
-					})}>
-						<div className="flex justify-between sm:justify-start sm:flex-col items-center sm:items-start sm:space-y-2 p-3">
-							<div className={cn("leading-5 text-sm", {"dark:text-theme-dark-50": isSelected})}>{label}</div>
+				return (
+					<ButtonGroupOption
+						key={optionValue}
+						value={displayValue}
+						isSelected={() => optionValue === value}
+						className="group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+						setSelectedValue={() => onChange(optionValue as InputFeeSimpleValue)}
+					>
+						<div
+							className={cn("flex w-full flex-col transition-all dark:text-theme-dark-200", {
+								"dark:group-hover:text-theme-dark-50": !isSelected,
+							})}
+						>
+							<div className="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2">
+								<div className={cn("text-sm leading-5", { "dark:text-theme-dark-50": isSelected })}>
+									{label}
+								</div>
 
-							{loading && <Skeleton width={100} className="h-4" /> }
+								{loading && <Skeleton width={100} className="h-4" />}
 
-							{!loading && <div className="sm:w-full justify-between flex">
-								<Amount ticker={ticker} value={displayValue} className="text-xs leading-[15px] hidden sm:block" />
-								{showConvertedValues && (
-									<Amount
-										ticker={exchangeTicker}
-										value={displayValueConverted}
-										className={cn("text-xs leading-[15px]  transition-all", {
-											"sm:dark:text-theme-dark-500 dark:group-hover:text-theme-dark-200": !isSelected,
-										})}
-									/>
+								{!loading && (
+									<div className="flex justify-between sm:w-full">
+										<Amount
+											ticker={ticker}
+											value={displayValue}
+											className="hidden text-xs leading-[15px] sm:block"
+										/>
+										{showConvertedValues && (
+											<Amount
+												ticker={exchangeTicker}
+												value={displayValueConverted}
+												className={cn("text-xs leading-[15px] transition-all", {
+													"dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500":
+														!isSelected,
+												})}
+											/>
+										)}
+									</div>
 								)}
-							</div>}
+							</div>
+							<div
+								className={cn(
+									"flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-dark-200 transition-all",
+									{
+										"dark:bg-theme-dark-500": isSelected,
+										"dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50":
+											!isSelected,
+									},
+								)}
+							>
+								<span>Confirmation time</span>
+								<span>
+									{t("COMMON.CONFIRMATION_DURATION", {
+										duration: confirmationDuration[label as ConfirmationSpeed],
+									}).toString()}
+								</span>
+							</div>
 						</div>
-						<div className={cn("transition-all w-full px-3 py-2 justify-between flex text-xs leading-[15px] font-semibold text-theme-dark-200", {
-							"dark:bg-theme-dark-500": isSelected,
-							"dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50": !isSelected,
-						})}>
-							<span>Confirmation time</span>
-							<span>
-								{
-								t("COMMON.CONFIRMATION_DURATION", {
-								duration: confirmationDuration[label as ConfirmationSpeed]
-							}).toString() }
-							</span>
-						</div>
-					</div>
-
-				</ButtonGroupOption>)
+					</ButtonGroupOption>
+				);
 			})}
 		</ButtonGroup>
-	)};
+	);
+};
