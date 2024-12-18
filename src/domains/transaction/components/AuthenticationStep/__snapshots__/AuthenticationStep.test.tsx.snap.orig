@@ -34,7 +34,7 @@ exports[`AuthenticationStep (message) > should request WIF if wallet was importe
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="wif"
       >
@@ -140,7 +140,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
       class="flex min-w-0 flex-col css-s0h7ue"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="mnemonic"
       >
@@ -293,7 +293,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
       class="flex min-w-0 flex-col css-s0h7ue"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="mnemonic"
       >
@@ -446,7 +446,7 @@ exports[`AuthenticationStep (message) > should request private key if wallet was
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="privateKey"
       >
@@ -552,7 +552,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="secret"
       >
@@ -1352,7 +1352,7 @@ exports[`AuthenticationStep (transaction) > should request WIF if wallet was imp
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="wif"
       >
@@ -1458,7 +1458,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="mnemonic"
       >
@@ -1530,7 +1530,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
       class="flex min-w-0 flex-col css-s0h7ue"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="secondMnemonic"
       >
@@ -1683,7 +1683,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
       class="flex min-w-0 flex-col css-s0h7ue"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="mnemonic"
       >
@@ -1836,7 +1836,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
       class="flex min-w-0 flex-col css-s0h7ue"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="mnemonic"
       >
@@ -1989,7 +1989,7 @@ exports[`AuthenticationStep (transaction) > should request private key if wallet
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="privateKey"
       >
@@ -2095,7 +2095,7 @@ exports[`AuthenticationStep (transaction) > should request secret and second sec
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="secret"
       >
@@ -2167,7 +2167,7 @@ exports[`AuthenticationStep (transaction) > should request secret and second sec
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="secondSecret"
       >
@@ -2273,7 +2273,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
       class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="secret"
       >

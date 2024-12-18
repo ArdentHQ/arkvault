@@ -139,7 +139,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
               data-testid="FormLabel"
               for="validatorPublicKey"
             >
@@ -166,7 +166,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
               data-testid="FormLabel"
               for="fee"
             >
@@ -740,7 +740,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
               data-testid="FormLabel"
               for="validatorPublicKey"
             >
@@ -767,7 +767,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
               data-testid="FormLabel"
               for="fee"
             >
