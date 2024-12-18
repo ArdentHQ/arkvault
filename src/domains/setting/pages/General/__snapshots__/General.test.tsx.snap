@@ -1058,10 +1058,10 @@ exports[`General Settings > should disable submit button when profile is not res
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -1085,10 +1085,10 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -1224,10 +1224,10 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -1367,10 +1367,10 @@ exports[`General Settings > should disable submit button when profile is not res
                         class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -1506,10 +1506,10 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -1645,10 +1645,10 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -1807,11 +1807,11 @@ exports[`General Settings > should disable submit button when profile is not res
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -3153,10 +3153,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -3180,10 +3180,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -3319,10 +3319,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -3462,10 +3462,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                         class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -3601,10 +3601,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -3740,10 +3740,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -3902,11 +3902,11 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -5211,10 +5211,10 @@ exports[`General Settings > should render 1`] = `
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -5238,10 +5238,10 @@ exports[`General Settings > should render 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -5377,10 +5377,10 @@ exports[`General Settings > should render 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -5520,10 +5520,10 @@ exports[`General Settings > should render 1`] = `
                         class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -5659,10 +5659,10 @@ exports[`General Settings > should render 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -5798,10 +5798,10 @@ exports[`General Settings > should render 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -5960,11 +5960,11 @@ exports[`General Settings > should render 1`] = `
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -7270,10 +7270,10 @@ exports[`General Settings > should show identicon when removing image if name is
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -7297,10 +7297,10 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -7436,10 +7436,10 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -7579,10 +7579,10 @@ exports[`General Settings > should show identicon when removing image if name is
                         class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -7718,10 +7718,10 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -7857,10 +7857,10 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -8019,11 +8019,11 @@ exports[`General Settings > should show identicon when removing image if name is
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -9329,10 +9329,10 @@ exports[`General Settings > should update profile 1`] = `
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -9356,10 +9356,10 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -9495,10 +9495,10 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -9638,10 +9638,10 @@ exports[`General Settings > should update profile 1`] = `
                         class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -9777,10 +9777,10 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -9916,10 +9916,10 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -10078,11 +10078,11 @@ exports[`General Settings > should update profile 1`] = `
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -11388,10 +11388,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -11415,10 +11415,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -11554,10 +11554,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -11697,10 +11697,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                         class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -11836,10 +11836,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -11975,10 +11975,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -12137,11 +12137,11 @@ exports[`General Settings > should update the avatar when removing focus from na
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -13439,10 +13439,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -13517,10 +13517,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -13656,10 +13656,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -13799,10 +13799,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                         class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -13938,10 +13938,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -14077,10 +14077,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-5"
+                          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-5"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -14239,11 +14239,11 @@ exports[`General Settings > should update the avatar when removing focus from na
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >

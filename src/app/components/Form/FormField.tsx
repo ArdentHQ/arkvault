@@ -20,10 +20,11 @@ export const FormFieldStyled = ({
 		{...props}
 		className={twMerge(
 			cn({
+				"[&:focus-within_.FormLabel]:text-theme-danger-500": isInvalid,
+				"[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500":
+					!isInvalid && !disableHover,
+				"[&:focus-within_.FormLabel]:text-theme-secondary-text": !isInvalid && disableHover,
 				"[&>.FormLabel]:text-theme-danger-500": isInvalid,
-				"[&>.FormLabel]:text-theme-primary-600": !isInvalid && !disableHover,
-				"focus-within:[&>.FormLabel]:text-theme-danger-500": isInvalid,
-				"focus-within:[&>.FormLabel]:text-theme-primary-600": !isInvalid,
 			}),
 			props.className,
 		)}

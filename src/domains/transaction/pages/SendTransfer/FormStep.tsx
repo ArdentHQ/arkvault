@@ -164,7 +164,7 @@ export const FormStep = ({
 						<div className="mb-2 flex items-center justify-between">
 							<FormLabel
 								label={t("TRANSACTION.SENDER")}
-								className="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text"
+								className="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text hover:!text-theme-primary-600"
 							/>
 							<Button
 								type="button"

@@ -10,12 +10,14 @@ type ImageProperties = {
 	name: string;
 	domain?: string;
 	useAccentColor?: boolean;
+	loading?: "eager" | "lazy";
 } & React.HTMLProps<any>;
 
 export const Image: React.VFC<ImageProperties> = ({
 	name,
 	domain = "common",
 	useAccentColor = true,
+	loading = "lazy",
 	...properties
 }) => {
 	const [imageName, setImageName] = React.useState("");
@@ -52,7 +54,7 @@ export const Image: React.VFC<ImageProperties> = ({
 	const Image = (images as any)[domain][imageName] || (images as any)[domain][name];
 
 	if (typeof Image === "string") {
-		return <img src={Image} alt="" {...(properties as React.ImgHTMLAttributes<any>)} />;
+		return <img src={Image} alt="" {...(properties as React.ImgHTMLAttributes<any>)} loading={loading} />;
 	}
 
 	return Image ? <Image {...properties} /> : <></>;

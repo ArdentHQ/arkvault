@@ -36,7 +36,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
@@ -87,7 +87,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -212,10 +212,10 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
@@ -355,7 +355,7 @@ exports[`AddRecipient > should render 1`] = `
                 class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
@@ -406,7 +406,7 @@ exports[`AddRecipient > should render 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -531,10 +531,10 @@ exports[`AddRecipient > should render 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
@@ -659,7 +659,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
@@ -710,7 +710,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -835,10 +835,10 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
@@ -963,7 +963,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
@@ -1014,7 +1014,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -1139,10 +1139,10 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
@@ -1267,7 +1267,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
@@ -1318,7 +1318,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -1443,10 +1443,10 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
@@ -1556,7 +1556,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -1681,10 +1681,10 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
@@ -1809,7 +1809,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                 class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
@@ -1860,7 +1860,7 @@ exports[`AddRecipient > should set available amount 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -1985,10 +1985,10 @@ exports[`AddRecipient > should set available amount 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
@@ -2113,7 +2113,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                 class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
@@ -2164,7 +2164,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -2289,10 +2289,10 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
@@ -2432,7 +2432,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
               >
                 <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 handle-inner h-3 w-3"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
@@ -2483,7 +2483,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
         class="space-y-4"
       >
         <fieldset
-          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
@@ -2608,10 +2608,10 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           </div>
         </fieldset>
         <fieldset
-          class="[&>.FormLabel]:text-theme-danger-500 focus-within:[&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
             data-testid="FormLabel"
             for="amount"
           >
