@@ -10,6 +10,14 @@ import {
 } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import cn from "classnames";
 
+type ConfirmationSpeed = "Slow"|"Average"|"Fast";
+
+const confirmationDuration:Record<ConfirmationSpeed, number> = {
+	"Average": 5,
+	"Fast": 2,
+	"Slow": 10,
+}
+
 export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	options,
 	onChange,
@@ -18,9 +26,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	exchangeTicker,
 	showConvertedValues,
 	loading,
-}: InputFeeSimpleProperties) => {
-
-	return (
+}: InputFeeSimpleProperties) => (
 		<ButtonGroup className="space-y-2 sm:space-y-0 sm:space-x-2 flex-col sm:flex-row">
 			{Object.entries(options).map(([optionValue, { label, displayValue, displayValueConverted }]) => {
 				const isSelected = optionValue === value;
@@ -35,7 +41,8 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 					<div className="flex flex-col w-full dark:text-theme-dark-200">
 						<div className="flex justify-between sm:justify-start sm:flex-col items-center sm:items-start sm:space-y-2 p-3">
 							<div className={cn("leading-5 text-sm", {"dark:text-theme-dark-50": isSelected})}>{label}</div>
-							<div className="sm:w-full justify-between flex">
+							{loading && <Skeleton width={100} className="h-4" /> }
+							{!loading && <div className="sm:w-full justify-between flex">
 								<Amount ticker={ticker} value={displayValue} className="text-xs leading-[15px] hidden sm:block" />
 								{showConvertedValues && (
 									<Amount
@@ -46,14 +53,14 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 										})}
 									/>
 								)}
-							</div>
+							</div>}
 						</div>
 						<div className={cn("w-full px-3 py-2 justify-between flex text-xs leading-[15px] font-semibold text-theme-dark-200", {
 							"dark:bg-theme-dark-500": isSelected,
 							"dark:bg-theme-dark-800": !isSelected,
 						})}>
 							<span>Confirmation time</span>
-							<span>~10s</span>
+							<span>~{confirmationDuration[label as ConfirmationSpeed]}s</span>
 						</div>
 					</div>
 
@@ -61,4 +68,3 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 			})}
 		</ButtonGroup>
 	);
-};
