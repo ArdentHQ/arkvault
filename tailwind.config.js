@@ -75,6 +75,18 @@ module.exports = {
 			"theme-secondary-900": "var(--theme-color-secondary-900)",
 			"theme-secondary-900-rgba": "rgba(var(--theme-color-secondary-900-rgb), var(--tw-bg-opacity))",
 
+			"theme-dark-50": "var(--theme-color-dark-50)",
+			"theme-dark-100": "var(--theme-color-dark-100)",
+			"theme-dark-200": "var(--theme-color-dark-200)",
+			"theme-dark-300": "var(--theme-color-dark-300)",
+			"theme-dark-400": "var(--theme-color-dark-400)",
+			"theme-dark-500": "var(--theme-color-dark-500)",
+			"theme-dark-600": "var(--theme-color-dark-600)",
+			"theme-dark-700": "var(--theme-color-dark-700)",
+			"theme-dark-800": "var(--theme-color-dark-800)",
+			"theme-dark-900": "var(--theme-color-dark-900)",
+			"theme-dark-950": "var(--theme-color-dark-950)",
+
 			"theme-success-50": "var(--theme-color-success-50)",
 			"theme-success-100": "var(--theme-color-success-100)",
 			"theme-success-200": "var(--theme-color-success-200)",
