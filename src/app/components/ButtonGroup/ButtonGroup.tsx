@@ -37,6 +37,7 @@ interface ButtonGroupOptionProperties {
 	tooltipContent?: string;
 	value: string | number;
 	variant?: ButtonGroupOptionVariant;
+	className?: string;
 }
 
 export const ButtonGroupOption = ({
@@ -47,12 +48,14 @@ export const ButtonGroupOption = ({
 	tooltipContent,
 	value,
 	variant = "default",
+	className,
 }: ButtonGroupOptionProperties) => {
 	/* istanbul ignore next -- @preserve */
 	const label = tooltipContent ?? `${value ?? ""}`;
 
 	const render = () => (
 		<ButtonGroupOptionStyled
+			className={className}
 			aria-checked={isSelected(value)}
 			aria-label={label}
 			data-testid="ButtonGroupOption"

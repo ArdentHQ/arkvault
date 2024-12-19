@@ -216,7 +216,9 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 			return;
 		}
 
-		const remaining = BigNumber.make(remainingBalance).isGreaterThan(fee || 0) ? +remainingNetBalance : remainingBalance;
+		const remaining = BigNumber.make(remainingBalance).isGreaterThan(fee || 0)
+			? +remainingNetBalance
+			: remainingBalance;
 
 		setValue("amount", remaining, {
 			shouldDirty: true,
