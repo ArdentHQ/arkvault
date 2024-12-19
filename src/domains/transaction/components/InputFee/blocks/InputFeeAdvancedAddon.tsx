@@ -50,7 +50,7 @@ export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 		)}
 		<div
 			className={cn(
-				"-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:text-theme-dark-200 dark:border-theme-secondary-700 sm:w-10 sm:flex-col",
+				"-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 sm:w-10 sm:flex-col",
 				disabled ? "border-theme-secondary-300" : "border-theme-secondary-400",
 			)}
 		>
