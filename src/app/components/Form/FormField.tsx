@@ -17,8 +17,12 @@ export const FormFieldStyled = ({
 	disableHover,
 	disableStateHints,
 	...props
-}: { isInvalid: boolean; disableHover: boolean, disableStateHints: boolean } & React.FieldsetHTMLAttributes<HTMLFieldSetElement>) => {
-	let classNames = 'disableStateHints';
+}: {
+	isInvalid: boolean;
+	disableHover: boolean;
+	disableStateHints: boolean;
+} & React.FieldsetHTMLAttributes<HTMLFieldSetElement>) => {
+	let classNames = "disableStateHints";
 
 	if (!disableStateHints) {
 		classNames = cn({
@@ -33,7 +37,12 @@ export const FormFieldStyled = ({
 	return <fieldset {...props} className={twMerge(classNames, props.className)} />;
 };
 
-export const FormField: React.FC<FormFieldProperties> = ({ name, disableHover = false, disableStateHints = false, ...properties }) => {
+export const FormField: React.FC<FormFieldProperties> = ({
+	name,
+	disableHover = false,
+	disableStateHints = false,
+	...properties
+}) => {
 	const FormProvider = useFormContext();
 	const { isInvalid, errorMessage } = React.useMemo(() => {
 		const error: { message: string } | undefined = get(FormProvider?.errors, name);
