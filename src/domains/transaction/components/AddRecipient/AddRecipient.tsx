@@ -316,7 +316,12 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 				)}
 			</div>
 
-			<SubForm data-testid="AddRecipient__form-wrapper" noBackground={isSingle} noPadding={isSingle} className="rounded-xl">
+			<SubForm
+				data-testid="AddRecipient__form-wrapper"
+				noBackground={isSingle}
+				noPadding={isSingle}
+				className="rounded-xl"
+			>
 				<div className="space-y-4">
 					<FormField name="recipientAddress">
 						{!isSingle && (
