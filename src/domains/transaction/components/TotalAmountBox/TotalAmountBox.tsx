@@ -18,10 +18,12 @@ const ConfirmationTimeFooter = ({ confirmationTime = 10 }: { confirmationTime?: 
 
 	return (
 		<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-			<DetailTitle className="w-auto sm:min-w-36 sm:text-sm">{t("COMMON.CONFIRMATION_TIME")}</DetailTitle>
+			<DetailTitle className="w-auto sm:min-w-36 sm:text-sm">{t("COMMON.CONFIRMATION_TIME_LABEL")}</DetailTitle>
 
 			<div className="flex flex-row items-center gap-2 lowercase sm:text-sm">
-				~ {confirmationTime} {t("COMMON.SECONDS")}
+				{t("COMMON.CONFIRMATION_TIME", {
+					time: confirmationTime,
+				}).toString()}
 			</div>
 		</div>
 	);
