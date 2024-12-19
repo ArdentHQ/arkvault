@@ -57,12 +57,12 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-					visualizer({
-						open: true,
-						brotliSize: true,
-						gzipSize: true,
-						template: "treemap",
-					}),
+						visualizer({
+							open: true,
+							brotliSize: true,
+							gzipSize: true,
+							template: "treemap",
+						}),
 				],
 			},
 		},
