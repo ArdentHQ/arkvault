@@ -49,6 +49,7 @@ export default defineConfig((env) => {
 						"src/tailwind.config.js",
 						"src/tests/**/*",
 						"src/utils/e2e-utils.ts",
+						"**/*.test.{ts,tsx}",
 					],
 					provider: "istanbul",
 					reporter: ["json", "lcov", "text", "clover", "html"],

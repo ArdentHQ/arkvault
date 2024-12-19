@@ -1,15 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
 import svgrPlugin from "vite-plugin-svgr";
 import macrosPlugin from "vite-plugin-babel-macros";
 import OptimizationPersist from "vite-plugin-optimize-persist";
 import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
+import path from "path";
 
 export default defineConfig(() => {
 	return {
+		resolve: {
+			alias: {
+				"@": path.resolve(__dirname, "./src/"),
+			},
+		},
 		define: {
 			"process.env": {
 				REACT_APP_IS_E2E: process.env.REACT_APP_IS_E2E,
@@ -48,6 +53,7 @@ export default defineConfig(() => {
 						"sdk-intl": ["@ardenthq/sdk-intl"],
 						"sdk-ledger": ["@ardenthq/sdk-ledger"],
 						"sdk-profiles": ["@ardenthq/sdk-profiles"],
+						"sdk-mainsail": ["@ardenthq/sdk-mainsail"],
 					},
 				},
 				plugins: [
@@ -63,7 +69,6 @@ export default defineConfig(() => {
 		},
 		plugins: [
 			react(),
-			tsconfigPaths(),
 			svgrPlugin(),
 			macrosPlugin(),
 			PkgConfig(),
@@ -73,6 +78,9 @@ export default defineConfig(() => {
 					// Prevent from precaching html files. Caching index.html causes white-screen after each deployment.
 					// See: https://vite-plugin-pwa.netlify.app/guide/static-assets.html#globpatterns
 					globPatterns: ["**/*.{js,css}"],
+					// `sdk-mainsail` package's build size is approx 6MB and workbox errors with file size error (as the default is 2MB)
+					// @see https://app.clickup.com/t/86dvfwnf2
+					maximumFileSizeToCacheInBytes: 6 * 1024 * 1024, // 6 MiB
 				},
 				includeAssets: [
 					"favicon.svg",

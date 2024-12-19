@@ -17,7 +17,7 @@ import { AuthenticationStep } from "@/domains/transaction/components/Authenticat
 import {
 	ValidatorRegistrationForm,
 	signValidatorRegistration,
-} from "domains/transaction/components/ValidatorRegistrationForm";
+} from "@/domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
