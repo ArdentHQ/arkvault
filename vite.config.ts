@@ -23,54 +23,47 @@ export default defineConfig(() => {
 			},
 		},
 		build: {
+			target: "esnext",
 			rollupOptions: {
+				// https://rollupjs.org/guide/en/#big-list-of-options
 				output: {
-					manualChunks(id) {
-						// Existing manualChunks logic
-						if (id.includes("node_modules")) {
-							if (
-								[
-									"react",
-									"react-dom",
-									"react-datepicker",
-									"react-error-boundary",
-									"react-hook-form",
-									"react-i18next",
-									"react-idle-timer",
-									"react-linkify",
-									"react-loading-skeleton",
-									"react-qr-reader",
-									"react-range",
-									"react-router",
-									"react-router-dom",
-									"react-table",
-									"react-toastify",
-									"react-visibility-sensor",
-								].some((pkg) => id.includes(pkg))
-							) {
-								return "react";
-							}
-
-							if (id.includes("@ardenthq/sdk")) return "sdk";
-							if (id.includes("@ardenthq/sdk-ark")) return "sdk-ark";
-							if (id.includes("@ardenthq/sdk-cryptography")) return "sdk-cryptography";
-							if (id.includes("@ardenthq/sdk-helpers")) return "sdk-helpers";
-							if (id.includes("@ardenthq/sdk-intl")) return "sdk-intl";
-							if (id.includes("@ardenthq/sdk-ledger")) return "sdk-ledger";
-							if (id.includes("@ardenthq/sdk-profiles")) return "sdk-profiles";
-						}
-
-						// New logic for assets/index
-						const assetsIndexPath = path.resolve(__dirname, "src/assets/index");
-						if (id.startsWith(assetsIndexPath)) {
-							const fileName = path.basename(id, path.extname(id));
-							return `assets-index-${fileName}`;
-						}
-
-						// Let Rollup decide the rest
-						return undefined;
+					manualChunks: {
+						react: [
+							"react",
+							"react-datepicker",
+							"react-dom",
+							"react-error-boundary",
+							"react-hook-form",
+							"react-i18next",
+							"react-idle-timer",
+							"react-linkify",
+							"react-loading-skeleton",
+							"react-qr-reader",
+							"react-range",
+							"react-router",
+							"react-router-dom",
+							"react-table",
+							"react-toastify",
+							"react-visibility-sensor",
+						],
+						sdk: ["@ardenthq/sdk"],
+						"sdk-ark": ["@ardenthq/sdk-ark"],
+						"sdk-cryptography": ["@ardenthq/sdk-cryptography"],
+						"sdk-helpers": ["@ardenthq/sdk-helpers"],
+						"sdk-intl": ["@ardenthq/sdk-intl"],
+						"sdk-ledger": ["@ardenthq/sdk-ledger"],
+						"sdk-profiles": ["@ardenthq/sdk-profiles"],
 					},
 				},
+				plugins: [
+					process.env.ANALYZE_BUNDLE &&
+						visualizer({
+							open: true,
+							brotliSize: true,
+							gzipSize: true,
+							template: "treemap",
+						}),
+				],
 			},
 		},
 		plugins: [
@@ -84,6 +77,7 @@ export default defineConfig(() => {
 					// Prevent from precaching html files. Caching index.html causes white-screen after each deployment.
 					// See: https://vite-plugin-pwa.netlify.app/guide/static-assets.html#globpatterns
 					globPatterns: ["**/*.{js,css}"],
+					maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MiB
 				},
 				includeAssets: [
 					"favicon.svg",
