@@ -53,6 +53,7 @@ export default defineConfig(() => {
 						"sdk-intl": ["@ardenthq/sdk-intl"],
 						"sdk-ledger": ["@ardenthq/sdk-ledger"],
 						"sdk-profiles": ["@ardenthq/sdk-profiles"],
+						"sdk-mainsail": ["@ardenthq/sdk-mainsail"],
 					},
 				},
 				plugins: [

@@ -183,6 +183,7 @@
 				"@ardenthq/arkvault-url",
 				"@ardenthq/sdk",
 				"@ardenthq/sdk-ark",
+				"@ardenthq/sdk-mainsail",
 				"@ardenthq/sdk-cryptography",
 				"@ardenthq/sdk-helpers",
 				"@ardenthq/sdk-intl",
