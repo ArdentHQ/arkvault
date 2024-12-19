@@ -78,6 +78,8 @@ export default defineConfig(() => {
 					// Prevent from precaching html files. Caching index.html causes white-screen after each deployment.
 					// See: https://vite-plugin-pwa.netlify.app/guide/static-assets.html#globpatterns
 					globPatterns: ["**/*.{js,css}"],
+					// `sdk-mainsail` package's build size is approx 6MB and workbox errors with file size error (as the default is 2MB)
+					// @see https://app.clickup.com/t/86dvfwnf2
 					maximumFileSizeToCacheInBytes: 6 * 1024 * 1024, // 6 MiB
 				},
 				includeAssets: [
