@@ -29,7 +29,7 @@ export default defineConfig((env) => {
 					},
 				},
 				coverage: {
-					provider: 'istanbul',
+					provider: "istanbul",
 					all: false,
 					include: process.env.COVERAGE_INCLUDE_PATH
 						? process.env.COVERAGE_INCLUDE_PATH.split(",")
@@ -50,7 +50,7 @@ export default defineConfig((env) => {
 						"src/tailwind.config.js",
 						"src/tests/**/*",
 						"src/utils/e2e-utils.ts",
-						'**/*.test.{ts,tsx}',
+						"**/*.test.{ts,tsx}",
 					],
 					provider: "istanbul",
 					reporter: ["json", "lcov", "text", "clover", "html"],
