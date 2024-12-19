@@ -78,7 +78,7 @@ export default defineConfig(() => {
 					// Prevent from precaching html files. Caching index.html causes white-screen after each deployment.
 					// See: https://vite-plugin-pwa.netlify.app/guide/static-assets.html#globpatterns
 					globPatterns: ["**/*.{js,css}"],
-					maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MiB
+					maximumFileSizeToCacheInBytes: 6 * 1024 * 1024, // 6 MiB
 				},
 				includeAssets: [
 					"favicon.svg",
