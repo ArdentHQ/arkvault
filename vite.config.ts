@@ -10,6 +10,19 @@ import path from "path";
 
 export default defineConfig(() => {
 	return {
+		test: {
+			coverage: {
+				provider: 'istanbul',
+				reporter: ['text', 'json', 'html'],
+				exclude: [
+					'**/*.test.tsx',
+					'**/*.spec.tsx',
+					'**/tests/**',
+					'**/__tests__/**',
+					'**/setupTests.ts',
+				],
+			},
+		},
 		resolve: {
 			alias: {
 				"@": path.resolve(__dirname, "./src/"),
@@ -57,12 +70,12 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-						visualizer({
-							open: true,
-							brotliSize: true,
-							gzipSize: true,
-							template: "treemap",
-						}),
+					visualizer({
+						open: true,
+						brotliSize: true,
+						gzipSize: true,
+						template: "treemap",
+					}),
 				],
 			},
 		},
