@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { StepHeader } from "@/app/components/StepHeader";
-import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
@@ -46,7 +46,7 @@ export const ReviewStep = ({
 
 			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
 				<TransactionAddresses
-					labelClassName="w-auto sm:min-w-44"
+					labelClassName="w-auto sm:min-w-36"
 					senderAddress={wallet.address()}
 					recipients={[]}
 					profile={profile}
@@ -80,8 +80,7 @@ export const ReviewStep = ({
 				</DetailWrapper>
 
 				<div data-testid="DetailWrapper">
-					<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
-					<div className="mt-0 p-3 sm:mt-2 sm:p-0">
+					<div className="mt-0 p-3 sm:p-0">
 						<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
 					</div>
 				</div>
