@@ -333,6 +333,7 @@ export const translations = {
 		FIND_IT: "Find it",
 		PLACEHOLDER: "What would you like to search for?",
 	},
+	SECONDS: "Seconds",
 	SECOND_MNEMONIC: "2nd Mnemonic",
 	SECOND_SECRET: "2nd Secret",
 	SECRET: "Secret",
