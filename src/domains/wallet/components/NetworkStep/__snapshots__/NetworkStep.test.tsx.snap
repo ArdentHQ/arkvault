@@ -119,7 +119,7 @@ exports[`SelectNetworkStep > should render 1`] = `
       </div>
     </div>
     <fieldset
-      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-4"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-4"
     >
       <div
         data-testid="SelectNetwork"
@@ -248,10 +248,10 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
       </div>
     </div>
     <fieldset
-      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-4"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-4"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="network"
       >
@@ -498,7 +498,7 @@ exports[`SelectNetworkStep > should render without test networks 1`] = `
       </div>
     </div>
     <fieldset
-      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-4"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-4"
     >
       <div
         data-testid="SelectNetwork"

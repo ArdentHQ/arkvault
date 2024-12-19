@@ -1007,7 +1007,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -2358,7 +2358,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -2976,7 +2976,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -3282,7 +3282,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -3558,7 +3558,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -4701,7 +4701,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -5225,7 +5225,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -5499,7 +5499,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -5743,7 +5743,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -6886,7 +6886,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -7240,7 +7240,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -7624,7 +7624,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -7998,7 +7998,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -9374,7 +9374,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -9992,7 +9992,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -10298,7 +10298,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -10574,7 +10574,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -11717,7 +11717,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -12165,7 +12165,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -12618,7 +12618,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -13061,7 +13061,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -14474,7 +14474,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -14922,7 +14922,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -15113,7 +15113,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -15556,7 +15556,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -16969,7 +16969,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -17578,7 +17578,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -17881,7 +17881,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -18154,7 +18154,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                             >
                                               <span
-                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                               />
                                             </div>
                                           </label>
@@ -19297,7 +19297,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -19736,7 +19736,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -19924,7 +19924,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -20084,7 +20084,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -21217,7 +21217,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -21656,7 +21656,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -22103,7 +22103,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>
@@ -22263,7 +22263,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
                                         >
                                           <span
-                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 handle-inner h-4 w-4"
+                                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                           />
                                         </div>
                                       </label>

@@ -172,7 +172,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <div
           data-testid="sender-address"
@@ -181,7 +181,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             class="mb-2 flex items-center justify-between"
           >
             <label
-              class="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text"
+              class="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text hover:!text-theme-primary-600"
               data-testid="FormLabel"
               for="senderAddress"
             >
@@ -363,7 +363,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               class="space-y-4"
             >
               <fieldset
-                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <div>
                   <div
@@ -489,10 +489,10 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                   data-testid="FormLabel"
                   for="amount"
                 >
@@ -570,10 +570,10 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         </div>
       </div>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="fee"
         >
@@ -824,7 +824,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <div
           data-testid="sender-address"
@@ -833,7 +833,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             class="mb-2 flex items-center justify-between"
           >
             <label
-              class="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text"
+              class="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text hover:!text-theme-primary-600"
               data-testid="FormLabel"
               for="senderAddress"
             >
@@ -1015,7 +1015,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               class="space-y-4"
             >
               <fieldset
-                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <div>
                   <div
@@ -1141,10 +1141,10 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
                   data-testid="FormLabel"
                   for="amount"
                 >
@@ -1222,10 +1222,10 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         </div>
       </div>
       <fieldset
-        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
           data-testid="FormLabel"
           for="fee"
         >
@@ -1988,7 +1988,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     </div>
                   </div>
                   <fieldset
-                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 my-8"
+                    class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 my-8"
                   >
                     <div
                       data-testid="SendTransfer__network-step__select"
@@ -2228,10 +2228,10 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
       </div>
     </div>
     <fieldset
-      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 mt-8"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-8"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
         data-testid="FormLabel"
         for="network"
       >
@@ -2422,7 +2422,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
       </div>
     </div>
     <fieldset
-      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 my-8"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 my-8"
     >
       <div
         data-testid="SendTransfer__network-step__select"
