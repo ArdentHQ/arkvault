@@ -209,10 +209,7 @@ export const FormStep = ({
 
 				{showFeeInput && (
 					<FormField name="fee">
-						<FormLabel
-							label={t("TRANSACTION.TRANSACTION_FEE")}
-							disableHints={getValues("inputFeeSettings")?.viewType === 1}
-						/>
+						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 						{!!network && (
 							<FeeField
 								type={getFeeType(recipients?.length)}

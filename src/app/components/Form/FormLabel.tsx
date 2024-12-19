@@ -8,7 +8,6 @@ import cn from "classnames";
 type FormLabelProperties = {
 	label?: string;
 	optional?: boolean;
-	disableHints?: boolean;
 } & React.LabelHTMLAttributes<any>;
 
 export function FormLabel(properties: FormLabelProperties) {
@@ -16,7 +15,7 @@ export function FormLabel(properties: FormLabelProperties) {
 
 	const labelProperties = { ...properties };
 
-	for (const property of ["label", "optional", "disableHints"]) {
+	for (const property of ["label", "optional"]) {
 		// @ts-ignore
 		delete labelProperties[property];
 	}
@@ -26,10 +25,7 @@ export function FormLabel(properties: FormLabelProperties) {
 	return (
 		<label
 			data-testid="FormLabel"
-			className={cn(
-				"mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600",
-				{ FormLabel: !properties.disableHints },
-			)}
+			className="mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
 			htmlFor={fieldContext?.name}
 			{...labelProperties}
 		>
