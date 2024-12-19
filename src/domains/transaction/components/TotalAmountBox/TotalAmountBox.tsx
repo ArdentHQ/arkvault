@@ -1,21 +1,39 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-
 import { Amount } from "@/app/components/Amount";
-import { Icon } from "@/app/components/Icon";
 import { assertNumber } from "@/utils/assertions";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 interface Properties {
 	amount: number | string;
 	fee: number | string;
 	ticker: string;
+	convertedAmount?: number;
+	convertedFee?: number;
+	exchangeTicker?: string;
 }
 
-const AmountLabel = ({ ...props }: React.HTMLAttributes<HTMLSpanElement>) => (
-	<span {...props} className="text-sm font-semibold text-theme-secondary-500" />
-);
+const ConfirmationTimeFooter = ({ confirmationTime = 10 }: { confirmationTime?: number }) => {
+	const { t } = useTranslation();
 
-export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
+	return (
+		<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<DetailTitle className="w-auto sm:min-w-36 sm:text-sm">{t("COMMON.CONFIRMATION_TIME")}</DetailTitle>
+
+			<div className="flex flex-row items-center gap-2 lowercase sm:text-sm">
+				~ {confirmationTime} {t("COMMON.SECONDS")}
+			</div>
+		</div>
+	);
+};
+
+export const TotalAmountBox = ({
+	ticker,
+	convertedAmount,
+	convertedFee,
+	exchangeTicker,
+	...properties
+}: Properties) => {
 	const { t } = useTranslation();
 
 	const amount = +properties.amount;
@@ -25,33 +43,57 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 	assertNumber(fee);
 
 	const total = amount + fee;
+	const convertedTotal = convertedAmount && convertedFee ? convertedAmount + convertedFee : undefined;
 
 	return (
-		<div className="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
-			<div className="relative px-6 py-4 sm:py-5">
-				<div className="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0">
-					<div className="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left">
-						<AmountLabel>{t("TRANSACTION.TRANSACTIONS_AMOUNT")}</AmountLabel>
-						<Amount className="text-md mt-1 font-semibold" ticker={ticker} value={amount} />
-					</div>
+		<DetailWrapper
+			label={t("COMMON.TRANSACTION_SUMMARY")}
+			className="rounded-xl"
+			footer={<ConfirmationTimeFooter />}
+		>
+			<div className="flex flex-col gap-3">
+				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+					<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.AMOUNT")}</DetailTitle>
 
-					<div className="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right">
-						<AmountLabel>{t("TRANSACTION.TRANSACTION_FEE")}</AmountLabel>
-						<Amount ticker={ticker} value={fee} className="text-md mt-1 font-semibold" />
+					<div className="flex flex-row items-center gap-2">
+						<Amount ticker={ticker} value={total} className="font-semibold" />
+						{convertedAmount && exchangeTicker && (
+							<div className="font-semibold text-theme-secondary-700">
+								(~
+								<Amount ticker={exchangeTicker} value={convertedAmount} />)
+							</div>
+						)}
 					</div>
 				</div>
 
-				<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-					<div className="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600">
-						<Icon name="Plus" />
+				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+					<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.FEE")}</DetailTitle>
+
+					<div className="flex flex-row items-center gap-2">
+						<Amount ticker={ticker} value={total} className="font-semibold" />
+						{convertedFee && exchangeTicker && (
+							<div className="font-semibold text-theme-secondary-700">
+								(~
+								<Amount ticker={exchangeTicker} value={convertedFee} />)
+							</div>
+						)}
+					</div>
+				</div>
+
+				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+					<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.TOTAL")}</DetailTitle>
+
+					<div className="flex flex-row items-center gap-2">
+						<Amount ticker={ticker} value={total} className="font-semibold" />
+						{convertedTotal && exchangeTicker && (
+							<div className="font-semibold text-theme-secondary-700">
+								(~
+								<Amount ticker={exchangeTicker} value={convertedTotal} />)
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
-
-			<div className="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5">
-				<AmountLabel>{t("TRANSACTION.TOTAL_AMOUNT")}</AmountLabel>
-				<Amount ticker={ticker} value={total} className="text-md font-semibold sm:text-lg" />
-			</div>
-		</div>
+		</DetailWrapper>
 	);
 };
