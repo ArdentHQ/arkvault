@@ -165,7 +165,6 @@
 		"vite-plugin-package-config": "^0.1.1",
 		"vite-plugin-pwa": "^0.21.1",
 		"vite-plugin-svgr": "^4.3.0",
-		"vite-tsconfig-paths": "^5.1.4",
 		"vitest": "^2.1.8",
 		"workbox-window": "^7.3.0"
 	},
