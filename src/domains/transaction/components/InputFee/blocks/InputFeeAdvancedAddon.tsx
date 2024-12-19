@@ -44,13 +44,13 @@ export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 }: Properties) => (
 	<div className="flex items-center">
 		{showConvertedValue && (
-			<div className="whitespace-no-break mr-3 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+			<div className="whitespace-no-break mr-3 text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
 				<Amount ticker={exchangeTicker} value={convertedValue} />
 			</div>
 		)}
 		<div
 			className={cn(
-				"-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col",
+				"-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:text-theme-dark-200 dark:border-theme-secondary-700 sm:w-10 sm:flex-col",
 				disabled ? "border-theme-secondary-300" : "border-theme-secondary-400",
 			)}
 		>
