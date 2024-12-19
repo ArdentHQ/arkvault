@@ -22,7 +22,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	const { t } = useTranslation();
 	const { decrement: decrementGasFee, increment: incrementGasFee } = useStepMath(step, value);
 
-	const [gasLimit, setGasLimit] = useState<string>('21000');
+	const [gasLimit, setGasLimit] = useState<string>("21000");
 
 	const { decrement: decrementGasLimit, increment: incrementGasLimit } = useStepMath(100, gasLimit);
 
@@ -55,8 +55,8 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	const convertedValue = useMemo(() => convert(+value), [convert, value]);
 
 	return (
-		 <div className="border border-theme-secondary-300 dark:border-theme-secondary-700 rounded-xl overflow-hidden -mx-4">
-		 	<div className="p-4 space-y-4">
+		<div className="-mx-4 overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-700">
+			<div className="space-y-4 p-4">
 				<FormField name="gasFee">
 					<FormLabel
 						id="fee"
@@ -122,22 +122,25 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					/>
 				</FormField>
 			</div>
-			<div className="bg-theme-secondary-200 dark:bg-theme-dark-700 px-4 py-3 sm:py-2 flex space-y-2 sm:space-y-0 sm:items-center flex-col sm:flex-row sm:justify-between text-xs leading-[15px] text-theme-secondary-700 dark:text-theme-dark-200 font-semibold">
+			<div className="flex flex-col space-y-2 bg-theme-secondary-200 px-4 py-3 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:py-2">
 				<div>
 					<span>Max Fee </span>
-					<Amount ticker={network.ticker()} value={0.001_05}/>
-					<span> ~<Amount ticker={exchangeTicker} value={0.01}/> </span>
+					<Amount ticker={network.ticker()} value={0.001_05} />
+					<span>
+						{" "}
+						~<Amount ticker={exchangeTicker} value={0.01} />{" "}
+					</span>
 				</div>
 				<div>
 					<span>{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>
 					<span>
 						{" "}
 						{t("COMMON.CONFIRMATION_TIME", {
-							time: 20
+							time: 20,
 						}).toString()}
 					</span>
 				</div>
 			</div>
-		 </div>
+		</div>
 	);
 };
