@@ -1,15 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
 import svgrPlugin from "vite-plugin-svgr";
 import macrosPlugin from "vite-plugin-babel-macros";
 import OptimizationPersist from "vite-plugin-optimize-persist";
 import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
+import path from 'path';
 
 export default defineConfig(() => {
 	return {
+		resolve: {
+			alias: {
+				'@': path.resolve(__dirname, './src/')
+			}
+		},
 		define: {
 			"process.env": {
 				REACT_APP_IS_E2E: process.env.REACT_APP_IS_E2E,
@@ -52,18 +57,17 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-						visualizer({
-							open: true,
-							brotliSize: true,
-							gzipSize: true,
-							template: "treemap",
-						}),
+					visualizer({
+						open: true,
+						brotliSize: true,
+						gzipSize: true,
+						template: "treemap",
+					}),
 				],
 			},
 		},
 		plugins: [
 			react(),
-			tsconfigPaths(),
 			svgrPlugin(),
 			macrosPlugin(),
 			PkgConfig(),

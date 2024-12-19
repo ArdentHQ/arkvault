@@ -163,9 +163,9 @@
 		"vite-plugin-babel-macros": "^1.0.6",
 		"vite-plugin-optimize-persist": "^0.1.2",
 		"vite-plugin-package-config": "^0.1.1",
-		"vite-plugin-pwa": "^0.20.0",
-		"vite-tsconfig-paths": "^4.3.2",
+		"vite-plugin-pwa": "^0.21.1",
 		"vite-plugin-svgr": "^4.3.0",
+		"vite-tsconfig-paths": "^5.1.4",
 		"vitest": "^2.1.8",
 		"workbox-window": "^7.1.0"
 	},
