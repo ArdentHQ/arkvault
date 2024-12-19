@@ -29,7 +29,6 @@ export default defineConfig((env) => {
 					},
 				},
 				coverage: {
-					provider: "istanbul",
 					all: false,
 					include: process.env.COVERAGE_INCLUDE_PATH
 						? process.env.COVERAGE_INCLUDE_PATH.split(",")
