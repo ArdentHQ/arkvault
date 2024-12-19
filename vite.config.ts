@@ -6,14 +6,14 @@ import OptimizationPersist from "vite-plugin-optimize-persist";
 import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
-import path from 'path';
+import path from "path";
 
 export default defineConfig(() => {
 	return {
 		resolve: {
 			alias: {
-				'@': path.resolve(__dirname, './src/')
-			}
+				"@": path.resolve(__dirname, "./src/"),
+			},
 		},
 		define: {
 			"process.env": {
@@ -57,12 +57,12 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-					visualizer({
-						open: true,
-						brotliSize: true,
-						gzipSize: true,
-						template: "treemap",
-					}),
+						visualizer({
+							open: true,
+							brotliSize: true,
+							gzipSize: true,
+							template: "treemap",
+						}),
 				],
 			},
 		},
