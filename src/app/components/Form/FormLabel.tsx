@@ -26,7 +26,10 @@ export function FormLabel(properties: FormLabelProperties) {
 	return (
 		<label
 			data-testid="FormLabel"
-			className={cn("mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600", {"FormLabel": !properties.disableHints})}
+			className={cn(
+				"mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600",
+				{ FormLabel: !properties.disableHints },
+			)}
 			htmlFor={fieldContext?.name}
 			{...labelProperties}
 		>
