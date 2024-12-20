@@ -208,7 +208,7 @@ export const FormStep = ({
 				</div>
 
 				{showFeeInput && (
-					<FormField name="fee">
+					<FormField name="fee" disableStateHints>
 						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 						{!!network && (
 							<FeeField

@@ -216,7 +216,9 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 			return;
 		}
 
-		const remaining = BigNumber.make(remainingBalance).isGreaterThan(fee) ? +remainingNetBalance : remainingBalance;
+		const remaining = BigNumber.make(remainingBalance).isGreaterThan(fee || 0)
+			? +remainingNetBalance
+			: remainingBalance;
 
 		setValue("amount", remaining, {
 			shouldDirty: true,
@@ -316,7 +318,12 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 				)}
 			</div>
 
-			<SubForm data-testid="AddRecipient__form-wrapper" noBackground={isSingle} noPadding={isSingle}>
+			<SubForm
+				data-testid="AddRecipient__form-wrapper"
+				noBackground={isSingle}
+				noPadding={isSingle}
+				className="rounded-xl"
+			>
 				<div className="space-y-4">
 					<FormField name="recipientAddress">
 						{!isSingle && (

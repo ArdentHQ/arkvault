@@ -194,7 +194,6 @@ describe("InputFee", () => {
 
 			expect(asFragment()).toMatchSnapshot();
 		});
-
 	});
 
 	describe("advanced view type", () => {
