@@ -36,7 +36,7 @@ export const TransactionAddresses = ({
 	});
 
 	return (
-		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
+		<DetailWrapper label={t("TRANSACTION.ADDRESSING")} className="flex flex-col gap-3">
 			<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.FROM")}</DetailTitle>
 				<Address

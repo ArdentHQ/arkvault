@@ -790,82 +790,86 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           </div>
                         </div>
                         <div
-                          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+                          class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
                         >
                           <div
-                            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
                           >
                             <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-32"
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
-                              From
-                            </div>
-                            <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
-                            >
-                              <span
-                                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="no-ligatures transition-colors duration-200"
-                                  data-testid="TruncateEnd"
-                                >
-                                  testwallet2
-                                </span>
-                              </span>
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-32"
+                              >
+                                From
+                              </div>
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                  class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                                  data-testid="Address__alias"
                                 >
-                                  DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                                  <span
+                                    class="no-ligatures transition-colors duration-200"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    testwallet2
+                                  </span>
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
-                              <button
-                                class="ring-focus relative focus:outline-none"
-                                data-ring-focus-margin="-m-1"
-                                data-testid="clipboard-icon__wrapper"
-                                type="button"
-                              >
                                 <div
-                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                >
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
+                                <button
+                                  class="ring-focus relative focus:outline-none"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
                                 >
                                   <div
-                                    style="height: 16px; width: 16px;"
+                                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                   >
-                                    <svg
-                                      id="copy"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
                                       >
-                                        <path
-                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                        />
-                                        <path
-                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                        />
-                                      </g>
-                                    </svg>
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
                                   </div>
-                                </div>
-                              </button>
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -886,47 +890,51 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                         </div>
                       </div>
                       <div
-                        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+                        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
                       >
                         <div
-                          class="space-y-3 sm:space-y-0"
+                          class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
                         >
                           <div
-                            class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                            class="space-y-3 sm:space-y-0"
                           >
                             <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                              class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
-                              Category
-                            </div>
-                            <div
-                              class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
-                            >
-                              <span
-                                class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                              <div
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
                               >
-                                Resignation
-                              </span>
+                                Category
+                              </div>
+                              <div
+                                class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
+                              >
+                                <span
+                                  class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                                >
+                                  Resignation
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                          <div
-                            class="hidden sm:block"
-                          >
                             <div
-                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
-                            />
-                          </div>
-                          <div
-                            class="flex w-full items-center justify-between gap-4 sm:justify-start"
-                          >
-                            <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                              class="hidden sm:block"
                             >
-                              Validator Public Key
+                              <div
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                              />
                             </div>
                             <div
-                              class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
-                            />
+                              class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                            >
+                              <div
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                              >
+                                Validator Public Key
+                              </div>
+                              <div
+                                class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1822,82 +1830,86 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                         </div>
                       </div>
                       <div
-                        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+                        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
                       >
                         <div
-                          class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                          class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
                         >
                           <div
-                            class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                           >
-                            From
-                          </div>
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
-                          >
-                            <span
-                              class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                testwallet2
-                              </span>
-                            </span>
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                            >
+                              From
+                            </div>
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
-                                data-testid="Address__address"
+                                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                                data-testid="Address__alias"
                               >
-                                DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                                <span
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
+                                >
+                                  testwallet2
+                                </span>
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
-                            <button
-                              class="ring-focus relative focus:outline-none"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
                               <div
-                                class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              >
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                                </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
+                              <button
+                                class="ring-focus relative focus:outline-none"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
                               >
                                 <div
-                                  style="height: 16px; width: 16px;"
+                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    style="height: 16px; width: 16px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <svg
+                                      id="copy"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                        />
+                                        <path
+                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
-                              </div>
-                            </button>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1917,47 +1929,51 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                         </div>
                       </div>
                       <div
-                        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+                        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
                       >
                         <div
-                          class="space-y-3 sm:space-y-0"
+                          class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
                         >
                           <div
-                            class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                            class="space-y-3 sm:space-y-0"
                           >
                             <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                              class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
-                              Category
-                            </div>
-                            <div
-                              class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
-                            >
-                              <span
-                                class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                              <div
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
                               >
-                                Resignation
-                              </span>
+                                Category
+                              </div>
+                              <div
+                                class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
+                              >
+                                <span
+                                  class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                                >
+                                  Resignation
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                          <div
-                            class="hidden sm:block"
-                          >
                             <div
-                              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
-                            />
-                          </div>
-                          <div
-                            class="flex w-full items-center justify-between gap-4 sm:justify-start"
-                          >
-                            <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                              class="hidden sm:block"
                             >
-                              Validator Public Key
+                              <div
+                                class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                              />
                             </div>
                             <div
-                              class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
-                            />
+                              class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                            >
+                              <div
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                              >
+                                Validator Public Key
+                              </div>
+                              <div
+                                class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1966,95 +1982,105 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       class="mx-3 mt-2 sm:mx-0"
                     >
                       <div
-                        class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+                        data-testid="DetailWrapper"
                       >
                         <div
-                          class="relative px-6 py-4 sm:py-5"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          data-testid="DetailLabel"
                         >
                           <div
-                            class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+                            class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                            data-testid="DetailLabelText"
                           >
-                            <div
-                              class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
-                            >
-                              <span
-                                class="text-sm font-semibold text-theme-secondary-500"
-                              >
-                                Transaction(s) Amount
-                              </span>
-                              <span
-                                class="whitespace-nowrap text-md mt-1 font-semibold"
-                                data-testid="Amount"
-                              >
-                                0 DARK
-                              </span>
-                            </div>
-                            <div
-                              class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
-                            >
-                              <span
-                                class="text-sm font-semibold text-theme-secondary-500"
-                              >
-                                Transaction Fee
-                              </span>
-                              <span
-                                class="whitespace-nowrap text-md mt-1 font-semibold"
-                                data-testid="Amount"
-                              >
-                                25 DARK
-                              </span>
-                            </div>
+                            Transaction Summary
                           </div>
+                        </div>
+                        <div
+                          class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+                        >
                           <div
-                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+                            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
                           >
                             <div
-                              class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                              class="flex flex-col gap-3"
                             >
-                              <div>
+                              <div
+                                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                              >
                                 <div
-                                  style="height: 16px; width: 16px;"
+                                  class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
                                 >
-                                  <svg
-                                    id="plus"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  Amount
+                                </div>
+                                <div
+                                  class="flex flex-row items-center gap-2"
+                                >
+                                  <span
+                                    class="whitespace-nowrap font-semibold"
+                                    data-testid="Amount"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    >
-                                      <path
-                                        d="M1 10h18M10 1v18"
-                                      />
-                                    </g>
-                                  </svg>
+                                    25 DARK
+                                  </span>
+                                </div>
+                              </div>
+                              <div
+                                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                              >
+                                <div
+                                  class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                                >
+                                  Fee
+                                </div>
+                                <div
+                                  class="flex flex-row items-center gap-2"
+                                >
+                                  <span
+                                    class="whitespace-nowrap font-semibold"
+                                    data-testid="Amount"
+                                  >
+                                    25 DARK
+                                  </span>
+                                </div>
+                              </div>
+                              <div
+                                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                              >
+                                <div
+                                  class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                                >
+                                  Total
+                                </div>
+                                <div
+                                  class="flex flex-row items-center gap-2"
+                                >
+                                  <span
+                                    class="whitespace-nowrap font-semibold"
+                                    data-testid="Amount"
+                                  >
+                                    25 DARK
+                                  </span>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div
-                          class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
-                        >
-                          <span
-                            class="text-sm font-semibold text-theme-secondary-500"
+                          <div
+                            class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
                           >
-                            Total Amount
-                          </span>
-                          <span
-                            class="whitespace-nowrap text-md font-semibold sm:text-lg"
-                            data-testid="Amount"
-                          >
-                            25 DARK
-                          </span>
+                            <div
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                            >
+                              <div
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto sm:min-w-36 sm:text-sm"
+                              >
+                                Confirmation Time
+                              </div>
+                              <div
+                                class="flex flex-row items-center gap-2 lowercase sm:text-sm"
+                              >
+                                ~ 10 Seconds
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

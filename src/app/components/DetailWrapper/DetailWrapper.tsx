@@ -36,21 +36,32 @@ export const DetailLabel = ({ children }: { children: ReactNode }) => (
 export const DetailWrapper = ({
 	children,
 	label,
+	className,
+	footer,
 }: {
 	children: ReactNode;
 	label?: string | React.ReactNode;
+	className?: string;
+	footer?: React.ReactNode;
 }): ReactElement => (
 	<div data-testid="DetailWrapper">
 		{label && <DetailLabel>{label}</DetailLabel>}
 		<div
 			className={cn(
-				"w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4",
+				"overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border",
+				className,
 				{
 					"mt-0 sm:mt-2": !!label,
 				},
 			)}
 		>
-			{children}
+			<div className="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4">{children}</div>
+
+			{footer && (
+				<div className="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800">
+					{footer}
+				</div>
+			)}
 		</div>
 	</div>
 );
