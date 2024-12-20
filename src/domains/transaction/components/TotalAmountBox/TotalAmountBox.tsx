@@ -11,6 +11,7 @@ interface Properties {
 	convertedAmount?: number;
 	convertedFee?: number;
 	exchangeTicker?: string;
+	convertValues?: boolean;
 }
 
 const ConfirmationTimeFooter = ({ confirmationTime = 10 }: { confirmationTime?: number }) => {
@@ -18,9 +19,11 @@ const ConfirmationTimeFooter = ({ confirmationTime = 10 }: { confirmationTime?: 
 
 	return (
 		<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-			<DetailTitle className="w-auto sm:min-w-36 sm:text-sm">{t("COMMON.CONFIRMATION_TIME_LABEL")}</DetailTitle>
+			<DetailTitle className="w-auto !leading-4 sm:min-w-36 sm:text-sm">
+				{t("COMMON.CONFIRMATION_TIME_LABEL")}
+			</DetailTitle>
 
-			<div className="flex flex-row items-center gap-2 lowercase sm:text-sm">
+			<div className="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm">
 				{t("COMMON.CONFIRMATION_TIME", {
 					time: confirmationTime,
 				}).toString()}
@@ -34,6 +37,7 @@ export const TotalAmountBox = ({
 	convertedAmount,
 	convertedFee,
 	exchangeTicker,
+	convertValues,
 	...properties
 }: Properties) => {
 	const { t } = useTranslation();
@@ -59,7 +63,7 @@ export const TotalAmountBox = ({
 
 					<div className="flex flex-row items-center gap-2">
 						<Amount ticker={ticker} value={total} className="font-semibold" />
-						{convertedAmount && exchangeTicker && (
+						{convertedAmount && exchangeTicker && convertValues && (
 							<div className="font-semibold text-theme-secondary-700">
 								(~
 								<Amount ticker={exchangeTicker} value={convertedAmount} />)
@@ -73,7 +77,7 @@ export const TotalAmountBox = ({
 
 					<div className="flex flex-row items-center gap-2">
 						<Amount ticker={ticker} value={total} className="font-semibold" />
-						{convertedFee && exchangeTicker && (
+						{convertedFee && exchangeTicker && convertValues && (
 							<div className="font-semibold text-theme-secondary-700">
 								(~
 								<Amount ticker={exchangeTicker} value={convertedFee} />)
@@ -87,7 +91,7 @@ export const TotalAmountBox = ({
 
 					<div className="flex flex-row items-center gap-2">
 						<Amount ticker={ticker} value={total} className="font-semibold" />
-						{convertedTotal && exchangeTicker && (
+						{convertedTotal && exchangeTicker && convertValues && (
 							<div className="font-semibold text-theme-secondary-700">
 								(~
 								<Amount ticker={exchangeTicker} value={convertedTotal} />)

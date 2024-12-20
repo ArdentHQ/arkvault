@@ -77,7 +77,12 @@ export const ReviewStep = ({
 				</DetailWrapper>
 
 				<div className="mx-3 mt-2 sm:mx-0">
-					<TotalAmountBox amount={0} fee={getValues("fee")} ticker={senderWallet.currency()} />
+					<TotalAmountBox
+						amount={0}
+						fee={getValues("fee")}
+						ticker={senderWallet.currency()}
+						convertValues={!senderWallet.network().isTest()}
+					/>
 				</div>
 			</div>
 		</section>
