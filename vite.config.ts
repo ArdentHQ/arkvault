@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgrPlugin from "vite-plugin-svgr";
-import macrosPlugin from "vite-plugin-babel-macros";
 import OptimizationPersist from "vite-plugin-optimize-persist";
 import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
@@ -70,7 +69,6 @@ export default defineConfig(() => {
 		plugins: [
 			react(),
 			svgrPlugin(),
-			macrosPlugin(),
 			PkgConfig(),
 			OptimizationPersist(),
 			VitePWA({

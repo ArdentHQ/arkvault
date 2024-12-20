@@ -13,7 +13,6 @@
 		"noEmit": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
-		"jsxImportSource": "@emotion/react",
 		"strict": true,
 		"target": "es2019",
 		"useUnknownInCatchVariables": false,

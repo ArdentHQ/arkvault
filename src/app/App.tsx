@@ -3,14 +3,12 @@ import "focus-visible";
 import React, { useRef } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { I18nextProvider } from "react-i18next";
-import { CacheProvider } from "@emotion/react";
 
-import createCache from "@emotion/cache";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "./contexts";
 import { i18n as index18n } from "./i18n";
 import { ZendeskProvider } from "./contexts/Zendesk";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { AppRouter, GlobalStyles, Main } from "@/app/App.blocks";
+import { AppRouter, Main } from "@/app/App.blocks";
 import { initializeEnvironment } from "@/utils/environment";
 import { ApplicationError } from "@/domains/error/pages";
 
@@ -21,9 +19,6 @@ export const App: React.VFC = () => {
 	 */
 	const environment = useRef(initializeEnvironment());
 
-	const cache = createCache({ key: "emotion-cache" });
-	cache.compat = true;
-
 	return (
 		<ZendeskProvider>
 			<I18nextProvider i18n={index18n}>
@@ -33,12 +28,9 @@ export const App: React.VFC = () => {
 							<ExchangeProvider>
 								<ErrorBoundary FallbackComponent={ApplicationError}>
 									<LedgerProvider>
-										<CacheProvider value={cache}>
-											<AppRouter>
-												<GlobalStyles />
-												<Main />
-											</AppRouter>
-										</CacheProvider>
+										<AppRouter>
+											<Main />
+										</AppRouter>
 									</LedgerProvider>
 								</ErrorBoundary>
 							</ExchangeProvider>

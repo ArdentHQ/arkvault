@@ -1,4 +1,3 @@
-import { Global, css } from "@emotion/react";
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { HashRouter, useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -46,33 +45,6 @@ const AppRouter = ({ children }: { children: React.ReactNode }) => {
 		</React.Suspense>
 	);
 };
-
-const customStyles = css`
-	h1 {
-		margin-bottom: 0.5rem;
-		font-size: 2.25rem;
-		line-height: 2.5rem;
-		font-weight: 700;
-	}
-	h2 {
-		margin-bottom: 0.5rem;
-		font-size: 1.875rem;
-		line-height: 2.25rem;
-		font-weight: 700;
-	}
-	h3 {
-		margin-bottom: 0.5rem;
-		font-size: 1.5rem;
-		line-height: 2rem;
-		font-weight: 600;
-	}
-`;
-
-const GlobalStyles: React.VFC = () => (
-	<>
-		<Global styles={customStyles} />
-	</>
-);
 
 const Main: React.VFC = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -176,4 +148,4 @@ const Main: React.VFC = () => {
 	);
 };
 
-export { AppRouter, GlobalStyles, Main };
+export { AppRouter, Main };
