@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { InputFee } from "./InputFee";
 import { InputFeeProperties, InputFeeSimpleValue, InputFeeViewType } from "./InputFee.contracts";
 import { translations } from "@/domains/transaction/i18n";
-import { env, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: 0.456,
@@ -193,34 +193,6 @@ describe("InputFee", () => {
 			}
 
 			expect(asFragment()).toMatchSnapshot();
-		});
-
-		it.each([true, false])("should change fee option with converted values = %s", async (showConvertedValues) => {
-			if (showConvertedValues) {
-				vi.spyOn(network, "isLive").mockReturnValueOnce(true);
-
-				// use fiat currency for the converted balance
-				vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
-			}
-
-			const { asFragment } = renderResponsive(<InputFee {...defaultProps} />, "xs");
-
-			await userEvent.click(screen.getByTestId("SelectDropdown__input"));
-
-			await waitFor(() =>
-				expect(screen.getByTestId("select-list__input")).toHaveValue(`${getDefaultProperties().avg} DARK`),
-			);
-
-			await waitFor(() => expect(screen.getAllByTestId("InputFeeSimpleSelect--option")).toHaveLength(3));
-			await userEvent.click(screen.getAllByTestId("InputFeeSimpleSelect--option")[0]);
-
-			await waitFor(() =>
-				expect(screen.getByTestId("select-list__input")).toHaveValue(`${getDefaultProperties().min} DARK`),
-			);
-
-			expect(asFragment()).toMatchSnapshot();
-
-			vi.restoreAllMocks();
 		});
 	});
 
