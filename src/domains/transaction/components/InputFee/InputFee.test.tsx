@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { InputFee } from "./InputFee";
 import { InputFeeProperties, InputFeeSimpleValue, InputFeeViewType } from "./InputFee.contracts";
 import { translations } from "@/domains/transaction/i18n";
-import { env, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: 0.456,
