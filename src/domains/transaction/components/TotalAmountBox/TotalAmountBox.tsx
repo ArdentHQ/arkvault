@@ -12,6 +12,7 @@ interface Properties {
 	convertedFee?: number;
 	exchangeTicker?: string;
 	convertValues?: boolean;
+	hideAmount?: boolean;
 }
 
 const ConfirmationTimeFooter = ({ confirmationTime = 10 }: { confirmationTime?: number }) => {
@@ -38,6 +39,7 @@ export const TotalAmountBox = ({
 	convertedFee,
 	exchangeTicker,
 	convertValues,
+	hideAmount,
 	...properties
 }: Properties) => {
 	const { t } = useTranslation();
@@ -58,19 +60,23 @@ export const TotalAmountBox = ({
 			footer={<ConfirmationTimeFooter />}
 		>
 			<div className="flex flex-col gap-3">
-				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-					<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.AMOUNT")}</DetailTitle>
-
-					<div className="flex flex-row items-center gap-2">
-						<Amount ticker={ticker} value={total} className="font-semibold" />
-						{convertedAmount && exchangeTicker && convertValues && (
-							<div className="font-semibold text-theme-secondary-700">
-								(~
-								<Amount ticker={exchangeTicker} value={convertedAmount} />)
+				{
+					!hideAmount && (
+						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0" data-testid="AmountSection">
+							<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.AMOUNT")}</DetailTitle>
+		
+							<div className="flex flex-row items-center gap-2">
+								<Amount ticker={ticker} value={total} className="font-semibold" />
+								{convertedAmount && exchangeTicker && convertValues && (
+									<div className="font-semibold text-theme-secondary-700">
+										(~
+										<Amount ticker={exchangeTicker} value={convertedAmount} />)
+									</div>
+								)}
 							</div>
-						)}
-					</div>
-				</div>
+						</div>
+					)
+				}
 
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.FEE")}</DetailTitle>
