@@ -162,6 +162,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
           >
             <div
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              data-testid="AmountSection"
             >
               <div
                 class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -226,17 +227,14 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto sm:min-w-36 sm:text-sm"
+              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
             >
-              Confirmation Time
+              Confirmation time
             </div>
             <div
-              class="flex flex-row items-center gap-2 lowercase sm:text-sm"
+              class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
             >
-              ~ 
-              10
-               
-              Seconds
+              ~10s
             </div>
           </div>
         </div>
@@ -342,6 +340,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
           >
             <div
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              data-testid="AmountSection"
             >
               <div
                 class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -406,17 +405,14 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto sm:min-w-36 sm:text-sm"
+              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
             >
-              Confirmation Time
+              Confirmation time
             </div>
             <div
-              class="flex flex-row items-center gap-2 lowercase sm:text-sm"
+              class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
             >
-              ~ 
-              10
-               
-              Seconds
+              ~10s
             </div>
           </div>
         </div>
@@ -522,6 +518,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
           >
             <div
               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              data-testid="AmountSection"
             >
               <div
                 class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -586,17 +583,14 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto sm:min-w-36 sm:text-sm"
+              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
             >
-              Confirmation Time
+              Confirmation time
             </div>
             <div
-              class="flex flex-row items-center gap-2 lowercase sm:text-sm"
+              class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
             >
-              ~ 
-              10
-               
-              Seconds
+              ~10s
             </div>
           </div>
         </div>

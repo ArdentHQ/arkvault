@@ -41,4 +41,16 @@ describe("TotalAmountBox", () => {
 
 		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 	});
+
+	it("should hide amount if hideAmount is true", () => {
+		render(<TotalAmountBox amount={0.1} fee={0.01} ticker="ARK" hideAmount />);
+
+		expect(screen.queryByTestId("AmountSection")).not.toBeInTheDocument();
+	});
+
+	it("should render amount if hideAmount is false", () => {
+		render(<TotalAmountBox amount={0.1} fee={0.01} ticker="ARK" />);
+
+		expect(screen.getByTestId("AmountSection")).toBeInTheDocument();
+	});
 });
