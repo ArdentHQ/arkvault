@@ -19,4 +19,38 @@ describe("TotalAmountBox", () => {
 		expect(total).toHaveTextContent("0.11 ARK");
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should render with converted values if convertValues is true", () => {
+		render(
+			<TotalAmountBox
+				amount={0.1}
+				fee={0.01}
+				ticker="ARK"
+				convertValues
+				exchangeTicker="ARK"
+				convertedAmount={0.01}
+				convertedFee={0.001}
+			/>,
+		);
+
+		expect(screen.getAllByTestId("Amount")).toHaveLength(6);
+	});
+
+	it("should not render converted values if convertValues is false", () => {
+		render(<TotalAmountBox amount={0.1} fee={0.01} ticker="ARK" convertValues={false} />);
+
+		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
+	});
+
+	it("should hide amount if hideAmount is true", () => {
+		render(<TotalAmountBox amount={0.1} fee={0.01} ticker="ARK" hideAmount />);
+
+		expect(screen.queryByTestId("AmountSection")).not.toBeInTheDocument();
+	});
+
+	it("should render amount if hideAmount is false", () => {
+		render(<TotalAmountBox amount={0.1} fee={0.01} ticker="ARK" />);
+
+		expect(screen.getByTestId("AmountSection")).toBeInTheDocument();
+	});
 });

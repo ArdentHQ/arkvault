@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Address } from "@/app/components/Address";
-import { DetailDivider, DetailTitle } from "@/app/components/DetailWrapper";
+import { DetailTitle } from "@/app/components/DetailWrapper";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
@@ -43,9 +43,7 @@ export const TransactionRecipient = ({
 
 	return (
 		<>
-			<DetailDivider />
-
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle
 					className={cn(labelClassName, {
 						invisible: !showLabel,
@@ -100,9 +98,7 @@ export const TransactionRecipients = ({
 
 	return (
 		<>
-			<DetailDivider />
-
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
@@ -152,9 +148,7 @@ export const TransactionRecipientsModal = ({
 
 	return (
 		<>
-			<DetailDivider />
-
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">

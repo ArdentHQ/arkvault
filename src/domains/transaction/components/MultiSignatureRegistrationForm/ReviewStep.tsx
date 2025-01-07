@@ -83,7 +83,12 @@ export const ReviewStep = ({
 				<div data-testid="DetailWrapper">
 					<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
 					<div className="mt-0 p-3 sm:mt-2 sm:p-0">
-						<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
+						<TotalAmountBox
+							amount={0}
+							fee={fee}
+							ticker={wallet.currency()}
+							convertValues={!wallet.network().isTest()}
+						/>
 					</div>
 				</div>
 			</div>
