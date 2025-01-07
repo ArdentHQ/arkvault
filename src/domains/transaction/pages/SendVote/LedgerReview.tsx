@@ -31,7 +31,12 @@ export const VoteLedgerReview = ({ wallet, votes, unvotes }: SendVoteStepPropert
 			)}
 
 			<div className="mt-2">
-				<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
+				<TotalAmountBox
+					amount={0}
+					fee={fee}
+					ticker={wallet.currency()}
+					convertValues={!wallet.network().isTest()}
+				/>
 			</div>
 		</>
 	);

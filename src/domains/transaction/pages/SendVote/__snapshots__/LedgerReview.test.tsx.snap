@@ -3,7 +3,7 @@
 exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
 <div>
   <div
-    class="no-ligatures css-1iw2tte"
+    class="flex items-center space-x-4 py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -69,7 +69,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
     </div>
   </div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -138,95 +138,106 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
     class="mt-2"
   >
     <div
-      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="DetailWrapper"
     >
       <div
-        class="relative px-6 py-4 sm:py-5"
+        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+        data-testid="DetailLabel"
       >
         <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+          data-testid="DetailLabelText"
         >
-          <div
-            class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500"
-            >
-              Transaction(s) Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              0 DARK
-            </span>
-          </div>
-          <div
-            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500"
-            >
-              Transaction Fee
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              0 DARK
-            </span>
-          </div>
+          Transaction Summary
         </div>
+      </div>
+      <div
+        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+      >
         <div
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
         >
           <div
-            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+            class="flex flex-col gap-3"
           >
-            <div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              data-testid="AmountSection"
+            >
               <div
-                style="height: 16px; width: 16px;"
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
               >
-                <svg
-                  id="plus"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                Amount
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M1 10h18M10 1v18"
-                    />
-                  </g>
-                </svg>
+                  0 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              >
+                Fee
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
+                >
+                  0 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              >
+                Total
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
+                >
+                  0 DARK
+                </span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
-      >
-        <span
-          class="text-sm font-semibold text-theme-secondary-500"
+        <div
+          class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
         >
-          Total Amount
-        </span>
-        <span
-          class="whitespace-nowrap text-md font-semibold sm:text-lg"
-          data-testid="Amount"
-        >
-          0 DARK
-        </span>
+          <div
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+          >
+            <div
+              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+            >
+              Confirmation time
+            </div>
+            <div
+              class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+            >
+              ~10s
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -236,7 +247,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
 exports[`LedgerReview > should render for unvote transaction 1`] = `
 <div>
   <div
-    class="no-ligatures css-1iw2tte"
+    class="flex items-center space-x-4 py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -305,95 +316,106 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
     class="mt-2"
   >
     <div
-      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="DetailWrapper"
     >
       <div
-        class="relative px-6 py-4 sm:py-5"
+        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+        data-testid="DetailLabel"
       >
         <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+          data-testid="DetailLabelText"
         >
-          <div
-            class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500"
-            >
-              Transaction(s) Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              0 DARK
-            </span>
-          </div>
-          <div
-            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500"
-            >
-              Transaction Fee
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              0 DARK
-            </span>
-          </div>
+          Transaction Summary
         </div>
+      </div>
+      <div
+        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+      >
         <div
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
         >
           <div
-            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+            class="flex flex-col gap-3"
           >
-            <div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              data-testid="AmountSection"
+            >
               <div
-                style="height: 16px; width: 16px;"
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
               >
-                <svg
-                  id="plus"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                Amount
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M1 10h18M10 1v18"
-                    />
-                  </g>
-                </svg>
+                  0 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              >
+                Fee
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
+                >
+                  0 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              >
+                Total
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
+                >
+                  0 DARK
+                </span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
-      >
-        <span
-          class="text-sm font-semibold text-theme-secondary-500"
+        <div
+          class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
         >
-          Total Amount
-        </span>
-        <span
-          class="whitespace-nowrap text-md font-semibold sm:text-lg"
-          data-testid="Amount"
-        >
-          0 DARK
-        </span>
+          <div
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+          >
+            <div
+              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+            >
+              Confirmation time
+            </div>
+            <div
+              class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+            >
+              ~10s
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -403,7 +425,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
 exports[`LedgerReview > should render for vote transaction 1`] = `
 <div>
   <div
-    class="no-ligatures css-1iw2tte"
+    class="flex items-center space-x-4 py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -472,95 +494,106 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
     class="mt-2"
   >
     <div
-      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="DetailWrapper"
     >
       <div
-        class="relative px-6 py-4 sm:py-5"
+        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+        data-testid="DetailLabel"
       >
         <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+          data-testid="DetailLabelText"
         >
-          <div
-            class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500"
-            >
-              Transaction(s) Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              0 DARK
-            </span>
-          </div>
-          <div
-            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500"
-            >
-              Transaction Fee
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              0 DARK
-            </span>
-          </div>
+          Transaction Summary
         </div>
+      </div>
+      <div
+        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+      >
         <div
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
         >
           <div
-            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+            class="flex flex-col gap-3"
           >
-            <div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              data-testid="AmountSection"
+            >
               <div
-                style="height: 16px; width: 16px;"
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
               >
-                <svg
-                  id="plus"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                Amount
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M1 10h18M10 1v18"
-                    />
-                  </g>
-                </svg>
+                  0 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              >
+                Fee
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
+                >
+                  0 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              >
+                Total
+              </div>
+              <div
+                class="flex flex-row items-center gap-2"
+              >
+                <span
+                  class="whitespace-nowrap font-semibold"
+                  data-testid="Amount"
+                >
+                  0 DARK
+                </span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
-      >
-        <span
-          class="text-sm font-semibold text-theme-secondary-500"
+        <div
+          class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
         >
-          Total Amount
-        </span>
-        <span
-          class="whitespace-nowrap text-md font-semibold sm:text-lg"
-          data-testid="Amount"
-        >
-          0 DARK
-        </span>
+          <div
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+          >
+            <div
+              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+            >
+              Confirmation time
+            </div>
+            <div
+              class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+            >
+              ~10s
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

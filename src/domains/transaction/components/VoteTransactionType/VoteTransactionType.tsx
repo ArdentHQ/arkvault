@@ -1,4 +1,4 @@
-import { DetailDivider, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
@@ -43,27 +43,18 @@ export const VoteTransactionType = ({
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
-			<div className="space-y-3 sm:space-y-0" data-testid="VoteDetail">
+			<div className="flex flex-col gap-3" data-testid="VoteDetail">
 				<div className="flex w-full items-center justify-between sm:justify-start">
-					<DetailTitle
-						className={cn("w-auto", {
-							"sm:min-w-24": voteCategory !== "swap",
-							"sm:min-w-32": voteCategory === "swap",
-						})}
-					>
-						{t("COMMON.CATEGORY")}
-					</DetailTitle>
+					<DetailTitle className={cn("w-auto sm:min-w-36")}>{t("COMMON.CATEGORY")}</DetailTitle>
 					<Label color="neutral" size="xs">
 						{categoryLabels[voteCategory]}
 					</Label>
 				</div>
 
-				{(showValidatorField || voteCategory === "swap") && <DetailDivider />}
-
 				{voteCategory === "swap" && (
 					<>
 						<div className="flex w-full items-center justify-between sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
 
 							<Address
 								truncateOnTable
@@ -73,10 +64,8 @@ export const VoteTransactionType = ({
 							/>
 						</div>
 
-						<DetailDivider />
-
 						<div className="flex w-full items-center justify-between sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
 
 							<Address
 								truncateOnTable
@@ -90,7 +79,7 @@ export const VoteTransactionType = ({
 
 				{showValidatorField && (
 					<div className="flex w-full items-center justify-between sm:justify-start">
-						<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.VALIDATOR")}</DetailTitle>
+						<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.VALIDATOR")}</DetailTitle>
 
 						<Address
 							truncateOnTable
