@@ -160,13 +160,9 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 					isExternal
 					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
-					{
-						votes[0].wallet?.username() ??
-						<TruncateMiddle
-							text={votes[0].wallet?.address() ?? ""}
-							maxChars={14}
-						/>
-					}
+					{votes[0].wallet?.username() ?? (
+						<TruncateMiddle text={votes[0].wallet?.address() ?? ""} maxChars={14} />
+					)}
 				</Link>
 			</div>
 		);
