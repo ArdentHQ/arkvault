@@ -467,4 +467,38 @@ describe("AddressRow", () => {
 
 		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
 	});
+
+	it("should render truncated wallet address if username is not available", async () => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: data[0].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: data[0].publicKey,
+					rank: 1,
+					username: undefined,
+				}),
+			},
+		]);
+
+		const { container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		const address = screen.getByTestId("AddressRow__wallet-vote");
+		expect(address).toHaveTextContent("D61mf…3Dyib");
+
+		votesMock.mockRestore();
+	});
 });
