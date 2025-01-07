@@ -52,7 +52,7 @@ export const TotalAmountBox = ({
 
 	const total = amount + fee;
 	const convertedTotal = convertedAmount && convertedFee ? convertedAmount + convertedFee : undefined;
-console.log({convertedAmount,exchangeTicker,convertValues})
+	console.log({ convertValues, convertedAmount, exchangeTicker });
 	return (
 		<DetailWrapper
 			label={t("COMMON.TRANSACTION_SUMMARY")}
