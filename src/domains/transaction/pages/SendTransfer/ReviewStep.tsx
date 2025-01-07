@@ -35,8 +35,6 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 		unregister("mnemonic");
 	}, [unregister]);
 
-	console.log(wallet.network().isTest());
-
 	return (
 		<section data-testid="SendTransfer__review-step">
 			<StepHeader

@@ -52,7 +52,7 @@ export const TotalAmountBox = ({
 
 	const total = amount + fee;
 	const convertedTotal = convertedAmount && convertedFee ? convertedAmount + convertedFee : undefined;
-console.log({convertedAmount,exchangeTicker,convertValues})
+
 	return (
 		<DetailWrapper
 			label={t("COMMON.TRANSACTION_SUMMARY")}
@@ -69,7 +69,7 @@ console.log({convertedAmount,exchangeTicker,convertValues})
 
 						<div className="flex flex-row items-center gap-2">
 							<Amount ticker={ticker} value={total} className="font-semibold" />
-							{!!convertedAmount && exchangeTicker && convertValues && (
+							{convertValues && !!convertedAmount && !!exchangeTicker && (
 								<div className="font-semibold text-theme-secondary-700">
 									(~
 									<Amount ticker={exchangeTicker} value={convertedAmount} />)
@@ -84,7 +84,7 @@ console.log({convertedAmount,exchangeTicker,convertValues})
 
 					<div className="flex flex-row items-center gap-2">
 						<Amount ticker={ticker} value={total} className="font-semibold" />
-						{convertedFee && exchangeTicker && convertValues && (
+						{convertValues && !!convertedFee && !!exchangeTicker && (
 							<div className="font-semibold text-theme-secondary-700">
 								(~
 								<Amount ticker={exchangeTicker} value={convertedFee} />)
@@ -98,7 +98,7 @@ console.log({convertedAmount,exchangeTicker,convertValues})
 
 					<div className="flex flex-row items-center gap-2">
 						<Amount ticker={ticker} value={total} className="font-semibold" />
-						{convertedTotal && exchangeTicker && convertValues && (
+						{convertValues && !!convertedTotal && !!exchangeTicker && (
 							<div className="font-semibold text-theme-secondary-700">
 								(~
 								<Amount ticker={exchangeTicker} value={convertedTotal} />)
