@@ -67,6 +67,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 							convertedAmount={convert(amount)}
 							convertedFee={convert(fee)}
 							exchangeTicker={exchangeTicker}
+							convertValues={!wallet.network().isTest()}
 						/>
 					</div>
 				</div>

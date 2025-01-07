@@ -54,7 +54,13 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 
 				<div data-testid="DetailWrapper">
 					<div className="mt-0 p-3 sm:mt-2 sm:p-0">
-						<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} hideAmount />
+						<TotalAmountBox
+							amount={0}
+							fee={fee}
+							ticker={wallet.currency()}
+							convertValues={!wallet.network().isTest()}
+							hideAmount
+						/>
 					</div>
 				</div>
 			</div>
