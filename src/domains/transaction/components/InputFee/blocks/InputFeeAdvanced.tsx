@@ -8,56 +8,74 @@ import { useStepMath } from "@/domains/transaction/components/InputFee/InputFee.
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	convert,
 	disabled,
 	exchangeTicker,
-	onChange,
+	onChangeGasPrice,
+	onChangeGasLimit,
 	showConvertedValue,
 	step,
-	value,
+	gasPrice,
+	gasLimit,
 	network,
 }: InputFeeAdvancedProperties) => {
 	const { t } = useTranslation();
-	const { decrement: decrementGasFee, increment: incrementGasFee } = useStepMath(step, value);
 
-	const [gasLimit, setGasLimit] = useState<string>("21000");
+	const gasPriceInGwei = BigNumber.make(gasPrice).times(1e9).toString();
+	const { decrement: decrementGasFee, increment: incrementGasFee } = useStepMath(step, gasPriceInGwei);
 
 	const { decrement: decrementGasLimit, increment: incrementGasLimit } = useStepMath(100, gasLimit);
 
 	const formField = useFormField();
 	const hasError = formField?.isInvalid;
 
-	const isEmpty = value === "";
-	const isZero = value === "0";
+	const isEmpty = gasPrice === "";
+	const isZero = gasPrice === "0";
 
-	const handleIncrement = () => {
-		onChange(`${isEmpty ? step : incrementGasFee()}`);
+	const handleGasPriceIncrement = () => {
+		onChangeGasPrice(`${isEmpty ? step : incrementGasFee()}`);
 	};
 
-	const handleDecrement = () => {
+	const handleGasPriceDecrement = () => {
 		if (isEmpty) {
-			onChange("0");
+			onChangeGasPrice("0");
 			return;
 		}
 
 		const decrementedValue = decrementGasFee();
 
 		if (+decrementedValue <= 0) {
-			onChange("0");
+			onChangeGasPrice("0");
 			return;
 		}
 
-		onChange(decrementedValue);
+		onChangeGasPrice(decrementedValue);
 	};
 
-	const convertedValue = useMemo(() => convert(+value), [convert, value]);
+	const handleGasLimitIncrement = () => {
+		onChangeGasLimit(+incrementGasLimit());
+	};
+
+	const handleGasLimitDecrement = () => {
+		const decrementedValue = decrementGasLimit();
+
+		if (+decrementedValue <= 0) {
+			onChangeGasLimit(0);
+			return;
+		}
+
+		onChangeGasLimit(+decrementedValue);
+	};
+
+	const convertedValue = useMemo(() => convert(+gasPrice), [convert, gasPrice]);
 
 	return (
 		<div className="-mx-4 overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-700">
 			<div className="space-y-4 p-4">
-				<FormField name="gasFee">
+				<FormField name="gasPrice">
 					<FormLabel
 						id="fee"
 						label={t("COMMON.GAS_FEE_GWEI")}
@@ -74,8 +92,8 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 										disabled={!!disabled}
 										exchangeTicker={network.ticker()}
 										isDownDisabled={isZero}
-										onClickDown={handleDecrement}
-										onClickUp={handleIncrement}
+										onClickDown={handleGasPriceDecrement}
+										onClickUp={handleGasPriceIncrement}
 										showConvertedValue={showConvertedValue && !isEmpty && !isZero && !hasError}
 									/>
 								),
@@ -83,8 +101,8 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 							},
 						}}
 						disabled={disabled}
-						onChange={onChange}
-						value={value}
+						onChange={onChangeGasPrice}
+						value={gasPriceInGwei}
 					/>
 				</FormField>
 
@@ -102,12 +120,8 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 									<InputFeeAdvancedAddon
 										disabled={!!disabled}
 										isDownDisabled={Number(gasLimit) <= 0}
-										onClickDown={() => {
-											setGasLimit(decrementGasLimit());
-										}}
-										onClickUp={() => {
-											setGasLimit(incrementGasLimit());
-										}}
+										onClickDown={handleGasLimitDecrement}
+										onClickUp={handleGasLimitIncrement}
 										showConvertedValue={false}
 										convertedValue={0}
 										exchangeTicker=""
@@ -117,7 +131,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 							},
 						}}
 						disabled={disabled}
-						// onChange={onChange}
+						onChange={onChangeGasLimit}
 						value={gasLimit}
 					/>
 				</FormField>

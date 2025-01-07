@@ -142,11 +142,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 			}
 
 			return {
-				avg: transactionFees.avg.toHuman(),
+				avg: transactionFees.avg.toString(),
 				isDynamic: transactionFees.isDynamic,
-				max: transactionFees.max.toHuman(),
-				min: transactionFees.min.toHuman(),
-				static: transactionFees.static.toHuman(),
+				max: transactionFees.max.toString(),
+				min: transactionFees.min.toString(),
+				static: transactionFees.static.toString(),
 			};
 		},
 		[profile, calculateBySize, env],

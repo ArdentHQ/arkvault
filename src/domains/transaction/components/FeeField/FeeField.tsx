@@ -1,7 +1,7 @@
 import { Networks } from "@ardenthq/sdk";
 import { isEqual } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -24,68 +24,15 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
 
-	const { setError, clearErrors, watch, setValue, getValues } = useFormContext();
+	const { watch, setValue, getValues } = useFormContext();
 	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
 
-	// getValues does not get the value of `defaultValues` on first render
-	const [defaultFee] = useState(() => watch("fee"));
-	const fee = getValues("fee") || defaultFee;
+	const gasPrice = getValues("gasPrice") as string;
+	const gasLimit = getValues("gasLimit") as number;
 
-	const [data, isLoadingData] = useDebounce(properties.data, 700);
+	console.log({gasLimit, gasPrice})
 
-	const isCalculatingFee = useMemo(() => isLoadingData || isLoadingFee, [isLoadingData, isLoadingFee]);
-	const usesSizeBasedFee = useMemo(() => network.feeType() === "size", [network]);
-	const usesStaticFee = useMemo(() => network.feeType() !== "dynamic" || !fees?.isDynamic, [fees, network]);
-
-	useEffect(() => {
-		if (usesSizeBasedFee || type === "multiSignature") {
-			if (isCalculatingFee) {
-				// This message does not need i18n as it is only intended to mark
-				// the form as invalid until fee calculation has been completed.
-				setError("feeCalculation", { message: "fee calculation not completed" });
-			} else {
-				clearErrors("feeCalculation");
-			}
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [isCalculatingFee, setError, clearErrors, usesSizeBasedFee]);
-
-	const resetFees = useCallback(() => {
-		setValue("fees", { avg: 0, max: 0, min: 0, static: 0 });
-	}, [setValue]);
-
-	const hasResetBasedFees = useCallback(() => {
-		if (!usesSizeBasedFee) {
-			return false;
-		}
-
-		if (data === undefined) {
-			resetFees();
-			return true;
-		}
-
-		if (type === "transfer" && (!data.amount || !data.to)) {
-			resetFees();
-			return true;
-		}
-
-		if (type === "multiPayment" && !data.payments?.length) {
-			resetFees();
-			return true;
-		}
-
-		if (type === "vote" && !data.votes?.length && !data.unvotes?.length) {
-			resetFees();
-			return true;
-		}
-
-		if (type === "validatorRegistration" && !data.validatorPublicKey) {
-			resetFees();
-			return true;
-		}
-
-		return false;
-	}, [data, resetFees, type, usesSizeBasedFee]);
+	const [data, _isLoadingData] = useDebounce(properties.data, 700);
 
 	const showFeeChangedToast = useCallback(() => {
 		toasts.warning(t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE"));
@@ -98,38 +45,23 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			}
 
 			/* istanbul ignore else -- @preserve */
-			if (
-				network.feeType() === "static" ||
-				transactionFees.isDynamic === false ||
-				getValues("fee") === undefined
-			) {
+			if (getValues("gasPrice") === undefined) {
 				const newFee = transactionFees.isDynamic ? transactionFees.avg : transactionFees.static;
 
-				if (getValues("fee") !== undefined) {
+				if (getValues("gasPrice") !== undefined) {
 					showFeeChangedToast();
 				}
 
-				setValue("fee", newFee, { shouldDirty: true, shouldValidate: true });
-			}
-
-			if (usesSizeBasedFee && +getValues("fee") < +transactionFees.min) {
-				setValue("fee", transactionFees.min, { shouldDirty: true, shouldValidate: true });
-
-				showFeeChangedToast();
+				setValue("gasPrice", newFee, { shouldDirty: true, shouldValidate: true });
 			}
 
 			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
 		},
-		[getValues, network, setValue, showFeeChangedToast, usesSizeBasedFee],
+		[getValues, setValue, showFeeChangedToast],
 	);
 
 	useEffect(() => {
 		const recalculateFee = async () => {
-			// Set fees to 0 when fee type is "size" but current form data
-			// is not sufficient yet to calculate the transaction fees.
-			if (hasResetBasedFees()) {
-				return;
-			}
 
 			setIsLoadingFee(true);
 
@@ -157,8 +89,6 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		network,
 		setValue,
 		type,
-		usesSizeBasedFee,
-		hasResetBasedFees,
 		setNewFees,
 	]);
 
@@ -176,13 +106,16 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			avg={fees?.avg}
 			max={fees?.max}
 			loading={!fees || isLoadingFee}
-			value={fee}
-			step={0.01}
-			disabled={usesStaticFee && !usesSizeBasedFee}
+			gasPrice={gasPrice}
+			gasLimit={gasLimit}
+			step={10}
 			network={network}
 			profile={profile}
-			onChange={(value) => {
-				setValue("fee", value, { shouldDirty: true, shouldValidate: true });
+			onChangeGasPrice={(value) => {
+				setValue("gasPrice", value, { shouldDirty: true, shouldValidate: true });
+			}}
+			onChangeGasLimit={(value) => {
+				setValue("gasLimit", value, { shouldDirty: true, shouldValidate: true });
 			}}
 			viewType={inputFeeSettings.viewType}
 			onChangeViewType={(viewType) => {
@@ -192,11 +125,11 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 					{ shouldDirty: true, shouldValidate: true },
 				);
 			}}
-			simpleValue={inputFeeSettings.simpleValue}
-			onChangeSimpleValue={(simpleValue) => {
+			selectedFeeOption={inputFeeSettings.selectedFeeOption}
+			onChangeFeeOption={(option) => {
 				setValue(
 					"inputFeeSettings",
-					{ ...inputFeeSettings, simpleValue },
+					{ ...inputFeeSettings, selectedFeeOption: option},
 					{ shouldDirty: true, shouldValidate: true },
 				);
 			}}

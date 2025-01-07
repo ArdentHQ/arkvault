@@ -48,10 +48,10 @@ export type NavbarVariant = "full" | "logo-only";
 export type Theme = "system" | "dark" | "light";
 
 export interface TransactionFees {
-	static: number;
-	max: number;
-	min: number;
-	avg: number;
+	static: string;
+	max: string;
+	min: string;
+	avg: string;
 	isDynamic?: boolean;
 }
 export type ResponsiveButtonVariantStyles = {

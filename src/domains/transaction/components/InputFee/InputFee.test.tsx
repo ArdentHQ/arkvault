@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
 import { InputFee } from "./InputFee";
-import { InputFeeProperties, InputFeeSimpleValue, InputFeeViewType } from "./InputFee.contracts";
+import { InputFeeProperties, InputFeeOption, InputFeeViewType } from "./InputFee.contracts";
 import { translations } from "@/domains/transaction/i18n";
 import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 
@@ -14,10 +14,9 @@ const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile">
 	loading: false,
 	max: 0.5,
 	min: 0.006,
-	onChange: vi.fn(),
-	onChangeSimpleValue: vi.fn(),
+	onChangeFeeOption: vi.fn(),
 	onChangeViewType: vi.fn(),
-	simpleValue: InputFeeSimpleValue.Average,
+	selectedFeeOption: InputFeeOption.Average,
 	step: 0.001,
 	value: "0.3",
 	viewType: InputFeeViewType.Simple,
@@ -43,7 +42,7 @@ describe("InputFee", () => {
 		Wrapper = () => {
 			const [value, setValue] = useState(defaultProps.value);
 			const [viewType, setViewType] = useState(defaultProps.viewType);
-			const [simpleValue, setSimpleValue] = useState(defaultProps.simpleValue);
+			const [simpleValue, setSimpleValue] = useState(defaultProps.selectedFeeOption);
 
 			const handleChangeValue = (newValue: string) => {
 				setValue(newValue);
@@ -55,9 +54,9 @@ describe("InputFee", () => {
 				defaultProps.onChangeViewType?.(newValue);
 			};
 
-			const handleChangeSimpleValue = (value_: InputFeeSimpleValue) => {
+			const handleChangeSimpleValue = (value_: InputFeeOption) => {
 				setSimpleValue(value_);
-				defaultProps.onChangeSimpleValue?.(value_);
+				defaultProps.onChangeFeeOption?.(value_);
 			};
 
 			return (
@@ -67,8 +66,8 @@ describe("InputFee", () => {
 					onChange={handleChangeValue}
 					viewType={viewType}
 					onChangeViewType={handleChangeViewType}
-					simpleValue={simpleValue}
-					onChangeSimpleValue={handleChangeSimpleValue}
+					selectedFeeOption={simpleValue}
+					onChangeFeeOption={handleChangeSimpleValue}
 				/>
 			);
 		};

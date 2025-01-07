@@ -133,7 +133,9 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("recipients", sendTransferValidation.recipients());
 		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
-		register("fee", commonValidation.fee(walletBalance, wallet?.network(), fees));
+		// register("fee", commonValidation.fee(walletBalance, wallet?.network(), fees));
+		register("gasPrice");
+		register("gasLimit");
 		register("memo", sendTransferValidation.memo());
 
 		register("remainingBalance");
@@ -145,6 +147,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		if (networks.length === 1) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });
 		}
+
+		setValue("gasLimit", 21_000);
 	}, [register, sendTransferValidation, commonValidation, fees, wallet, remainingBalance, amount, senderAddress]);
 
 	useEffect(() => {
