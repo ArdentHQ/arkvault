@@ -255,6 +255,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 										amount={exchangeInput.amount}
 										fee={fee || 0}
 										ticker={senderWallet.currency()}
+										convertValues={!senderWallet.network().isTest()}
 									/>
 								</div>
 							)}
