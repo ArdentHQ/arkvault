@@ -501,4 +501,37 @@ describe("AddressRow", () => {
 
 		votesMock.mockRestore();
 	});
+
+	it("should not render neither username nor truncated address if both are not available", async () => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: "",
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: data[0].publicKey,
+					rank: 1,
+					username: undefined,
+				}),
+			},
+		]);
+
+		const { container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(screen.queryByText("D61mf…3Dyib")).not.toBeInTheDocument();
+
+		votesMock.mockRestore();
+	});
 });
+
