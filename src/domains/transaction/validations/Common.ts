@@ -52,7 +52,7 @@ export const common = (t: TFunction) => ({
 			valid: (gasLimit: number) => {
 				if (gasLimit === 0) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
-						field: t("COMMON.GAS_FEE"),
+						field: t("COMMON.GAS_LIMIT"),
 					});
 				}
 
@@ -81,8 +81,6 @@ export const common = (t: TFunction) => ({
 
 				const fee = calculateGasFee(gasPrice, gasLimit);
 
-				console.log(fee.toString());
-
 				if (+fee > balance) {
 					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 						balance,
@@ -90,8 +88,49 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				if (Math.sign(+fee) === -1) {
-					return t("TRANSACTION.VALIDATION.FEE_NEGATIVE");
+				return true;
+			},
+		},
+	}),
+	gasPrice: (balance = 0, getValues: () => object, minGasPrice: number, network?: Networks.Network) => ({
+		validate: {
+			valid: (gasPrice: number) => {
+				if (gasPrice === 0) {
+					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+						field: t("COMMON.GAS_FEE"),
+					});
+				}
+
+				if (gasPrice < minGasPrice) {
+					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW ", {
+						field: t("COMMON.FEE"),
+					});
+				}
+
+				if (!network?.coin()) {
+					return true;
+				}
+
+				if (Math.sign(balance) <= 0) {
+					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
+						balance: 0,
+						coinId: network.coin(),
+					});
+				}
+
+				const { gasLimit } = getValues() as {gasLimit : number | undefined};
+
+				if (gasLimit === undefined) {
+					return true;
+				}
+
+				const fee = calculateGasFee(gasPrice, gasLimit);
+
+				if (+fee > balance) {
+					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
+						balance,
+						coinId: network.coin(),
+					});
 				}
 
 				return true;

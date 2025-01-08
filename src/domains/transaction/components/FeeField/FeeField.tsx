@@ -33,8 +33,6 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const gasPrice = getValues("gasPrice") as number;
 	const gasLimit = getValues("gasLimit") as number;
 
-	console.log({gasLimit, gasPrice})
-
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
 
 	useEffect(() => {
@@ -51,6 +49,10 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			/* istanbul ignore else -- @preserve */
 			if (getValues("gasPrice") === undefined) {
 				setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
+			}
+
+			if (getValues("gasLimit") === undefined) {
+				setValue("gasLimit", GasLimit[type], { shouldDirty: true, shouldValidate: true });
 			}
 
 			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
