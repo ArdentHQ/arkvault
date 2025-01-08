@@ -506,16 +506,7 @@ describe("AddressRow", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: "",
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: data[0].publicKey,
-					rank: 1,
-					username: undefined,
-				}),
+				wallet: undefined,
 			},
 		]);
 
