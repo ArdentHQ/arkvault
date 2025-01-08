@@ -290,7 +290,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 Amount Sent
               </span>
               <div
-                class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
+                class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
               >
                 <span
                   class="whitespace-nowrap font-semibold leading-5"
@@ -414,7 +414,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 Amount Received
               </span>
               <div
-                class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
+                class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
               >
                 <span
                   class="whitespace-nowrap font-semibold leading-5"
@@ -1353,7 +1353,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         Amount Sent
                       </span>
                       <div
-                        class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
+                        class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
                       >
                         <span
                           class="whitespace-nowrap font-semibold leading-5"
@@ -1610,7 +1610,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         Amount Received
                       </span>
                       <div
-                        class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
+                        class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
                       >
                         <span
                           class="whitespace-nowrap font-semibold leading-5"
