@@ -19,6 +19,7 @@ import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { ProfilePaths } from "@/router/paths";
 import { Link } from "@/app/components/Link";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
 interface AddressRowProperties {
 	index: number;
@@ -152,14 +153,16 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 		// @TODO handle multiple validators
 		return (
-			<div className="flex items-center space-x-3 overflow-hidden">
+			<div className="flex items-center space-x-3 overflow-hidden" data-testid="AddressRow__wallet-vote">
 				{maxVotes > 1 && renderRestOfVotes(votes.length)}
 				<Link
 					to={votes[0].wallet?.explorerLink() as string}
 					isExternal
 					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
-					{votes[0].wallet?.username()}
+					{votes[0].wallet?.username() ?? (
+						<TruncateMiddle text={votes[0].wallet?.address() ?? ""} maxChars={14} />
+					)}
 				</Link>
 			</div>
 		);
