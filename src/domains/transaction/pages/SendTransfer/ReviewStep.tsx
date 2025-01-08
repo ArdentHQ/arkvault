@@ -8,7 +8,7 @@ import { TransactionAddresses } from "@/domains/transaction/components/Transacti
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile } from "@/app/hooks";
-import { DetailLabel } from "@/app/components/DetailWrapper";
+import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -26,6 +26,10 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 	for (const recipient of recipients) {
 		amount += recipient.amount;
 	}
+
+	const ticker = wallet.currency();
+	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
+	const { convert } = useExchangeRate({ exchangeTicker, ticker });
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -51,13 +55,20 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 					recipients={recipients}
 					profile={profile}
 					network={wallet.network()}
-					labelClassName="w-14 sm:w-20"
+					labelClassName="w-14 sm:w-36"
 				/>
 
 				<div className="space-y-3 sm:space-y-2">
-					<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
 					<div className="mx-3 sm:mx-0">
-						<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
+						<TotalAmountBox
+							amount={amount}
+							fee={fee}
+							ticker={wallet.currency()}
+							convertedAmount={convert(amount)}
+							convertedFee={convert(fee)}
+							convertValues={!wallet.network().isTest()}
+							exchangeTicker={exchangeTicker}
+						/>
 					</div>
 				</div>
 			</div>
