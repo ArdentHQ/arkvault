@@ -74,7 +74,12 @@ export const TransferLedgerReview = ({
 			</DetailWrapper>
 
 			<div className="mt-2">
-				<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
+				<TotalAmountBox
+					amount={amount}
+					fee={fee}
+					ticker={wallet.currency()}
+					convertValues={!wallet.network().isTest()}
+				/>
 			</div>
 		</div>
 	);
