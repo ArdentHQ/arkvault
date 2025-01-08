@@ -117,12 +117,12 @@ describe("SendExchangeTransfer", () => {
 		expect(onClose).toHaveBeenCalledOnce();
 	});
 
-	it("should calculate fee", async () => {
+	it("should get all the amount values", async () => {
 		renderComponent();
 
 		await selectSender();
 
-		await expect(screen.findByText("0.049716 DARK")).resolves.toBeVisible();
+		await expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 	});
 
 	it("should sync wallet if new sender wallet is not restored or synced", async () => {

@@ -10,63 +10,49 @@ interface TransactionTypeProperties {
 export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties = {}) => {
 	const { t } = useTranslation();
 
-	const transactionTypes: Record<string, { icon: string; label: string }> = {
+	const transactionTypes: Record<string, { label: string }> = {
 		delegateRegistration: {
-			icon: "DelegateRegistration",
 			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
 		},
 		delegateResignation: {
-			icon: "DelegateResignation",
 			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION"),
 		},
 		htlcClaim: {
-			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_CLAIM"),
 		},
 		htlcLock: {
-			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_LOCK"),
 		},
 		htlcRefund: {
-			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_REFUND"),
 		},
 		multiPayment: {
-			icon: "Multipayment",
 			label: t("TRANSACTION.TRANSACTION_TYPES.MULTI_PAYMENT"),
 		},
 		multiSignature: {
-			icon: "Multisignature",
 			label: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 		},
 		transfer: {
-			icon: "Transfer",
 			label: t("TRANSACTION.TRANSACTION_TYPES.TRANSFER"),
 		},
 		unvote: {
-			icon: "Unvote",
 			label: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
 		},
 		usernameRegistration: {
-			icon: "UsernameRegistration",
 			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 		},
 		usernameResignation: {
-			icon: "UsernameResignation",
 			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION"),
 		},
 		vote: {
-			icon: "Vote",
 			label: t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
 		},
 		voteCombination: {
-			icon: "VoteCombination",
 			label: t("TRANSACTION.TRANSACTION_TYPES.VOTE_COMBINATION"),
 		},
 	};
 
 	return {
-		getIcon: (type: string): string => transactionTypes[type]?.icon,
 		getLabel: (type: string) => {
 			if (transactionTypes[type]) {
 				return transactionTypes[type].label;
