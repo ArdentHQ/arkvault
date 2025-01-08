@@ -2,9 +2,10 @@ import { Networks } from "@ardenthq/sdk";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { TransactionFees } from "@/types";
 
 export const common = (t: TFunction) => ({
-	fee: () => ({
+	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({
 		validate: () => {
 			return true;
 		}
