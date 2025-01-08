@@ -75,7 +75,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const { gasLimit } = getValues() as {gasLimit : number | undefined};
+				const { gasLimit } = getValues() as {gasLimit : number|undefined};
 
 				if (gasLimit === undefined) {
 					return true;
