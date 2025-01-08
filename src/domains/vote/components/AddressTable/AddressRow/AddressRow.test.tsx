@@ -534,4 +534,3 @@ describe("AddressRow", () => {
 		votesMock.mockRestore();
 	});
 });
-
