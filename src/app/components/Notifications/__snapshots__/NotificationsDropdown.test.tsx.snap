@@ -460,7 +460,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
                               data-testid="DetailLabelText"
                             >
-                              Transaction Type
+                              Action
                             </div>
                           </div>
                           <div
@@ -479,7 +479,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-testid="DetailLabelText"
                                   >
-                                    Category
+                                    Method
                                   </div>
                                   <div
                                     class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
