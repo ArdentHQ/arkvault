@@ -14,6 +14,7 @@ import { getTransferType, handleBroadcastError } from "@/domains/transaction/uti
 import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
@@ -133,8 +134,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("recipients", sendTransferValidation.recipients());
 		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
-		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, 5, wallet?.network()));
-		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, 21_000, wallet?.network()));
+		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, wallet?.network()));
+		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, GasLimit['transfer'], wallet?.network()));
 		register("memo", sendTransferValidation.memo());
 
 		register("remainingBalance");
