@@ -107,4 +107,21 @@ describe("TransactionType", () => {
 
 		expect(container).toHaveTextContent("Multisignature");
 	});
+
+	it("should render username if username registration", () => {
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						isUsernameRegistration: () => true,
+						wallet: () => ({
+							username: () => "delegate",
+						}),
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+		);
+
+		expect(container).toHaveTextContent("delegate");
+	});
 });
