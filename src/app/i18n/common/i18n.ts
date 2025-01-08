@@ -404,6 +404,7 @@ export const translations = {
 	UPDATE_NOW: "Update Now",
 	UPDATING: "Updating...",
 	URL: "URL",
+	USERNAME: "Username",
 	VALIDATING_URI: "Validating URI. Please wait ...",
 	VALIDATION: {
 		CONFIRM_PASSWORD_REQUIRED: "Password confirmation is required",

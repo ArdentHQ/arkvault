@@ -30,6 +30,20 @@ export const TransactionType = ({
 						</Label>
 					</div>
 
+					{transaction.isUsernameRegistration() && (
+						<>
+							<DetailDivider />
+
+							<div className="flex w-full justify-between sm:justify-start">
+								<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
+
+								<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
+									{transaction.wallet()?.username()}
+								</div>
+							</div>
+						</>
+					)}
+
 					{transaction.isValidatorRegistration() && (
 						<>
 							<DetailDivider />
