@@ -7,20 +7,20 @@ import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 
 interface Properties {
-	type: "transfer"|"multiPayment"|"vote"|"delegateRegistration"|"delegateResignation"|"multiSignature";
+	type: "transfer" | "multiPayment" | "vote" | "delegateRegistration" | "delegateResignation" | "multiSignature";
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
 }
 
-export const GasLimit: Record<Properties['type'], number> = {
+export const GasLimit: Record<Properties["type"], number> = {
 	delegateRegistration: 500_000,
 	delegateResignation: 150_000,
 	multiPayment: 21_000,
 	multiSignature: 21_000,
 	transfer: 21_000,
 	vote: 200_000,
-}
+};
 
 export const MIN_GAS_PRICE = 5;
 
@@ -63,14 +63,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		};
 
 		void recalculateFee();
-	}, [
-		calculate,
-		data,
-		getValues,
-		network,
-		setValue,
-		type,
-	]);
+	}, [calculate, data, getValues, network, setValue, type]);
 
 	return (
 		<InputFee
@@ -103,7 +96,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			onChangeFeeOption={(option) => {
 				setValue(
 					"inputFeeSettings",
-					{ ...inputFeeSettings, selectedFeeOption: option},
+					{ ...inputFeeSettings, selectedFeeOption: option },
 					{ shouldDirty: true, shouldValidate: true },
 				);
 			}}
