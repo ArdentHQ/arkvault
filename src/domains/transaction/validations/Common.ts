@@ -4,6 +4,11 @@ import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export const common = (t: TFunction) => ({
+	fee: () => ({
+		validate: () => {
+			return true;
+		}
+	}),
 	gasLimit: (balance = 0, getValues: () => object, defaultGasLimit: number, network?: Networks.Network) => ({
 		validate: {
 			valid: (gasLimit: number) => {
