@@ -26,9 +26,6 @@ const GasLimit: Record<Properties['type'], number> = {
 }
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
-	const isMounted = useRef(true);
-	const { t } = useTranslation();
-
 	const { calculate } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
@@ -43,30 +40,6 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
 
-	const showFeeChangedToast = useCallback(() => {
-		toasts.warning(t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE"));
-	}, [t]);
-
-	const setNewFees = useCallback(
-		(transactionFees) => {
-			if (isEqual(getValues("fees"), transactionFees)) {
-				return;
-			}
-
-			/* istanbul ignore else -- @preserve */
-			if (getValues("gasPrice") === undefined) {
-				if (getValues("gasPrice") !== undefined) {
-					showFeeChangedToast();
-				}
-
-				setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
-			}
-
-			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
-		},
-		[getValues, setValue, showFeeChangedToast],
-	);
-
 	useEffect(() => {
 		const recalculateFee = async () => {
 			setIsLoadingFee(true);
@@ -78,12 +51,14 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				type,
 			});
 
-			setNewFees(transactionFees);
-
-			/* istanbul ignore next -- @preserve */
-			if (isMounted.current) {
-				setIsLoadingFee(false);
+			/* istanbul ignore else -- @preserve */
+			if (getValues("gasPrice") === undefined) {
+				setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
 			}
+
+			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
+
+			setIsLoadingFee(false);
 		};
 
 		void recalculateFee();
@@ -91,20 +66,10 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		calculate,
 		data,
 		getValues,
-		isMounted,
 		network,
 		setValue,
 		type,
-		setNewFees,
 	]);
-
-	useEffect(
-		/* istanbul ignore next -- @preserve */
-		() => () => {
-			isMounted.current = false;
-		},
-		[],
-	);
 
 	return (
 		<InputFee

@@ -58,16 +58,19 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const options: InputFeeOptions = {
 			[InputFeeOption.Slow]: {
+				gasPrice: min,
 				displayValue: calculateGasFee(min, gasLimit),
 				displayValueConverted: convert(calculateGasFee(min, gasLimit)),
 				label: t("TRANSACTION.FEES.SLOW"),
 			},
 			[InputFeeOption.Average]: {
+				gasPrice: avg,
 				displayValue: calculateGasFee(avg, gasLimit),
 				displayValueConverted: convert(calculateGasFee(avg, gasLimit)),
 				label: t("TRANSACTION.FEES.AVERAGE"),
 			},
 			[InputFeeOption.Fast]: {
+				gasPrice: max,
 				displayValue: calculateGasFee(max, gasLimit),
 				displayValueConverted: convert(calculateGasFee(max, gasLimit)),
 				label: t("TRANSACTION.FEES.FAST"),
@@ -78,16 +81,14 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			properties.onChangeViewType?.(newValue);
 
 			if (newValue === InputFeeViewType.Simple) {
-				onChangeGasPrice(options[selectedFeeOption].displayValue);
+				onChangeGasPrice(options[selectedFeeOption].gasPrice);
 				onChangeGasLimit(defaultGasLimit);
 			}
 		};
 
 		const onChangeOption = (newValue: InputFeeOption) => {
 			properties.onChangeFeeOption?.(newValue);
-
-			const feeValue = options[newValue].displayValue;
-			onChangeGasPrice(feeValue);
+			onChangeGasPrice(options[newValue].gasPrice);
 		};
 
 		const renderAdvanced = () => (

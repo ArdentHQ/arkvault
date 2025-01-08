@@ -141,10 +141,12 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 				<div>
 					<span>Max Fee </span>
 					<Amount ticker={network.ticker()} value={gasFee}/>
-					<span>
-						{" "}
-						~<Amount ticker={exchangeTicker} value={convertedGasFee} />{" "}
-					</span>
+					{network.isLive() &&
+						<span>
+							{" "}
+							~<Amount ticker={exchangeTicker} value={convertedGasFee} />{" "}
+						</span>
+					}
 				</div>
 				<div>
 					<span>{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>

@@ -17,6 +17,7 @@ const DEFAULT_VIEW_TYPE = InputFeeViewType.Simple;
 
 type InputFeeOptions = {
 	[key in InputFeeOption]: {
+		gasPrice: number;
 		label: string;
 		displayValue: number;
 		displayValueConverted: number;
