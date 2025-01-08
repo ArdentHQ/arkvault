@@ -9,6 +9,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@ardenthq/sdk-helpers";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 const GAS_LIMIT_STEP = 1000;
 
@@ -65,7 +66,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 		onChangeGasLimit(+decrementedValue);
 	};
 
-	const gasFee = BigNumber.make(gasPrice).times(BigNumber.make(gasLimit)).divide(1e9).toNumber();
+	const gasFee = calculateGasFee(gasPrice, gasLimit);
 	const convertedGasFee = useMemo(() => convert(+gasFee), [convert, gasFee]);
 
 	const convertedGasPrice = useMemo(() => convert(+gasPrice), [convert, gasPrice]);
