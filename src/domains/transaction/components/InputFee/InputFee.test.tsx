@@ -11,13 +11,13 @@ import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: 0.456,
 	disabled: false,
+	gasPriceStep: 0.001,
 	loading: false,
 	max: 0.5,
 	min: 0.006,
 	onChangeFeeOption: vi.fn(),
 	onChangeViewType: vi.fn(),
 	selectedFeeOption: InputFeeOption.Average,
-	gasPriceStep: 0.001,
 	value: "0.3",
 	viewType: InputFeeViewType.Simple,
 });
