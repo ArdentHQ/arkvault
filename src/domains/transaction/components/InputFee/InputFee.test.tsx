@@ -17,7 +17,7 @@ const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile">
 	onChangeFeeOption: vi.fn(),
 	onChangeViewType: vi.fn(),
 	selectedFeeOption: InputFeeOption.Average,
-	step: 0.001,
+	gasPriceStep: 0.001,
 	value: "0.3",
 	viewType: InputFeeViewType.Simple,
 });
@@ -225,7 +225,7 @@ describe("InputFee", () => {
 
 		it("should increment value by step when up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "0.5";
 
 			render(<InputFee {...defaultProps} />);
@@ -239,7 +239,7 @@ describe("InputFee", () => {
 
 		it("should decrement value by step when down button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "0.5";
 
 			render(<InputFee {...defaultProps} />);
@@ -253,7 +253,7 @@ describe("InputFee", () => {
 
 		it("should disable down button when value is zero", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "0";
 
 			render(<InputFee {...defaultProps} />);
@@ -277,7 +277,7 @@ describe("InputFee", () => {
 
 		it("should not allow to set a negative value with down button", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.6;
+			defaultProps.gasPriceStep = 0.6;
 			defaultProps.value = "1.5";
 
 			render(<InputFee {...defaultProps} />);
@@ -311,7 +311,7 @@ describe("InputFee", () => {
 
 		it("should set value = step when empty and up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "";
 
 			render(<InputFee {...defaultProps} />);
@@ -327,7 +327,7 @@ describe("InputFee", () => {
 
 		it("should set value = 0 when empty and down button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "";
 
 			render(<InputFee {...defaultProps} />);

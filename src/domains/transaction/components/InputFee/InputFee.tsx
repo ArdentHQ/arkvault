@@ -29,7 +29,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		min,
 		avg,
 		max,
-		step,
+		gasPriceStep,
 		disabled,
 		network,
 		profile,
@@ -102,7 +102,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 					onChangeGasLimit(Number(gasLimit));
 				}}
 				showConvertedValue={showConvertedValues}
-				step={step}
+				gasPriceStep={gasPriceStep}
 				minGasPrice={minGasPrice}
 				gasPrice={gasPrice}
 				gasLimit={gasLimit}

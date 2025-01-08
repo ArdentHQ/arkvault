@@ -31,7 +31,7 @@ interface InputFeeAdvancedProperties {
 	onChangeGasPrice: (value: number) => void;
 	onChangeGasLimit: (value: number) => void;
 	showConvertedValue: boolean;
-	step: number;
+	gasPriceStep: number;
 	network: Networks.Network;
 	gasPrice: number;
 	gasLimit: number;
@@ -53,7 +53,7 @@ interface InputFeeProperties {
 	min: number;
 	avg: number;
 	max: number;
-	step: number;
+	gasPriceStep: number;
 	defaultGasLimit: number;
 	minGasPrice: number;
 	disabled?: boolean;

@@ -75,7 +75,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			gasLimit={gasLimit}
 			defaultGasLimit={GasLimit[type]}
 			minGasPrice={MIN_GAS_PRICE}
-			step={1}
+			gasPriceStep={1}
 			network={network}
 			profile={profile}
 			onChangeGasPrice={(value) => {

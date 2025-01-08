@@ -21,21 +21,19 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	showConvertedValue,
 	defaultGasLimit,
 	minGasPrice,
-	step,
+	gasPriceStep,
 	gasPrice,
 	gasLimit,
 	network,
 }: InputFeeAdvancedProperties) => {
 	const { t } = useTranslation();
 
-	const { decrement: decrementGasFee, increment: incrementGasFee } = useStepMath(step, gasPrice);
+	const { decrement: decrementGasFee, increment: incrementGasFee } = useStepMath(gasPriceStep, gasPrice);
 
 	const { decrement: decrementGasLimit, increment: incrementGasLimit } = useStepMath(GAS_LIMIT_STEP, gasLimit);
 
 	const formField = useFormField();
 	const hasError = formField?.isInvalid;
-
-	const isZero = Number(gasPrice) === 0;
 
 	const handleGasPriceIncrement = () => {
 		onChangeGasPrice(Number(gasPrice) < minGasPrice ? minGasPrice : +incrementGasFee());
@@ -94,7 +92,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 										isDownDisabled={gasPrice <= minGasPrice}
 										onClickDown={handleGasPriceDecrement}
 										onClickUp={handleGasPriceIncrement}
-										showConvertedValue={showConvertedValue && !isZero && !hasError}
+										showConvertedValue={showConvertedValue && gasPrice !== 0 && !hasError}
 									/>
 								),
 								wrapperClassName: "divide-none",
@@ -152,7 +150,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					<span>
 						{" "}
 						{t("COMMON.CONFIRMATION_TIME", {
-							time: 20,
+							time: 10,
 						}).toString()}
 					</span>
 				</div>
