@@ -2,7 +2,6 @@ import cn from "classnames";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useMemo } from "react";
 
-import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
 
@@ -27,7 +26,6 @@ export const TransactionRowRecipient = ({ transaction, profile, labelClass }: Pr
 
 	return (
 		<>
-			<TransactionRowRecipientIcon recipient={transaction.recipient()} type={transaction.type()} />
 			<div className={cn("w-0 flex-1", labelClass)}>
 				<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
 			</div>
