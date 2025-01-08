@@ -525,4 +525,3 @@ describe("AddressRow", () => {
 		votesMock.mockRestore();
 	});
 });
-
