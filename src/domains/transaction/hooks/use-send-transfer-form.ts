@@ -135,7 +135,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("fees");
 		// register("fee", commonValidation.fee(walletBalance, wallet?.network(), fees));
 		register("gasPrice");
-		register("gasLimit");
+		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, 21_000, wallet?.network()));
 		register("memo", sendTransferValidation.memo());
 
 		register("remainingBalance");

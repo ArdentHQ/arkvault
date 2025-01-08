@@ -10,10 +10,19 @@ import { toasts } from "@/app/services";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 
 interface Properties {
-	type: string;
+	type: "transfer"|"multiPayment"|"vote"|"delegateRegistration"|"delegateResignation"|"multiSignature";
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
+}
+
+const GasLimit: Record<Properties['type'], number> = {
+	delegateRegistration: 500_000,
+	delegateResignation: 150_000,
+	multiPayment: 21_000,
+	multiSignature: 21_000,
+	transfer: 21_000,
+	vote: 200_000,
 }
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
@@ -27,7 +36,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const { watch, setValue, getValues } = useFormContext();
 	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
 
-	const gasPrice = getValues("gasPrice") as string;
+	const gasPrice = getValues("gasPrice") as number;
 	const gasLimit = getValues("gasLimit") as number;
 
 	console.log({gasLimit, gasPrice})
@@ -46,13 +55,11 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 			/* istanbul ignore else -- @preserve */
 			if (getValues("gasPrice") === undefined) {
-				const newFee = transactionFees.isDynamic ? transactionFees.avg : transactionFees.static;
-
 				if (getValues("gasPrice") !== undefined) {
 					showFeeChangedToast();
 				}
 
-				setValue("gasPrice", newFee, { shouldDirty: true, shouldValidate: true });
+				setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
 			}
 
 			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
@@ -62,7 +69,6 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 	useEffect(() => {
 		const recalculateFee = async () => {
-
 			setIsLoadingFee(true);
 
 			const transactionFees = await calculate({
@@ -108,7 +114,9 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			loading={!fees || isLoadingFee}
 			gasPrice={gasPrice}
 			gasLimit={gasLimit}
-			step={10}
+			defaultGasLimit={GasLimit[type]}
+			minGasPrice={5}
+			step={1}
 			network={network}
 			profile={profile}
 			onChangeGasPrice={(value) => {

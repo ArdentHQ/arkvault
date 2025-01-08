@@ -27,13 +27,15 @@ interface InputFeeAdvancedProperties {
 	convert: (value?: number) => number;
 	disabled?: boolean;
 	exchangeTicker: string;
-	onChangeGasPrice: (value: string) => void;
+	onChangeGasPrice: (value: number) => void;
 	onChangeGasLimit: (value: number) => void;
 	showConvertedValue: boolean;
 	step: number;
 	network: Networks.Network;
-	gasPrice: string;
+	gasPrice: number;
 	gasLimit: number;
+	defaultGasLimit: number;
+	minGasPrice: number;
 }
 
 interface InputFeeSimpleProperties {
@@ -51,15 +53,17 @@ interface InputFeeProperties {
 	avg: number;
 	max: number;
 	step: number;
+	defaultGasLimit: number;
+	minGasPrice: number;
 	disabled?: boolean;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
 	loading?: boolean;
 	viewType?: InputFeeViewType;
 	selectedFeeOption?: InputFeeOption;
-	gasPrice: string;
+	gasPrice: number;
 	gasLimit: number;
-	onChangeGasPrice: (value: string) => void;
+	onChangeGasPrice: (value: number) => void;
 	onChangeGasLimit: (value: number) => void;
 	onChangeViewType?: (value: InputFeeViewType) => void;
 	onChangeFeeOption?: (value: InputFeeOption) => void;

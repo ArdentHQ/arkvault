@@ -16,6 +16,17 @@ import {
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { Switch } from "@/app/components/Switch";
 
+export const calculateGasFee = (gasPrice?: number, gasLimit?: number): number => {
+	if (!gasPrice || !gasLimit) {
+		return 0;
+	}
+
+	return BigNumber
+		.make(gasLimit)
+		.times(gasPrice)
+		.divide(1e9).toNumber();
+}
+
 export const InputFee: React.FC<InputFeeProperties> = memo(
 	({
 		min,
@@ -26,8 +37,10 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		network,
 		profile,
 		loading,
+		defaultGasLimit,
 		onChangeGasPrice,
 		onChangeGasLimit,
+		minGasPrice,
 		gasPrice,
 		gasLimit,
 		...properties
@@ -45,18 +58,18 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const options: InputFeeOptions = {
 			[InputFeeOption.Slow]: {
-				displayValue: min,
-				displayValueConverted: convert(min),
+				displayValue: calculateGasFee(min, gasLimit),
+				displayValueConverted: convert(calculateGasFee(min, gasLimit)),
 				label: t("TRANSACTION.FEES.SLOW"),
 			},
 			[InputFeeOption.Average]: {
-				displayValue: avg,
-				displayValueConverted: convert(avg),
+				displayValue: calculateGasFee(avg, gasLimit),
+				displayValueConverted: convert(calculateGasFee(avg, gasLimit)),
 				label: t("TRANSACTION.FEES.AVERAGE"),
 			},
 			[InputFeeOption.Fast]: {
-				displayValue: max,
-				displayValueConverted: convert(max),
+				displayValue: calculateGasFee(max, gasLimit),
+				displayValueConverted: convert(calculateGasFee(max, gasLimit)),
 				label: t("TRANSACTION.FEES.FAST"),
 			},
 		};
@@ -65,8 +78,8 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			properties.onChangeViewType?.(newValue);
 
 			if (newValue === InputFeeViewType.Simple) {
-				onChangeGasPrice(options[selectedFeeOption].displayValue.toString());
-				onChangeGasLimit(21_000);
+				onChangeGasPrice(options[selectedFeeOption].displayValue);
+				onChangeGasLimit(defaultGasLimit);
 			}
 		};
 
@@ -74,15 +87,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			properties.onChangeFeeOption?.(newValue);
 
 			const feeValue = options[newValue].displayValue;
-			onChangeGasPrice(feeValue?.toString());
-		};
-
-		const onChangeAdvancedGasPrice = (gasPrice: string) => {
-			onChangeGasPrice(BigNumber.make(gasPrice).divide(1e9).toString());
-		};
-
-		const onChangeAdvancedGasLimit = (gasLimit: number) => {
-			onChangeGasLimit(gasLimit);
+			onChangeGasPrice(feeValue);
 		};
 
 		const renderAdvanced = () => (
@@ -91,10 +96,16 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 				convert={convert}
 				disabled={disabled || loading}
 				exchangeTicker={exchangeTicker!}
-				onChangeGasPrice={onChangeAdvancedGasPrice}
-				onChangeGasLimit={onChangeAdvancedGasLimit}
+				defaultGasLimit={defaultGasLimit}
+				onChangeGasPrice={(gasPrice: number) => {
+					onChangeGasPrice(Number(gasPrice));
+				}}
+				onChangeGasLimit={(gasLimit: number) => {
+					onChangeGasLimit(Number(gasLimit));
+				}}
 				showConvertedValue={showConvertedValues}
 				step={step}
+				minGasPrice={minGasPrice}
 				gasPrice={gasPrice}
 				gasLimit={gasLimit}
 			/>
