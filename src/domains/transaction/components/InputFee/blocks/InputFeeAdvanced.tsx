@@ -70,7 +70,6 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	const gasFee = BigNumber.make(gasPrice).times(BigNumber.make(gasLimit)).divide(1e9).toNumber();
 	const convertedGasFee = useMemo(() => convert(+gasFee), [convert, gasFee]);
 
-
 	const convertedGasPrice = useMemo(() => convert(+gasPrice), [convert, gasPrice]);
 
 	return (

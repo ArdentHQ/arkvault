@@ -13,7 +13,7 @@ interface Properties {
 	profile: Contracts.IProfile;
 }
 
-const GasLimit: Record<Properties['type'], number> = {
+export const GasLimit: Record<Properties['type'], number> = {
 	delegateRegistration: 500_000,
 	delegateResignation: 150_000,
 	multiPayment: 21_000,
@@ -21,6 +21,8 @@ const GasLimit: Record<Properties['type'], number> = {
 	transfer: 21_000,
 	vote: 200_000,
 }
+
+export const MIN_GAS_PRICE = 5;
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
 	const { calculate } = useFees(profile);
@@ -79,7 +81,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			gasPrice={gasPrice}
 			gasLimit={gasLimit}
 			defaultGasLimit={GasLimit[type]}
-			minGasPrice={5}
+			minGasPrice={MIN_GAS_PRICE}
 			step={1}
 			network={network}
 			profile={profile}
