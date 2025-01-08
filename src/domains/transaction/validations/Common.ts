@@ -5,8 +5,9 @@ import { calculateGasFee } from "@/domains/transaction/components/InputFee/Input
 import { TransactionFees } from "@/types";
 
 export const common = (t: TFunction) => ({
-	fee: (_balance = 0, _network?: Networks.Network, _fees?: TransactionFees) => ({
+	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({
 		validate: () => {
+			console.log({balance, fees, network});
 			return true;
 		}
 	}),

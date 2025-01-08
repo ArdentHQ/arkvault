@@ -8,7 +8,6 @@ import { useStepMath } from "@/domains/transaction/components/InputFee/InputFee.
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
-import { BigNumber } from "@ardenthq/sdk-helpers";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 const GAS_LIMIT_STEP = 1000;
