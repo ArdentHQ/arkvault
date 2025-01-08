@@ -30,7 +30,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const { gasPrice } = getValues() as {gasPrice: number|undefined};
+				const { gasPrice } = getValues() as { gasPrice: number | undefined };
 
 				if (gasPrice === undefined) {
 					return true;
@@ -75,7 +75,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const { gasLimit } = getValues() as {gasLimit : number | undefined};
+				const { gasLimit } = getValues() as { gasLimit: number | undefined };
 
 				if (gasLimit === undefined) {
 					return true;
@@ -94,5 +94,4 @@ export const common = (t: TFunction) => ({
 			},
 		},
 	}),
-
 });

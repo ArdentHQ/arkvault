@@ -3,10 +3,7 @@ import React from "react";
 import { Amount } from "@/app/components/Amount";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { Skeleton } from "@/app/components/Skeleton";
-import {
-	InputFeeSimpleProperties,
-	InputFeeOption,
-} from "@/domains/transaction/components/InputFee/InputFee.contracts";
+import { InputFeeSimpleProperties, InputFeeOption } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 

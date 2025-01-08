@@ -21,11 +21,8 @@ export const calculateGasFee = (gasPrice?: number, gasLimit?: number): number =>
 		return 0;
 	}
 
-	return BigNumber
-		.make(gasLimit)
-		.times(gasPrice)
-		.divide(1e9).toNumber();
-}
+	return BigNumber.make(gasLimit).times(gasPrice).divide(1e9).toNumber();
+};
 
 export const InputFee: React.FC<InputFeeProperties> = memo(
 	({
@@ -58,21 +55,21 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const options: InputFeeOptions = {
 			[InputFeeOption.Slow]: {
-				gasPrice: min,
 				displayValue: calculateGasFee(min, gasLimit),
 				displayValueConverted: convert(calculateGasFee(min, gasLimit)),
+				gasPrice: min,
 				label: t("TRANSACTION.FEES.SLOW"),
 			},
 			[InputFeeOption.Average]: {
-				gasPrice: avg,
 				displayValue: calculateGasFee(avg, gasLimit),
 				displayValueConverted: convert(calculateGasFee(avg, gasLimit)),
+				gasPrice: avg,
 				label: t("TRANSACTION.FEES.AVERAGE"),
 			},
 			[InputFeeOption.Fast]: {
-				gasPrice: max,
 				displayValue: calculateGasFee(max, gasLimit),
 				displayValueConverted: convert(calculateGasFee(max, gasLimit)),
+				gasPrice: max,
 				label: t("TRANSACTION.FEES.FAST"),
 			},
 		};

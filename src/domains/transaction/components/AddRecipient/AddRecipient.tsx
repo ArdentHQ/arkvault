@@ -89,7 +89,8 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 		clearErrors,
 		formState: { errors },
 	} = useFormContext();
-	const { network, senderAddress, gasPrice, gasLimit, recipientAddress, amount, recipientAlias, isSendAllSelected } = watch();
+	const { network, senderAddress, gasPrice, gasLimit, recipientAddress, amount, recipientAlias, isSendAllSelected } =
+		watch();
 	const { sendTransfer } = useValidation();
 
 	const fee = calculateGasFee(gasPrice, gasLimit);
