@@ -71,19 +71,6 @@ describe("WalletIcons", () => {
 		walletSpy.mockRestore();
 	});
 
-	it("should render the multisignature icon", () => {
-		const hasSyncedWithNetworkSpy = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-
-		render(<WalletIcons wallet={wallet} />);
-
-		expect(screen.getByTestId("WalletIcon__Multisignature")).toBeInTheDocument();
-		expect(document.querySelector("svg#multi-signature")).toBeInTheDocument();
-
-		hasSyncedWithNetworkSpy.mockRestore();
-		isMultiSignatureSpy.mockRestore();
-	});
-
 	it("should render the test network icon", () => {
 		const walletSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 

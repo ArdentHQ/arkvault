@@ -1,17 +1,11 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import DelegateRegistration from "./delegate-registration.svg?react";
-import DelegateResignation from "./delegate-resignation.svg?react";
 import Multipayment from "./multipayment.svg?react";
-import Multisignature from "./multisignature.svg?react";
 import Received from "./received.svg?react";
 import Return from "./return.svg?react";
 import Sent from "./sent.svg?react";
-import Timelock from "./timelock.svg?react";
-import Transfer from "./transfer.svg?react";
 import Unvote from "./unvote.svg?react";
 import Vote from "./vote.svg?react";
-import VoteCombination from "./vote-combination.svg?react";
 import SendTransactionLight from "./send-transaction-light.svg?react";
 import SendTransactionDark from "./send-transaction-dark.svg?react";
 import SendTransactionLightGreen from "./send-transaction-light-green.svg?react";
@@ -22,11 +16,8 @@ import Mnemonic from "./mnemonic.svg?react";
 
 export const TransactionIcons: any = {
 	ConfirmTransaction,
-	DelegateRegistration,
-	DelegateResignation,
 	Mnemonic,
 	Multipayment,
-	Multisignature,
 	PendingTransaction,
 	Received,
 	Return,
@@ -35,9 +26,6 @@ export const TransactionIcons: any = {
 	SendTransactionLight,
 	SendTransactionLightGreen,
 	Sent,
-	Timelock,
-	Transfer,
 	Unvote,
 	Vote,
-	VoteCombination,
 };
