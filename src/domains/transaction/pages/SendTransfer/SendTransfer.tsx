@@ -184,7 +184,7 @@ export const SendTransfer = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = async (suppressWarning?: boolean) => {
+	const handleNext = async (_suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
 		const { network, senderAddress } = getValues();
@@ -193,10 +193,10 @@ export const SendTransfer = () => {
 
 		const nextStep = activeTab + 1;
 
-		if (nextStep === SendTransferStep.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-			setShowFeeWarning(true);
-			return;
-		}
+		// if (nextStep === SendTransferStep.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
+		// 	setShowFeeWarning(true);
+		// 	return;
+		// }
 
 		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
 			await handleSubmit(() => submit(true))();
