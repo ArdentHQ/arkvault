@@ -24,7 +24,6 @@ export default defineConfig((env) => {
 				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
 				server: {
-					sourcemap: false,
 					deps: {
 						fallbackCJS: true,
 					},
