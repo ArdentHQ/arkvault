@@ -2,7 +2,6 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import {
-	createTransactionMock,
 	env,
 	getDefaultProfileId,
 	mockNanoXTransport,
@@ -12,13 +11,12 @@ import {
 	syncFees,
 } from "@/utils/testing-library";
 import { SendExchangeTransfer } from "./SendExchangeTransfer";
-import userEvent from "@testing-library/user-event";
 import { afterAll, beforeEach, expect, MockInstance } from "vitest";
 import * as environmentHooks from "@/app/hooks/env";
 import { server, requestMock } from "@/tests/mocks/server";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
 import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
-import { renderHook, within } from "@testing-library/react";
+import { renderHook } from "@testing-library/react";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import { useTranslation } from "react-i18next";
 
@@ -28,15 +26,15 @@ let exchangeTransaction: Contracts.IExchangeTransaction;
 
 let useActiveProfileSpy: MockInstance;
 
-const selectSender = async () => {
-	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-
-	await expect(screen.findByText(/Select Sender/)).resolves.toBeVisible();
-
-	const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
-
-	await userEvent.click(firstAddress);
-};
+// const selectSender = async () => {
+// 	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+//
+// 	await expect(screen.findByText(/Select Sender/)).resolves.toBeVisible();
+//
+// 	const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+//
+// 	await userEvent.click(firstAddress);
+// };
 
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {

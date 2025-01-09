@@ -2,10 +2,8 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import {
-	createTransactionMock,
 	env,
 	getDefaultProfileId,
-	getDefaultWalletMnemonic,
 	render,
 	screen,
 	syncFees,
@@ -19,7 +17,6 @@ import { server, requestMock } from "@/tests/mocks/server";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
 import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
 import { renderHook, within } from "@testing-library/react";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import { useTranslation } from "react-i18next";
 
 let profile: Contracts.IProfile;
@@ -28,7 +25,7 @@ let exchangeTransaction: Contracts.IExchangeTransaction;
 
 let useActiveProfileSpy: MockInstance;
 
-const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
+// const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
 
 const selectSender = async () => {
 	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
@@ -40,14 +37,14 @@ const selectSender = async () => {
 	await userEvent.click(firstAddress);
 };
 
-const fillMnemonic = async () => {
-	// AuthenticationStep should be visible
-	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-	await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
-
-	await waitFor(() => expect(sendButton()).not.toBeDisabled());
-};
+// const fillMnemonic = async () => {
+// 	// AuthenticationStep should be visible
+// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+//
+// 	await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+//
+// 	await waitFor(() => expect(sendButton()).not.toBeDisabled());
+// };
 
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
