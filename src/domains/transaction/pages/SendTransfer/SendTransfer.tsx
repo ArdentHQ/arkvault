@@ -83,7 +83,7 @@ export const SendTransfer = () => {
 		handleSubmit,
 		getValues,
 		lastEstimatedExpiration,
-		values: { fees, network, senderAddress },
+		values: { network, senderAddress },
 		formState: { isDirty, isValid, isSubmitting },
 	} = useSendTransferForm(wallet);
 
@@ -138,8 +138,8 @@ export const SendTransfer = () => {
 	const [overwriteData, setOverwriteData] = useState<TransferFormData>({} as TransferFormData);
 
 	const [showQRModal, setShowQRModal] = useState(false);
-	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-		useFeeConfirmation(fee, fees);
+	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+	// 	useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		if (network) {
@@ -425,14 +425,15 @@ export const SendTransfer = () => {
 						newData={overwriteData}
 					/>
 
-					<FeeWarning
-						isOpen={showFeeWarning}
-						variant={feeWarningVariant}
-						onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}
-						onConfirm={(suppressWarning: boolean) =>
-							dismissFeeWarning(async () => await handleNext(true), suppressWarning)
-						}
-					/>
+					// @TODO enable when Mainsail has dynamic fees ready
+					{/*<FeeWarning*/}
+					{/*	isOpen={showFeeWarning}*/}
+					{/*	variant={feeWarningVariant}*/}
+					{/*	onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}*/}
+					{/*	onConfirm={(suppressWarning: boolean) =>*/}
+					{/*		dismissFeeWarning(async () => await handleNext(true), suppressWarning)*/}
+					{/*	}*/}
+					{/*/>*/}
 
 					<ConfirmSendTransaction
 						profile={activeProfile}
