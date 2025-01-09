@@ -21,8 +21,6 @@ import { useKeyup } from "@/app/hooks/use-keyup";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
-import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
@@ -138,6 +136,8 @@ export const SendTransfer = () => {
 	const [overwriteData, setOverwriteData] = useState<TransferFormData>({} as TransferFormData);
 
 	const [showQRModal, setShowQRModal] = useState(false);
+
+	// @TODO enable when Mainsail has dynamic fees ready
 	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 	// 	useFeeConfirmation(fee, fees);
 
@@ -184,7 +184,8 @@ export const SendTransfer = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = async (_suppressWarning?: boolean) => {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const handleNext = async (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
 		const { network, senderAddress } = getValues();
@@ -425,7 +426,6 @@ export const SendTransfer = () => {
 						newData={overwriteData}
 					/>
 
-					// @TODO enable when Mainsail has dynamic fees ready
 					{/*<FeeWarning*/}
 					{/*	isOpen={showFeeWarning}*/}
 					{/*	variant={feeWarningVariant}*/}
