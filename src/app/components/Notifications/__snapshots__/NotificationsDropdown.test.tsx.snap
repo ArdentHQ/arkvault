@@ -135,7 +135,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="grow font-semibold sm:px-4"
                     >
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-text"
+                        class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                       >
                         127d3...b10cd
                       </div>
@@ -482,7 +482,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     Method
                                   </div>
                                   <div
-                                    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                   >
                                     Transfer
                                   </div>
@@ -547,7 +547,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Amount
                                 </div>
                                 <div
-                                  class="font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                  class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                   data-testid="AmountLabel__wrapper"
                                 >
                                   <div

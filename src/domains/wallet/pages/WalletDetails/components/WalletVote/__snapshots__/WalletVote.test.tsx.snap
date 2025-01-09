@@ -2496,7 +2496,7 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
             Voting for
           </span>
           <div
-            class="text-theme-secondary-900 dark:text-theme-text"
+            class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
           >
             D8rr7...6YUYD
           </div>
@@ -2677,7 +2677,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
             Voting for
           </span>
           <div
-            class="text-theme-secondary-900 dark:text-theme-text"
+            class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
           >
             D8rr7...6YUYD
           </div>
@@ -2858,7 +2858,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
             Voting for
           </span>
           <div
-            class="text-theme-secondary-900 dark:text-theme-text"
+            class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
           >
             D8rr7...6YUYD
           </div>

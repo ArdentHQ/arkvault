@@ -211,7 +211,7 @@ exports[`LedgerConnectionStep > should render cancel screen 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 css-gk3cnl"
+        class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
       />
       <span
         class="animate-pulse font-semibold text-theme-secondary-text"

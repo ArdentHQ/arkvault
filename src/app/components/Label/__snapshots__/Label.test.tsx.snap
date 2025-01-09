@@ -3,7 +3,7 @@
 exports[`Label > should render 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500 text-base"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Label > should render 1`] = `
 exports[`Label > should render a large one 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500 text-lg"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500 text-lg"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`Label > should render a large one 1`] = `
 exports[`Label > should render a small one 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500 text-sm"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500 text-sm"
   />
 </div>
 `;
@@ -27,7 +27,7 @@ exports[`Label > should render a small one 1`] = `
 exports[`Label > should render as solid 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 bg-theme-primary-100 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 bg-theme-primary-100 text-base"
   />
 </div>
 `;
@@ -35,7 +35,7 @@ exports[`Label > should render as solid 1`] = `
 exports[`Label > should render as solid and danger 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-danger-500 border-theme-danger-100 bg-theme-danger-100 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-500 border-theme-danger-100 bg-theme-danger-100 text-base"
   />
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`Label > should render as solid and danger 1`] = `
 exports[`Label > should render as solid and default 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-success-600 border-theme-success-200 bg-theme-success-200 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 bg-theme-success-200 text-base"
   />
 </div>
 `;
@@ -51,7 +51,7 @@ exports[`Label > should render as solid and default 1`] = `
 exports[`Label > should render as solid and primary 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 bg-theme-primary-100 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 bg-theme-primary-100 text-base"
   />
 </div>
 `;
@@ -59,7 +59,7 @@ exports[`Label > should render as solid and primary 1`] = `
 exports[`Label > should render as solid and success 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-success-600 border-theme-success-200 bg-theme-success-200 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 bg-theme-success-200 text-base"
   />
 </div>
 `;
@@ -67,7 +67,7 @@ exports[`Label > should render as solid and success 1`] = `
 exports[`Label > should render danger color 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base"
   />
 </div>
 `;
@@ -75,7 +75,7 @@ exports[`Label > should render danger color 1`] = `
 exports[`Label > should render neutral color 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-base"
   />
 </div>
 `;
@@ -83,7 +83,7 @@ exports[`Label > should render neutral color 1`] = `
 exports[`Label > should render primary color 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500 text-base"
   />
 </div>
 `;
@@ -91,7 +91,7 @@ exports[`Label > should render primary color 1`] = `
 exports[`Label > should render success color 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base"
   />
 </div>
 `;
@@ -99,7 +99,7 @@ exports[`Label > should render success color 1`] = `
 exports[`Label > should render warning color 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 text-base"
   />
 </div>
 `;
