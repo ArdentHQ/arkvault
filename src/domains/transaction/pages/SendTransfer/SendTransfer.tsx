@@ -21,6 +21,7 @@ import { useKeyup } from "@/app/hooks/use-keyup";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
