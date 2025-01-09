@@ -83,7 +83,7 @@ export const SendTransfer = () => {
 		handleSubmit,
 		getValues,
 		lastEstimatedExpiration,
-		values: { fee, fees, network, senderAddress },
+		values: { fees, network, senderAddress },
 		formState: { isDirty, isValid, isSubmitting },
 	} = useSendTransferForm(wallet);
 
