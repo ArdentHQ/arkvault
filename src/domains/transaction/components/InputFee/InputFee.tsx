@@ -21,6 +21,7 @@ export const calculateGasFee = (gasPrice?: number, gasLimit?: number): number =>
 		return 0;
 	}
 
+	// dividing by 1e9 to convert gwei to ark
 	return BigNumber.make(gasLimit).times(gasPrice).divide(1e9).toNumber();
 };
 
