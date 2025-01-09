@@ -100,6 +100,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -386,6 +387,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -682,6 +684,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -969,6 +972,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -1255,6 +1259,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -1541,6 +1546,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -1967,6 +1973,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -2383,6 +2390,7 @@ exports[`AddressRow > should render with active validator 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -2875,6 +2883,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <div
                 class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
@@ -3131,6 +3140,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <div
                 class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
@@ -3595,6 +3605,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <div
                 class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
@@ -3851,6 +3862,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <div
                 class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
@@ -4107,6 +4119,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
@@ -4393,6 +4406,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
+              data-testid="AddressRow__wallet-vote"
             >
               <a
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
