@@ -27,6 +27,7 @@ export default defineConfig(() => {
 			rollupOptions: {
 				// https://rollupjs.org/guide/en/#big-list-of-options
 				output: {
+					sourcemap: false,
 					manualChunks: {
 						react: [
 							"react",
@@ -130,6 +131,17 @@ export default defineConfig(() => {
 					],
 				},
 			}),
+			{
+				// Vite does not ignore sourcemaps for PSDK files, even when `server.sourcemap` or `rollupOptions.output.sourcemap` are set to `false`.
+				// This plugin explicitly removes sourcemaps by unsetting the `mappings` field, which potentially improves build performance as well.
+				name: "ignore-sourcemaps",
+				transform(code) {
+					return {
+						code,
+						map: { mappings: "" },
+					};
+				},
+			},
 		],
 	};
 });
