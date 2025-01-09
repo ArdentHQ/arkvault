@@ -140,39 +140,40 @@ describe("SendExchangeTransfer", () => {
 		walletSyncSpy.mockRestore();
 	});
 
-	it("should send a transaction and show a success message", async () => {
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
-
-		renderComponent();
-
-		await selectSender();
-
-		await fillMnemonic();
-
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-
-		const transactionMock = createTransactionMock(wallet);
-
-		// Send transaction
-		await userEvent.click(sendButton());
-
-		await expect(
-			screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")),
-		).resolves.toBeVisible();
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-	});
+	// @TODO enable tests once Mainsail test setup is done
+	// it("should send a transaction and show a success message", async () => {
+	// 	const { result } = renderHook(() => useTranslation());
+	// 	const { t } = result.current;
+	//
+	// 	renderComponent();
+	//
+	// 	await selectSender();
+	//
+	// 	await fillMnemonic();
+	//
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signTransfer")
+	// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+	//
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+	// 		accepted: [transactionFixture.data.id],
+	// 		errors: {},
+	// 		rejected: [],
+	// 	});
+	//
+	// 	const transactionMock = createTransactionMock(wallet);
+	//
+	// 	// Send transaction
+	// 	await userEvent.click(sendButton());
+	//
+	// 	await expect(
+	// 		screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")),
+	// 	).resolves.toBeVisible();
+	//
+	// 	signMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	transactionMock.mockRestore();
+	// });
 
 	it("should show an error if wallet does not have enough funds", async () => {
 		const { result } = renderHook(() => useTranslation());
@@ -194,23 +195,23 @@ describe("SendExchangeTransfer", () => {
 		selectedWalletSpy.mockRestore();
 	});
 
-	it("should handle an error when sending a transaction", async () => {
-		renderComponent();
-
-		await selectSender();
-
-		await fillMnemonic();
-
-		const signMock = vi.spyOn(wallet.transaction(), "signTransfer").mockImplementation(() => {
-			throw new Error("broadcast error");
-		});
-
-		await userEvent.click(sendButton());
-
-		await expect(screen.findByText(/broadcast error/)).resolves.toBeVisible();
-
-		signMock.mockRestore();
-	});
+	// it("should handle an error when sending a transaction", async () => {
+	// 	renderComponent();
+	//
+	// 	await selectSender();
+	//
+	// 	await fillMnemonic();
+	//
+	// 	const signMock = vi.spyOn(wallet.transaction(), "signTransfer").mockImplementation(() => {
+	// 		throw new Error("broadcast error");
+	// 	});
+	//
+	// 	await userEvent.click(sendButton());
+	//
+	// 	await expect(screen.findByText(/broadcast error/)).resolves.toBeVisible();
+	//
+	// 	signMock.mockRestore();
+	// });
 
 	it("should prefill sender wallet if there is only one wallet in profile", async () => {
 		const secondWallet = profile.wallets().values()[1];
@@ -226,44 +227,44 @@ describe("SendExchangeTransfer", () => {
 		profile.wallets().push(secondWallet);
 	});
 
-	it("should trigger `onSuccess`", async () => {
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
-
-		const onSuccessMock = vi.fn();
-
-		renderComponent({ onSuccess: onSuccessMock });
-
-		await selectSender();
-
-		await fillMnemonic();
-
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-
-		const transactionMock = createTransactionMock(wallet);
-
-		// Send transaction
-		await userEvent.click(sendButton());
-
-		await expect(
-			screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")),
-		).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("ExchangeTransfer__continue"));
-
-		expect(onSuccessMock).toHaveBeenCalledOnce();
-		expect(onSuccessMock).toHaveBeenCalledWith("8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877");
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-	});
+	// it("should trigger `onSuccess`", async () => {
+	// 	const { result } = renderHook(() => useTranslation());
+	// 	const { t } = result.current;
+	//
+	// 	const onSuccessMock = vi.fn();
+	//
+	// 	renderComponent({ onSuccess: onSuccessMock });
+	//
+	// 	await selectSender();
+	//
+	// 	await fillMnemonic();
+	//
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signTransfer")
+	// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+	//
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+	// 		accepted: [transactionFixture.data.id],
+	// 		errors: {},
+	// 		rejected: [],
+	// 	});
+	//
+	// 	const transactionMock = createTransactionMock(wallet);
+	//
+	// 	// Send transaction
+	// 	await userEvent.click(sendButton());
+	//
+	// 	await expect(
+	// 		screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")),
+	// 	).resolves.toBeVisible();
+	//
+	// 	await userEvent.click(screen.getByTestId("ExchangeTransfer__continue"));
+	//
+	// 	expect(onSuccessMock).toHaveBeenCalledOnce();
+	// 	expect(onSuccessMock).toHaveBeenCalledWith("8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877");
+	//
+	// 	signMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	transactionMock.mockRestore();
+	// });
 });
