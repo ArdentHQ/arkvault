@@ -14,7 +14,7 @@ export const AddressLink = ({ children, explorerLink }: { explorerLink: string; 
 );
 
 export const AddressLabel = ({ children, className }: { children: React.ReactNode; className?: string }) => (
-	<div className={twMerge("text-theme-secondary-900 dark:text-theme-text", className)}>
+	<div className={twMerge("no-ligatures text-theme-secondary-900 dark:text-theme-text", className)}>
 		<Truncate truncFrom="middle">{children}</Truncate>
 	</div>
 );
