@@ -21,8 +21,8 @@ export const common = (t: TFunction) => ({
 				}
 
 				if (gasLimit < defaultGasLimit) {
-					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW ", {
-						field: t("COMMON.FEE"),
+					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW", {
+						minGasLimit: defaultGasLimit,
 					});
 				}
 
@@ -61,13 +61,13 @@ export const common = (t: TFunction) => ({
 			valid: (gasPrice: number) => {
 				if (gasPrice === 0) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
-						field: t("COMMON.GAS_FEE"),
+						field: t("COMMON.GAS_PRICE"),
 					});
 				}
 
 				if (gasPrice < minGasPrice) {
-					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW ", {
-						field: t("COMMON.FEE"),
+					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW", {
+						minGasPrice,
 					});
 				}
 
