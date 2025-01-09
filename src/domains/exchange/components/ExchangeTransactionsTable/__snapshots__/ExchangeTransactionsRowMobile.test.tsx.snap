@@ -180,7 +180,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -208,7 +208,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -404,7 +404,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -432,7 +432,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -628,7 +628,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -656,7 +656,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -853,7 +853,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -881,7 +881,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -1119,7 +1119,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -1147,7 +1147,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -1348,7 +1348,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -1376,7 +1376,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -1569,7 +1569,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
@@ -1597,7 +1597,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
@@ -1791,7 +1791,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
@@ -1819,7 +1819,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
+                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                 data-testid="AmountLabel__wrapper"
               >
                 <div

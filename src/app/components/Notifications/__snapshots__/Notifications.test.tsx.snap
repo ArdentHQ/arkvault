@@ -94,7 +94,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                           class="h-5"
                         >
                           <div
-                            class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                            class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
@@ -176,7 +176,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                           class="h-5"
                         >
                           <div
-                            class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
@@ -258,7 +258,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                           class="h-5"
                         >
                           <div
-                            class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
@@ -488,7 +488,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                           class="h-5"
                         >
                           <div
-                            class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                            class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
@@ -570,7 +570,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                           class="h-5"
                         >
                           <div
-                            class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
@@ -652,7 +652,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                           class="h-5"
                         >
                           <div
-                            class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
