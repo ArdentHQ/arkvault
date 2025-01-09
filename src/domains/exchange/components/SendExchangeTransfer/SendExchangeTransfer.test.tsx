@@ -1,14 +1,7 @@
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	syncFees,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncFees, waitFor } from "@/utils/testing-library";
 import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import userEvent from "@testing-library/user-event";
 import { afterAll, beforeEach, expect, MockInstance } from "vitest";
