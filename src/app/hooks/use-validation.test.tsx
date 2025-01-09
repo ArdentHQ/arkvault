@@ -15,6 +15,8 @@ const getValuesMock = () => ({
 	gasPrice: 10
 })
 
+const LOW_BALANCE_MESSAGE = "The balance is too low";
+
 describe("useValidation hook", () => {
 	describe("Common#gasPrice", () => {
 		it("should ignore validation if network not provided", () => {
@@ -62,7 +64,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasPrice(0, getValuesMock, 5, mockNetwork);
 			const isValid = validation.validate.valid(6);
 
-			expect(isValid).contains("The balance is too low")
+			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
 
 		it("should error for negative balance", () => {
@@ -74,7 +76,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasPrice(-5, getValuesMock, 5, mockNetwork);
 			const isValid = validation.validate.valid(6);
 
-			expect(isValid).contains("The balance is too low")
+			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
 
 		it("should error for lower than fee balance", () => {
@@ -87,7 +89,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasPrice(balance, getValuesMock, 5, mockNetwork);
 			const isValid = validation.validate.valid(7000000);
 
-			expect(isValid).contains("The balance is too low");
+			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
 	});
 
@@ -137,7 +139,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasLimit(0, getValuesMock, 21_000, mockNetwork);
 			const isValid = validation.validate.valid(21_000);
 
-			expect(isValid).contains("The balance is too low")
+			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
 
 		it("should error for negative balance", () => {
@@ -149,7 +151,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasLimit(-5, getValuesMock, 21_000, mockNetwork);
 			const isValid = validation.validate.valid(21_000);
 
-			expect(isValid).contains("The balance is too low")
+			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
 
 		it("should error for lower than fee balance", () => {
@@ -162,7 +164,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasLimit(balance, getValuesMock, 21_000, mockNetwork);
 			const isValid = validation.validate.valid(7000000);
 
-			expect(isValid).contains("The balance is too low");
+			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
 	});
 });
