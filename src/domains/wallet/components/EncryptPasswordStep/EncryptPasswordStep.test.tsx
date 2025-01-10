@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { EncryptPasswordStep } from "./EncryptPasswordStep";
-import { renderWithForm, screen, waitFor, act } from "@/utils/testing-library";
+import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 describe("EncryptPasswordStep", () => {
 	const passwordValue = "123";
