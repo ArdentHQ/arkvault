@@ -37,7 +37,7 @@ export const NewWalletHeader = ({
 	return (
 		<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 py-3 dark:bg-theme-dark-950">
 			<div className="flex w-full flex-row items-center justify-between px-4">
-				<div className="h-fit flex flex-row gap-1 items-center">
+				<div className="flex h-fit flex-row items-center gap-1">
 					<p className="hidden text-base font-semibold leading-5 text-theme-secondary-900 sm:block">
 						{t("COMMON.VIEWING")}:
 					</p>
@@ -52,7 +52,7 @@ export const NewWalletHeader = ({
 				<div className="flex flex-row items-center gap-1">
 					<Button
 						variant="secondary"
-						className="flex h-6 w-6 items-center justify-center p-0 sm:w-auto sm:px-2 sm:h-8"
+						className="flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2"
 						onClick={handleImport}
 					>
 						<Icon name="ArrowTurnDownBracket" size="md" />
@@ -61,7 +61,7 @@ export const NewWalletHeader = ({
 					<Divider type="vertical" className="h-4 border-theme-primary-300" />
 					<Button
 						variant="secondary"
-						className="flex h-6 w-6 items-center justify-center p-0 sm:w-auto sm:px-2 sm:h-8"
+						className="flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2"
 						onClick={handleCreate}
 					>
 						<Icon name="Plus" size="md" />
@@ -76,7 +76,7 @@ export const NewWalletHeader = ({
 						<p className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 sm:block">
 							{t("COMMON.ADDRESS")}
 						</p>
-						<div className="w-32 h-[17px]">
+						<div className="h-[17px] w-32">
 							<Address
 								alignment="center"
 								address={wallet.address()}
@@ -102,7 +102,7 @@ export const NewWalletHeader = ({
 							>
 								<Icon
 									name="CopyKey"
-                                    size="md"
+									size="md"
 									className="text-theme-secondary-700 hover:text-theme-secondary-500"
 								/>
 							</Clipboard>
@@ -110,7 +110,7 @@ export const NewWalletHeader = ({
 					</div>
 				</div>
 				<Divider type="horizontal" className="my-0 h-px border-dashed border-theme-secondary-300" />
-				<div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center sm:w-full sm:gap-0">
+				<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
 					<div className="flex flex-col gap-3 sm:gap-2" data-testid="WalletHeader__balance">
 						<div className="flex flex-row items-center text-sm font-semibold leading-[17px] text-theme-secondary-700">
 							<p>{t("COMMON.TOTAL_BALANCE")}</p>
