@@ -18,6 +18,7 @@ import { PendingTransactions } from "@/domains/transaction/components/Transactio
 import { useBreakpoint } from "@/app/hooks";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
+import { NewWalletHeader } from "./components/WalletHeaderMobile/NewWalletHeader";
 
 export const WalletDetails = () => {
 	const [signedTransactionModalItem, setSignedTransactionModalItem] = useState<DTO.ExtendedSignedTransactionData>();
@@ -121,6 +122,8 @@ export const WalletDetails = () => {
 						/>
 					</Section>
 				)}
+
+				<NewWalletHeader profile={activeProfile} wallet={activeWallet} onUpdate={setIsUpdatingWallet} />
 
 				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
 					<TabScroll>
