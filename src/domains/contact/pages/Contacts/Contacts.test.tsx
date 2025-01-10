@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -531,5 +530,4 @@ describe("Contacts", () => {
 		contactsSpy.mockRestore();
 		resetBlankProfileNetworksMock();
 	});
-
 });
