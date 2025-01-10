@@ -50,19 +50,19 @@ describe("useWalletActions", () => {
 
 		act(() => {
 			current.handleCreate();
-		})
+		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/create`);
 
 		act(() => {
 			current.handleImport();
-		})
+		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/import`);
 
 		act(() => {
 			current.handleImportLedger();
-		})
+		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/import/ledger`);
 	});

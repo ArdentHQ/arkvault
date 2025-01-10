@@ -9,7 +9,6 @@ import { browser } from "@/utils/platform";
 import { renderHook } from "@testing-library/react";
 
 describe("useTheme", () => {
-
 	describe("theme", () => {
 		it("should return 'dark' if shouldUseDarkColors is true", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
@@ -62,14 +61,13 @@ describe("useTheme", () => {
 
 			act(() => {
 				current.setTheme(theme === "light" ? "dark" : "light");
-			})
+			});
 
 			expect(document.querySelector("html")).not.toHaveClass(theme);
 
 			act(() => {
 				current.setTheme(theme as ViewingModeType);
-			})
-
+			});
 
 			expect(document.querySelector("html")).toHaveClass(theme);
 		});
@@ -99,11 +97,13 @@ describe("useTheme", () => {
 				writable: true,
 			});
 
-			const { result: { current }, } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
 			act(() => {
 				current.setTheme("system");
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("dark");
 			expect(document.querySelector("html")).toHaveClass("firefox-scrollbar-dark");
@@ -122,13 +122,13 @@ describe("useTheme", () => {
 
 			act(() => {
 				current.setTheme("light");
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("firefox-scrollbar-light");
 
 			act(() => {
 				current.setTheme("dark");
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("firefox-scrollbar-dark");
 
@@ -136,7 +136,7 @@ describe("useTheme", () => {
 
 			act(() => {
 				current.setTheme("light");
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("firefox-scrollbar-dark");
 
@@ -155,13 +155,13 @@ describe("useTheme", () => {
 
 			act(() => {
 				current.setTheme("dark");
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("dark");
 
 			act(() => {
 				current.setProfileTheme(profile);
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("light");
 		});
@@ -176,13 +176,13 @@ describe("useTheme", () => {
 
 			act(() => {
 				current.setTheme("light");
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("light");
 
 			act(() => {
 				current.setProfileTheme(profile);
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("light");
 		});
@@ -208,7 +208,7 @@ describe("useTheme", () => {
 
 			act(() => {
 				current.setTheme(systemTheme);
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass(systemTheme);
 
@@ -216,13 +216,13 @@ describe("useTheme", () => {
 
 			act(() => {
 				current.setTheme(profileTheme as Theme);
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass(profileTheme);
 
 			act(() => {
 				current.resetProfileTheme(profile);
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass(systemTheme);
 			expect(profile.appearance().get("theme")).toBe(systemTheme);
@@ -239,13 +239,13 @@ describe("useTheme", () => {
 
 			act(() => {
 				current.setTheme("dark");
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("dark");
 
 			act(() => {
 				current.resetTheme();
-			})
+			});
 
 			expect(document.querySelector("html")).toHaveClass("light");
 		});

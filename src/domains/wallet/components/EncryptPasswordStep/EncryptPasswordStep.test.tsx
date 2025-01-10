@@ -12,7 +12,7 @@ describe("EncryptPasswordStep", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
-		})
+		});
 		expect(asFragment).toMatchSnapshot();
 	});
 

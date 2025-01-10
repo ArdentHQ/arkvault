@@ -84,7 +84,7 @@ describe("App Router", () => {
 
 		act(() => {
 			history.push(`/profiles/${getDefaultProfileId()}/prompt`);
-		})
+		});
 
 		await userEvent.click(screen.getByTestId("prompt_action"));
 		expect(screen.getByTestId("ConfirmationModal")).toBeInTheDocument();
@@ -239,7 +239,7 @@ describe("App Main", () => {
 
 		act(() => {
 			onProfileUpdated();
-		})
+		});
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
 	});

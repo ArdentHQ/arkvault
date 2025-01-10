@@ -83,7 +83,7 @@ describe("HeaderSearchInput", () => {
 
 		await waitFor(() => {
 			expect(onSearch).toHaveBeenCalledWith("test");
-		})
+		});
 	});
 
 	it("should set custom debounce timeout form props", async () => {
@@ -97,6 +97,6 @@ describe("HeaderSearchInput", () => {
 
 		await waitFor(() => {
 			expect(onSearch).toHaveBeenCalledWith("test");
-		})
+		});
 	});
 });

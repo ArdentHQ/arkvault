@@ -573,7 +573,7 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => {
 			expect(screen.queryAllByTestId("NetworkOption")).toHaveLength(2);
-		})
+		});
 
 		networkSpy.mockRestore();
 		ledgerSpy.mockRestore();

@@ -124,7 +124,7 @@ describe("HeaderSearchBar", () => {
 
 		await waitFor(() => {
 			expect(onSearch).toHaveBeenCalledWith("test");
-		})
+		});
 	});
 
 	it("should set custom debounce timeout form props", async () => {
@@ -139,7 +139,7 @@ describe("HeaderSearchBar", () => {
 
 		await waitFor(() => {
 			expect(onSearch).toHaveBeenCalledWith("test");
-		})
+		});
 	});
 
 	it("should always show clear button", async () => {

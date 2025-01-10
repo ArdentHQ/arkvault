@@ -8,7 +8,7 @@ import crypto from "crypto";
 import "jest-styled-components";
 
 import { server } from "./src/tests/mocks/server";
-import { actWarningsAsErrors } from "./src/utils/test-plugins"
+import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
 
 expect.extend(matchers);

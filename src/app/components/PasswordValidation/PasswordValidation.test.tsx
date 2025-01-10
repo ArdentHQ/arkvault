@@ -27,7 +27,7 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordValidation__password")).toBeInTheDocument();
-		})
+		});
 	});
 
 	it("should render password rules", async () => {

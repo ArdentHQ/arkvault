@@ -529,7 +529,7 @@ describe("Welcome with deeplink", () => {
 
 		act(() => {
 			history.push(path);
-		})
+		});
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
 

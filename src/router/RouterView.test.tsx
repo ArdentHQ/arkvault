@@ -1,4 +1,3 @@
-
 import { createHashHistory } from "history";
 import React from "react";
 import { MemoryRouter, Router, withRouter } from "react-router-dom";
@@ -31,7 +30,7 @@ describe("RouterView", () => {
 
 		act(() => {
 			history.push("/test");
-		})
+		});
 
 		render(
 			<Router history={history}>
@@ -46,11 +45,11 @@ describe("RouterView", () => {
 
 		act(() => {
 			history.push("/test2");
-		})
+		});
 
 		act(() => {
 			history.replace("/test");
-		})
+		});
 
 		expect(windowSpy).toHaveBeenCalledTimes(2);
 	});
@@ -61,7 +60,7 @@ describe("RouterView", () => {
 		const history = createHashHistory();
 		act(() => {
 			history.push("/test");
-		})
+		});
 
 		render(
 			<Router history={history}>
@@ -69,14 +68,13 @@ describe("RouterView", () => {
 			</Router>,
 		);
 
-
 		act(() => {
 			history.push("/test");
-		})
+		});
 
 		act(() => {
 			history.replace("/test");
-		})
+		});
 
 		expect(windowSpy).toHaveBeenCalledTimes(1);
 	});
@@ -89,7 +87,7 @@ describe("RouterView", () => {
 
 		act(() => {
 			history.replace("/test");
-		})
+		});
 
 		render(
 			<Router history={history}>
@@ -122,7 +120,7 @@ describe("RouterView", () => {
 		const history = createHashHistory();
 		act(() => {
 			history.push("/test");
-		})
+		});
 
 		render(
 			<Router history={history}>

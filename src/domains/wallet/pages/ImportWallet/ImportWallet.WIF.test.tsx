@@ -1,5 +1,3 @@
-
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -129,7 +127,7 @@ describe("ImportWallet WIF", () => {
 		// Trigger validation
 		await act(async () => {
 			await form.trigger("value");
-		})
+		});
 
 		expect(container).toMatchSnapshot();
 
