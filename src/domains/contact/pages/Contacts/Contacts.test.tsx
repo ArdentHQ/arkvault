@@ -494,7 +494,26 @@ describe("Contacts", () => {
 	it("should disable send button when there are no wallets with the same network", async () => {
 		const blankProfile = await env.profiles().create("empty");
 
+		const resetBlankProfileNetworksMock = mockProfileWithPublicAndTestNetworks(blankProfile);
+
 		expect(blankProfile.wallets().count()).toBe(0);
+
+		const contactMainnet = createContact(
+			blankProfile,
+			"contact mainnet",
+			"AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			true,
+		);
+		const contactDevnet = createContact(
+			blankProfile,
+			"contact devnet",
+			"D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			false,
+		);
+
+		const contactsSpy = vi
+			.spyOn(blankProfile.contacts(), "values")
+			.mockReturnValue([contactMainnet, contactDevnet]);
 
 		renderComponent(blankProfile.id());
 
@@ -510,4 +529,5 @@ describe("Contacts", () => {
 
 		expect(screen.getByText(translations.VALIDATION.NO_WALLETS)).toBeInTheDocument();
 	});
+
 });
