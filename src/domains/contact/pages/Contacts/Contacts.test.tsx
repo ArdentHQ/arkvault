@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -528,6 +528,8 @@ describe("Contacts", () => {
 		await userEvent.hover(screen.getAllByTestId("ContactListItem__send-button-wrapper")[0]);
 
 		expect(screen.getByText(translations.VALIDATION.NO_WALLETS)).toBeInTheDocument();
+		contactsSpy.mockRestore();
+		resetBlankProfileNetworksMock();
 	});
 
 });
