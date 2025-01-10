@@ -1,10 +1,10 @@
-/* eslint-disable testing-library/no-node-access */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { useTheme, ViewingModeType } from "@/app/hooks/use-theme";
 import { Theme } from "@/types";
 import * as themeUtils from "@/utils/theme";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, act } from "@/utils/testing-library";
 import { browser } from "@/utils/platform";
 import { renderHook } from "@testing-library/react";
 
@@ -59,11 +59,16 @@ describe("useTheme", () => {
 				result: { current },
 			} = renderHook(() => useTheme());
 
-			current.setTheme(theme === "light" ? "dark" : "light");
+			act(() => {
+				current.setTheme(theme === "light" ? "dark" : "light");
+			})
 
 			expect(document.querySelector("html").classList.contains(theme)).toBe(false);
 
-			current.setTheme(theme as ViewingModeType);
+			act(() => {
+				current.setTheme(theme as ViewingModeType);
+			})
+
 
 			expect(document.querySelector("html").classList.contains(theme)).toBe(true);
 		});
@@ -93,10 +98,11 @@ describe("useTheme", () => {
 				writable: true,
 			});
 
-			const {
-				result: { current },
-			} = renderHook(() => useTheme());
-			current.setTheme("system");
+			const { result: { current }, } = renderHook(() => useTheme());
+
+			act(() => {
+				current.setTheme("system");
+			})
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(false);
 			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
@@ -114,17 +120,24 @@ describe("useTheme", () => {
 			const {
 				result: { current },
 			} = renderHook(() => useTheme());
-			current.setTheme("light");
+
+			act(() => {
+				current.setTheme("light");
+			})
 
 			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(true);
 
-			current.setTheme("dark");
+			act(() => {
+				current.setTheme("dark");
+			})
 
 			expect(document.documentElement.classList.contains("firefox-scrollbar-dark")).toBe(true);
 
 			overflowOverlayMock.mockReturnValue(true);
 
-			current.setTheme("light");
+			act(() => {
+				current.setTheme("light");
+			})
 
 			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(false);
 
@@ -140,12 +153,17 @@ describe("useTheme", () => {
 			const {
 				result: { current },
 			} = renderHook(() => useTheme());
-			current.setTheme("dark");
+
+			act(() => {
+				current.setTheme("dark");
+			})
 
 			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 			expect(document.querySelector("html").classList.contains("light")).toBe(false);
 
-			current.setProfileTheme(profile);
+			act(() => {
+				current.setProfileTheme(profile);
+			})
 
 			expect(document.querySelector("html").classList.contains("dark")).toBe(false);
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
@@ -159,11 +177,15 @@ describe("useTheme", () => {
 				result: { current },
 			} = renderHook(() => useTheme());
 
-			current.setTheme("light");
+			act(() => {
+				current.setTheme("light");
+			})
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 
-			current.setProfileTheme(profile);
+			act(() => {
+				current.setProfileTheme(profile);
+			})
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 		});
@@ -187,16 +209,23 @@ describe("useTheme", () => {
 				result: { current },
 			} = renderHook(() => useTheme());
 
-			current.setTheme(systemTheme);
+			act(() => {
+				current.setTheme(systemTheme);
+			})
 
 			expect(document.querySelector("html").classList.contains(systemTheme)).toBe(true);
 
 			profile.settings().set(Contracts.ProfileSetting.Theme, profileTheme);
-			current.setTheme(profileTheme as Theme);
+
+			act(() => {
+				current.setTheme(profileTheme as Theme);
+			})
 
 			expect(document.querySelector("html").classList.contains(profileTheme)).toBe(true);
 
-			current.resetProfileTheme(profile);
+			act(() => {
+				current.resetProfileTheme(profile);
+			})
 
 			expect(document.querySelector("html").classList.contains(systemTheme)).toBe(true);
 			expect(profile.appearance().get("theme")).toBe(systemTheme);
@@ -210,11 +239,16 @@ describe("useTheme", () => {
 			const {
 				result: { current },
 			} = renderHook(() => useTheme());
-			current.setTheme("dark");
+
+			act(() => {
+				current.setTheme("dark");
+			})
 
 			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 
-			current.resetTheme();
+			act(() => {
+				current.resetTheme();
+			})
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 		});

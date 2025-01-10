@@ -12,6 +12,7 @@ import {
 	render,
 	screen,
 	waitFor,
+	act,
 } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
@@ -81,35 +82,23 @@ describe("App Router", () => {
 			expect(screen.getByTestId("prompt_action")).toBeInTheDocument();
 		});
 
-		history.push(`/profiles/${getDefaultProfileId()}/prompt`);
+		act(() => {
+			history.push(`/profiles/${getDefaultProfileId()}/prompt`);
+		})
 
-		userEvent.click(screen.getByTestId("prompt_action"));
+		await userEvent.click(screen.getByTestId("prompt_action"));
+		expect(screen.getByTestId("ConfirmationModal")).toBeInTheDocument();
 
-		await waitFor(() => {
-			expect(screen.getByTestId("ConfirmationModal")).toBeInTheDocument();
-		});
+		await userEvent.click(screen.getByTestId("ConfirmationModal__no-button"));
 
-		userEvent.click(screen.getByTestId("ConfirmationModal__no-button"));
+		expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
+		expect(screen.getByTestId("prompt_action")).toBeInTheDocument();
 
-		await waitFor(() => {
-			expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
-		});
+		await userEvent.click(screen.getByTestId("prompt_action"));
+		expect(screen.getByTestId("ConfirmationModal__yes-button")).toBeInTheDocument();
 
-		await waitFor(() => {
-			expect(screen.getByTestId("prompt_action")).toBeInTheDocument();
-		});
-
-		userEvent.click(screen.getByTestId("prompt_action"));
-
-		await waitFor(() => {
-			expect(screen.getByTestId("ConfirmationModal__yes-button")).toBeInTheDocument();
-		});
-
-		userEvent.click(screen.getByTestId("ConfirmationModal__yes-button"));
-
-		await waitFor(() => {
-			expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
-		});
+		await userEvent.click(screen.getByTestId("ConfirmationModal__yes-button"));
+		expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
 	});
 });
 
@@ -241,13 +230,16 @@ describe("App Main", () => {
 		});
 
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
+
 		history.push(profileUrl);
 
 		renderComponent(profileUrl, { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 
-		onProfileUpdated();
+		act(() => {
+			onProfileUpdated();
+		})
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
 	});

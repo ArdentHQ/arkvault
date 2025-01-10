@@ -9,7 +9,7 @@ import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
 const passwordInput = () => screen.getByTestId("PasswordValidation__password");
 
 describe("PasswordValidation", () => {
-	it("should render", () => {
+	it("should render", async () => {
 		renderWithForm(
 			<PasswordValidation
 				confirmPasswordField="confirmPassword"
@@ -25,7 +25,9 @@ describe("PasswordValidation", () => {
 			},
 		);
 
-		expect(screen.getByTestId("PasswordValidation__password")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("PasswordValidation__password")).toBeInTheDocument();
+		})
 	});
 
 	it("should render password rules", async () => {

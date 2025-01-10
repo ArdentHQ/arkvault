@@ -25,12 +25,12 @@ describe("BackButton", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should redirect to previous page", () => {
+	it("should redirect to previous page", async () => {
 		const historySpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		const { container } = render(<BackButton />, { history });
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		expect(historySpy).toHaveBeenCalledWith(-1);
 
@@ -40,12 +40,12 @@ describe("BackButton", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should redirect to given url", () => {
+	it("should redirect to given url", async () => {
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		const { container } = render(<BackButton backToUrl="new-url" />, { history });
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		expect(historySpy).toHaveBeenCalledWith("new-url");
 
@@ -55,12 +55,12 @@ describe("BackButton", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should not redirect to previous page when disabled", () => {
-		const historySpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
+	it("should not redirect to previous page when disabled", async () => {
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		const { container } = render(<BackButton disabled />, { history });
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		expect(historySpy).not.toHaveBeenCalled();
 
@@ -70,12 +70,12 @@ describe("BackButton", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should not redirect to given url when disabled", () => {
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+	it("should not redirect to given url when disabled", async () => {
+		const historySpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		const { container } = render(<BackButton backToUrl="new-url" disabled />, { history });
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		expect(historySpy).not.toHaveBeenCalled();
 
