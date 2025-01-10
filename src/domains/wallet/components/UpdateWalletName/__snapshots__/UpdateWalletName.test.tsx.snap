@@ -1024,7 +1024,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                       data-testid="Input__addon-end"
                     >
                       <span
-                        data-errortext="Wallet Name required"
+                        data-errortext="WALLETS.VALIDATION.ALIAS_REQUIRED"
                         data-testid="Input__error"
                       >
                         <div

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -111,7 +111,9 @@ describe("SignIn", () => {
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId(submitID));
-		vi.advanceTimersByTime(20_000);
+		act(() => {
+			vi.advanceTimersByTime(20_000);
+		})
 
 		await userEvent.type(screen.getByTestId(passwordInput), "wrong password");
 
@@ -119,7 +121,9 @@ describe("SignIn", () => {
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId(submitID));
-		vi.advanceTimersByTime(60_000);
+		act(() => {
+			vi.advanceTimersByTime(60_000);
+		})
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();

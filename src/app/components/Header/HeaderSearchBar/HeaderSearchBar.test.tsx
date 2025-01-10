@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { HeaderSearchBar } from "./HeaderSearchBar";
-import { act, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("HeaderSearchBar", () => {
 	it("should render", () => {

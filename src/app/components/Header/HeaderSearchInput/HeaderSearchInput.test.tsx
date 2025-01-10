@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { HeaderSearchInput } from "./HeaderSearchInput";
-import { act, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("HeaderSearchInput", () => {
 	it("should render", () => {

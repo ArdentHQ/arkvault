@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -41,8 +41,8 @@ describe("UpdateWalletName", () => {
 
 		const name = "Sample label";
 
-		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		userEvent.type(screen.getByTestId("UpdateWalletName__input"), name);
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), name);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue(name);
@@ -52,7 +52,7 @@ describe("UpdateWalletName", () => {
 			expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => expect(onAfterSave).toHaveBeenCalledWith());
 
@@ -68,7 +68,7 @@ describe("UpdateWalletName", () => {
 		const nameVariations = ["ARK Wallet 2", "ark wallet 2", " ARK Wallet 2", "ARK Wallet 2 "];
 
 		for (const name of nameVariations) {
-			userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+			await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
 			await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
 			await userEvent.type(screen.getByTestId("UpdateWalletName__input"), name);
 
@@ -90,8 +90,8 @@ describe("UpdateWalletName", () => {
 			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
-		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		userEvent.type(screen.getByTestId("UpdateWalletName__input"), "      ");
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "      ");
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId("UpdateWalletName__submit")).resolves.toBeVisible();

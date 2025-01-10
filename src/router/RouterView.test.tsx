@@ -1,11 +1,11 @@
-/* eslint-disable react/display-name */
+
 import { createHashHistory } from "history";
 import React from "react";
 import { MemoryRouter, Router, withRouter } from "react-router-dom";
 
 import { RouterView } from "./RouterView";
 import { MiddlewareParameters, Middleware } from "./router.types";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, act } from "@/utils/testing-library";
 
 describe("RouterView", () => {
 	const LocationDisplay = withRouter(({ location }) => (
@@ -28,7 +28,10 @@ describe("RouterView", () => {
 		const windowSpy = vi.spyOn(window, "scrollTo");
 
 		const history = createHashHistory();
-		history.push("/test");
+
+		act(() => {
+			history.push("/test");
+		})
 
 		render(
 			<Router history={history}>
@@ -41,8 +44,13 @@ describe("RouterView", () => {
 			</Router>,
 		);
 
-		history.push("/test2");
-		history.replace("/test");
+		act(() => {
+			history.push("/test2");
+		})
+
+		act(() => {
+			history.replace("/test");
+		})
 
 		expect(windowSpy).toHaveBeenCalledTimes(2);
 	});
@@ -51,7 +59,9 @@ describe("RouterView", () => {
 		const windowSpy = vi.spyOn(window, "scrollTo");
 
 		const history = createHashHistory();
-		history.push("/test");
+		act(() => {
+			history.push("/test");
+		})
 
 		render(
 			<Router history={history}>
@@ -59,8 +69,14 @@ describe("RouterView", () => {
 			</Router>,
 		);
 
-		history.push("/test");
-		history.replace("/test");
+
+		act(() => {
+			history.push("/test");
+		})
+
+		act(() => {
+			history.replace("/test");
+		})
 
 		expect(windowSpy).toHaveBeenCalledTimes(1);
 	});
@@ -70,7 +86,10 @@ describe("RouterView", () => {
 
 		const testMiddleware: Middleware = { handler };
 		const history = createHashHistory();
-		history.replace("/test");
+
+		act(() => {
+			history.replace("/test");
+		})
 
 		render(
 			<Router history={history}>
@@ -101,7 +120,9 @@ describe("RouterView", () => {
 		};
 
 		const history = createHashHistory();
-		history.push("/test");
+		act(() => {
+			history.push("/test");
+		})
 
 		render(
 			<Router history={history}>

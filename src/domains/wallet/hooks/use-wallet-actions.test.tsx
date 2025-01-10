@@ -3,7 +3,7 @@ import { renderHook } from "@testing-library/react";
 import { createHashHistory } from "history";
 import React from "react";
 import { Router } from "react-router-dom";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, act } from "@/utils/testing-library";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import * as useActiveProfileModule from "@/app/hooks/env";
@@ -37,6 +37,7 @@ describe("useWalletActions", () => {
 
 		expect(current.handleOpen()).toBeUndefined();
 		expect(current.handleSend()).toBeUndefined();
+
 		await expect(current.handleToggleStar()).resolves.toBeUndefined();
 		await expect(current.handleDelete()).resolves.toBeUndefined();
 		expect(current.handleSelectOption({} as DropdownOption)).toBeUndefined();
@@ -47,15 +48,21 @@ describe("useWalletActions", () => {
 			result: { current },
 		} = renderHook(() => useWalletActions(wallet), { wrapper });
 
-		current.handleCreate();
+		act(() => {
+			current.handleCreate();
+		})
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/create`);
 
-		current.handleImport();
+		act(() => {
+			current.handleImport();
+		})
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/import`);
 
-		current.handleImportLedger();
+		act(() => {
+			current.handleImportLedger();
+		})
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/import/ledger`);
 	});
