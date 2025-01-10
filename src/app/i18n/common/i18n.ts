@@ -443,6 +443,7 @@ export const translations = {
 	VERIFIED: "Verified Address: {{value}}",
 	VERSION: "Version",
 	VIEW: "View",
+	VIEWING: "Viewing",
 	VIEW_ALL: "View All",
 	VIEW_MORE: "View More",
 	VOTE: "Vote",
