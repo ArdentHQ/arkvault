@@ -99,11 +99,11 @@ describe("Page", () => {
 
 		const toggle = screen.getByTestId("UserMenu");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		await expect(screen.findByText(label)).resolves.toBeVisible();
 
-		userEvent.click(await screen.findByText(label));
+		await userEvent.click(await screen.findByText(label));
 
 		if (label === "Documentation") {
 			expect(windowSpy).toHaveBeenCalledWith("https://arkvault.io/docs", "_blank");
@@ -132,11 +132,11 @@ describe("Page", () => {
 
 		const toggle = screen.getByTestId("UserMenu");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		await expect(screen.findByText("Sign Out")).resolves.toBeVisible();
 
-		userEvent.click(await screen.findByText("Sign Out"));
+		await userEvent.click(await screen.findByText("Sign Out"));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 

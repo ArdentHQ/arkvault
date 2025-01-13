@@ -63,17 +63,17 @@ describe("LineGraph", () => {
 
 		expect(screen.queryByTestId("TooltipContent")).not.toBeInTheDocument();
 
-		userEvent.hover(itemArea()[0]);
+		await userEvent.hover(itemArea()[0]);
 
 		expect(screen.getByTestId("TooltipContent")).toBeInTheDocument();
 		expect(screen.getByTestId("TooltipContent")).toHaveTextContent("item 1 value: 50");
 
-		userEvent.unhover(itemArea()[0]);
-		userEvent.hover(itemArea()[1]);
+		await userEvent.unhover(itemArea()[0]);
+		await userEvent.hover(itemArea()[1]);
 
 		expect(screen.getByTestId("TooltipContent")).toHaveTextContent("item 2 value: 30");
 
-		userEvent.unhover(itemArea()[1]);
+		await userEvent.unhover(itemArea()[1]);
 
 		await waitFor(() => expect(screen.getByTestId("TooltipContainer")).toHaveClass("hidden"));
 

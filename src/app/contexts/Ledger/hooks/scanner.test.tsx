@@ -116,7 +116,7 @@ describe("Use Ledger Scanner", () => {
 
 		const { container } = render(<Component />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.queryAllByRole("listitem")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByText("Balance: Loading")).toHaveLength(0));
@@ -153,12 +153,12 @@ describe("Use Ledger Scanner", () => {
 
 		render(<Component />);
 
-		userEvent.click(screen.getByTestId("scan"));
+		await userEvent.click(screen.getByTestId("scan"));
 
 		await waitFor(() => expect(screen.queryAllByRole("listitem")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByText("Balance: Loading")).toHaveLength(0));
 
-		userEvent.click(screen.getByTestId("input--0"));
+		await userEvent.click(screen.getByTestId("input--0"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
 	});
@@ -181,11 +181,11 @@ describe("Use Ledger Scanner", () => {
 
 		render(<Component />);
 
-		userEvent.click(screen.getByText("Scan"));
+		await userEvent.click(screen.getByText("Scan"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: true")).toHaveLength(1));
 
-		userEvent.click(screen.getByText("Toggle All"));
+		await userEvent.click(screen.getByText("Toggle All"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
 	});
@@ -212,7 +212,7 @@ describe("Use Ledger Scanner", () => {
 
 		render(<Component />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() =>
 			expect(ledgerScanSpy).toHaveBeenCalledWith({
@@ -248,7 +248,7 @@ describe("Use Ledger Scanner", () => {
 
 		render(<Component />);
 
-		userEvent.click(screen.getByTestId("scan"));
+		await userEvent.click(screen.getByTestId("scan"));
 
 		await waitFor(() => expect(screen.queryByTestId("scan")).not.toBeInTheDocument());
 
@@ -256,7 +256,7 @@ describe("Use Ledger Scanner", () => {
 
 		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
-		userEvent.click(screen.getByTestId("scanMore"));
+		await userEvent.click(screen.getByTestId("scanMore"));
 
 		expect(screen.getByTestId("scanningMore")).toBeInTheDocument();
 
@@ -293,7 +293,7 @@ describe("Use Ledger Scanner", () => {
 
 		render(<Component />);
 
-		userEvent.click(screen.getByText("Scan"));
+		await userEvent.click(screen.getByText("Scan"));
 
 		await expect(screen.findByText("Retry")).resolves.toBeVisible();
 
@@ -320,8 +320,8 @@ describe("Use Ledger Scanner", () => {
 
 		render(<Component />);
 
-		userEvent.click(screen.getByTestId("scan"));
-		userEvent.click(screen.getByTestId("abort"));
+		await userEvent.click(screen.getByTestId("scan"));
+		await userEvent.click(screen.getByTestId("abort"));
 
 		await expect(screen.findByText("Idle")).resolves.toBeVisible();
 	});

@@ -128,6 +128,23 @@ export default defineConfig(() => {
 					],
 				},
 			}),
+			{
+				// Vite does not ignore sourcemaps for PSDK files, even when `server.sourcemap` or `rollupOptions.output.sourcemap` are set to `false`.
+				// This plugin explicitly removes sourcemaps for psdk files, by unsetting the `mappings` field.
+				name: "ignore-sdk-sourcemaps",
+				transform(code, path) {
+					const sdkPackage = /\/node_modules\/.*@ardenthq\/sdk/;
+
+					if (sdkPackage.test(path)) {
+						return {
+							code,
+							map: { mappings: "" }, // Remove sourcemaps
+						};
+					}
+
+					return null;
+				},
+			},
 		],
 	};
 });
