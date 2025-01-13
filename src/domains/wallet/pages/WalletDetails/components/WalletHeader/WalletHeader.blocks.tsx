@@ -8,15 +8,13 @@ import { Amount } from "@/app/components/Amount";
 import { Icon } from "@/app/components/Icon";
 import { assertString } from "@/utils/assertions";
 import { Tooltip } from "@/app/components/Tooltip";
-import { Button } from "@/app/components/Button";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useWalletActions, useWalletSync } from "@/domains/wallet/hooks";
+import { useWalletSync } from "@/domains/wallet/hooks";
 import { usePrevious, useWalletAlias } from "@/app/hooks";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { Clipboard } from "@/app/components/Clipboard";
-import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { twMerge } from "tailwind-merge";
+import { Clipboard } from "@/app/components/Clipboard";
 
 const WalletHeaderButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button
@@ -150,8 +148,6 @@ export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, i
 
 	const { t } = useTranslation();
 
-	const { handleToggleStar, handleSend } = useWalletActions(wallet);
-
 	const syncWallet = async () => {
 		onUpdate?.(true);
 		setIsSyncing(true);
@@ -172,70 +168,27 @@ export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, i
 	}, [isSyncing, previousIsUpdatingTransactions, isUpdatingTransactions, onUpdate]);
 
 	return (
-		<>
-			<div className="flex items-center justify-center gap-3">
-				<Tooltip
-					content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")}
-					theme="dark"
-					disabled={!wallet.hasSyncedWithNetwork()}
-				>
-					<WalletHeaderButton
-						data-testid="WalletHeader__refresh"
-						type="button"
-						aria-busy={isSyncing}
-						onClick={syncWallet}
-						disabled={isSyncing}
-					>
-						<Icon
-							name="ArrowRotateLeft"
-							className={cn("hover:text-theme-secondary-200", { "animate-spin": isSyncing })}
-							style={{ animationDirection: "reverse" }}
-						/>
-					</WalletHeaderButton>
-				</Tooltip>
-
-				<Tooltip
-					content={
-						wallet.isStarred()
-							? t("WALLETS.PAGE_WALLET_DETAILS.UNSTAR_WALLET")
-							: t("WALLETS.PAGE_WALLET_DETAILS.STAR_WALLET")
-					}
-					theme="dark"
-				>
-					<WalletHeaderButton
-						data-testid="WalletHeader__star-button"
-						type="button"
-						onClick={handleToggleStar}
-					>
-						<Icon
-							className={cn("transition-all duration-300 ease-in-out", {
-								"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
-								"fill-transparent stroke-theme-secondary-700 hover:fill-theme-warning-200 hover:stroke-theme-warning-400 dark:stroke-theme-secondary-600 dark:hover:stroke-theme-warning-400":
-									!wallet.isStarred(),
-							})}
-							name={"StarFilled"}
-						/>
-					</WalletHeaderButton>
-				</Tooltip>
-			</div>
-			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
-				<div>
-					<Button
-						data-testid="WalletHeader__send-button"
-						disabled={
-							wallet.balance() === 0 ||
-							!wallet.hasBeenFullyRestored() ||
-							!wallet.hasSyncedWithNetwork() ||
-							!isLedgerWalletCompatible(wallet)
-						}
-						className="my-auto ml-3 hover:!bg-theme-primary-500"
-						theme="dark"
-						onClick={handleSend}
-					>
-						{t("COMMON.SEND")}
-					</Button>
-				</div>
-			</Tooltip>
-		</>
+		<Tooltip
+			content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")}
+			theme="dark"
+			disabled={!wallet.hasSyncedWithNetwork()}
+		>
+			<WalletHeaderButton
+				data-testid="WalletHeader__refresh"
+				type="button"
+				aria-busy={isSyncing}
+				onClick={syncWallet}
+				disabled={isSyncing}
+			>
+				<Icon
+					dimensions={[15, 15]}
+					name="ArrowRotateLeft"
+					className={cn("text-theme-secondary-700 hover:text-theme-secondary-200 dark:text-theme-dark-200", {
+						"animate-spin": isSyncing,
+					})}
+					style={{ animationDirection: "reverse" }}
+				/>
+			</WalletHeaderButton>
+		</Tooltip>
 	);
 };
