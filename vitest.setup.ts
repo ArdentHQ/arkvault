@@ -8,8 +8,9 @@ import crypto from "crypto";
 import "jest-styled-components";
 
 import { server } from "./src/tests/mocks/server";
-
+import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
+
 expect.extend(matchers);
 
 vi.mock("@/utils/debounce", () => ({
@@ -87,6 +88,9 @@ let tippyMock;
 
 const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
+
+// Treat act warnings as errors.
+actWarningsAsErrors();
 
 beforeAll(async () => {
 	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));

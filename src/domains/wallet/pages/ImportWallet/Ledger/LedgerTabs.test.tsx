@@ -555,7 +555,7 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
-	it("should render a network if it is custom, enabled and supports Ledger", () => {
+	it("should render a network if it is custom, enabled and supports Ledger", async () => {
 		const availableNetworks = profile
 			.wallets()
 			.values()
@@ -571,7 +571,9 @@ describe("LedgerTabs", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
-		expect(screen.queryAllByTestId("NetworkOption")).toHaveLength(2);
+		await waitFor(() => {
+			expect(screen.queryAllByTestId("NetworkOption")).toHaveLength(2);
+		});
 
 		networkSpy.mockRestore();
 		ledgerSpy.mockRestore();
