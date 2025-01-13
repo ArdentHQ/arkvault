@@ -12,55 +12,18 @@ import { Divider } from "@/app/components/Divider";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
-const EmptyVotes = ({ wallet }: EmptyVotesProperties) => {
+const EmptyVotes = () => {
 	const { t } = useTranslation();
-	const maxVotes = wallet.network().maximumVotesPerWallet();
-
 	return (
-		<div className="flex flex-1 items-center space-x-4">
-			<div className="hidden md:block">
-				<Circle
-					size="lg"
-					className="border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700"
-					shadowClassName="ring-theme-background dark:ring-theme-secondary-background"
-				>
-					<Icon name="Vote" size="lg" />
-				</Circle>
+		<div className="flex w-full flex-row items-center justify-start" data-testid="EmptyVotes">
+			<div className="flex flex-row gap-2 text-base font-semibold leading-5">
+				<p className="text-theme-secondary-700 dark:text-theme-dark-200">
+					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}
+				</p>
+				<Link to={votesHelpLink} isExternal>
+					<span className="text-base">{t("COMMON.LEARN_MORE")}</span>
+				</Link>
 			</div>
-
-			<div className="flex flex-col justify-between space-y-2 text-center md:space-y-0 md:text-left">
-				<span className="font-semibold">
-					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE", { count: maxVotes })}
-					<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">0/{maxVotes}</span>
-				</span>
-
-				<span className="flex flex-col space-y-2 leading-none md:flex-row md:space-y-0">
-					<span className="mr-1 text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
-						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}
-					</span>
-					<Link to={votesHelpLink} isExternal>
-						<span className="text-sm">{t("COMMON.LEARN_MORE")}</span>
-					</Link>
-				</span>
-			</div>
-
-			{wallet.network().usesLockedBalance() && (
-				<div className="ml-4 flex">
-					<div className="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800">
-						<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
-							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.LOCKED_VOTES")}
-						</span>
-						<Amount value={0} ticker={wallet.currency()} />
-					</div>
-
-					<div className="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800">
-						<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
-							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.LOCKED_UNVOTES")}
-						</span>
-						<Amount value={0} ticker={wallet.currency()} />
-					</div>
-				</div>
-			)}
 		</div>
 	);
 };
