@@ -92,7 +92,6 @@ export const WalletDetails = () => {
 					<WalletHeader
 						profile={activeProfile}
 						wallet={activeWallet}
-						onUpdate={setIsUpdatingWallet}
 						votes={votes}
 						handleVotesButtonClick={handleVoteButton}
 						isLoadingVotes={isLoadingVotes}
