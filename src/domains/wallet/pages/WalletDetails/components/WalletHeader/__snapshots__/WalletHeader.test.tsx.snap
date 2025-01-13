@@ -3,57 +3,102 @@
 exports[`WalletHeader > should render 1`] = `
 <DocumentFragment>
   <header
-    class="flex flex-col items-center lg:flex-row"
+    class="lg:container md:px-10 md:pt-8"
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
+      class="flex flex-col gap-3 bg-theme-primary-100 px-2 py-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
     >
       <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
+        class="flex w-full flex-row items-center justify-between px-4"
       >
         <div
-          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
+          class="flex h-fit flex-row items-center gap-1"
         >
-          <span
-            class="text-sm font-semibold"
-            data-testid="WalletHeader__name"
+          <p
+            class="hidden text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50 sm:block"
           >
-            ARK Wallet 1
-          </span>
+            Viewing:
+          </p>
           <div
-            class="flex items-center space-x-1"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+          >
+            <span
+              class="font-semibold text-base text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400"
+              data-testid="Address__alias"
+            >
+              <span
+                class="no-ligatures transition-colors duration-200"
+                data-testid="TruncateEnd"
+              >
+                ARK Wallet 1
+              </span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex flex-row items-center gap-1"
+        >
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 flex h-6 w-6 items-center justify-center p-0 dark:bg-transparent dark:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="arrow-turn-down-bracket"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                      />
+                      <path
+                        d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p
+                class="hidden pl-2 text-base font-semibold leading-5 sm:block"
+              >
+                Import
+              </p>
+            </div>
+          </button>
+          <div
+            class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dark:border-theme-dark-700"
           />
-        </div>
-        <div
-          class="flex w-full items-center space-x-4"
-        >
-          <span
-            class="min-w-0"
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 flex h-6 w-6 items-center justify-center p-0 dark:bg-transparent dark:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
+            type="button"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            <div
+              class="flex items-center space-x-2"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
-          </span>
-          <div
-            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
-          >
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
-              >
+              <div>
                 <div
                   style="height: 16px; width: 16px;"
                 >
                   <svg
-                    id="copy"
+                    id="plus"
                     style="height: 100%; width: 100%;"
                     viewBox="0 0 20 20"
                     x="0"
@@ -69,1985 +114,456 @@ exports[`WalletHeader > should render 1`] = `
                       stroke-width="2"
                     >
                       <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        d="M1 10h18M10 1v18"
                       />
                     </g>
                   </svg>
                 </div>
               </div>
-            </button>
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
+              <p
+                class="hidden pl-2 text-base font-semibold leading-5 sm:block"
               >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="copy-key"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
-    />
-    <div
-      class="h-13 flex w-full items-center lg:w-full lg:pl-6"
-    >
-      <div
-        class="mr-auto flex flex-col"
-      >
-        <div
-          class="flex items-center text-sm font-semibold text-theme-secondary-text"
-        >
-          <span>
-            Balance:
-          </span>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <span
-            class="whitespace-nowrap text-lg font-semibold text-white"
-            data-testid="Amount"
-          >
-            33.75089801 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="flex items-center justify-center gap-3"
-      >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
-          data-testid="WalletHeader__send-button"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Send
-          </div>
-        </button>
-      </div>
-      <div
-        class="my-auto ml-3"
-        data-testid="WalletHeader__more-button"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <button
-            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
-                </div>
-              </div>
+                Create
+              </p>
             </div>
           </button>
         </div>
       </div>
-    </div>
-  </header>
-</DocumentFragment>
-`;
-
-exports[`WalletHeader > should render amount for wallet in live network 1`] = `
-<DocumentFragment>
-  <header
-    class="flex flex-col items-center lg:flex-row"
-    data-testid="WalletHeader"
-  >
-    <div
-      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
-    >
       <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
+        class="flex flex-col gap-0.5"
       >
         <div
-          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
+          class="flex w-full flex-col gap-3 rounded bg-white p-4 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
         >
-          <span
-            class="text-sm font-semibold"
-            data-testid="WalletHeader__name"
-          >
-            ARK Wallet 1
-          </span>
           <div
-            class="flex items-center space-x-1"
+            class="flex w-full flex-row items-center justify-between"
+          >
+            <div
+              class="flex flex-row items-center gap-1.5"
+            >
+              <p
+                class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5"
+              >
+                Address
+              </p>
+              <div
+                class="h-[17px] w-32 md:h-5 md:w-60 lg:w-125"
+              >
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                >
+                  <div
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
+                  >
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50 font-semibold text-base absolute w-full"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                    <span>
+                       
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-row items-center gap-2"
+            >
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="hover:text-theme-secondary-500 text-theme-secondary-700 dark:text-theme-dark-200"
+                  data-testid="Copy__icon"
+                >
+                  <div
+                    style="height: 16px; width: 16px;"
+                  >
+                    <svg
+                      id="copy"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-secondary-700 hover:text-theme-secondary-500 dark:text-theme-dark-200"
+                >
+                  <div
+                    style="height: 16px; width: 16px;"
+                  >
+                    <svg
+                      id="copy-key"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <div
+                class="relative border-l border-t-0 border-solid align-middle mx-2 hidden h-[17px] border-theme-secondary-300 p-0 dark:border-theme-dark-700 sm:block"
+              />
+              <div
+                class="hidden h-4 w-4 sm:block"
+              >
+                <button
+                  aria-busy="false"
+                  class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+                  data-testid="WalletHeader__refresh"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 hover:text-theme-secondary-200 dark:text-theme-dark-200"
+                    style="animation-direction: reverse;"
+                  >
+                    <div
+                      style="height: 15px; width: 15px;"
+                    >
+                      <svg
+                        id="arrow-rotate-left"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-t clear-both flex w-full min-w-full my-0 h-px border-dashed border-theme-secondary-300 dark:border-theme-dark-700"
           />
-        </div>
-        <div
-          class="flex w-full items-center space-x-4"
-        >
-          <span
-            class="min-w-0"
-          >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
-            >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
-          </span>
           <div
-            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+            class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
           >
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
+            <div
+              class="flex flex-col gap-3 sm:gap-2"
+              data-testid="WalletHeader__balance"
             >
               <div
-                class="hover:text-white"
+                class="flex flex-row items-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+              >
+                <p>
+                  Total Balance
+                </p>
+                <div
+                  class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:hidden"
+                />
+                <span
+                  class="whitespace-nowrap md-lg:hidden"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+              <div
+                class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-primary-900 md:text-2xl md:leading-[29px]"
+              >
+                <span
+                  class="whitespace-nowrap dark:text-theme-dark-50"
+                  data-testid="Amount"
+                >
+                  33.75089801 DARK
+                </span>
+                <div
+                  class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-6 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block"
+                />
+                <span
+                  class="whitespace-nowrap hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-row items-center gap-3"
+            >
+              <button
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto flex-1 dark:bg-theme-dark-navy-500"
+                data-testid="WalletHeader__send-button"
+                type="button"
               >
                 <div
-                  style="height: 16px; width: 16px;"
+                  class="flex items-center space-x-2"
                 >
-                  <svg
-                    id="copy"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  Send
+                </div>
+              </button>
+              <div
+                class="my-auto"
+                data-testid="WalletHeaderMobile__more-button"
+              >
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 text-theme-primary-600"
+                    type="button"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <div
+                      class="flex items-center space-x-2"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
                 </div>
               </div>
-            </button>
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden w-full rounded-b-lg rounded-t-sm bg-white p-4 dark:bg-theme-dark-900 md:block"
+        >
+          <div
+            class="flex w-full flex-col items-center md:flex-row md:items-center"
+            data-testid="WalletVote"
+          >
+            <div
+              class="flex flex-1 items-center space-x-4"
             >
               <div
-                class="hover:text-white"
+                class="hidden md:block"
               >
                 <div
-                  style="height: 16px; width: 16px;"
+                  class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
                 >
-                  <svg
-                    id="copy-key"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
-    />
-    <div
-      class="h-13 flex w-full items-center lg:w-full lg:pl-6"
-    >
-      <div
-        class="mr-auto flex flex-col"
-      >
-        <div
-          class="flex items-center text-sm font-semibold text-theme-secondary-text"
-        >
-          <span>
-            Balance:
-          </span>
-          <span
-            class="whitespace-nowrap ml-1"
-            data-testid="Amount"
-          >
-            0 BTC
-          </span>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <span
-            class="whitespace-nowrap text-lg font-semibold text-white"
-            data-testid="Amount"
-          >
-            33.75089801 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="flex items-center justify-center gap-3"
-      >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
-          data-testid="WalletHeader__send-button"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Send
-          </div>
-        </button>
-      </div>
-      <div
-        class="my-auto ml-3"
-        data-testid="WalletHeader__more-button"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <button
-            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-</DocumentFragment>
-`;
-
-exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
-<DocumentFragment>
-  <header
-    class="flex flex-col items-center lg:flex-row"
-    data-testid="WalletHeader"
-  >
-    <div
-      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
-    >
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
-        >
-          <span
-            class="text-sm font-semibold"
-            data-testid="WalletHeader__name"
-          >
-            ARK Wallet 1
-          </span>
-          <div
-            class="flex items-center space-x-1"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-text"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center space-x-4"
-        >
-          <span
-            class="min-w-0"
-          >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
-            >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
-          </span>
-          <div
-            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
-          >
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="copy"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                  <div>
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
+                      <svg
+                        id="vote"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                          />
+                          <path
+                            d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </button>
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
               <div
-                class="hover:text-white"
+                class="flex flex-col justify-between space-y-2 text-center md:space-y-0 md:text-left"
               >
-                <div
-                  style="height: 16px; width: 16px;"
+                <span
+                  class="font-semibold"
                 >
-                  <svg
-                    id="copy-key"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  My Vote
+                  <span
+                    class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                   >
-                    <path
-                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
-    />
-    <div
-      class="h-13 flex w-full items-center lg:w-full lg:pl-6"
-    >
-      <div
-        class="mr-auto flex flex-col"
-      >
-        <div
-          class="flex items-center text-sm font-semibold text-theme-secondary-text"
-        >
-          <span>
-            Balance:
-          </span>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <span
-            class="whitespace-nowrap text-lg font-semibold text-white"
-            data-testid="Amount"
-          >
-            33.75089801 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="flex items-center justify-center gap-3"
-      >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-800 disabled:text-theme-secondary-700 my-auto ml-3 hover:!bg-theme-primary-500"
-          data-testid="WalletHeader__send-button"
-          disabled=""
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Send
-          </div>
-        </button>
-      </div>
-      <div
-        class="my-auto ml-3"
-        data-testid="WalletHeader__more-button"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <button
-            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
+                    0/1
+                  </span>
+                </span>
+                <span
+                  class="flex flex-col space-y-2 leading-none md:flex-row md:space-y-0"
                 >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <span
+                    class="mr-1 text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
                   >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-</DocumentFragment>
-`;
-
-exports[`WalletHeader > should show currency delta (-5%) 1`] = `
-<DocumentFragment>
-  <header
-    class="flex flex-col items-center lg:flex-row"
-    data-testid="WalletHeader"
-  >
-    <div
-      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
-    >
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
-        >
-          <span
-            class="text-sm font-semibold"
-            data-testid="WalletHeader__name"
-          >
-            ARK Wallet 1
-          </span>
-          <div
-            class="flex items-center space-x-1"
-          />
-        </div>
-        <div
-          class="flex w-full items-center space-x-4"
-        >
-          <span
-            class="min-w-0"
-          >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
-            >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
-          </span>
-          <div
-            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
-          >
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="copy"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                    You have not voted for a Validator yet.
+                  </span>
+                  <a
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="https://arkvault.io/docs/transactions/vote"
+                    rel="noopener noreferrer"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <span
+                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </button>
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="copy-key"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
-    />
-    <div
-      class="h-13 flex w-full items-center lg:w-full lg:pl-6"
-    >
-      <div
-        class="mr-auto flex flex-col"
-      >
-        <div
-          class="flex items-center text-sm font-semibold text-theme-secondary-text"
-        >
-          <span>
-            Balance:
-          </span>
-          <span
-            class="ml-2 inline-flex items-center text-theme-danger-500"
-          >
-            <div>
-              <div
-                style="height: 10px; width: 10px;"
-              >
-                <svg
-                  id="chevron-down-small"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 10 10"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <span
-              class="ml-1"
-            >
-              -5%
-            </span>
-          </span>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <span
-            class="whitespace-nowrap text-lg font-semibold text-white"
-            data-testid="Amount"
-          >
-            33.75089801 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="flex items-center justify-center gap-3"
-      >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
-          data-testid="WalletHeader__send-button"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Send
-          </div>
-        </button>
-      </div>
-      <div
-        class="my-auto ml-3"
-        data-testid="WalletHeader__more-button"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <button
-            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-</DocumentFragment>
-`;
-
-exports[`WalletHeader > should show currency delta (5%) 1`] = `
-<DocumentFragment>
-  <header
-    class="flex flex-col items-center lg:flex-row"
-    data-testid="WalletHeader"
-  >
-    <div
-      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
-    >
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
-        >
-          <span
-            class="text-sm font-semibold"
-            data-testid="WalletHeader__name"
-          >
-            ARK Wallet 1
-          </span>
-          <div
-            class="flex items-center space-x-1"
-          />
-        </div>
-        <div
-          class="flex w-full items-center space-x-4"
-        >
-          <span
-            class="min-w-0"
-          >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
-            >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
-          </span>
-          <div
-            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
-          >
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="copy"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      <span
+                        class="text-sm"
+                      >
+                        Learn more
+                      </span>
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                      data-testid="Link__external"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </button>
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="copy-key"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
-    />
-    <div
-      class="h-13 flex w-full items-center lg:w-full lg:pl-6"
-    >
-      <div
-        class="mr-auto flex flex-col"
-      >
-        <div
-          class="flex items-center text-sm font-semibold text-theme-secondary-text"
-        >
-          <span>
-            Balance:
-          </span>
-          <span
-            class="ml-2 inline-flex items-center text-theme-success-600"
-          >
-            <div>
-              <div
-                style="height: 10px; width: 10px;"
-              >
-                <svg
-                  id="chevron-up-small"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 10 10"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <span
-              class="ml-1"
-            >
-              5%
-            </span>
-          </span>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <span
-            class="whitespace-nowrap text-lg font-semibold text-white"
-            data-testid="Amount"
-          >
-            33.75089801 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="flex items-center justify-center gap-3"
-      >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
-          data-testid="WalletHeader__send-button"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Send
-          </div>
-        </button>
-      </div>
-      <div
-        class="my-auto ml-3"
-        data-testid="WalletHeader__more-button"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <button
-            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-</DocumentFragment>
-`;
-
-exports[`WalletHeader > should show modifiers 1`] = `
-<DocumentFragment>
-  <header
-    class="flex flex-col items-center lg:flex-row"
-    data-testid="WalletHeader"
-  >
-    <div
-      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
-    >
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
-        >
-          <span
-            class="text-sm font-semibold"
-            data-testid="WalletHeader__name"
-          >
-            ARK Wallet 1
-          </span>
-          <div
-            class="flex items-center space-x-1"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-text"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
+                      <div
+                        style="height: 12px; width: 12px;"
+                      >
+                        <svg
+                          id="arrow-external"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </span>
               </div>
             </div>
             <div
-              class="inline-block p-1 text-theme-secondary-text"
-              data-testid="WalletIcon__Multisignature"
+              class="sm:max-md:self-end w-full sm:w-auto"
             >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center space-x-4"
-        >
-          <span
-            class="min-w-0"
-          >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
-            >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
-          </span>
-          <div
-            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
-          >
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
+              <button
+                class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-4 w-full space-x-2 text-theme-primary-600 dark:text-theme-dark-navy-400 md:mt-0 md:w-auto md:px-2 md:py-[3px]"
+                data-testid="WalletVote__button"
+                type="button"
               >
                 <div
-                  style="height: 16px; width: 16px;"
+                  class="flex items-center space-x-2"
                 >
-                  <svg
-                    id="copy"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
+                      <svg
+                        id="vote"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                          />
+                          <path
+                            d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <span>
+                    Vote
+                  </span>
                 </div>
-              </div>
-            </button>
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="copy-key"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
-    />
-    <div
-      class="h-13 flex w-full items-center lg:w-full lg:pl-6"
-    >
-      <div
-        class="mr-auto flex flex-col"
-      >
-        <div
-          class="flex items-center text-sm font-semibold text-theme-secondary-text"
-        >
-          <span>
-            Balance:
-          </span>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <span
-            class="whitespace-nowrap text-lg font-semibold text-white"
-            data-testid="Amount"
-          >
-            33.75089801 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="flex items-center justify-center gap-3"
-      >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
+              </button>
             </div>
           </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
-          data-testid="WalletHeader__send-button"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Send
-          </div>
-        </button>
-      </div>
-      <div
-        class="my-auto ml-3"
-        data-testid="WalletHeader__more-button"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <button
-            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-</DocumentFragment>
-`;
-
-exports[`WalletHeader > should use empty string in clipboard copy if publickey is undefined 1`] = `
-<DocumentFragment>
-  <header
-    class="flex flex-col items-center lg:flex-row"
-    data-testid="WalletHeader"
-  >
-    <div
-      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
-    >
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
-        >
-          <span
-            class="text-sm font-semibold"
-            data-testid="WalletHeader__name"
-          >
-            ARK Wallet 1
-          </span>
-          <div
-            class="flex items-center space-x-1"
-          />
-        </div>
-        <div
-          class="flex w-full items-center space-x-4"
-        >
-          <span
-            class="min-w-0"
-          >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
-            >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
-          </span>
-          <div
-            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
-          >
-            <button
-              class="ring-focus relative focus:outline-none"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="hover:text-white"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    id="copy"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
-    />
-    <div
-      class="h-13 flex w-full items-center lg:w-full lg:pl-6"
-    >
-      <div
-        class="mr-auto flex flex-col"
-      >
-        <div
-          class="flex items-center text-sm font-semibold text-theme-secondary-text"
-        >
-          <span>
-            Balance:
-          </span>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <span
-            class="whitespace-nowrap text-lg font-semibold text-white"
-            data-testid="Amount"
-          >
-            33.75089801 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="flex items-center justify-center gap-3"
-      >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
-          >
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
-          data-testid="WalletHeader__send-button"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Send
-          </div>
-        </button>
-      </div>
-      <div
-        class="my-auto ml-3"
-        data-testid="WalletHeader__more-button"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <button
-            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div>
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
         </div>
       </div>
     </div>

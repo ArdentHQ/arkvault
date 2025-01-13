@@ -17,16 +17,6 @@ describe("WalletHeader", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
-
-		defaultDelegate = {
-			address: wallet.address(),
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isDelegate: false,
-			isResignedDelegate: false,
-			publicKey: wallet.publicKey(),
-		};
-
 		votes = wallet.voting().current();
 
 		await wallet.synchroniser().votes();
