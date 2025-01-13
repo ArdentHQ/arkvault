@@ -186,8 +186,7 @@ describe("WalletVote", () => {
 			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
-		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
-		await expect(screen.findByText("0/101")).resolves.toBeVisible();
+		await expect(screen.findByTestId("EmptyVotes")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
