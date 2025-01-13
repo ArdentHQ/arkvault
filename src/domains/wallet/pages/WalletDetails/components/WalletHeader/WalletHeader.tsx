@@ -134,13 +134,16 @@ export const WalletHeader = ({
 									/>
 								</div>
 
-								<div className="text-lg font-semibold leading-[21px] text-theme-primary-900 md:text-2xl md:leading-[29px] flex flex-row items-center">
+								<div className="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-primary-900 md:text-2xl md:leading-[29px]">
 									<Amount value={wallet.balance()} ticker={wallet.currency()} />
-									<Divider type="vertical" className="h-6 border-theme-secondary-300 hidden md-lg:block" />
+									<Divider
+										type="vertical"
+										className="hidden h-6 border-theme-secondary-300 md-lg:block"
+									/>
 									<Amount
 										value={convert(wallet.balance())}
 										ticker={wallet.exchangeCurrency()}
-										className="hidden md-lg:block text-theme-secondary-700"
+										className="hidden text-theme-secondary-700 md-lg:block"
 									/>
 								</div>
 							</div>
