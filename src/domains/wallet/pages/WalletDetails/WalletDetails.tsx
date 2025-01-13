@@ -95,6 +95,8 @@ export const WalletDetails = () => {
 						votes={votes}
 						handleVotesButtonClick={handleVoteButton}
 						isLoadingVotes={isLoadingVotes}
+						isUpdatingTransactions={isUpdatingTransactions}
+						onUpdate={setIsUpdatingWallet}
 					/>
 				</Section>
 
