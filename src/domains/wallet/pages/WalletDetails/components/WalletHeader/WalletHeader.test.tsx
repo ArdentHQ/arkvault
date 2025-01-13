@@ -2,24 +2,15 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 
-import userEvent from "@testing-library/user-event";
 import { WalletHeader } from "./WalletHeader";
 import * as envHooks from "@/app/hooks/env";
-import { env, getDefaultProfileId, renderResponsiveWithRoute, screen, within, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let votes: Contracts.VoteRegistryItem[];
-let defaultDelegate: {
-	address: string;
-	publicKey?: string;
-	explorerLink: string;
-	isDelegate: boolean;
-	isResignedDelegate: boolean;
-	governanceIdentifier: string;
-};
 let walletUrl: string;
 
 describe("WalletHeader", () => {
@@ -27,7 +18,7 @@ describe("WalletHeader", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 
-        defaultDelegate = {
+		defaultDelegate = {
 			address: wallet.address(),
 			explorerLink: "",
 			governanceIdentifier: "address",
@@ -35,8 +26,8 @@ describe("WalletHeader", () => {
 			isResignedDelegate: false,
 			publicKey: wallet.publicKey(),
 		};
-        
-        votes = wallet.voting().current();
+
+		votes = wallet.voting().current();
 
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
@@ -45,14 +36,19 @@ describe("WalletHeader", () => {
 		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
-		
 
 		history.push(walletUrl);
 	});
 
 	it("should render", async () => {
-		const {asFragment} = renderResponsiveWithRoute(
-			<WalletHeader profile={profile} wallet={wallet} votes={votes} isLoadingVotes={false} handleVotesButtonClick={vi.fn()} />,
+		const { asFragment } = renderResponsiveWithRoute(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+			/>,
 			{
 				history,
 				route: walletUrl,
@@ -63,5 +59,4 @@ describe("WalletHeader", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 	});
-
 });
