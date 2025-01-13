@@ -144,7 +144,7 @@ describe("ImportWallet Methods", () => {
 			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(finishButton());
+		await userEvent.click(finishButton());
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)).toBeInstanceOf(Wallet);

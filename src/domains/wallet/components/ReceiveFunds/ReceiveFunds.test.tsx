@@ -56,7 +56,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__Name_Address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("ReceiveFunds__toggle"));
+		await userEvent.click(screen.getByTestId("ReceiveFunds__toggle"));
 
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 	});

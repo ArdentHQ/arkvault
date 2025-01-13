@@ -27,7 +27,7 @@ describe("ClipboardButton", () => {
 
 		expect(screen.queryByTestId(clipboardCheckmarkID)).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
+		await userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
 		await expect(screen.findByTestId(clipboardCheckmarkID)).resolves.toBeInTheDocument();
 	});
@@ -41,7 +41,7 @@ describe("ClipboardButton", () => {
 
 		expect(screen.queryByTestId(clipboardCheckmarkID)).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
+		await userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
 		await expect(screen.findByTestId(clipboardCheckmarkID)).resolves.toBeInTheDocument();
 

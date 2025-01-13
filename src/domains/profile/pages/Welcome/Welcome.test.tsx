@@ -23,6 +23,7 @@ import {
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	act,
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
@@ -526,7 +527,9 @@ describe("Welcome with deeplink", () => {
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 });
 		});
 
-		history.push(path);
+		act(() => {
+			history.push(path);
+		});
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
 

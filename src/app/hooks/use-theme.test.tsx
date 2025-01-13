@@ -4,7 +4,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTheme, ViewingModeType } from "@/app/hooks/use-theme";
 import { Theme } from "@/types";
 import * as themeUtils from "@/utils/theme";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, act } from "@/utils/testing-library";
 import { browser } from "@/utils/platform";
 import { renderHook } from "@testing-library/react";
 
@@ -59,13 +59,17 @@ describe("useTheme", () => {
 				result: { current },
 			} = renderHook(() => useTheme());
 
-			current.setTheme(theme === "light" ? "dark" : "light");
+			act(() => {
+				current.setTheme(theme === "light" ? "dark" : "light");
+			});
 
-			expect(document.querySelector("html").classList.contains(theme)).toBe(false);
+			expect(document.querySelector("html")).not.toHaveClass(theme);
 
-			current.setTheme(theme as ViewingModeType);
+			act(() => {
+				current.setTheme(theme as ViewingModeType);
+			});
 
-			expect(document.querySelector("html").classList.contains(theme)).toBe(true);
+			expect(document.querySelector("html")).toHaveClass(theme);
 		});
 
 		it("should set system theme", () => {
@@ -96,12 +100,13 @@ describe("useTheme", () => {
 			const {
 				result: { current },
 			} = renderHook(() => useTheme());
-			current.setTheme("system");
 
-			expect(document.querySelector("html").classList.contains("light")).toBe(false);
-			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
-			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(false);
-			expect(document.documentElement.classList.contains("firefox-scrollbar-dark")).toBe(true);
+			act(() => {
+				current.setTheme("system");
+			});
+
+			expect(document.querySelector("html")).toHaveClass("dark");
+			expect(document.querySelector("html")).toHaveClass("firefox-scrollbar-dark");
 
 			overflowOverlayMock.mockRestore();
 		});
@@ -114,19 +119,26 @@ describe("useTheme", () => {
 			const {
 				result: { current },
 			} = renderHook(() => useTheme());
-			current.setTheme("light");
 
-			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(true);
+			act(() => {
+				current.setTheme("light");
+			});
 
-			current.setTheme("dark");
+			expect(document.querySelector("html")).toHaveClass("firefox-scrollbar-light");
 
-			expect(document.documentElement.classList.contains("firefox-scrollbar-dark")).toBe(true);
+			act(() => {
+				current.setTheme("dark");
+			});
+
+			expect(document.querySelector("html")).toHaveClass("firefox-scrollbar-dark");
 
 			overflowOverlayMock.mockReturnValue(true);
 
-			current.setTheme("light");
+			act(() => {
+				current.setTheme("light");
+			});
 
-			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(false);
+			expect(document.querySelector("html")).toHaveClass("firefox-scrollbar-dark");
 
 			overflowOverlayMock.mockRestore();
 		});
@@ -140,15 +152,18 @@ describe("useTheme", () => {
 			const {
 				result: { current },
 			} = renderHook(() => useTheme());
-			current.setTheme("dark");
 
-			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
-			expect(document.querySelector("html").classList.contains("light")).toBe(false);
+			act(() => {
+				current.setTheme("dark");
+			});
 
-			current.setProfileTheme(profile);
+			expect(document.querySelector("html")).toHaveClass("dark");
 
-			expect(document.querySelector("html").classList.contains("dark")).toBe(false);
-			expect(document.querySelector("html").classList.contains("light")).toBe(true);
+			act(() => {
+				current.setProfileTheme(profile);
+			});
+
+			expect(document.querySelector("html")).toHaveClass("light");
 		});
 
 		it("should not set theme from profile settings", async () => {
@@ -159,13 +174,17 @@ describe("useTheme", () => {
 				result: { current },
 			} = renderHook(() => useTheme());
 
-			current.setTheme("light");
+			act(() => {
+				current.setTheme("light");
+			});
 
-			expect(document.querySelector("html").classList.contains("light")).toBe(true);
+			expect(document.querySelector("html")).toHaveClass("light");
 
-			current.setProfileTheme(profile);
+			act(() => {
+				current.setProfileTheme(profile);
+			});
 
-			expect(document.querySelector("html").classList.contains("light")).toBe(true);
+			expect(document.querySelector("html")).toHaveClass("light");
 		});
 	});
 
@@ -187,18 +206,25 @@ describe("useTheme", () => {
 				result: { current },
 			} = renderHook(() => useTheme());
 
-			current.setTheme(systemTheme);
+			act(() => {
+				current.setTheme(systemTheme);
+			});
 
-			expect(document.querySelector("html").classList.contains(systemTheme)).toBe(true);
+			expect(document.querySelector("html")).toHaveClass(systemTheme);
 
 			profile.settings().set(Contracts.ProfileSetting.Theme, profileTheme);
-			current.setTheme(profileTheme as Theme);
 
-			expect(document.querySelector("html").classList.contains(profileTheme)).toBe(true);
+			act(() => {
+				current.setTheme(profileTheme as Theme);
+			});
 
-			current.resetProfileTheme(profile);
+			expect(document.querySelector("html")).toHaveClass(profileTheme);
 
-			expect(document.querySelector("html").classList.contains(systemTheme)).toBe(true);
+			act(() => {
+				current.resetProfileTheme(profile);
+			});
+
+			expect(document.querySelector("html")).toHaveClass(systemTheme);
 			expect(profile.appearance().get("theme")).toBe(systemTheme);
 		});
 	});
@@ -210,13 +236,18 @@ describe("useTheme", () => {
 			const {
 				result: { current },
 			} = renderHook(() => useTheme());
-			current.setTheme("dark");
 
-			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
+			act(() => {
+				current.setTheme("dark");
+			});
 
-			current.resetTheme();
+			expect(document.querySelector("html")).toHaveClass("dark");
 
-			expect(document.querySelector("html").classList.contains("light")).toBe(true);
+			act(() => {
+				current.resetTheme();
+			});
+
+			expect(document.querySelector("html")).toHaveClass("light");
 		});
 	});
 });
