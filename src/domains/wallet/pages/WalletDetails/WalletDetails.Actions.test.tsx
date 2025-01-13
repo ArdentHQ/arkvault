@@ -128,7 +128,6 @@ describe("WalletDetails", () => {
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true"));
 	});
 
-
 	it("should not fail if the votes have not yet been synchronized", async () => {
 		const newWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
