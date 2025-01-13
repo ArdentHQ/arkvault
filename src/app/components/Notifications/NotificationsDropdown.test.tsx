@@ -59,7 +59,7 @@ describe("Notifications", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render with transactions in %s", async (breakpoint) => {
 		const { container } = renderResponsive(<NotificationsDropdown profile={profile} />, breakpoint);
 
-		userEvent.click(screen.getAllByRole("button")[0]);
+		await userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
@@ -79,17 +79,17 @@ describe("Notifications", () => {
 			},
 		);
 
-		userEvent.click(screen.getAllByRole("button")[0]);
+		await userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		userEvent.click(screen.getAllByTestId("TableRow")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 	});

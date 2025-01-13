@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { HeaderSearchBar } from "./HeaderSearchBar";
-import { act, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("HeaderSearchBar", () => {
 	it("should render", () => {
@@ -12,18 +12,18 @@ describe("HeaderSearchBar", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show the searchbar", () => {
+	it("should show the searchbar", async () => {
 		render(<HeaderSearchBar />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument();
 	});
 
-	it("should limit search letters", () => {
+	it("should limit search letters", async () => {
 		render(<HeaderSearchBar maxLength={32} />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		const input: HTMLInputElement = screen.getByTestId("Input");
 
@@ -32,7 +32,8 @@ describe("HeaderSearchBar", () => {
 		const text = "looong text";
 		const longText = text.repeat(10);
 
-		userEvent.paste(input, longText);
+		await userEvent.clear(input);
+		await userEvent.type(input, longText);
 
 		expect(input.value).toBe(longText.slice(0, input.maxLength));
 		expect(input.value).toHaveLength(input.maxLength);
@@ -42,11 +43,12 @@ describe("HeaderSearchBar", () => {
 		const onReset = vi.fn();
 		const { rerender } = render(<HeaderSearchBar onReset={onReset} />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		const input: HTMLInputElement = screen.getByTestId("Input");
 
-		userEvent.paste(input, "test");
+		await userEvent.clear(input);
+		await userEvent.type(input, "test");
 
 		expect(input.value).toBe("test");
 
@@ -57,15 +59,15 @@ describe("HeaderSearchBar", () => {
 		expect(onReset).toHaveBeenCalledWith();
 	});
 
-	it("should show extra slot", () => {
+	it("should show extra slot", async () => {
 		render(<HeaderSearchBar extra={<div data-testid="extra-slot" />} />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		expect(screen.getByTestId("extra-slot")).toBeInTheDocument();
 	});
 
-	it("should hide the searchbar when clicked outside", () => {
+	it("should hide the searchbar when clicked outside", async () => {
 		const onSearch = vi.fn();
 
 		render(
@@ -78,7 +80,7 @@ describe("HeaderSearchBar", () => {
 			</div>,
 		);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		const outsideElement = screen.getByTestId("header-search-bar__outside");
 
@@ -86,63 +88,58 @@ describe("HeaderSearchBar", () => {
 
 		expect(screen.getByTestId("Input")).toBeInTheDocument();
 
-		userEvent.click(outsideElement);
+		await userEvent.click(outsideElement);
 
 		expect(screen.queryByTestId("Input")).not.toBeInTheDocument();
 	});
 
-	it("should reset the query", () => {
+	it("should reset the query", async () => {
 		const onReset = vi.fn();
 		render(<HeaderSearchBar onReset={onReset} />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		const input: HTMLInputElement = screen.getByTestId("Input");
 
-		userEvent.paste(input, "test");
+		await userEvent.clear(input);
+		await userEvent.type(input, "test");
 
 		expect(input.value).toBe("test");
 
-		userEvent.click(screen.getByTestId("header-search-bar__reset"));
+		await userEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		expect(input.value).not.toBe("test");
 		expect(onReset).toHaveBeenCalledWith();
 	});
 
-	it("should call onSearch", () => {
-		vi.useFakeTimers();
-
+	it("should call onSearch", async () => {
 		const onSearch = vi.fn();
 
 		render(<HeaderSearchBar onSearch={onSearch} />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
-		userEvent.paste(screen.getByTestId("Input"), "test");
+		await userEvent.clear(screen.getByTestId("Input"));
+		await userEvent.type(screen.getByTestId("Input"), "test");
 
-		act(() => {
-			vi.runAllTimers();
+		await waitFor(() => {
+			expect(onSearch).toHaveBeenCalledWith("test");
 		});
-
-		expect(onSearch).toHaveBeenCalledWith("test");
 	});
 
-	it("should set custom debounce timeout form props", () => {
-		vi.useFakeTimers();
-
+	it("should set custom debounce timeout form props", async () => {
 		const onSearch = vi.fn();
 
 		render(<HeaderSearchBar onSearch={onSearch} debounceTimeout={100} />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
-		userEvent.paste(screen.getByTestId("Input"), "test");
+		await userEvent.clear(screen.getByTestId("Input"));
+		await userEvent.type(screen.getByTestId("Input"), "test");
 
-		act(() => {
-			vi.runAllTimers();
+		await waitFor(() => {
+			expect(onSearch).toHaveBeenCalledWith("test");
 		});
-
-		expect(onSearch).toHaveBeenCalledWith("test");
 	});
 
 	it("should always show clear button", async () => {
