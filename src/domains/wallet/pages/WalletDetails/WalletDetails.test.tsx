@@ -206,7 +206,7 @@ describe("WalletDetails", () => {
 		await renderPage({ waitForTopSection: false });
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("WalletVote")).toBeInTheDocument();
+			expect(screen.getByTestId("WalletVote")).toBeInTheDocument();
 		});
 
 		networkFeatureSpy.mockRestore();
