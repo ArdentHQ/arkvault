@@ -1,9 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-export interface EmptyVotesProperties {
-	wallet: Contracts.IReadWriteWallet;
-}
-
 export interface VotesProperties {
 	wallet: Contracts.IReadWriteWallet;
 	votes: Contracts.VoteRegistryItem[];

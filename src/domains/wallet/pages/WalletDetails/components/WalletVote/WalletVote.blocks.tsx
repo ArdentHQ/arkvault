@@ -1,10 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { DelegateStatusProperties, EmptyVotesProperties, VotesProperties } from "./WalletVote.contracts";
-import { Amount } from "@/app/components/Amount";
-import { Circle } from "@/app/components/Circle";
-import { Icon } from "@/app/components/Icon";
+import { DelegateStatusProperties, VotesProperties } from "./WalletVote.contracts";
 import { Link } from "@/app/components/Link";
 import { AddressLabel } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
