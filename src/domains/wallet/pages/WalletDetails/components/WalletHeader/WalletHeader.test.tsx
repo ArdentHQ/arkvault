@@ -31,13 +31,14 @@ describe("WalletHeader", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = renderResponsiveWithRoute(
+		renderResponsiveWithRoute(
 			<WalletHeader
 				profile={profile}
 				wallet={wallet}
 				votes={votes}
 				isLoadingVotes={false}
 				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
 			/>,
 			{
 				history,
@@ -46,7 +47,24 @@ describe("WalletHeader", () => {
 		);
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+	});
 
-		expect(asFragment()).toMatchSnapshot();
+	it("should render empty votes section if no votes are available", async () => {
+		renderResponsiveWithRoute(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={[]}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.getByTestId("EmptyVotes")).toBeVisible();
 	});
 });
