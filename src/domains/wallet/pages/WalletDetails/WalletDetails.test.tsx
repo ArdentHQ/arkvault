@@ -200,13 +200,13 @@ describe("WalletDetails", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should not render wallet vote when the network does not support votes", async () => {
+	it("should always render wallet vote", async () => {
 		const networkFeatureSpy = vi.spyOn(wallet.network(), "allowsVoting").mockReturnValue(false);
 
 		await renderPage({ waitForTopSection: false });
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("WalletVote")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("WalletVote")).toBeInTheDocument();
 		});
 
 		networkFeatureSpy.mockRestore();
