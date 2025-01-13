@@ -26,7 +26,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 
 	const renderVotes = () => {
 		if (votes.length === 0) {
-			return <EmptyVotes wallet={wallet} />;
+			return <EmptyVotes />;
 		}
 
 		return <Votes wallet={wallet} votes={votes} activeDelegates={activeDelegates} onButtonClick={onButtonClick} />;
