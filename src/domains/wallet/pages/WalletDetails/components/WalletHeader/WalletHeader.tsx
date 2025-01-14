@@ -162,7 +162,7 @@ export const WalletHeader = ({
 									/>
 								</div>
 
-								<div className="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-primary-900 md:text-2xl md:leading-[29px]">
+								<div className="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 md:text-2xl md:leading-[29px]">
 									<Amount
 										value={wallet.balance()}
 										ticker={wallet.currency()}
