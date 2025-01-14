@@ -146,66 +146,70 @@ exports[`WalletHeader > should render 1`] = `
       <div
         class="flex items-center justify-center gap-3"
       >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
+        <div>
+          <button
+            aria-busy="false"
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__refresh"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="hover:text-theme-secondary-200"
+              style="animation-direction: reverse;"
             >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="arrow-rotate-left"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
+          </button>
+        </div>
+        <div>
+          <button
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__star-button"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
             >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
+                <svg
+                  id="star-filled"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <div>
         <button
@@ -431,66 +435,70 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       <div
         class="flex items-center justify-center gap-3"
       >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
+        <div>
+          <button
+            aria-busy="false"
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__refresh"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="hover:text-theme-secondary-200"
+              style="animation-direction: reverse;"
             >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="arrow-rotate-left"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
+          </button>
+        </div>
+        <div>
+          <button
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__star-button"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
             >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
+                <svg
+                  id="star-filled"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <div>
         <button
@@ -736,66 +744,70 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       <div
         class="flex items-center justify-center gap-3"
       >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
+        <div>
+          <button
+            aria-busy="false"
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__refresh"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="hover:text-theme-secondary-200"
+              style="animation-direction: reverse;"
             >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="arrow-rotate-left"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
+          </button>
+        </div>
+        <div>
+          <button
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__star-button"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
             >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
+                <svg
+                  id="star-filled"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <div>
         <button
@@ -1049,66 +1061,70 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       <div
         class="flex items-center justify-center gap-3"
       >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
+        <div>
+          <button
+            aria-busy="false"
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__refresh"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="hover:text-theme-secondary-200"
+              style="animation-direction: reverse;"
             >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="arrow-rotate-left"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
+          </button>
+        </div>
+        <div>
+          <button
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__star-button"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
             >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
+                <svg
+                  id="star-filled"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <div>
         <button
@@ -1361,66 +1377,70 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       <div
         class="flex items-center justify-center gap-3"
       >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
+        <div>
+          <button
+            aria-busy="false"
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__refresh"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="hover:text-theme-secondary-200"
+              style="animation-direction: reverse;"
             >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="arrow-rotate-left"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
+          </button>
+        </div>
+        <div>
+          <button
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__star-button"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
             >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
+                <svg
+                  id="star-filled"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <div>
         <button
@@ -1676,66 +1696,70 @@ exports[`WalletHeader > should show modifiers 1`] = `
       <div
         class="flex items-center justify-center gap-3"
       >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
+        <div>
+          <button
+            aria-busy="false"
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__refresh"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="hover:text-theme-secondary-200"
+              style="animation-direction: reverse;"
             >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="arrow-rotate-left"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
+          </button>
+        </div>
+        <div>
+          <button
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__star-button"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
             >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
+                <svg
+                  id="star-filled"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <div>
         <button
@@ -1922,66 +1946,70 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       <div
         class="flex items-center justify-center gap-3"
       >
-        <button
-          aria-busy="false"
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__refresh"
-          type="button"
-        >
-          <div
-            class="hover:text-theme-secondary-200"
-            style="animation-direction: reverse;"
+        <div>
+          <button
+            aria-busy="false"
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__refresh"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="hover:text-theme-secondary-200"
+              style="animation-direction: reverse;"
             >
-              <svg
-                id="arrow-rotate-left"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="arrow-rotate-left"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
-        <button
-          class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
-          data-testid="WalletHeader__star-button"
-          type="button"
-        >
-          <div
-            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
+          </button>
+        </div>
+        <div>
+          <button
+            class="inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600"
+            data-testid="WalletHeader__star-button"
+            type="button"
           >
             <div
-              style="height: 16px; width: 16px;"
+              class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400"
             >
-              <svg
-                id="star-filled"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                />
-              </svg>
+                <svg
+                  id="star-filled"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <div>
         <button
