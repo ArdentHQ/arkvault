@@ -1,4 +1,3 @@
-import { sortByDesc } from "@ardenthq/sdk-helpers";
 import { Contracts, Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -32,6 +31,7 @@ interface FetchTransactionProperties {
 	transactionTypes?: string[];
 	wallets: ProfileContracts.IReadWriteWallet[];
 	cursor?: number;
+	orderBy?: string;
 }
 
 interface FilterTransactionProperties {
@@ -42,6 +42,7 @@ interface ProfileTransactionsProperties {
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
 	limit?: number;
+	orderBy?: string;
 }
 
 interface TransactionAggregateIdentifiers {
@@ -53,6 +54,7 @@ interface TransactionAggregateQueryParameters {
 	identifiers: TransactionAggregateIdentifiers[];
 	limit: number;
 	types?: string[];
+	orderBy?: string;
 }
 
 const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
@@ -64,7 +66,12 @@ const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
 		return transaction.isConfirmed();
 	});
 
-export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
+export const useProfileTransactions = ({
+	profile,
+	wallets,
+	limit = 30,
+	orderBy = "timestamp:desc",
+}: ProfileTransactionsProperties) => {
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
@@ -177,7 +184,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	);
 
 	const fetchTransactions = useCallback(
-		({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
+		({
+			flush = false,
+			mode = "all",
+			wallets = [],
+			transactionTypes = [],
+		}: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
@@ -192,6 +204,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					value: wallet.address(),
 				})),
 				limit: LIMIT,
+				orderBy,
 			};
 
 			const hasAllSelected = transactionTypes.length === allTransactionTypes.length;
@@ -203,7 +216,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			// @ts-ignore
 			return profile.transactionAggregate()[mode](queryParameters);
 		},
-		[LIMIT, profile],
+		[LIMIT, orderBy, profile],
 	);
 
 	const fetchMore = useCallback(async () => {
@@ -243,7 +256,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 		const items = filterTransactions({ transactions: response });
 
-		const latestTransaction = sortByDesc(items, (transaction) => transaction.timestamp()?.toUNIX())[0];
+		const latestTransaction = items[0];
 
 		const foundNew =
 			latestTransaction && !transactions.some((transaction) => latestTransaction.id() === transaction.id());
