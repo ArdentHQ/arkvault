@@ -184,12 +184,7 @@ export const useProfileTransactions = ({
 	);
 
 	const fetchTransactions = useCallback(
-		({
-			flush = false,
-			mode = "all",
-			wallets = [],
-			transactionTypes = [],
-		}: FetchTransactionProperties) => {
+		({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}

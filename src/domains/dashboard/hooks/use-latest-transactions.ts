@@ -1,4 +1,4 @@
-import { Contracts, } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEffect } from "react";
 
 import { useWalletConfig } from "@/domains/wallet/hooks";
@@ -14,11 +14,7 @@ export const useLatestTransactions = ({ profile, profileIsSyncing }: LatestTrans
 
 	const { selectedWallets } = useWalletConfig({ profile });
 
-	const {
-		updateFilters,
-		transactions,
-		isLoadingTransactions,
-	} = useProfileTransactions({
+	const { updateFilters, transactions, isLoadingTransactions } = useProfileTransactions({
 		limit,
 		orderBy: "timestamp:desc",
 		profile,
