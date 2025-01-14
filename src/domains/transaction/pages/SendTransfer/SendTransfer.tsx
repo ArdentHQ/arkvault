@@ -150,7 +150,6 @@ export const SendTransfer = () => {
 	const submit = useCallback(
 		async (skipUnconfirmedCheck = false) => {
 			assertWallet(wallet);
-			console.log({ activeTab })
 
 			if (!skipUnconfirmedCheck) {
 				const unconfirmed = await fetchWalletUnconfirmedTransactions(wallet);
@@ -186,7 +185,6 @@ export const SendTransfer = () => {
 	};
 
 	const handleNext = async (suppressWarning?: boolean) => {
-		console.log("handle next")
 		abortReference.current = new AbortController();
 
 		const { network, senderAddress } = getValues();
@@ -201,7 +199,6 @@ export const SendTransfer = () => {
 		}
 
 		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
-			console.log("case 1")
 			await handleSubmit(() => submit(true))();
 			return;
 		}
