@@ -351,17 +351,19 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<div className="hidden items-center space-x-4 sm:flex">
 								<div className="flex items-center">
 									<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
-										<NavigationButtonWrapper>
-											<Button
-												data-testid="NavigationBar__buttons--receive"
-												disabled={wallets.length === 0}
-												size="icon"
-												variant="transparent"
-												onClick={receiveButtonClickHandler}
-											>
-												<Icon name="Received" size="lg" className="p-1" />
-											</Button>
-										</NavigationButtonWrapper>
+										<div>
+											<NavigationButtonWrapper>
+												<Button
+													data-testid="NavigationBar__buttons--receive"
+													disabled={wallets.length === 0}
+													size="icon"
+													variant="transparent"
+													onClick={receiveButtonClickHandler}
+												>
+													<Icon name="Received" size="lg" className="p-1" />
+												</Button>
+											</NavigationButtonWrapper>
+										</div>
 									</Tooltip>
 								</div>
 
@@ -369,17 +371,19 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 								<div className="flex items-center">
 									<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
-										<NavigationButtonWrapper>
-											<Button
-												data-testid="NavigationBar__buttons--send"
-												disabled={wallets.length === 0}
-												size="icon"
-												variant="transparent"
-												onClick={sendButtonClickHandler}
-											>
-												<Icon name="Sent" size="lg" className="p-1" />
-											</Button>
-										</NavigationButtonWrapper>
+										<div>
+											<NavigationButtonWrapper>
+												<Button
+													data-testid="NavigationBar__buttons--send"
+													disabled={wallets.length === 0}
+													size="icon"
+													variant="transparent"
+													onClick={sendButtonClickHandler}
+												>
+													<Icon name="Sent" size="lg" className="p-1" />
+												</Button>
+											</NavigationButtonWrapper>
+										</div>
 									</Tooltip>
 								</div>
 

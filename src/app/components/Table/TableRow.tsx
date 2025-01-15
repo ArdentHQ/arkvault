@@ -9,8 +9,13 @@ type TableRowProperties = {
 } & TableRowStyleProperties &
 	React.HTMLProps<any>;
 
-const TableRowStyled = ({ ...props }: React.HTMLProps<HTMLTableRowElement> & TableRowProperties) => (
-	<tr {...props} className={twMerge(getStyles(props), props.className)} />
+const TableRowStyled = ({
+	border,
+	className,
+	isSelected,
+	...props
+}: React.HTMLProps<HTMLTableRowElement> & TableRowProperties) => (
+	<tr {...props} className={twMerge(getStyles({ ...props, border, isSelected }), className)} />
 );
 
 export const TableRow: React.FC<TableRowProperties> = ({
