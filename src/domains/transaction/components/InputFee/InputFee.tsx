@@ -1,5 +1,6 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { formatUnits } from "@ardenthq/sdk-mainsail";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -21,8 +22,7 @@ export const calculateGasFee = (gasPrice?: number, gasLimit?: number): number =>
 		return 0;
 	}
 
-	// dividing by 1e9 to convert gwei to ark
-	return BigNumber.make(gasLimit).times(gasPrice).divide(1e9).toNumber();
+	return formatUnits(BigNumber.make(gasLimit).times(gasPrice).toString(), "gwei").toNumber();
 };
 
 export const InputFee: React.FC<InputFeeProperties> = memo(
