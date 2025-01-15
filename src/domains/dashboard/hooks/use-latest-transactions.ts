@@ -34,6 +34,6 @@ export const useLatestTransactions = ({ profile, profileIsSyncing }: LatestTrans
 
 	return {
 		isLoadingTransactions,
-		latestTransactions: transactions.slice(0, limit),
+		latestTransactions: transactions,
 	};
 };

@@ -46,7 +46,7 @@ describe("useLatestTransactions", () => {
 
 		const mockTransactionsAggregate = vi
 			.spyOn(profile.transactionAggregate(), "all")
-			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
+			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items.slice(0, 10) } as any));
 
 		const { result } = renderHook(() => useLatestTransactions({ profile, profileIsSyncing: false }), { wrapper });
 
