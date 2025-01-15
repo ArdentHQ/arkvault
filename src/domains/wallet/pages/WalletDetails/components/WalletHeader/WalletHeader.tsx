@@ -79,7 +79,7 @@ export const WalletHeader = ({
 							onClick={handleCreate}
 						>
 							<Icon name="Plus" size="md" />
-							<p className="hidden pl-2 text-base font-semibold leading-5 sm:block">
+							<p className="hidden text-base font-semibold leading-5 sm:block">
 								{t("COMMON.CREATE")}
 							</p>
 						</Button>
