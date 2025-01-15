@@ -101,7 +101,7 @@ const Votes = ({ votes, activeDelegates }: VotesProperties) => {
 
 	return (
 		<div className="flex w-full flex-row items-center justify-between gap-2">
-			<div className="flex flex-row gap-2 text-base font-semibold leading-5">
+			<div className="flex flex-row gap-2 text-base font-semibold leading-5 items-center">
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 				</p>
