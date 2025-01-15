@@ -179,19 +179,21 @@ export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, i
 					theme="dark"
 					disabled={!wallet.hasSyncedWithNetwork()}
 				>
-					<WalletHeaderButton
-						data-testid="WalletHeader__refresh"
-						type="button"
-						aria-busy={isSyncing}
-						onClick={syncWallet}
-						disabled={isSyncing}
-					>
-						<Icon
-							name="ArrowRotateLeft"
-							className={cn("hover:text-theme-secondary-200", { "animate-spin": isSyncing })}
-							style={{ animationDirection: "reverse" }}
-						/>
-					</WalletHeaderButton>
+					<div>
+						<WalletHeaderButton
+							data-testid="WalletHeader__refresh"
+							type="button"
+							aria-busy={isSyncing}
+							onClick={syncWallet}
+							disabled={isSyncing}
+						>
+							<Icon
+								name="ArrowRotateLeft"
+								className={cn("hover:text-theme-secondary-200", { "animate-spin": isSyncing })}
+								style={{ animationDirection: "reverse" }}
+							/>
+						</WalletHeaderButton>
+					</div>
 				</Tooltip>
 
 				<Tooltip
@@ -202,20 +204,22 @@ export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, i
 					}
 					theme="dark"
 				>
-					<WalletHeaderButton
-						data-testid="WalletHeader__star-button"
-						type="button"
-						onClick={handleToggleStar}
-					>
-						<Icon
-							className={cn("transition-all duration-300 ease-in-out", {
-								"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
-								"fill-transparent stroke-theme-secondary-700 hover:fill-theme-warning-200 hover:stroke-theme-warning-400 dark:stroke-theme-secondary-600 dark:hover:stroke-theme-warning-400":
-									!wallet.isStarred(),
-							})}
-							name={"StarFilled"}
-						/>
-					</WalletHeaderButton>
+					<div>
+						<WalletHeaderButton
+							data-testid="WalletHeader__star-button"
+							type="button"
+							onClick={handleToggleStar}
+						>
+							<Icon
+								className={cn("transition-all duration-300 ease-in-out", {
+									"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
+									"fill-transparent stroke-theme-secondary-700 hover:fill-theme-warning-200 hover:stroke-theme-warning-400 dark:stroke-theme-secondary-600 dark:hover:stroke-theme-warning-400":
+										!wallet.isStarred(),
+								})}
+								name={"StarFilled"}
+							/>
+						</WalletHeaderButton>
+					</div>
 				</Tooltip>
 			</div>
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
