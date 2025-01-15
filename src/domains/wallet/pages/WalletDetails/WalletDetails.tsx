@@ -17,6 +17,7 @@ import { PendingTransactions } from "@/domains/transaction/components/Transactio
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletHeader } from "./components/WalletHeader";
+import { WalletVote } from "./components";
 
 export const WalletDetails = () => {
 	const [signedTransactionModalItem, setSignedTransactionModalItem] = useState<DTO.ExtendedSignedTransactionData>();
@@ -129,6 +130,25 @@ export const WalletDetails = () => {
 						</TabList>
 					</TabScroll>
 				</Tabs>
+
+				{networkAllowsVoting && (
+					<Section
+						borderClassName="border-transparent dark:border-transaparent md:border-theme-secondary-300 md:dark:border-transparent"
+						backgroundClassName="md:bg-theme-background md:dark:bg-theme-secondary-background"
+						innerClassName="md:-my-2 w-full"
+						border
+						className={cn({
+							"hidden md:flex": mobileActiveTab !== "votes",
+						})}
+					>
+						<WalletVote
+							isLoadingVotes={isLoadingVotes}
+							votes={votes}
+							wallet={activeWallet}
+							onButtonClick={handleVoteButton}
+						/>
+					</Section>
+				)}
 
 				<Section className="flex-1 pt-6">
 					{hasPendingTransactions && (
