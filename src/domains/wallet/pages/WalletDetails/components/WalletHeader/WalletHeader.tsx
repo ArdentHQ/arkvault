@@ -107,7 +107,7 @@ export const WalletHeader = ({
 									iconColor="text-theme-secondary-300 dark:text-theme-dark-700"
 								/>
 							</div>
-							<div className="flex flex-row items-center gap-2">
+							<div className="flex flex-row items-center gap-4">
 								<Copy
 									address={wallet.address()}
 									className="text-theme-secondary-700 dark:text-theme-dark-200"
@@ -130,10 +130,10 @@ export const WalletHeader = ({
 
 								<Divider
 									type="vertical"
-									className="mx-2 hidden h-[17px] border-theme-secondary-300 p-0 dark:border-theme-dark-700 sm:block"
+									className="mx-0 hidden h-[17px] border-theme-secondary-300 p-0 dark:border-theme-dark-700 sm:block"
 								/>
 
-								<div className="hidden h-4 w-4 sm:block">
+								<div className="hidden h-4 w-4 sm:flex">
 									<WalletActions
 										profile={profile}
 										wallet={wallet}
