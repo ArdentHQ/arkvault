@@ -97,6 +97,7 @@ export const translations = {
 		YEARS_AGO_other: "{{count}} years ago",
 	},
 	DEFAULT_CHOSEN_FEE: "Default fee type",
+	DELEGATE_STATUS: "Delegate Status",
 	DELETE: "Delete",
 	DESCRIPTION: "Description",
 	DETAILS: "Details",
