@@ -13,12 +13,12 @@ const EmptyVotes = () => {
 	const { t } = useTranslation();
 	return (
 		<div className="flex w-full flex-row items-center justify-start" data-testid="EmptyVotes">
-			<div className="flex flex-row gap-2 text-base font-semibold leading-5">
-				<p className="text-theme-secondary-700 dark:text-theme-dark-200">
+			<div className="flex flex-row gap-2 text-base font-semibold items-center">
+				<p className="text-theme-secondary-700 dark:text-theme-dark-200 leading-5">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}
 				</p>
 				<Link to={votesHelpLink} isExternal>
-					<span className="text-base">{t("COMMON.LEARN_MORE")}</span>
+					<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
 				</Link>
 			</div>
 		</div>
