@@ -137,8 +137,8 @@ export const WalletDetails = () => {
 						backgroundClassName="md:bg-theme-background md:dark:bg-theme-secondary-background"
 						innerClassName="md:-my-2 w-full"
 						border
-						className={cn({
-							"hidden md:flex": mobileActiveTab !== "votes",
+						className={cn("md:hidden", {
+							"hidden": mobileActiveTab !== "votes",
 						})}
 					>
 						<WalletVote
