@@ -3,10 +3,7 @@ import React from "react";
 import { Amount } from "@/app/components/Amount";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { Skeleton } from "@/app/components/Skeleton";
-import {
-	InputFeeSimpleProperties,
-	InputFeeSimpleValue,
-} from "@/domains/transaction/components/InputFee/InputFee.contracts";
+import { InputFeeSimpleProperties, InputFeeOption } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 
@@ -21,7 +18,7 @@ const confirmationTimes: Record<ConfirmationSpeed, number> = {
 export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	options,
 	onChange,
-	value,
+	selectedOption,
 	ticker,
 	exchangeTicker,
 	showConvertedValues,
@@ -32,15 +29,15 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	return (
 		<ButtonGroup className="flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
 			{Object.entries(options).map(([optionValue, { label, displayValue, displayValueConverted }]) => {
-				const isSelected = optionValue === value;
+				const isSelected = optionValue === selectedOption;
 
 				return (
 					<ButtonGroupOption
 						key={optionValue}
 						value={displayValue}
-						isSelected={() => optionValue === value}
+						isSelected={() => optionValue === selectedOption}
 						className="group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
-						setSelectedValue={() => onChange(optionValue as InputFeeSimpleValue)}
+						setSelectedValue={() => onChange(optionValue as InputFeeOption)}
 					>
 						<div
 							className={cn(

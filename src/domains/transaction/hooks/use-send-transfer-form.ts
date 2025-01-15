@@ -14,6 +14,8 @@ import { getTransferType, handleBroadcastError } from "@/domains/transaction/uti
 import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
@@ -49,7 +51,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	});
 	const { clearErrors, formState, getValues, register, setValue, handleSubmit, watch, reset, trigger } = form;
 
-	const { senderAddress, fees, fee, remainingBalance, amount, isSendAllSelected, network } = watch();
+	const { senderAddress, fees, gasPrice, gasLimit, remainingBalance, amount, isSendAllSelected, network } = watch();
 	const { sendTransfer: sendTransferValidation, common: commonValidation } = useValidation();
 
 	const resetForm = useCallback(
@@ -101,8 +103,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			setLastEstimatedExpiration(data.expiration);
 
-			// @TODO: Remove hardcoded fee once fees are implemented for evm.
-			const transactionInput: Services.TransactionInputs = { data, fee: 5, signatory };
+			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory };
 
 			const abortSignal = abortReference.current.signal;
 			const { uuid, transaction } = await transactionBuilder.build(
@@ -123,7 +124,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			return transaction;
 		},
-		[activeProfile, clearErrors, getValues, persist, transactionBuilder, wallet],
+		[clearErrors, gasLimit, gasPrice, getValues, persist, transactionBuilder, wallet],
 	);
 
 	const walletBalance = wallet?.balance();
@@ -133,7 +134,11 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("recipients", sendTransferValidation.recipients());
 		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
-		register("fee", commonValidation.fee(walletBalance, wallet?.network(), fees));
+		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, wallet?.network()));
+		register(
+			"gasLimit",
+			commonValidation.gasLimit(walletBalance, getValues, GasLimit["transfer"], wallet?.network()),
+		);
 		register("memo", sendTransferValidation.memo());
 
 		register("remainingBalance");
@@ -202,15 +207,16 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		if (!isSendAllSelected) {
 			return;
 		}
+		const fee = calculateGasFee(gasPrice, gasLimit);
 
 		const remaining = remainingBalance - fee;
 
-		// Using `8` for precision because is the maximum number of decimals
+		// Using `18` for precision because is the maximum number of decimals
 		// that the amount field supports.
-		setValue("amount", precisionRound(remaining, 8));
+		setValue("amount", precisionRound(remaining, 18));
 
-		void trigger(["fee", "amount"]);
-	}, [fee]); // eslint-disable-line react-hooks/exhaustive-deps
+		void trigger(["gasPrice", "gasLimit", "amount"]);
+	}, [gasLimit, gasPrice]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return {
 		form,
@@ -220,6 +226,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		lastEstimatedExpiration,
 		resetForm,
 		submitForm,
-		values: { fee, fees, network, senderAddress },
+		values: { fees, gasLimit, gasPrice, network, senderAddress },
 	};
 };
