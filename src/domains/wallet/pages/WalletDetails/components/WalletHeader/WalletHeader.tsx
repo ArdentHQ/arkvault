@@ -47,7 +47,7 @@ export const WalletHeader = ({
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
-			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 py-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
+			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pt-3 pb-2 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
 				<div className="flex w-full flex-row items-center justify-between px-4">
 					<div className="flex h-fit flex-row items-center gap-1">
 						<p className="hidden text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50 sm:block">
