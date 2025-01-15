@@ -11,7 +11,7 @@ export interface LabelProperties {
 }
 
 export const Label = ({
-	color,
+	color = "primary",
 	size,
 	variant,
 	noBorder,
@@ -19,5 +19,3 @@ export const Label = ({
 }: LabelProperties & React.HTMLAttributes<HTMLDivElement>) => (
 	<div {...props} className={twMerge(getStyles({ color, noBorder, size, variant }), props.className)} />
 );
-
-Label.defaultProps = { color: "primary" };
