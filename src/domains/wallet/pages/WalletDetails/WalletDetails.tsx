@@ -138,7 +138,7 @@ export const WalletDetails = () => {
 						innerClassName="md:-my-2 w-full"
 						border
 						className={cn("md:hidden", {
-							"hidden": mobileActiveTab !== "votes",
+							hidden: mobileActiveTab !== "votes",
 						})}
 					>
 						<WalletVote
