@@ -20,6 +20,7 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { twMerge } from "tailwind-merge";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -88,8 +89,11 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 		clearErrors,
 		formState: { errors },
 	} = useFormContext();
-	const { network, senderAddress, fee, recipientAddress, amount, recipientAlias, isSendAllSelected } = watch();
+	const { network, senderAddress, gasPrice, gasLimit, recipientAddress, amount, recipientAlias, isSendAllSelected } =
+		watch();
 	const { sendTransfer } = useValidation();
+
+	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
@@ -286,7 +290,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	};
 
 	const amountAddons =
-		!errors.amount && !errors.fee && isSenderFilled && !wallet?.network().isTest()
+		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
 					end: {
 						content: (

@@ -9,6 +9,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -18,8 +19,10 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch } = useFormContext();
-	const { fee, recipients } = watch();
+	const { gasPrice, gasLimit, recipients } = watch();
 	const profile = useActiveProfile();
+
+	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	let amount = 0;
 

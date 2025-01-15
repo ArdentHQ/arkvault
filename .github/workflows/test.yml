@@ -465,6 +465,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/domains/exchange
+            COVERAGE_THRESHOLD_LINES: 98.77
+            COVERAGE_THRESHOLD_FUNCTIONS: 98.5
+            COVERAGE_THRESHOLD_STATEMENTS: 98.68
+            COVERAGE_THRESHOLD_BRANCHES: 99.73
         strategy:
             matrix:
                 node-version:
