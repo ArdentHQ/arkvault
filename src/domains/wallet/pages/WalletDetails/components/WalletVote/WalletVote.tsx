@@ -37,7 +37,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 			{renderVotes()}
 
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
-				<div className="sm:max-md:self-end w-full sm:w-auto">
+				<div className="md:max-md:self-end w-full md:w-auto">
 					<Button
 						data-testid="WalletVote__button"
 						disabled={
@@ -49,7 +49,26 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 							!isLedgerWalletCompatible(wallet)
 						}
 						variant="secondary-icon"
-						className="mt-4 w-full space-x-2 text-theme-primary-600 dark:text-theme-dark-navy-400 md:mt-0 md:w-auto md:px-2 md:py-[3px]"
+						className="mt-4 w-full space-x-2 text-theme-primary-600 dark:text-theme-dark-navy-400 md:mt-0 md:w-auto md:px-2 md:py-[3px] hidden md:flex"
+						onClick={() => onButtonClick()}
+					>
+						<Icon name="Vote" />
+						<span>{t("COMMON.VOTE")}</span>
+					</Button>
+
+
+					<Button
+						data-testid="WalletVote__button_mobile"
+						disabled={
+							wallet.balance() === 0 ||
+							(wallet.network().usesLockedBalance() &&
+								wallet.balance("available") < wallet.network().votesAmountStep()) ||
+							!wallet.hasBeenFullyRestored() ||
+							!wallet.hasSyncedWithNetwork() ||
+							!isLedgerWalletCompatible(wallet)
+						}
+						variant="secondary"
+						className="w-full text-theme-primary-600 dark:text-theme-dark-navy-400 md:hidden"
 						onClick={() => onButtonClick()}
 					>
 						<Icon name="Vote" />
