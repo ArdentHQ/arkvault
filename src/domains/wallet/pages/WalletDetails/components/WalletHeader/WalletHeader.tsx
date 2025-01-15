@@ -68,7 +68,7 @@ export const WalletHeader = ({
 							onClick={handleImport}
 						>
 							<Icon name="ArrowTurnDownBracket" size="md" />
-							<p className="hidden pl-2 text-base font-semibold leading-5 sm:block">
+							<p className="hidden text-base font-semibold leading-5 sm:block">
 								{t("COMMON.IMPORT")}
 							</p>
 						</Button>
