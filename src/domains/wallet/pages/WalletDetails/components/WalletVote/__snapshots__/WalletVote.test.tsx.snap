@@ -11,10 +11,10 @@ exports[`WalletVote > should disable vote button when balance is less than votes
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold items-center"
+        class="flex flex-row items-center gap-2 text-base font-semibold"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
+          class="leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -127,10 +127,10 @@ exports[`WalletVote > should render 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold items-center"
+        class="flex flex-row items-center gap-2 text-base font-semibold"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
+          class="leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -339,10 +339,10 @@ exports[`WalletVote > should render disabled vote button 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold items-center"
+        class="flex flex-row items-center gap-2 text-base font-semibold"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
+          class="leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -455,10 +455,10 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold items-center"
+        class="flex flex-row items-center gap-2 text-base font-semibold"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
+          class="leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -683,10 +683,10 @@ exports[`WalletVote > should render the maximum votes 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold items-center"
+        class="flex flex-row items-center gap-2 text-base font-semibold"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
+          class="leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -798,10 +798,10 @@ exports[`WalletVote > should render without votes 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold items-center"
+        class="flex flex-row items-center gap-2 text-base font-semibold"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
+          class="leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
         >
           You have not voted for a Delegate yet.
         </p>
