@@ -11,10 +11,10 @@ exports[`WalletVote > should disable vote button when balance is less than votes
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row gap-2 text-base font-semibold items-center"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -29,7 +29,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
             class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
           >
             <span
-              class="text-base"
+              class="text-base leading-5"
             >
               Learn more
             </span>
@@ -127,10 +127,10 @@ exports[`WalletVote > should render 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row gap-2 text-base font-semibold items-center"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -145,7 +145,7 @@ exports[`WalletVote > should render 1`] = `
             class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
           >
             <span
-              class="text-base"
+              class="text-base leading-5"
             >
               Learn more
             </span>
@@ -241,7 +241,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
       class="flex w-full flex-row items-center justify-between gap-2"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row items-center gap-2 text-base font-semibold leading-5"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200"
@@ -339,10 +339,10 @@ exports[`WalletVote > should render disabled vote button 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row gap-2 text-base font-semibold items-center"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -357,7 +357,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
             class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
           >
             <span
-              class="text-base"
+              class="text-base leading-5"
             >
               Learn more
             </span>
@@ -455,10 +455,10 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row gap-2 text-base font-semibold items-center"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -473,7 +473,7 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
             class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
           >
             <span
-              class="text-base"
+              class="text-base leading-5"
             >
               Learn more
             </span>
@@ -683,10 +683,10 @@ exports[`WalletVote > should render the maximum votes 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row gap-2 text-base font-semibold items-center"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -701,7 +701,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
             class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
           >
             <span
-              class="text-base"
+              class="text-base leading-5"
             >
               Learn more
             </span>
@@ -798,10 +798,10 @@ exports[`WalletVote > should render without votes 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row gap-2 text-base font-semibold items-center"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 leading-5"
         >
           You have not voted for a Delegate yet.
         </p>
@@ -816,7 +816,7 @@ exports[`WalletVote > should render without votes 1`] = `
             class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
           >
             <span
-              class="text-base"
+              class="text-base leading-5"
             >
               Learn more
             </span>
@@ -912,7 +912,7 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
       class="flex w-full flex-row items-center justify-between gap-2"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row items-center gap-2 text-base font-semibold leading-5"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1009,7 +1009,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
       class="flex w-full flex-row items-center justify-between gap-2"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row items-center gap-2 text-base font-semibold leading-5"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1106,7 +1106,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
       class="flex w-full flex-row items-center justify-between gap-2"
     >
       <div
-        class="flex flex-row gap-2 text-base font-semibold leading-5"
+        class="flex flex-row items-center gap-2 text-base font-semibold leading-5"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200"
