@@ -547,7 +547,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Amount
                                 </div>
                                 <div
-                                  class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                   data-testid="AmountLabel__wrapper"
                                 >
                                   <div
@@ -557,7 +557,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                       class="whitespace-nowrap text-sm"
                                       data-testid="Amount"
                                     >
-                                      1 DARK
+                                      + 1 DARK
                                     </span>
                                   </div>
                                 </div>

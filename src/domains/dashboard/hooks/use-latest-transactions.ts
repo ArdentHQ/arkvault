@@ -1,14 +1,8 @@
-import { sortByDesc } from "@ardenthq/sdk-helpers";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { useEffect, useState } from "react";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useEffect } from "react";
 
 import { useWalletConfig } from "@/domains/wallet/hooks";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
-
-interface LatestTransactionsStateProperties {
-	latestTransactions: DTO.ExtendedConfirmedTransactionData[];
-	isLoadingTransactions: boolean;
-}
 
 interface LatestTransactionsProperties {
 	profile: Contracts.IProfile;
@@ -17,19 +11,12 @@ interface LatestTransactionsProperties {
 
 export const useLatestTransactions = ({ profile, profileIsSyncing }: LatestTransactionsProperties) => {
 	const limit = 10;
-	const [{ latestTransactions, isLoadingTransactions }, setState] = useState<LatestTransactionsStateProperties>({
-		isLoadingTransactions: true,
-		latestTransactions: [],
-	});
 
 	const { selectedWallets } = useWalletConfig({ profile });
 
-	const {
-		updateFilters,
-		transactions,
-		isLoadingTransactions: isLoading,
-	} = useProfileTransactions({
+	const { updateFilters, transactions, isLoadingTransactions } = useProfileTransactions({
 		limit,
+		orderBy: "timestamp:desc",
 		profile,
 		wallets: selectedWallets,
 	});
@@ -45,24 +32,8 @@ export const useLatestTransactions = ({ profile, profileIsSyncing }: LatestTrans
 		});
 	}, [profileIsSyncing, updateFilters]);
 
-	useEffect(() => {
-		if (isLoading) {
-			return;
-		}
-
-		const latestTransactions = sortByDesc(transactions, (transaction) => transaction.timestamp()?.toUNIX()).slice(
-			0,
-			limit,
-		);
-
-		setState({
-			isLoadingTransactions: false,
-			latestTransactions,
-		});
-	}, [isLoading, transactions]);
-
 	return {
 		isLoadingTransactions,
-		latestTransactions,
+		latestTransactions: transactions,
 	};
 };

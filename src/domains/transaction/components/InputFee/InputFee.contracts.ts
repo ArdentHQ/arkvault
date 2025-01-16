@@ -6,17 +6,18 @@ enum InputFeeViewType {
 	Advanced,
 }
 
-enum InputFeeSimpleValue {
+enum InputFeeOption {
 	Slow = "slow",
 	Average = "average",
 	Fast = "fast",
 }
 
-const DEFAULT_SIMPLE_VALUE = InputFeeSimpleValue.Average;
+const DEFAULT_FEE_OPTION = InputFeeOption.Average;
 const DEFAULT_VIEW_TYPE = InputFeeViewType.Simple;
 
-type InputFeeSimpleOptions = {
-	[key in InputFeeSimpleValue]: {
+type InputFeeOptions = {
+	[key in InputFeeOption]: {
+		gasPrice: number;
 		label: string;
 		displayValue: number;
 		displayValueConverted: number;
@@ -27,17 +28,21 @@ interface InputFeeAdvancedProperties {
 	convert: (value?: number) => number;
 	disabled?: boolean;
 	exchangeTicker: string;
-	onChange: (value: string) => void;
+	onChangeGasPrice: (value: number) => void;
+	onChangeGasLimit: (value: number) => void;
 	showConvertedValue: boolean;
-	step: number;
+	gasPriceStep: number;
 	network: Networks.Network;
-	value: string;
+	gasPrice: number;
+	gasLimit: number;
+	defaultGasLimit: number;
+	minGasPrice: number;
 }
 
 interface InputFeeSimpleProperties {
-	options: InputFeeSimpleOptions;
-	onChange: (value: InputFeeSimpleValue) => void;
-	value: InputFeeSimpleValue;
+	options: InputFeeOptions;
+	onChange: (value: InputFeeOption) => void;
+	selectedOption: InputFeeOption;
 	ticker: string;
 	exchangeTicker: string;
 	showConvertedValues: boolean;
@@ -48,19 +53,23 @@ interface InputFeeProperties {
 	min: number;
 	avg: number;
 	max: number;
-	step: number;
+	gasPriceStep: number;
+	defaultGasLimit: number;
+	minGasPrice: number;
 	disabled?: boolean;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
 	loading?: boolean;
 	viewType?: InputFeeViewType;
-	simpleValue?: InputFeeSimpleValue;
-	value: string | undefined;
-	onChange: (value: string) => void;
+	selectedFeeOption?: InputFeeOption;
+	gasPrice: number;
+	gasLimit: number;
+	onChangeGasPrice: (value: number) => void;
+	onChangeGasLimit: (value: number) => void;
 	onChangeViewType?: (value: InputFeeViewType) => void;
-	onChangeSimpleValue?: (value: InputFeeSimpleValue) => void;
+	onChangeFeeOption?: (value: InputFeeOption) => void;
 }
 
-export { DEFAULT_SIMPLE_VALUE, DEFAULT_VIEW_TYPE, InputFeeSimpleValue, InputFeeViewType };
+export { DEFAULT_FEE_OPTION, DEFAULT_VIEW_TYPE, InputFeeOption, InputFeeViewType };
 
-export type { InputFeeAdvancedProperties, InputFeeProperties, InputFeeSimpleOptions, InputFeeSimpleProperties };
+export type { InputFeeAdvancedProperties, InputFeeProperties, InputFeeOptions, InputFeeSimpleProperties };

@@ -4,21 +4,20 @@ import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
 import { InputFee } from "./InputFee";
-import { InputFeeProperties, InputFeeSimpleValue, InputFeeViewType } from "./InputFee.contracts";
+import { InputFeeProperties, InputFeeOption, InputFeeViewType } from "./InputFee.contracts";
 import { translations } from "@/domains/transaction/i18n";
 import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: 0.456,
 	disabled: false,
+	gasPriceStep: 0.001,
 	loading: false,
 	max: 0.5,
 	min: 0.006,
-	onChange: vi.fn(),
-	onChangeSimpleValue: vi.fn(),
+	onChangeFeeOption: vi.fn(),
 	onChangeViewType: vi.fn(),
-	simpleValue: InputFeeSimpleValue.Average,
-	step: 0.001,
+	selectedFeeOption: InputFeeOption.Average,
 	value: "0.3",
 	viewType: InputFeeViewType.Simple,
 });
@@ -43,7 +42,7 @@ describe("InputFee", () => {
 		Wrapper = () => {
 			const [value, setValue] = useState(defaultProps.value);
 			const [viewType, setViewType] = useState(defaultProps.viewType);
-			const [simpleValue, setSimpleValue] = useState(defaultProps.simpleValue);
+			const [simpleValue, setSimpleValue] = useState(defaultProps.selectedFeeOption);
 
 			const handleChangeValue = (newValue: string) => {
 				setValue(newValue);
@@ -55,9 +54,9 @@ describe("InputFee", () => {
 				defaultProps.onChangeViewType?.(newValue);
 			};
 
-			const handleChangeSimpleValue = (value_: InputFeeSimpleValue) => {
+			const handleChangeSimpleValue = (value_: InputFeeOption) => {
 				setSimpleValue(value_);
-				defaultProps.onChangeSimpleValue?.(value_);
+				defaultProps.onChangeFeeOption?.(value_);
 			};
 
 			return (
@@ -67,8 +66,8 @@ describe("InputFee", () => {
 					onChange={handleChangeValue}
 					viewType={viewType}
 					onChangeViewType={handleChangeViewType}
-					simpleValue={simpleValue}
-					onChangeSimpleValue={handleChangeSimpleValue}
+					selectedFeeOption={simpleValue}
+					onChangeFeeOption={handleChangeSimpleValue}
 				/>
 			);
 		};
@@ -226,7 +225,7 @@ describe("InputFee", () => {
 
 		it("should increment value by step when up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "0.5";
 
 			render(<InputFee {...defaultProps} />);
@@ -240,7 +239,7 @@ describe("InputFee", () => {
 
 		it("should decrement value by step when down button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "0.5";
 
 			render(<InputFee {...defaultProps} />);
@@ -254,7 +253,7 @@ describe("InputFee", () => {
 
 		it("should disable down button when value is zero", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "0";
 
 			render(<InputFee {...defaultProps} />);
@@ -278,7 +277,7 @@ describe("InputFee", () => {
 
 		it("should not allow to set a negative value with down button", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.6;
+			defaultProps.gasPriceStep = 0.6;
 			defaultProps.value = "1.5";
 
 			render(<InputFee {...defaultProps} />);
@@ -312,7 +311,7 @@ describe("InputFee", () => {
 
 		it("should set value = step when empty and up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "";
 
 			render(<InputFee {...defaultProps} />);
@@ -328,7 +327,7 @@ describe("InputFee", () => {
 
 		it("should set value = 0 when empty and down button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.step = 0.01;
+			defaultProps.gasPriceStep = 0.01;
 			defaultProps.value = "";
 
 			render(<InputFee {...defaultProps} />);
