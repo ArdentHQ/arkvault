@@ -18,18 +18,18 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	onRowClick,
 	profile,
 }) => {
-	const [coinName, setCoinName] = useState<string>()
+	const [coinName, setCoinName] = useState<string>();
 	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
 	const columns = useTransactionTableColumns({ coin: coinName });
 
 	useEffect(() => {
 		try {
-			const wallet = profile.wallets().first()
-			setCoinName(wallet.currency())
+			const wallet = profile.wallets().first();
+			setCoinName(wallet.currency());
 		} catch {
 			//
 		}
-	}, [profile])
+	}, [profile]);
 
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
 		() => ({

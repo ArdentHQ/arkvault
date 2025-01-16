@@ -7,7 +7,7 @@ import { PendingTransaction } from "@/domains/transaction/components/Transaction
 
 export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 	const { t } = useTranslation();
-	const coinLabel = coin ? `(${coin})` : ""
+	const coinLabel = coin ? `(${coin})` : "";
 
 	return useMemo<Column<DTO.ExtendedConfirmedTransactionData>[]>(() => {
 		const templateColumns: Column<DTO.ExtendedConfirmedTransactionData>[] = [
@@ -59,7 +59,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) => {
 	const { t } = useTranslation();
 
-	const coinLabel = coin ? `(${coin})` : ""
+	const coinLabel = coin ? `(${coin})` : "";
 
 	return useMemo<Column<PendingTransaction>[]>(
 		() => [
