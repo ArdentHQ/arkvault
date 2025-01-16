@@ -66,6 +66,17 @@ const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
 		return transaction.isConfirmed();
 	});
 
+const syncWallets = async (wallets: Contracts.IReadWriteWallet[]) => {
+	await Promise.allSettled(wallets.map(wallet => {
+		if (wallet.hasSyncedWithNetwork()) {
+			return
+		}
+
+		return wallet.synchroniser().identity()
+	}))
+}
+
+
 export const useProfileTransactions = ({
 	profile,
 	wallets,
@@ -109,6 +120,7 @@ export const useProfileTransactions = ({
 		}
 		return hasMorePages;
 	};
+
 
 	useEffect(() => {
 		const loadTransactions = async () => {
@@ -184,10 +196,12 @@ export const useProfileTransactions = ({
 	);
 
 	const fetchTransactions = useCallback(
-		({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
+		async ({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
+
+			await syncWallets(wallets)
 
 			if (flush) {
 				profile.transactionAggregate().flush(mode);
@@ -218,6 +232,7 @@ export const useProfileTransactions = ({
 		cursor.current = cursor.current + 1;
 		setState((state) => ({ ...state, isLoadingMore: true }));
 
+		await syncWallets(wallets)
 		const response = await fetchTransactions({
 			cursor: cursor.current,
 			flush: false,
@@ -240,6 +255,7 @@ export const useProfileTransactions = ({
 	 * Run periodically every 30 seconds to check for new transactions
 	 */
 	const checkNewTransactions = async () => {
+		await syncWallets(wallets)
 		const response = await fetchTransactions({
 			cursor: 1,
 			flush: true,
@@ -292,7 +308,6 @@ export const useProfileTransactions = ({
 		activeMode,
 		activeTransactionType,
 		fetchMore,
-		fetchTransactions,
 		hasEmptyResults,
 		hasFilter: (selectedTransactionTypes?.length ?? 0) < allTransactionTypes.length,
 		hasMore,
