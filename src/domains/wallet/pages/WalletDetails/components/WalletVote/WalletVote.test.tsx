@@ -97,7 +97,7 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		expect(screen.getByRole("button")).toBeDisabled();
+		expect(screen.queryAllByRole("button")[0]).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 
 		balanceSpy.mockRestore();
@@ -114,7 +114,7 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		expect(screen.getByRole("button")).toBeDisabled();
+		expect(screen.queryAllByRole("button")[0]).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 
 		usesLockedBalance.mockRestore();
@@ -287,9 +287,9 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("WalletVote")).not.toBeDisabled());
+		await waitFor(() => expect(screen.queryAllByTestId("WalletVote")[0]).not.toBeDisabled());
 
-		await userEvent.click(screen.getByText(t("COMMON.VOTE")));
+		await userEvent.click(screen.queryAllByText(t("COMMON.VOTE"))[0]);
 
 		expect(onButtonClick).toHaveBeenCalledWith();
 	});
