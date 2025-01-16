@@ -19,6 +19,8 @@ import { Alert } from "@/app/components/Alert";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 
 interface TransferProperties {
 	onClose: () => void;
@@ -64,10 +66,12 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		form,
 		submitForm,
 		lastEstimatedExpiration,
-		values: { fee },
+		values: { gasPrice, gasLimit },
 		formState: { isValid, isSubmitting },
 		handleSubmit,
 	} = useSendTransferForm(senderWallet);
+
+	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	useEffect(() => {
 		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
@@ -112,7 +116,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				type: "transfer",
 			});
 
-			form.setValue("fee", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
+			form.setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
+			form.setValue("gasLimit", GasLimit["transfer"], { shouldDirty: true, shouldValidate: true });
 			form.setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
 		};
 

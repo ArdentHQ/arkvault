@@ -1,15 +1,28 @@
 import { Networks } from "@ardenthq/sdk";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { TransactionFees } from "@/types";
 
 export const common = (t: TFunction) => ({
 	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({
+		validate: () => {
+			console.log({ balance, fees, network });
+			return true;
+		},
+	}),
+	gasLimit: (balance = 0, getValues: () => object, defaultGasLimit: number, network?: Networks.Network) => ({
 		validate: {
-			valid: (fee?: string | number) => {
-				if (!fee || (+fee === 0 && network && !network.chargesZeroFees())) {
+			valid: (gasLimit: number) => {
+				if (gasLimit === 0) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
-						field: t("COMMON.FEE"),
+						field: t("COMMON.GAS_LIMIT"),
+					});
+				}
+
+				if (gasLimit < defaultGasLimit) {
+					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW", {
+						minGasLimit: defaultGasLimit,
 					});
 				}
 
@@ -24,6 +37,14 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
+				const { gasPrice } = getValues() as { gasPrice: number | undefined };
+
+				if (gasPrice === undefined) {
+					return true;
+				}
+
+				const fee = calculateGasFee(gasPrice, gasLimit);
+
 				if (+fee > balance) {
 					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 						balance,
@@ -31,14 +52,48 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				if (Math.sign(+fee) === -1) {
-					return t("TRANSACTION.VALIDATION.FEE_NEGATIVE");
+				return true;
+			},
+		},
+	}),
+	gasPrice: (balance = 0, getValues: () => object, minGasPrice: number, network?: Networks.Network) => ({
+		validate: {
+			valid: (gasPrice: number) => {
+				if (gasPrice === 0) {
+					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+						field: t("COMMON.GAS_PRICE"),
+					});
 				}
 
-				if (network.feeType() === "size" && fees?.min && +fee < fees.min) {
-					return t("COMMON.VALIDATION.MIN", {
-						field: t("COMMON.FEE"),
-						min: fees.min,
+				if (gasPrice < minGasPrice) {
+					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW", {
+						minGasPrice,
+					});
+				}
+
+				if (!network?.coin()) {
+					return true;
+				}
+
+				if (Math.sign(balance) <= 0) {
+					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
+						balance: 0,
+						coinId: network.coin(),
+					});
+				}
+
+				const { gasLimit } = getValues() as { gasLimit: number | undefined };
+
+				if (gasLimit === undefined) {
+					return true;
+				}
+
+				const fee = calculateGasFee(gasPrice, gasLimit);
+
+				if (+fee > balance) {
+					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
+						balance,
+						coinId: network.coin(),
 					});
 				}
 

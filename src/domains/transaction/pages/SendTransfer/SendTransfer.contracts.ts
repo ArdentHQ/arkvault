@@ -14,7 +14,8 @@ export enum SendTransferStep {
 export interface SendTransferForm {
 	senderAddress: string;
 	fees: TransactionFees;
-	fee: number;
+	gasPrice: number;
+	gasLimit: number;
 	remainingBalance: number;
 	amount: string;
 	isSendAllSelected: string;
