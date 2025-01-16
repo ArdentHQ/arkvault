@@ -13,7 +13,7 @@ import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useNetworks } from "@/app/hooks";
+import { useActiveProfile } from "@/app/hooks";
 import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 
