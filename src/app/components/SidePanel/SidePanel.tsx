@@ -4,8 +4,10 @@ import {
 	FloatingPortal,
 	useClick,
 	useDismiss,
-	useFloating, useInteractions,
-	useRole, useTransitionStyles,
+	useFloating,
+	useInteractions,
+	useRole,
+	useTransitionStyles,
 } from "@floating-ui/react";
 import React from "react";
 
@@ -15,7 +17,7 @@ interface SidePanelProps {
 	onOpenChange: (open: boolean) => void;
 }
 
-export const SidePanel = ({children, open, onOpenChange}: SidePanelProps): JSX.Element => {
+export const SidePanel = ({ children, open, onOpenChange }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
 		open,
@@ -25,15 +27,11 @@ export const SidePanel = ({children, open, onOpenChange}: SidePanelProps): JSX.E
 	const role = useRole(context);
 	const dismiss = useDismiss(context, { outsidePressEvent: "mousedown" });
 
-	const { getFloatingProps } = useInteractions([
-		click,
-		role,
-		dismiss
-	]);
+	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
-	const {isMounted, styles} = useTransitionStyles(context, {
+	const { isMounted, styles } = useTransitionStyles(context, {
 		common: {
-			transformOrigin: 'right',
+			transformOrigin: "right",
 		},
 	});
 
@@ -48,7 +46,7 @@ export const SidePanel = ({children, open, onOpenChange}: SidePanelProps): JSX.E
 					>
 						<FloatingFocusManager context={context}>
 							<div className="Dialog" ref={refs.setFloating} {...getFloatingProps()}>
-								<div className="custom-scroll overflow-y-scroll fixed right-0 top-0 h-screen w-full bg-theme-background p-4 shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] md:w-[512px] md:p-8">
+								<div className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] md:w-[512px] md:p-8">
 									{children}
 									<button onClick={() => onOpenChange(false)}>Cancel</button>
 								</div>
@@ -59,4 +57,4 @@ export const SidePanel = ({children, open, onOpenChange}: SidePanelProps): JSX.E
 			</FloatingPortal>
 		</>
 	);
-}
+};
