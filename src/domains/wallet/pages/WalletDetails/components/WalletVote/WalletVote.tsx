@@ -26,14 +26,14 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 
 	const renderVotes = () => {
 		if (votes.length === 0) {
-			return <EmptyVotes wallet={wallet} />;
+			return <EmptyVotes />;
 		}
 
 		return <Votes wallet={wallet} votes={votes} activeDelegates={activeDelegates} onButtonClick={onButtonClick} />;
 	};
 
 	return (
-		<div data-testid="WalletVote" className="flex w-full flex-col items-center md:flex-row md:items-start">
+		<div data-testid="WalletVote" className="flex w-full flex-col items-center md:flex-row md:items-center">
 			{renderVotes()}
 
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
@@ -48,8 +48,8 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 							!wallet.hasSyncedWithNetwork() ||
 							!isLedgerWalletCompatible(wallet)
 						}
-						variant="secondary"
-						className="mt-4 w-full space-x-2 md:mt-0 md:w-auto"
+						variant="secondary-icon"
+						className="mt-4 w-full space-x-2 text-theme-primary-600 dark:text-theme-dark-navy-400 md:mt-0 md:w-auto md:px-2 md:py-[3px]"
 						onClick={() => onButtonClick()}
 					>
 						<Icon name="Vote" />

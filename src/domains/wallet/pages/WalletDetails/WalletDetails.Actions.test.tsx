@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -65,6 +65,9 @@ describe("WalletDetails", () => {
 		profile.wallets().push(unvotedWallet);
 
 		await syncDelegates(profile);
+		await wallet.synchroniser().identity();
+		await wallet.synchroniser().coin();
+
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
@@ -86,7 +89,7 @@ describe("WalletDetails", () => {
 		await expect(screen.findByTestId("WalletHeader__send-button")).resolves.toBeVisible();
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__send-button")).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__send-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
@@ -116,113 +119,6 @@ describe("WalletDetails", () => {
 		historySpy.mockRestore();
 	});
 
-	it('should navigate to votes with "current" filter param when clicking on Multivote', async () => {
-		const walletSpy = vi.spyOn(wallet.voting(), "current").mockReturnValue([
-			{
-				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					rank: 1,
-					username: "arkx",
-				}),
-			},
-			{
-				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					rank: 2,
-					username: "arky",
-				}),
-			},
-		]);
-		const maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
-		const historySpy = vi.spyOn(history, "push");
-
-		await renderPage();
-		await waitFor(() =>
-			expect(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeEnabled(),
-		);
-
-		userEvent.click(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE));
-
-		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith({
-				pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`,
-				search: "?filter=current",
-			});
-		});
-
-		walletSpy.mockRestore();
-		maxVotesSpy.mockRestore();
-		historySpy.mockRestore();
-	});
-
-	it("should update wallet name", async () => {
-		await renderPage();
-
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[4]);
-		// eslint-disable-next-line testing-library/prefer-explicit-assert
-		await screen.findByTestId("dropdown__option--primary-0");
-
-		userEvent.click(screen.getByTestId("dropdown__option--primary-0"));
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		const name = "Sample label name";
-
-		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), name);
-
-		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
-
-		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
-
-		await waitFor(() => expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toBe(name));
-	});
-
-	it("should star and unstar a wallet", async () => {
-		await renderPage();
-
-		expect(wallet.isStarred()).toBe(false);
-
-		userEvent.click(screen.getByTestId("WalletHeader__star-button"));
-
-		await waitFor(() => expect(wallet.isStarred()).toBe(true));
-
-		userEvent.click(screen.getByTestId("WalletHeader__star-button"));
-
-		await waitFor(() => expect(wallet.isStarred()).toBe(false));
-	});
-
-	it("should open wallet in explorer", async () => {
-		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
-
-		await renderPage();
-
-		const dropdown = screen.getAllByTestId("dropdown__toggle")[4];
-
-		expect(dropdown).toBeInTheDocument();
-
-		userEvent.click(dropdown);
-		// eslint-disable-next-line testing-library/prefer-explicit-assert
-		await screen.findByTestId("dropdown__option--secondary-0");
-
-		const openWalletOption = screen.getByTestId("dropdown__option--secondary-0");
-
-		expect(openWalletOption).toBeInTheDocument();
-
-		userEvent.click(openWalletOption);
-		await waitFor(() => {
-			expect(windowSpy).toHaveBeenCalledWith(wallet.explorerLink(), "_blank");
-		});
-
-		windowSpy.mockRestore();
-	});
-
 	// @TODO: Enable & refactor tests once mainsail coin support will be completed.
 	//		  See https://app.clickup.com/t/86dvbvrvf
 	it.skip("should manually sync wallet data", async () => {
@@ -230,35 +126,6 @@ describe("WalletDetails", () => {
 
 		await userEvent.click(screen.getByTestId("WalletHeader__refresh"));
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true"));
-	});
-
-	it("should delete wallet and clear associated transaction notifications", async () => {
-		await renderPage();
-
-		const dropdown = screen.getAllByTestId("dropdown__toggle")[4];
-
-		expect(dropdown).toBeInTheDocument();
-
-		userEvent.click(dropdown);
-		// eslint-disable-next-line testing-library/prefer-explicit-assert
-		await screen.findByTestId("dropdown__option--secondary-1");
-
-		const deleteWalletOption = screen.getByTestId("dropdown__option--secondary-1");
-
-		expect(deleteWalletOption).toBeInTheDocument();
-
-		userEvent.click(deleteWalletOption);
-
-		expect(profile.wallets().count()).toBe(3);
-		expect(profile.notifications().transactions().recent()).toHaveLength(2);
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
-
-		await waitFor(() => expect(profile.wallets().count()).toBe(2));
-
-		expect(profile.notifications().transactions().recent()).toHaveLength(0);
 	});
 
 	it("should not fail if the votes have not yet been synchronized", async () => {

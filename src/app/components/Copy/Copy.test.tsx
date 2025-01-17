@@ -33,4 +33,12 @@ describe("Copy", () => {
 
 		vi.clearAllTimers();
 	});
+
+	it("should render with custom class names", async () => {
+		render(<Copy address="test" className="h-6 w-6 text-theme-secondary-700" />);
+
+		expect(screen.getByTestId("Copy__icon")).toHaveClass("text-theme-secondary-700 h-6 w-6");
+		await userEvent.click(screen.getByTestId("Copy__icon"));
+		expect(screen.getByTestId("Copy__icon_success")).toHaveClass("text-theme-secondary-700 h-6 w-6");
+	});
 });

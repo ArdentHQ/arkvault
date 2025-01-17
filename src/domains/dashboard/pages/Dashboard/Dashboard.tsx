@@ -1,110 +1,138 @@
-import { uniq } from "@ardenthq/sdk-helpers";
+/* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useMemo, useState } from "react";
+import cn from "classnames";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
-import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
-import { PortfolioBreakdown } from "@/domains/dashboard/components/PortfolioBreakdown";
-import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader";
-import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup";
-import { useLatestTransactions } from "@/domains/dashboard/hooks/use-latest-transactions";
-import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
-import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { useHistory } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile } from "@/app/hooks";
-import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
+import { useActiveProfile } from "@/app/hooks/env";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
-import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import { Transactions } from "@/domains/transaction/components/Transactions";
+import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
+import { TabId } from "@/app/components/Tabs/useTab";
+import { WalletHeader } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader";
 
-export const Dashboard: React.VFC = () => {
-	const activeProfile = useActiveProfile();
+export const Dashboard = () => {
+	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData>();
+
+	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
+	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
+
+	const history = useHistory();
 	const { t } = useTranslation();
+
 	const { env } = useEnvironmentContext();
-	const { profileIsSyncing, profileIsSyncingExchangeRates } = useConfiguration();
-	const profileIsSyncedWithNetwork = !activeProfile.hasBeenPartiallyRestored();
-	const walletsCount = activeProfile.wallets().count();
-	const { selectedNetworkIds } = useWalletFilters({ profile: activeProfile });
-	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
-		undefined,
-	);
-	const showTransactions = activeProfile.appearance().get("dashboardTransactionHistory");
-	const exchangeCurrency = activeProfile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
-	const { isLoadingTransactions, latestTransactions } = useLatestTransactions({
-		profile: activeProfile,
-		profileIsSyncing,
-	});
+	const activeProfile = useActiveProfile();
+	const activeWallet = activeProfile.wallets().first() as Contracts.IReadWriteWallet | undefined;
+	const { profileIsSyncing } = useConfiguration();
 
-	const liveNetworkIds = useMemo(
-		() =>
-			uniq(
-				activeProfile
-					.wallets()
-					.values()
-					.filter((wallet) => wallet.network().isLive())
-					.map((wallet) => wallet.networkId()),
-			),
-		[activeProfile, walletsCount, profileIsSyncedWithNetwork], // eslint-disable-line react-hooks/exhaustive-deps
-	);
+	const networkAllowsVoting = useMemo(() => activeWallet?.network().allowsVoting(), [activeWallet]);
 
-	const [showSidePanel, setSidePanel] = useState(false);
+	const handleVoteButton = (filter?: string) => {
+		/* istanbul ignore else -- @preserve */
+		if (filter) {
+			return history.push({
+				pathname: `/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}/votes`,
+				search: `?filter=${filter}`,
+			});
+		}
+
+		history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}/votes`);
+	};
+
+	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
+
+	const [isLoadingVotes, setIsLoadingVotes] = useState(true);
+
+	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
+
+	useEffect(() => {
+		const syncVotes = async () => {
+			try {
+				if (!activeWallet) {
+					return;
+				}
+
+				await env.delegates().sync(activeProfile, activeWallet.coinId(), activeWallet.networkId());
+				await activeWallet.synchroniser().votes();
+
+				setVotes(activeWallet.voting().current());
+			} catch {
+				// TODO: Retry sync if error code is greater than 499. Needs status code number from sdk.
+			}
+
+			setIsLoadingVotes(false);
+		};
+
+		syncVotes();
+	}, [activeWallet, env, activeProfile]);
+
+	useEffect(() => {
+		if (!isUpdatingTransactions) {
+			setIsUpdatingWallet(false);
+		}
+	}, [isUpdatingTransactions]);
+
+	const maxVotes = activeWallet?.network().maximumVotesPerWallet();
 
 	return (
 		<>
-			<Page pageTitle={t("DASHBOARD.DASHBOARD_PAGE.TITLE")} isBackDisabled={true}>
-				<Section>
-					<PortfolioHeader />
-					<PortfolioBreakdown
-						profile={activeProfile}
-						profileIsSyncingExchangeRates={profileIsSyncingExchangeRates}
-						liveNetworkIds={liveNetworkIds}
-						selectedNetworkIds={selectedNetworkIds}
-					/>
+			<Page pageTitle={activeWallet?.address()}>
+				<Section className="px-0 first:pt-0 md:px-0 xl:mx-auto" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
+					{activeWallet && (
+						<WalletHeader
+							profile={activeProfile}
+							wallet={activeWallet}
+							votes={votes}
+							handleVotesButtonClick={handleVoteButton}
+							isLoadingVotes={isLoadingVotes}
+							isUpdatingTransactions={isUpdatingTransactions}
+							onUpdate={setIsUpdatingWallet}
+						/>
+					)}
 				</Section>
-				<button
-					onClick={() => setSidePanel(true)}
 
-				>show side panel </button>
-				<SidePanel
-					header="that is a string header"
-					// header={<div>this is a div header</div>}
-					open={showSidePanel}
-					onOpenChange={setSidePanel}
-				>
-					this is a body
-				</SidePanel>
+				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
+					<TabScroll>
+						<TabList className="h-[52px]">
+							<Tab tabId="transactions">
+								<span className="whitespace-nowrap">{t("COMMON.TRANSACTION_HISTORY")}</span>
+							</Tab>
+							{networkAllowsVoting && (
+								<Tab tabId="votes">
+									<span className="whitespace-nowrap">
+										{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE", { count: maxVotes })}
+										<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">
+											{votes.length}/{maxVotes}
+										</span>
+									</span>
+								</Tab>
+							)}
+						</TabList>
+					</TabScroll>
+				</Tabs>
 
-				<div className="lg:container md:px-10 lg:mx-auto">
-					<WalletsGroupsList />
-				</div>
-
-				{showTransactions && (
-					<Section className="mt-4 md:mt-0" data-testid="dashboard__transactions-view">
-						<h2 className="mb-6 text-2xl font-bold">{t("DASHBOARD.LATEST_TRANSACTIONS.TITLE")}</h2>
-
-						<TableWrapper className="overflow-hidden">
-							<>
-								<TransactionTable
-									transactions={latestTransactions}
-									exchangeCurrency={exchangeCurrency}
-									hideHeader={!isLoadingTransactions && latestTransactions.length === 0}
-									isLoading={isLoadingTransactions && latestTransactions.length === 0}
-									skeletonRowsLimit={8}
-									onRowClick={setTransactionModalItem}
-									profile={activeProfile}
-								/>
-
-								{latestTransactions.length === 0 && !isLoadingTransactions && (
-									<EmptyBlock>{t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}</EmptyBlock>
-								)}
-							</>
-						</TableWrapper>
-					</Section>
-				)}
+				<Section className="flex-1 pt-6">
+					<div
+						className={cn({
+							"hidden md:block": mobileActiveTab !== "transactions",
+						})}
+					>
+						{activeWallet && (
+							<Transactions
+								title={t("COMMON.TRANSACTION_HISTORY")}
+								profile={activeProfile}
+								wallets={[activeWallet]}
+								isLoading={profileIsSyncing}
+								isUpdatingWallet={isUpdatingWallet}
+								onLoading={setIsUpdatingTransactions}
+							/>
+						)}
+					</div>
+				</Section>
 			</Page>
-
-			<WelcomeModal profile={activeProfile} environment={env} />
 
 			{transactionModalItem && (
 				<TransactionDetailModal

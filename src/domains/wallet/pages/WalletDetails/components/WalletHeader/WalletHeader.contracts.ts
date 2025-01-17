@@ -1,5 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 
 export interface WalletHeaderProperties {
 	profile: Contracts.IProfile;
@@ -26,5 +25,4 @@ export interface WalletActionsProperties {
 	wallet: Contracts.IReadWriteWallet;
 	isUpdatingTransactions?: boolean;
 	onUpdate?: (status: boolean) => void;
-	setActiveModal: (modal: WalletActionsModalType | undefined) => void;
 }

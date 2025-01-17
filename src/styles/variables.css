@@ -27,6 +27,18 @@
 	--theme-color-dark-900: #23272D;
 	--theme-color-dark-950: #191D22;
 
+	--theme-color-dark-navy-50: #EFF6FF;
+	--theme-color-dark-navy-100: #DCEAFD;
+	--theme-color-dark-navy-200: #C1DBFC;
+	--theme-color-dark-navy-300: #96C5FA;
+	--theme-color-dark-navy-400: #539BF5;
+	--theme-color-dark-navy-500: #4082F1;
+	--theme-color-dark-navy-600: #2A64E6;
+	--theme-color-dark-navy-700: #224FD3;
+	--theme-color-dark-navy-800: #2242AB;
+	--theme-color-dark-navy-900: #213B87;
+	--theme-color-dark-navy-950: #192652;
+
 	--theme-color-success-rgb: 40, 149, 72;
 	--theme-color-success-50: #f0fdf4;
 	--theme-color-success-100: #e2f0e6;
