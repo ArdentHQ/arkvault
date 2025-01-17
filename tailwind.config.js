@@ -248,7 +248,7 @@ module.exports = {
 				25: "6.25rem",
 				26: "6.5rem",
 				128: "32rem",
-				'page': 'calc(100vh - var(--nav-height))',
+				page: "calc(100vh - var(--nav-height))",
 			},
 			width: {
 				15: "3.75rem",
@@ -338,7 +338,7 @@ module.exports = {
 	},
 	plugins: [
 		require("@tailwindcss/forms"),
-		plugin(function({ addVariant }) {
+		plugin(function ({ addVariant }) {
 			addVariant("navy", ".accent-navy &");
 			addVariant("green", ".accent-green &");
 		}),

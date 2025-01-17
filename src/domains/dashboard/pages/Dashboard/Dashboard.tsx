@@ -1,4 +1,3 @@
-
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
@@ -83,7 +82,7 @@ export const Dashboard = () => {
 			<Page pageTitle={t("COMMON.WELCOME")}>
 				<DashboardEmpty />
 			</Page>
-		)
+		);
 	}
 
 	return (
