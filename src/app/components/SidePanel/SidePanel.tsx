@@ -18,9 +18,10 @@ interface SidePanelProps {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	header?: React.ReactNode | string;
+	dataTestId?: string;
 }
 
-export const SidePanel = ({ children, open, onOpenChange, header }: SidePanelProps): JSX.Element => {
+export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
 		open,
@@ -59,7 +60,10 @@ export const SidePanel = ({ children, open, onOpenChange, header }: SidePanelPro
 						lockScroll
 					>
 						<FloatingFocusManager context={context}>
-							<div className="Dialog" ref={refs.setFloating} {...getFloatingProps()}>
+							<div
+								data-testid={dataTestId}
+								className="Dialog" ref={refs.setFloating} {...getFloatingProps()}
+							>
 								<div
 									style={{ ...styles }}
 									className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] md:w-[512px] md:p-8"

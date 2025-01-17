@@ -61,6 +61,7 @@ export const WalletHeader = ({
 							tabIndex={0}
 							onKeyPress={() => setShowAddressesPanel(true)}
 							className="cursor-pointer"
+							data-testid="ShowAddressesPanel"
 						>
 							<Address
 								alignment="center"
@@ -232,7 +233,12 @@ export const WalletHeader = ({
 				</div>
 			</div>
 
-			<SidePanel header="Addresses" open={showAddressesPanel} onOpenChange={setShowAddressesPanel}>
+			<SidePanel
+				header="Addresses"
+				open={showAddressesPanel}
+				onOpenChange={setShowAddressesPanel}
+				dataTestId="AddressesSidePanel"
+			>
 				this is a body
 			</SidePanel>
 		</header>

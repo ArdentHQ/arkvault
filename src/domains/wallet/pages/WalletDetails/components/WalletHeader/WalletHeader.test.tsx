@@ -4,7 +4,9 @@ import { createHashHistory } from "history";
 
 import { WalletHeader } from "./WalletHeader";
 import * as envHooks from "@/app/hooks/env";
-import { env, getDefaultProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
+import { expect } from "vitest";
 
 const history = createHashHistory();
 
@@ -66,5 +68,28 @@ describe("WalletHeader", () => {
 		);
 
 		await expect(screen.getByTestId("EmptyVotes")).toBeVisible();
+	});
+
+	it("should show addresses panel when address clicked", async () => {
+		render(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ShowAddressesPanel"));
+
+		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
 	});
 });
