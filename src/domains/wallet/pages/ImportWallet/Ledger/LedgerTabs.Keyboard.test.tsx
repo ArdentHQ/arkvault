@@ -166,7 +166,7 @@ describe("LedgerTabs", () => {
 
 			expect(screen.getByTestId("NetworkStep")).toBeVisible();
 
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 
 			await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
 
