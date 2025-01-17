@@ -5,7 +5,6 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { WalletHeader, WalletHeaderMobile, WalletVote } from "./components";
 import { useWalletTransactions } from "./hooks/use-wallet-transactions";
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
@@ -15,9 +14,9 @@ import { MultiSignatureDetail } from "@/domains/transaction/components/MultiSign
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 import { Transactions } from "@/domains/transaction/components/Transactions";
 import { PendingTransactions } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable";
-import { useBreakpoint } from "@/app/hooks";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
+import { WalletHeader } from "./components/WalletHeader";
 
 export const WalletDetails = () => {
 	const [signedTransactionModalItem, setSignedTransactionModalItem] = useState<DTO.ExtendedSignedTransactionData>();
@@ -28,7 +27,6 @@ export const WalletDetails = () => {
 
 	const history = useHistory();
 	const { t } = useTranslation();
-	const { isXs } = useBreakpoint();
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
@@ -90,37 +88,17 @@ export const WalletDetails = () => {
 	return (
 		<>
 			<Page pageTitle={activeWallet.address()}>
-				{isXs && (
-					<Section
-						className={cn("first:pt-0 last:pb-6", {
-							"border-b border-transparent dark:border-theme-secondary-800": !networkAllowsVoting,
-						})}
-						innerClassName="p-0"
-						backgroundClassName="bg-theme-secondary-900"
-					>
-						<WalletHeaderMobile
-							profile={activeProfile}
-							wallet={activeWallet}
-							onUpdate={setIsUpdatingWallet}
-						/>
-					</Section>
-				)}
-
-				{!isXs && (
-					<Section
-						className={cn("!pb-8 first:pt-8 last:pb-8", {
-							"border-b border-transparent dark:border-theme-secondary-800": !networkAllowsVoting,
-						})}
-						backgroundClassName="bg-theme-secondary-900"
-					>
-						<WalletHeader
-							profile={activeProfile}
-							wallet={activeWallet}
-							onUpdate={setIsUpdatingWallet}
-							isUpdatingTransactions={isUpdatingTransactions}
-						/>
-					</Section>
-				)}
+				<Section className="px-0 first:pt-0 md:px-0 xl:mx-auto" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
+					<WalletHeader
+						profile={activeProfile}
+						wallet={activeWallet}
+						votes={votes}
+						handleVotesButtonClick={handleVoteButton}
+						isLoadingVotes={isLoadingVotes}
+						isUpdatingTransactions={isUpdatingTransactions}
+						onUpdate={setIsUpdatingWallet}
+					/>
+				</Section>
 
 				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
 					<TabScroll>
@@ -151,25 +129,6 @@ export const WalletDetails = () => {
 						</TabList>
 					</TabScroll>
 				</Tabs>
-
-				{networkAllowsVoting && (
-					<Section
-						borderClassName="border-transparent dark:border-transaparent md:border-theme-secondary-300 md:dark:border-transparent"
-						backgroundClassName="md:bg-theme-background md:dark:bg-theme-secondary-background"
-						innerClassName="md:-my-2 w-full"
-						border
-						className={cn({
-							"hidden md:flex": mobileActiveTab !== "votes",
-						})}
-					>
-						<WalletVote
-							isLoadingVotes={isLoadingVotes}
-							votes={votes}
-							wallet={activeWallet}
-							onButtonClick={handleVoteButton}
-						/>
-					</Section>
-				)}
 
 				<Section className="flex-1 pt-6">
 					{hasPendingTransactions && (
