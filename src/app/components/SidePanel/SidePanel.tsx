@@ -55,7 +55,7 @@ export const SidePanel = ({ children, open, onOpenChange, header }: SidePanelPro
 			<FloatingPortal>
 				{isMounted && (
 					<FloatingOverlay
-						className="transition-all duration-300 z-50 bg-theme-secondary-900-rgba/40 1backdrop-blur-sm dark:bg-black-rgba/40 dark:bg-opacity-80"
+						className="transition-all duration-300 z-50 bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80"
 						lockScroll
 					>
 						<FloatingFocusManager context={context}>
