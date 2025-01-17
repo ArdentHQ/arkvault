@@ -1,0 +1,10 @@
+:root {
+	/* both top and botton navbars in mobile */
+	--nav-height: 116px;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--nav-height: 86px;
+	}
+}
