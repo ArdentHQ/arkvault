@@ -13,7 +13,6 @@ import { Transactions } from "@/domains/transaction/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletHeader } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader";
-import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 
 export const Dashboard = () => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData>();
@@ -78,8 +77,6 @@ export const Dashboard = () => {
 
 	const maxVotes = activeWallet?.network().maximumVotesPerWallet();
 
-	const [showSidePanel, setSidePanel] = useState(false);
-
 	return (
 		<>
 			<Page pageTitle={activeWallet?.address()}>
@@ -96,16 +93,6 @@ export const Dashboard = () => {
 						/>
 					)}
 				</Section>
-
-				<button onClick={() => setSidePanel(true)}>show side panel</button>
-				<SidePanel
-					header="that is a string header"
-					// header={<div>this is a div header</div>}
-					open={showSidePanel}
-					onOpenChange={setSidePanel}
-				>
-					this is a body
-				</SidePanel>
 
 				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
 					<TabScroll>
