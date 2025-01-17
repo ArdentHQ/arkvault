@@ -7,6 +7,7 @@ import * as envHooks from "@/app/hooks/env";
 import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 import { expect } from "vitest";
+import { waitFor } from "@testing-library/react";
 
 const history = createHashHistory();
 
@@ -91,5 +92,32 @@ describe("WalletHeader", () => {
 		await userEvent.click(screen.getByTestId("ShowAddressesPanel"));
 
 		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
+	});
+
+	it("should close the addresses panel when close button clicked", async () => {
+		render(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ShowAddressesPanel"));
+
+		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+
+		await waitFor(() => expect(screen.queryByTestId("AddressesSidePanel")).not.toBeInTheDocument());
 	});
 });
