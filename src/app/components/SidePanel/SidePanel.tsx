@@ -49,11 +49,14 @@ export const SidePanel = ({ children, open, onOpenChange, header }: SidePanelPro
 					>
 						<FloatingFocusManager context={context}>
 							<div className="Dialog" ref={refs.setFloating} {...getFloatingProps()}>
-								<div className="custom-scroll fixed right-0 top-0 h-screen w-full text-theme-text overflow-y-scroll bg-theme-background p-4 shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] md:w-[512px] md:p-8">
-									<div className="relative flex justify-between items-center mb-4">
-										{typeof header === "string" ? (<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl">{header}</h2>) : <>{header}</>}
-										<div
-											className="w-8 h-8 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
+								<div className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] md:w-[512px] md:p-8">
+									<div className="relative mb-4 flex items-center justify-between">
+										{typeof header === "string" ? (
+											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl">{header}</h2>
+										) : (
+											<>{header}</>
+										)}
+										<div className="h-8 w-8 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
 											<Button
 												data-testid="SidePanel__close-button"
 												variant="transparent"
@@ -65,9 +68,7 @@ export const SidePanel = ({ children, open, onOpenChange, header }: SidePanelPro
 											</Button>
 										</div>
 									</div>
-									<div>
-										{children}
-									</div>
+									<div>{children}</div>
 								</div>
 							</div>
 						</FloatingFocusManager>
