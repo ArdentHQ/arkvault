@@ -68,8 +68,8 @@ export const Dashboard: React.VFC = () => {
 
 				>show side panel </button>
 				<SidePanel
-					// header="that is a string header"
-					header={<div>this is a div header</div>}
+					header="that is a string header"
+					// header={<div>this is a div header</div>}
 					open={showSidePanel}
 					onOpenChange={setSidePanel}
 				>
