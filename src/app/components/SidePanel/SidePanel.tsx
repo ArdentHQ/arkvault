@@ -55,12 +55,15 @@ export const SidePanel = ({ children, open, onOpenChange, header }: SidePanelPro
 			<FloatingPortal>
 				{isMounted && (
 					<FloatingOverlay
-						className="transition-all duration-300 z-50 bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80"
+						className="1backdrop-blur-sm z-50 bg-theme-secondary-900-rgba/40 transition-all duration-300 dark:bg-black-rgba/40 dark:bg-opacity-80"
 						lockScroll
 					>
 						<FloatingFocusManager context={context}>
 							<div className="Dialog" ref={refs.setFloating} {...getFloatingProps()}>
-								<div style={{ ...styles }} className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] md:w-[512px] md:p-8">
+								<div
+									style={{ ...styles }}
+									className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] md:w-[512px] md:p-8"
+								>
 									<div className="relative mb-4 flex items-center justify-between">
 										{typeof header === "string" ? (
 											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl">{header}</h2>
