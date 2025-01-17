@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
@@ -13,6 +13,7 @@ import { Transactions } from "@/domains/transaction/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletHeader } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader";
+import { DashboardEmpty } from "./Dashboard.Empty";
 
 export const Dashboard = () => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData>();
@@ -77,21 +78,27 @@ export const Dashboard = () => {
 
 	const maxVotes = activeWallet?.network().maximumVotesPerWallet();
 
+	if (!activeWallet) {
+		return (
+			<Page pageTitle={t("COMMON.WELCOME")}>
+				<DashboardEmpty />
+			</Page>
+		)
+	}
+
 	return (
 		<>
-			<Page pageTitle={activeWallet?.address()}>
+			<Page pageTitle={activeWallet.address()}>
 				<Section className="px-0 first:pt-0 md:px-0 xl:mx-auto" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
-					{activeWallet && (
-						<WalletHeader
-							profile={activeProfile}
-							wallet={activeWallet}
-							votes={votes}
-							handleVotesButtonClick={handleVoteButton}
-							isLoadingVotes={isLoadingVotes}
-							isUpdatingTransactions={isUpdatingTransactions}
-							onUpdate={setIsUpdatingWallet}
-						/>
-					)}
+					<WalletHeader
+						profile={activeProfile}
+						wallet={activeWallet}
+						votes={votes}
+						handleVotesButtonClick={handleVoteButton}
+						isLoadingVotes={isLoadingVotes}
+						isUpdatingTransactions={isUpdatingTransactions}
+						onUpdate={setIsUpdatingWallet}
+					/>
 				</Section>
 
 				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
@@ -120,16 +127,14 @@ export const Dashboard = () => {
 							"hidden md:block": mobileActiveTab !== "transactions",
 						})}
 					>
-						{activeWallet && (
-							<Transactions
-								title={t("COMMON.TRANSACTION_HISTORY")}
-								profile={activeProfile}
-								wallets={[activeWallet]}
-								isLoading={profileIsSyncing}
-								isUpdatingWallet={isUpdatingWallet}
-								onLoading={setIsUpdatingTransactions}
-							/>
-						)}
+						<Transactions
+							title={t("COMMON.TRANSACTION_HISTORY")}
+							profile={activeProfile}
+							wallets={[activeWallet]}
+							isLoading={profileIsSyncing}
+							isUpdatingWallet={isUpdatingWallet}
+							onLoading={setIsUpdatingTransactions}
+						/>
 					</div>
 				</Section>
 			</Page>
