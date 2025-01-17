@@ -7,6 +7,7 @@ import { PendingTransaction } from "@/domains/transaction/components/Transaction
 
 export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 	const { t } = useTranslation();
+	const coinLabel = coin ? `(${coin})` : "";
 
 	return useMemo<Column<DTO.ExtendedConfirmedTransactionData>[]>(() => {
 		const templateColumns: Column<DTO.ExtendedConfirmedTransactionData>[] = [
@@ -34,7 +35,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 				headerClassName: "no-border",
 			},
 			{
-				Header: `${t("COMMON.VALUE")} (${coin})`,
+				Header: `${t("COMMON.VALUE")} ${coinLabel}`,
 
 				accessor: (transaction) => transaction.total?.(),
 				className: "justify-end",
@@ -52,11 +53,13 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 		];
 
 		return templateColumns;
-	}, [t, coin]);
+	}, [t, coinLabel]);
 };
 
 export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) => {
 	const { t } = useTranslation();
+
+	const coinLabel = coin ? `(${coin})` : "";
 
 	return useMemo<Column<PendingTransaction>[]>(
 		() => [
@@ -88,7 +91,7 @@ export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) =>
 				minimumWidth: true,
 			},
 			{
-				Header: `${t("COMMON.VALUE")} (${coin})`,
+				Header: `${t("COMMON.VALUE")} ${coinLabel}`,
 				accessor: () => "amount",
 				className: "justify-end",
 				headerClassName: "no-border",
@@ -106,6 +109,6 @@ export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) =>
 				minimumWidth: true,
 			},
 		],
-		[t],
+		[t, coinLabel],
 	);
 };
