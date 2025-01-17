@@ -62,10 +62,7 @@ export const Dashboard: React.VFC = () => {
 						selectedNetworkIds={selectedNetworkIds}
 					/>
 				</Section>
-				<button
-					onClick={() => setSidePanel(true)}
-
-				>show side panel </button>
+				<button onClick={() => setSidePanel(true)}>show side panel </button>
 				<SidePanel
 					header="that is a string header"
 					// header={<div>this is a div header</div>}
