@@ -62,7 +62,9 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 						<FloatingFocusManager context={context}>
 							<div
 								data-testid={dataTestId}
-								className="Dialog" ref={refs.setFloating} {...getFloatingProps()}
+								className="Dialog"
+								ref={refs.setFloating}
+								{...getFloatingProps()}
 							>
 								<div
 									style={{ ...styles }}
