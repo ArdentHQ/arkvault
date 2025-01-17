@@ -19,7 +19,6 @@ import { TransactionDetailModal } from "@/domains/transaction/components/Transac
 
 export const Dashboard: React.VFC = () => {
 	const activeProfile = useActiveProfile();
-	const wallet = activeProfile.wallets().first();
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 	const { profileIsSyncing, profileIsSyncingExchangeRates } = useConfiguration();
@@ -79,7 +78,6 @@ export const Dashboard: React.VFC = () => {
 									skeletonRowsLimit={8}
 									onRowClick={setTransactionModalItem}
 									profile={activeProfile}
-									coinName={wallet.currency()}
 								/>
 
 								{latestTransactions.length === 0 && !isLoadingTransactions && (
