@@ -179,7 +179,7 @@ export const WalletHeader = ({
 							<div className="flex flex-row items-center gap-3">
 								<Button
 									data-testid="WalletHeader__send-button"
-									className="my-auto flex-1 dark:bg-theme-dark-navy-500"
+									className="my-auto flex-1 dark:bg-theme-dark-navy-500 px-8"
 									disabled={
 										wallet.balance() === 0 ||
 										!wallet.hasBeenFullyRestored() ||
