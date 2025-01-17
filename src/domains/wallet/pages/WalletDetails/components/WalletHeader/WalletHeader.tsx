@@ -232,11 +232,7 @@ export const WalletHeader = ({
 				</div>
 			</div>
 
-			<SidePanel
-				header="Addresses"
-				open={showAddressesPanel}
-				onOpenChange={setShowAddressesPanel}
-			>
+			<SidePanel header="Addresses" open={showAddressesPanel} onOpenChange={setShowAddressesPanel}>
 				this is a body
 			</SidePanel>
 		</header>
