@@ -16,6 +16,7 @@ import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
+import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 
 export const Dashboard: React.VFC = () => {
 	const activeProfile = useActiveProfile();
@@ -48,6 +49,8 @@ export const Dashboard: React.VFC = () => {
 		[activeProfile, walletsCount, profileIsSyncedWithNetwork], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
+	const [showSidePanel, setSidePanel] = useState(false);
+
 	return (
 		<>
 			<Page pageTitle={t("DASHBOARD.DASHBOARD_PAGE.TITLE")} isBackDisabled={true}>
@@ -60,6 +63,18 @@ export const Dashboard: React.VFC = () => {
 						selectedNetworkIds={selectedNetworkIds}
 					/>
 				</Section>
+				<button
+					onClick={() => setSidePanel(true)}
+
+				>show side panel </button>
+				<SidePanel
+					// header="that is a string header"
+					header={<div>this is a div header</div>}
+					open={showSidePanel}
+					onOpenChange={setSidePanel}
+				>
+					this is a body
+				</SidePanel>
 
 				<div className="lg:container md:px-10 lg:mx-auto">
 					<WalletsGroupsList />
