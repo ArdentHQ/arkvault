@@ -1,7 +1,7 @@
+import React from "react";
 import { SidePanel } from "./SidePanel";
-import { render, screen } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
-import { expect } from "vitest";
+import { render, screen } from "@testing-library/react";
 
 describe("SidePanel", () => {
 	it("should render string header", () => {
