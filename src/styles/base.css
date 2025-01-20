@@ -244,17 +244,13 @@ main {
     @apply cursor-default;
   }
 
-  .tab-list > .tab-button {
-	@apply relative font-semibold border-t-2 border-b-2 border-transparent text-theme-secondary-text transition-colors ease-in-out duration-300 focus:outline-none focus:text-theme-text hover:text-theme-text
-  }
-
   .tab-list > .tab-button[aria-selected="true"] {
-	@apply text-theme-text border-b-theme-primary-600
+	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50
   }
 
-  .tab-list > .tab-button + .tab-button::before {
-	@apply content-[''] h-4 w-px absolute -left-6 top-1/2 -translate-y-1/2 block
-  }
+  .tab-list > .tab-button[aria-selected="false"] {
+    @apply text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-300 hover:text-theme-secondary-900
+    }
 
   .add-recipient-wrapper .select-buttons div:first-of-type button {
 	@apply rounded-tr-none rounded-br-none
