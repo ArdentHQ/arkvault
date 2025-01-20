@@ -39,6 +39,10 @@ import InfoDark from "./info-dark.svg?react";
 import WarningLight from "./warning-light.svg?react";
 import WarningDark from "./warning-dark.svg?react";
 import WorldMap from "./world-map.svg?react";
+import CreateAddressDarkNavy from "./create-address-dark-navy.svg?react"
+import ImportAddressDarkNavy from "./import-address-dark-navy.svg?react"
+import CreateAddressLightNavy from "./create-address-light-navy.svg?react"
+import ImportAddressLightNavy from "./import-address-light-navy.svg?react"
 import { wallet } from "@/domains/wallet/images";
 import { transaction } from "@/domains/transaction/images";
 import { profile } from "@/domains/profile/images";
@@ -48,6 +52,8 @@ import { error } from "@/domains/error/images";
 export const images = {
 	common: {
 		ARKVaultLogo,
+		CreateAddressDarkNavy,
+		CreateAddressLightNavy,
 		DeleteBannerDarkGreen,
 		DeleteBannerDarkNavy,
 		DeleteBannerLightGreen,
@@ -75,6 +81,8 @@ export const images = {
 		IOsInstructionsStep3DarkGreen: IOsInstructionsStep3Dark,
 		IOsInstructionsStep3LightBlue: IOsInstructionsStep3Light,
 		IOsInstructionsStep3LightGreen: IOsInstructionsStep3Light,
+		ImportAddressDarkNavy,
+		ImportAddressLightNavy,
 		InfoDark,
 		InfoDarkGreen: InfoDark,
 		InfoDarkNavy: InfoDark,
