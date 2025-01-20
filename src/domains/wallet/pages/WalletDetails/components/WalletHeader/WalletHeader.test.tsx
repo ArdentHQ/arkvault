@@ -6,7 +6,7 @@ import { WalletHeader } from "./WalletHeader";
 import * as envHooks from "@/app/hooks/env";
 import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen, waitFor } from "@/utils/testing-library";
 import { expect } from "vitest";
-import { userEvent } from '@testing-library/user-event';
+import { userEvent } from "@testing-library/user-event";
 
 const history = createHashHistory();
 
