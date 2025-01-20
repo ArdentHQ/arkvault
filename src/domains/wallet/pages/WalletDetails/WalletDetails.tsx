@@ -100,7 +100,6 @@ export const WalletDetails = () => {
 					/>
 				</Section>
 
-
 				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
 					<TabScroll>
 						<TabList className="h-[52px]">
