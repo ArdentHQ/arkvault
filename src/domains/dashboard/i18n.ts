@@ -43,4 +43,5 @@ export const translations = {
 		IMPORT_LEDGER: "Import Ledger",
 	},
 	WELCOME_TITLE: "Welcome to ARK Vault",
+	WELCOME_TO: "Welcome to",
 };

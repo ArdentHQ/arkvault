@@ -25,6 +25,7 @@ export const translations = {
 	APPEARANCE: "Appearance",
 	APP_NAME: "<strong>ARK</strong>Vault",
 	ARK: "ARK",
+	ARKVAULT: "ARK Vault",
 	ASSET: "Asset",
 	ASSETS: "Assets",
 	ASSET_TYPE: "Asset Type",
