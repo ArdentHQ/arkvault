@@ -28,7 +28,7 @@ const EmptyVotes = () => {
 	);
 };
 
-const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) => {
+export const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) => {
 	const { t } = useTranslation();
 
 	// @ts-ignore
@@ -97,7 +97,7 @@ const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) =>
 	);
 };
 
-const DelegateName = ({
+export const DelegateName = ({
 	delegateName,
 	isUsername,
 	className,
