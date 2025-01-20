@@ -620,11 +620,11 @@ exports[`Exchange > should render empty 1`] = `
             class="w-full"
           >
             <div
-              class="tab-list items-stretch justify-start flex h-[3.25rem] w-full flex-row gap-6"
+              class="tab-list items-center rounded-xl p-1 bg-transparent flex h-[3.25rem] w-full flex-row gap-6"
             >
               <button
                 aria-selected="true"
-                class="tab-button ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0 mr-6"
+                class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all m-0 mr-6"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -637,7 +637,7 @@ exports[`Exchange > should render empty 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="tab-button ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0"
+                class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all m-0"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
@@ -1299,11 +1299,11 @@ exports[`Exchange > should render with exchanges 1`] = `
             class="w-full"
           >
             <div
-              class="tab-list items-stretch justify-start flex h-[3.25rem] w-full flex-row gap-6"
+              class="tab-list items-center rounded-xl p-1 bg-transparent flex h-[3.25rem] w-full flex-row gap-6"
             >
               <button
                 aria-selected="true"
-                class="tab-button ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0 mr-6"
+                class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all m-0 mr-6"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -1316,7 +1316,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="tab-button ring-focus before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 m-0"
+                class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all m-0"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
