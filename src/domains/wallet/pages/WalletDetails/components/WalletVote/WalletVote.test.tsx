@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { WalletVote } from "./WalletVote";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { DelegateName, DelegateStatus } from "./WalletVote.blocks";
-import { renderResponsive } from '@/utils/testing-library';
+import { renderResponsive } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -328,18 +328,20 @@ describe("WalletVote", () => {
 	it("should handle click on vote button in mobile view", async () => {
 		const onButtonClick = vi.fn();
 
-		renderResponsive(<WalletVote wallet={wallet} onButtonClick={onButtonClick} votes={[]} isLoadingVotes={false} />, {
-			viewport: { width: 375, height: 667 },
-		});
+		renderResponsive(
+			<WalletVote wallet={wallet} onButtonClick={onButtonClick} votes={[]} isLoadingVotes={false} />,
+			{
+				viewport: { height: 667, width: 375 },
+			},
+		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		await userEvent.click(screen.queryAllByTestId("WalletVote__button_mobile")[0]);
 
 		expect(onButtonClick).toHaveBeenCalledWith();
-	})
+	});
 });
-
 
 describe("DelegateName", () => {
 	it("should render an address", () => {
@@ -377,7 +379,7 @@ describe("DelegateStatus", () => {
 	});
 
 	it("should render active", () => {
-		const votes = [	
+		const votes = [
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
@@ -394,100 +396,100 @@ describe("DelegateStatus", () => {
 	});
 
 	it("should render the three delegates", () => {
-        const votes = [
-            {
-                amount: 1,
-                wallet: new ReadOnlyWallet({
-                    ...defaultDelegate,
-                    isDelegate: true,
-                    isResignedDelegate: false,
-                    rank: 1,
-                }),
-            },
-            {
-                amount: 1,
-                wallet: new ReadOnlyWallet({
-                    ...defaultDelegate,
-                    isDelegate: true,
-                    isResignedDelegate: false,
-                    rank: 52,
-                }),
-            },
-            {
-                amount: 1,
-                wallet: new ReadOnlyWallet({
-                    ...defaultDelegate,
-                    isDelegate: true,
-                    isResignedDelegate: true,
-                }),
-            },
-        ];
+		const votes = [
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 1,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 52,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: true,
+				}),
+			},
+		];
 
-        render(<DelegateStatus votes={votes} activeDelegates={10} />);
-        
-        expect(screen.getByText("Active 1")).toBeInTheDocument();
-        expect(screen.getByText("/ Standby 1")).toBeInTheDocument();
-        expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
-    });
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+
+		expect(screen.getByText("Active 1")).toBeInTheDocument();
+		expect(screen.getByText("/ Standby 1")).toBeInTheDocument();
+		expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
+	});
 
 	it("should render with '&' separator when there are active and standby delegates", () => {
-        const votes = [
-            {
-                amount: 1,
-                wallet: new ReadOnlyWallet({
-                    ...defaultDelegate,
-                    isDelegate: true,
-                    isResignedDelegate: false,
-                    rank: 1,
-                }),
-            },
-            {
-                amount: 1,
-                wallet: new ReadOnlyWallet({
-                    ...defaultDelegate,
-                    isDelegate: true,
-                    isResignedDelegate: false,
-                    rank: 52,
-                }),
-            },
-            {
-                amount: 1,
-                wallet: new ReadOnlyWallet({
-                    ...defaultDelegate,
-                    isDelegate: true,
-                    isResignedDelegate: true,
-                }),
-            },
-        ];
+		const votes = [
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 1,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 52,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: true,
+				}),
+			},
+		];
 
-        render(<DelegateStatus votes={votes} activeDelegates={10} />);
-        
-        expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
-    });
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
 
-    it("should render with '/' separator when there are only active and resigned delegates", () => {
-        const votes = [
-            {
-                amount: 1,
-                wallet: new ReadOnlyWallet({
-                    ...defaultDelegate,
-                    isDelegate: true,
-                    isResignedDelegate: false,
-                    rank: 1,
-                }),
-            },
-            {
-                amount: 1,
-                wallet: new ReadOnlyWallet({
-                    ...defaultDelegate,
-                    isDelegate: true,
-                    isResignedDelegate: true,
-                }),
-            },
-        ];
+		expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
+	});
 
-        render(<DelegateStatus votes={votes} activeDelegates={10} />);
-        
-        expect(screen.getByText("/ Resigned 1")).toBeInTheDocument();
-    });
+	it("should render with '/' separator when there are only active and resigned delegates", () => {
+		const votes = [
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 1,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: true,
+				}),
+			},
+		];
+
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+
+		expect(screen.getByText("/ Resigned 1")).toBeInTheDocument();
+	});
 });
