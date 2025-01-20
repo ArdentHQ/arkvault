@@ -36,10 +36,11 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 	const { isMounted, styles } = useTransitionStyles(context, {
 		close: {
 			transform: "translateX(100%)",
-			transition: "transform 300ms ease-in",
+			transitionTimingFunction: "ease-in",
 		},
 		common: {
 			transformOrigin: "right",
+			transitionProperty: "transform",
 		},
 		duration: 350,
 		initial: {
@@ -47,7 +48,7 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 		},
 		open: {
 			transform: "translateX(0%)",
-			transition: "transform 300ms ease-out",
+			transitionTimingFunction: "ease-out",
 		},
 	});
 
@@ -72,7 +73,7 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 								>
 									<div className="relative mb-4 flex items-center justify-between">
 										{typeof header === "string" ? (
-											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl">{header}</h2>
+											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">{header}</h2>
 										) : (
 											<>{header}</>
 										)}
