@@ -94,6 +94,29 @@ describe("WalletHeader", () => {
 		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
 	});
 
+	it("should show addresses panel when enter key pressed", async () => {
+		render(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		await userEvent.type(screen.getByTestId("ShowAddressesPanel"), "{Enter}");
+
+		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
+	});
+
 	it("should close the addresses panel when close button clicked", async () => {
 		render(
 			<WalletHeader
