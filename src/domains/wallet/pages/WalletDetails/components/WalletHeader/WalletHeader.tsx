@@ -276,14 +276,18 @@ export const WalletHeader = ({
 
 				<div className="my-3 flex justify-between px-4">
 					<label
-						className="leading-5 flex cursor-pointer items-center space-x-3 rounded-md"
+						className="flex cursor-pointer items-center space-x-3 rounded-md leading-5"
 						data-testid="SelectAllAddresses"
 					>
-						<Checkbox name="all" checked={addresses.length === wallets.count()} onChange={() => {
-							addresses.length === wallets.count()
-								? setAddresses([])
-								: setAddresses(wallets.values().map(w => w.address()))
-						}} />
+						<Checkbox
+							name="all"
+							checked={addresses.length === wallets.count()}
+							onChange={() => {
+								addresses.length === wallets.count()
+									? setAddresses([])
+									: setAddresses(wallets.values().map((w) => w.address()));
+							}}
+						/>
 						<span className="font-semibold text-theme-secondary-700">{t("COMMON.SELECT_ALL")}</span>
 					</label>
 
@@ -305,7 +309,8 @@ export const WalletHeader = ({
 							key={wallet.address()}
 							wallet={wallet}
 							toggleAddress={toggleAddress}
-							isSelected={addresses.includes(wallet.address())} />
+							isSelected={addresses.includes(wallet.address())}
+						/>
 					))}
 				</div>
 			</SidePanel>
@@ -313,45 +318,59 @@ export const WalletHeader = ({
 	);
 };
 
-const AddressRow = ({wallet, toggleAddress, isSelected}: {wallet: IReadWriteWallet, toggleAddress: (address: string) => void; isSelected: boolean}) => {
-	return (
-		<div
-			onClick={() => toggleAddress(wallet.address())}
-			onKeyPress={() => toggleAddress(wallet.address())}
-			tabIndex={0}
-			className={cn("group cursor-pointer flex items-center rounded-lg border border-theme-primary-200 px-4 py-3 transition-all", {
+const AddressRow = ({
+	wallet,
+	toggleAddress,
+	isSelected,
+}: {
+	wallet: IReadWriteWallet;
+	toggleAddress: (address: string) => void;
+	isSelected: boolean;
+}) => (
+	<div
+		onClick={() => toggleAddress(wallet.address())}
+		onKeyPress={() => toggleAddress(wallet.address())}
+		tabIndex={0}
+		className={cn(
+			"group flex cursor-pointer items-center rounded-lg border border-theme-primary-200 px-4 py-3 transition-all",
+			{
 				"bg-theme-secondary-200": isSelected,
 				"hover:bg-theme-navy-100": !isSelected,
-			})}
-		>
-			<Checkbox
-				name="all"
-				checked={isSelected}
-				onChange={() => toggleAddress(wallet.address())}
-			/>
-			<div
-				className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700">
-				<div className="flex w-1/2 min-w-0 flex-col space-y-2">
-					<div className={cn("leading-5", {"group-hover:text-theme-primary-900": !isSelected, "text-theme-secondary-900": isSelected})}>{wallet.displayName()}</div>
-					<Address
-						address={wallet.address()}
-						showCopyButton
-						addressClass="text-theme-secondary-700 text-sm leading-[17px]"
-					/>
+			},
+		)}
+	>
+		<Checkbox name="all" checked={isSelected} onChange={() => toggleAddress(wallet.address())} />
+		<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700">
+			<div className="flex w-1/2 min-w-0 flex-col space-y-2">
+				<div
+					className={cn("leading-5", {
+						"group-hover:text-theme-primary-900": !isSelected,
+						"text-theme-secondary-900": isSelected,
+					})}
+				>
+					{wallet.displayName()}
 				</div>
-				<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2">
-					<Amount
-						ticker={wallet.network().ticker()}
-						value={+wallet.balance().toFixed(2)}
-						className={cn("leading-5", {"group-hover:text-theme-primary-900": !isSelected, "text-theme-secondary-900": isSelected})}
-					/>
-					<Amount
-						ticker={wallet.exchangeCurrency()}
-						value={wallet.convertedBalance()}
-						className="text-sm leading-[17px]"
-					/>
-				</div>
+				<Address
+					address={wallet.address()}
+					showCopyButton
+					addressClass="text-theme-secondary-700 text-sm leading-[17px]"
+				/>
+			</div>
+			<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2">
+				<Amount
+					ticker={wallet.network().ticker()}
+					value={+wallet.balance().toFixed(2)}
+					className={cn("leading-5", {
+						"group-hover:text-theme-primary-900": !isSelected,
+						"text-theme-secondary-900": isSelected,
+					})}
+				/>
+				<Amount
+					ticker={wallet.exchangeCurrency()}
+					value={wallet.convertedBalance()}
+					className="text-sm leading-[17px]"
+				/>
 			</div>
 		</div>
-	)
-}
+	</div>
+);
