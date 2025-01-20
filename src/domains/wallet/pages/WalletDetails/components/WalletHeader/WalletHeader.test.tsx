@@ -4,7 +4,9 @@ import { createHashHistory } from "history";
 
 import { WalletHeader } from "./WalletHeader";
 import * as envHooks from "@/app/hooks/env";
-import { env, getDefaultProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen, waitFor } from "@/utils/testing-library";
+import { expect } from "vitest";
+import { userEvent } from '@testing-library/user-event';
 
 const history = createHashHistory();
 
@@ -66,5 +68,78 @@ describe("WalletHeader", () => {
 		);
 
 		await expect(screen.getByTestId("EmptyVotes")).toBeVisible();
+	});
+
+	it("should show addresses panel when address clicked", async () => {
+		render(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ShowAddressesPanel"));
+
+		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
+	});
+
+	it("should show addresses panel when enter key pressed", async () => {
+		render(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		await userEvent.type(screen.getByTestId("ShowAddressesPanel"), "{Enter}");
+
+		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
+	});
+
+	it("should close the addresses panel when close button clicked", async () => {
+		render(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ShowAddressesPanel"));
+
+		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+
+		await waitFor(() => expect(screen.queryByTestId("AddressesSidePanel")).not.toBeInTheDocument());
 	});
 });

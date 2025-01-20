@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
@@ -16,6 +16,7 @@ import { Copy } from "@/app/components/Copy";
 import { Clipboard } from "@/app/components/Clipboard";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
 import { WalletActions } from "./WalletHeader.blocks";
+import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 
 export const WalletHeader = ({
 	profile,
@@ -45,6 +46,8 @@ export const WalletHeader = ({
 		profile,
 	});
 
+	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
+
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
@@ -53,13 +56,21 @@ export const WalletHeader = ({
 						<p className="hidden text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50 sm:block">
 							{t("COMMON.VIEWING")}:
 						</p>
-						<Address
-							alignment="center"
-							walletName={alias}
-							truncateOnTable
-							maxNameChars={20}
-							walletNameClass="text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400"
-						/>
+						<div
+							onClick={() => setShowAddressesPanel(true)}
+							tabIndex={0}
+							onKeyPress={() => setShowAddressesPanel(true)}
+							className="cursor-pointer"
+							data-testid="ShowAddressesPanel"
+						>
+							<Address
+								alignment="center"
+								walletName={alias}
+								truncateOnTable
+								maxNameChars={20}
+								walletNameClass="text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400"
+							/>
+						</div>
 					</div>
 					<div className="flex flex-row items-center gap-1">
 						<Button
@@ -179,7 +190,7 @@ export const WalletHeader = ({
 							<div className="flex flex-row items-center gap-3">
 								<Button
 									data-testid="WalletHeader__send-button"
-									className="my-auto flex-1 dark:bg-theme-dark-navy-500"
+									className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500"
 									disabled={
 										wallet.balance() === 0 ||
 										!wallet.hasBeenFullyRestored() ||
@@ -221,6 +232,15 @@ export const WalletHeader = ({
 					</div>
 				</div>
 			</div>
+
+			<SidePanel
+				header="Addresses"
+				open={showAddressesPanel}
+				onOpenChange={setShowAddressesPanel}
+				dataTestId="AddressesSidePanel"
+			>
+				this is a body
+			</SidePanel>
 		</header>
 	);
 };
