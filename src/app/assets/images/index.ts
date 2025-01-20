@@ -39,10 +39,10 @@ import InfoDark from "./info-dark.svg?react";
 import WarningLight from "./warning-light.svg?react";
 import WarningDark from "./warning-dark.svg?react";
 import WorldMap from "./world-map.svg?react";
-import CreateAddressDarkNavy from "./create-address-dark-navy.svg?react"
-import ImportAddressDarkNavy from "./import-address-dark-navy.svg?react"
-import CreateAddressLightNavy from "./create-address-light-navy.svg?react"
-import ImportAddressLightNavy from "./import-address-light-navy.svg?react"
+import CreateAddressDarkNavy from "./create-address-dark-navy.svg?react";
+import ImportAddressDarkNavy from "./import-address-dark-navy.svg?react";
+import CreateAddressLightNavy from "./create-address-light-navy.svg?react";
+import ImportAddressLightNavy from "./import-address-light-navy.svg?react";
 import { wallet } from "@/domains/wallet/images";
 import { transaction } from "@/domains/transaction/images";
 import { profile } from "@/domains/profile/images";

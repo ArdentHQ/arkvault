@@ -1,27 +1,24 @@
 import React from "react";
 import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
-import { Button } from "@/app/components/Button";
 import { useTranslation } from "react-i18next";
 
-const Slide = ({ title, description, image }: { title: string, description: string, image: string }) => (
+const Slide = ({ title, description, image }: { title: string; description: string; image: string }) => (
 	<div className="p-4 md:p-8">
-		<div className="my-2 flex justify-center max-w-56 md:max-w-full mx-auto">
+		<div className="mx-auto my-2 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
 		<div className="text-center">
-			<h3 className="md:leading-7.5 mb-2 md:text-2xl font-semibold text-theme-secondary-900 dark:text-theme-dark-50 text-lg leading-4">
+			<h3 className="md:leading-7.5 mb-2 text-lg font-semibold leading-4 text-theme-secondary-900 dark:text-theme-dark-50 md:text-2xl">
 				{title}
 			</h3>
-			<p className="mb-6 text-sm leading-5 text-theme-secondary-700 dark:text-theme-dark-200">
-				{description}
-			</p>
+			<p className="mb-6 text-sm leading-5 text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>
 		</div>
 	</div>
 );
 
 export const DashboardSetupAddressSlider = (): JSX.Element => {
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 
 	const settings: Settings = {
 		appendDots: (dots) => (
@@ -45,8 +42,16 @@ export const DashboardSetupAddressSlider = (): JSX.Element => {
 
 	return (
 		<Slider {...settings}>
-			<Slide title={t("COMMON.IMPORT_ADDRESS")} description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")} image="ImportAddress" />
-			<Slide title={t("COMMON.CREATE_ADDRESS")} description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")} image="CreateAddress" />
+			<Slide
+				title={t("COMMON.IMPORT_ADDRESS")}
+				description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
+				image="ImportAddress"
+			/>
+			<Slide
+				title={t("COMMON.CREATE_ADDRESS")}
+				description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
+				image="CreateAddress"
+			/>
 		</Slider>
 	);
 };

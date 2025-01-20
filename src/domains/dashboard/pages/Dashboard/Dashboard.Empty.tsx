@@ -4,14 +4,14 @@ import { AddressActionsMenuMobile, DashboardSetupAddressCards, HeaderMobile } fr
 
 export const DashboardEmpty = () => (
 	<>
-		<div className="items-center justify-center hidden sm:flex">
-			<div className="flex h-page max-w-[45.25rem] md:items-center mt-6 sm:mt-14 md:mt-0 px-4 md:px-0">
+		<div className="hidden items-center justify-center sm:flex">
+			<div className="mt-6 flex h-page max-w-[45.25rem] px-4 sm:mt-14 md:mt-0 md:items-center md:px-0">
 				<DashboardSetupAddressCards />
 			</div>
 		</div>
 
 		<div className="block sm:hidden">
-			<div className="xs:max-w-88 xs:mx-auto">
+			<div className="xs:mx-auto xs:max-w-88">
 				<div className="my-6 space-y-1 px-8 text-center">
 					<HeaderMobile />
 				</div>
