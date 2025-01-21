@@ -248,6 +248,7 @@ module.exports = {
 				25: "6.25rem",
 				26: "6.5rem",
 				128: "32rem",
+				page: "calc(100vh - var(--nav-height))",
 			},
 			width: {
 				15: "3.75rem",

@@ -25,6 +25,7 @@ export const translations = {
 	APPEARANCE: "Appearance",
 	APP_NAME: "<strong>ARK</strong>Vault",
 	ARK: "ARK",
+	ARKVAULT: "ARK Vault",
 	ASSET: "Asset",
 	ASSETS: "Assets",
 	ASSET_TYPE: "Asset Type",
@@ -74,6 +75,7 @@ export const translations = {
 	COPY_ID: "Copy Transaction ID",
 	COPY_SIGNATURE: "Copy Signature",
 	CREATE: "Create",
+	CREATE_ADDRESS: "Create Address",
 	CRYPTOASSET: "Cryptoasset",
 	CRYPTOCURRENCY: "Cryptocurrency",
 	CURRENCY: "Currency",
@@ -162,6 +164,7 @@ export const translations = {
 	ID: "ID",
 	IMPORT: "Import",
 	IMPORTED: "Imported",
+	IMPORT_ADDRESS: "Import Address",
 	INFO: "Info",
 	INITIALIZING: "Initializing...",
 	INPUT_ADDRESS: {
