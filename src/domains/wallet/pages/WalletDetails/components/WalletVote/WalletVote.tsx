@@ -7,9 +7,10 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Tooltip } from "@/app/components/Tooltip";
+import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 
 interface WalletVoteProperties {
-	wallet: Contracts.IReadWriteWallet;
+	wallet: IReadWriteWallet | undefined;
 	onButtonClick: (address?: string) => void;
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
@@ -18,7 +19,7 @@ interface WalletVoteProperties {
 export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: WalletVoteProperties) => {
 	const { t } = useTranslation();
 
-	if (isLoadingVotes) {
+	if (isLoadingVotes || !wallet) {
 		return <WalletVoteSkeleton />;
 	}
 
@@ -67,7 +68,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 							!isLedgerWalletCompatible(wallet)
 						}
 						variant="secondary"
-						className="w-full text-theme-primary-600 dark:text-theme-dark-navy-400 md:hidden"
+						className="w-full text-theme-primary-600 dark:text-white md:hidden"
 						onClick={() => onButtonClick()}
 					>
 						<Icon name="Vote" />
