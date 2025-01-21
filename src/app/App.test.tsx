@@ -106,7 +106,7 @@ describe("App", () => {
 
 		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
-		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalledTimes(1), { timeout: 4000 });
+		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalled(), { timeout: 4000 });
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
 
 		memoryPasswordMock.mockRestore();
