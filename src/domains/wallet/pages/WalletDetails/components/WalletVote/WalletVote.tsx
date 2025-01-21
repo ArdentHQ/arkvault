@@ -34,7 +34,10 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 	};
 
 	return (
-		<div data-testid="WalletVote" className="flex w-full flex-col items-center md:flex-row md:items-center -mt-4 md:mt-0">
+		<div
+			data-testid="WalletVote"
+			className="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
+		>
 			{renderVotes()}
 
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
