@@ -16,11 +16,7 @@ import { Copy } from "@/app/components/Copy";
 import { Clipboard } from "@/app/components/Clipboard";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
 import { WalletActions } from "./WalletHeader.blocks";
-import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Input } from "@/app/components/Input";
-import { Checkbox } from "@/app/components/Checkbox";
-import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
-import cn from "classnames";
+import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressesSidePanel";
 
 export const WalletHeader = ({
 	profile,
@@ -52,21 +48,7 @@ export const WalletHeader = ({
 
 	const [showAddressesPanel, setShowAddressesPanel] = useState(true);
 
-	const wallets = profile.wallets();
-
 	const [addresses, setAddresses] = useState<string[]>([]);
-
-	const addAddress = (address: string) => {
-		setAddresses([...addresses, address]);
-	};
-
-	const removeAddress = (address: string) => {
-		setAddresses(addresses.filter((a) => a !== address));
-	};
-
-	const toggleAddress = (address: string) => {
-		addresses.includes(address) ? removeAddress(address) : addAddress(address);
-	};
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -253,105 +235,17 @@ export const WalletHeader = ({
 				</div>
 			</div>
 
-			<SidePanel
-				header="Choose Address"
+			<AddressesSidePanel
+				wallets={profile.wallets()}
+				selectedAddresses={addresses}
+				onSelectedAddressesChange={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				dataTestId="AddressesSidePanel"
-			>
-				<Input
-					className=""
-					placeholder="Search by Name or Address"
-					innerClassName="font-normal"
-					// value={query}
-					// maxLength={maxLength}
-					isFocused
-					ignoreContext
-					// onChange={(event: ChangeEvent<HTMLInputElement>) => setQuery(event.target.value)}
-					noShadow
-					addons={{
-						start: { content: <Icon name="MagnifyingGlassAlt" className="text-theme-secondary-500" /> },
-					}}
-				/>
-
-				<div className="my-3 flex justify-between px-4">
-					<label
-						className="leading-5 flex cursor-pointer items-center space-x-3 rounded-md"
-						data-testid="SelectAllAddresses"
-					>
-						<Checkbox name="all" checked={addresses.length === wallets.count()} onChange={() => {
-							addresses.length === wallets.count()
-								? setAddresses([])
-								: setAddresses(wallets.values().map(w => w.address()))
-						}} />
-						<span className="font-semibold text-theme-secondary-700">{t("COMMON.SELECT_ALL")}</span>
-					</label>
-
-					<Button
-						data-testid="NavigationBar__buttons__mobile--home"
-						size="icon"
-						variant="transparent"
-						// onClick={homeButtonHandler}
-						className="p-0 text-theme-primary-600 dark:text-theme-secondary-600"
-					>
-						<Icon name="Gear" size="lg" dimensions={[16, 16]} />
-						<span className="text-theme-primary-600">{t("COMMON.MANAGE")}</span>
-					</Button>
-				</div>
-
-				<div className="space-y-1">
-					{wallets.values().map((wallet) => (
-						<AddressRow
-							key={wallet.address()}
-							wallet={wallet}
-							toggleAddress={toggleAddress}
-							isSelected={addresses.includes(wallet.address())} />
-					))}
-				</div>
-			</SidePanel>
+				deleteAddress={(address: string) => {
+					const wallets = profile.wallets().filterByAddress(address);
+					profile.wallets().forget(wallets[0].id());
+				}}
+			/>
 		</header>
 	);
 };
-
-const AddressRow = ({wallet, toggleAddress, isSelected}: {wallet: IReadWriteWallet, toggleAddress: (address: string) => void; isSelected: boolean}) => {
-	return (
-		<div
-			onClick={() => toggleAddress(wallet.address())}
-			onKeyPress={() => toggleAddress(wallet.address())}
-			tabIndex={0}
-			className={cn("group cursor-pointer flex items-center rounded-lg border border-theme-primary-200 px-4 py-3 transition-all", {
-				"bg-theme-secondary-200": isSelected,
-				"hover:bg-theme-navy-100": !isSelected,
-			})}
-		>
-			<Checkbox
-				name="all"
-				checked={isSelected}
-				onChange={() => toggleAddress(wallet.address())}
-			/>
-			<div
-				className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700">
-				<div className="flex w-1/2 min-w-0 flex-col space-y-2">
-					<div className={cn("leading-5", {"group-hover:text-theme-primary-900": !isSelected, "text-theme-secondary-900": isSelected})}>{wallet.displayName()}</div>
-					<Address
-						address={wallet.address()}
-						showCopyButton
-						addressClass="text-theme-secondary-700 text-sm leading-[17px]"
-					/>
-				</div>
-				<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2">
-					<Amount
-						ticker={wallet.network().ticker()}
-						value={+wallet.balance().toFixed(2)}
-						className={cn("leading-5", {"group-hover:text-theme-primary-900": !isSelected, "text-theme-secondary-900": isSelected})}
-					/>
-					<Amount
-						ticker={wallet.exchangeCurrency()}
-						value={wallet.convertedBalance()}
-						className="text-sm leading-[17px]"
-					/>
-				</div>
-			</div>
-		</div>
-	)
-}

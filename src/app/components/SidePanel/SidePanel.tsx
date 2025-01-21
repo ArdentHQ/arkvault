@@ -73,7 +73,9 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 								>
 									<div className="relative mb-4 flex items-center justify-between">
 										{typeof header === "string" ? (
-											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">{header}</h2>
+											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">
+												{header}
+											</h2>
 										) : (
 											<>{header}</>
 										)}
