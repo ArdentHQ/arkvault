@@ -4,6 +4,7 @@
 @import "tailwindcss/utilities";
 
 @import "./variables.css";
+@import "./nav-variables.css";
 @import "./headings.css";
 @import "./base.css";
 @import "./datepicker.css";
