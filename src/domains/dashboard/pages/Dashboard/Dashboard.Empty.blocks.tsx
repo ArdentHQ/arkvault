@@ -98,7 +98,7 @@ export const DashboardSetupAddressCards = () => {
 
 	return (
 		<div className="flex-col">
-			<div className="mb-6 space-y-1 px-8 md:mb-8">
+			<div className="mb-4 space-y-1 px-8 md:mb-8">
 				<Header />
 			</div>
 
