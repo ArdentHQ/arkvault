@@ -14,7 +14,6 @@ import { TransactionDetailModal } from "@/domains/transaction/components/Transac
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
-import { useWalletTransactionCounts } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transaction-counts";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -83,24 +82,19 @@ export const Transactions = memo(function Transactions({
 		}
 	}, [isUpdatingWallet]); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const { sent, received } = useWalletTransactionCounts(wallets[0]);
-
 	const filterOptions = [
 		{
 			active: activeMode === "all",
-			count: undefined,
-			label: t("TRANSACTION.ALL_HISTORY"),
+			label: t("TRANSACTION.ALL_TRANSACTIONS"),
 			value: "all",
 		},
 		{
 			active: activeMode === "received",
-			count: received,
 			label: t("TRANSACTION.INCOMING"),
 			value: "received",
 		},
 		{
 			active: activeMode === "sent",
-			count: sent,
 			label: t("TRANSACTION.OUTGOING"),
 			value: "sent",
 		},
@@ -172,17 +166,10 @@ export const Transactions = memo(function Transactions({
 			{showTabs && (
 				<>
 					<Tabs className="mb-3 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
-						<TabList className="h-14 px-6 py-4">
+						<TabList className="h-10">
 							{filterOptions.map((option) => (
-								<Tab tabId={option.value} key={option.value} className="pb-9 before:!top-1/3">
-									<span className="flex items-center space-x-2">
-										<span>{option.label}</span>
-										{!!option.count && (
-											<span className="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500">
-												{option.count}
-											</span>
-										)}
-									</span>
+								<Tab tabId={option.value} key={option.value} className="">
+									<span>{option.label}</span>
 								</Tab>
 							))}
 						</TabList>
@@ -196,11 +183,15 @@ export const Transactions = memo(function Transactions({
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:px-4 sm:py-3">
+									<div className="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3">
 										<span className="text-base font-semibold leading-tight">
 											{selectedFilterLabel}
 										</span>
-										<Icon size="xs" name={isOpen ? "ChevronUpSmall" : "ChevronDownSmall"} />
+										<Icon
+											size="xs"
+											name={isOpen ? "ChevronUpSmall" : "ChevronDownSmall"}
+											className="text-theme-secondary-700 dark:text-theme-dark-200"
+										/>
 									</div>
 								)}
 							/>
