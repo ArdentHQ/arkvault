@@ -12,6 +12,7 @@ import { Transactions } from "@/domains/transaction/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletHeader } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader";
+import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { DashboardEmpty } from "./Dashboard.Empty";
 
 export const Dashboard = () => {
@@ -122,6 +123,25 @@ export const Dashboard = () => {
 						</TabList>
 					</TabScroll>
 				</Tabs>
+
+				{networkAllowsVoting && (
+					<Section
+						borderClassName="border-transparent dark:border-transaparent md:border-theme-secondary-300 md:dark:border-transparent"
+						backgroundClassName="md:bg-theme-background md:dark:bg-theme-secondary-background"
+						innerClassName="md:-my-2 w-full"
+						border
+						className={cn("md:hidden", {
+							hidden: mobileActiveTab !== "votes",
+						})}
+					>
+						<WalletVote
+							isLoadingVotes={isLoadingVotes}
+							votes={votes}
+							wallet={activeWallet}
+							onButtonClick={handleVoteButton}
+						/>
+					</Section>
+				)}
 
 				<Section className="flex-1 pt-6">
 					<div
