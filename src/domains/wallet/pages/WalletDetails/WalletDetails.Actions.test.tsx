@@ -41,7 +41,7 @@ const renderPage = async ({ waitForTopSection = true } = {}) => {
 	);
 
 	if (waitForTopSection) {
-		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+		await expect(screen.findAllByTestId("WalletVote")).resolves.toHaveLength(2);
 	}
 
 	return utils;
@@ -106,10 +106,11 @@ describe("WalletDetails", () => {
 
 		await renderPage();
 
-		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
-		await waitFor(() => expect(screen.getByTestId("WalletVote__button")).toBeEnabled());
+		await expect(screen.findAllByText(translations.COMMON.LEARN_MORE)).resolves.toHaveLength(2);
+		await waitFor(() => expect(screen.queryAllByTestId("WalletVote__button")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("WalletVote__button")[0]).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("WalletVote__button"));
+		await userEvent.click(screen.queryAllByTestId("WalletVote__button")[0]);
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
@@ -148,7 +149,7 @@ describe("WalletDetails", () => {
 
 		await renderPage();
 
-		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
+		await expect(screen.findAllByText(translations.COMMON.LEARN_MORE)).resolves.toHaveLength(2);
 
 		syncVotesSpy.mockRestore();
 	});

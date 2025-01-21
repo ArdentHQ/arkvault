@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 
 import { WalletVote } from "./WalletVote";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { DelegateName, DelegateStatus } from "./WalletVote.blocks";
+import { renderResponsive } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -97,7 +99,7 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		expect(screen.getByRole("button")).toBeDisabled();
+		expect(screen.queryAllByRole("button")[0]).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 
 		balanceSpy.mockRestore();
@@ -114,7 +116,7 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		expect(screen.getByRole("button")).toBeDisabled();
+		expect(screen.queryAllByRole("button")[0]).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 
 		usesLockedBalance.mockRestore();
@@ -287,9 +289,9 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("WalletVote")).not.toBeDisabled());
+		await waitFor(() => expect(screen.queryAllByTestId("WalletVote")[0]).not.toBeDisabled());
 
-		await userEvent.click(screen.getByText(t("COMMON.VOTE")));
+		await userEvent.click(screen.queryAllByText(t("COMMON.VOTE"))[0]);
 
 		expect(onButtonClick).toHaveBeenCalledWith();
 	});
@@ -321,5 +323,173 @@ describe("WalletVote", () => {
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should handle click on vote button in mobile view", async () => {
+		const onButtonClick = vi.fn();
+
+		renderResponsive(
+			<WalletVote wallet={wallet} onButtonClick={onButtonClick} votes={[]} isLoadingVotes={false} />,
+			{
+				viewport: { height: 667, width: 375 },
+			},
+		);
+
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
+		await userEvent.click(screen.queryAllByTestId("WalletVote__button_mobile")[0]);
+
+		expect(onButtonClick).toHaveBeenCalledWith();
+	});
+});
+
+describe("DelegateName", () => {
+	it("should render an address", () => {
+		render(<DelegateName delegateName={wallet.address()} isUsername={false} />);
+
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
+	});
+
+	it("should render a username", () => {
+		render(<DelegateName delegateName={"TestingUsername"} isUsername={true} />);
+		expect(screen.getByText("Testi...rname")).toBeInTheDocument();
+	});
+});
+
+describe("DelegateStatus", () => {
+	it("should render stand by", () => {
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		expect(screen.getByText("Standby")).toBeInTheDocument();
+	});
+
+	it("should render resigned", () => {
+		const votes = [
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: true,
+				}),
+			},
+		];
+
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		expect(screen.getByText("Resigned")).toBeInTheDocument();
+	});
+
+	it("should render active", () => {
+		const votes = [
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 1,
+				}),
+			},
+		];
+
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		expect(screen.getByText("Active")).toBeInTheDocument();
+	});
+
+	it("should render the three delegates", () => {
+		const votes = [
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 1,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 52,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: true,
+				}),
+			},
+		];
+
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+
+		expect(screen.getByText("Active 1")).toBeInTheDocument();
+		expect(screen.getByText("/ Standby 1")).toBeInTheDocument();
+		expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
+	});
+
+	it("should render with '&' separator when there are active and standby delegates", () => {
+		const votes = [
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 1,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 52,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: true,
+				}),
+			},
+		];
+
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+
+		expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
+	});
+
+	it("should render with '/' separator when there are only active and resigned delegates", () => {
+		const votes = [
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: false,
+					rank: 1,
+				}),
+			},
+			{
+				amount: 1,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					isDelegate: true,
+					isResignedDelegate: true,
+				}),
+			},
+		];
+
+		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+
+		expect(screen.getByText("/ Resigned 1")).toBeInTheDocument();
 	});
 });
