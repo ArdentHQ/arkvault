@@ -120,7 +120,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			role="tab"
 			type="button"
 			className={twMerge(
-				"ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800",
+				"rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all",
 				properties.className,
 			)}
 			ref={reference}
@@ -162,9 +162,10 @@ export const TabList = ({
 	<div
 		{...properties}
 		className={twMerge(
-			"tab-list inline-flex items-stretch justify-start",
+			"tab-list flex w-fit items-center gap-1 rounded-xl p-1",
 			cn({
-				"rounded-xl bg-theme-secondary-100 px-2 dark:bg-theme-secondary-background": !noBackground,
+				"bg-theme-secondary-200 dark:bg-theme-dark-950": !noBackground,
+				"bg-transparent": noBackground,
 			}),
 			properties.className,
 		)}
