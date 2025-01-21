@@ -241,7 +241,7 @@ export const WalletHeader = ({
 				onSelectedAddressesChange={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				deleteAddress={(address: string) => {
+				onDeleteAddress={(address: string) => {
 					const wallets = profile.wallets().filterByAddress(address);
 					profile.wallets().forget(wallets[0].id());
 				}}

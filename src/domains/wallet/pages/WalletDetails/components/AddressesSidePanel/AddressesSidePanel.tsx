@@ -17,14 +17,14 @@ export const AddressesSidePanel = ({
 	onSelectedAddressesChange,
 	open,
 	onOpenChange,
-	deleteAddress,
+	onDeleteAddress,
 }: {
 	wallets: IWalletRepository;
 	selectedAddresses: string[];
 	onSelectedAddressesChange: (addresses: string[]) => void;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	deleteAddress: (address: string) => void;
+	onDeleteAddress: (address: string) => void;
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 
@@ -186,7 +186,7 @@ export const AddressesSidePanel = ({
 							variant="transparent"
 							onClick={() => {
 								for (const address of addressesToDelete) {
-									deleteAddress(address);
+									onDeleteAddress(address);
 								}
 
 								const activeAddresses = selectedAddresses.filter(
@@ -231,7 +231,7 @@ function getMessageValue(key: string, defaultValue: boolean): boolean {
 		return defaultValue;
 	}
 
-	const decodedValue: Record<string, boolean> = JSON.parse(storedValue);
+	const decodedValue = JSON.parse(storedValue) as Record<string, boolean>;
 
 	if (decodedValue[key] !== undefined) {
 		return decodedValue[key];
