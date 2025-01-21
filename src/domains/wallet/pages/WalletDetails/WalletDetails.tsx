@@ -146,7 +146,7 @@ export const WalletDetails = () => {
 							votes={votes}
 							wallet={activeWallet}
 							onButtonClick={handleVoteButton}
-							/>
+						/>
 					</Section>
 				)}
 

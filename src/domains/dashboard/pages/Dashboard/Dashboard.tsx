@@ -130,7 +130,7 @@ export const Dashboard = () => {
 							votes={votes}
 							wallet={activeWallet}
 							onButtonClick={handleVoteButton}
-							/>
+						/>
 					</Section>
 				)}
 
