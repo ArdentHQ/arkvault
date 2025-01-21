@@ -27,7 +27,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 				sortDescFirst: true,
 			},
 			{
-				Header: t("COMMON.TYPE"),
+				Header: t("COMMON.METHOD"),
 				headerClassName: "no-border",
 			},
 			{
