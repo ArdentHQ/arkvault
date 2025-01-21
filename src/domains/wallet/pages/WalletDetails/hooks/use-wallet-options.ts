@@ -156,7 +156,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet, profile?: C
 		key: "primary",
 		options: [
 			{
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME"),
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.ADDRESS_NAME"),
 				value: "wallet-name",
 			},
 			{

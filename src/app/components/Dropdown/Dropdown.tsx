@@ -127,7 +127,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 					>
 						<Wrapper
 							variant={variant || options ? "options" : "custom"}
-							className="dropdown-body overflow-hidden rounded-xl bg-theme-background p-1 shadow-xl"
+							className="dropdown-body overflow-hidden rounded-xl bg-theme-background px-1 py-0 shadow-xl"
 						>
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
