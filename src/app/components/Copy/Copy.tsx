@@ -34,7 +34,7 @@ export const Copy = ({
 			tooltipDarkTheme={isDarkMode}
 			iconButtonClassName={twMerge(getStyles({ variant: "primary-transparent" }), "p-1")}
 		>
-			<span>{icon?.(isClicked)}</span>
+			<span onClick={() => setIsClicked(true)}>{icon?.(isClicked)}</span>
 		</Clipboard>
 	);
 };
