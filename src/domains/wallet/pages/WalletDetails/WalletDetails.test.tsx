@@ -54,7 +54,7 @@ const renderPage = async ({
 	);
 
 	if (waitForTopSection) {
-		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+		await expect(screen.findAllByTestId("WalletVote")).resolves.toHaveLength(2);
 	}
 
 	if (waitForTransactions) {
@@ -220,6 +220,6 @@ describe("WalletDetails", () => {
 
 		await renderPage({ waitForTopSection: true, waitForTransactions: false });
 
-		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
+		await expect(screen.queryAllByText(translations.COMMON.LEARN_MORE)).toHaveLength(2);
 	});
 });
