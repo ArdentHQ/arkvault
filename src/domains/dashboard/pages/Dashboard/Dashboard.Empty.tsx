@@ -5,7 +5,7 @@ import { AddressActionsMenuMobile, DashboardSetupAddressCards, HeaderMobile } fr
 export const DashboardEmpty = () => (
 	<>
 		<div className="hidden items-center justify-center sm:flex">
-			<div className="mt-6 flex h-page max-w-[45.25rem] px-4 sm:mt-14 md:mt-0 md:items-center md:px-0">
+			<div className="mt-6 flex h-page max-w-[45.25rem] px-4 md:mt-0 md:items-center md:px-0">
 				<DashboardSetupAddressCards />
 			</div>
 		</div>

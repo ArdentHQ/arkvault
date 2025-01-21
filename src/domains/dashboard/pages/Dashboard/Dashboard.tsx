@@ -78,11 +78,14 @@ export const Dashboard = () => {
 	const maxVotes = activeWallet?.network().maximumVotesPerWallet();
 
 	if (!activeWallet) {
-		return (
-			<Page pageTitle={t("COMMON.WELCOME")}>
-				<DashboardEmpty />
-			</Page>
-		);
+		if (activeProfile.status().isRestored() && !profileIsSyncing) {
+			return (
+				<Page pageTitle={t("COMMON.WELCOME")}>
+					<DashboardEmpty />
+				</Page>
+			);
+		}
+		return <div />
 	}
 
 	return (

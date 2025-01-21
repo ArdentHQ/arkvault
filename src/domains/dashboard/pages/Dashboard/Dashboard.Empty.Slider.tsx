@@ -12,7 +12,7 @@ const Slide = ({ title, description, image }: { title: string; description: stri
 			<h3 className="md:leading-7.5 mb-2 text-lg font-semibold leading-4 text-theme-secondary-900 dark:text-theme-dark-50 md:text-2xl">
 				{title}
 			</h3>
-			<p className="mb-6 text-sm leading-5 text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>
+			<p className="mb-6 text-xs leading-5 text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>
 		</div>
 	</div>
 );
