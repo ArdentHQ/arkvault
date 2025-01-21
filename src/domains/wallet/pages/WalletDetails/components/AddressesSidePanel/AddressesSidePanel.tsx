@@ -11,7 +11,7 @@ import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 
-const MessagesStorageKey = "onboarding-messages"
+const MessagesStorageKey = "onboarding-messages";
 
 function getMessageValue(key: string, defaultValue: boolean): boolean {
 	const storedValue = localStorage.getItem(MessagesStorageKey);
@@ -20,7 +20,7 @@ function getMessageValue(key: string, defaultValue: boolean): boolean {
 		return defaultValue;
 	}
 
-	const decodedValue: Record<string, boolean> = JSON.parse(storedValue) ;
+	const decodedValue: Record<string, boolean> = JSON.parse(storedValue);
 
 	if (decodedValue[key] !== undefined) {
 		return decodedValue[key];
@@ -74,12 +74,12 @@ export const AddressesSidePanel = ({
 
 		const id = setTimeout(() => {
 			setShowManageHint(getMessageValue("manage-button", true));
-		}, 1000)
+		}, 1000);
 
 		return () => {
 			clearTimeout(id);
-		}
-	}, [open])
+		};
+	}, [open]);
 
 	const toggleAddressSelection = (address: string) => {
 		if (isDeleteMode) {
@@ -167,14 +167,14 @@ export const AddressesSidePanel = ({
 							setMessageValue("manage-button", false);
 						}}
 						content={
-							<div className="space-x-4 text-sm leading-5 px-[3px] py-px">
+							<div className="space-x-4 px-[3px] py-px text-sm leading-5">
 								<span> You can manage and remove your addresses here.</span>
 								<Button
 									size="xs"
 									variant="transparent"
 									className="bg-theme-primary-500 px-4 py-1.5"
 									onClick={() => {
-										setShowManageHint(false)
+										setShowManageHint(false);
 									}}
 								>
 									{t("COMMON.GOT_IT")}
