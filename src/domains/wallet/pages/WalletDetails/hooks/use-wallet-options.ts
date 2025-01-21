@@ -173,7 +173,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet, profile?: C
 		key: "secondary",
 		options: [
 			{
-				icon: "GlobePointer",
+				icon: "ArrowExternal",
 				iconPosition: "start",
 				label: t("COMMON.OPEN_IN_EXPLORER"),
 				value: "open-explorer",
