@@ -151,6 +151,7 @@ export const translations = {
 	GAS_LIMIT: "Gas Limit",
 	GAS_PRICE: "Gas Price",
 	GAS_PRICE_GWEI: "Gas Price (Gwei)",
+	GOT_IT: "Got It",
 	GO_TO_PORTFOLIO: "Go to Portfolio",
 	GO_TO_WALLET: "Go to Wallet",
 	HASH: "Hash",

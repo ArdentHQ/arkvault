@@ -46,7 +46,7 @@ export const WalletHeader = ({
 		profile,
 	});
 
-	const [showAddressesPanel, setShowAddressesPanel] = useState(true);
+	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
 	const [addresses, setAddresses] = useState<string[]>([]);
 

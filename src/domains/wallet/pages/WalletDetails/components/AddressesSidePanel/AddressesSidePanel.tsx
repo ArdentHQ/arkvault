@@ -4,11 +4,44 @@ import { Icon } from "@/app/components/Icon";
 import { Checkbox } from "@/app/components/Checkbox";
 import { t } from "i18next";
 import { Button } from "@/app/components/Button";
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import { IWalletRepository } from "@ardenthq/sdk-profiles/distribution/esm/wallet.repository.contract";
 import { AddressRow } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressRow";
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
+import { Tooltip } from "@/app/components/Tooltip";
+
+const MessagesStorageKey = "onboarding-messages"
+
+function getMessageValue(key: string, defaultValue: boolean): boolean {
+	const storedValue = localStorage.getItem(MessagesStorageKey);
+
+	if (!storedValue) {
+		return defaultValue;
+	}
+
+	const decodedValue: Record<string, boolean> = JSON.parse(storedValue) ;
+
+	if (decodedValue[key] !== undefined) {
+		return decodedValue[key];
+	}
+
+	return defaultValue;
+}
+
+function setMessageValue(key: string, value: boolean): void {
+	const storedValue = localStorage.getItem(MessagesStorageKey);
+
+	let decodedValue: Record<string, boolean> = {};
+
+	if (storedValue) {
+		decodedValue = JSON.parse(storedValue) as Record<string, boolean>;
+	}
+
+	decodedValue[key] = value;
+
+	localStorage.setItem(MessagesStorageKey, JSON.stringify(decodedValue));
+}
 
 export const AddressesSidePanel = ({
 	wallets,
@@ -31,7 +64,28 @@ export const AddressesSidePanel = ({
 
 	const [addressesToDelete, setAddressesToDelete] = useState<string[]>([]);
 
-	const toggleAddress = (address: string) => {
+	const [showManageHint, setShowManageHint] = useState<boolean>(false);
+
+	useEffect(() => {
+		if (!open) {
+			setShowManageHint(false);
+			return;
+		}
+
+		const id = setTimeout(() => {
+			setShowManageHint(getMessageValue("manage-button", true));
+		}, 1000)
+
+		return () => {
+			clearTimeout(id);
+		}
+	}, [open])
+
+	const toggleAddressSelection = (address: string) => {
+		if (isDeleteMode) {
+			return;
+		}
+
 		selectedAddresses.includes(address)
 			? onSelectedAddressesChange(selectedAddresses.filter((a) => a !== address))
 			: onSelectedAddressesChange([...selectedAddresses, address]);
@@ -41,15 +95,9 @@ export const AddressesSidePanel = ({
 		setAddressesToDelete([...addressesToDelete, address]);
 	};
 
-	const resetMarkedAddresses = () => {
+	const resetDeleteState = () => {
 		setAddressesToDelete([]);
 		setDeleteMode(false);
-	};
-
-	const deleteMarkedAddresses = () => {
-		for (const address of addressesToDelete) {
-			deleteAddress(address);
-		}
 	};
 
 	const addressesToShow = wallets
@@ -72,7 +120,7 @@ export const AddressesSidePanel = ({
 			header="Choose Address"
 			open={open}
 			onOpenChange={(open) => {
-				resetMarkedAddresses();
+				resetDeleteState();
 				onOpenChange(open);
 			}}
 			dataTestId="AddressesSidePanel"
@@ -93,8 +141,9 @@ export const AddressesSidePanel = ({
 			<div className="my-3 flex justify-between px-4">
 				<label
 					data-testid="SelectAllAddresses"
-					className={cn("flex cursor-pointer items-center space-x-3 rounded-md leading-5", {
-						disabled: isDeleteMode,
+					className={cn("flex cursor-pointer items-center space-x-3 leading-5", {
+						"text-theme-secondary-500": isDeleteMode,
+						"text-theme-secondary-700 hover:text-theme-primary-600": !isDeleteMode,
 					})}
 				>
 					<Checkbox
@@ -107,20 +156,44 @@ export const AddressesSidePanel = ({
 								: onSelectedAddressesChange(addressesToShow.map((w) => w.address()));
 						}}
 					/>
-					<span className="font-semibold text-theme-secondary-700">{t("COMMON.SELECT_ALL")}</span>
+					<span className="font-semibold">{t("COMMON.SELECT_ALL")}</span>
 				</label>
 
 				{!isDeleteMode && (
-					<Button
-						data-testid="NavigationBar__buttons__mobile--home"
-						size="icon"
-						variant="transparent"
-						onClick={() => setDeleteMode(true)}
-						className="p-0 text-theme-primary-600 dark:text-theme-secondary-600"
+					<Tooltip
+						visible={showManageHint}
+						interactive={true}
+						onHide={() => {
+							setMessageValue("manage-button", false);
+						}}
+						content={
+							<div className="space-x-4 text-sm leading-5 px-[3px] py-px">
+								<span> You can manage and remove your addresses here.</span>
+								<Button
+									size="xs"
+									variant="transparent"
+									className="bg-theme-primary-500 px-4 py-1.5"
+									onClick={() => {
+										setShowManageHint(false)
+									}}
+								>
+									{t("COMMON.GOT_IT")}
+								</Button>
+							</div>
+						}
+						placement="bottom-end"
 					>
-						<Icon name="Gear" size="lg" dimensions={[16, 16]} />
-						<span>{t("COMMON.MANAGE")}</span>
-					</Button>
+						<Button
+							data-testid="NavigationBar__buttons__mobile--home"
+							size="icon"
+							variant="transparent"
+							onClick={() => setDeleteMode(true)}
+							className="p-0 text-theme-primary-600 dark:text-theme-secondary-600"
+						>
+							<Icon name="Gear" size="lg" dimensions={[16, 16]} />
+							<span>{t("COMMON.MANAGE")}</span>
+						</Button>
+					</Tooltip>
 				)}
 
 				{isDeleteMode && (
@@ -129,7 +202,7 @@ export const AddressesSidePanel = ({
 							data-testid="NavigationBar__buttons__mobile--home"
 							size="icon"
 							variant="transparent"
-							onClick={resetMarkedAddresses}
+							onClick={resetDeleteState}
 							className="p-0 text-theme-primary-600 dark:text-theme-secondary-600"
 						>
 							{t("COMMON.CANCEL")}
@@ -142,7 +215,9 @@ export const AddressesSidePanel = ({
 							size="icon"
 							variant="transparent"
 							onClick={() => {
-								deleteMarkedAddresses();
+								for (const address of addressesToDelete) {
+									deleteAddress(address);
+								}
 
 								const activeAddresses = selectedAddresses.filter(
 									(address) => !addressesToDelete.includes(address),
@@ -150,7 +225,7 @@ export const AddressesSidePanel = ({
 
 								onSelectedAddressesChange(activeAddresses);
 
-								resetMarkedAddresses();
+								resetDeleteState();
 							}}
 							className="p-0 text-theme-primary-600 dark:text-theme-secondary-600"
 						>
@@ -165,7 +240,7 @@ export const AddressesSidePanel = ({
 					<AddressRow
 						key={wallet.address()}
 						wallet={wallet}
-						toggleAddress={toggleAddress}
+						toggleAddress={toggleAddressSelection}
 						isSelected={selectedAddresses.includes(wallet.address())}
 						usesDeleteMode={isDeleteMode}
 						onDelete={markForDelete}
