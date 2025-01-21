@@ -157,7 +157,7 @@ export const AddressesSidePanel = ({
 							variant="transparent"
 							onClick={() => setDeleteMode(true)}
 							className={cn("p-0 text-theme-primary-600 dark:text-theme-secondary-600", {
-								"ring ring-offset-4 ring-theme-primary-400": showManageHint,
+								"ring ring-theme-primary-400 ring-offset-4": showManageHint,
 							})}
 						>
 							<Icon name="Gear" size="lg" dimensions={[16, 16]} />
@@ -220,7 +220,6 @@ export const AddressesSidePanel = ({
 		</SidePanel>
 	);
 };
-
 
 const MessagesStorageKey = "onboarding-messages";
 
