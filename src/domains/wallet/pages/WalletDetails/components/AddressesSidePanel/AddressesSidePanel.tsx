@@ -11,38 +11,6 @@ import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 
-const MessagesStorageKey = "onboarding-messages";
-
-function getMessageValue(key: string, defaultValue: boolean): boolean {
-	const storedValue = localStorage.getItem(MessagesStorageKey);
-
-	if (!storedValue) {
-		return defaultValue;
-	}
-
-	const decodedValue: Record<string, boolean> = JSON.parse(storedValue);
-
-	if (decodedValue[key] !== undefined) {
-		return decodedValue[key];
-	}
-
-	return defaultValue;
-}
-
-function setMessageValue(key: string, value: boolean): void {
-	const storedValue = localStorage.getItem(MessagesStorageKey);
-
-	let decodedValue: Record<string, boolean> = {};
-
-	if (storedValue) {
-		decodedValue = JSON.parse(storedValue) as Record<string, boolean>;
-	}
-
-	decodedValue[key] = value;
-
-	localStorage.setItem(MessagesStorageKey, JSON.stringify(decodedValue));
-}
-
 export const AddressesSidePanel = ({
 	wallets,
 	selectedAddresses,
@@ -188,7 +156,9 @@ export const AddressesSidePanel = ({
 							size="icon"
 							variant="transparent"
 							onClick={() => setDeleteMode(true)}
-							className="p-0 text-theme-primary-600 dark:text-theme-secondary-600"
+							className={cn("p-0 text-theme-primary-600 dark:text-theme-secondary-600", {
+								"ring ring-offset-4 ring-theme-primary-400": showManageHint,
+							})}
 						>
 							<Icon name="Gear" size="lg" dimensions={[16, 16]} />
 							<span>{t("COMMON.MANAGE")}</span>
@@ -250,3 +220,36 @@ export const AddressesSidePanel = ({
 		</SidePanel>
 	);
 };
+
+
+const MessagesStorageKey = "onboarding-messages";
+
+function getMessageValue(key: string, defaultValue: boolean): boolean {
+	const storedValue = localStorage.getItem(MessagesStorageKey);
+
+	if (!storedValue) {
+		return defaultValue;
+	}
+
+	const decodedValue: Record<string, boolean> = JSON.parse(storedValue);
+
+	if (decodedValue[key] !== undefined) {
+		return decodedValue[key];
+	}
+
+	return defaultValue;
+}
+
+function setMessageValue(key: string, value: boolean): void {
+	const storedValue = localStorage.getItem(MessagesStorageKey);
+
+	let decodedValue: Record<string, boolean> = {};
+
+	if (storedValue) {
+		decodedValue = JSON.parse(storedValue) as Record<string, boolean>;
+	}
+
+	decodedValue[key] = value;
+
+	localStorage.setItem(MessagesStorageKey, JSON.stringify(decodedValue));
+}
