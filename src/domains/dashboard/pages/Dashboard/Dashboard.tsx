@@ -85,7 +85,7 @@ export const Dashboard = () => {
 				</Page>
 			);
 		}
-		return <div />
+		return <div />;
 	}
 
 	return (

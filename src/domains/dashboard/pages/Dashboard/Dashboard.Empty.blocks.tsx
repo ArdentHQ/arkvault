@@ -9,7 +9,7 @@ export const Header = () => {
 	const { t } = useTranslation();
 	return (
 		<>
-			<h2 className="text-theme-secondary-900 dark:text-theme-dark-50 sm:text-2xl md:text-4xl font-semibold">
+			<h2 className="font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:text-2xl md:text-4xl">
 				{t("DASHBOARD.WELCOME_TITLE")}
 			</h2>
 			<p className="text-theme-secondary-700 dark:text-theme-dark-200">
@@ -29,7 +29,7 @@ export const HeaderMobile = () => {
 			<h2 className="text-3xl leading-10 text-theme-secondary-900 dark:text-theme-dark-50">
 				{t("COMMON.ARKVAULT")}
 			</h2>
-			<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm">
+			<p className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
 				{t("DASHBOARD.CREATE_OR_IMPORT_DESCRIPTION")}
 			</p>
 		</>
@@ -98,7 +98,7 @@ export const DashboardSetupAddressCards = () => {
 
 	return (
 		<div className="flex-col">
-			<div className="mb-6 md:mb-8 space-y-1 px-8">
+			<div className="mb-6 space-y-1 px-8 md:mb-8">
 				<Header />
 			</div>
 
