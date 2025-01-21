@@ -60,7 +60,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 		`,
 		primary: () =>
 			`text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500`,
-		'primary-transparent': () => `
+		"primary-transparent": () => `
 			hover:text-theme-primary-700  hover:dark:text-theme-dark-50
 			hover:bg-theme-primary-200 hover:dark:bg-theme-dark-700
 			text-theme-secondary-700 dark:text-theme-dark-200

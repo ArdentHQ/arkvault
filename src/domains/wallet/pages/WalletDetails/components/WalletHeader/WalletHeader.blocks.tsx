@@ -37,10 +37,7 @@ export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, i
 	}, [isSyncing, previousIsUpdatingTransactions, isUpdatingTransactions, onUpdate]);
 
 	return (
-		<Tooltip
-			content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")}
-			theme="dark"
-		>
+		<Tooltip content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")} theme="dark">
 			<Button
 				data-testid="WalletHeader__refresh"
 				onClick={syncWallet}

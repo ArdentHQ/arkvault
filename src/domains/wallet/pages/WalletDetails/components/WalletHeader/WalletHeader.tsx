@@ -13,7 +13,6 @@ import { Amount } from "@/app/components/Amount";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
-import { Clipboard } from "@/app/components/Clipboard";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
 import { WalletActions } from "./WalletHeader.blocks";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
@@ -119,7 +118,9 @@ export const WalletHeader = ({
 									<Copy
 										copyData={wallet.address()}
 										tooltip={t("COMMON.COPY_ID")}
-										icon={(isCopied) => isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />}
+										icon={(isCopied) =>
+											isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />
+										}
 									/>
 
 									{!!wallet.publicKey() && (

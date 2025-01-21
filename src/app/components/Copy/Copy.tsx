@@ -4,15 +4,14 @@ import { twMerge } from "tailwind-merge";
 import { getStyles } from "@/app/components/Button/Button.styles";
 import { useTheme } from "@/app/hooks";
 
-
 export const Copy = ({
 	copyData,
 	tooltip,
 	icon,
 }: {
-	copyData: string,
-	tooltip?: string
-	icon?: (isCopied?: boolean) => ReactElement
+	copyData: string;
+	tooltip?: string;
+	icon?: (isCopied?: boolean) => ReactElement;
 }): ReactElement => {
 	const [isClicked, setIsClicked] = useState<boolean>(false);
 	const { isDarkMode } = useTheme();
@@ -35,9 +34,7 @@ export const Copy = ({
 			tooltipDarkTheme={isDarkMode}
 			iconButtonClassName={twMerge(getStyles({ variant: "primary-transparent" }), "p-1")}
 		>
-			<span>
-				{icon?.(isClicked)}
-			</span>
+			<span>{icon?.(isClicked)}</span>
 		</Clipboard>
-	)
+	);
 };
