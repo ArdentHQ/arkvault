@@ -567,10 +567,10 @@ exports[`WalletVote > should render skelethon if loading 1`] = `
     data-testid="WalletVote__skeleton"
   >
     <div
-      class="flex w-full items-center px-6 py-4 md:p-0"
+      class="flex h-[1.688rem] w-full items-center px-8 py-4 md:p-0"
     >
       <div
-        class="mr-4 hidden md:block"
+        class="flex space-x-2"
       >
         <span
           aria-busy="true"
@@ -579,24 +579,7 @@ exports[`WalletVote > should render skelethon if loading 1`] = `
         >
           <span
             class="react-loading-skeleton"
-            style="width: 44px; height: 44px; border-radius: 50%;"
-          >
-            ‌
-          </span>
-          <br />
-        </span>
-      </div>
-      <div
-        class="flex h-10 flex-col justify-between"
-      >
-        <span
-          aria-busy="true"
-          aria-live="polite"
-          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-        >
-          <span
-            class="react-loading-skeleton"
-            style="width: 100px; height: 14px;"
+            style="width: 250px; height: 16px;"
           >
             ‌
           </span>
@@ -609,7 +592,7 @@ exports[`WalletVote > should render skelethon if loading 1`] = `
         >
           <span
             class="react-loading-skeleton"
-            style="width: 150px; height: 16px;"
+            style="width: 50px; height: 16px;"
           >
             ‌
           </span>
@@ -626,7 +609,7 @@ exports[`WalletVote > should render skelethon if loading 1`] = `
         >
           <span
             class="react-loading-skeleton"
-            style="width: 100px; height: 44px;"
+            style="width: 62px; height: 22px;"
           >
             ‌
           </span>
