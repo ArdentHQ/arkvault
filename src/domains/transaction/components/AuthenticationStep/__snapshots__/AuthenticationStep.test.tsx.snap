@@ -771,7 +771,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
+          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
           class="animate-pulse font-semibold text-theme-secondary-text"
@@ -928,7 +928,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
+          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
           class="animate-pulse font-semibold text-theme-secondary-text"
@@ -1296,7 +1296,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
+          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
           class="animate-pulse font-semibold text-theme-secondary-text"
@@ -2081,7 +2081,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
+          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
           class="animate-pulse font-semibold text-theme-secondary-text"
@@ -2238,7 +2238,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
+          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
           class="animate-pulse font-semibold text-theme-secondary-text"
@@ -2606,7 +2606,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
+          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
           class="animate-pulse font-semibold text-theme-secondary-text"

@@ -163,7 +163,7 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
               class="mt-4"
             >
               <fieldset
-                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <label
                   class="flex w-max cursor-pointer items-center space-x-3"
@@ -377,7 +377,7 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
               class="mt-4"
             >
               <fieldset
-                class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
+                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <label
                   class="flex w-max cursor-pointer items-center space-x-3"
