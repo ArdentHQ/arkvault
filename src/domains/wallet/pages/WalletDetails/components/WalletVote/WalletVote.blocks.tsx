@@ -10,22 +10,20 @@ import { Divider } from "@/app/components/Divider";
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
 const EmptyVotes = () => {
-	const { t } = useTranslation();
-	return (
-		<div
-			className="flex w-full flex-row items-center justify-start xs:justify-center md:justify-start"
-			data-testid="EmptyVotes"
-		>
-			<div className="flex flex-col items-center gap-2 text-base font-semibold sm:flex-row">
-				<p className="text-center leading-5 text-theme-secondary-700 dark:text-theme-dark-200 xs:text-left">
-					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}
-				</p>
-				<Link to={votesHelpLink} isExternal>
-					<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
-				</Link>
-			</div>
-		</div>
-	);
+    const { t } = useTranslation();
+    return (
+        <div
+            className="flex w-full flex-row items-center justify-start xs:justify-center md:justify-start"
+            data-testid="EmptyVotes"
+        >
+            <p className="text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 text-center pb-4 -mt-4 px-[22px] md:mt-0 md:px-0 md:pb-0 md:text-left">
+                {t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}{" "}
+                <Link to={votesHelpLink} isExternal className="inline-flex items-center">
+                    <span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
+                </Link>
+            </p>
+        </div>
+    );
 };
 
 export const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) => {
