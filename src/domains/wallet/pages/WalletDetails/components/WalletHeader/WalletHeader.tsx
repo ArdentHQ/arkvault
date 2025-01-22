@@ -16,6 +16,7 @@ import { Copy } from "@/app/components/Copy";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
 import { WalletActions } from "./WalletHeader.blocks";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import { Skeleton } from "@/app/components/Skeleton";
 
 export const WalletHeader = ({
 	profile,
@@ -46,6 +47,8 @@ export const WalletHeader = ({
 	});
 
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
+
+	const isRestored = wallet.hasBeenFullyRestored()
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -167,20 +170,30 @@ export const WalletHeader = ({
 								</div>
 
 								<div className="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 md:text-2xl md:leading-[29px]">
-									<Amount
-										value={wallet.balance()}
-										ticker={wallet.currency()}
-										className="dark:text-theme-dark-50"
-									/>
+									{isRestored && (
+										<Amount
+											value={wallet.balance()}
+											ticker={wallet.currency()}
+											className="dark:text-theme-dark-50"
+										/>
+									)}
+									{!isRestored && (
+										<Skeleton width={67} className="h-[21px] md:h-[1.813rem] md:w-[4.188rem]" />
+									)}
 									<Divider
 										type="vertical"
 										className="hidden h-6 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block"
 									/>
-									<Amount
-										value={convert(wallet.balance())}
-										ticker={wallet.exchangeCurrency()}
-										className="hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block"
-									/>
+									{isRestored && (
+										<Amount
+											value={convert(wallet.balance())}
+											ticker={wallet.exchangeCurrency()}
+											className="hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block"
+										/>
+									)}
+									{!isRestored && (
+										<Skeleton width={67} className="h-[21px] md:h-[1.813rem]" />
+									)}
 								</div>
 							</div>
 
