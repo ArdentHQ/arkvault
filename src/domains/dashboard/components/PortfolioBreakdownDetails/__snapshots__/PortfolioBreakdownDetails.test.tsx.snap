@@ -533,7 +533,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-success-600"
@@ -547,7 +547,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -559,7 +559,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -571,7 +571,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -587,7 +587,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-warning-600"
@@ -601,7 +601,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -613,7 +613,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -625,7 +625,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2628,7 +2628,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-success-600"
@@ -2642,7 +2642,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -2654,7 +2654,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -2666,7 +2666,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2682,7 +2682,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-warning-600"
@@ -2696,7 +2696,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -2708,7 +2708,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -2720,7 +2720,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2736,7 +2736,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2750,7 +2750,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -2762,7 +2762,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -2774,7 +2774,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2790,7 +2790,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2804,7 +2804,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -2816,7 +2816,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -2828,7 +2828,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2844,7 +2844,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2858,7 +2858,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -2870,7 +2870,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -2882,7 +2882,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2898,7 +2898,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2912,7 +2912,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -2924,7 +2924,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -2936,7 +2936,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2952,7 +2952,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2966,7 +2966,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold"
@@ -2978,7 +2978,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="whitespace-nowrap font-semibold text-theme-secondary-text"
@@ -2990,7 +2990,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"

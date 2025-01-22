@@ -2789,7 +2789,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -2852,7 +2852,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2865,7 +2865,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2903,7 +2903,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2956,7 +2956,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3045,7 +3045,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -3138,7 +3138,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3153,7 +3153,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3209,7 +3209,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3262,7 +3262,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3351,7 +3351,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -3414,7 +3414,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3429,7 +3429,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3485,7 +3485,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3538,7 +3538,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5070,7 +5070,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5133,7 +5133,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5146,7 +5146,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5184,7 +5184,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5205,7 +5205,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5294,7 +5294,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5387,7 +5387,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5402,7 +5402,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5458,7 +5458,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5479,7 +5479,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5568,7 +5568,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5631,7 +5631,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5646,7 +5646,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5702,7 +5702,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5723,7 +5723,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -9805,7 +9805,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -9868,7 +9868,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -9881,7 +9881,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -9919,7 +9919,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -9972,7 +9972,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -10061,7 +10061,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -10154,7 +10154,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -10169,7 +10169,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -10225,7 +10225,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -10278,7 +10278,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -10367,7 +10367,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -10430,7 +10430,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -10445,7 +10445,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -10501,7 +10501,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -10554,7 +10554,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17394,7 +17394,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -17457,7 +17457,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17470,7 +17470,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17508,7 +17508,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17558,7 +17558,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17647,7 +17647,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -17740,7 +17740,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17755,7 +17755,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17811,7 +17811,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17861,7 +17861,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -17950,7 +17950,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -18013,7 +18013,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -18028,7 +18028,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -18084,7 +18084,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 justify-center border-t-2 border-b-2 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -18134,7 +18134,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"

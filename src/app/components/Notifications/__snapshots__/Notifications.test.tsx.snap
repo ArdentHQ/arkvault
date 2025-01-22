@@ -43,7 +43,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-2/5"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 pl-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
                       >
                         <div
                           class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
@@ -77,7 +77,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -88,7 +88,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
                       >
                         <div
                           class="h-5"
@@ -125,7 +125,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-2/5"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 pl-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
                       >
                         <div
                           class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
@@ -159,7 +159,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -170,7 +170,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
                       >
                         <div
                           class="h-5"
@@ -207,7 +207,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-2/5"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 pl-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
                       >
                         <div
                           class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
@@ -241,7 +241,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -252,7 +252,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
                       >
                         <div
                           class="h-5"
@@ -437,7 +437,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-2/5"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 pl-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
                       >
                         <div
                           class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
@@ -471,7 +471,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -482,7 +482,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
                       >
                         <div
                           class="h-5"
@@ -519,7 +519,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-2/5"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 pl-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
                       >
                         <div
                           class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
@@ -553,7 +553,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -564,7 +564,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
                       >
                         <div
                           class="h-5"
@@ -601,7 +601,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-2/5"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 pl-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
                       >
                         <div
                           class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
@@ -635,7 +635,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -646,7 +646,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
                       >
                         <div
                           class="h-5"
