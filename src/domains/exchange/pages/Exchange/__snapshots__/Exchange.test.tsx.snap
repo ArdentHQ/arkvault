@@ -624,7 +624,7 @@ exports[`Exchange > should render empty 1`] = `
             >
               <button
                 aria-selected="true"
-                class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all m-0 mr-6"
+                class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg m-0 mr-6"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -637,7 +637,7 @@ exports[`Exchange > should render empty 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all m-0"
+                class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg m-0"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
@@ -1303,7 +1303,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             >
               <button
                 aria-selected="true"
-                class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all m-0 mr-6"
+                class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg m-0 mr-6"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -1316,7 +1316,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all m-0"
+                class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg m-0"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
