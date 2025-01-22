@@ -40,7 +40,7 @@ describe("AddressRow", () => {
 		expect(onDelete).toHaveBeenCalledWith(wallet.address());
 	});
 
-	it("should be checked", async () => {
+	it("should be checked", () => {
 		render(<AddressRow wallet={wallet} onDelete={vi.fn()} usesDeleteMode={false} toggleAddress={vi.fn()} isSelected={true}  />);
 
 		expect(screen.getByTestId("AddressRow--checkbox")).toBeChecked();
