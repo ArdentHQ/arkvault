@@ -101,7 +101,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			role="tab"
 			type="button"
 			className={twMerge(
-				"rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all",
+				"rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg",
 				properties.className,
 			)}
 			ref={reference}
