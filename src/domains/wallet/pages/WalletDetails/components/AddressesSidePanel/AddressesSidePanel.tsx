@@ -9,7 +9,7 @@ import { IWalletRepository } from "@ardenthq/sdk-profiles/distribution/esm/walle
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
-import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow";
+import { AddressRow } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressRow";
 
 export const AddressesSidePanel = ({
 	wallets,
