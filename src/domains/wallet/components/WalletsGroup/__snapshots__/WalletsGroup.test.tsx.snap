@@ -9838,19 +9838,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="font-semibold text-base text-sm leading-[17px]"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
-                        </div>
+                        />
                       </div>
                     </div>
                   </td>
@@ -9867,21 +9855,10 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
                         >
                           <span
-                            class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
-                          <span
                             class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                             data-testid="Address__address"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
                           </span>
                           <button
                             class="ring-focus relative focus:outline-none"
@@ -9935,31 +9912,12 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__TestNetwork"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div>
                             <div
                               style="height: 20px; width: 20px;"
-                            >
-                              <svg
-                                id="code"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <path
-                                  d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
-                            </div>
+                            />
                           </div>
                         </div>
                       </div>
@@ -9973,7 +9931,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                         class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
                         data-testid="Amount"
                       >
-                        33.75089801 DARK
+                        50,114.21127898 ARK
                       </span>
                     </div>
                   </td>
@@ -9985,9 +9943,10 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                       class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                     >
                       <span
-                        class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+                        class="whitespace-nowrap text-xs font-semibold text-theme-navy-200 dark:text-white md:text-base md:text-theme-secondary-700 dark:md:text-theme-secondary-500"
+                        data-testid="Amount"
                       >
-                        N/A
+                        0 BTC
                       </span>
                     </div>
                   </td>
@@ -14406,19 +14365,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="font-semibold text-base text-sm leading-[17px]"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
-                        </div>
+                        />
                       </div>
                     </div>
                   </td>
@@ -14435,21 +14382,10 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
                         >
                           <span
-                            class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
-                          <span
                             class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                             data-testid="Address__address"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
                           </span>
                           <button
                             class="ring-focus relative focus:outline-none"
@@ -14503,31 +14439,12 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__TestNetwork"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div>
                             <div
                               style="height: 20px; width: 20px;"
-                            >
-                              <svg
-                                id="code"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <path
-                                  d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
-                            </div>
+                            />
                           </div>
                         </div>
                       </div>
@@ -14541,7 +14458,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                         class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
                         data-testid="Amount"
                       >
-                        33.75089801 DARK
+                        50,114.21127898 ARK
                       </span>
                     </div>
                   </td>
@@ -14553,9 +14470,10 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                       class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                     >
                       <span
-                        class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+                        class="whitespace-nowrap text-xs font-semibold text-theme-navy-200 dark:text-white md:text-base md:text-theme-secondary-700 dark:md:text-theme-secondary-500"
+                        data-testid="Amount"
                       >
-                        N/A
+                        0 BTC
                       </span>
                     </div>
                   </td>
@@ -18905,19 +18823,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="font-semibold text-base text-sm leading-[17px]"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
-                        </div>
+                        />
                       </div>
                     </div>
                   </td>
@@ -18934,21 +18840,10 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
                         >
                           <span
-                            class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
-                          <span
                             class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                             data-testid="Address__address"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
                           </span>
                           <button
                             class="ring-focus relative focus:outline-none"
@@ -19002,31 +18897,12 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__TestNetwork"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div>
                             <div
                               style="height: 20px; width: 20px;"
-                            >
-                              <svg
-                                id="code"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <path
-                                  d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
-                            </div>
+                            />
                           </div>
                         </div>
                       </div>
@@ -19040,7 +18916,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                         class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
                         data-testid="Amount"
                       >
-                        33.75089801 DARK
+                        50,114.21127898 ARK
                       </span>
                     </div>
                   </td>
@@ -19052,9 +18928,17 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                       class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                     >
                       <span
-                        class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        N/A
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 100px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
                     </div>
                   </td>
