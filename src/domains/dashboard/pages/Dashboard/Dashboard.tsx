@@ -76,8 +76,6 @@ export const Dashboard = () => {
 		}
 	}, [isUpdatingTransactions]);
 
-	const maxVotes = activeWallet?.network().maximumVotesPerWallet();
-
 	if (!activeWallet) {
 		if (activeProfile.status().isRestored() && !profileIsSyncing) {
 			return (
@@ -92,7 +90,10 @@ export const Dashboard = () => {
 	return (
 		<>
 			<Page pageTitle={activeWallet.address()}>
-				<Section className="pb-px md:pb-4 first:pt-0 md:px-0 xl:mx-auto" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
+				<Section
+					className="pb-px first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
+					innerClassName="m-0 p-0 md:px-0 md:mx-auto"
+				>
 					<WalletHeader
 						profile={activeProfile}
 						wallet={activeWallet}
@@ -112,9 +113,7 @@ export const Dashboard = () => {
 							</Tab>
 							{networkAllowsVoting && (
 								<Tab tabId="votes">
-									<span className="whitespace-nowrap">
-										{t("COMMON.VOTING")}
-									</span>
+									<span className="whitespace-nowrap">{t("COMMON.VOTING")}</span>
 								</Tab>
 							)}
 						</TabList>
