@@ -13,7 +13,6 @@ import { Amount } from "@/app/components/Amount";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
-import { Clipboard } from "@/app/components/Clipboard";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
 import { WalletActions } from "./WalletHeader.blocks";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
@@ -114,33 +113,31 @@ export const WalletHeader = ({
 									iconColor="text-theme-secondary-300 dark:text-theme-dark-700"
 								/>
 							</div>
-							<div className="flex flex-row items-center gap-4">
-								<Copy
-									address={wallet.address()}
-									className="text-theme-secondary-700 dark:text-theme-dark-200"
-								/>
+							<div className="flex flex-row items-center gap-3">
+								<div className="flex items-center gap-2">
+									<Copy
+										copyData={wallet.address()}
+										tooltip={t("COMMON.COPY_ID")}
+										icon={(isCopied) =>
+											isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />
+										}
+									/>
 
-								{!!wallet.publicKey() && (
-									<Clipboard
-										variant="icon"
-										data={wallet.publicKey() as string}
-										tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
-										tooltipDarkTheme
-									>
-										<Icon
-											name="CopyKey"
-											size="md"
-											className="text-theme-secondary-700 hover:text-theme-secondary-500 dark:text-theme-dark-200"
+									{!!wallet.publicKey() && (
+										<Copy
+											copyData={wallet.publicKey() as string}
+											tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
+											icon={() => <Icon name="CopyKey" />}
 										/>
-									</Clipboard>
-								)}
+									)}
+								</div>
 
 								<Divider
 									type="vertical"
 									className="mx-0 hidden h-[17px] border-theme-secondary-300 p-0 dark:border-theme-dark-700 sm:block"
 								/>
 
-								<div className="hidden h-4 w-4 sm:flex">
+								<div className="hidden sm:flex">
 									<WalletActions
 										profile={profile}
 										wallet={wallet}
