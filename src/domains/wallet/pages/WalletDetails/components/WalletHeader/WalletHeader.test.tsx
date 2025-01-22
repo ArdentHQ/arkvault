@@ -51,6 +51,34 @@ describe("WalletHeader", () => {
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 	});
 
+	it("should re-sync wallet", async () => {
+		const onUpdate = vi.fn();
+		renderResponsiveWithRoute(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+				onUpdate={onUpdate}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+		expect(screen.getByTestId("WalletHeader__refresh")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("WalletHeader__refresh"));
+
+		await waitFor(() => {
+			expect(onUpdate).toHaveBeenCalled();
+		});
+	});
+
 	it("should render empty votes section if no votes are available", async () => {
 		renderResponsiveWithRoute(
 			<WalletHeader

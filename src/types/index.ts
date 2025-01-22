@@ -30,6 +30,7 @@ export type Position =
 
 export type ButtonVariant =
 	| "primary"
+	| "primary-transparent"
 	| "secondary"
 	| "danger"
 	| "warning"
