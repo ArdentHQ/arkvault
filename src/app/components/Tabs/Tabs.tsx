@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react";
 import { TabContext, TabId, useTab } from "./useTab";
-import { useTheme } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 
@@ -85,8 +84,6 @@ const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => 
 );
 
 export const TabScroll = ({ children }) => {
-	const { isDarkMode } = useTheme();
-
 	return (
 		<div data-testid="TabScroll" className="relative z-0">
 			<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5">
