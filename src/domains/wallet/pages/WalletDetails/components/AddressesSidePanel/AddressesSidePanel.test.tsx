@@ -51,7 +51,7 @@ describe("AddressesSidePanel", () => {
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 
-		expect(onSelectedAddressChange).toHaveBeenCalledWith([wallets.first().address()])
+		expect(onSelectedAddressChange).toHaveBeenCalledWith([wallets.first().address()]);
 	});
 
 	it("should show delete buttons when `manage` clicked", async () => {
@@ -90,7 +90,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId("ManageAddresses"));
 
 		// click on the delete button
-		await userEvent.click(screen.getByTestId(`AddressRow--delete-${wallets.first().address()}`))
+		await userEvent.click(screen.getByTestId(`AddressRow--delete-${wallets.first().address()}`));
 
 		// confirm address deletion
 		await userEvent.click(screen.getByTestId("ConfirmDelete"));
@@ -119,7 +119,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId("ManageAddresses"));
 
 		// click on the delete button
-		await userEvent.click(screen.getByTestId(`AddressRow--delete-${wallets.first().address()}`))
+		await userEvent.click(screen.getByTestId(`AddressRow--delete-${wallets.first().address()}`));
 
 		await userEvent.click(screen.getByTestId("CancelDelete"));
 
