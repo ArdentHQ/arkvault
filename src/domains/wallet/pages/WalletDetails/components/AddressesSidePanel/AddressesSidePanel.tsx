@@ -98,6 +98,7 @@ export const AddressesSidePanel = ({
 				innerClassName="font-normal"
 				value={searchQuery}
 				isFocused
+				data-testid="AddressesPanel--SearchInput"
 				ignoreContext
 				onChange={(event: ChangeEvent<HTMLInputElement>) => setSearchQuery(event.target.value)}
 				noShadow

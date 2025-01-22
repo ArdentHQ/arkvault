@@ -74,13 +74,17 @@ describe("AddressesSidePanel", () => {
 
 	it("should delete an address when `done` clicked", async () => {
 		const onDelete = vi.fn();
+		const onSelectedAddressesChange = vi.fn();
+
+		const firstWallet = wallets.first();
+		const addressesExcludingFirstWallet= wallets.values().slice(1).map((wallet) => wallet.address());
 
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				selectedAddresses={[firstWallet.address(), ...addressesExcludingFirstWallet]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onSelectedAddressesChange={onSelectedAddressesChange}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={onDelete}
 			/>,
@@ -95,7 +99,10 @@ describe("AddressesSidePanel", () => {
 		// confirm address deletion
 		await userEvent.click(screen.getByTestId("ConfirmDelete"));
 
+
 		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
+
+		expect(onSelectedAddressesChange).toHaveBeenCalledWith([...addressesExcludingFirstWallet])
 
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
@@ -127,5 +134,39 @@ describe("AddressesSidePanel", () => {
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
 
 		expect(onDelete).not.toHaveBeenCalled();
+	});
+
+	it("should filter wallets by address", async () => {
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={[]}
+				open={true}
+				onSelectedAddressesChange={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), wallets.first().address());
+
+		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+	});
+
+	it("should filter wallets by displayName", async () => {
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={[]}
+				open={true}
+				onSelectedAddressesChange={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), 'Wallet 2');
+
+		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
 	});
 });
