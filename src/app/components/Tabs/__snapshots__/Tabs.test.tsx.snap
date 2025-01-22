@@ -8,7 +8,7 @@ exports[`Tabs > should react to use effect call 1`] = `
     >
       <button
         aria-selected="true"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
@@ -21,7 +21,7 @@ exports[`Tabs > should react to use effect call 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
@@ -50,7 +50,7 @@ exports[`Tabs > should render 1`] = `
     >
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
@@ -63,7 +63,7 @@ exports[`Tabs > should render 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
@@ -76,7 +76,7 @@ exports[`Tabs > should render 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"
@@ -103,7 +103,7 @@ exports[`Tabs > should render wit counts 1`] = `
     >
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
@@ -122,7 +122,7 @@ exports[`Tabs > should render wit counts 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
@@ -141,7 +141,7 @@ exports[`Tabs > should render wit counts 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"
@@ -173,11 +173,8 @@ exports[`Tabs > should render with scroll 1`] = `
       class="relative z-0"
       data-testid="TabScroll"
     >
-      <span
-        class="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-      />
       <div
-        class="bg-theme-secondary-100 dark:bg-black"
+        class="bg-theme-secondary-200 px-5 dark:bg-theme-dark-950"
       >
         <div
           class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"
@@ -187,7 +184,7 @@ exports[`Tabs > should render with scroll 1`] = `
           >
             <button
               aria-selected="false"
-              class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+              class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-1"
               role="tab"
@@ -200,7 +197,7 @@ exports[`Tabs > should render with scroll 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+              class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-2"
               role="tab"
@@ -213,7 +210,7 @@ exports[`Tabs > should render with scroll 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+              class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-3"
               role="tab"
@@ -227,9 +224,6 @@ exports[`Tabs > should render with scroll 1`] = `
           </div>
         </div>
       </div>
-      <span
-        class="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-      />
     </div>
   </div>
 </DocumentFragment>
@@ -242,11 +236,8 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
       class="relative z-0"
       data-testid="TabScroll"
     >
-      <span
-        class="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-      />
       <div
-        class="bg-theme-secondary-100 dark:bg-black"
+        class="bg-theme-secondary-200 px-5 dark:bg-theme-dark-950"
       >
         <div
           class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"
@@ -256,7 +247,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
           >
             <button
               aria-selected="false"
-              class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+              class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-1"
               role="tab"
@@ -269,7 +260,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+              class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-2"
               role="tab"
@@ -282,7 +273,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+              class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-3"
               role="tab"
@@ -296,9 +287,6 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
           </div>
         </div>
       </div>
-      <span
-        class="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-      />
     </div>
   </div>
 </DocumentFragment>
@@ -312,7 +300,7 @@ exports[`Tabs > should render without background 1`] = `
     >
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
@@ -325,7 +313,7 @@ exports[`Tabs > should render without background 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
@@ -338,7 +326,7 @@ exports[`Tabs > should render without background 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="tab-button rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all"
+        class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"

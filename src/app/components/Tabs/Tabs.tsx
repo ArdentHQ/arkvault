@@ -1,6 +1,5 @@
-import React, { forwardRef, useMemo } from "react";
+import React, { forwardRef } from "react";
 import { TabContext, TabId, useTab } from "./useTab";
-import { useTheme } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 
@@ -84,31 +83,13 @@ const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => 
 	<div {...properties} className={twMerge("[&::-webkit-scrollbar]:hidden", properties.className)} />
 );
 
-export const TabScroll = ({ children }) => {
-	const { isDarkMode } = useTheme();
-
-	const shadowRGB = useMemo(() => (isDarkMode ? "18, 18, 19" : "247, 250, 251"), [isDarkMode]);
-
-	return (
-		<div data-testid="TabScroll" className="relative z-0">
-			<span
-				className="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-				style={{
-					background: `linear-gradient(90deg, rgba(${shadowRGB}, 0.8) 14.49%, rgba(${shadowRGB}, 0) 92.71%)`,
-				}}
-			/>
-			<div className="bg-theme-secondary-100 dark:bg-black">
-				<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
-			</div>
-			<span
-				className="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-				style={{
-					background: `linear-gradient(270deg, rgba(${shadowRGB}, 0.8) 14.49%, rgba(${shadowRGB}, 0) 92.71%)`,
-				}}
-			/>
+export const TabScroll = ({ children }) => (
+	<div data-testid="TabScroll" className="relative z-0">
+		<div className="bg-theme-secondary-200 px-5 dark:bg-theme-dark-950">
+			<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
 		</div>
-	);
-};
+	</div>
+);
 
 export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((properties: TabProperties, reference) => {
 	const context = React.useContext(TabContext);
@@ -120,7 +101,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			role="tab"
 			type="button"
 			className={twMerge(
-				"rounded-lg px-3 py-1.5 text-base font-semibold leading-5 transition-all",
+				"rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg",
 				properties.className,
 			)}
 			ref={reference}
