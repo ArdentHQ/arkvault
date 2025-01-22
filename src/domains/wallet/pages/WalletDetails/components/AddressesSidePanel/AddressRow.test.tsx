@@ -20,13 +20,29 @@ describe("AddressRow", () => {
 	});
 
 	it("should render", () => {
-		render(<AddressRow wallet={wallet} onDelete={vi.fn()} usesDeleteMode={false} toggleAddress={vi.fn()} isSelected={false}  />);
+		render(
+			<AddressRow
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesDeleteMode={false}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+			/>,
+		);
 
 		expect(screen.getByText(wallet.displayName())).toBeInTheDocument();
 	});
 
 	it("should render in delete mode", () => {
-		render(<AddressRow wallet={wallet} onDelete={vi.fn()} usesDeleteMode={true} toggleAddress={vi.fn()} isSelected={false}  />);
+		render(
+			<AddressRow
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesDeleteMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+			/>,
+		);
 
 		expect(screen.getByTestId("AddressRow--delete")).toBeInTheDocument();
 		expect(screen.queryByTestId("AddressRow--checkbox")).not.toBeInTheDocument();
@@ -34,14 +50,30 @@ describe("AddressRow", () => {
 
 	it("should trigger `onDelete` when deleted", async () => {
 		const onDelete = vi.fn();
-		render(<AddressRow wallet={wallet} onDelete={onDelete} usesDeleteMode={true} toggleAddress={vi.fn()} isSelected={false}  />);
+		render(
+			<AddressRow
+				wallet={wallet}
+				onDelete={onDelete}
+				usesDeleteMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+			/>,
+		);
 
 		await userEvent.click(screen.getByTestId("AddressRow--delete"));
 		expect(onDelete).toHaveBeenCalledWith(wallet.address());
 	});
 
 	it("should be checked", () => {
-		render(<AddressRow wallet={wallet} onDelete={vi.fn()} usesDeleteMode={false} toggleAddress={vi.fn()} isSelected={true}  />);
+		render(
+			<AddressRow
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesDeleteMode={false}
+				toggleAddress={vi.fn()}
+				isSelected={true}
+			/>,
+		);
 
 		expect(screen.getByTestId("AddressRow--checkbox")).toBeChecked();
 	});
@@ -49,7 +81,15 @@ describe("AddressRow", () => {
 	it("should trigger `toggleAddress` when checkbox clicked", async () => {
 		const toggleAddress = vi.fn();
 
-		render(<AddressRow wallet={wallet} onDelete={vi.fn()} usesDeleteMode={false} toggleAddress={toggleAddress} isSelected={true}  />);
+		render(
+			<AddressRow
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesDeleteMode={false}
+				toggleAddress={toggleAddress}
+				isSelected={true}
+			/>,
+		);
 
 		await userEvent.click(screen.getByTestId("AddressRow--checkbox"));
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
@@ -58,7 +98,15 @@ describe("AddressRow", () => {
 	it("should trigger `toggleAddress` when row clicked", async () => {
 		const toggleAddress = vi.fn();
 
-		render(<AddressRow wallet={wallet} onDelete={vi.fn()} usesDeleteMode={false} toggleAddress={toggleAddress} isSelected={true}  />);
+		render(
+			<AddressRow
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesDeleteMode={false}
+				toggleAddress={toggleAddress}
+				isSelected={true}
+			/>,
+		);
 
 		await userEvent.click(screen.getByTestId("AddressRow"));
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
@@ -67,7 +115,15 @@ describe("AddressRow", () => {
 	it("should trigger `toggleAddress` when a key pressed on AddressRow", async () => {
 		const toggleAddress = vi.fn();
 
-		render(<AddressRow wallet={wallet} onDelete={vi.fn()} usesDeleteMode={false} toggleAddress={toggleAddress} isSelected={true}  />);
+		render(
+			<AddressRow
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesDeleteMode={false}
+				toggleAddress={toggleAddress}
+				isSelected={true}
+			/>,
+		);
 
 		await userEvent.type(screen.getByTestId("AddressRow"), "enter");
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
