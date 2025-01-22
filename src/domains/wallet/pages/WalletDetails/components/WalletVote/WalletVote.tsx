@@ -53,7 +53,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 							!isLedgerWalletCompatible(wallet)
 						}
 						variant="secondary-icon"
-						className="mt-4 hidden w-full space-x-2 text-theme-primary-600 dark:text-theme-dark-navy-400 md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
+						className="mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
 						onClick={() => onButtonClick()}
 					>
 						<Icon name="Vote" />
@@ -71,7 +71,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 							!isLedgerWalletCompatible(wallet)
 						}
 						variant="secondary"
-						className="w-full text-theme-primary-600 dark:text-white md:hidden"
+						className="w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
 						onClick={() => onButtonClick()}
 					>
 						<Icon name="Vote" />

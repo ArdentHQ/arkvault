@@ -14,6 +14,7 @@ import { TransactionDetailModal } from "@/domains/transaction/components/Transac
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
+import { Skeleton } from "@/app/components/Skeleton";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -211,11 +212,25 @@ export const Transactions = memo(function Transactions({
 
 			<TableWrapper className={cn({ "!rounded-b-none border-none": showMore })}>
 				<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
-					<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
-						{t("COMMON.SHOWING_RESULTS", {
-							count: selectedTransactionTypes?.length ? transactions.length : 0,
-						})}
-					</span>
+					{!isLoadingTransactions && (
+						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+							{t("COMMON.SHOWING_RESULTS", {
+								count: selectedTransactionTypes?.length ? transactions.length : 0,
+							})}
+						</span>
+					)}
+
+					{isLoadingTransactions && (
+						<div className="flex items-center space-x-1.5">
+							<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+								{t("COMMON.SHOWING")}
+							</span>
+							<Skeleton width={40} height={20} />
+							<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+								{t("COMMON.RESULTS").toLowerCase()}
+							</span>
+						</div>
+					)}
 					<FilterTransactions
 						className="w-full sm:w-fit md:my-auto"
 						wallets={wallets}

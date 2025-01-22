@@ -156,7 +156,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet, profile?: C
 		key: "primary",
 		options: [
 			{
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME"),
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.ADDRESS_NAME"),
 				value: "wallet-name",
 			},
 			{
@@ -173,7 +173,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet, profile?: C
 		key: "secondary",
 		options: [
 			{
-				icon: "GlobePointer",
+				icon: "ArrowExternal",
 				iconPosition: "start",
 				label: t("COMMON.OPEN_IN_EXPLORER"),
 				value: "open-explorer",
