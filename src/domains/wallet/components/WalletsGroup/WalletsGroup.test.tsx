@@ -162,9 +162,9 @@ describe("WalletsGroup", () => {
 		await userEvent.click(within(walletRow).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
-		expect(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME)).toBeInTheDocument();
+		expect(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.ADDRESS_NAME)).toBeInTheDocument();
 
-		await userEvent.click(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME));
+		await userEvent.click(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.ADDRESS_NAME));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
