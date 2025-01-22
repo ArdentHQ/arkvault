@@ -6,10 +6,10 @@ import { t } from "i18next";
 import { Button } from "@/app/components/Button";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { IWalletRepository } from "@ardenthq/sdk-profiles/distribution/esm/wallet.repository.contract";
-import { AddressRow } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressRow";
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
+import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow";
 
 export const AddressesSidePanel = ({
 	wallets,

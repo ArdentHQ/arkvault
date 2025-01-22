@@ -15,7 +15,7 @@ import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
 import { WalletActions } from "./WalletHeader.blocks";
-import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressesSidePanel";
+import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 
 export const WalletHeader = ({
 	profile,

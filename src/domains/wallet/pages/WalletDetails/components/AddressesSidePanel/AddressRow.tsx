@@ -21,6 +21,7 @@ export const AddressRow = ({
 	onDelete: (address: string) => void;
 }): JSX.Element => (
 	<div
+		data-testid="AddressRow"
 		onClick={() => toggleAddress(wallet.address())}
 		onKeyPress={() => toggleAddress(wallet.address())}
 		tabIndex={0}
@@ -47,6 +48,7 @@ export const AddressRow = ({
 		{!usesDeleteMode && (
 			<Checkbox
 				name="all"
+				data-testid="AddressRow--checkbox"
 				className="m-0.5"
 				checked={isSelected}
 				onChange={() => toggleAddress(wallet.address())}
