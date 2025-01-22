@@ -212,14 +212,15 @@ export const Transactions = memo(function Transactions({
 
 			<TableWrapper className={cn({ "!rounded-b-none border-none": showMore })}>
 				<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
-					{!isLoading && (
+					{!isLoadingTransactions && (
 						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
 							{t("COMMON.SHOWING_RESULTS", {
 								count: selectedTransactionTypes?.length ? transactions.length : 0,
 							})}
 						</span>
 					)}
-					{isLoading && (
+
+					{isLoadingTransactions && (
 						<div className="flex items-center space-x-1.5">
 							<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
 								{t("COMMON.SHOWING")}

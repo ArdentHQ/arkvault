@@ -13,7 +13,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 		const templateColumns: Column<DTO.ExtendedConfirmedTransactionData>[] = [
 			{
 				Header: t("COMMON.TX_ID"),
-				cellWidth: "w-28 lg:w-36 xl:w-48",
+				cellWidth: "w-32 lg:w-36 xl:w-48",
 				headerClassName: "no-border",
 				noRoundedBorders: true,
 			},
@@ -28,6 +28,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 			},
 			{
 				Header: t("COMMON.METHOD"),
+				cellWidth: "w-40 lg:w-48",
 				headerClassName: "no-border",
 			},
 			{
