@@ -173,11 +173,8 @@ exports[`Tabs > should render with scroll 1`] = `
       class="relative z-0"
       data-testid="TabScroll"
     >
-      <span
-        class="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-      />
       <div
-        class="bg-theme-secondary-100 dark:bg-black"
+        class="bg-theme-secondary-200 px-5 dark:bg-theme-dark-950"
       >
         <div
           class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"
@@ -227,9 +224,6 @@ exports[`Tabs > should render with scroll 1`] = `
           </div>
         </div>
       </div>
-      <span
-        class="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-      />
     </div>
   </div>
 </DocumentFragment>
@@ -242,11 +236,8 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
       class="relative z-0"
       data-testid="TabScroll"
     >
-      <span
-        class="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-      />
       <div
-        class="bg-theme-secondary-100 dark:bg-black"
+        class="bg-theme-secondary-200 px-5 dark:bg-theme-dark-950"
       >
         <div
           class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"
@@ -296,9 +287,6 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
           </div>
         </div>
       </div>
-      <span
-        class="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-      />
     </div>
   </div>
 </DocumentFragment>
