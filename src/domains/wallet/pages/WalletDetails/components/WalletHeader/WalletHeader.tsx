@@ -48,7 +48,7 @@ export const WalletHeader = ({
 
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-	const isRestored = wallet.hasBeenFullyRestored()
+	const isRestored = wallet.hasBeenFullyRestored();
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -191,9 +191,7 @@ export const WalletHeader = ({
 											className="hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block"
 										/>
 									)}
-									{!isRestored && (
-										<Skeleton width={67} className="h-[21px] md:h-[1.813rem]" />
-									)}
+									{!isRestored && <Skeleton width={67} className="h-[21px] md:h-[1.813rem]" />}
 								</div>
 							</div>
 
