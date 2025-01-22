@@ -91,7 +91,7 @@ export const Dashboard = () => {
 		<>
 			<Page pageTitle={activeWallet.address()}>
 				<Section
-					className="pb-px first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
+					className="pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 					innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 				>
 					<WalletHeader
