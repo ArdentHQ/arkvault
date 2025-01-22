@@ -153,7 +153,7 @@ export const AddressesSidePanel = ({
 						placement="bottom-end"
 					>
 						<Button
-							data-testid="NavigationBar__buttons__mobile--home"
+							data-testid="ManageAddresses"
 							size="icon"
 							variant="transparent"
 							onClick={() => setDeleteMode(true)}
@@ -171,7 +171,7 @@ export const AddressesSidePanel = ({
 				{isDeleteMode && (
 					<div className="leading-5">
 						<Button
-							data-testid="NavigationBar__buttons__mobile--home"
+							data-testid="CancelDelete"
 							size="icon"
 							variant="transparent"
 							onClick={resetDeleteState}
@@ -183,7 +183,7 @@ export const AddressesSidePanel = ({
 						<Divider type="vertical" className="border-theme-primary-300 dark:border-theme-dark-700" />
 
 						<Button
-							data-testid="NavigationBar__buttons__mobile--home"
+							data-testid="ConfirmDelete"
 							size="icon"
 							variant="transparent"
 							onClick={() => {
