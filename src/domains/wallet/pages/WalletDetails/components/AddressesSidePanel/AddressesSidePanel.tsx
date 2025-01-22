@@ -37,13 +37,13 @@ export const AddressesSidePanel = ({
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
 
 	useEffect(() => {
-		if (!open) {
+		if (!open || manageHintHasShown) {
 			setShowManageHint(false);
 			return;
 		}
 
 		const id = setTimeout(() => {
-			setShowManageHint(!manageHintHasShown);
+			setShowManageHint(true);
 		}, 1000);
 
 		return () => {
