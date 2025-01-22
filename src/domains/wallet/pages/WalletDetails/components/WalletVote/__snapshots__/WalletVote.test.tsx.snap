@@ -11,7 +11,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
       data-testid="EmptyVotes"
     >
       <p
-        class="-mt-4 px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Delegate yet. 
         <a
@@ -176,7 +176,7 @@ exports[`WalletVote > should render 1`] = `
       data-testid="EmptyVotes"
     >
       <p
-        class="-mt-4 px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Delegate yet. 
         <a
@@ -493,7 +493,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
       data-testid="EmptyVotes"
     >
       <p
-        class="-mt-4 px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Delegate yet. 
         <a
@@ -658,7 +658,7 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
       data-testid="EmptyVotes"
     >
       <p
-        class="-mt-4 px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Delegate yet. 
         <a
@@ -918,7 +918,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
       data-testid="EmptyVotes"
     >
       <p
-        class="-mt-4 px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Delegate yet. 
         <a
@@ -1081,7 +1081,7 @@ exports[`WalletVote > should render without votes 1`] = `
       data-testid="EmptyVotes"
     >
       <p
-        class="-mt-4 px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Delegate yet. 
         <a
