@@ -7,17 +7,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useWalletSync } from "@/domains/wallet/hooks";
 import { usePrevious } from "@/app/hooks";
-import { twMerge } from "tailwind-merge";
-
-const WalletHeaderButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
-	<button
-		{...props}
-		className={twMerge(
-			"inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600",
-			props.className,
-		)}
-	/>
-);
+import { Button } from "@/app/components/Button";
 
 export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, isUpdatingTransactions, onUpdate }) => {
 	const { env } = useEnvironmentContext();
@@ -47,27 +37,22 @@ export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, i
 	}, [isSyncing, previousIsUpdatingTransactions, isUpdatingTransactions, onUpdate]);
 
 	return (
-		<Tooltip
-			content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")}
-			theme="dark"
-			disabled={!wallet.hasSyncedWithNetwork()}
-		>
-			<WalletHeaderButton
+		<Tooltip content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")} theme="dark">
+			<Button
 				data-testid="WalletHeader__refresh"
-				type="button"
-				aria-busy={isSyncing}
 				onClick={syncWallet}
 				disabled={isSyncing}
+				variant="primary-transparent"
+				className="p-1"
 			>
 				<Icon
-					dimensions={[15, 15]}
 					name="ArrowRotateLeft"
-					className={cn("text-theme-secondary-700 hover:text-theme-secondary-200 dark:text-theme-dark-200", {
+					style={{ animationDirection: "reverse" }}
+					className={cn({
 						"animate-spin": isSyncing,
 					})}
-					style={{ animationDirection: "reverse" }}
 				/>
-			</WalletHeaderButton>
+			</Button>
 		</Tooltip>
 	);
 };
