@@ -25,7 +25,7 @@ export const AddressRow = ({
 		onKeyPress={() => toggleAddress(wallet.address())}
 		tabIndex={0}
 		className={cn(
-			"group flex cursor-pointer items-center rounded-lg border border-theme-primary-200 dark:border-theme-dark-700 px-4 py-3 transition-all",
+			"group flex cursor-pointer items-center rounded-lg border border-theme-primary-200 px-4 py-3 transition-all dark:border-theme-dark-700",
 			{
 				"bg-theme-secondary-200 dark:bg-theme-dark-950": isSelected && !usesDeleteMode,
 				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected,
@@ -53,7 +53,7 @@ export const AddressRow = ({
 			/>
 		)}
 
-		<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 dark:border-theme-dark-700 pl-4 font-semibold text-theme-secondary-700 dark:text-theme-dark-200">
+		<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200">
 			<div className="flex w-1/2 min-w-0 flex-col space-y-2">
 				<div
 					className={cn("leading-5", {
