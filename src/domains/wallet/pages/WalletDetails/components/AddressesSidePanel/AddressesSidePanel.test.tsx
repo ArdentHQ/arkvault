@@ -16,7 +16,7 @@ describe("AddressesSidePanel", () => {
 
 		await profile.sync();
 
-		wallets = profile.wallets()
+		wallets = profile.wallets();
 	});
 
 	it("should render", () => {
@@ -32,7 +32,7 @@ describe("AddressesSidePanel", () => {
 		);
 
 		expect(screen.getByTestId("AddressesSidePanel")).toBeInTheDocument();
-		expect(screen.getAllByTestId("AddressRow").length).toBe(wallets.count())
+		expect(screen.getAllByTestId("AddressRow").length).toBe(wallets.count());
 	});
 
 	it("should select an address when AddressRow is clicked", async () => {
