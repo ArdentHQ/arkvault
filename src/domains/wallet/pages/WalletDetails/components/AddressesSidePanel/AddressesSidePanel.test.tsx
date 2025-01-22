@@ -77,7 +77,10 @@ describe("AddressesSidePanel", () => {
 		const onSelectedAddressesChange = vi.fn();
 
 		const firstWallet = wallets.first();
-		const addressesExcludingFirstWallet= wallets.values().slice(1).map((wallet) => wallet.address());
+		const addressesExcludingFirstWallet = wallets
+			.values()
+			.slice(1)
+			.map((wallet) => wallet.address());
 
 		render(
 			<AddressesSidePanel
@@ -99,10 +102,9 @@ describe("AddressesSidePanel", () => {
 		// confirm address deletion
 		await userEvent.click(screen.getByTestId("ConfirmDelete"));
 
-
 		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
 
-		expect(onSelectedAddressesChange).toHaveBeenCalledWith([...addressesExcludingFirstWallet])
+		expect(onSelectedAddressesChange).toHaveBeenCalledWith([...addressesExcludingFirstWallet]);
 
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
@@ -165,7 +167,7 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), 'Wallet 2');
+		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), "Wallet 2");
 
 		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
 	});
