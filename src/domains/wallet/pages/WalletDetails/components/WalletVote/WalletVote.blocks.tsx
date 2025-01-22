@@ -16,7 +16,7 @@ const EmptyVotes = () => {
 			className="flex w-full flex-row items-center justify-start xs:justify-center md:justify-start"
 			data-testid="EmptyVotes"
 		>
-			<p className="-mt-4 px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left">
+			<p className="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left">
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}{" "}
 				<Link to={votesHelpLink} isExternal className="inline-flex items-center">
 					<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
