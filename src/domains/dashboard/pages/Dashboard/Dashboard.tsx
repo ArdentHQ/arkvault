@@ -92,7 +92,7 @@ export const Dashboard = () => {
 	return (
 		<>
 			<Page pageTitle={activeWallet.address()}>
-				<Section className="px-0 first:pt-0 md:px-0 xl:mx-auto" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
+				<Section className="pb-px md:pb-4 first:pt-0 md:px-0 xl:mx-auto" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
 					<WalletHeader
 						profile={activeProfile}
 						wallet={activeWallet}
@@ -106,17 +106,14 @@ export const Dashboard = () => {
 
 				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
 					<TabScroll>
-						<TabList className="h-[52px]">
+						<TabList className="h-[48px]">
 							<Tab tabId="transactions">
-								<span className="whitespace-nowrap">{t("COMMON.TRANSACTION_HISTORY")}</span>
+								<span className="whitespace-nowrap">{t("COMMON.TRANSACTIONS")}</span>
 							</Tab>
 							{networkAllowsVoting && (
 								<Tab tabId="votes">
 									<span className="whitespace-nowrap">
-										{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE", { count: maxVotes })}
-										<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">
-											{votes.length}/{maxVotes}
-										</span>
+										{t("COMMON.VOTING")}
 									</span>
 								</Tab>
 							)}
@@ -143,7 +140,7 @@ export const Dashboard = () => {
 					</Section>
 				)}
 
-				<Section className="flex-1 pt-6">
+				<Section className="flex-1 !pt-4">
 					<div
 						className={cn({
 							"hidden md:block": mobileActiveTab !== "transactions",
