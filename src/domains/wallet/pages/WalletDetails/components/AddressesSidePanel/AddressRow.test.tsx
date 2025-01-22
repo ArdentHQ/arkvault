@@ -44,7 +44,7 @@ describe("AddressRow", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("AddressRow--delete")).toBeInTheDocument();
+		expect(screen.getByTestId(`AddressRow--delete-${wallet.address()}`)).toBeInTheDocument();
 		expect(screen.queryByTestId("AddressRow--checkbox")).not.toBeInTheDocument();
 	});
 
