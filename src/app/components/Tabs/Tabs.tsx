@@ -1,4 +1,4 @@
-import React, { forwardRef, useMemo } from "react";
+import React, { forwardRef } from "react";
 import { TabContext, TabId, useTab } from "./useTab";
 import { useTheme } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
@@ -87,25 +87,11 @@ const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => 
 export const TabScroll = ({ children }) => {
 	const { isDarkMode } = useTheme();
 
-	const shadowRGB = useMemo(() => (isDarkMode ? "18, 18, 19" : "247, 250, 251"), [isDarkMode]);
-
 	return (
 		<div data-testid="TabScroll" className="relative z-0">
-			<span
-				className="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-				style={{
-					background: `linear-gradient(90deg, rgba(${shadowRGB}, 0.8) 14.49%, rgba(${shadowRGB}, 0) 92.71%)`,
-				}}
-			/>
-			<div className="bg-theme-secondary-100 dark:bg-black">
+			<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5">
 				<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
 			</div>
-			<span
-				className="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
-				style={{
-					background: `linear-gradient(270deg, rgba(${shadowRGB}, 0.8) 14.49%, rgba(${shadowRGB}, 0) 92.71%)`,
-				}}
-			/>
 		</div>
 	);
 };
