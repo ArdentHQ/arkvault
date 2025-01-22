@@ -16,7 +16,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
           >
             <div
               class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -57,7 +57,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-24 flex-1 overflow-hidden"
@@ -84,7 +84,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -154,7 +154,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -218,7 +218,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -233,7 +233,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="CurrencyCell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -244,7 +244,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
           >
             <div>
               <button
@@ -708,7 +708,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
           >
             <div
               class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -749,7 +749,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-24 flex-1 overflow-hidden"
@@ -776,7 +776,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -846,7 +846,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -910,7 +910,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -925,7 +925,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -936,7 +936,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
           >
             <div>
               <button
@@ -1173,7 +1173,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
           >
             <div
               class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -1214,7 +1214,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-24 flex-1 overflow-hidden"
@@ -1241,7 +1241,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -1311,7 +1311,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -1375,7 +1375,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -1390,7 +1390,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1401,7 +1401,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
           >
             <div>
               <button
@@ -2092,7 +2092,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
           >
             <div
               class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -2133,7 +2133,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-24 flex-1 overflow-hidden"
@@ -2160,7 +2160,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -2230,7 +2230,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -2294,7 +2294,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -2309,7 +2309,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -2320,7 +2320,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
           >
             <div>
               <button
@@ -2557,7 +2557,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
           >
             <div
               class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -2598,7 +2598,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-24 flex-1 overflow-hidden"
@@ -2625,7 +2625,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -2695,7 +2695,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -2759,7 +2759,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
           >
             <span
               aria-busy="true"
@@ -2781,7 +2781,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="CurrencyCell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -2792,7 +2792,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
           >
             <div>
               <button
@@ -3031,7 +3031,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
           >
             <div
               class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -3072,7 +3072,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-24 flex-1 overflow-hidden"
@@ -3099,7 +3099,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -3169,7 +3169,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -3233,7 +3233,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -3248,7 +3248,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -3259,7 +3259,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
           >
             <div>
               <button
@@ -3496,7 +3496,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
           >
             <div
               class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -3537,7 +3537,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-24 flex-1 overflow-hidden"
@@ -3564,7 +3564,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <div
               class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -3634,7 +3634,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -3698,7 +3698,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -3713,7 +3713,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="CurrencyCell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -3724,7 +3724,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
           >
             <div>
               <button
