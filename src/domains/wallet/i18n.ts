@@ -200,6 +200,7 @@ export const translations = {
 		COPY_ADDRESS: "Copy Address",
 		COPY_PUBLIC_KEY: "Copy Public Key",
 		OPTIONS: {
+			ADDRESS_NAME: "Address Name",
 			DELETE: "Delete",
 			MULTISIGNATURE: "Multisignature",
 			RECEIVE_FUNDS: "Receive Funds",
@@ -210,7 +211,6 @@ export const translations = {
 			STORE_HASH: "Store Hash",
 			TRANSACTION_HISTORY: "Transaction History",
 			VERIFY_MESSAGE: "Verify Message",
-			WALLET_NAME: "Wallet Name",
 		},
 
 		PENDING_TRANSACTIONS: "Pending Transactions",

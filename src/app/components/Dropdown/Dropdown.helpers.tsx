@@ -1,7 +1,6 @@
 import cn from "classnames";
 import React from "react";
 import { DropdownOption, DropdownOptionGroup, OptionsProperties } from "./Dropdown.contracts";
-import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { DropdownItem } from "@/app/components/Dropdown/DropdownItem";
 
@@ -34,15 +33,15 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 	}
 
 	return (
-		<div key={key} className={cn({ "mt-4": title || hasDivider })}>
+		<div key={key}>
 			{hasDivider && (
-				<div className="-my-2">
-					<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" />
+				<div>
+					<div className="h-px w-full bg-theme-secondary-300 dark:bg-theme-dark-700" />
 				</div>
 			)}
 			<ul>
 				{title && (
-					<li className="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600">
+					<li className="mb-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-8 py-1 text-left text-xs font-semibold text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{title}
 					</li>
 				)}
@@ -69,7 +68,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 
 	if (isOptionGroup(options)) {
 		return (
-			<div className="py-1">
+			<div>
 				{(options as DropdownOptionGroup[]).map((optionGroup: DropdownOptionGroup) =>
 					renderOptionGroup({ ...optionGroup, onSelect }),
 				)}
