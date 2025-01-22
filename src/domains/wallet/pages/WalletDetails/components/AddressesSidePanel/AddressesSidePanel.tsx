@@ -10,6 +10,7 @@ import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressRow";
+import { useLocalStorage } from "usehooks-ts";
 
 export const AddressesSidePanel = ({
 	wallets,
@@ -33,6 +34,7 @@ export const AddressesSidePanel = ({
 	const [addressesToDelete, setAddressesToDelete] = useState<string[]>([]);
 
 	const [showManageHint, setShowManageHint] = useState<boolean>(false);
+	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
 
 	useEffect(() => {
 		if (!open) {
@@ -41,13 +43,13 @@ export const AddressesSidePanel = ({
 		}
 
 		const id = setTimeout(() => {
-			setShowManageHint(getMessageValue("manage-button", true));
+			setShowManageHint(!manageHintHasShown);
 		}, 1000);
 
 		return () => {
 			clearTimeout(id);
 		};
-	}, [open]);
+	}, [manageHintHasShown, open]);
 
 	const toggleAddressSelection = (address: string) => {
 		if (isDeleteMode) {
@@ -134,7 +136,7 @@ export const AddressesSidePanel = ({
 						visible={showManageHint}
 						interactive={true}
 						onHide={() => {
-							setMessageValue("manage-button", false);
+							persistManageHint(true);
 						}}
 						content={
 							<div className="space-x-4 px-[3px] py-px text-sm leading-5">
@@ -223,35 +225,3 @@ export const AddressesSidePanel = ({
 		</SidePanel>
 	);
 };
-
-const MessagesStorageKey = "onboarding-messages";
-
-function getMessageValue(key: string, defaultValue: boolean): boolean {
-	const storedValue = localStorage.getItem(MessagesStorageKey);
-
-	if (!storedValue) {
-		return defaultValue;
-	}
-
-	const decodedValue = JSON.parse(storedValue) as Record<string, boolean>;
-
-	if (decodedValue[key] !== undefined) {
-		return decodedValue[key];
-	}
-
-	return defaultValue;
-}
-
-function setMessageValue(key: string, value: boolean): void {
-	const storedValue = localStorage.getItem(MessagesStorageKey);
-
-	let decodedValue: Record<string, boolean> = {};
-
-	if (storedValue) {
-		decodedValue = JSON.parse(storedValue) as Record<string, boolean>;
-	}
-
-	decodedValue[key] = value;
-
-	localStorage.setItem(MessagesStorageKey, JSON.stringify(decodedValue));
-}

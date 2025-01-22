@@ -84,7 +84,7 @@ describe("CreateWallet", () => {
 
 		expect(backButton).toBeEnabled();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
