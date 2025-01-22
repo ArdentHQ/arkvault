@@ -110,8 +110,8 @@ export const AddressesSidePanel = ({
 				<label
 					data-testid="SelectAllAddresses"
 					className={cn("flex cursor-pointer items-center space-x-3 leading-5", {
-						"text-theme-secondary-500": isDeleteMode,
-						"text-theme-secondary-700 hover:text-theme-primary-600": !isDeleteMode,
+						"text-theme-secondary-500 dark:text-theme-dark-500": isDeleteMode,
+						"text-theme-secondary-700 dark:text-theme-dark-200 hover:text-theme-primary-600 hover:dark:text-theme-primary-500": !isDeleteMode,
 					})}
 				>
 					<Checkbox
@@ -156,8 +156,8 @@ export const AddressesSidePanel = ({
 							size="icon"
 							variant="transparent"
 							onClick={() => setDeleteMode(true)}
-							className={cn("p-0 text-theme-primary-600 dark:text-theme-secondary-600", {
-								"ring ring-theme-primary-400 ring-offset-4": showManageHint,
+							className={cn("p-0 text-theme-primary-600 dark:text-theme-primary-500", {
+								"ring ring-theme-primary-400 dark:ring-theme-primary-800 ring-offset-theme-background ring-offset-4": showManageHint,
 							})}
 						>
 							<Icon name="Gear" size="lg" dimensions={[16, 16]} />
@@ -173,12 +173,12 @@ export const AddressesSidePanel = ({
 							size="icon"
 							variant="transparent"
 							onClick={resetDeleteState}
-							className="p-0 text-theme-primary-600 dark:text-theme-secondary-600"
+							className="p-0 text-theme-primary-600 dark:text-theme-primary-500"
 						>
 							{t("COMMON.CANCEL")}
 						</Button>
 
-						<Divider type="vertical" className="border-theme-primary-300" />
+						<Divider type="vertical" className="border-theme-primary-300 dark:border-theme-dark-700" />
 
 						<Button
 							data-testid="NavigationBar__buttons__mobile--home"
@@ -197,7 +197,7 @@ export const AddressesSidePanel = ({
 
 								resetDeleteState();
 							}}
-							className="p-0 text-theme-primary-600 dark:text-theme-secondary-600"
+							className="p-0 text-theme-primary-600 dark:text-theme-primary-500"
 						>
 							{t("COMMON.DONE")}
 						</Button>
