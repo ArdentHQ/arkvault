@@ -187,7 +187,7 @@ export const WalletHeader = ({
 							<div className="flex flex-row items-center gap-3">
 								<Button
 									data-testid="WalletHeader__send-button"
-									className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-600"
+									className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
 									disabled={
 										wallet.balance() === 0 ||
 										!wallet.hasBeenFullyRestored() ||
@@ -208,7 +208,7 @@ export const WalletHeader = ({
 											secondaryOptions,
 										]}
 										toggleContent={
-											<Button variant="secondary" size="icon" className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-600">
+											<Button variant="secondary" size="icon" className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700">
 												<Icon name="EllipsisVerticalFilled" size="lg" />
 											</Button>
 										}
