@@ -60,7 +60,7 @@ describe("AddressRow", () => {
 			/>,
 		);
 
-		await userEvent.click(screen.getByTestId("AddressRow--delete"));
+		await userEvent.click(screen.getByTestId(`AddressRow--delete-${wallet.address()}`));
 		expect(onDelete).toHaveBeenCalledWith(wallet.address());
 	});
 
