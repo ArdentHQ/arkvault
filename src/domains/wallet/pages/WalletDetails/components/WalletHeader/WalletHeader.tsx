@@ -208,7 +208,11 @@ export const WalletHeader = ({
 											secondaryOptions,
 										]}
 										toggleContent={
-											<Button variant="secondary" size="icon" className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700">
+											<Button
+												variant="secondary"
+												size="icon"
+												className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
+											>
 												<Icon name="EllipsisVerticalFilled" size="lg" />
 											</Button>
 										}
