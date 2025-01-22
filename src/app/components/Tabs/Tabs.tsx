@@ -83,15 +83,13 @@ const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => 
 	<div {...properties} className={twMerge("[&::-webkit-scrollbar]:hidden", properties.className)} />
 );
 
-export const TabScroll = ({ children }) => {
-	return (
-		<div data-testid="TabScroll" className="relative z-0">
-			<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5">
-				<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
-			</div>
+export const TabScroll = ({ children }) => (
+	<div data-testid="TabScroll" className="relative z-0">
+		<div className="bg-theme-secondary-200 px-5 dark:bg-theme-dark-950">
+			<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
 		</div>
-	);
-};
+	</div>
+);
 
 export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((properties: TabProperties, reference) => {
 	const context = React.useContext(TabContext);
