@@ -170,4 +170,39 @@ describe("WalletHeader", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("AddressesSidePanel")).not.toBeInTheDocument());
 	});
+
+	it("should delete wallet", async () => {
+		render(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ShowAddressesPanel"));
+
+		await expect(screen.findByTestId("AddressesSidePanel")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ManageAddresses"));
+
+		const deleteButtonId = `AddressRow--delete-${profile.wallets().first().address()}`;
+
+		await userEvent.click(screen.getByTestId(deleteButtonId));
+
+		const count = profile.wallets().count();
+
+		await userEvent.click(screen.getByTestId("ConfirmDelete"));
+
+		await waitFor(() => expect(profile.wallets().count()).toBe(count - 1));
+	});
 });

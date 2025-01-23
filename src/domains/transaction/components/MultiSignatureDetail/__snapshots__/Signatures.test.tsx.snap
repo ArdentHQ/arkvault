@@ -70,7 +70,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D8rr7...6YUYD
                     </div>
@@ -229,7 +229,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D5sRK...vJtwb
                     </div>
@@ -450,7 +450,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D8rr7...6YUYD
                     </div>
@@ -609,7 +609,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D5sRK...vJtwb
                     </div>
@@ -830,7 +830,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D8rr7...6YUYD
                     </div>
@@ -991,7 +991,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D5sRK...vJtwb
                     </div>
@@ -1212,7 +1212,7 @@ exports[`Signatures > should render 1`] = `
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D8rr7...6YUYD
                     </div>
@@ -1373,7 +1373,7 @@ exports[`Signatures > should render 1`] = `
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D5sRK...vJtwb
                     </div>
@@ -1594,7 +1594,7 @@ exports[`Signatures > should show all participants as signed when all signatures
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D8rr7...6YUYD
                     </div>
@@ -1753,7 +1753,7 @@ exports[`Signatures > should show all participants as signed when all signatures
                     class="w-full sm:w-auto"
                   >
                     <div
-                      class="text-theme-secondary-900 dark:text-theme-text"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                     >
                       D5sRK...vJtwb
                     </div>

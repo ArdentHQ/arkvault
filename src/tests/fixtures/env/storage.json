@@ -219,6 +219,33 @@
 						"AVATAR": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><style>circle{mix-blend-mode:soft-light;}</style><rect fill=\"rgb(0, 150, 136)\" width=\"100\" height=\"100\"/><circle r=\"50\" cx=\"80\" cy=\"50\" fill=\"rgb(76, 175, 80)\"/><circle r=\"35\" cx=\"100\" cy=\"40\" fill=\"rgb(156, 39, 176)\"/><circle r=\"40\" cx=\"90\" cy=\"70\" fill=\"rgb(3, 169, 244)\"/></svg>",
 						"ALIAS": "Mainsail Wallet 1"
 					}
+				},
+				"a5a7d4d7-96d8-4a0f-82cd-ca15503b6201": {
+					"id": "a5a7d4d7-96d8-4a0f-82cd-ca15503b6201",
+					"data": {
+						"COIN": "Mainsail",
+						"NETWORK": "mainsail.devnet",
+						"ADDRESS": "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+						"PUBLIC_KEY": "02f65cbd5dfe4979b559e00c089058fa7379554ba6d2558520f2036d8854f1c9a2",
+						"BALANCE": {
+							"total": "3375089801",
+							"available": "3375089801",
+							"fees": "3375089801"
+						},
+						"BROADCASTED_TRANSACTIONS": {},
+						"EXCHANGE_CURRENCY": "USD",
+						"EXCHANGE_RATE": 0,
+						"IMPORT_METHOD": "BIP39.MNEMONIC",
+						"SEQUENCE": "245",
+						"SIGNED_TRANSACTIONS": {},
+						"VOTES": [],
+						"VOTES_AVAILABLE": 0,
+						"VOTES_USED": 0
+					},
+					"settings": {
+						"AVATAR": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><style>circle{mix-blend-mode:soft-light;}</style><rect fill=\"rgb(0, 150, 136)\" width=\"100\" height=\"100\"/><circle r=\"50\" cx=\"80\" cy=\"50\" fill=\"rgb(76, 175, 80)\"/><circle r=\"35\" cx=\"100\" cy=\"40\" fill=\"rgb(156, 39, 176)\"/><circle r=\"40\" cx=\"90\" cy=\"70\" fill=\"rgb(3, 169, 244)\"/></svg>",
+						"ALIAS": "Mainsail Wallet 2"
+					}
 				}
 			},
 			"contacts": {},

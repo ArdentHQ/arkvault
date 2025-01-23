@@ -15,7 +15,7 @@ import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
 import { WalletActions } from "./WalletHeader.blocks";
-import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { Skeleton } from "@/app/components/Skeleton";
 
 export const WalletHeader = ({
@@ -49,6 +49,8 @@ export const WalletHeader = ({
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
 	const isRestored = wallet.hasBeenFullyRestored();
+
+	const [addresses, setAddresses] = useState<string[]>([]);
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -245,14 +247,17 @@ export const WalletHeader = ({
 				</div>
 			</div>
 
-			<SidePanel
-				header="Addresses"
+			<AddressesSidePanel
+				wallets={profile.wallets()}
+				selectedAddresses={addresses}
+				onSelectedAddressesChange={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				dataTestId="AddressesSidePanel"
-			>
-				this is a body
-			</SidePanel>
+				onDeleteAddress={(address: string) => {
+					const wallets = profile.wallets().filterByAddress(address);
+					profile.wallets().forget(wallets[0].id());
+				}}
+			/>
 		</header>
 	);
 };
