@@ -193,7 +193,7 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should show a hint for `manage` button", async () => {
-		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
+		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(undefined);
 
 		render(
 			<AddressesSidePanel
@@ -207,12 +207,12 @@ describe("AddressesSidePanel", () => {
 		);
 
 		await expect(screen.findByText(/You can manage and remove your addresses here./)).resolves.toBeVisible();
+
+		getItemSpy.mockRestore();
 	});
 
-	it("should show a hint for `manage` button", async () => {
-		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce("1");
-
-		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
+	it("should not show a hint for `manage` button if already shown", async () => {
+		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue("1");
 
 		render(
 			<AddressesSidePanel
@@ -229,6 +229,32 @@ describe("AddressesSidePanel", () => {
 			expect(screen.queryByText(/You can manage and remove your addresses here./)).not.toBeInTheDocument();
 		});
 
-		localstorageSpy.mockRestore();
+		getItemSpy.mockRestore();
+	});
+
+	it("should persist state for shown `manage` button hint", async () => {
+		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(undefined);
+
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={[]}
+				open={true}
+				onSelectedAddressesChange={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await expect(screen.findByText(/You can manage and remove your addresses here./)).resolves.toBeVisible();
+
+		const setItemSpy = vi.spyOn(Storage.prototype, "setItem");
+
+		await userEvent.click(screen.getByTestId('HideManageHint'));
+
+		expect(setItemSpy).toHaveBeenCalledWith("manage-hint", "true");
+
+		setItemSpy.mockRestore();
+		getItemSpy.mockRestore();
 	});
 });
