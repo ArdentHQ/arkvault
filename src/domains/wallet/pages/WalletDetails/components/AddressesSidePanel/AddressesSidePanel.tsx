@@ -94,6 +94,7 @@ export const AddressesSidePanel = ({
 			onOpenChange={(open) => {
 				resetDeleteState();
 				onOpenChange(open);
+				setSearchQuery("");
 			}}
 			dataTestId="AddressesSidePanel"
 		>
