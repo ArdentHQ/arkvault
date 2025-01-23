@@ -16,7 +16,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProperties>(({ colo
 			ref={ref}
 			disabled={disabled}
 			className={twMerge(
-				"custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-secondary-600 disabled:dark:bg-theme-secondary-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-secondary-600",
+				"custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-dark-600 disabled:dark:bg-theme-dark-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-dark-600",
 				cn({
 					"checked:text-theme-danger-400 checked:hover:text-theme-danger-500 [&:not(:checked)]:hover:border-theme-danger-400":
 						color === "danger" && !disabled,
