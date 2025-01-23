@@ -136,9 +136,6 @@ export const AddressesSidePanel = ({
 					<Tooltip
 						visible={showManageHint}
 						interactive={true}
-						onHide={() => {
-							persistManageHint(true);
-						}}
 						content={
 							<div className="space-x-4 px-[3px] py-px text-sm leading-5">
 								<span>{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}</span>
@@ -148,6 +145,7 @@ export const AddressesSidePanel = ({
 									data-testid="HideManageHint"
 									className="bg-theme-primary-500 px-4 py-1.5"
 									onClick={() => {
+										persistManageHint(true);
 										setShowManageHint(false);
 									}}
 								>
