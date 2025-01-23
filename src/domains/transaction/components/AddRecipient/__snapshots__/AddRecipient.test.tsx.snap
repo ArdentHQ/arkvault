@@ -81,7 +81,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
       </div>
     </div>
     <div
-      class="space-y-4 rounded-lg"
+      class="space-y-4 rounded-xl"
     >
       <div
         class="space-y-4"
@@ -235,7 +235,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0
+                    12
                   </span>
                   )
                 </span>
@@ -400,7 +400,7 @@ exports[`AddRecipient > should render 1`] = `
       </div>
     </div>
     <div
-      class="space-y-4 rounded-lg"
+      class="space-y-4 rounded-xl"
     >
       <div
         class="space-y-4"
@@ -704,7 +704,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
       </div>
     </div>
     <div
-      class="space-y-4 rounded-lg"
+      class="space-y-4 rounded-xl"
     >
       <div
         class="space-y-4"
@@ -1008,7 +1008,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
       </div>
     </div>
     <div
-      class="space-y-4 rounded-lg"
+      class="space-y-4 rounded-xl"
     >
       <div
         class="space-y-4"
@@ -1312,7 +1312,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
       </div>
     </div>
     <div
-      class="space-y-4 rounded-lg"
+      class="space-y-4 rounded-xl"
     >
       <div
         class="space-y-4"
@@ -1550,7 +1550,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
       </div>
     </div>
     <div
-      class="space-y-4 rounded-lg"
+      class="space-y-4 rounded-xl"
     >
       <div
         class="space-y-4"
@@ -1854,7 +1854,7 @@ exports[`AddRecipient > should set available amount 1`] = `
       </div>
     </div>
     <div
-      class="space-y-4 rounded-lg"
+      class="space-y-4 rounded-xl"
     >
       <div
         class="space-y-4"
@@ -2077,325 +2077,6 @@ exports[`AddRecipient > should set available amount 1`] = `
 </div>
 `;
 
-exports[`AddRecipient > should show available balance after fee 1`] = `
-<div>
-  <div
-    class="add-recipient-wrapper"
-  >
-    <div
-      class="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600"
-    >
-      <div
-        class="text-sm font-semibold transition-colors duration-100"
-      >
-        Recipient
-      </div>
-      <div
-        class="flex items-center space-x-2"
-      >
-        <span>
-          <div
-            class="flex items-center"
-          >
-            <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-            >
-              Single
-            </button>
-            <label
-              class="flex items-center cursor-pointer h-3"
-            >
-              <input
-                class="toggle-input sr-only"
-                type="checkbox"
-              />
-              <div
-                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
-              >
-                <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
-                />
-              </div>
-            </label>
-            <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
-            >
-              Multiple
-            </button>
-          </div>
-        </span>
-        <div
-          class="questionmark flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
-        >
-          <div>
-            <div
-              style="height: 10px; width: 10px;"
-            >
-              <svg
-                id="question-mark-small"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="space-y-4 rounded-lg"
-    >
-      <div
-        class="space-y-4"
-      >
-        <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-        >
-          <div>
-            <div
-              class="relative flex w-full items-center text-left"
-              data-testid="SelectRecipient__wrapper"
-            >
-              <div
-                class="relative w-full"
-                data-testid="SelectDropdown"
-              >
-                <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
-                >
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-invalid="false"
-                      autocomplete="off"
-                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
-                      data-testid="select-list__input"
-                      name="recipientAddress"
-                      readonly=""
-                      tabindex="-1"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <div
-                  class="w-full"
-                >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="SelectRecipient__dropdown-menu"
-                    role="combobox"
-                  >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                        <div
-                          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
-                          <div
-                            class=""
-                          >
-                            <div
-                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
-                            >
-                              <div>
-                                <div
-                                  style="height: 20px; width: 20px;"
-                                >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-        >
-          <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
-            data-testid="FormLabel"
-            for="amount"
-          >
-            <span
-              class="items-centers flex w-full justify-between"
-            >
-              <span>
-                <span>
-                  Amount
-                </span>
-                <span
-                  class="ml-1 text-theme-secondary-500"
-                  data-testid="AddRecipient__available"
-                >
-                  (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    4
-                  </span>
-                  )
-                </span>
-              </span>
-              <span
-                class="inline-flex sm:hidden"
-              >
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
-                  data-testid="AddRecipient__send-all_mobile"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center space-x-2"
-                  >
-                    Send All
-                  </div>
-                </button>
-              </span>
-            </span>
-          </label>
-          <div
-            class="flex space-x-2"
-          >
-            <div
-              class="flex-1"
-            >
-              <div
-                class="relative"
-              >
-                <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                >
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      autocomplete="off"
-                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
-                      data-testid="AddRecipient__amount"
-                      name="amount"
-                      placeholder="Enter an amount"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <span
-                        class="whitespace-nowrap whitespace-no-break text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                        data-testid="Amount"
-                      >
-                        0 BTC
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hidden sm:inline-flex"
-            >
-              <button
-                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
-                data-testid="AddRecipient__send-all"
-                type="button"
-              >
-                Send All
-              </button>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`AddRecipient > should show zero amount if wallet has zero or insufficient balance 1`] = `
 <div>
   <div
@@ -2477,7 +2158,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
       </div>
     </div>
     <div
-      class="space-y-4 rounded-lg"
+      class="space-y-4 rounded-xl"
     >
       <div
         class="space-y-4"

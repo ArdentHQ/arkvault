@@ -3,7 +3,7 @@
 exports[`TransactionDetail > should always render as desktop is useDesktop is set lg 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -28,7 +28,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
 exports[`TransactionDetail > should always render as desktop is useDesktop is set md 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -53,7 +53,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
 exports[`TransactionDetail > should always render as desktop is useDesktop is set sm 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -78,7 +78,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
 exports[`TransactionDetail > should always render as desktop is useDesktop is set xl 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -103,7 +103,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
 exports[`TransactionDetail > should always render as desktop is useDesktop is set xs 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -128,7 +128,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
 exports[`TransactionDetail > should render in lg desktop screen 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -153,7 +153,7 @@ exports[`TransactionDetail > should render in lg desktop screen 1`] = `
 exports[`TransactionDetail > should render in md desktop screen 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -178,7 +178,7 @@ exports[`TransactionDetail > should render in md desktop screen 1`] = `
 exports[`TransactionDetail > should render in sm mobile screen 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -207,7 +207,7 @@ exports[`TransactionDetail > should render in sm mobile screen 1`] = `
 exports[`TransactionDetail > should render in xl desktop screen 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -232,7 +232,7 @@ exports[`TransactionDetail > should render in xl desktop screen 1`] = `
 exports[`TransactionDetail > should render in xs mobile screen 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -261,7 +261,7 @@ exports[`TransactionDetail > should render in xs mobile screen 1`] = `
 exports[`TransactionDetail > should render with bottom border 1`] = `
 <div>
   <div
-    class="no-ligatures css-1slril7"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-b py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -286,7 +286,7 @@ exports[`TransactionDetail > should render with bottom border 1`] = `
 exports[`TransactionDetail > should render with extra children 1`] = `
 <div>
   <div
-    class="no-ligatures css-1funbz6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-0 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -314,7 +314,7 @@ exports[`TransactionDetail > should render with extra children 1`] = `
 exports[`TransactionDetail > should render with top border 1`] = `
 <div>
   <div
-    class="no-ligatures css-qu17s6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -339,7 +339,7 @@ exports[`TransactionDetail > should render with top border 1`] = `
 exports[`TransactionDetail > should render without border 1`] = `
 <div>
   <div
-    class="no-ligatures css-1iw2tte"
+    class="flex items-center space-x-4 py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -364,7 +364,7 @@ exports[`TransactionDetail > should render without border 1`] = `
 exports[`TransactionDetail > should render without padding 1`] = `
 <div>
   <div
-    class="no-ligatures css-1funbz6"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-0 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div

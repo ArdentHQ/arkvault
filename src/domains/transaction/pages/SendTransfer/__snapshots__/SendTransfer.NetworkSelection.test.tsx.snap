@@ -417,48 +417,50 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
               <div
                 class="flex items-center"
               >
-                <div
-                  class="custom-button-wrapper"
-                >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
-                    data-testid="NavigationBar__buttons--receive"
-                    type="button"
+                <div>
+                  <div
+                    class="custom-button-wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
+                      data-testid="NavigationBar__buttons--receive"
+                      type="button"
                     >
                       <div
-                        class="p-1"
+                        class="flex items-center space-x-2"
                       >
                         <div
-                          style="height: 20px; width: 20px;"
+                          class="p-1"
                         >
-                          <svg
-                            id="received"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <svg
+                              id="received"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <path
-                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                              />
-                            </g>
-                          </svg>
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </button>
+                    </button>
+                  </div>
                 </div>
               </div>
               <div
@@ -467,45 +469,47 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
               <div
                 class="flex items-center"
               >
-                <div
-                  class="custom-button-wrapper"
-                >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
-                    data-testid="NavigationBar__buttons--send"
-                    type="button"
+                <div>
+                  <div
+                    class="custom-button-wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
+                      data-testid="NavigationBar__buttons--send"
+                      type="button"
                     >
                       <div
-                        class="p-1"
+                        class="flex items-center space-x-2"
                       >
                         <div
-                          style="height: 20px; width: 20px;"
+                          class="p-1"
                         >
-                          <svg
-                            id="sent"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <path
-                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
+                            <svg
+                              id="sent"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </button>
+                    </button>
+                  </div>
                 </div>
               </div>
               <div
