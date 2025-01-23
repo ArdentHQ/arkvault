@@ -242,6 +242,7 @@ export const translations = {
 	MOST_POPULAR: "Most popular",
 	MULTIPAYMENTS: "Multipayments",
 	MULTIPLE: "Multiple",
+	MULTIPLE_ADDRESSES: "Multiple addresses ({{count}})",
 	MULTISIG: "Multisig",
 	MULTISIGNATURE: "Multisignature",
 	MY_ADDRESS: "My Address",

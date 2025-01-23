@@ -14,6 +14,7 @@ import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletHeader } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { DashboardEmpty } from "./Dashboard.Empty";
+import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 
 export const Dashboard = () => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData>();
@@ -94,7 +95,7 @@ export const Dashboard = () => {
 					className="pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 					innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 				>
-					<WalletHeader
+					<PortfolioHeader
 						profile={activeProfile}
 						wallet={activeWallet}
 						votes={votes}
