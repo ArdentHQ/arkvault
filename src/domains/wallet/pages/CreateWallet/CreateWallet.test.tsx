@@ -18,7 +18,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
-import { act } from "../../../../utils/testing-library";
+import { act } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
