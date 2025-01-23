@@ -18,6 +18,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
+import { act } from "../../../../utils/testing-library";
 
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
@@ -276,7 +277,7 @@ describe("CreateWallet", () => {
 
 		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(5);
 
 		await userEvent.click(continueButton());
 
@@ -357,7 +358,9 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		history.push("/");
+		act(() => {
+			history.push("/");
+		});
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		expect(asFragment()).toMatchSnapshot();
@@ -398,7 +401,9 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		history.push("/");
+		act(() => {
+			history.push("/");
+		});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
