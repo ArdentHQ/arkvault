@@ -144,6 +144,7 @@ export const AddressesSidePanel = ({
 								<Button
 									size="xs"
 									variant="transparent"
+									data-testid="HideManageHint"
 									className="bg-theme-primary-500 px-4 py-1.5"
 									onClick={() => {
 										setShowManageHint(false);
