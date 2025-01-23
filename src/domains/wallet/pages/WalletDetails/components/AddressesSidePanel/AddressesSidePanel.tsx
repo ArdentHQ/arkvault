@@ -141,7 +141,7 @@ export const AddressesSidePanel = ({
 						}}
 						content={
 							<div className="space-x-4 px-[3px] py-px text-sm leading-5">
-								<span>{ t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT") }</span>
+								<span>{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}</span>
 								<Button
 									size="xs"
 									variant="transparent"
@@ -213,12 +213,12 @@ export const AddressesSidePanel = ({
 			</div>
 
 			{isDeleteMode && (
-				<div className="flex bg-theme-info-50 dark:bg-theme-dark-800 rounded-xl overflow-hidden items-center my-3">
-					<div className="px-4 py-4.5 bg-theme-info-100 dark:bg-theme-info-600">
+				<div className="my-3 flex items-center overflow-hidden rounded-xl bg-theme-info-50 dark:bg-theme-dark-800">
+					<div className="bg-theme-info-100 px-4 py-4.5 dark:bg-theme-info-600">
 						<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
 					</div>
-					<div className="p-4 text-theme-secondary-900 dark:text-theme-dark-50 text-sm">
-						{ t("WALLETS.ADDRESSES_SIDE_PANEL.DELETE_INFO") }
+					<div className="p-4 text-sm text-theme-secondary-900 dark:text-theme-dark-50">
+						{t("WALLETS.ADDRESSES_SIDE_PANEL.DELETE_INFO")}
 					</div>
 				</div>
 			)}
