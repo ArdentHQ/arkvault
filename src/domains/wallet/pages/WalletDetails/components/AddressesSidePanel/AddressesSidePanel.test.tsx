@@ -54,6 +54,25 @@ describe("AddressesSidePanel", () => {
 		expect(onSelectedAddressChange).toHaveBeenCalledWith([wallets.first().address()]);
 	});
 
+	it("should deselect an address when AddressRow is clicked", async () => {
+		const onSelectedAddressChange = vi.fn();
+
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={[wallets.first().address()]}
+				open={true}
+				onSelectedAddressesChange={onSelectedAddressChange}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
+
+		expect(onSelectedAddressChange).toHaveBeenCalledWith([]);
+	});
+
 	it("should show delete buttons when `manage` clicked", async () => {
 		render(
 			<AddressesSidePanel
