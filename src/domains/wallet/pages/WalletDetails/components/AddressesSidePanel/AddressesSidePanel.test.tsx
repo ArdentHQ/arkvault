@@ -4,6 +4,7 @@ import { env, getMainsailProfileId, render, screen } from "@/utils/testing-libra
 import { expect } from "vitest";
 import { AddressesSidePanel } from "./AddressesSidePanel";
 import userEvent from "@testing-library/user-event";
+import { waitFor } from "@testing-library/react";
 
 describe("AddressesSidePanel", () => {
 	let profile: Contracts.IProfile;
@@ -189,5 +190,45 @@ describe("AddressesSidePanel", () => {
 		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), "Wallet 2");
 
 		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+	});
+
+	it("should show a hint for `manage` button", async () => {
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
+
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={[]}
+				open={true}
+				onSelectedAddressesChange={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await expect(screen.findByText(/You can manage and remove your addresses here./)).resolves.toBeVisible();
+	});
+
+	it("should show a hint for `manage` button", async () => {
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce("1");
+
+		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
+
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={[]}
+				open={true}
+				onSelectedAddressesChange={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await waitFor(() => {
+			expect(screen.queryByText(/You can manage and remove your addresses here./)).not.toBeInTheDocument();
+		});
+
+		localstorageSpy.mockRestore();
 	});
 });
