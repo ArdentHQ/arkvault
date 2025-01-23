@@ -169,7 +169,7 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
                   class="flex w-max cursor-pointer items-center space-x-3"
                 >
                   <input
-                    class="custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-secondary-600 disabled:dark:bg-theme-secondary-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-secondary-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 [&:not(:checked)]:hover:border-theme-primary-600"
+                    class="custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-dark-600 disabled:dark:bg-theme-dark-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-dark-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 [&:not(:checked)]:hover:border-theme-primary-600"
                     data-testid="FeeWarning__suppressWarning-toggle"
                     name="suppressWarning"
                     type="checkbox"
@@ -383,7 +383,7 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
                   class="flex w-max cursor-pointer items-center space-x-3"
                 >
                   <input
-                    class="custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-secondary-600 disabled:dark:bg-theme-secondary-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-secondary-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 [&:not(:checked)]:hover:border-theme-primary-600"
+                    class="custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-dark-600 disabled:dark:bg-theme-dark-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-dark-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 [&:not(:checked)]:hover:border-theme-primary-600"
                     data-testid="FeeWarning__suppressWarning-toggle"
                     name="suppressWarning"
                     type="checkbox"
