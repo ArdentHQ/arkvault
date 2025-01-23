@@ -79,7 +79,7 @@ export const WalletHeader = ({
 					<div className="flex flex-row items-center gap-1">
 						<Button
 							variant="secondary"
-							className="flex h-6 w-6 items-center justify-center p-0 dark:bg-transparent dark:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
+							className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
 							onClick={handleImport}
 						>
 							<Icon name="ArrowTurnDownBracket" size="md" />
@@ -88,7 +88,7 @@ export const WalletHeader = ({
 						<Divider type="vertical" className="h-4 border-theme-primary-300 dark:border-theme-dark-700" />
 						<Button
 							variant="secondary"
-							className="flex h-6 w-6 items-center justify-center p-0 dark:bg-transparent dark:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
+							className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
 							onClick={handleCreate}
 						>
 							<Icon name="Plus" size="md" />
@@ -200,7 +200,7 @@ export const WalletHeader = ({
 							<div className="flex flex-row items-center gap-3">
 								<Button
 									data-testid="WalletHeader__send-button"
-									className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500"
+									className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
 									disabled={
 										wallet.balance() === 0 ||
 										!wallet.hasBeenFullyRestored() ||
@@ -221,7 +221,11 @@ export const WalletHeader = ({
 											secondaryOptions,
 										]}
 										toggleContent={
-											<Button variant="secondary" size="icon" className="text-theme-primary-600">
+											<Button
+												variant="secondary"
+												size="icon"
+												className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
+											>
 												<Icon name="EllipsisVerticalFilled" size="lg" />
 											</Button>
 										}

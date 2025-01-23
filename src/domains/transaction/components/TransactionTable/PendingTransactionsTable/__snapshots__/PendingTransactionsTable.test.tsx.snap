@@ -265,7 +265,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -296,7 +296,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                 class="hidden xl:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -307,7 +307,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -319,7 +319,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -351,7 +351,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -395,7 +395,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col items-end gap-1"
@@ -432,7 +432,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -444,7 +444,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -1019,7 +1019,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -1050,7 +1050,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden xl:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1061,7 +1061,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -1073,7 +1073,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -1105,7 +1105,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -1139,7 +1139,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col items-end gap-1"
@@ -1176,7 +1176,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1188,7 +1188,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -1763,7 +1763,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -1794,7 +1794,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden xl:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1805,7 +1805,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -1817,7 +1817,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -1849,7 +1849,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -1864,7 +1864,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col items-end gap-1"
@@ -1901,7 +1901,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1913,7 +1913,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -2431,7 +2431,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -2462,7 +2462,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -2473,7 +2473,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -2484,7 +2484,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
@@ -2505,7 +2505,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex xl:min-h-11 my-0 py-3"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex xl:min-h-11 my-0 py-3"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -2549,7 +2549,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -2581,7 +2581,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2595,7 +2595,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="text-sm text-theme-secondary-500"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -3057,7 +3057,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -3088,7 +3088,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -3099,7 +3099,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -3110,7 +3110,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
@@ -3131,7 +3131,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex xl:min-h-11 my-0 py-3"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex xl:min-h-11 my-0 py-3"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -3175,7 +3175,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -3207,7 +3207,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3221,7 +3221,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="text-sm text-theme-secondary-500"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -3740,7 +3740,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -3771,7 +3771,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden xl:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -3782,7 +3782,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -3794,7 +3794,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -3826,7 +3826,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -3870,7 +3870,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col items-end gap-1"
@@ -3907,7 +3907,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3919,7 +3919,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -4258,7 +4258,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -4289,7 +4289,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                 class="hidden xl:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -4300,7 +4300,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -4312,7 +4312,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -4344,7 +4344,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -4359,7 +4359,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col items-end gap-1"
@@ -4396,7 +4396,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -4408,7 +4408,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -4747,7 +4747,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -4778,7 +4778,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 class="hidden xl:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -4789,7 +4789,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -4801,7 +4801,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -4833,7 +4833,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -4867,7 +4867,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col items-end gap-1"
@@ -4904,7 +4904,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -4916,7 +4916,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -5247,7 +5247,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -5278,7 +5278,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -5289,7 +5289,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -5300,7 +5300,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
@@ -5323,7 +5323,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex xl:min-h-11 my-0 py-3"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex xl:min-h-11 my-0 py-3"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -5367,7 +5367,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -5408,7 +5408,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -5422,7 +5422,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                 class="text-sm text-theme-secondary-500"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -5886,7 +5886,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -5917,7 +5917,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="hidden xl:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -5928,7 +5928,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -5940,7 +5940,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -5972,7 +5972,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -6016,7 +6016,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col items-end gap-1"
@@ -6053,7 +6053,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -6065,7 +6065,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -6404,7 +6404,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 py-2 xl:py-3 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -6435,7 +6435,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="hidden xl:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -6446,7 +6446,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
@@ -6458,7 +6458,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -6490,7 +6490,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="text-theme-secondary-700"
@@ -6534,7 +6534,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-col items-end gap-1"
@@ -6571,7 +6571,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -6583,7 +6583,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
+                  class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11"
                 >
                   <div
                     class="flex flex-row items-center"
