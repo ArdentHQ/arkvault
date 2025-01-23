@@ -85,6 +85,8 @@ export const AddressesSidePanel = ({
 			);
 		});
 
+	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
+
 	return (
 		<SidePanel
 			header={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
@@ -113,16 +115,16 @@ export const AddressesSidePanel = ({
 				<label
 					data-testid="SelectAllAddresses"
 					className={cn("flex cursor-pointer items-center space-x-3 leading-5", {
-						"text-theme-secondary-500 dark:text-theme-dark-500": isDeleteMode,
+						"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
 						"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
-							!isDeleteMode,
+							!isSelectAllDisabled,
 					})}
 				>
 					<Checkbox
 						name="all"
-						disabled={isDeleteMode}
+						disabled={isSelectAllDisabled}
 						data-testid="SelectAllAddresses_Checkbox"
-						checked={!isDeleteMode && selectedAddresses.length === addressesToShow.length}
+						checked={!isSelectAllDisabled && selectedAddresses.length === addressesToShow.length}
 						onChange={() => {
 							selectedAddresses.length === addressesToShow.length
 								? onSelectedAddressesChange([])
