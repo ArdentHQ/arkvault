@@ -286,7 +286,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -320,7 +320,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -332,7 +332,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
@@ -354,7 +354,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -388,7 +388,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -400,7 +400,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
@@ -717,7 +717,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -751,7 +751,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -763,7 +763,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
@@ -785,7 +785,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -819,7 +819,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -831,7 +831,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
@@ -1146,7 +1146,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1180,7 +1180,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1192,7 +1192,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
@@ -1214,7 +1214,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1248,7 +1248,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1260,7 +1260,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
@@ -2901,7 +2901,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2924,7 +2924,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -2936,7 +2936,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
@@ -3319,7 +3319,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3353,7 +3353,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3365,7 +3365,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
@@ -3748,7 +3748,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3782,7 +3782,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3794,7 +3794,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
