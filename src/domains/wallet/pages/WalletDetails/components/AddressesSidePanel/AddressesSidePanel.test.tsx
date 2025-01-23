@@ -250,7 +250,7 @@ describe("AddressesSidePanel", () => {
 
 		const setItemSpy = vi.spyOn(Storage.prototype, "setItem");
 
-		await userEvent.click(screen.getByTestId('HideManageHint'));
+		await userEvent.click(screen.getByTestId("HideManageHint"));
 
 		expect(setItemSpy).toHaveBeenCalledWith("manage-hint", "true");
 
