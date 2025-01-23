@@ -146,7 +146,6 @@ export const Dashboard = () => {
 						})}
 					>
 						<Transactions
-							title={t("COMMON.TRANSACTION_HISTORY")}
 							profile={activeProfile}
 							wallets={[activeWallet]}
 							isLoading={profileIsSyncing}
