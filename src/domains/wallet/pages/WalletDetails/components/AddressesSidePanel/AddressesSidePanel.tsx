@@ -121,6 +121,7 @@ export const AddressesSidePanel = ({
 					<Checkbox
 						name="all"
 						disabled={isDeleteMode}
+						data-testid="SelectAllAddresses_Checkbox"
 						checked={!isDeleteMode && selectedAddresses.length === addressesToShow.length}
 						onChange={() => {
 							selectedAddresses.length === addressesToShow.length

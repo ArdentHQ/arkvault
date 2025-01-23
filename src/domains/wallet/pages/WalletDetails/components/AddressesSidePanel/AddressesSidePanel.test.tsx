@@ -74,6 +74,44 @@ describe("AddressesSidePanel", () => {
 		expect(onSelectedAddressChange).toHaveBeenCalledWith([]);
 	});
 
+	it("should select all displayed addresses when `select all` clicked", async () => {
+		const onSelectedAddressChange = vi.fn();
+
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={[]}
+				open={true}
+				onSelectedAddressesChange={onSelectedAddressChange}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
+
+		expect(onSelectedAddressChange).toHaveBeenCalledWith(wallets.values().map((w) => w.address()));
+	});
+
+	it("should deselect displayed addresses if all already selected when `select all` clicked", async () => {
+		const onSelectedAddressChange = vi.fn();
+
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={wallets.values().map((w) => w.address())}
+				open={true}
+				onSelectedAddressesChange={onSelectedAddressChange}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
+
+		expect(onSelectedAddressChange).toHaveBeenCalledWith([]);
+	});
+
 	it("should show delete buttons when `manage` clicked", async () => {
 		render(
 			<AddressesSidePanel
@@ -90,6 +128,23 @@ describe("AddressesSidePanel", () => {
 
 		expect(screen.getByTestId("CancelDelete")).toBeInTheDocument();
 		expect(screen.getByTestId("ConfirmDelete")).toBeInTheDocument();
+	});
+
+	it("should disable `select all` when delete mode enabled", async () => {
+		render(
+			<AddressesSidePanel
+				wallets={wallets}
+				selectedAddresses={[]}
+				open={true}
+				onSelectedAddressesChange={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDeleteAddress={vi.fn()}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("ManageAddresses"));
+
+		expect(screen.getByTestId("SelectAllAddresses_Checkbox")).toBeDisabled();
 	});
 
 	it("should delete an address when `done` clicked", async () => {
@@ -187,7 +242,7 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), "Wallet 2");
+		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), "WALLET 2");
 
 		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
 	});
