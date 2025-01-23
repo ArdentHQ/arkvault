@@ -1478,7 +1478,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     class="space-x-4 css-12appi5"
                                   >
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -9096,7 +9096,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     class="space-x-4 css-12appi5"
                                   >
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
