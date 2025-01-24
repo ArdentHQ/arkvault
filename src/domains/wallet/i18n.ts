@@ -230,7 +230,6 @@ export const translations = {
 
 		UNSTAR_WALLET: "Unstar",
 
-
 		VOTES: {
 			ACTIVE_COUNT: "Active {{count}}",
 			ACTIVE_one: "Active",

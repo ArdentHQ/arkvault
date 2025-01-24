@@ -37,22 +37,24 @@ export const PortfolioHeader = ({
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-
 	const [addresses, setAddresses] = useState<string[]>([]);
 
 	const wallets = useMemo(() => {
-		const selectedWallets = profile.wallets().values().filter((wallet) => addresses.includes(wallet.address()))
+		const selectedWallets = profile
+			.wallets()
+			.values()
+			.filter((wallet) => addresses.includes(wallet.address()));
 
 		if (selectedWallets.length === 0) {
 			// TODO: Define default active wallet none are selected.
-			return [profile.wallets().first()]
+			return [profile.wallets().first()];
 		}
 
-		return selectedWallets
-	}, [addresses, profile])
+		return selectedWallets;
+	}, [addresses, profile]);
 
-	const wallet = wallets.at(0)
-	assertWallet(wallet)
+	const wallet = wallets.at(0);
+	assertWallet(wallet);
 
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
@@ -131,7 +133,7 @@ export const PortfolioHeader = ({
 										<Amount
 											value={wallet.balance()}
 											ticker={wallet.currency()}
-											className="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50"
+											className="text-sm font-semibold leading-[17px] text-theme-primary-900 dark:text-theme-dark-50 md:text-base md:leading-5"
 										/>
 									</div>
 								</div>
@@ -241,7 +243,10 @@ export const PortfolioHeader = ({
 											secondaryOptions,
 										]}
 										toggleContent={
-											<Tooltip content={t("COMMON.SWITCH_TO_SINGLE_VIEW")} disabled={wallets.length === 1}>
+											<Tooltip
+												content={t("COMMON.SWITCH_TO_SINGLE_VIEW")}
+												disabled={wallets.length === 1}
+											>
 												<span>
 													<Button
 														variant="secondary"

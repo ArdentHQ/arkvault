@@ -14,7 +14,7 @@ interface WalletVoteProperties {
 	onButtonClick: (address?: string) => void;
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
-	wallets?: Contracts.IReadWriteWallet[]
+	wallets?: Contracts.IReadWriteWallet[];
 }
 
 export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [] }: WalletVoteProperties) => {
@@ -34,8 +34,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 						{t("WALLETS.PAGE_WALLET_DETAILS.MANAGE_VOTES_FOR_YOUR_ADDRESSES")}
 					</p>
 				</div>
-			)
-
+			);
 		}
 
 		if (votes.length === 0) {
@@ -58,7 +57,8 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 						<>
 							<Button
 								data-testid="WalletMyVotes__button"
-								variant="secondary-icon" className="mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] whitespace-nowrap"
+								variant="secondary-icon"
+								className="mt-4 hidden w-full space-x-2 whitespace-nowrap text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
@@ -88,7 +88,8 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 									!wallet.hasSyncedWithNetwork() ||
 									!isLedgerWalletCompatible(wallet)
 								}
-								variant="secondary-icon" className="mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
+								variant="secondary-icon"
+								className="mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
