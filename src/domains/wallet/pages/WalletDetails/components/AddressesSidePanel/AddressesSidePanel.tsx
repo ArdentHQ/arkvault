@@ -112,15 +112,18 @@ export const AddressesSidePanel = ({
 				}}
 			/>
 
-			<div className="my-3 -mx-3 sm:mx-0 border-l-2 sm:border-none bg-theme-secondary-100 sm:bg-transparent rounded-r-sm px-3 py-2.5 sm:p-0">
-				<div className="flex justify-between sm:px-4 rounded-r-sm1">
+			<div className="-mx-3 my-3 rounded-r-sm border-l-2 bg-theme-secondary-100 px-3 py-2.5 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0">
+				<div className="rounded-r-sm1 flex justify-between sm:px-4">
 					<label
 						data-testid="SelectAllAddresses"
-						className={cn("flex cursor-pointer items-center space-x-3 text-sm leading-[17px] sm:text-base sm:leading-5", {
-							"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
-							"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
-								!isSelectAllDisabled,
-						})}
+						className={cn(
+							"flex cursor-pointer items-center space-x-3 text-sm leading-[17px] sm:text-base sm:leading-5",
+							{
+								"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
+								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
+									!isSelectAllDisabled,
+							},
+						)}
 					>
 						<Checkbox
 							name="all"
@@ -164,10 +167,13 @@ export const AddressesSidePanel = ({
 								size="icon"
 								variant="transparent"
 								onClick={() => setDeleteMode(true)}
-								className={cn("p-0 text-theme-primary-600 dark:text-theme-primary-500 text-sm leading-[17px] sm:text-base sm:leading-5", {
-									"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-background dark:ring-theme-primary-800":
-										showManageHint,
-								})}
+								className={cn(
+									"p-0 text-sm leading-[17px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5",
+									{
+										"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-background dark:ring-theme-primary-800":
+											showManageHint,
+									},
+								)}
 							>
 								<Icon name="Gear" size="lg" dimensions={[16, 16]} />
 								<span>{t("COMMON.MANAGE")}</span>
@@ -182,7 +188,7 @@ export const AddressesSidePanel = ({
 								size="icon"
 								variant="transparent"
 								onClick={resetDeleteState}
-								className="p-0 text-theme-primary-600 dark:text-theme-primary-500 text-sm leading-[17px] sm:text-base sm:leading-5"
+								className="p-0 text-sm leading-[17px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
 							>
 								{t("COMMON.CANCEL")}
 							</Button>
@@ -206,7 +212,7 @@ export const AddressesSidePanel = ({
 
 									resetDeleteState();
 								}}
-								className="p-0 text-theme-primary-600 dark:text-theme-primary-500 text-sm leading-[17px] sm:text-base sm:leading-5"
+								className="p-0 text-sm leading-[17px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
 							>
 								{t("COMMON.DONE")}
 							</Button>
