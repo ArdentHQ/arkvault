@@ -205,6 +205,7 @@ export const translations = {
 		ADDITIONAL_OPTIONS: "Additional Options",
 		COPY_ADDRESS: "Copy Address",
 		COPY_PUBLIC_KEY: "Copy Public Key",
+		MANAGE_VOTES_FOR_YOUR_ADDRESSES: "Manage votes for your addresses",
 		OPTIONS: {
 			ADDRESS_NAME: "Address Name",
 			DELETE: "Delete",
@@ -228,6 +229,7 @@ export const translations = {
 		STAR_WALLET: "Star",
 
 		UNSTAR_WALLET: "Unstar",
+
 
 		VOTES: {
 			ACTIVE_COUNT: "Active {{count}}",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
@@ -17,10 +17,12 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/Wall
 import { WalletActions } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader/WalletHeader.blocks";
 import { Skeleton } from "@/app/components/Skeleton";
 import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
+import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
+import { Tooltip } from "@/app/components/Tooltip";
+import { assertWallet } from "@/utils/assertions";
 
 export const PortfolioHeader = ({
 	profile,
-	wallet,
 	votes,
 	isLoadingVotes,
 	isUpdatingTransactions,
@@ -28,29 +30,37 @@ export const PortfolioHeader = ({
 	onUpdate,
 }: {
 	profile: Contracts.IProfile;
-	wallet: Contracts.IReadWriteWallet;
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
 	isUpdatingTransactions: boolean;
 	handleVotesButtonClick: (address?: string) => void;
 	onUpdate?: (status: boolean) => void;
 }) => {
-	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
-	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
-	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
-
-	const { getWalletAlias } = useWalletAlias();
-	const { alias } = getWalletAlias({
-		address: wallet.address(),
-		network: wallet.network(),
-		profile,
-	});
-
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-	const isRestored = wallet.hasBeenFullyRestored();
 
 	const [addresses, setAddresses] = useState<string[]>([]);
+
+	const wallets = useMemo(() => {
+		const selectedWallets = profile.wallets().values().filter((wallet) => addresses.includes(wallet.address()))
+
+		if (selectedWallets.length === 0) {
+			// TODO: Define default active wallet none are selected.
+			return [profile.wallets().first()]
+		}
+
+		return selectedWallets
+	}, [addresses, profile])
+
+	const wallet = wallets.at(0)
+	assertWallet(wallet)
+
+	const isRestored = wallet.hasBeenFullyRestored();
+	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
+	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
+	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
+
+	console.log({ walletBalance: convert(wallet.balance()) })
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -67,13 +77,7 @@ export const PortfolioHeader = ({
 							className="cursor-pointer"
 							data-testid="ShowAddressesPanel"
 						>
-							<Address
-								alignment="center"
-								walletName={alias}
-								truncateOnTable
-								maxNameChars={20}
-								walletNameClass="text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400"
-							/>
+							<ViewingAddressInfo wallets={wallets} profile={profile} />
 						</div>
 					</div>
 					<div className="flex flex-row items-center gap-1">
@@ -100,24 +104,41 @@ export const PortfolioHeader = ({
 				<div className="flex flex-col gap-0.5">
 					<div className="flex w-full flex-col gap-3 rounded bg-white p-4 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg">
 						<div className="flex w-full flex-row items-center justify-between">
-							<div className="flex flex-row items-center gap-1.5">
-								<p className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5">
-									{t("COMMON.ADDRESS")}
-								</p>
-								<div className="h-[17px] w-32 md:h-5 md:w-60 lg:w-125">
-									<Address
-										alignment="center"
-										address={wallet.address()}
-										truncateOnTable
-										addressClass="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50"
+							{wallets.length === 1 && (
+								<div className="flex flex-row items-center gap-1.5">
+									<p className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5">
+										{t("COMMON.ADDRESS")}
+									</p>
+									<div className="h-[17px] w-32 md:h-5 md:w-60 lg:w-125">
+										<Address
+											alignment="center"
+											address={wallet.address()}
+											truncateOnTable
+											addressClass="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50"
+										/>
+									</div>
+									<WalletIcons
+										wallet={wallet}
+										exclude={["isKnown", "isSecondSignature", "isStarred", "isTestNetwork"]}
+										iconColor="text-theme-secondary-300 dark:text-theme-dark-700"
 									/>
 								</div>
-								<WalletIcons
-									wallet={wallet}
-									exclude={["isKnown", "isSecondSignature", "isStarred", "isTestNetwork"]}
-									iconColor="text-theme-secondary-300 dark:text-theme-dark-700"
-								/>
-							</div>
+							)}
+
+							{wallets.length > 1 && (
+								<div className="flex flex-row items-center gap-1.5">
+									<p className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5">
+										{t("COMMON.ARK_BALANCE")}
+									</p>
+									<div>
+										<Amount
+											value={wallet.balance()}
+											ticker={wallet.currency()}
+											className="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50"
+										/>
+									</div>
+								</div>
+							)}
 							<div className="flex flex-row items-center gap-3">
 								<div className="flex items-center gap-2">
 									<Copy
@@ -172,7 +193,7 @@ export const PortfolioHeader = ({
 								</div>
 
 								<div className="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 md:text-2xl md:leading-[29px]">
-									{isRestored && (
+									{isRestored && wallets.length === 1 && (
 										<Amount
 											value={wallet.balance()}
 											ticker={wallet.currency()}
@@ -182,10 +203,12 @@ export const PortfolioHeader = ({
 									{!isRestored && (
 										<Skeleton width={67} className="h-[21px] md:h-[1.813rem] md:w-[4.188rem]" />
 									)}
-									<Divider
-										type="vertical"
-										className="hidden h-6 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block"
-									/>
+									{wallets.length === 1 && (
+										<Divider
+											type="vertical"
+											className="hidden h-6 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block"
+										/>
+									)}
 									{isRestored && (
 										<Amount
 											value={convert(wallet.balance())}
@@ -221,13 +244,18 @@ export const PortfolioHeader = ({
 											secondaryOptions,
 										]}
 										toggleContent={
-											<Button
-												variant="secondary"
-												size="icon"
-												className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
-											>
-												<Icon name="EllipsisVerticalFilled" size="lg" />
-											</Button>
+											<Tooltip content={t("COMMON.SWITCH_TO_SINGLE_VIEW")} disabled={wallets.length === 1}>
+												<span>
+													<Button
+														variant="secondary"
+														size="icon"
+														className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
+														disabled={wallets.length > 1}
+													>
+														<Icon name="EllipsisVerticalFilled" size="lg" />
+													</Button>
+												</span>
+											</Tooltip>
 										}
 										onSelect={handleSelectOption}
 									/>
@@ -242,6 +270,7 @@ export const PortfolioHeader = ({
 							onButtonClick={handleVotesButtonClick}
 							votes={votes}
 							isLoadingVotes={isLoadingVotes}
+							wallets={wallets}
 						/>
 					</div>
 				</div>
