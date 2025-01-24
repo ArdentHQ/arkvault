@@ -143,7 +143,7 @@
 }
 
 .dark {
-	--theme-background-color: var(--theme-color-secondary-900);
+	--theme-background-color: var(--theme-color-dark-900);
 	--theme-secondary-background-color: var(--theme-black);
 
 	--theme-text-color: var(--theme-color-secondary-200);

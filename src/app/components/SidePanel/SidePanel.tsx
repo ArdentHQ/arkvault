@@ -36,10 +36,11 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 	const { isMounted, styles } = useTransitionStyles(context, {
 		close: {
 			transform: "translateX(100%)",
-			transition: "transform 300ms ease-in",
+			transitionTimingFunction: "ease-in",
 		},
 		common: {
 			transformOrigin: "right",
+			transitionProperty: "transform",
 		},
 		duration: 350,
 		initial: {
@@ -47,7 +48,7 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 		},
 		open: {
 			transform: "translateX(0%)",
-			transition: "transform 300ms ease-out",
+			transitionTimingFunction: "ease-out",
 		},
 	});
 
@@ -68,11 +69,13 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 							>
 								<div
 									style={{ ...styles }}
-									className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] md:w-[512px] md:p-8"
+									className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:w-[608px] md:p-8"
 								>
 									<div className="relative mb-4 flex items-center justify-between">
 										{typeof header === "string" ? (
-											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl">{header}</h2>
+											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">
+												{header}
+											</h2>
 										) : (
 											<>{header}</>
 										)}

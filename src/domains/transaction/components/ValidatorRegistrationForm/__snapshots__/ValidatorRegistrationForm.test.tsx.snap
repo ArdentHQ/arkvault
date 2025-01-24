@@ -1,0 +1,672 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ValidatorRegistrationForm > should render form step 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="ValidatorRegistrationForm_form-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-2"
+          >
+            <div
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                Register Validator
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Register a new Validator address on the network below.
+            </div>
+          </div>
+        </div>
+        <div
+          class="-mx-3 mt-6 sm:mx-0 sm:mt-4"
+        >
+          <div
+            data-testid="DetailWrapper"
+          >
+            <div
+              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              data-testid="DetailLabel"
+            >
+              <div
+                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                data-testid="DetailLabelText"
+              >
+                Addressing
+              </div>
+            </div>
+            <div
+              class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+            >
+              <div
+                class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+              >
+                <div
+                  class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                >
+                  <div
+                    class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                  >
+                    From
+                  </div>
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                  >
+                    <span
+                      class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
+                    </span>
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                      <span>
+                         
+                      </span>
+                    </div>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                      >
+                        <div
+                          style="height: 16px; width: 16px;"
+                        >
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-3 space-y-4 sm:mt-4"
+        >
+          <fieldset
+            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+              data-testid="FormLabel"
+              for="validatorPublicKey"
+            >
+              Validator Public Key
+            </label>
+            <div
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            >
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  autocomplete="off"
+                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                  data-testid="Input__validator_public_key"
+                  name="validatorPublicKey"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset
+            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+              data-testid="FormLabel"
+              for="fee"
+            >
+              Transaction Fee
+            </label>
+            <div
+              class="relative"
+              data-testid="InputFee"
+            >
+              <div
+                class="absolute right-0 -mt-7"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <button
+                    class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                  >
+                    Simple
+                  </button>
+                  <label
+                    class="flex items-center cursor-pointer h-3"
+                  >
+                    <input
+                      class="toggle-input sr-only"
+                      type="checkbox"
+                    />
+                    <div
+                      class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
+                    >
+                      <span
+                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+                      />
+                    </div>
+                  </label>
+                  <button
+                    class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+                  >
+                    Advanced
+                  </button>
+                </div>
+              </div>
+              <div
+                class="inline-flex w-full items-center flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="false"
+                  aria-label="0"
+                  class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                  >
+                    <div
+                      class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                    >
+                      <div
+                        class="text-sm leading-[17px] sm:leading-5"
+                      >
+                        Slow
+                      </div>
+                      <div
+                        class="flex justify-between sm:w-full"
+                      >
+                        <span
+                          class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                          data-testid="Amount"
+                        >
+                          0 DARK
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+                    >
+                      <span>
+                        Confirmation time
+                      </span>
+                      <span>
+                        ~10s
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-checked="true"
+                  aria-label="0"
+                  class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200"
+                  >
+                    <div
+                      class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                    >
+                      <div
+                        class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50"
+                      >
+                        Average
+                      </div>
+                      <div
+                        class="flex justify-between sm:w-full"
+                      >
+                        <span
+                          class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
+                          data-testid="Amount"
+                        >
+                          0 DARK
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
+                    >
+                      <span>
+                        Confirmation time
+                      </span>
+                      <span>
+                        ~5s
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="0"
+                  class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                  >
+                    <div
+                      class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                    >
+                      <div
+                        class="text-sm leading-[17px] sm:leading-5"
+                      >
+                        Fast
+                      </div>
+                      <div
+                        class="flex justify-between sm:w-full"
+                      >
+                        <span
+                          class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                          data-testid="Amount"
+                        >
+                          0 DARK
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+                    >
+                      <span>
+                        Confirmation time
+                      </span>
+                      <span>
+                        ~2s
+                      </span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ValidatorRegistrationForm > should render review step 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="DelegateRegistrationForm__review-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-2"
+          >
+            <div
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                Transaction Review
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Review the transaction details below.
+            </div>
+          </div>
+        </div>
+        <div
+          class="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4"
+        >
+          <div
+            data-testid="DetailWrapper"
+          >
+            <div
+              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              data-testid="DetailLabel"
+            >
+              <div
+                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                data-testid="DetailLabelText"
+              >
+                Addressing
+              </div>
+            </div>
+            <div
+              class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+            >
+              <div
+                class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+              >
+                <div
+                  class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                >
+                  <div
+                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                  >
+                    From
+                  </div>
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                  >
+                    <span
+                      class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
+                    </span>
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                      <span>
+                         
+                      </span>
+                    </div>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                      >
+                        <div
+                          style="height: 16px; width: 16px;"
+                        >
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="DetailWrapper"
+          >
+            <div
+              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              data-testid="DetailLabel"
+            >
+              <div
+                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                data-testid="DetailLabelText"
+              >
+                Transaction Type
+              </div>
+            </div>
+            <div
+              class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            >
+              <div
+                class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+              >
+                <div
+                  class="space-y-3 sm:space-y-0"
+                >
+                  <div
+                    class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                  >
+                    <div
+                      class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                    >
+                      Category
+                    </div>
+                    <div
+                      class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
+                    >
+                      <span
+                        class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Registration
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="hidden sm:block"
+                  >
+                    <div
+                      class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                    />
+                  </div>
+                  <div
+                    class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                  >
+                    <div
+                      class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                    >
+                      Validator Public Key
+                    </div>
+                    <div
+                      class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="DetailWrapper"
+          >
+            <div
+              class="mt-0 p-3 sm:p-0"
+            >
+              <div
+                data-testid="DetailWrapper"
+              >
+                <div
+                  class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                  data-testid="DetailLabel"
+                >
+                  <div
+                    class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                    data-testid="DetailLabelText"
+                  >
+                    Transaction Summary
+                  </div>
+                </div>
+                <div
+                  class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+                >
+                  <div
+                    class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+                  >
+                    <div
+                      class="flex flex-col gap-3"
+                    >
+                      <div
+                        class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                        data-testid="AmountSection"
+                      >
+                        <div
+                          class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                        >
+                          Amount
+                        </div>
+                        <div
+                          class="flex flex-row items-center gap-2"
+                        >
+                          <span
+                            class="whitespace-nowrap font-semibold"
+                            data-testid="Amount"
+                          >
+                            0 DARK
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                      >
+                        <div
+                          class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                        >
+                          Fee
+                        </div>
+                        <div
+                          class="flex flex-row items-center gap-2"
+                        >
+                          <span
+                            class="whitespace-nowrap font-semibold"
+                            data-testid="Amount"
+                          >
+                            2 DARK
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                      >
+                        <div
+                          class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="flex flex-row items-center gap-2"
+                        >
+                          <span
+                            class="whitespace-nowrap font-semibold"
+                            data-testid="Amount"
+                          >
+                            2 DARK
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
+                  >
+                    <div
+                      class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                    >
+                      <div
+                        class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+                      >
+                        Confirmation time
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+                      >
+                        ~10s
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;

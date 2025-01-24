@@ -18,6 +18,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
+import { act } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
@@ -84,52 +85,52 @@ describe("CreateWallet", () => {
 
 		expect(backButton).toBeEnabled();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 		});
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeDisabled());
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
 		await userEvent.clear(firstInput);
 		await userEvent.type(firstInput, "power");
 		await userEvent.clear(secondInput);
@@ -141,13 +142,13 @@ describe("CreateWallet", () => {
 
 		expect(profile.wallets().values()).toHaveLength(0);
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
 		expect(profile.wallets().values()).toHaveLength(1);
 
-		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -156,11 +157,11 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
-		userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
+		await userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
 		const wallet = profile.wallets().first();
 
@@ -202,7 +203,7 @@ describe("CreateWallet", () => {
 
 		expect(backButton).toBeEnabled();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
@@ -238,35 +239,35 @@ describe("CreateWallet", () => {
 
 		expect(backButton).toBeEnabled();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 		});
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeDisabled());
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -274,24 +275,24 @@ describe("CreateWallet", () => {
 
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
 
-		userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(5);
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
 		await userEvent.clear(firstInput);
 		await userEvent.type(firstInput, "power");
 		await userEvent.clear(secondInput);
@@ -301,7 +302,7 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
@@ -321,13 +322,13 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(continueEncryptionButton).toBeEnabled());
 
-		userEvent.click(continueEncryptionButton);
+		await userEvent.click(continueEncryptionButton);
 
 		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
 		expect(profile.wallets().values()).toHaveLength(1);
 
-		userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
+		await userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
 		const wallet = profile.wallets().first();
 
@@ -357,7 +358,9 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		history.push("/");
+		act(() => {
+			history.push("/");
+		});
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		expect(asFragment()).toMatchSnapshot();
@@ -382,23 +385,25 @@ describe("CreateWallet", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("CreateWallet__back-button"));
+		await userEvent.click(screen.getByTestId("CreateWallet__back-button"));
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		history.push("/");
+		act(() => {
+			history.push("/");
+		});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
@@ -427,11 +432,11 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(
 			screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR),
@@ -470,30 +475,30 @@ describe("CreateWallet", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeDisabled());
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
 		await userEvent.clear(firstInput);
 		await userEvent.type(firstInput, "power");
 		await userEvent.clear(secondInput);
@@ -503,11 +508,11 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -516,7 +521,7 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled());
 
-		userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
+		await userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 	});
