@@ -11,7 +11,6 @@ import { TransactionDetailModal } from "@/domains/transaction/components/Transac
 import { Transactions } from "@/domains/transaction/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
-import { WalletHeader } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { DashboardEmpty } from "./Dashboard.Empty";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";

@@ -15,8 +15,8 @@ import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
 import { WalletActions } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader/WalletHeader.blocks";
-import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { Skeleton } from "@/app/components/Skeleton";
+import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 
 export const PortfolioHeader = ({
 	profile,
@@ -50,6 +50,8 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 
+	const [addresses, setAddresses] = useState<string[]>([]);
+
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
@@ -61,16 +63,17 @@ export const PortfolioHeader = ({
 						<div
 							onClick={() => setShowAddressesPanel(true)}
 							tabIndex={0}
+							onKeyPress={() => setShowAddressesPanel(true)}
 							className="cursor-pointer"
 							data-testid="ShowAddressesPanel"
 						>
-							<span className="text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400 font-semibold">
-								{t("COMMON.MULTIPLE_ADDRESSES", {
-									count: 2
-								})}
-							</span>
-
-							<Icon name="Pencil" />
+							<Address
+								alignment="center"
+								walletName={alias}
+								truncateOnTable
+								maxNameChars={20}
+								walletNameClass="text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400"
+							/>
 						</div>
 					</div>
 					<div className="flex flex-row items-center gap-1">
@@ -244,14 +247,17 @@ export const PortfolioHeader = ({
 				</div>
 			</div>
 
-			<SidePanel
-				header="Addresses"
+			<AddressesSidePanel
+				wallets={profile.wallets()}
+				selectedAddresses={addresses}
+				onSelectedAddressesChange={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				dataTestId="AddressesSidePanel"
-			>
-				this is a body
-			</SidePanel>
+				onDeleteAddress={(address: string) => {
+					const wallets = profile.wallets().filterByAddress(address);
+					profile.wallets().forget(wallets[0].id());
+				}}
+			/>
 		</header>
 	);
 };
