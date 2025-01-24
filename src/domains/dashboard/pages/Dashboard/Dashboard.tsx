@@ -96,7 +96,6 @@ export const Dashboard = () => {
 				>
 					<PortfolioHeader
 						profile={activeProfile}
-						wallet={activeWallet}
 						votes={votes}
 						handleVotesButtonClick={handleVoteButton}
 						isLoadingVotes={isLoadingVotes}

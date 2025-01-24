@@ -14,7 +14,7 @@ interface WalletVoteProperties {
 	onButtonClick: (address?: string) => void;
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
-	wallets: Contracts.IReadWriteWallet[]
+	wallets?: Contracts.IReadWriteWallet[]
 }
 
 export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [] }: WalletVoteProperties) => {

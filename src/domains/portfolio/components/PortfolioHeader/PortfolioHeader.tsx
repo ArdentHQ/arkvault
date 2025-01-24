@@ -3,7 +3,6 @@ import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
-import { useWalletAlias } from "@/app/hooks";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
@@ -59,8 +58,6 @@ export const PortfolioHeader = ({
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
-
-	console.log({ walletBalance: convert(wallet.balance()) })
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
