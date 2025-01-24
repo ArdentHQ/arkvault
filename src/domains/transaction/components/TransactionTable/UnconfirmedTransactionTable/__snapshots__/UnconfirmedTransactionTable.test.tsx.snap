@@ -157,20 +157,6 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <div
-                  class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                    />
-                  </div>
-                </div>
-                <div
                   class="w-0 flex-1"
                 >
                   <div
@@ -202,7 +188,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -238,62 +224,6 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4"
               >
-                <span
-                  class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
-                  data-testid="TransactionRowRecipientIcon"
-                >
-                  <div>
-                    <div
-                      style="height: 20px; width: 20px;"
-                    >
-                      <svg
-                        id="multipayment"
-                        style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M6 14.149l-2.5-2.4-2.5 2.4M3.5 16.949v-5.2"
-                          />
-                          <g
-                            transform="translate(299.777 174.25)"
-                          >
-                            <path
-                              d="M-292.7-163c2.8 0 5.2 2.3 5.2 5.2h0"
-                            />
-                            <circle
-                              cx="-292.7"
-                              cy="-168"
-                              r="3.1"
-                            />
-                          </g>
-                          <g
-                            transform="translate(299.777 174.25)"
-                          >
-                            <path
-                              d="M-286.4-161.8c2.2-.8 4.6.3 5.4 2.5.2.5.2 1 .2 1.5"
-                            />
-                            <circle
-                              cx="-284.9"
-                              cy="-166.4"
-                              r="2.6"
-                            />
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </span>
                 <div
                   class="w-0 flex-1"
                 >
@@ -318,7 +248,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -499,20 +429,6 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <div
-                  class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                    />
-                  </div>
-                </div>
-                <div
                   class="w-0 flex-1"
                 >
                   <div
@@ -544,7 +460,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -580,62 +496,6 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4"
               >
-                <span
-                  class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
-                  data-testid="TransactionRowRecipientIcon"
-                >
-                  <div>
-                    <div
-                      style="height: 20px; width: 20px;"
-                    >
-                      <svg
-                        id="multipayment"
-                        style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M6 14.149l-2.5-2.4-2.5 2.4M3.5 16.949v-5.2"
-                          />
-                          <g
-                            transform="translate(299.777 174.25)"
-                          >
-                            <path
-                              d="M-292.7-163c2.8 0 5.2 2.3 5.2 5.2h0"
-                            />
-                            <circle
-                              cx="-292.7"
-                              cy="-168"
-                              r="3.1"
-                            />
-                          </g>
-                          <g
-                            transform="translate(299.777 174.25)"
-                          >
-                            <path
-                              d="M-286.4-161.8c2.2-.8 4.6.3 5.4 2.5.2.5.2 1 .2 1.5"
-                            />
-                            <circle
-                              cx="-284.9"
-                              cy="-166.4"
-                              r="2.6"
-                            />
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </span>
                 <div
                   class="w-0 flex-1"
                 >
@@ -660,7 +520,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -721,20 +581,6 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      />
-                    </div>
-                  </div>
-                  <div
                     class="w-0 flex-1"
                   >
                     <div
@@ -788,7 +634,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -824,62 +670,6 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                 <div
                   class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
-                  <span
-                    class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
-                    data-testid="TransactionRowRecipientIcon"
-                  >
-                    <div>
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="multipayment"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M6 14.149l-2.5-2.4-2.5 2.4M3.5 16.949v-5.2"
-                            />
-                            <g
-                              transform="translate(299.777 174.25)"
-                            >
-                              <path
-                                d="M-292.7-163c2.8 0 5.2 2.3 5.2 5.2h0"
-                              />
-                              <circle
-                                cx="-292.7"
-                                cy="-168"
-                                r="3.1"
-                              />
-                            </g>
-                            <g
-                              transform="translate(299.777 174.25)"
-                            >
-                              <path
-                                d="M-286.4-161.8c2.2-.8 4.6.3 5.4 2.5.2.5.2 1 .2 1.5"
-                              />
-                              <circle
-                                cx="-284.9"
-                                cy="-166.4"
-                                r="2.6"
-                              />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                   <div
                     class="w-0 flex-1"
                   >
@@ -926,7 +716,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -1107,20 +897,6 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <div
-                  class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                    />
-                  </div>
-                </div>
-                <div
                   class="w-0 flex-1"
                 >
                   <div
@@ -1152,7 +928,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -1188,62 +964,6 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
               <div
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4"
               >
-                <span
-                  class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
-                  data-testid="TransactionRowRecipientIcon"
-                >
-                  <div>
-                    <div
-                      style="height: 20px; width: 20px;"
-                    >
-                      <svg
-                        id="multipayment"
-                        style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M6 14.149l-2.5-2.4-2.5 2.4M3.5 16.949v-5.2"
-                          />
-                          <g
-                            transform="translate(299.777 174.25)"
-                          >
-                            <path
-                              d="M-292.7-163c2.8 0 5.2 2.3 5.2 5.2h0"
-                            />
-                            <circle
-                              cx="-292.7"
-                              cy="-168"
-                              r="3.1"
-                            />
-                          </g>
-                          <g
-                            transform="translate(299.777 174.25)"
-                          >
-                            <path
-                              d="M-286.4-161.8c2.2-.8 4.6.3 5.4 2.5.2.5.2 1 .2 1.5"
-                            />
-                            <circle
-                              cx="-284.9"
-                              cy="-166.4"
-                              r="2.6"
-                            />
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </span>
                 <div
                   class="w-0 flex-1"
                 >
@@ -1268,7 +988,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -1329,20 +1049,6 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      />
-                    </div>
-                  </div>
-                  <div
                     class="w-0 flex-1"
                   >
                     <div
@@ -1396,7 +1102,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
@@ -1432,62 +1138,6 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                 <div
                   class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
-                  <span
-                    class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
-                    data-testid="TransactionRowRecipientIcon"
-                  >
-                    <div>
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="multipayment"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M6 14.149l-2.5-2.4-2.5 2.4M3.5 16.949v-5.2"
-                            />
-                            <g
-                              transform="translate(299.777 174.25)"
-                            >
-                              <path
-                                d="M-292.7-163c2.8 0 5.2 2.3 5.2 5.2h0"
-                              />
-                              <circle
-                                cx="-292.7"
-                                cy="-168"
-                                r="3.1"
-                              />
-                            </g>
-                            <g
-                              transform="translate(299.777 174.25)"
-                            >
-                              <path
-                                d="M-286.4-161.8c2.2-.8 4.6.3 5.4 2.5.2.5.2 1 .2 1.5"
-                              />
-                              <circle
-                                cx="-284.9"
-                                cy="-166.4"
-                                r="2.6"
-                              />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                   <div
                     class="w-0 flex-1"
                   >
@@ -1534,7 +1184,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
+                  class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div

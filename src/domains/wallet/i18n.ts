@@ -1,4 +1,10 @@
 export const translations = {
+	ADDRESSES_SIDE_PANEL: {
+		DELETE_INFO: "You can delete your addresses from the app here",
+		MANAGE_HINT: "You can manage and remove your addresses here.",
+		SEARCH_BY: "Search by Name or Address",
+		TITLE: "Choose Address",
+	},
 	CONNECT_LEDGER: {
 		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.",
 		HEADER: "Connect and Authorize Ledger Device",
