@@ -11,6 +11,7 @@ import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
+import { useBreakpoint } from "@/app/hooks";
 
 export const AddressesSidePanel = ({
 	wallets,
@@ -35,6 +36,8 @@ export const AddressesSidePanel = ({
 
 	const [showManageHint, setShowManageHint] = useState<boolean>(false);
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
+
+	const { isXs } = useBreakpoint();
 
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
@@ -140,14 +143,15 @@ export const AddressesSidePanel = ({
 						<Tooltip
 							visible={showManageHint}
 							interactive={true}
+							maxWidth={isXs ? 264 : 'none'}
 							content={
-								<div className="space-x-4 px-[3px] py-px text-sm leading-5">
-									<span>{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}</span>
+								<div className="sm:space-x-4 px-[3px] sm:pt-px pb-1.5 sm:pb-px text-sm leading-5">
+									<span className="block sm:inline mb-2 sm:mb-0">{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}</span>
 									<Button
 										size="xs"
 										variant="transparent"
 										data-testid="HideManageHint"
-										className="bg-theme-primary-500 px-4 py-1.5"
+										className="bg-theme-primary-500 px-4 py-1.5 w-full sm:w-auto"
 										onClick={() => {
 											persistManageHint(true);
 											setShowManageHint(false);
