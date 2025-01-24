@@ -112,105 +112,107 @@ export const AddressesSidePanel = ({
 				}}
 			/>
 
-			<div className="my-3 flex justify-between px-4">
-				<label
-					data-testid="SelectAllAddresses"
-					className={cn("flex cursor-pointer items-center space-x-3 leading-5", {
-						"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
-						"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
-							!isSelectAllDisabled,
-					})}
-				>
-					<Checkbox
-						name="all"
-						disabled={isSelectAllDisabled}
-						data-testid="SelectAllAddresses_Checkbox"
-						checked={!isSelectAllDisabled && selectedAddresses.length === addressesToShow.length}
-						onChange={() => {
-							selectedAddresses.length === addressesToShow.length
-								? onSelectedAddressesChange([])
-								: onSelectedAddressesChange(addressesToShow.map((w) => w.address()));
-						}}
-					/>
-					<span className="font-semibold">{t("COMMON.SELECT_ALL")}</span>
-				</label>
-
-				{!isDeleteMode && (
-					<Tooltip
-						visible={showManageHint}
-						interactive={true}
-						content={
-							<div className="space-x-4 px-[3px] py-px text-sm leading-5">
-								<span>{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}</span>
-								<Button
-									size="xs"
-									variant="transparent"
-									data-testid="HideManageHint"
-									className="bg-theme-primary-500 px-4 py-1.5"
-									onClick={() => {
-										persistManageHint(true);
-										setShowManageHint(false);
-									}}
-								>
-									{t("COMMON.GOT_IT")}
-								</Button>
-							</div>
-						}
-						placement="bottom-end"
+			<div className="my-3 -mx-3 sm:mx-0 border-l-2 sm:border-none bg-theme-secondary-100 sm:bg-transparent rounded-r-sm px-3 py-2.5 sm:p-0">
+				<div className="flex justify-between sm:px-4 rounded-r-sm1">
+					<label
+						data-testid="SelectAllAddresses"
+						className={cn("flex cursor-pointer items-center space-x-3 text-sm leading-[17px] sm:text-base sm:leading-5", {
+							"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
+							"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
+								!isSelectAllDisabled,
+						})}
 					>
-						<Button
-							data-testid="ManageAddresses"
-							size="icon"
-							variant="transparent"
-							onClick={() => setDeleteMode(true)}
-							className={cn("p-0 text-theme-primary-600 dark:text-theme-primary-500", {
-								"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-background dark:ring-theme-primary-800":
-									showManageHint,
-							})}
-						>
-							<Icon name="Gear" size="lg" dimensions={[16, 16]} />
-							<span>{t("COMMON.MANAGE")}</span>
-						</Button>
-					</Tooltip>
-				)}
-
-				{isDeleteMode && (
-					<div className="leading-5">
-						<Button
-							data-testid="CancelDelete"
-							size="icon"
-							variant="transparent"
-							onClick={resetDeleteState}
-							className="p-0 text-theme-primary-600 dark:text-theme-primary-500"
-						>
-							{t("COMMON.CANCEL")}
-						</Button>
-
-						<Divider type="vertical" className="border-theme-primary-300 dark:border-theme-dark-700" />
-
-						<Button
-							data-testid="ConfirmDelete"
-							size="icon"
-							variant="transparent"
-							onClick={() => {
-								for (const address of addressesToDelete) {
-									onDeleteAddress(address);
-								}
-
-								const activeAddresses = selectedAddresses.filter(
-									(address) => !addressesToDelete.includes(address),
-								);
-
-								onSelectedAddressesChange(activeAddresses);
-
-								resetDeleteState();
+						<Checkbox
+							name="all"
+							disabled={isSelectAllDisabled}
+							data-testid="SelectAllAddresses_Checkbox"
+							checked={!isSelectAllDisabled && selectedAddresses.length === addressesToShow.length}
+							onChange={() => {
+								selectedAddresses.length === addressesToShow.length
+									? onSelectedAddressesChange([])
+									: onSelectedAddressesChange(addressesToShow.map((w) => w.address()));
 							}}
-							className="p-0 text-theme-primary-600 dark:text-theme-primary-500"
+						/>
+						<span className="font-semibold">{t("COMMON.SELECT_ALL")}</span>
+					</label>
+
+					{!isDeleteMode && (
+						<Tooltip
+							visible={showManageHint}
+							interactive={true}
+							content={
+								<div className="space-x-4 px-[3px] py-px text-sm leading-5">
+									<span>{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}</span>
+									<Button
+										size="xs"
+										variant="transparent"
+										data-testid="HideManageHint"
+										className="bg-theme-primary-500 px-4 py-1.5"
+										onClick={() => {
+											persistManageHint(true);
+											setShowManageHint(false);
+										}}
+									>
+										{t("COMMON.GOT_IT")}
+									</Button>
+								</div>
+							}
+							placement="bottom-end"
 						>
-							{t("COMMON.DONE")}
-						</Button>
-					</div>
-				)}
+							<Button
+								data-testid="ManageAddresses"
+								size="icon"
+								variant="transparent"
+								onClick={() => setDeleteMode(true)}
+								className={cn("p-0 text-theme-primary-600 dark:text-theme-primary-500 text-sm leading-[17px] sm:text-base sm:leading-5", {
+									"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-background dark:ring-theme-primary-800":
+										showManageHint,
+								})}
+							>
+								<Icon name="Gear" size="lg" dimensions={[16, 16]} />
+								<span>{t("COMMON.MANAGE")}</span>
+							</Button>
+						</Tooltip>
+					)}
+
+					{isDeleteMode && (
+						<div className="leading-[17px] sm:leading-5">
+							<Button
+								data-testid="CancelDelete"
+								size="icon"
+								variant="transparent"
+								onClick={resetDeleteState}
+								className="p-0 text-theme-primary-600 dark:text-theme-primary-500 text-sm leading-[17px] sm:text-base sm:leading-5"
+							>
+								{t("COMMON.CANCEL")}
+							</Button>
+
+							<Divider type="vertical" className="border-theme-primary-300 dark:border-theme-dark-700" />
+
+							<Button
+								data-testid="ConfirmDelete"
+								size="icon"
+								variant="transparent"
+								onClick={() => {
+									for (const address of addressesToDelete) {
+										onDeleteAddress(address);
+									}
+
+									const activeAddresses = selectedAddresses.filter(
+										(address) => !addressesToDelete.includes(address),
+									);
+
+									onSelectedAddressesChange(activeAddresses);
+
+									resetDeleteState();
+								}}
+								className="p-0 text-theme-primary-600 dark:text-theme-primary-500 text-sm leading-[17px] sm:text-base sm:leading-5"
+							>
+								{t("COMMON.DONE")}
+							</Button>
+						</div>
+					)}
+				</div>
 			</div>
 
 			{isDeleteMode && (
