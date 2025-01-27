@@ -139,14 +139,13 @@ export const Dashboard = () => {
 					</Section>
 				)}
 
-				<Section className="flex-1 !pt-4">
+				<Section className="flex-1 !pt-2">
 					<div
 						className={cn({
 							"hidden md:block": mobileActiveTab !== "transactions",
 						})}
 					>
 						<Transactions
-							title={t("COMMON.TRANSACTION_HISTORY")}
 							profile={activeProfile}
 							wallets={[activeWallet]}
 							isLoading={profileIsSyncing}
