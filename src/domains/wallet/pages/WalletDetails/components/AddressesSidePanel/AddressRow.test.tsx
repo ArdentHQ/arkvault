@@ -42,7 +42,7 @@ describe("AddressRow", () => {
 				toggleAddress={vi.fn()}
 				isSelected={false}
 			/>,
-			"xs"
+			"xs",
 		);
 
 		expect(screen.getByTestId("MobileAddressRow")).toBeInTheDocument();
