@@ -23,6 +23,7 @@ export const MobileAddressRow = ({
 }): JSX.Element => (
 	<div className="space-y-2">
 		<MultiEntryItem
+			dataTestId="MobileAddressRow"
 			titleSlot={
 				<div
 					onClick={() => toggleAddress(wallet.address())}

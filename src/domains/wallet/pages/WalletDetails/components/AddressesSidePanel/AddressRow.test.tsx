@@ -1,6 +1,6 @@
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 import { AddressRow } from "./AddressRow";
 import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
@@ -31,6 +31,21 @@ describe("AddressRow", () => {
 		);
 
 		expect(screen.getByText(wallet.displayName())).toBeInTheDocument();
+	});
+
+	it("should render mobile row for `xs` screen", () => {
+		renderResponsive(
+			<AddressRow
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesDeleteMode={false}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+			/>,
+			"xs"
+		);
+
+		expect(screen.getByTestId("MobileAddressRow")).toBeInTheDocument();
 	});
 
 	it("should render in delete mode", () => {
