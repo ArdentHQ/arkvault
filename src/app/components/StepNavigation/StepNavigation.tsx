@@ -8,7 +8,7 @@ interface StepNavigationProperties {
 	onBackClick: () => void;
 	onBackToWalletClick: () => void;
 	onContinueClick: () => void;
-	onSend: () => void;
+	onSend?: () => void;
 	isNextDisabled: boolean;
 	isLoading: boolean;
 	activeIndex: number;
