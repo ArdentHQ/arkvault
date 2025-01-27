@@ -386,6 +386,9 @@ export const SendTransfer = () => {
 						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 					}}
 					onContinueClick={async () => await handleNext()}
+					onSend={() => {
+						void handleSubmit(() => submit())();
+					}}
 					isLoading={isSubmitting}
 					isNextDisabled={isNextDisabled}
 					size={4}
