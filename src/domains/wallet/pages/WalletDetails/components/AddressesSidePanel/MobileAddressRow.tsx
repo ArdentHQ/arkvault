@@ -26,6 +26,7 @@ export const MobileAddressRow = ({
 			dataTestId="MobileAddressRow"
 			titleSlot={
 				<div
+					data-testid="MobileAddressRowHeader"
 					onClick={() => toggleAddress(wallet.address())}
 					tabIndex={0}
 					className="flex items-center space-x-3"

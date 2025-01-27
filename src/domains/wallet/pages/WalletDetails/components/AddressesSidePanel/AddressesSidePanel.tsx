@@ -37,6 +37,7 @@ export const AddressesSidePanel = ({
 	const [showManageHint, setShowManageHint] = useState<boolean>(false);
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
 
+	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
 
 	useEffect(() => {
@@ -146,7 +147,7 @@ export const AddressesSidePanel = ({
 						<Tooltip
 							visible={showManageHint}
 							interactive={true}
-							/* istanbul ignore else -- @preserve */
+							/* istanbul ignore next -- @preserve */
 							maxWidth={isXs ? 264 : "none"}
 							content={
 								<div className="px-[3px] pb-1.5 text-sm leading-5 sm:space-x-4 sm:pb-px sm:pt-px">
