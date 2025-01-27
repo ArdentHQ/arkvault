@@ -8,6 +8,7 @@ interface StepNavigationProperties {
 	onBackClick: () => void;
 	onBackToWalletClick: () => void;
 	onContinueClick: () => void;
+	onSend: () => void;
 	isNextDisabled: boolean;
 	isLoading: boolean;
 	activeIndex: number;
@@ -21,6 +22,7 @@ export const StepNavigation: React.VFC<StepNavigationProperties> = ({
 	isNextDisabled,
 	isLoading,
 	activeIndex,
+	onSend,
 	size,
 }) => {
 	const { t } = useTranslation();
@@ -71,6 +73,7 @@ export const StepNavigation: React.VFC<StepNavigationProperties> = ({
 					disabled={isNextDisabled || isLoading}
 					isLoading={isLoading}
 					icon="DoubleArrowRight"
+					onClick={onSend}
 					iconPosition="right"
 				>
 					<span>{t("COMMON.SEND")}</span>
