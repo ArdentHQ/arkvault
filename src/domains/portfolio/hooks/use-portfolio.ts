@@ -74,7 +74,7 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 
 	return {
 		balance,
-		selectedAddresses,
+		selectedAddresses: selectedAddresses ?? [],
 		selectedWallet: wallets.length === 1 ? wallets.at(0) : undefined,
 		selectedWallets: wallets,
 		setSelectedAddresses: async (selectedAddresses: string[]) => {
