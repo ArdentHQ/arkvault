@@ -115,8 +115,8 @@ export const AddressesSidePanel = ({
 				}}
 			/>
 
-			<div className="-mx-3 my-3 rounded-r-sm border-l-2 bg-theme-secondary-100 px-3 py-2.5 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0">
-				<div className="rounded-r-sm1 flex justify-between sm:px-4">
+			<div className="-mx-3 my-3 rounded-r-sm border-l-2 bg-theme-secondary-100 border-theme-info-400 dark:bg-theme-dark-950 px-3 py-2.5 sm:mx-0 sm:border-none sm:bg-transparent sm:dark:bg-transparent sm:p-0">
+				<div className="flex justify-between sm:px-4">
 					<label
 						data-testid="SelectAllAddresses"
 						className={cn(
@@ -172,7 +172,7 @@ export const AddressesSidePanel = ({
 								variant="transparent"
 								onClick={() => setDeleteMode(true)}
 								className={cn(
-									"p-0 text-sm leading-[17px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5",
+									"p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5",
 									{
 										"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-background dark:ring-theme-primary-800":
 											showManageHint,
@@ -192,7 +192,7 @@ export const AddressesSidePanel = ({
 								size="icon"
 								variant="transparent"
 								onClick={resetDeleteState}
-								className="p-0 text-sm leading-[17px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
+								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
 							>
 								{t("COMMON.CANCEL")}
 							</Button>
@@ -216,7 +216,7 @@ export const AddressesSidePanel = ({
 
 									resetDeleteState();
 								}}
-								className="p-0 text-sm leading-[17px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
+								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
 							>
 								{t("COMMON.DONE")}
 							</Button>

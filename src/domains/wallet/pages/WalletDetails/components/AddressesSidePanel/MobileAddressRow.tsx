@@ -69,7 +69,7 @@ export const MobileAddressRow = ({
 							body={
 								<Address
 									address={wallet.address()}
-									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-secondary-700"
+									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50"
 								/>
 							}
 						/>
