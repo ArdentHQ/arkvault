@@ -178,7 +178,7 @@ export const AddressesSidePanel = ({
 								className={cn(
 									"p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5",
 									{
-										"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-background dark:ring-theme-primary-800":
+										"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-offset-theme-dark-950 dark:sm:ring-offset-transparent sm:ring-offset-transparent dark:ring-theme-primary-800":
 											showManageHint,
 									},
 								)}
@@ -190,7 +190,7 @@ export const AddressesSidePanel = ({
 					)}
 
 					{isDeleteMode && (
-						<div className="leading-[17px] sm:leading-5">
+						<div className="leading-[18px] sm:leading-5">
 							<Button
 								data-testid="CancelDelete"
 								size="icon"
