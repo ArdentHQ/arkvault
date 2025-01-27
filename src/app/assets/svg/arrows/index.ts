@@ -47,9 +47,9 @@ export const ArrowIcons: any = {
 	ChevronUpSmall,
 	DoubleArrowDashed,
 	DoubleArrowRight,
+	DoubleChevron,
 	DoubleChevronLeft,
 	DoubleChevronLeftSmall,
 	DoubleChevronRight,
 	DoubleChevronRightSmall,
-	DoubleChevron,
 };

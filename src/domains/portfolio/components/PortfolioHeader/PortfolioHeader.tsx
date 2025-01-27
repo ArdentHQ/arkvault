@@ -38,7 +38,7 @@ export const PortfolioHeader = ({
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets } = usePortfolio({ profile })
+	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets } = usePortfolio({ profile });
 
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
@@ -65,7 +65,12 @@ export const PortfolioHeader = ({
 						>
 							<div className="flex items-center gap-1">
 								<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
-								<Icon name="DoubleChevron" width={26} height={26} className="text-theme-secondary-700 text-theme-dark-200" />
+								<Icon
+									name="DoubleChevron"
+									width={26}
+									height={26}
+									className="text-theme-dark-200 text-theme-secondary-700"
+								/>
 							</div>
 						</div>
 					</div>
@@ -154,9 +159,7 @@ export const PortfolioHeader = ({
 											type="vertical"
 											className="mx-0 hidden h-[17px] border-theme-secondary-300 p-0 dark:border-theme-dark-700 sm:block"
 										/>
-
 									</>
-
 								)}
 
 								<div className="hidden sm:flex">
@@ -279,7 +282,7 @@ export const PortfolioHeader = ({
 				wallets={profile.wallets()}
 				selectedAddresses={selectedAddresses}
 				onSelectedAddressesChange={(addresses) => {
-					setSelectedAddresses(addresses)
+					setSelectedAddresses(addresses);
 				}}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}

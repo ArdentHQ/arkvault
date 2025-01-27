@@ -1,48 +1,51 @@
-import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction"
-import { BigNumber } from "@ardenthq/sdk-helpers"
-import { Contracts, Environment } from "@ardenthq/sdk-profiles"
-import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract"
-import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract"
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
+import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 interface PortfolioConfiguration {
-	selectedAddresses: string[]
+	selectedAddresses: string[];
 }
 
 function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 	return {
 		total(): BigNumber {
-			let balance = BigNumber.make(0)
+			let balance = BigNumber.make(0);
 			for (const wallet of wallets) {
-				balance = balance.plus(wallet.balance())
+				balance = balance.plus(wallet.balance());
 			}
 
-			return balance
+			return balance;
 		},
 		totalConverted(): BigNumber {
-			let balance = BigNumber.make(0)
+			let balance = BigNumber.make(0);
 			for (const wallet of wallets) {
-				balance = balance.plus(wallet.convertedBalance())
+				balance = balance.plus(wallet.convertedBalance());
 			}
 
-			return balance
-		}
-	}
+			return balance;
+		},
+	};
 }
 
-function SelectedAddresses({ profile, env }: { profile: IProfile, env: Environment }) {
+function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environment }) {
 	return {
 		all(): string[] {
-			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, { selectedAddresses: [] }) as PortfolioConfiguration
-			return config.selectedAddresses ?? []
+			const config = profile
+				.settings()
+				.get(Contracts.ProfileSetting.DashboardConfiguration, {
+					selectedAddresses: [],
+				}) as PortfolioConfiguration;
+			return config.selectedAddresses ?? [];
 		},
 		async set(selectedAddresses: string[]): Promise<void> {
 			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, { selectedAddresses });
-			await env.profiles().persist(profile)
+			await env.profiles().persist(profile);
 		},
 		toWallets() {
-			const selected = this.all()
+			const selected = this.all();
 
 			const wallets = profile
 				.wallets()
@@ -55,22 +58,22 @@ function SelectedAddresses({ profile, env }: { profile: IProfile, env: Environme
 			}
 
 			return wallets;
-		}
-	}
+		},
+	};
 }
 
 export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { env } = useEnvironmentContext()
+	const { env } = useEnvironmentContext();
 	const { selectedAddresses, setConfiguration } = useConfiguration();
 
-	const addresses = SelectedAddresses({ env, profile })
+	const addresses = SelectedAddresses({ env, profile });
 
-	const wallets = addresses.toWallets()
-	const balance = Balance({ wallets })
+	const wallets = addresses.toWallets();
+	const balance = Balance({ wallets });
 
 	useEffect(() => {
-		setConfiguration({ selectedAddresses: addresses.all() })
-	}, [])
+		setConfiguration({ selectedAddresses: addresses.all() });
+	}, []);
 
 	return {
 		balance,
@@ -78,8 +81,8 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 		selectedWallet: wallets.length === 1 ? wallets.at(0) : undefined,
 		selectedWallets: wallets,
 		setSelectedAddresses: async (selectedAddresses: string[]) => {
-			setConfiguration({ selectedAddresses })
-			await addresses.set(selectedAddresses)
-		}
-	}
-}
+			setConfiguration({ selectedAddresses });
+			await addresses.set(selectedAddresses);
+		},
+	};
+};

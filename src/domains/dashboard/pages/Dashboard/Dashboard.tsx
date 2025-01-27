@@ -29,7 +29,7 @@ export const Dashboard = () => {
 	const activeProfile = useActiveProfile();
 	const { profileIsSyncing } = useConfiguration();
 
-	const { selectedWallets, selectedWallet } = usePortfolio({ profile: activeProfile })
+	const { selectedWallets, selectedWallet } = usePortfolio({ profile: activeProfile });
 
 	const handleVoteButton = (filter?: string) => {
 		if (selectedWallets.length > 1) {
@@ -38,7 +38,7 @@ export const Dashboard = () => {
 			});
 		}
 
-		const wallet = selectedWallets.at(0)
+		const wallet = selectedWallets.at(0);
 		/* istanbul ignore else -- @preserve */
 		if (filter) {
 			return history.push({
@@ -77,7 +77,7 @@ export const Dashboard = () => {
 
 		if (!selectedWallet) {
 			setIsLoadingVotes(false);
-			return
+			return;
 		}
 
 		syncVotes(selectedWallet);
@@ -99,7 +99,6 @@ export const Dashboard = () => {
 		}
 		return <div />;
 	}
-
 
 	return (
 		<>
