@@ -9,6 +9,7 @@ interface Properties {
 	address: string;
 	network?: Networks.Network;
 	profile?: Contracts.IProfile;
+	username?: string;
 }
 
 interface WalletAliasResult {
@@ -26,7 +27,7 @@ const useWalletAlias = (): HookResult => {
 	const { env } = useEnvironmentContext();
 
 	const getWalletAlias = useCallback(
-		({ address, profile, network }: Properties) => {
+		({ address, profile, network, username }: Properties) => {
 			try {
 				assertProfile(profile);
 				assertString(address);
@@ -47,24 +48,17 @@ const useWalletAlias = (): HookResult => {
 
 				let wallet: Contracts.IReadWriteWallet | undefined;
 
+
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 				}
 
 				if (wallet) {
-					const delegateUsername = getDelegateUsername(wallet.network());
-
-					let alias = wallet.displayName();
-
-					if (delegateUsername && profile.appearance().get("useNetworkWalletNames")) {
-						alias = delegateUsername;
-					}
-
 					return {
 						address,
-						alias,
+						alias: wallet.displayName(),
 						isContact: false,
-						isDelegate: !!delegateUsername,
+						isDelegate: !!getDelegateUsername(network),
 					};
 				}
 
@@ -79,14 +73,12 @@ const useWalletAlias = (): HookResult => {
 					};
 				}
 
-				if (network) {
-					const alias = getDelegateUsername(network);
-
+				if (username) {
 					return {
 						address,
-						alias,
+						alias: username,
 						isContact: false,
-						isDelegate: alias !== undefined,
+						isDelegate: !!getDelegateUsername(network),
 					};
 				}
 			} catch {
