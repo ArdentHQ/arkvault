@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
@@ -63,7 +63,10 @@ export const PortfolioHeader = ({
 							className="cursor-pointer"
 							data-testid="ShowAddressesPanel"
 						>
-							<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
+							<div className="flex items-center gap-1">
+								<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
+								<Icon name="DoubleChevron" width={26} height={26} className="text-theme-secondary-700 text-theme-dark-200" />
+							</div>
 						</div>
 					</div>
 					<div className="flex flex-row items-center gap-1">
