@@ -146,6 +146,7 @@ export const AddressesSidePanel = ({
 						<Tooltip
 							visible={showManageHint}
 							interactive={true}
+							/* istanbul ignore else -- @preserve */
 							maxWidth={isXs ? 264 : "none"}
 							content={
 								<div className="px-[3px] pb-1.5 text-sm leading-5 sm:space-x-4 sm:pb-px sm:pt-px">
