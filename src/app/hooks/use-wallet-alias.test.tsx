@@ -36,7 +36,7 @@ describe("useWalletAlias", () => {
 		).toBe(false);
 	});
 
-	it("should return isDelegate = `true` when network is set and delegate is found even when no wallet or contact found", () => {
+	it("should return isDelegate = `false` when network is set and delegate is found even when no wallet or contact found", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
 		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
@@ -49,7 +49,7 @@ describe("useWalletAlias", () => {
 				network: wallet.network(),
 				profile,
 			}).isDelegate,
-		).toBe(true);
+		).toBe(false);
 	});
 
 	it("should return contact name", () => {
@@ -79,9 +79,60 @@ describe("useWalletAlias", () => {
 			address: wallet.address(),
 			alias: wallet.displayName(),
 			isContact: false,
-			isDelegate: false,
+			isDelegate: true,
 		});
 	});
+
+	it("should choose displayName over contact name", () => {
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+		expect(profile.contacts().values()).toHaveLength(2);
+
+		const contact = profile.contacts().create("testing contact", [{ address: wallet.address(), coin: "ARK", network: "ark.devnet" }]);
+		const contactAddress = contact.addresses().findByAddress(wallet.address())[0];
+
+		expect(profile.contacts().values()).toHaveLength(3);
+
+		expect(
+			result.current.getWalletAlias({
+				address: contactAddress.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toStrictEqual({
+			address: contactAddress.address(),
+			alias: wallet.displayName(),
+			isContact: false,
+			isDelegate: false,
+		});
+
+		profile.contacts().forget(contact.id());
+		expect(profile.contacts().values()).toHaveLength(2);
+	});
+
+	it("should choose contact name over username", () => {
+		const contact = profile.contacts().first();
+		const contactAddress = contact.addresses().first();
+
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		expect(result.current.getWalletAlias({ address: contactAddress.address(), profile, username: "delegate_username" })).toStrictEqual({
+			address: contactAddress.address(),
+			alias: contact.name(),
+			isContact: true,
+			isDelegate: false,
+		});
+	})
+
+	it("should choose username over address", () => {
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		expect(result.current.getWalletAlias({ address: wallet.address(), profile, username: "delegate_username" })).toStrictEqual({
+			address: wallet.address(),
+			alias: "delegate_username",
+			isContact: false,
+			isDelegate: false,
+		});
+	})
 
 	it("should return displayName and isDelegate = true when address is also a delegate", () => {
 		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
@@ -102,56 +153,7 @@ describe("useWalletAlias", () => {
 			isContact: false,
 			isDelegate: true,
 		});
-	});
 
-	it("should return delegate name", async () => {
-		await syncDelegates(profile);
-
-		const walletsSpy = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(undefined);
-		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
-
-		const delegate = env.delegates().all(wallet.coinId(), wallet.networkId())[0];
-
-		const { result } = renderHook(() => useWalletAlias(), { wrapper });
-
-		expect(
-			result.current.getWalletAlias({
-				address: wallet.address(),
-				address: delegate.address(),
-				network: wallet.network(),
-				profile,
-			}),
-		).toStrictEqual({
-			address: delegate.address(),
-			alias: delegate.username(),
-			isContact: false,
-			isDelegate: true,
-		});
-
-		walletsSpy.mockRestore();
-		contactsSpy.mockRestore();
-	});
-
-	it("should choose delegate name over alias if enabled in preferences", () => {
-		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
-
-		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
-			username: () => "delegate username",
-		} as any);
-
-		const { result } = renderHook(() => useWalletAlias(), { wrapper });
-
-		expect(
-			result.current.getWalletAlias({
-				address: wallet.address(),
-				network: wallet.network(),
-				profile,
-			}),
-		).toStrictEqual({
-			address: wallet.address(),
-			alias: "delegate username",
-			isContact: false,
-			isDelegate: true,
-		});
+		vi.spyOn(env.delegates(), "findByAddress").mockRestore();
 	});
 });
