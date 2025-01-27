@@ -14,6 +14,7 @@ import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { DashboardEmpty } from "./Dashboard.Empty";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const Dashboard = () => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData>();
@@ -26,40 +27,47 @@ export const Dashboard = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const activeWallet = activeProfile.wallets().first() as Contracts.IReadWriteWallet | undefined;
 	const { profileIsSyncing } = useConfiguration();
 
-	const networkAllowsVoting = useMemo(() => activeWallet?.network().allowsVoting(), [activeWallet]);
+	const { selectedWallets, selectedWallet } = usePortfolio({ profile: activeProfile })
 
 	const handleVoteButton = (filter?: string) => {
+		if (selectedWallets.length > 1) {
+			return history.push({
+				pathname: `/profiles/${activeProfile.id()}/votes`,
+			});
+		}
+
+		const wallet = selectedWallets.at(0)
 		/* istanbul ignore else -- @preserve */
 		if (filter) {
 			return history.push({
-				pathname: `/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}/votes`,
+				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`,
 				search: `?filter=${filter}`,
 			});
 		}
 
-		history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}/votes`);
+		history.push(`/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`);
 	};
 
 	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
-
 	const [isLoadingVotes, setIsLoadingVotes] = useState(true);
 
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
+	const networkAllowsVoting = useMemo(() => selectedWallet?.network().allowsVoting(), [selectedWallet]);
 
 	useEffect(() => {
-		const syncVotes = async () => {
+		const syncVotes = async (wallet) => {
 			try {
-				if (!activeWallet) {
+				if (!wallet) {
 					return;
 				}
+				setIsLoadingVotes(true);
 
-				await env.delegates().sync(activeProfile, activeWallet.coinId(), activeWallet.networkId());
-				await activeWallet.synchroniser().votes();
+				await env.delegates().sync(activeProfile, wallet.coinId(), wallet.networkId());
+				await wallet.synchroniser().votes();
 
-				setVotes(activeWallet.voting().current());
+				setVotes(wallet.voting().current());
 			} catch {
 				// TODO: Retry sync if error code is greater than 499. Needs status code number from sdk.
 			}
@@ -67,8 +75,13 @@ export const Dashboard = () => {
 			setIsLoadingVotes(false);
 		};
 
-		syncVotes();
-	}, [activeWallet, env, activeProfile]);
+		if (!selectedWallet) {
+			setIsLoadingVotes(false);
+			return
+		}
+
+		syncVotes(selectedWallet);
+	}, [selectedWallet, env, activeProfile]);
 
 	useEffect(() => {
 		if (!isUpdatingTransactions) {
@@ -76,7 +89,7 @@ export const Dashboard = () => {
 		}
 	}, [isUpdatingTransactions]);
 
-	if (!activeWallet) {
+	if (activeProfile.wallets().count() === 0) {
 		if (activeProfile.status().isRestored() && !profileIsSyncing) {
 			return (
 				<Page pageTitle={t("COMMON.WELCOME")}>
@@ -87,9 +100,10 @@ export const Dashboard = () => {
 		return <div />;
 	}
 
+
 	return (
 		<>
-			<Page pageTitle={activeWallet.address()}>
+			<Page pageTitle={selectedWallet?.address()}>
 				<Section
 					className="pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 					innerClassName="m-0 p-0 md:px-0 md:mx-auto"
@@ -132,7 +146,7 @@ export const Dashboard = () => {
 						<WalletVote
 							isLoadingVotes={isLoadingVotes}
 							votes={votes}
-							wallet={activeWallet}
+							wallet={selectedWallets.at(0)}
 							onButtonClick={handleVoteButton}
 						/>
 					</Section>
@@ -146,7 +160,7 @@ export const Dashboard = () => {
 					>
 						<Transactions
 							profile={activeProfile}
-							wallets={[activeWallet]}
+							wallets={selectedWallets}
 							isLoading={profileIsSyncing}
 							isUpdatingWallet={isUpdatingWallet}
 							onLoading={setIsUpdatingTransactions}

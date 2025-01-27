@@ -19,6 +19,7 @@ import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/compone
 import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
 import { assertWallet } from "@/utils/assertions";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const PortfolioHeader = ({
 	profile,
@@ -37,23 +38,9 @@ export const PortfolioHeader = ({
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-	const [addresses, setAddresses] = useState<string[]>([]);
+	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets } = usePortfolio({ profile })
 
-	const wallets = useMemo(() => {
-		const selectedWallets = profile
-			.wallets()
-			.values()
-			.filter((wallet) => addresses.includes(wallet.address()));
-
-		if (selectedWallets.length === 0) {
-			// TODO: Define default active wallet none are selected.
-			return [profile.wallets().first()];
-		}
-
-		return selectedWallets;
-	}, [addresses, profile]);
-
-	const wallet = wallets.at(0);
+	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
 
 	const isRestored = wallet.hasBeenFullyRestored();
@@ -76,7 +63,7 @@ export const PortfolioHeader = ({
 							className="cursor-pointer"
 							data-testid="ShowAddressesPanel"
 						>
-							<ViewingAddressInfo wallets={wallets} profile={profile} />
+							<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
 						</div>
 					</div>
 					<div className="flex flex-row items-center gap-1">
@@ -103,7 +90,7 @@ export const PortfolioHeader = ({
 				<div className="flex flex-col gap-0.5">
 					<div className="flex w-full flex-col gap-3 rounded bg-white p-4 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg">
 						<div className="flex w-full flex-row items-center justify-between">
-							{wallets.length === 1 && (
+							{selectedWallets.length === 1 && (
 								<div className="flex flex-row items-center gap-1.5">
 									<p className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5">
 										{t("COMMON.ADDRESS")}
@@ -124,43 +111,50 @@ export const PortfolioHeader = ({
 								</div>
 							)}
 
-							{wallets.length > 1 && (
+							{selectedWallets.length > 1 && (
 								<div className="flex flex-row items-center gap-1.5">
 									<p className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5">
 										{t("COMMON.ARK_BALANCE")}
 									</p>
 									<div>
 										<Amount
-											value={wallet.balance()}
+											value={balance.total().toNumber()}
 											ticker={wallet.currency()}
 											className="text-sm font-semibold leading-[17px] text-theme-primary-900 dark:text-theme-dark-50 md:text-base md:leading-5"
 										/>
 									</div>
 								</div>
 							)}
+
 							<div className="flex flex-row items-center gap-3">
-								<div className="flex items-center gap-2">
-									<Copy
-										copyData={wallet.address()}
-										tooltip={t("COMMON.COPY_ID")}
-										icon={(isCopied) =>
-											isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />
-										}
-									/>
+								{selectedWallets.length === 1 && (
+									<>
+										<div className="flex items-center gap-2">
+											<Copy
+												copyData={wallet.address()}
+												tooltip={t("COMMON.COPY_ID")}
+												icon={(isCopied) =>
+													isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />
+												}
+											/>
 
-									{!!wallet.publicKey() && (
-										<Copy
-											copyData={wallet.publicKey() as string}
-											tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
-											icon={() => <Icon name="CopyKey" />}
+											{!!wallet.publicKey() && (
+												<Copy
+													copyData={wallet.publicKey() as string}
+													tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
+													icon={() => <Icon name="CopyKey" />}
+												/>
+											)}
+										</div>
+
+										<Divider
+											type="vertical"
+											className="mx-0 hidden h-[17px] border-theme-secondary-300 p-0 dark:border-theme-dark-700 sm:block"
 										/>
-									)}
-								</div>
 
-								<Divider
-									type="vertical"
-									className="mx-0 hidden h-[17px] border-theme-secondary-300 p-0 dark:border-theme-dark-700 sm:block"
-								/>
+									</>
+
+								)}
 
 								<div className="hidden sm:flex">
 									<WalletActions
@@ -192,7 +186,7 @@ export const PortfolioHeader = ({
 								</div>
 
 								<div className="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 md:text-2xl md:leading-[29px]">
-									{isRestored && wallets.length === 1 && (
+									{isRestored && selectedWallets.length === 1 && (
 										<Amount
 											value={wallet.balance()}
 											ticker={wallet.currency()}
@@ -202,7 +196,7 @@ export const PortfolioHeader = ({
 									{!isRestored && (
 										<Skeleton width={67} className="h-[21px] md:h-[1.813rem] md:w-[4.188rem]" />
 									)}
-									{wallets.length === 1 && (
+									{selectedWallets.length === 1 && (
 										<Divider
 											type="vertical"
 											className="hidden h-6 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block"
@@ -210,7 +204,7 @@ export const PortfolioHeader = ({
 									)}
 									{isRestored && (
 										<Amount
-											value={convert(wallet.balance())}
+											value={balance.totalConverted().toNumber()}
 											ticker={wallet.exchangeCurrency()}
 											className="hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block"
 										/>
@@ -245,14 +239,14 @@ export const PortfolioHeader = ({
 										toggleContent={
 											<Tooltip
 												content={t("COMMON.SWITCH_TO_SINGLE_VIEW")}
-												disabled={wallets.length === 1}
+												disabled={selectedWallets.length === 1}
 											>
 												<span>
 													<Button
 														variant="secondary"
 														size="icon"
 														className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
-														disabled={wallets.length > 1}
+														disabled={selectedWallets.length > 1}
 													>
 														<Icon name="EllipsisVerticalFilled" size="lg" />
 													</Button>
@@ -272,7 +266,7 @@ export const PortfolioHeader = ({
 							onButtonClick={handleVotesButtonClick}
 							votes={votes}
 							isLoadingVotes={isLoadingVotes}
-							wallets={wallets}
+							wallets={selectedWallets}
 						/>
 					</div>
 				</div>
@@ -280,8 +274,10 @@ export const PortfolioHeader = ({
 
 			<AddressesSidePanel
 				wallets={profile.wallets()}
-				selectedAddresses={addresses}
-				onSelectedAddressesChange={setAddresses}
+				selectedAddresses={selectedAddresses}
+				onSelectedAddressesChange={(addresses) => {
+					setSelectedAddresses(addresses)
+				}}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
 				onDeleteAddress={(address: string) => {
