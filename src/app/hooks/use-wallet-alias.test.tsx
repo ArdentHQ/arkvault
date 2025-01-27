@@ -4,7 +4,7 @@ import React from "react";
 
 import { useWalletAlias } from "./use-wallet-alias";
 import { EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, getDefaultWalletId, syncDelegates } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletId } from "@/utils/testing-library";
 
 describe("useWalletAlias", () => {
 	let profile: Contracts.IProfile;
@@ -87,7 +87,9 @@ describe("useWalletAlias", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(profile.contacts().values()).toHaveLength(2);
 
-		const contact = profile.contacts().create("testing contact", [{ address: wallet.address(), coin: "ARK", network: "ark.devnet" }]);
+		const contact = profile
+			.contacts()
+			.create("testing contact", [{ address: wallet.address(), coin: "ARK", network: "ark.devnet" }]);
 		const contactAddress = contact.addresses().findByAddress(wallet.address())[0];
 
 		expect(profile.contacts().values()).toHaveLength(3);
@@ -115,24 +117,32 @@ describe("useWalletAlias", () => {
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({ address: contactAddress.address(), profile, username: "delegate_username" })).toStrictEqual({
+		expect(
+			result.current.getWalletAlias({
+				address: contactAddress.address(),
+				profile,
+				username: "delegate_username",
+			}),
+		).toStrictEqual({
 			address: contactAddress.address(),
 			alias: contact.name(),
 			isContact: true,
 			isDelegate: false,
 		});
-	})
+	});
 
 	it("should choose username over address", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({ address: wallet.address(), profile, username: "delegate_username" })).toStrictEqual({
+		expect(
+			result.current.getWalletAlias({ address: wallet.address(), profile, username: "delegate_username" }),
+		).toStrictEqual({
 			address: wallet.address(),
 			alias: "delegate_username",
 			isContact: false,
 			isDelegate: false,
 		});
-	})
+	});
 
 	it("should return displayName and isDelegate = true when address is also a delegate", () => {
 		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({

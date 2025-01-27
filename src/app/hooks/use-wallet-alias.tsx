@@ -48,7 +48,6 @@ const useWalletAlias = (): HookResult => {
 
 				let wallet: Contracts.IReadWriteWallet | undefined;
 
-
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 				}
