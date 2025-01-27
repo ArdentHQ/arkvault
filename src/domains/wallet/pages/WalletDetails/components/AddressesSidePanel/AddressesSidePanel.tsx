@@ -115,7 +115,7 @@ export const AddressesSidePanel = ({
 				}}
 			/>
 
-			<div className="-mx-3 my-3 rounded-r-sm border-l-2 bg-theme-secondary-100 border-theme-info-400 dark:bg-theme-dark-950 px-3 py-2.5 sm:mx-0 sm:border-none sm:bg-transparent sm:dark:bg-transparent sm:p-0">
+			<div className="-mx-3 my-3 rounded-r-sm border-l-2 border-theme-info-400 bg-theme-secondary-100 px-3 py-2.5 dark:bg-theme-dark-950 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0 sm:dark:bg-transparent">
 				<div className="flex justify-between sm:px-4">
 					<label
 						data-testid="SelectAllAddresses"
