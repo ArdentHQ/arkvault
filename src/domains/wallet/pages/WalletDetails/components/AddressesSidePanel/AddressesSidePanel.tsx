@@ -146,15 +146,17 @@ export const AddressesSidePanel = ({
 						<Tooltip
 							visible={showManageHint}
 							interactive={true}
-							maxWidth={isXs ? 264 : 'none'}
+							maxWidth={isXs ? 264 : "none"}
 							content={
-								<div className="sm:space-x-4 px-[3px] sm:pt-px pb-1.5 sm:pb-px text-sm leading-5">
-									<span className="block sm:inline mb-2 sm:mb-0">{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}</span>
+								<div className="px-[3px] pb-1.5 text-sm leading-5 sm:space-x-4 sm:pb-px sm:pt-px">
+									<span className="mb-2 block sm:mb-0 sm:inline">
+										{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}
+									</span>
 									<Button
 										size="xs"
 										variant="transparent"
 										data-testid="HideManageHint"
-										className="bg-theme-primary-500 px-4 py-1.5 w-full sm:w-auto"
+										className="w-full bg-theme-primary-500 px-4 py-1.5 sm:w-auto"
 										onClick={() => {
 											persistManageHint(true);
 											setShowManageHint(false);
@@ -226,10 +228,12 @@ export const AddressesSidePanel = ({
 			</div>
 
 			{isDeleteMode && (
-				<div className="my-2 sm:my-3 flex flex-col sm:flex-row sm:items-center overflow-hidden rounded sm:rounded-xl bg-theme-info-50 dark:bg-theme-dark-800">
-					<div className="flex space-x-2 sm:space-x-0 items-center w-full sm:w-auto bg-theme-info-100 px-4 py-2 sm:py-4.5 dark:bg-theme-info-600">
+				<div className="my-2 flex flex-col overflow-hidden rounded bg-theme-info-50 dark:bg-theme-dark-800 sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
+					<div className="flex w-full items-center space-x-2 bg-theme-info-100 px-4 py-2 dark:bg-theme-info-600 sm:w-auto sm:space-x-0 sm:py-4.5">
 						<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
-						<span className="sm:hidden font-semibold text-sm leading-[17px] text-theme-info-700 dark:text-white">{t("COMMON.INFORMATION")}</span>
+						<span className="text-sm font-semibold leading-[17px] text-theme-info-700 dark:text-white sm:hidden">
+							{t("COMMON.INFORMATION")}
+						</span>
 					</div>
 					<div className="p-4 text-sm text-theme-secondary-900 dark:text-theme-dark-50">
 						{t("WALLETS.ADDRESSES_SIDE_PANEL.DELETE_INFO")}
