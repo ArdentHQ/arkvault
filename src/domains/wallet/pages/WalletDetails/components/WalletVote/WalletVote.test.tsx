@@ -1,4 +1,4 @@
-/* eslint-disable testing-library/no-node-access */
+
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -94,7 +94,7 @@ describe("WalletVote", () => {
 		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(0);
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} wallets={[wallet]} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -111,7 +111,7 @@ describe("WalletVote", () => {
 		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(5);
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} wallets={[wallet]} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -144,13 +144,13 @@ describe("WalletVote", () => {
 
 		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
 
-		render(<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />);
+		render(<WalletVote wallets={[wallet]} wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		usesLockedBalance.mockRestore();
 	});
-
+	//
 	it("doesnt shows the locked votes when doenst used locked balance", async () => {
 		const votes = [
 			{
@@ -171,7 +171,7 @@ describe("WalletVote", () => {
 
 		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(false);
 
-		render(<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />);
+		render(<WalletVote wallets={[wallet]} wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
@@ -179,13 +179,13 @@ describe("WalletVote", () => {
 
 		usesLockedBalance.mockRestore();
 	});
-
+	//
 	it("should render the maximum votes", async () => {
 		const votes = [];
 		const maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} wallets={[wallet]} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("EmptyVotes")).resolves.toBeVisible();
@@ -209,7 +209,7 @@ describe("WalletVote", () => {
 			};
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />,
+				<WalletVote wallets={[wallet]} wallet={wallet} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -260,7 +260,7 @@ describe("WalletVote", () => {
 			};
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} wallets={[wallet]} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -285,7 +285,7 @@ describe("WalletVote", () => {
 
 		const onButtonClick = vi.fn();
 
-		render(<WalletVote wallet={wallet} onButtonClick={onButtonClick} votes={votes} isLoadingVotes={false} />);
+		render(<WalletVote wallets={[wallet]} wallet={wallet} onButtonClick={onButtonClick} votes={votes} isLoadingVotes={false} />);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
@@ -317,7 +317,7 @@ describe("WalletVote", () => {
 		];
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallets={[wallet]} wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -329,7 +329,7 @@ describe("WalletVote", () => {
 		const onButtonClick = vi.fn();
 
 		renderResponsive(
-			<WalletVote wallet={wallet} onButtonClick={onButtonClick} votes={[]} isLoadingVotes={false} />,
+			<WalletVote wallets={[wallet]} wallet={wallet} onButtonClick={onButtonClick} votes={[]} isLoadingVotes={false} />,
 			{
 				viewport: { height: 667, width: 375 },
 			},
