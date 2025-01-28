@@ -13,7 +13,9 @@ export const AddressRow = ({
 	isSelected,
 	usesDeleteMode,
 	onDelete,
+	isDeleteDisabled = false
 }: {
+	isDeleteDisabled?: boolean,
 	wallet: IReadWriteWallet;
 	toggleAddress: (address: string) => void;
 	isSelected: boolean;
@@ -35,6 +37,7 @@ export const AddressRow = ({
 	>
 		{usesDeleteMode && (
 			<Button
+				disabled={isDeleteDisabled}
 				onClick={() => onDelete(wallet.address())}
 				data-testid={`AddressRow--delete-${wallet.address()}`}
 				size="icon"

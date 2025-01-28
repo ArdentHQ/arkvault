@@ -56,9 +56,18 @@ export const AddressesSidePanel = ({
 			return;
 		}
 
-		selectedAddresses.includes(address)
-			? onSelectedAddressesChange(selectedAddresses.filter((a) => a !== address))
-			: onSelectedAddressesChange([...selectedAddresses, address]);
+		if (selectedAddresses.includes(address)) {
+			const remainingAddresses = selectedAddresses.filter((a) => a !== address)
+			// Cancel deselect. One address needs to always be selected.
+			if (remainingAddresses.length === 0) {
+				return
+			}
+
+			onSelectedAddressesChange(remainingAddresses)
+			return
+		}
+
+		onSelectedAddressesChange([...selectedAddresses, address]);
 	};
 
 	const markForDelete = (address: string) => {
@@ -227,6 +236,7 @@ export const AddressesSidePanel = ({
 			<div className="space-y-1">
 				{addressesToShow.map((wallet) => (
 					<AddressRow
+						isDeleteDisabled={addressesToShow.length === 1}
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
