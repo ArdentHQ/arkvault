@@ -70,11 +70,11 @@ export const TransactionDetailContent = ({
 						profile={profile}
 						senderAddress={transaction.sender()}
 						network={transaction.wallet().network()}
-						recipients={recipients.map(({ address, alias, isDelegate }) => ({
+						recipients={recipients.map(({ address, alias, isValidator }) => ({
 							address,
 							alias,
 							isContract: isContractTransaction(transaction),
-							isDelegate,
+							isValidator,
 						}))}
 						labelClassName={labelClassName}
 					/>

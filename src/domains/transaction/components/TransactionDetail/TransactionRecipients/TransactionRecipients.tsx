@@ -26,7 +26,7 @@ export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = 
 	}
 
 	if (recipients.length === 1) {
-		const { address, alias, isDelegate } = recipients[0];
+		const { address, alias, isValidator } = recipients[0];
 
 		const iconSize = isSm || isXs ? "xs" : "lg";
 		const iconSpaceClass = isSm || isXs ? "space-x-2" : "-space-x-1";
@@ -37,7 +37,7 @@ export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = 
 				label={t("TRANSACTION.RECIPIENT")}
 				extra={
 					<div className={cn("flex items-center", iconSpaceClass)}>
-						{isDelegate && <TransactionDelegateIcon />}
+						{isValidator && <TransactionDelegateIcon />}
 						<Avatar address={address} size={iconSize} />
 					</div>
 				}
