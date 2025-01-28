@@ -106,14 +106,13 @@ export const DashboardSetupAddressCards = () => {
 			</div>
 
 			<div className="flex items-center space-x-3">
-
-<DashboardSetupAddressCard
-	image="CreateAddress"
-	title={t("COMMON.CREATE_ADDRESS")}
-	description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
-	buttonText={t("COMMON.CREATE")}
-	onClick={handleCreate}
-/>
+				<DashboardSetupAddressCard
+					image="CreateAddress"
+					title={t("COMMON.CREATE_ADDRESS")}
+					description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
+					buttonText={t("COMMON.CREATE")}
+					onClick={handleCreate}
+				/>
 				<DashboardSetupAddressCard
 					image="ImportAddress"
 					title={t("COMMON.IMPORT_ADDRESS")}
