@@ -24,19 +24,19 @@ describe("useWalletAlias", () => {
 			address: "wrong-address",
 			alias: undefined,
 			isContact: false,
-			isDelegate: false,
+			isValidator: false,
 		});
 	});
 
-	it("should return isDelegate = `false` when network is set but no wallet, contact or delegate was found", () => {
+	it("should return isValidator = `false` when network is set but no wallet, contact or delegate was found", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
 		expect(
-			result.current.getWalletAlias({ address: "wrong-address", network: wallet.network(), profile }).isDelegate,
+			result.current.getWalletAlias({ address: "wrong-address", network: wallet.network(), profile }).isValidator,
 		).toBe(false);
 	});
 
-	it("should return isDelegate = `false` when network is set and delegate is found even when no wallet or contact found", () => {
+	it("should return isValidator = `false` when network is set and delegate is found even when no wallet or contact found", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
 		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
@@ -48,7 +48,7 @@ describe("useWalletAlias", () => {
 				address: "wrong-address",
 				network: wallet.network(),
 				profile,
-			}).isDelegate,
+			}).isValidator,
 		).toBe(false);
 	});
 
@@ -62,7 +62,7 @@ describe("useWalletAlias", () => {
 			address: contactAddress.address(),
 			alias: contact.name(),
 			isContact: true,
-			isDelegate: false,
+			isValidator: false,
 		});
 	});
 
@@ -79,7 +79,7 @@ describe("useWalletAlias", () => {
 			address: wallet.address(),
 			alias: wallet.displayName(),
 			isContact: false,
-			isDelegate: true,
+			isValidator: false,
 		});
 	});
 
@@ -104,7 +104,7 @@ describe("useWalletAlias", () => {
 			address: contactAddress.address(),
 			alias: wallet.displayName(),
 			isContact: false,
-			isDelegate: false,
+			isValidator: false,
 		});
 
 		profile.contacts().forget(contact.id());
@@ -127,7 +127,7 @@ describe("useWalletAlias", () => {
 			address: contactAddress.address(),
 			alias: contact.name(),
 			isContact: true,
-			isDelegate: false,
+			isValidator: false,
 		});
 	});
 
@@ -140,11 +140,11 @@ describe("useWalletAlias", () => {
 			address: wallet.address(),
 			alias: "delegate_username",
 			isContact: false,
-			isDelegate: false,
+			isValidator: false,
 		});
 	});
 
-	it("should return displayName and isDelegate = true when address is also a delegate", () => {
+	it("should return displayName and isValidator = true when address is also a delegate", () => {
 		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
 			username: () => "delegate username",
 		} as any);
@@ -161,7 +161,7 @@ describe("useWalletAlias", () => {
 			address: wallet.address(),
 			alias: wallet.displayName(),
 			isContact: false,
-			isDelegate: true,
+			isValidator: false,
 		});
 
 		vi.spyOn(env.delegates(), "findByAddress").mockRestore();
