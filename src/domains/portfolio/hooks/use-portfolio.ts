@@ -3,7 +3,7 @@ import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 
 interface PortfolioConfiguration {
 	selectedAddresses: string[];
