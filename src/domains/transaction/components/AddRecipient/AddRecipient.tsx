@@ -259,7 +259,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 				address,
 				alias: alias?.alias,
 				amount: +amount,
-				isDelegate: alias?.isDelegate,
+				isValidator: alias?.isValidator,
 			},
 		]);
 	};
@@ -271,7 +271,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 			address: recipientAddress,
 			alias: recipientAlias?.alias,
 			amount: +amount,
-			isDelegate: recipientAlias?.isDelegate,
+			isValidator: recipientAlias?.isValidator,
 		};
 
 		const newRecipients = [...addedRecipients, newRecipient];

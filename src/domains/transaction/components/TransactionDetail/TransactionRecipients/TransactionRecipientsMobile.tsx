@@ -42,7 +42,7 @@ export const TransactionRecipientsMobile: React.FC<TransactionRecipientsProperti
 									/>
 								</div>
 
-								{recipient.isDelegate && <TransactionDelegateIcon />}
+								{recipient.isValidator && <TransactionDelegateIcon />}
 								<Avatar size="xs" address={recipient.address} noShadow />
 							</div>
 						</RowWrapper>

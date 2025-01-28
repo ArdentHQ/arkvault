@@ -18,7 +18,7 @@ export interface TransactionDetailAddressListProperties {
 		address: string;
 		amount?: number;
 		alias?: string;
-		isDelegate?: boolean;
+		isValidator?: boolean;
 	}[];
 }
 
@@ -58,7 +58,7 @@ export const TransactionDetailAddressList = ({
 			label={Label}
 			extra={
 				<div className={cn("hidden items-center sm:flex", iconSpaceClass)}>
-					{recipient?.isDelegate && <TransactionDelegateIcon />}
+					{recipient?.isValidator && <TransactionDelegateIcon />}
 					<Avatar address={recipient?.address} size={iconSize} />
 				</div>
 			}
