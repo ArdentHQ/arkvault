@@ -288,7 +288,7 @@ describe("EncryptionPasswordStep", () => {
 		const walletId = profile.wallets().first().id();
 
 		await waitFor(() =>
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/wallets/${walletId}`),
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`),
 		);
 
 		historySpy.mockRestore();
