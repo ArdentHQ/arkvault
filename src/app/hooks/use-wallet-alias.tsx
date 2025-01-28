@@ -15,7 +15,7 @@ interface Properties {
 interface WalletAliasResult {
 	alias: string | undefined;
 	isContact: boolean;
-	isDelegate: boolean;
+	isValidator: boolean;
 	address: string;
 }
 
@@ -32,17 +32,17 @@ const useWalletAlias = (): HookResult => {
 				assertProfile(profile);
 				assertString(address);
 
-				const getDelegateUsername = (network?: Networks.Network): string | undefined => {
+				const checkIfDelegate = (network?: Networks.Network): boolean => {
 					if (!network) {
-						return undefined;
+						return false;
 					}
 
 					try {
 						const delegate = env.delegates().findByAddress(network.coin(), network.id(), address);
 
-						return delegate.username();
+						return delegate.isDelegate();
 					} catch {
-						return undefined;
+						return false;
 					}
 				};
 
@@ -57,7 +57,7 @@ const useWalletAlias = (): HookResult => {
 						address,
 						alias: wallet.displayName(),
 						isContact: false,
-						isDelegate: !!getDelegateUsername(network),
+						isValidator: checkIfDelegate(network),
 					};
 				}
 
@@ -68,7 +68,7 @@ const useWalletAlias = (): HookResult => {
 						address,
 						alias: contact.name(),
 						isContact: true,
-						isDelegate: !!getDelegateUsername(network),
+						isValidator: checkIfDelegate(network),
 					};
 				}
 
@@ -77,7 +77,7 @@ const useWalletAlias = (): HookResult => {
 						address,
 						alias: username,
 						isContact: false,
-						isDelegate: !!getDelegateUsername(network),
+						isValidator: checkIfDelegate(network),
 					};
 				}
 			} catch {
@@ -88,7 +88,7 @@ const useWalletAlias = (): HookResult => {
 				address,
 				alias: undefined,
 				isContact: false,
-				isDelegate: false,
+				isValidator: false,
 			};
 		},
 		[env],
