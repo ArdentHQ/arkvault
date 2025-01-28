@@ -3,7 +3,7 @@ import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 
 interface PortfolioConfiguration {
 	selectedAddresses: string[];
@@ -41,6 +41,7 @@ function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environme
 			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
 				selectedAddresses: [],
 			}) as PortfolioConfiguration;
+
 			return config.selectedAddresses ?? [];
 		},
 		/**
@@ -55,12 +56,11 @@ function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environme
 				return profile.wallets().first();
 			}
 
-			const addresses = SelectedAddresses({ env, profile });
-			if (addresses.all().length === 0) {
+			if (this.all().length === 0) {
 				return profile.wallets().first();
 			}
 
-			return addresses.toWallets().at(0);
+			return this.toWallets().at(0);
 		},
 		/**
 		 * Determines whether the profile has a selected address.
@@ -78,7 +78,7 @@ function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environme
 		 */
 		async set(selectedAddresses: string[]): Promise<void> {
 			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, { selectedAddresses });
-			await env.profiles().persist(profile);
+			await env.persist();
 		},
 		/**
 		 * Returns the selected addresses as wallets.
@@ -108,30 +108,24 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { selectedAddresses, setConfiguration } = useConfiguration();
 
 	const addresses = SelectedAddresses({ env, profile });
-
 	const wallets = addresses.toWallets();
 	const balance = Balance({ wallets });
+	const allAddresses = addresses.all()
 
-	const selected = useMemo(() => {
-		if (!!selectedAddresses && selectedAddresses.length > 0) {
-			return selectedAddresses;
+	useEffect(() => {
+		if (selectedAddresses.length === 0) {
+			setConfiguration({ selectedAddresses: allAddresses })
 		}
-
-		if (profile.wallets().count() > 0) {
-			return [profile.wallets().first().address()];
-		}
-
-		return [];
-	}, [selectedAddresses, profile]);
+	}, [selectedAddresses, allAddresses])
 
 	return {
 		balance,
-		selectedAddresses: selected,
+		selectedAddresses,
 		selectedWallet: addresses.defaultSelectedWallet(),
 		selectedWallets: wallets,
 		setSelectedAddresses: async (selectedAddresses: string[]) => {
-			setConfiguration({ selectedAddresses });
 			await addresses.set(selectedAddresses);
+			setConfiguration({ selectedAddresses });
 		},
 	};
 };
