@@ -15,7 +15,6 @@ interface Properties {
 interface WalletAliasResult {
 	alias: string | undefined;
 	isContact: boolean;
-	isValidator: boolean;
 	address: string;
 }
 
@@ -32,20 +31,6 @@ const useWalletAlias = (): HookResult => {
 				assertProfile(profile);
 				assertString(address);
 
-				const checkIfDelegate = (network?: Networks.Network): boolean => {
-					if (!network) {
-						return false;
-					}
-
-					try {
-						const delegate = env.delegates().findByAddress(network.coin(), network.id(), address);
-
-						return delegate.isDelegate();
-					} catch {
-						return false;
-					}
-				};
-
 				let wallet: Contracts.IReadWriteWallet | undefined;
 
 				if (network) {
@@ -57,7 +42,6 @@ const useWalletAlias = (): HookResult => {
 						address,
 						alias: wallet.displayName(),
 						isContact: false,
-						isValidator: checkIfDelegate(network),
 					};
 				}
 
@@ -68,7 +52,6 @@ const useWalletAlias = (): HookResult => {
 						address,
 						alias: contact.name(),
 						isContact: true,
-						isValidator: checkIfDelegate(network),
 					};
 				}
 
@@ -77,7 +60,6 @@ const useWalletAlias = (): HookResult => {
 						address,
 						alias: username,
 						isContact: false,
-						isValidator: checkIfDelegate(network),
 					};
 				}
 			} catch {
@@ -88,7 +70,6 @@ const useWalletAlias = (): HookResult => {
 				address,
 				alias: undefined,
 				isContact: false,
-				isValidator: false,
 			};
 		},
 		[env],
