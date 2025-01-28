@@ -110,13 +110,13 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	const addresses = SelectedAddresses({ env, profile });
 	const wallets = addresses.toWallets();
 	const balance = Balance({ wallets });
-	const allAddresses = addresses.all()
+	const allAddresses = addresses.all();
 
 	useEffect(() => {
 		if (selectedAddresses.length === 0) {
-			setConfiguration({ selectedAddresses: allAddresses })
+			setConfiguration({ selectedAddresses: allAddresses });
 		}
-	}, [selectedAddresses, allAddresses])
+	}, [selectedAddresses, allAddresses]);
 
 	return {
 		balance,
