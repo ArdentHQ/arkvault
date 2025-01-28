@@ -60,25 +60,18 @@ export const DashboardSetupAddressCard = ({
 	image,
 	buttonText,
 	onClick,
-	variant = "primary",
 }: {
 	title: string;
 	description: string;
 	image: string;
 	buttonText: string;
 	onClick: () => void;
-	variant?: "primary" | "secondary";
 }) => (
 	<div
-		className={cn("rounded border border-theme-secondary-300 p-4 dark:border-theme-dark-700 md:rounded-xl md:p-8", {
-			"bg-theme-primary-100 dark:bg-theme-dark-800": variant === "primary",
-		})}
+		className={cn("rounded border border-theme-secondary-300 p-4 dark:border-theme-dark-700 md:rounded-xl md:p-8 dark:bg-theme-dark-900 dark:hover:bg-theme-dark-950 dark:hover:border-theme-dark-950 group transition-all bg-white hover:bg-theme-primary-50 hover:border-theme-primary-50")}
 	>
 		<h3
-			className={cn("md:leading-7.5 mb-2 text-lg font-semibold leading-4 md:text-2xl", {
-				"text-theme-primary-900 dark:text-theme-dark-50": variant === "primary",
-				"text-theme-secondary-900 dark:text-theme-dark-50": variant === "secondary",
-			})}
+			className={cn("md:leading-7.5 mb-2 text-lg font-semibold leading-4 md:text-2xl dark:text-theme-dark-50 text-theme-secondary-900 group-hover:text-theme-primary-900")}
 		>
 			{title}
 		</h3>
@@ -86,7 +79,7 @@ export const DashboardSetupAddressCard = ({
 		<div className="mx-auto my-6 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
-		<Button variant={variant} className="w-full" onClick={onClick}>
+		<Button variant="secondary" className="w-full dark:hover:bg-theme-dark-navy-700 dark:border dark:border-theme-dark-600 dark:hover:border-theme-dark-navy-700" onClick={onClick}>
 			{buttonText}
 		</Button>
 	</div>
@@ -109,7 +102,6 @@ export const DashboardSetupAddressCards = () => {
 					description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
 					buttonText={t("COMMON.IMPORT")}
 					onClick={handleImport}
-					variant="secondary"
 				/>
 
 				<DashboardSetupAddressCard
@@ -118,7 +110,6 @@ export const DashboardSetupAddressCards = () => {
 					description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
 					buttonText={t("COMMON.CREATE")}
 					onClick={handleCreate}
-					variant="primary"
 				/>
 			</div>
 		</div>
