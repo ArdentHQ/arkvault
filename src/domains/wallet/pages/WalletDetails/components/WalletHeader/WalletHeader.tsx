@@ -36,7 +36,8 @@ export const WalletHeader = ({
 	handleVotesButtonClick: (address?: string) => void;
 	onUpdate?: (status: boolean) => void;
 }) => {
-	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
+	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } =
+		useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 

@@ -19,7 +19,7 @@ export const MultiEntryItem = ({
 	<div
 		data-testid={dataTestId}
 		className={cn(
-			"mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black",
+			"mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-dark-700 dark:bg-theme-dark-900",
 			{
 				"md:rounded-none md:border-x-0 md:border-b-0 md:border-dashed md:bg-transparent md:pt-3 md:dark:bg-transparent":
 					size === "md",
@@ -42,7 +42,7 @@ export const MultiEntryItem = ({
 			>
 				<div
 					className={cn(
-						"flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900",
+						"flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-dark-950",
 						{
 							"md:bg-transparent md:p-0 dark:md:bg-transparent": size === "md",
 							"sm:bg-transparent sm:p-0 dark:sm:bg-transparent": size === "sm",
