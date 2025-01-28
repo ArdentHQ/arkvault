@@ -17,6 +17,7 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/Wall
 import { WalletActions } from "./WalletHeader.blocks";
 import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { Skeleton } from "@/app/components/Skeleton";
+import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 
 export const WalletHeader = ({
 	profile,
@@ -35,7 +36,7 @@ export const WalletHeader = ({
 	handleVotesButtonClick: (address?: string) => void;
 	onUpdate?: (status: boolean) => void;
 }) => {
-	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
+	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 
@@ -256,6 +257,15 @@ export const WalletHeader = ({
 				onDeleteAddress={(address: string) => {
 					const wallets = profile.wallets().filterByAddress(address);
 					profile.wallets().forget(wallets[0].id());
+				}}
+			/>
+
+			<WalletActionsModals
+				wallet={wallet}
+				activeModal={activeModal}
+				setActiveModal={setActiveModal}
+				onUpdateWallet={() => {
+					onUpdate?.(true);
 				}}
 			/>
 		</header>
