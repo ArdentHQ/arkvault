@@ -220,19 +220,34 @@ export const PortfolioHeader = ({
 							</div>
 
 							<div className="flex flex-row items-center gap-3">
-								<Button
-									data-testid="WalletHeader__send-button"
-									className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
-									disabled={
-										wallet.balance() === 0 ||
-										!wallet.hasBeenFullyRestored() ||
-										!wallet.hasSyncedWithNetwork()
-									}
-									variant="primary"
-									onClick={handleSend}
-								>
-									{t("COMMON.SEND")}
-								</Button>
+								{selectedWallets.length === 1 && (
+									<Button
+										data-testid="WalletHeader__send-button"
+										className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
+										disabled={
+											wallet.balance() === 0 ||
+											!wallet.hasBeenFullyRestored() ||
+											!wallet.hasSyncedWithNetwork()
+										}
+										variant="primary"
+										onClick={handleSend}
+									>
+										{t("COMMON.SEND")}
+									</Button>
+								)}
+
+								{selectedWallets.length > 1 && (
+									<Button
+										data-testid="WalletHeader__send-button"
+										className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
+										disabled={balance.total().isZero()}
+										variant="primary"
+										onClick={handleSend}
+									>
+										{t("COMMON.SEND")}
+									</Button>
+								)}
+
 
 								<div data-testid="WalletHeaderMobile__more-button" className="my-auto">
 									<Dropdown
