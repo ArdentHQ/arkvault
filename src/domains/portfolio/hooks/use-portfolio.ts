@@ -52,15 +52,15 @@ function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environme
 		 */
 		defaultSelectedWallet(): IReadWriteWallet | undefined {
 			if (profile.wallets().count() === 1) {
-				return profile.wallets().first()
+				return profile.wallets().first();
 			}
 
 			const addresses = SelectedAddresses({ env, profile });
 			if (addresses.all().length === 0) {
-				return profile.wallets().first()
+				return profile.wallets().first();
 			}
 
-			return addresses.toWallets().at(0)
+			return addresses.toWallets().at(0);
 		},
 		/**
 		 * Determines whether the profile has a selected address.
@@ -68,7 +68,7 @@ function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environme
 		 * @returns {boolean}
 		 */
 		hasSelected(): boolean {
-			return this.all().length > 0
+			return this.all().length > 0;
 		},
 		/**
 		 * Sets a new address and persists the change.
@@ -99,7 +99,7 @@ function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environme
 			}
 
 			return wallets;
-		}
+		},
 	};
 }
 
@@ -114,15 +114,15 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 
 	const selected = useMemo(() => {
 		if (!!selectedAddresses && selectedAddresses.length > 0) {
-			return selectedAddresses
+			return selectedAddresses;
 		}
 
 		if (profile.wallets().count() > 0) {
-			return [profile.wallets().first().address()]
+			return [profile.wallets().first().address()];
 		}
 
-		return []
-	}, [selectedAddresses, profile])
+		return [];
+	}, [selectedAddresses, profile]);
 
 	return {
 		balance,

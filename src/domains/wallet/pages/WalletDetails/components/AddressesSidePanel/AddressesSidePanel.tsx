@@ -99,11 +99,11 @@ export const AddressesSidePanel = ({
 
 	const isSelected = (wallet: Contracts.IReadWriteWallet) => {
 		if (selectedAddresses.length === 0) {
-			return true
+			return true;
 		}
 
-		return selectedAddresses.includes(wallet.address())
-	}
+		return selectedAddresses.includes(wallet.address());
+	};
 
 	return (
 		<SidePanel
