@@ -26,7 +26,7 @@ export const AddressesSidePanel = ({
 	onSelectedAddressesChange: (addresses: string[]) => void;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	onDeleteAddress: (address: string) => void;
+	onDeleteAddress: (address: string) => Promise<void>;
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 
@@ -208,17 +208,19 @@ export const AddressesSidePanel = ({
 								size="icon"
 								variant="transparent"
 								onClick={() => {
-									for (const address of addressesToDelete) {
-										onDeleteAddress(address);
-									}
+									Promise
+										.all(addressesToDelete.map(address => onDeleteAddress(address)))
+										.then(() => {
+											const activeAddresses = selectedAddresses.filter(
+												(address) => !addressesToDelete.includes(address),
+											);
 
-									const activeAddresses = selectedAddresses.filter(
-										(address) => !addressesToDelete.includes(address),
-									);
+											onSelectedAddressesChange(activeAddresses);
 
-									onSelectedAddressesChange(activeAddresses);
+											resetDeleteState();
 
-									resetDeleteState();
+											return;
+										}).catch(() => {})
 								}}
 								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
 							>

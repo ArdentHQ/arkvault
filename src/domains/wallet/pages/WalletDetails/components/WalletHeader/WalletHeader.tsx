@@ -17,6 +17,7 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/Wall
 import { WalletActions } from "./WalletHeader.blocks";
 import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { Skeleton } from "@/app/components/Skeleton";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const WalletHeader = ({
 	profile,
@@ -35,6 +36,8 @@ export const WalletHeader = ({
 	handleVotesButtonClick: (address?: string) => void;
 	onUpdate?: (status: boolean) => void;
 }) => {
+	const { persist } = useEnvironmentContext();
+
 	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
@@ -253,9 +256,13 @@ export const WalletHeader = ({
 				onSelectedAddressesChange={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				onDeleteAddress={(address: string) => {
+				onDeleteAddress={async (address: string) => {
 					const wallets = profile.wallets().filterByAddress(address);
+
 					profile.wallets().forget(wallets[0].id());
+
+					profile.notifications().transactions().forgetByRecipient(address);
+					await persist();
 				}}
 			/>
 		</header>
