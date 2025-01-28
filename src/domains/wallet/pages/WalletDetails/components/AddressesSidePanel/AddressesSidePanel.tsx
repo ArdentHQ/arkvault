@@ -11,7 +11,6 @@ import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
-import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 export const AddressesSidePanel = ({
