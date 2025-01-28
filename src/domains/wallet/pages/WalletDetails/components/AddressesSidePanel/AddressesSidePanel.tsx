@@ -11,6 +11,8 @@ import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
+import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 export const AddressesSidePanel = ({
 	wallets,
@@ -95,6 +97,14 @@ export const AddressesSidePanel = ({
 		});
 
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
+
+	const isSelected = (wallet: Contracts.IReadWriteWallet) => {
+		if (selectedAddresses.length === 0) {
+			return true
+		}
+
+		return selectedAddresses.includes(wallet.address())
+	}
 
 	return (
 		<SidePanel
@@ -240,7 +250,7 @@ export const AddressesSidePanel = ({
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
-						isSelected={selectedAddresses.includes(wallet.address())}
+						isSelected={isSelected(wallet)}
 						usesDeleteMode={isDeleteMode}
 						onDelete={markForDelete}
 					/>

@@ -3,7 +3,7 @@ import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 interface PortfolioConfiguration {
 	selectedAddresses: string[];
@@ -32,17 +32,60 @@ function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 
 function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environment }) {
 	return {
+		/**
+		 * Returns all the selected profile selected addresses.
+		 *
+		 * @returns {string[]}
+		 */
 		all(): string[] {
 			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
 				selectedAddresses: [],
 			}) as PortfolioConfiguration;
 			return config.selectedAddresses ?? [];
 		},
+		/**
+		 * Find the default selected wallet.
+		 * Returns the first available wallet if profile hasn't stored any selection yet.
+		 * Otherwise returns the first selection.
+		 *
+		 * @returns {IReadWriteWallet | undefined}
+		 */
+		defaultSelectedWallet(): IReadWriteWallet | undefined {
+			if (profile.wallets().count() === 1) {
+				return profile.wallets().first()
+			}
+
+			const addresses = SelectedAddresses({ env, profile });
+			if (addresses.all().length === 0) {
+				return profile.wallets().first()
+			}
+
+			return addresses.toWallets().at(0)
+		},
+		/**
+		 * Determines whether the profile has a selected address.
+		 *
+		 * @returns {boolean}
+		 */
+		hasSelected(): boolean {
+			return this.all().length > 0
+		},
+		/**
+		 * Sets a new address and persists the change.
+		 *
+		 * @param {string[]} selectedAddresses
+		 * @returns {Promise<void>}
+		 */
 		async set(selectedAddresses: string[]): Promise<void> {
 			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, { selectedAddresses });
 			await env.profiles().persist(profile);
 		},
-		toWallets() {
+		/**
+		 * Returns the selected addresses as wallets.
+		 *
+		 * @returns {IReadWriteWallet[]}
+		 */
+		toWallets(): IReadWriteWallet[] {
 			const selected = this.all();
 
 			const wallets = profile
@@ -56,7 +99,7 @@ function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environme
 			}
 
 			return wallets;
-		},
+		}
 	};
 }
 
@@ -69,14 +112,22 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	const wallets = addresses.toWallets();
 	const balance = Balance({ wallets });
 
-	useEffect(() => {
-		setConfiguration({ selectedAddresses: addresses.all() });
-	}, []);
+	const selected = useMemo(() => {
+		if (!!selectedAddresses && selectedAddresses.length > 0) {
+			return selectedAddresses
+		}
+
+		if (profile.wallets().count() > 0) {
+			return [profile.wallets().first().address()]
+		}
+
+		return []
+	}, [selectedAddresses, profile])
 
 	return {
 		balance,
-		selectedAddresses: selectedAddresses ?? [],
-		selectedWallet: wallets.length === 1 ? wallets.at(0) : undefined,
+		selectedAddresses: selected,
+		selectedWallet: addresses.defaultSelectedWallet(),
 		selectedWallets: wallets,
 		setSelectedAddresses: async (selectedAddresses: string[]) => {
 			setConfiguration({ selectedAddresses });
