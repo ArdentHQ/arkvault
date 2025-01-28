@@ -248,7 +248,6 @@ export const PortfolioHeader = ({
 									</Button>
 								)}
 
-
 								<div data-testid="WalletHeaderMobile__more-button" className="my-auto">
 									<Dropdown
 										options={[
