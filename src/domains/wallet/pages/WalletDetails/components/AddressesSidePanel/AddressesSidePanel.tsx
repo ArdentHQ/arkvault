@@ -92,16 +92,14 @@ export const AddressesSidePanel = ({
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
 
 	const confirmAddressDeletion = async () => {
-		await Promise.all(addressesToDelete.map(address => onDeleteAddress(address)));
+		await Promise.all(addressesToDelete.map((address) => onDeleteAddress(address)));
 
-		const activeAddresses = selectedAddresses.filter(
-			(address) => !addressesToDelete.includes(address),
-		);
+		const activeAddresses = selectedAddresses.filter((address) => !addressesToDelete.includes(address));
 
 		onSelectedAddressesChange(activeAddresses);
 
 		resetDeleteState();
-	}
+	};
 
 	return (
 		<SidePanel
