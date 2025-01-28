@@ -91,6 +91,18 @@ export const AddressesSidePanel = ({
 
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
 
+	const confirmAddressDeletion = async () => {
+		await Promise.all(addressesToDelete.map(address => onDeleteAddress(address)));
+
+		const activeAddresses = selectedAddresses.filter(
+			(address) => !addressesToDelete.includes(address),
+		);
+
+		onSelectedAddressesChange(activeAddresses);
+
+		resetDeleteState();
+	}
+
 	return (
 		<SidePanel
 			header={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
@@ -208,19 +220,7 @@ export const AddressesSidePanel = ({
 								size="icon"
 								variant="transparent"
 								onClick={() => {
-									Promise
-										.all(addressesToDelete.map(address => onDeleteAddress(address)))
-										.then(() => {
-											const activeAddresses = selectedAddresses.filter(
-												(address) => !addressesToDelete.includes(address),
-											);
-
-											onSelectedAddressesChange(activeAddresses);
-
-											resetDeleteState();
-
-											return 0;
-										}).catch(() => {})
+									void confirmAddressDeletion();
 								}}
 								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
 							>
