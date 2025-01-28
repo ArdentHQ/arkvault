@@ -67,11 +67,17 @@ export const DashboardSetupAddressCard = ({
 	buttonText: string;
 	onClick: () => void;
 }) => (
-	<div
-		className={cn("rounded border border-theme-secondary-300 p-4 dark:border-theme-dark-700 md:rounded-xl md:p-8 dark:bg-theme-dark-900 dark:hover:bg-theme-dark-950 dark:hover:border-theme-dark-950 group transition-all bg-white hover:bg-theme-primary-50 hover:border-theme-primary-50")}
+	<button
+		className={cn(
+			"group rounded border border-theme-secondary-300 bg-white p-4 transition-all hover:border-theme-primary-50 hover:bg-theme-primary-50 dark:border-theme-dark-700 dark:bg-theme-dark-900 dark:hover:border-theme-dark-950 dark:hover:bg-theme-dark-950 md:rounded-xl md:p-8",
+		)}
+		type="button"
+		onClick={onClick}
 	>
 		<h3
-			className={cn("md:leading-7.5 mb-2 text-lg font-semibold leading-4 md:text-2xl dark:text-theme-dark-50 text-theme-secondary-900 group-hover:text-theme-primary-900")}
+			className={cn(
+				"md:leading-7.5 mb-2 text-lg font-semibold leading-4 text-theme-secondary-900 group-hover:text-theme-primary-900 dark:text-theme-dark-50 md:text-2xl",
+			)}
 		>
 			{title}
 		</h3>
@@ -79,10 +85,14 @@ export const DashboardSetupAddressCard = ({
 		<div className="mx-auto my-6 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
-		<Button variant="secondary" className="w-full dark:hover:bg-theme-dark-navy-700 dark:border dark:border-theme-dark-600 dark:hover:border-theme-dark-navy-700" onClick={onClick}>
+		<Button
+			variant="secondary"
+			className="w-full dark:border dark:border-theme-dark-600 dark:hover:border-theme-dark-navy-700 dark:hover:bg-theme-dark-navy-700"
+			onClick={onClick}
+		>
 			{buttonText}
 		</Button>
-	</div>
+	</button>
 );
 
 export const DashboardSetupAddressCards = () => {
@@ -96,20 +106,20 @@ export const DashboardSetupAddressCards = () => {
 			</div>
 
 			<div className="flex items-center space-x-3">
+
+<DashboardSetupAddressCard
+	image="CreateAddress"
+	title={t("COMMON.CREATE_ADDRESS")}
+	description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
+	buttonText={t("COMMON.CREATE")}
+	onClick={handleCreate}
+/>
 				<DashboardSetupAddressCard
 					image="ImportAddress"
 					title={t("COMMON.IMPORT_ADDRESS")}
 					description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
 					buttonText={t("COMMON.IMPORT")}
 					onClick={handleImport}
-				/>
-
-				<DashboardSetupAddressCard
-					image="CreateAddress"
-					title={t("COMMON.CREATE_ADDRESS")}
-					description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
-					buttonText={t("COMMON.CREATE")}
-					onClick={handleCreate}
 				/>
 			</div>
 		</div>
