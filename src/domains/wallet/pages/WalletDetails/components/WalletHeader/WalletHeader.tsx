@@ -18,6 +18,7 @@ import { WalletActions } from "./WalletHeader.blocks";
 import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { Skeleton } from "@/app/components/Skeleton";
 import { useEnvironmentContext } from "@/app/contexts";
+import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 
 export const WalletHeader = ({
 	profile,
@@ -38,7 +39,8 @@ export const WalletHeader = ({
 }) => {
 	const { persist } = useEnvironmentContext();
 
-	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
+	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } =
+		useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 
@@ -225,6 +227,7 @@ export const WalletHeader = ({
 										]}
 										toggleContent={
 											<Button
+												data-testid="PortfolioHeaderOptionsTrigger"
 												variant="secondary"
 												size="icon"
 												className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
@@ -263,6 +266,15 @@ export const WalletHeader = ({
 
 					profile.notifications().transactions().forgetByRecipient(address);
 					await persist();
+				}}
+			/>
+
+			<WalletActionsModals
+				wallet={wallet}
+				activeModal={activeModal}
+				setActiveModal={setActiveModal}
+				onUpdateWallet={() => {
+					onUpdate?.(true);
 				}}
 			/>
 		</header>
