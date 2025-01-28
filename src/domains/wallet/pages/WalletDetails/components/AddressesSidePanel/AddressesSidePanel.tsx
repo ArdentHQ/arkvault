@@ -59,14 +59,14 @@ export const AddressesSidePanel = ({
 		}
 
 		if (selectedAddresses.includes(address)) {
-			const remainingAddresses = selectedAddresses.filter((a) => a !== address)
+			const remainingAddresses = selectedAddresses.filter((a) => a !== address);
 			// Cancel deselect. One address needs to always be selected.
 			if (remainingAddresses.length === 0) {
-				return
+				return;
 			}
 
-			onSelectedAddressesChange(remainingAddresses)
-			return
+			onSelectedAddressesChange(remainingAddresses);
+			return;
 		}
 
 		onSelectedAddressesChange([...selectedAddresses, address]);

@@ -13,9 +13,9 @@ export const AddressRow = ({
 	isSelected,
 	usesDeleteMode,
 	onDelete,
-	isDeleteDisabled = false
+	isDeleteDisabled = false,
 }: {
-	isDeleteDisabled?: boolean,
+	isDeleteDisabled?: boolean;
 	wallet: IReadWriteWallet;
 	toggleAddress: (address: string) => void;
 	isSelected: boolean;
