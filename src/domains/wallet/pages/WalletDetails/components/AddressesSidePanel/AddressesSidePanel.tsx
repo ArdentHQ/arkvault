@@ -1,3 +1,4 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { Input } from "@/app/components/Input";
 import { Icon } from "@/app/components/Icon";
