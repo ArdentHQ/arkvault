@@ -61,7 +61,7 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[wallets.first().address()]}
+				selectedAddresses={[wallets.first().address(), wallets.last().address()]}
 				open={true}
 				onSelectedAddressesChange={onSelectedAddressChange}
 				onOpenChange={vi.fn()}
@@ -71,7 +71,7 @@ describe("AddressesSidePanel", () => {
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 
-		expect(onSelectedAddressChange).toHaveBeenCalledWith([]);
+		expect(onSelectedAddressChange).toHaveBeenCalledWith([wallets.last().address()]);
 	});
 
 	it("should select all displayed addresses when `select all` clicked", async () => {
