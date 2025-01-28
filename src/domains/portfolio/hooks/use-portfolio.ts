@@ -33,11 +33,9 @@ function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environment }) {
 	return {
 		all(): string[] {
-			const config = profile
-				.settings()
-				.get(Contracts.ProfileSetting.DashboardConfiguration, {
-					selectedAddresses: [],
-				}) as PortfolioConfiguration;
+			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
+				selectedAddresses: [],
+			}) as PortfolioConfiguration;
 			return config.selectedAddresses ?? [];
 		},
 		async set(selectedAddresses: string[]): Promise<void> {
