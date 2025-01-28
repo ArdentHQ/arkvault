@@ -208,8 +208,7 @@ export const AddressesSidePanel = ({
 								size="icon"
 								variant="transparent"
 								onClick={() => {
-									Promise
-										.all(addressesToDelete.map(address => onDeleteAddress(address)))
+									Promise.all(addressesToDelete.map((address) => onDeleteAddress(address)))
 										.then(() => {
 											const activeAddresses = selectedAddresses.filter(
 												(address) => !addressesToDelete.includes(address),
@@ -220,7 +219,8 @@ export const AddressesSidePanel = ({
 											resetDeleteState();
 
 											return 0;
-										}).catch(() => {})
+										})
+										.catch(() => {});
 								}}
 								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
 							>
