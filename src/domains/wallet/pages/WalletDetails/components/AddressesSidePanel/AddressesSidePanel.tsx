@@ -218,8 +218,6 @@ export const AddressesSidePanel = ({
 											onSelectedAddressesChange(activeAddresses);
 
 											resetDeleteState();
-
-											return;
 										}).catch(() => {})
 								}}
 								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
