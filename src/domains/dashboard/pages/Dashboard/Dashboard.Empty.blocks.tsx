@@ -76,22 +76,21 @@ export const DashboardSetupAddressCard = ({
 	>
 		<h3
 			className={cn(
-				"md:leading-7.5 mb-2 text-lg font-semibold leading-4 text-theme-secondary-900 group-hover:text-theme-primary-900 dark:text-theme-dark-50 md:text-2xl",
+				"md:leading-7.5 mb-2 text-lg font-semibold leading-4 text-theme-secondary-900 group-hover:text-theme-primary-900 dark:text-theme-dark-50 md:text-2xl text-left dark:group-hover:text-theme-dark-50",
 			)}
 		>
 			{title}
 		</h3>
-		<p className="mb-6 text-sm leading-5 text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>
+		<p className="mb-6 text-sm leading-5 text-theme-secondary-700 dark:text-theme-dark-200 text-left">{description}</p>
 		<div className="mx-auto my-6 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
-		<Button
-			variant="secondary"
-			className="w-full dark:border dark:border-theme-dark-600 dark:hover:border-theme-dark-navy-700 dark:hover:bg-theme-dark-navy-700"
+		<div
+			className="w-full bg-theme-primary-100 text-theme-primary-600 group-hover:bg-theme-primary-800 green:group-hover:bg-theme-primary-700 group-hover:text-white dark:border dark:border-theme-dark-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:group-hover:border-theme-dark-navy-700 dark:group-hover:bg-theme-dark-navy-700 py-3 rounded transition-all text-base leading-5 font-semibold duration-100 ease-linear"
 			onClick={onClick}
 		>
 			{buttonText}
-		</Button>
+		</div>
 	</button>
 );
 
