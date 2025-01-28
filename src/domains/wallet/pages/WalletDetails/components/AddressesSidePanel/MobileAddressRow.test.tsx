@@ -1,11 +1,11 @@
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { env, getMainsailProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
-import { AddressRow } from "./AddressRow";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { MobileAddressRow } from "./MobileAddressRow";
 import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
 
-describe("AddressRow", () => {
+describe("MobileAddressRow", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
@@ -21,7 +21,7 @@ describe("AddressRow", () => {
 
 	it("should render", () => {
 		render(
-			<AddressRow
+			<MobileAddressRow
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -33,24 +33,9 @@ describe("AddressRow", () => {
 		expect(screen.getByText(wallet.displayName())).toBeInTheDocument();
 	});
 
-	it("should render mobile row for `xs` screen", () => {
-		renderResponsive(
-			<AddressRow
-				wallet={wallet}
-				onDelete={vi.fn()}
-				usesDeleteMode={false}
-				toggleAddress={vi.fn()}
-				isSelected={false}
-			/>,
-			"xs",
-		);
-
-		expect(screen.getByTestId("MobileAddressRow")).toBeInTheDocument();
-	});
-
 	it("should render in delete mode", () => {
 		render(
-			<AddressRow
+			<MobileAddressRow
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={true}
@@ -66,7 +51,7 @@ describe("AddressRow", () => {
 	it("should trigger `onDelete` when deleted", async () => {
 		const onDelete = vi.fn();
 		render(
-			<AddressRow
+			<MobileAddressRow
 				wallet={wallet}
 				onDelete={onDelete}
 				usesDeleteMode={true}
@@ -81,7 +66,7 @@ describe("AddressRow", () => {
 
 	it("should be checked", () => {
 		render(
-			<AddressRow
+			<MobileAddressRow
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -97,7 +82,7 @@ describe("AddressRow", () => {
 		const toggleAddress = vi.fn();
 
 		render(
-			<AddressRow
+			<MobileAddressRow
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -114,7 +99,7 @@ describe("AddressRow", () => {
 		const toggleAddress = vi.fn();
 
 		render(
-			<AddressRow
+			<MobileAddressRow
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -123,24 +108,7 @@ describe("AddressRow", () => {
 			/>,
 		);
 
-		await userEvent.click(screen.getByTestId("AddressRow"));
-		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
-	});
-
-	it("should trigger `toggleAddress` when a key pressed on AddressRow", async () => {
-		const toggleAddress = vi.fn();
-
-		render(
-			<AddressRow
-				wallet={wallet}
-				onDelete={vi.fn()}
-				usesDeleteMode={false}
-				toggleAddress={toggleAddress}
-				isSelected={true}
-			/>,
-		);
-
-		await userEvent.type(screen.getByTestId("AddressRow"), "enter");
+		await userEvent.click(screen.getByTestId("MobileAddressRowHeader"));
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
 	});
 });

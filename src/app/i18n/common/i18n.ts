@@ -168,6 +168,7 @@ export const translations = {
 	IMPORTED: "Imported",
 	IMPORT_ADDRESS: "Import Address",
 	INFO: "Info",
+	INFORMATION: "Information",
 	INITIALIZING: "Initializing...",
 	INPUT_ADDRESS: {
 		VALIDATION: {
