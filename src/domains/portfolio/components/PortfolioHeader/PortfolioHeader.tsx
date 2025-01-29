@@ -308,6 +308,8 @@ export const PortfolioHeader = ({
 
 					profile.wallets().forget(wallets[0].id());
 
+					setSelectedAddresses(selectedAddresses.filter((existingAddress) => existingAddress !== address));
+
 					profile.notifications().transactions().forgetByRecipient(address);
 					await persist();
 				}}
