@@ -79,6 +79,40 @@ describe("WalletHeader", () => {
 		});
 	});
 
+	it("should trigger `onUpdate` when wallet name is updated", async () => {
+		const onUpdate = vi.fn();
+
+		renderResponsiveWithRoute(
+			<WalletHeader
+				profile={profile}
+				wallet={wallet}
+				votes={votes}
+				isLoadingVotes={false}
+				handleVotesButtonClick={vi.fn()}
+				isUpdatingTransactions={false}
+				onUpdate={onUpdate}
+			/>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("PortfolioHeaderOptionsTrigger"));
+
+		await userEvent.click(screen.getByTestId("dropdown__option--primary-0"));
+
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "test 123");
+
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+
+		await waitFor(() => {
+			expect(onUpdate).toHaveBeenCalled();
+		});
+	});
+
 	it("should render empty votes section if no votes are available", async () => {
 		renderResponsiveWithRoute(
 			<WalletHeader
