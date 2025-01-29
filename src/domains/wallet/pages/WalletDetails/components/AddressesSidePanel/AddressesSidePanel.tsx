@@ -24,7 +24,6 @@ export const AddressesSidePanel = ({
 }: {
 	wallets: IWalletRepository;
 	defaultSelectedAddresses: string[];
-	onSelectedAddressesChange?: (addresses: string[]) => void;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	onDeleteAddress: (address: string) => void;
@@ -63,9 +62,19 @@ export const AddressesSidePanel = ({
 			return;
 		}
 
-		selectedAddresses.includes(address)
-			? onSetSelectedAddresses(selectedAddresses.filter((a) => a !== address))
-			: onSetSelectedAddresses([...selectedAddresses, address]);
+		if (selectedAddresses.includes(address)) {
+			const remainingAddresses = selectedAddresses.filter((a) => a !== address);
+
+			// Cancel deselect. One address needs to always be selected.
+			if (remainingAddresses.length === 0) {
+				return;
+			}
+
+			onSetSelectedAddresses(remainingAddresses);
+			return;
+		}
+
+		onSetSelectedAddresses([...selectedAddresses, address]);
 	};
 
 	const markForDelete = (address: string) => {
@@ -261,7 +270,6 @@ export const AddressesSidePanel = ({
 			<div className="space-y-1">
 				{addressesToShow.map((wallet) => (
 					<AddressRow
-						isDeleteDisabled={addressesToShow.length === 1}
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
