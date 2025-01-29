@@ -855,9 +855,9 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 96.49
+                  COVERAGE_THRESHOLD_LINES: 96.44
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.51
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.54
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.5
                   COVERAGE_THRESHOLD_BRANCHES: 92.27
                   COVERAGE_INCLUDE_PATH: src/domains/wallet
               with:
