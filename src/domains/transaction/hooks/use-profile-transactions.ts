@@ -224,15 +224,15 @@ export const useProfileTransactions = ({
 				queryParameters.identifiers = wallets.map((wallet) => ({
 					type: "address",
 					value: wallet.address(),
-				}))
+				}));
 			}
 
 			if (mode === "sent") {
-				queryParameters.senderId = wallets.map((wallet) => wallet.address()).join(",")
+				queryParameters.senderId = wallets.map((wallet) => wallet.address()).join(",");
 			}
 
 			if (mode === "received") {
-				queryParameters.recipientId = wallets.map((wallet) => wallet.address()).join(",")
+				queryParameters.recipientId = wallets.map((wallet) => wallet.address()).join(",");
 			}
 
 			// @ts-ignore
