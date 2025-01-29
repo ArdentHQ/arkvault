@@ -10,6 +10,8 @@ describe("AddressesSidePanel", () => {
 	let profile: Contracts.IProfile;
 	let wallets: Contracts.IWalletRepository;
 
+	const sidePanelCloseButton = "SidePanel__close-button";
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
@@ -51,7 +53,7 @@ describe("AddressesSidePanel", () => {
 		);
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
-		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
 		expect(onClose).toHaveBeenCalledWith([wallets.first().address()]);
 	});
@@ -71,7 +73,7 @@ describe("AddressesSidePanel", () => {
 		);
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
-		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
 		expect(onClose).toHaveBeenCalledWith([wallets.last().address()]);
 	});
@@ -90,7 +92,7 @@ describe("AddressesSidePanel", () => {
 		);
 
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
-		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
 		expect(onClose).toHaveBeenCalledWith(wallets.values().map((w) => w.address()));
 	});
@@ -110,7 +112,7 @@ describe("AddressesSidePanel", () => {
 		);
 
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
-		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
 		expect(onClose).toHaveBeenCalledWith([]);
 	});
@@ -181,7 +183,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId("ConfirmDelete"));
 
 		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
-		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
 		expect(onClose).toHaveBeenCalledWith([...addressesExcludingFirstWallet]);
 
