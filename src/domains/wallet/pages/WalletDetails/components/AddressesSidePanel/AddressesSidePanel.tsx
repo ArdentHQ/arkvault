@@ -103,6 +103,16 @@ export const AddressesSidePanel = ({
 
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
 
+	const confirmAddressDeletion = async () => {
+		await Promise.all(addressesToDelete.map((address) => onDeleteAddress(address)));
+
+		const activeAddresses = selectedAddresses.filter((address) => !addressesToDelete.includes(address));
+
+		onSetSelectedAddresses(activeAddresses);
+
+		resetDeleteState();
+	};
+
 	const isSelected = (wallet: Contracts.IReadWriteWallet) => {
 		if (selectedAddresses.length === 0) {
 			return true;
@@ -232,17 +242,7 @@ export const AddressesSidePanel = ({
 								size="icon"
 								variant="transparent"
 								onClick={() => {
-									for (const address of addressesToDelete) {
-										onDeleteAddress(address);
-									}
-
-									const activeAddresses = selectedAddresses.filter(
-										(address) => !addressesToDelete.includes(address),
-									);
-
-									onSetSelectedAddresses(activeAddresses);
-
-									resetDeleteState();
+									void confirmAddressDeletion();
 								}}
 								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
 							>

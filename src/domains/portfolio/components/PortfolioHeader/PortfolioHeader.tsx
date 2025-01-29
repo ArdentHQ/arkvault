@@ -20,6 +20,7 @@ import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
 import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const PortfolioHeader = ({
 	profile,
@@ -47,6 +48,8 @@ export const PortfolioHeader = ({
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
+
+	const { persist } = useEnvironmentContext();
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -300,11 +303,15 @@ export const PortfolioHeader = ({
 				}}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				onDeleteAddress={(address: string) => {
+				onDeleteAddress={async (address: string) => {
 					const wallets = profile.wallets().filterByAddress(address);
+
 					profile.wallets().forget(wallets[0].id());
 
 					setSelectedAddresses(selectedAddresses.filter((existingAddress) => existingAddress !== address));
+
+					profile.notifications().transactions().forgetByRecipient(address);
+					await persist();
 				}}
 			/>
 		</header>

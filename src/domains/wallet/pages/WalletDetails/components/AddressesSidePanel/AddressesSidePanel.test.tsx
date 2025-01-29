@@ -184,9 +184,7 @@ describe("AddressesSidePanel", () => {
 
 		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
-
 		expect(onClose).toHaveBeenCalledWith([...addressesExcludingFirstWallet]);
-
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
 	});
