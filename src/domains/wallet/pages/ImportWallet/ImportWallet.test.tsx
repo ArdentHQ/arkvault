@@ -435,7 +435,7 @@ describe("ImportWallet", () => {
 		await userEvent.click(finishButton());
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(expect.stringContaining(`/profiles/${profile.id()}/wallets/`));
+			expect(historySpy).toHaveBeenCalledWith(expect.stringContaining(`/profiles/${profile.id()}/dashboard`));
 		});
 
 		historySpy.mockRestore();
