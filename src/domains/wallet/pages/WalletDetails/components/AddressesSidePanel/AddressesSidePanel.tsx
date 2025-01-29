@@ -255,7 +255,6 @@ export const AddressesSidePanel = ({
 			<div className="space-y-1">
 				{addressesToShow.map((wallet) => (
 					<AddressRow
-						isDeleteDisabled={addressesToShow.length === 1}
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
