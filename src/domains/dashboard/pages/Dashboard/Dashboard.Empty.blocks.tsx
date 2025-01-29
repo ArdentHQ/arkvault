@@ -60,36 +60,37 @@ export const DashboardSetupAddressCard = ({
 	image,
 	buttonText,
 	onClick,
-	variant = "primary",
 }: {
 	title: string;
 	description: string;
 	image: string;
 	buttonText: string;
 	onClick: () => void;
-	variant?: "primary" | "secondary";
 }) => (
-	<div
-		className={cn("rounded border border-theme-secondary-300 p-4 dark:border-theme-dark-700 md:rounded-xl md:p-8", {
-			"bg-theme-primary-100 dark:bg-theme-dark-800": variant === "primary",
-		})}
+	<button
+		className={cn(
+			"group rounded border border-theme-secondary-300 bg-white p-4 transition-all hover:border-theme-primary-50 hover:bg-theme-primary-50 dark:border-theme-dark-700 dark:bg-theme-dark-900 dark:hover:border-theme-dark-950 dark:hover:bg-theme-dark-950 md:rounded-xl md:p-8",
+		)}
+		type="button"
+		onClick={onClick}
 	>
 		<h3
-			className={cn("md:leading-7.5 mb-2 text-lg font-semibold leading-4 md:text-2xl", {
-				"text-theme-primary-900 dark:text-theme-dark-50": variant === "primary",
-				"text-theme-secondary-900 dark:text-theme-dark-50": variant === "secondary",
-			})}
+			className={cn(
+				"md:leading-7.5 mb-2 text-left text-lg font-semibold leading-4 text-theme-secondary-900 group-hover:text-theme-primary-900 dark:text-theme-dark-50 dark:group-hover:text-theme-dark-50 md:text-2xl",
+			)}
 		>
 			{title}
 		</h3>
-		<p className="mb-6 text-sm leading-5 text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>
+		<p className="mb-6 text-left text-sm leading-5 text-theme-secondary-700 dark:text-theme-dark-200">
+			{description}
+		</p>
 		<div className="mx-auto my-6 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
-		<Button variant={variant} className="w-full" onClick={onClick}>
+		<div className="w-full rounded bg-theme-primary-100 py-3 text-base font-semibold leading-5 text-theme-primary-600 transition-all duration-100 ease-linear group-hover:bg-theme-primary-800 group-hover:text-white green:group-hover:bg-theme-primary-700 dark:border dark:border-theme-dark-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:group-hover:border-theme-dark-navy-700 dark:group-hover:bg-theme-dark-navy-700">
 			{buttonText}
-		</Button>
-	</div>
+		</div>
+	</button>
 );
 
 export const DashboardSetupAddressCards = () => {
@@ -104,21 +105,18 @@ export const DashboardSetupAddressCards = () => {
 
 			<div className="flex items-center space-x-3">
 				<DashboardSetupAddressCard
-					image="ImportAddress"
-					title={t("COMMON.IMPORT_ADDRESS")}
-					description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
-					buttonText={t("COMMON.IMPORT")}
-					onClick={handleImport}
-					variant="secondary"
-				/>
-
-				<DashboardSetupAddressCard
 					image="CreateAddress"
 					title={t("COMMON.CREATE_ADDRESS")}
 					description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
 					buttonText={t("COMMON.CREATE")}
 					onClick={handleCreate}
-					variant="primary"
+				/>
+				<DashboardSetupAddressCard
+					image="ImportAddress"
+					title={t("COMMON.IMPORT_ADDRESS")}
+					description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
+					buttonText={t("COMMON.IMPORT")}
+					onClick={handleImport}
 				/>
 			</div>
 		</div>
