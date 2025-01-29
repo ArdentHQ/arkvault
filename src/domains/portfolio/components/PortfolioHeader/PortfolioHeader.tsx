@@ -20,6 +20,7 @@ import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
 import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const PortfolioHeader = ({
 	profile,
