@@ -5,7 +5,7 @@ import { Column } from "react-table";
 
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 
-export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string, hideSender?: boolean }) => {
+export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 	const { t } = useTranslation();
 	const coinLabel = coin ? `(${coin})` : "";
 
@@ -53,7 +53,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 		];
 
 		return templateColumns;
-	}, [t, coinLabel, hideSender]);
+	}, [t, coinLabel]);
 };
 
 export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) => {
