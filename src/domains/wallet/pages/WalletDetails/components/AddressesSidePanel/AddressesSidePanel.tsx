@@ -16,20 +16,22 @@ import { useBreakpoint } from "@/app/hooks";
 
 export const AddressesSidePanel = ({
 	wallets,
-	selectedAddresses,
-	onSelectedAddressesChange,
+	defaultSelectedAddresses = [],
 	open,
 	onOpenChange,
 	onDeleteAddress,
+	onClose,
 }: {
 	wallets: IWalletRepository;
-	selectedAddresses: string[];
-	onSelectedAddressesChange: (addresses: string[]) => void;
+	defaultSelectedAddresses: string[];
+	onSelectedAddressesChange?: (addresses: string[]) => void;
 	open: boolean;
-	onOpenChange: (open: boolean) => void;
+	onOpenChange: (open: boolean, selectedAddresses: string[]) => void;
 	onDeleteAddress: (address: string) => void;
+	onClose: (addresses: string[]) => void;
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses)
 
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
 
@@ -62,8 +64,8 @@ export const AddressesSidePanel = ({
 		}
 
 		selectedAddresses.includes(address)
-			? onSelectedAddressesChange(selectedAddresses.filter((a) => a !== address))
-			: onSelectedAddressesChange([...selectedAddresses, address]);
+			? onSetSelectedAddresses(selectedAddresses.filter((a) => a !== address))
+			: onSetSelectedAddresses([...selectedAddresses, address]);
 	};
 
 	const markForDelete = (address: string) => {
@@ -108,6 +110,10 @@ export const AddressesSidePanel = ({
 				resetDeleteState();
 				onOpenChange(open);
 				setSearchQuery("");
+
+				if (!open) {
+					onClose(selectedAddresses)
+				}
 			}}
 			dataTestId="AddressesSidePanel"
 		>
@@ -145,8 +151,8 @@ export const AddressesSidePanel = ({
 							checked={!isSelectAllDisabled && selectedAddresses.length === addressesToShow.length}
 							onChange={() => {
 								selectedAddresses.length === addressesToShow.length
-									? onSelectedAddressesChange([])
-									: onSelectedAddressesChange(addressesToShow.map((w) => w.address()));
+									? onSetSelectedAddresses([])
+									: onSetSelectedAddresses(addressesToShow.map((w) => w.address()));
 							}}
 						/>
 						<span className="font-semibold">{t("COMMON.SELECT_ALL")}</span>
@@ -225,7 +231,7 @@ export const AddressesSidePanel = ({
 										(address) => !addressesToDelete.includes(address),
 									);
 
-									onSelectedAddressesChange(activeAddresses);
+									onSetSelectedAddresses(activeAddresses);
 
 									resetDeleteState();
 								}}
