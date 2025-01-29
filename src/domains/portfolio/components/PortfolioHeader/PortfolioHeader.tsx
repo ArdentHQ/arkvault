@@ -303,6 +303,8 @@ export const PortfolioHeader = ({
 				onDeleteAddress={(address: string) => {
 					const wallets = profile.wallets().filterByAddress(address);
 					profile.wallets().forget(wallets[0].id());
+
+					setSelectedAddresses(selectedAddresses.filter((existingAddress) => existingAddress !== address));
 				}}
 			/>
 		</header>
