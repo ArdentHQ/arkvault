@@ -83,7 +83,7 @@ export const CreateWallet = () => {
 
 		assertWallet(wallet);
 
-		history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+		history.push(`/profiles/${activeProfile.id()}/dashboard`);
 	};
 
 	const generateWallet = () => {

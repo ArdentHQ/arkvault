@@ -1,3 +1,4 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { Input } from "@/app/components/Input";
 import { Icon } from "@/app/components/Icon";
@@ -99,6 +100,14 @@ export const AddressesSidePanel = ({
 		onSelectedAddressesChange(activeAddresses);
 
 		resetDeleteState();
+	};
+
+	const isSelected = (wallet: Contracts.IReadWriteWallet) => {
+		if (selectedAddresses.length === 0) {
+			return true;
+		}
+
+		return selectedAddresses.includes(wallet.address());
 	};
 
 	return (
@@ -246,10 +255,11 @@ export const AddressesSidePanel = ({
 			<div className="space-y-1">
 				{addressesToShow.map((wallet) => (
 					<AddressRow
+						isDeleteDisabled={addressesToShow.length === 1}
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
-						isSelected={selectedAddresses.includes(wallet.address())}
+						isSelected={isSelected(wallet)}
 						usesDeleteMode={isDeleteMode}
 						onDelete={markForDelete}
 					/>

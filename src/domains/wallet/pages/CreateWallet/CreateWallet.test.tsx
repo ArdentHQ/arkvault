@@ -167,9 +167,7 @@ describe("CreateWallet", () => {
 
 		expect(wallet.alias()).toBe("test alias");
 
-		await waitFor(() =>
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`),
-		);
+		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -334,9 +332,7 @@ describe("CreateWallet", () => {
 
 		expect(wallet.alias()).toBe("ARK Devnet #1");
 
-		await waitFor(() =>
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`),
-		);
+		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`));
 
 		historySpy.mockRestore();
 	});

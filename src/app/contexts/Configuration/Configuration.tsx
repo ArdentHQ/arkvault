@@ -50,6 +50,7 @@ export const ConfigurationProvider = ({ children, defaultConfiguration }: Proper
 
 		profileIsSyncingWallets: false,
 		restoredProfiles: [],
+		selectedAddresses: [],
 		serverStatus: defaultServerStatus(),
 		...defaultConfiguration,
 	});
