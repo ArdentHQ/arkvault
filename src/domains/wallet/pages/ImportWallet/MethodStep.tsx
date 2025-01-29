@@ -333,11 +333,7 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
 				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="ImportWalletLight"
-						darkIcon="ImportWalletDark"
-					/>
+					<ThemeIcon dimensions={[24, 24]} lightIcon="ImportWalletLight" darkIcon="ImportWalletDark" />
 				}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
 				className="hidden sm:block"

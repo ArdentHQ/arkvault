@@ -87,7 +87,7 @@ export const DashboardSetupAddressCard = ({
 		<div className="mx-auto my-6 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
-		<div className="w-full rounded bg-theme-primary-100 py-3 text-base font-semibold leading-5 text-theme-primary-600 transition-all duration-100 ease-linear group-hover:bg-theme-primary-800 group-hover:text-white green:group-hover:bg-theme-primary-700 dark:border dark:border-theme-dark-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:group-hover:border-theme-dark-navy-700 dark:group-hover:bg-theme-dark-navy-700">
+		<div className="green:group-hover:bg-theme-primary-700 w-full rounded bg-theme-primary-100 py-3 text-base font-semibold leading-5 text-theme-primary-600 transition-all duration-100 ease-linear group-hover:bg-theme-primary-800 group-hover:text-white dark:border dark:border-theme-dark-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:group-hover:border-theme-dark-navy-700 dark:group-hover:bg-theme-dark-navy-700">
 			{buttonText}
 		</div>
 	</button>

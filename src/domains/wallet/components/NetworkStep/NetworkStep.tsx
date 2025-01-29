@@ -41,11 +41,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 				title={title}
 				subtitle={subtitle}
 				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SelectNetworkLight"
-						darkIcon="SelectNetworkDark"
-					/>
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SelectNetworkLight" darkIcon="SelectNetworkDark" />
 				}
 				className="hidden sm:block"
 			/>

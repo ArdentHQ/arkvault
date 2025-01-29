@@ -32,10 +32,7 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 
 	return (
 		<div>
-			<Image
-				name={count === 0 ? "Warning" : "Success"}
-				className="mx-auto mb-6 hidden h-26 md:block"
-			/>
+			<Image name={count === 0 ? "Warning" : "Success"} className="mx-auto mb-6 hidden h-26 md:block" />
 
 			{renderAlert()}
 

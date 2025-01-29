@@ -24,7 +24,6 @@ export const useZendesk = () => {
 	const color = "#235b95";
 
 	const showSupportChat = (profile: Contracts.IProfile) => {
-
 		ZendeskAPI("webWidget", "updateSettings", {
 			webWidget: {
 				color: {
