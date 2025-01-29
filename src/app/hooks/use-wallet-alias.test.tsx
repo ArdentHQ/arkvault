@@ -93,7 +93,7 @@ describe("useWalletAlias", () => {
 			result.current.getWalletAlias({
 				address: contactAddress.address(),
 				profile,
-				username: "delegate_username",
+				username: "contact_username",
 			}),
 		).toStrictEqual({
 			address: contactAddress.address(),
@@ -106,10 +106,10 @@ describe("useWalletAlias", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
 		expect(
-			result.current.getWalletAlias({ address: wallet.address(), profile, username: "delegate_username" }),
+			result.current.getWalletAlias({ address: wallet.address(), profile, username: "xyz_username" }),
 		).toStrictEqual({
 			address: wallet.address(),
-			alias: "delegate_username",
+			alias: "xyz_username",
 			isContact: false,
 		});
 	});
