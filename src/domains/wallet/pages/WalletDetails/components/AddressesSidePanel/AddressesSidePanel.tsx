@@ -31,7 +31,7 @@ export const AddressesSidePanel = ({
 	onClose: (addresses: string[]) => void;
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
-	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses)
+	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses);
 
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
 
@@ -112,7 +112,7 @@ export const AddressesSidePanel = ({
 				setSearchQuery("");
 
 				if (!open) {
-					onClose(selectedAddresses)
+					onClose(selectedAddresses);
 				}
 			}}
 			dataTestId="AddressesSidePanel"
