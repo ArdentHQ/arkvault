@@ -300,12 +300,14 @@ export const PortfolioHeader = ({
 				selectedAddresses={selectedAddresses}
 				onSelectedAddressesChange={(addresses) => {
 					setSelectedAddresses(addresses);
-				}}
-				open={showAddressesPanel}
-				onOpenChange={setShowAddressesPanel}
-				onDeleteAddress={async (address: string) => {
+				onDeleteAddress={(address: string) => {
 					const wallets = profile.wallets().filterByAddress(address);
+					profile.wallets().forget(wallets[0].id());
 
+					setSelectedAddresses(selectedAddresses.filter((existingAddress) => existingAddress !== address));
+				}}
+			/>
+		</header>
 					profile.wallets().forget(wallets[0].id());
 
 					profile.notifications().transactions().forgetByRecipient(address);
