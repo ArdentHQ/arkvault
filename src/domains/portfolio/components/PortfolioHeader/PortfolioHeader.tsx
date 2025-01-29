@@ -48,6 +48,8 @@ export const PortfolioHeader = ({
 	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 
+	const { persist } = useEnvironmentContext();
+
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
@@ -300,9 +302,13 @@ export const PortfolioHeader = ({
 				}}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				onDeleteAddress={(address: string) => {
+				onDeleteAddress={async (address: string) => {
 					const wallets = profile.wallets().filterByAddress(address);
+
 					profile.wallets().forget(wallets[0].id());
+
+					profile.notifications().transactions().forgetByRecipient(address);
+					await persist();
 				}}
 			/>
 		</header>
