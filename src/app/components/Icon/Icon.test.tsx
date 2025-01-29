@@ -3,7 +3,6 @@ import React from "react";
 import { Icon, ThemeIcon } from "./Icon";
 import { render, screen } from "@/utils/testing-library";
 import * as themeFns from "@/utils/theme";
-import { useAccentColor } from "@/app/hooks";
 
 describe("Icon", () => {
 	it("should render", () => {
