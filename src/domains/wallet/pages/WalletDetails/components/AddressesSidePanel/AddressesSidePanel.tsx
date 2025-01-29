@@ -26,7 +26,7 @@ export const AddressesSidePanel = ({
 	defaultSelectedAddresses: string[];
 	onSelectedAddressesChange?: (addresses: string[]) => void;
 	open: boolean;
-	onOpenChange: (open: boolean, selectedAddresses: string[]) => void;
+	onOpenChange: (open: boolean) => void;
 	onDeleteAddress: (address: string) => void;
 	onClose: (addresses: string[]) => void;
 }): JSX.Element => {
