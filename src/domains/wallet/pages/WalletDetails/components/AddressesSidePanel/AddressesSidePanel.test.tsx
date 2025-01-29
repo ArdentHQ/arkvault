@@ -24,9 +24,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
@@ -37,88 +37,91 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should select an address when AddressRow is clicked", async () => {
-		const onSelectedAddressChange = vi.fn();
+		const onClose = vi.fn();
 
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={onSelectedAddressChange}
+				onClose={onClose}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(onSelectedAddressChange).toHaveBeenCalledWith([wallets.first().address()]);
+		expect(onClose).toHaveBeenCalledWith([wallets.first().address()]);
 	});
 
 	it("should deselect an address when AddressRow is clicked", async () => {
-		const onSelectedAddressChange = vi.fn();
+		const onClose = vi.fn();
 
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[wallets.first().address(), wallets.last().address()]}
+				defaultSelectedAddresses={[wallets.first().address(), wallets.last().address()]}
 				open={true}
-				onSelectedAddressesChange={onSelectedAddressChange}
+				onClose={onClose}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(onSelectedAddressChange).toHaveBeenCalledWith([wallets.last().address()]);
+		expect(onClose).toHaveBeenCalledWith([wallets.last().address()]);
 	});
 
 	it("should select all displayed addresses when `select all` clicked", async () => {
-		const onSelectedAddressChange = vi.fn();
+		const onClose = vi.fn();
 
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={onSelectedAddressChange}
+				onClose={onClose}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(onSelectedAddressChange).toHaveBeenCalledWith(wallets.values().map((w) => w.address()));
+		expect(onClose).toHaveBeenCalledWith(wallets.values().map((w) => w.address()));
 	});
 
 	it("should deselect displayed addresses if all already selected when `select all` clicked", async () => {
-		const onSelectedAddressChange = vi.fn();
+		const onClose = vi.fn();
 
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={wallets.values().map((w) => w.address())}
+				defaultSelectedAddresses={wallets.values().map((w) => w.address())}
 				open={true}
-				onSelectedAddressesChange={onSelectedAddressChange}
+				onClose={onClose}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(onSelectedAddressChange).toHaveBeenCalledWith([]);
+		expect(onClose).toHaveBeenCalledWith([]);
 	});
 
 	it("should show delete buttons when `manage` clicked", async () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
@@ -134,9 +137,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
@@ -149,7 +152,7 @@ describe("AddressesSidePanel", () => {
 
 	it("should delete an address when `done` clicked", async () => {
 		const onDelete = vi.fn();
-		const onSelectedAddressesChange = vi.fn();
+		const onClose = vi.fn();
 
 		const firstWallet = wallets.first();
 		const addressesExcludingFirstWallet = wallets
@@ -160,9 +163,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[firstWallet.address(), ...addressesExcludingFirstWallet]}
+				defaultSelectedAddresses={[firstWallet.address(), ...addressesExcludingFirstWallet]}
 				open={true}
-				onSelectedAddressesChange={onSelectedAddressesChange}
+				onClose={onClose}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={onDelete}
 			/>,
@@ -178,8 +181,9 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId("ConfirmDelete"));
 
 		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(onSelectedAddressesChange).toHaveBeenCalledWith([...addressesExcludingFirstWallet]);
+		expect(onClose).toHaveBeenCalledWith([...addressesExcludingFirstWallet]);
 
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
@@ -191,9 +195,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={onDelete}
 			/>,
@@ -217,9 +221,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
@@ -234,9 +238,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
@@ -253,9 +257,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
@@ -272,9 +276,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
@@ -293,9 +297,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets}
-				selectedAddresses={[]}
+				defaultSelectedAddresses={[]}
 				open={true}
-				onSelectedAddressesChange={vi.fn()}
+				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
 				onDeleteAddress={vi.fn()}
 			/>,
