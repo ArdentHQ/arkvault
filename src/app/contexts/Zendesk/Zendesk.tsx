@@ -21,19 +21,15 @@ export const ZendeskProvider = ({ children }: { children: React.ReactNode }) => 
 const isSupportChatOpen = () => !!window.document.querySelector("#webWidget");
 
 export const useZendesk = () => {
-	const accentColors = {
-		green: "#289548",
-		navy: "#235b95",
-	};
+	const color = "#235b95";
 
 	const showSupportChat = (profile: Contracts.IProfile) => {
-		const accentColor = profile.settings().get(Contracts.ProfileSetting.AccentColor) as string;
 
 		ZendeskAPI("webWidget", "updateSettings", {
 			webWidget: {
 				color: {
-					button: accentColors[accentColor],
-					theme: accentColors[accentColor],
+					button: color,
+					theme: color,
 				},
 			},
 		});

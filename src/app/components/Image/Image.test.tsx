@@ -35,13 +35,6 @@ describe("Image", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("find the image without accent color", () => {
-		const { container, asFragment } = renderWithoutRouter(<Image name="Trash" />);
-
-		expect(container).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should render with string", () => {
 		const { container, asFragment } = renderWithoutRouter(<Image name="WelcomeModalStep1" domain="profile" />);
 

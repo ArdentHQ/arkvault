@@ -30,7 +30,6 @@ describe("Appearance.helpers", () => {
 			expect(typeof result.current.setValues).toBe("function");
 
 			const testValues: AppearanceSettingsState = {
-				accentColor: "green",
 				dashboardTransactionHistory: false,
 				useNetworkWalletNames: false,
 				viewingMode: "light",
@@ -41,17 +40,6 @@ describe("Appearance.helpers", () => {
 			result.current.setValues(testValues);
 
 			expect(result.current.getValues()).toStrictEqual(testValues);
-
-			env.profiles().forget(profile.id());
-		});
-
-		it("should replace blue color with navy", async () => {
-			const profile = await env.profiles().create("empty profile");
-			profile.settings().set(Contracts.ProfileSetting.AccentColor, "blue");
-
-			const { result } = renderHook(() => useAppearanceSettings(profile));
-
-			expect(result.current.getValues().accentColor).toBe("navy");
 
 			env.profiles().forget(profile.id());
 		});

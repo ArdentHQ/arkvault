@@ -43,7 +43,6 @@ export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) 
 	const { setProfileTheme } = useTheme();
 
 	useEffect(() => {
-		register("accentColor", { required: true });
 		register("viewingMode", { required: true });
 	}, [register]);
 

@@ -36,21 +36,11 @@ export const useAppearanceItems = (): ListDividedItemProperties[] => {
 
 export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanceSettings => ({
 	getValues: (): AppearanceSettingsState => ({
-		accentColor: (() => {
-			let accentColor = profile.appearance().get("accentColor");
-
-			if (accentColor === "blue") {
-				accentColor = "navy";
-			}
-
-			return accentColor as AccentColorType;
-		})(),
 		dashboardTransactionHistory: profile.appearance().get("dashboardTransactionHistory"),
 		useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
 		viewingMode: profile.appearance().get("theme") as ViewingModeType,
 	}),
 	setValues: (values: AppearanceSettingsState): void => {
-		profile.settings().set(Contracts.ProfileSetting.AccentColor, values.accentColor);
 		profile
 			.settings()
 			.set(Contracts.ProfileSetting.DashboardTransactionHistory, values.dashboardTransactionHistory);

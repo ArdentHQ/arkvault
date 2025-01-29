@@ -340,7 +340,6 @@ module.exports = {
 		require("@tailwindcss/forms"),
 		plugin(function ({ addVariant }) {
 			addVariant("navy", ".accent-navy &");
-			addVariant("green", ".accent-green &");
 		}),
 	],
 };
