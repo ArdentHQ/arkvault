@@ -125,7 +125,12 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 		selectedWallets: wallets,
 		setSelectedAddresses: async (selectedAddresses: string[]) => {
 			await addresses.set(selectedAddresses);
-			setConfiguration({ selectedAddresses });
+
+			if (!addresses.hasSelected()) {
+				await addresses.set([profile.wallets().first().address()])
+			}
+
+			setConfiguration({ selectedAddresses: addresses.all() });
 		},
 	};
 };
