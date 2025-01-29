@@ -37,7 +37,7 @@ export const Transactions = memo(function Transactions({
 	title,
 	isUpdatingWallet,
 	onLoading,
-	selectedWallets
+	selectedWallets,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
 

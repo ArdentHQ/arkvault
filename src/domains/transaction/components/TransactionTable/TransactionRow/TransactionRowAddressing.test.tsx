@@ -8,7 +8,11 @@ describe("TransactionRowAddressing", () => {
 	let profile: Contracts.IProfile;
 	const fixture = {
 		...TransactionFixture,
-		wallet: () => ({ ...TransactionFixture.wallet(), coin: () => ({ link: () => ({ wallet: () => ({ address: () => "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" }) }) }), currency: () => "DARK" }),
+		wallet: () => ({
+			...TransactionFixture.wallet(),
+			coin: () => ({ link: () => ({ wallet: () => ({ address: () => "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" }) }) }),
+			currency: () => "DARK",
+		}),
 	};
 
 	beforeAll(() => {
@@ -44,7 +48,13 @@ describe("TransactionRowAddressing", () => {
 		const resignationFixture = {
 			...fixture,
 			isDelegateResignation: () => true,
-			wallet: () => ({ ...TransactionFixture.wallet(), coin: () => ({ link: () => ({ wallet: () => ({ address: () => "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" }) }) }), username: () => "test" }),
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				coin: () => ({
+					link: () => ({ wallet: () => ({ address: () => "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" }) }),
+				}),
+				username: () => "test",
+			}),
 		};
 		render(<TransactionRowAddressing transaction={resignationFixture as any} profile={profile} />);
 
@@ -100,33 +110,58 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render advanced sender variant if the props isAdvanced is true and variant is start", () => {
-		render(<TransactionRowAddressing transaction={fixture as any} profile={profile} isAdvanced={true} variant="sender" />);
+		render(
+			<TransactionRowAddressing
+				transaction={fixture as any}
+				profile={profile}
+				isAdvanced={true}
+				variant="sender"
+			/>,
+		);
 
 		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toBeInTheDocument();
 	});
 
 	it("should render the sender address if the transaction is sent", () => {
 		const sentFixture = { ...fixture, isSent: () => true, sender: () => "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss" };
-		render(<TransactionRowAddressing transaction={sentFixture as any} profile={profile} isAdvanced={true} variant="sender" />);
+		render(
+			<TransactionRowAddressing
+				transaction={sentFixture as any}
+				profile={profile}
+				isAdvanced={true}
+				variant="sender"
+			/>,
+		);
 
-		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toHaveTextContent("DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss");
+		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toHaveTextContent(
+			"DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss",
+		);
 	});
 
 	it("should render advanced recipient variant if the props isAdvanced is true and variant is recipient", () => {
-		render(<TransactionRowAddressing transaction={fixture as any} profile={profile} isAdvanced={true} variant="recipient" />);
+		render(
+			<TransactionRowAddressing
+				transaction={fixture as any}
+				profile={profile}
+				isAdvanced={true}
+				variant="recipient"
+			/>,
+		);
 
 		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_recipient")).toBeInTheDocument();
 	});
 
 	it("should render multipayment variant with return style if the variant is recipient and isAdvanced is true", () => {
-		render(<TransactionRowAddressing transaction={fixture as any} profile={profile} isAdvanced variant="recipient" />);
+		render(
+			<TransactionRowAddressing transaction={fixture as any} profile={profile} isAdvanced variant="recipient" />,
+		);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveClass("bg-theme-secondary-200");
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("To");
 	});
 
 	it("should render multipayment variant with default styles if isAdvanced is false", () => {
-		render(<TransactionRowAddressing transaction={fixture as any} profile={profile} isAdvanced={false}  />);
+		render(<TransactionRowAddressing transaction={fixture as any} profile={profile} isAdvanced={false} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).not.toHaveClass("bg-theme-secondary-200");
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("To");
@@ -135,19 +170,25 @@ describe("TransactionRowAddressing", () => {
 	it("should set direction as 'return' when transaction isReturn is true", () => {
 		const returnFixture = { ...fixture, isReturn: () => true };
 		render(<TransactionRowAddressing transaction={returnFixture as any} profile={profile} />);
-	
+
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("Return");
 	});
-	
+
 	it("should render vote advanced variant if transaction is a contract transaction and isAdvanced is true", () => {
 		const voteFixture = { ...fixture, isVote: () => true };
-		render(<TransactionRowAddressing transaction={voteFixture as any} profile={profile} isAdvanced={true} variant="recipient" />);
+		render(
+			<TransactionRowAddressing
+				transaction={voteFixture as any}
+				profile={profile}
+				isAdvanced={true}
+				variant="recipient"
+			/>,
+		);
 
 		expect(screen.getByTestId("TransactionRowAddressing__vote_advanced_recipient")).toBeInTheDocument();
 		expect(screen.getByText("Contract")).toBeInTheDocument();
 	});
 });
-
 
 describe("TransactionRowLabel", () => {
 	it("should render prioritizing style prop over direction prop", () => {

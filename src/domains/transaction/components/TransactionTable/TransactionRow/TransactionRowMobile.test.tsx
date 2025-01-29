@@ -151,6 +151,4 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 
 		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeInTheDocument();
 	});
-
-
 });

@@ -15,7 +15,7 @@ import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount } from "@/app/components/Amount";
 import { TransactionTotalLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 import { TransactionRowId } from "./TransactionRowId";
-import cn from 'classnames';
+import cn from "classnames";
 
 export const TransactionRow = memo(
 	({
@@ -84,10 +84,12 @@ export const TransactionRow = memo(
 					)}
 				</TableCell>
 
-				<TableCell innerClassName={cn("items-start xl:min-h-11 xl:pt-3", {
-					"min-h-14 my-1 pt-2": hideSender,
-					"min-h-[66px] py-2 my-0": !hideSender,
-				})}>
+				<TableCell
+					innerClassName={cn("items-start xl:min-h-11 xl:pt-3", {
+						"min-h-14 my-1 pt-2": hideSender,
+						"min-h-[66px] py-2 my-0": !hideSender,
+					})}
+				>
 					<Label
 						color="secondary"
 						size="xs"
@@ -99,21 +101,37 @@ export const TransactionRow = memo(
 					</Label>
 				</TableCell>
 
-				<TableCell className={cn({
-					"hidden": hideSender,
-				})} innerClassName={cn("space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11", {
-					"min-h-16 my-1 py-2": !hideSender,
-				})}>
+				<TableCell
+					className={cn({
+						hidden: hideSender,
+					})}
+					innerClassName={cn("space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11", {
+						"min-h-16 my-1 py-2": !hideSender,
+					})}
+				>
 					<div className="flex flex-col gap-2">
-						<TransactionRowAddressing transaction={transaction} profile={profile} isAdvanced variant="sender"  />
-						<TransactionRowAddressing transaction={transaction} profile={profile} isAdvanced variant="recipient"  />
+						<TransactionRowAddressing
+							transaction={transaction}
+							profile={profile}
+							isAdvanced
+							variant="sender"
+						/>
+						<TransactionRowAddressing
+							transaction={transaction}
+							profile={profile}
+							isAdvanced
+							variant="recipient"
+						/>
 					</div>
 				</TableCell>
 
-				<TableCell className={cn({
-					"hidden": !hideSender,
-				})} innerClassName="space-x-4 items-start my-1 pt-2 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1">
-					<TransactionRowAddressing transaction={transaction} profile={profile} isAdvanced={false}  />
+				<TableCell
+					className={cn({
+						hidden: !hideSender,
+					})}
+					innerClassName="space-x-4 items-start my-1 pt-2 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1"
+				>
+					<TransactionRowAddressing transaction={transaction} profile={profile} isAdvanced={false} />
 				</TableCell>
 
 				<TableCell
@@ -133,15 +151,18 @@ export const TransactionRow = memo(
 
 				<TableCell
 					variant="end"
-					innerClassName={cn("justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3", {
-						"min-h-[66px] py-2 my-0": !hideSender,
-						"min-h-14 my-1 pt-2": hideSender,
-					})}
+					innerClassName={cn(
+						"justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3",
+						{
+							"min-h-14 my-1 pt-2": hideSender,
+							"min-h-[66px] py-2 my-0": !hideSender,
+						},
+					)}
 				>
 					{isLgAndAbove ? (
 						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
 					) : (
-						<div className="flex flex-col items-end gap-1 w-40">
+						<div className="flex w-40 flex-col items-end gap-1">
 							<TransactionTotalLabel transaction={transaction} />
 							<span
 								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
