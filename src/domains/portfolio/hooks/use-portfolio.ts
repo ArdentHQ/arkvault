@@ -42,10 +42,15 @@ function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environme
 				selectedAddresses: [],
 			}) as PortfolioConfiguration;
 
-			const selectedAddresses = config.selectedAddresses ?? []
-			const profileAddresses = new Set(profile.wallets().values().map(wallet => wallet.address()))
+			const selectedAddresses = config.selectedAddresses ?? [];
+			const profileAddresses = new Set(
+				profile
+					.wallets()
+					.values()
+					.map((wallet) => wallet.address()),
+			);
 
-			return selectedAddresses.filter(address => profileAddresses.has(address))
+			return selectedAddresses.filter((address) => profileAddresses.has(address));
 		},
 		/**
 		 * Find the default selected wallet.
@@ -130,7 +135,7 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 			await addresses.set(selectedAddresses);
 
 			if (!addresses.hasSelected()) {
-				await addresses.set([profile.wallets().first().address()])
+				await addresses.set([profile.wallets().first().address()]);
 			}
 
 			setConfiguration({ selectedAddresses: addresses.all() });

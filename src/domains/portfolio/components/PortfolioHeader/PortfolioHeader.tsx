@@ -304,7 +304,7 @@ export const PortfolioHeader = ({
 					const wallets = profile.wallets().filterByAddress(address);
 					profile.wallets().forget(wallets[0].id());
 
-					setSelectedAddresses(selectedAddresses.filter(existingAddress => existingAddress !== address))
+					setSelectedAddresses(selectedAddresses.filter((existingAddress) => existingAddress !== address));
 				}}
 			/>
 		</header>

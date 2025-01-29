@@ -74,7 +74,6 @@ export const AddressesSidePanel = ({
 		}
 
 		onSelectedAddressesChange([...selectedAddresses, address]);
-
 	};
 
 	const markForDelete = (address: string) => {
