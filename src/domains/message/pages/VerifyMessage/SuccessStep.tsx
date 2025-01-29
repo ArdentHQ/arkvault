@@ -46,7 +46,6 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 					name="ErrorHeaderIcon"
 					domain="transaction"
 					className="block h-[22px] w-[22px]"
-					useAccentColor={false}
 				/>
 			);
 		}

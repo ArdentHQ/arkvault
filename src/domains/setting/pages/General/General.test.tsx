@@ -558,7 +558,6 @@ describe("General Settings", () => {
 		expect(getCurrentAccentColor()).toBe("navy");
 		expect(document.body.classList.contains("dark")).toBe(false);
 
-		setAccentColor("green");
 		setTheme("dark");
 
 		expect(getCurrentAccentColor()).toBe("green");

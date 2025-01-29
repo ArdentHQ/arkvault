@@ -40,7 +40,6 @@ const ConnectionContent = ({
 				name="WaitingLedgerDevice"
 				domain="wallet"
 				className="mx-auto w-full max-w-[400px]"
-				useAccentColor={false}
 			/>
 		</div>
 	);

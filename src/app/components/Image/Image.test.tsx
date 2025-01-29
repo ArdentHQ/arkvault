@@ -36,7 +36,7 @@ describe("Image", () => {
 	});
 
 	it("find the image without accent color", () => {
-		const { container, asFragment } = renderWithoutRouter(<Image name="Trash" useAccentColor={false} />);
+		const { container, asFragment } = renderWithoutRouter(<Image name="Trash" />);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();

@@ -41,7 +41,6 @@ export const ErrorStep = ({
 								name="ErrorHeaderIcon"
 								domain="transaction"
 								className="block h-[22px] w-[22px]"
-								useAccentColor={false}
 							/>
 						}
 					/>
@@ -70,7 +69,6 @@ export const ErrorStep = ({
 							name="TransactionErrorBanner"
 							domain="transaction"
 							className="mx-auto mt-4 block w-full max-w-[400px]"
-							useAccentColor={false}
 						/>
 					)}
 				</div>

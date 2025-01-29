@@ -147,7 +147,6 @@ const LedgerAuthentication = ({
 								name="WaitingLedgerDevice"
 								domain="wallet"
 								className="mx-auto max-w-full"
-								useAccentColor={false}
 							/>
 
 							<div className="inline-flex w-full items-center justify-center space-x-3">

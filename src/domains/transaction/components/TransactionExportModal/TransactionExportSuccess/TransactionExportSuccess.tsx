@@ -34,7 +34,6 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 		<div>
 			<Image
 				name={count === 0 ? "Warning" : "Success"}
-				useAccentColor={count !== undefined && count > 0}
 				className="mx-auto mb-6 hidden h-26 md:block"
 			/>
 

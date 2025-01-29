@@ -42,7 +42,6 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 
 	const { confirmPassword, currency, disclaimer, password, viewingMode } = watch();
 
-	const { resetAccentColor } = useAccentColor();
 	const { resetTheme, setTheme } = useTheme();
 
 	const { createProfile } = useValidation();
@@ -185,7 +184,6 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 							onBack();
 							// to prevent changing theme by component
 							resetTheme();
-							resetAccentColor();
 						}}
 					>
 						{t("COMMON.BACK")}

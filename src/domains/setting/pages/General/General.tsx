@@ -37,7 +37,6 @@ export const GeneralSettings: React.FC = () => {
 	const { syncExchangeRates } = useProfileJobs(profile);
 
 	const { resetProfileTheme } = useTheme();
-	const { resetAccentColor } = useAccentColor();
 
 	const { t } = useTranslation();
 
@@ -112,7 +111,6 @@ export const GeneralSettings: React.FC = () => {
 		reset(getDefaultValues());
 
 		resetProfileTheme(profile);
-		resetAccentColor();
 
 		window.scrollTo({ behavior: "smooth", top: 0 });
 	};

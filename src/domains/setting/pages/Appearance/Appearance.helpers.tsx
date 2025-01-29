@@ -3,7 +3,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { AppearanceSettingsState, UseAppearanceSettings } from "./Appearance.contracts";
-import { AppearanceAccentColor } from "./blocks/AppearanceAccentColor";
 import { AppearanceToggle } from "./blocks/AppearanceToggle";
 import { AppearanceViewingMode } from "./blocks/AppearanceViewingMode";
 import { ListDividedItemProperties } from "@/app/components/ListDivided/ListDivided.contracts";
@@ -13,13 +12,6 @@ export const useAppearanceItems = (): ListDividedItemProperties[] => {
 	const { t } = useTranslation();
 
 	return [
-		{
-			itemValueClass: "ml-5",
-			label: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE")}`,
-			labelDescription: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.DESCRIPTION")}`,
-			value: <AppearanceAccentColor />,
-			wrapperClass: "pb-6",
-		},
 		{
 			itemValueClass: "ml-5",
 			label: `${t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")}`,
