@@ -237,7 +237,7 @@ export const ImportWallet = () => {
 	const handleFinish = () => {
 		assertWallet(importedWallet);
 
-		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
+		history.push(`/profiles/${activeProfile.id()}/dashboard`);
 	};
 
 	const isNextDisabled = useMemo(() => {

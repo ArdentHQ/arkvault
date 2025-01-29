@@ -285,11 +285,7 @@ describe("EncryptionPasswordStep", () => {
 
 		await userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
-		const walletId = profile.wallets().first().id();
-
-		await waitFor(() =>
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/wallets/${walletId}`),
-		);
+		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`));
 
 		historySpy.mockRestore();
 	});
