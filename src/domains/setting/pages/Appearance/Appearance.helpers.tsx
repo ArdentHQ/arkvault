@@ -6,7 +6,7 @@ import { AppearanceSettingsState, UseAppearanceSettings } from "./Appearance.con
 import { AppearanceToggle } from "./blocks/AppearanceToggle";
 import { AppearanceViewingMode } from "./blocks/AppearanceViewingMode";
 import { ListDividedItemProperties } from "@/app/components/ListDivided/ListDivided.contracts";
-import { AccentColorType, ViewingModeType } from "@/app/hooks";
+import { ViewingModeType } from "@/app/hooks";
 
 export const useAppearanceItems = (): ListDividedItemProperties[] => {
 	const { t } = useTranslation();
