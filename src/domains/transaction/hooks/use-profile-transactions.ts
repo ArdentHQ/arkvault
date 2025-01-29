@@ -51,10 +51,12 @@ interface TransactionAggregateIdentifiers {
 }
 
 interface TransactionAggregateQueryParameters {
-	identifiers: TransactionAggregateIdentifiers[];
+	identifiers?: TransactionAggregateIdentifiers[];
 	limit: number;
 	types?: string[];
 	orderBy?: string;
+	senderId?: string;
+	recipientId?: string;
 }
 
 const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
@@ -208,10 +210,6 @@ export const useProfileTransactions = ({
 			}
 
 			const queryParameters: TransactionAggregateQueryParameters = {
-				identifiers: wallets.map((wallet) => ({
-					type: "address",
-					value: wallet.address(),
-				})),
 				limit: LIMIT,
 				orderBy,
 			};
@@ -220,6 +218,21 @@ export const useProfileTransactions = ({
 
 			if (transactionTypes.length > 0 && !hasAllSelected) {
 				queryParameters.types = transactionTypes;
+			}
+
+			if (mode === "all") {
+				queryParameters.identifiers = wallets.map((wallet) => ({
+					type: "address",
+					value: wallet.address(),
+				}))
+			}
+
+			if (mode === "sent") {
+				queryParameters.senderId = wallets.map((wallet) => wallet.address()).join(",")
+			}
+
+			if (mode === "received") {
+				queryParameters.recipientId = wallets.map((wallet) => wallet.address()).join(",")
 			}
 
 			// @ts-ignore
