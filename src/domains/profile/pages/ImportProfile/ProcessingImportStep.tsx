@@ -117,8 +117,6 @@ export const ProcessingImport = ({
 					<ThemeIcon
 						darkIcon="ImportProfileDark"
 						lightIcon="ImportProfileLight"
-						greenLightIcon="ImportProfileLightGreen"
-						greenDarkIcon="ImportWalletDarkGreen"
 						dimensions={[24, 24]}
 					/>
 				}

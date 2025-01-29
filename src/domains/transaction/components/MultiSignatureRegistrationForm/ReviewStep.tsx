@@ -48,8 +48,6 @@ export const ReviewStep = ({
 						dimensions={[24, 24]}
 						lightIcon="SendTransactionLight"
 						darkIcon="SendTransactionDark"
-						greenLightIcon="SendTransactionLightGreen"
-						greenDarkIcon="SendTransactionDarkGreen"
 					/>
 				}
 			/>

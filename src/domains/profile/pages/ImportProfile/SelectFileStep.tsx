@@ -42,8 +42,6 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 					<ThemeIcon
 						darkIcon="ImportProfileDark"
 						lightIcon="ImportProfileLight"
-						greenDarkIcon="ImportProfileDarkGreen"
-						greenLightIcon="ImportProfileLightGreen"
 						dimensions={[24, 24]}
 					/>
 				}

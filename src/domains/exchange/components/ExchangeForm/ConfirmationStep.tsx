@@ -89,8 +89,6 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 				<ThemeIcon
 					lightIcon="CircleCompletedLight"
 					darkIcon="CircleCompletedDark"
-					greenLightIcon="CircleCompletedLightGreen"
-					greenDarkIcon="CircleCompletedDarkGreen"
 					dimensions={[32, 32]}
 				/>
 

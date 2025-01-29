@@ -51,8 +51,6 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 					<ThemeIcon
 						darkIcon="YourPassphraseDark"
 						lightIcon="YourPassphraseLight"
-						greenDarkIcon="YourPassphraseDarkGreen"
-						greenLightIcon="YourPassphraseLightGreen"
 						dimensions={[24, 24]}
 					/>
 				}

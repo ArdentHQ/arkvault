@@ -45,8 +45,6 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 						dimensions={[24, 24]}
 						lightIcon="SelectNetworkLight"
 						darkIcon="SelectNetworkDark"
-						greenLightIcon="SelectNetworkLightGreen"
-						greenDarkIcon="SelectNetworkDarkGreen"
 					/>
 				}
 				className="hidden sm:block"

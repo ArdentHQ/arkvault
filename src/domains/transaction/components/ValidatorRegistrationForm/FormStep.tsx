@@ -36,8 +36,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 						dimensions={[24, 24]}
 						lightIcon="SendTransactionLight"
 						darkIcon="SendTransactionDark"
-						greenDarkIcon="SendTransactionDarkGreen"
-						greenLightIcon="SendTransactionLightGreen"
 					/>
 				}
 			/>

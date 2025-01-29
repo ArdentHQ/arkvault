@@ -134,8 +134,6 @@ export const FormStep = ({
 						dimensions={[24, 24]}
 						lightIcon="SendTransactionLight"
 						darkIcon="SendTransactionDark"
-						greenDarkIcon="SendTransactionDarkGreen"
-						greenLightIcon="SendTransactionLightGreen"
 					/>
 				}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}

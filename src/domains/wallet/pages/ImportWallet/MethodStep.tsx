@@ -337,8 +337,6 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 						dimensions={[24, 24]}
 						lightIcon="ImportWalletLight"
 						darkIcon="ImportWalletDark"
-						greenLightIcon="ImportWalletLightGreen"
-						greenDarkIcon="ImportWalletDarkGreen"
 					/>
 				}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}

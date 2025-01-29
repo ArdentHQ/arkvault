@@ -8,7 +8,7 @@ import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { ListDivided } from "@/app/components/ListDivided";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useBreakpoint, useTheme } from "@/app/hooks";
+import { useBreakpoint, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
@@ -41,7 +41,6 @@ export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) 
 	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
 
 	const { setProfileTheme } = useTheme();
-	const { setProfileAccentColor } = useAccentColor();
 
 	useEffect(() => {
 		register("accentColor", { required: true });
@@ -57,7 +56,6 @@ export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) 
 		await persist();
 
 		setProfileTheme(profile);
-		setProfileAccentColor(profile);
 
 		reset(getValues());
 
