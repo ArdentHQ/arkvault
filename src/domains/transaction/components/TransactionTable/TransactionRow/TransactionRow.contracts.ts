@@ -7,4 +7,5 @@ export type TransactionRowProperties = {
 	onClick?: () => void;
 	isLoading?: boolean;
 	profile: Contracts.IProfile;
+	hideSender?: boolean;
 } & React.HTMLProps<any>;

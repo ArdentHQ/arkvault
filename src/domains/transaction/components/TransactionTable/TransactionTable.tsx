@@ -17,10 +17,11 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	skeletonRowsLimit = 8,
 	onRowClick,
 	profile,
+	hideSender = false,
 }) => {
 	const [coinName, setCoinName] = useState<string>();
 	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
-	const columns = useTransactionTableColumns({ coin: coinName });
+	const columns = useTransactionTableColumns({ coin: coinName, hideSender });
 
 	useEffect(() => {
 		try {
@@ -61,6 +62,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				transaction={row}
 				exchangeCurrency={exchangeCurrency}
 				profile={profile}
+				hideSender={hideSender}
 			/>
 		),
 		[showSkeleton, onRowClick, exchangeCurrency, profile],

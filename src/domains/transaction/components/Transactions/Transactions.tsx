@@ -25,6 +25,7 @@ interface TransactionsProperties {
 	title?: React.ReactNode;
 	onLoading?: (status: boolean) => void;
 	isUpdatingWallet?: boolean;
+	selectedWallets?: number;
 }
 
 export const Transactions = memo(function Transactions({
@@ -36,6 +37,7 @@ export const Transactions = memo(function Transactions({
 	title,
 	isUpdatingWallet,
 	onLoading,
+	selectedWallets
 }: TransactionsProperties) {
 	const { t } = useTranslation();
 
@@ -269,6 +271,7 @@ export const Transactions = memo(function Transactions({
 						skeletonRowsLimit={8}
 						onRowClick={setTransactionModalItem}
 						profile={profile}
+						hideSender={selectedWallets === 1}
 					/>
 				)}
 

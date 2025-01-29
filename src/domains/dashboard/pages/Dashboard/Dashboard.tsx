@@ -163,6 +163,7 @@ export const Dashboard = () => {
 							isLoading={profileIsSyncing}
 							isUpdatingWallet={isUpdatingWallet}
 							onLoading={setIsUpdatingTransactions}
+							selectedWallets={selectedWallets.length}
 						/>
 					</div>
 				</Section>
