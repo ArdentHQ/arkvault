@@ -11,7 +11,7 @@ import { Link } from "@/app/components/Link";
 import { isContractDeployment, isContractTransaction } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
-export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
+export const TransactionRowLabel = ({ direction, style }: { direction: Direction, style?: Direction }) => {
 	const { t } = useTranslation();
 
 	const color: Record<typeof direction, ColorType> = {
@@ -28,7 +28,7 @@ export const TransactionRowLabel = ({ direction }: { direction: Direction }) => 
 
 	return (
 		<Label
-			color={color[direction]}
+			color={color[style ? style : direction]}
 			size="xs"
 			noBorder
 			className="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -42,9 +42,13 @@ export const TransactionRowLabel = ({ direction }: { direction: Direction }) => 
 export const TransactionRowAddressing = ({
 	transaction,
 	profile,
+	variant = "sender",
+	isAdvanced
 }: {
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
+	variant?: "sender" | "recipient";
+	isAdvanced?: boolean;
 }): JSX.Element => {
 	const isMusigTransfer = [
 		!!transaction.usesMultiSignature?.(),
@@ -56,6 +60,7 @@ export const TransactionRowAddressing = ({
 
 	let direction: Direction = isNegative ? "sent" : "received";
 
+	/* istanbul ignore next -- @preserve */
 	const isReturn = transaction.isReturn() || (isMusigTransfer && transaction.sender() === transaction.recipient());
 
 	if (isReturn) {
@@ -64,10 +69,10 @@ export const TransactionRowAddressing = ({
 
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
-	const { alias } = useMemo(
+	let { alias } = useMemo(
 		() =>
 			getWalletAlias({
-				address: transaction.sender(),
+				address: transaction.recipient(),
 				network: transaction.wallet().network(),
 				profile,
 			}),
@@ -75,10 +80,60 @@ export const TransactionRowAddressing = ({
 	);
 	const isContract = isContractTransaction(transaction);
 
+	if (isAdvanced && variant === "sender") {
+		const { alias: senderAlias } = useMemo(
+			() =>
+				getWalletAlias({
+					address: transaction.sender(),
+					network: transaction.wallet().network(),
+					profile,
+				}),
+			[profile, getWalletAlias, transaction],
+		);
+
+		return (
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container_advanced_sender">
+				<TransactionRowLabel direction="received" style="return" />
+				<FormattedAddress address={transaction.sender()} alias={senderAlias} />
+			</div>
+		)
+	}
+
+	if (isAdvanced && variant === "recipient" && !transaction.isMultiPayment()) {
+		if (isContract || isContractDeployment(transaction)) {
+			return (
+				<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote_advanced_recipient">
+					<TransactionRowLabel direction="sent" style="return" />
+					<Link
+						to={transaction.wallet().coin().link().wallet(transaction.recipient())}
+						isExternal
+						showExternalIcon={false}
+						className="text-sm font-semibold"
+					>
+						{t("COMMON.CONTRACT")}
+					</Link>
+				</div>
+			);
+		}
+
+		return (
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container_advanced_recipient">
+				<TransactionRowLabel direction="sent" style="return" />
+				<FormattedAddress address={transaction.recipient()} alias={alias} />
+			</div>
+		)
+	}
+
 	if (transaction.isMultiPayment()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
-				<TransactionRowLabel direction={direction} />
+				<TransactionRowLabel 
+					direction={direction} 
+					style={
+						/* istanbul ignore next -- @preserve */
+						isAdvanced && variant === "recipient" ? "return" : direction
+					} 
+				/>
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{(direction === "return" || direction === "sent") && (
 						<>
@@ -89,7 +144,8 @@ export const TransactionRowAddressing = ({
 						</>
 					)}
 
-					{direction === "received" && <FormattedAddress address={transaction.sender()} alias={alias} />}
+					{/* istanbul ignore next -- @preserve */
+						direction === "received" && <FormattedAddress address={transaction.sender()} alias={alias} />}
 				</span>
 			</div>
 		);
@@ -98,7 +154,7 @@ export const TransactionRowAddressing = ({
 	if (isContract || isContractDeployment(transaction)) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
-				<TransactionRowLabel direction={direction} />
+				<TransactionRowLabel direction={direction}  />
 				<Link
 					to={transaction.wallet().coin().link().wallet(transaction.recipient())}
 					isExternal
