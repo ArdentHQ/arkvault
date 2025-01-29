@@ -180,6 +180,7 @@ describe("AddressesSidePanel", () => {
 		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
 
 		expect(onSelectedAddressesChange).toHaveBeenCalledWith([...addressesExcludingFirstWallet]);
+		expect(onSelectedAddressesChange).toHaveBeenCalledOnce();
 
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
