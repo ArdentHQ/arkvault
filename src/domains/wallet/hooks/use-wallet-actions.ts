@@ -9,7 +9,6 @@ import { WalletActionsModalType } from "@/domains/wallet/components/WalletAction
 import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
 
-
 export const useWalletActions = (wallets?: Contracts.IReadWriteWallet | Contracts.IReadWriteWallet[]) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
@@ -29,7 +28,6 @@ export const useWalletActions = (wallets?: Contracts.IReadWriteWallet | Contract
 		event?.preventDefault();
 		event?.stopPropagation();
 	}, []);
-
 
 	const handleOpen = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
