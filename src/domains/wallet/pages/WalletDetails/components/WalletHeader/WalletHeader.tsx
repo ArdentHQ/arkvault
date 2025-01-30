@@ -255,8 +255,8 @@ export const WalletHeader = ({
 
 			<AddressesSidePanel
 				wallets={profile.wallets()}
-				selectedAddresses={addresses}
-				onSelectedAddressesChange={setAddresses}
+				defaultSelectedAddresses={addresses}
+				onClose={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
 				onDeleteAddress={async (address: string) => {
