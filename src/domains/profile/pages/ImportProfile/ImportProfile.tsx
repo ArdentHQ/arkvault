@@ -5,11 +5,13 @@ import { useHistory } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { StepsProvider, useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { StepsProvider, useEnvironmentContext } from "@/app/contexts";
 import { ReadableFile } from "@/app/hooks/use-files";
 import { ProcessingImport } from "@/domains/profile/pages/ImportProfile/ProcessingImportStep";
 import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
 import { SelectFileStep } from "@/domains/profile/pages/ImportProfile/SelectFileStep";
+import { useProfileRestore } from "@/app/hooks";
+import { SelectedAddresses } from "@/domains/portfolio/hooks/use-portfolio";
 
 enum Step {
 	SelectFileStep = 1,
@@ -27,16 +29,29 @@ export const ImportProfile = () => {
 	const [selectedFile, setSelectedFile] = useState<ReadableFile>();
 	const [password, setPassword] = useState<string>();
 	const [profile, setProfile] = useState<Contracts.IProfile>();
-	const { setConfiguration } = useConfiguration();
+	const { restoreProfileConfig } = useProfileRestore();
 
 	const handleSelectedFile = (file: ReadableFile) => {
 		setSelectedFile(file);
 		setActiveTab(Step.ProcessingStep);
 	};
 
-	const handleProfileSave = () => {
-		setConfiguration({ dashboard: undefined });
-		persist();
+	const handleProfileSave = async () => {
+		if (profile) {
+			restoreProfileConfig(profile);
+			const selectedAddresses = SelectedAddresses({ env, profile });
+			// If imported profile doesn't have selected addresses, mark them all as selected.
+			if (!selectedAddresses.hasSelected()) {
+				await selectedAddresses.set(
+					profile
+						.wallets()
+						.values()
+						.map((wallet) => wallet.address()),
+				);
+			}
+		}
+
+		await persist();
 		history.push("/");
 	};
 
