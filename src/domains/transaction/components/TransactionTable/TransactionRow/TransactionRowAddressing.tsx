@@ -67,9 +67,10 @@ export const TransactionRowAddressing = ({
 	const { alias } = useMemo(
 		() =>
 			getWalletAlias({
-				address: transaction.sender(),
+				address: isNegative ? transaction.recipient() : transaction.sender(),
 				network: transaction.wallet().network(),
 				profile,
+				username: transaction.wallet().username(),
 			}),
 		[profile, getWalletAlias, transaction],
 	);

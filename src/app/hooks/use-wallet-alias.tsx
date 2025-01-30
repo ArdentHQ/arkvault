@@ -9,12 +9,12 @@ interface Properties {
 	address: string;
 	network?: Networks.Network;
 	profile?: Contracts.IProfile;
+	username?: string;
 }
 
 interface WalletAliasResult {
 	alias: string | undefined;
 	isContact: boolean;
-	isDelegate: boolean;
 	address: string;
 }
 
@@ -26,24 +26,10 @@ const useWalletAlias = (): HookResult => {
 	const { env } = useEnvironmentContext();
 
 	const getWalletAlias = useCallback(
-		({ address, profile, network }: Properties) => {
+		({ address, profile, network, username }: Properties) => {
 			try {
 				assertProfile(profile);
 				assertString(address);
-
-				const getDelegateUsername = (network?: Networks.Network): string | undefined => {
-					if (!network) {
-						return undefined;
-					}
-
-					try {
-						const delegate = env.delegates().findByAddress(network.coin(), network.id(), address);
-
-						return delegate.username();
-					} catch {
-						return undefined;
-					}
-				};
 
 				let wallet: Contracts.IReadWriteWallet | undefined;
 
@@ -52,19 +38,10 @@ const useWalletAlias = (): HookResult => {
 				}
 
 				if (wallet) {
-					const delegateUsername = getDelegateUsername(wallet.network());
-
-					let alias = wallet.displayName();
-
-					if (delegateUsername && profile.appearance().get("useNetworkWalletNames")) {
-						alias = delegateUsername;
-					}
-
 					return {
 						address,
-						alias,
+						alias: wallet.displayName(),
 						isContact: false,
-						isDelegate: !!delegateUsername,
 					};
 				}
 
@@ -75,18 +52,14 @@ const useWalletAlias = (): HookResult => {
 						address,
 						alias: contact.name(),
 						isContact: true,
-						isDelegate: !!getDelegateUsername(network),
 					};
 				}
 
-				if (network) {
-					const alias = getDelegateUsername(network);
-
+				if (username) {
 					return {
 						address,
-						alias,
+						alias: username,
 						isContact: false,
-						isDelegate: alias !== undefined,
 					};
 				}
 			} catch {
@@ -97,7 +70,6 @@ const useWalletAlias = (): HookResult => {
 				address,
 				alias: undefined,
 				isContact: false,
-				isDelegate: false,
 			};
 		},
 		[env],
