@@ -112,6 +112,18 @@ exports[`Welcome > should change route to create profile 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -147,6 +159,18 @@ exports[`Welcome > should change route to create profile 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -182,6 +206,18 @@ exports[`Welcome > should change route to create profile 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -217,6 +253,18 @@ exports[`Welcome > should change route to create profile 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -252,6 +300,18 @@ exports[`Welcome > should change route to create profile 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -287,6 +347,18 @@ exports[`Welcome > should change route to create profile 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -322,6 +394,18 @@ exports[`Welcome > should change route to create profile 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -375,45 +459,58 @@ exports[`Welcome > should change route to create profile 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonLightGreen"
+                      data-testid="icon-PersonLight"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
-                          viewBox="0 0 25 24"
-                          width="25"
+                          viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                            fill="#E2F0E6"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.0005 14.9337C14.8356 14.9337 17.1339 12.6354 17.1339 9.80033C17.1339 6.96526 14.8356 4.66699 12.0005 4.66699C9.16546 4.66699 6.86719 6.96526 6.86719 9.80033C6.86719 12.6354 9.16546 14.9337 12.0005 14.9337Z"
+                                  fill="#E6EFF9"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M18.7609 20.6784C16.9721 18.8784 14.5393 17.8662 12.0016 17.8662C9.46387 17.8662 7.03099 18.8784 5.24219 20.6784"
+                                  id="Shape"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -657,7 +754,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -845,6 +942,18 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -880,6 +989,18 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -915,6 +1036,18 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -950,6 +1083,18 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -985,6 +1130,18 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1020,6 +1177,18 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1055,6 +1224,18 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1108,45 +1289,58 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonDarkGreen"
+                      data-testid="icon-PersonDark"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 25 24"
-                          width="25"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                            fill="#26372B"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5005 14.9337C15.3356 14.9337 17.6339 12.6354 17.6339 9.80033C17.6339 6.96526 15.3356 4.66699 12.5005 4.66699C9.66546 4.66699 7.36719 6.96526 7.36719 9.80033C7.36719 12.6354 9.66546 14.9337 12.5005 14.9337Z"
+                                  fill="#1A486B"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M19.2609 20.6784C17.4721 18.8784 15.0393 17.8662 12.5016 17.8662C9.96387 17.8662 7.53099 18.8784 5.74219 20.6784"
+                                  id="Shape"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -1485,7 +1679,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -1673,6 +1867,18 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1708,6 +1914,18 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1743,6 +1961,18 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1778,6 +2008,18 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1813,6 +2055,18 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1848,6 +2102,18 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1883,6 +2149,18 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -1936,45 +2214,58 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonDarkGreen"
+                      data-testid="icon-PersonDark"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 25 24"
-                          width="25"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                            fill="#26372B"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5005 14.9337C15.3356 14.9337 17.6339 12.6354 17.6339 9.80033C17.6339 6.96526 15.3356 4.66699 12.5005 4.66699C9.66546 4.66699 7.36719 6.96526 7.36719 9.80033C7.36719 12.6354 9.66546 14.9337 12.5005 14.9337Z"
+                                  fill="#1A486B"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M19.2609 20.6784C17.4721 18.8784 15.0393 17.8662 12.5016 17.8662C9.96387 17.8662 7.53099 18.8784 5.74219 20.6784"
+                                  id="Shape"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -2313,7 +2604,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -2501,6 +2792,18 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -2536,6 +2839,18 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -2571,6 +2886,18 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -2606,6 +2933,18 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -2641,6 +2980,18 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -2676,6 +3027,18 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -2711,6 +3074,18 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -2764,45 +3139,58 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonDarkGreen"
+                      data-testid="icon-PersonDark"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 25 24"
-                          width="25"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                            fill="#26372B"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5005 14.9337C15.3356 14.9337 17.6339 12.6354 17.6339 9.80033C17.6339 6.96526 15.3356 4.66699 12.5005 4.66699C9.66546 4.66699 7.36719 6.96526 7.36719 9.80033C7.36719 12.6354 9.66546 14.9337 12.5005 14.9337Z"
+                                  fill="#1A486B"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M19.2609 20.6784C17.4721 18.8784 15.0393 17.8662 12.5016 17.8662C9.96387 17.8662 7.53099 18.8784 5.74219 20.6784"
+                                  id="Shape"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -3141,7 +3529,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -3329,6 +3717,18 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -3364,6 +3764,18 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -3399,6 +3811,18 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -3434,6 +3858,18 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -3469,6 +3905,18 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -3504,6 +3952,18 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -3539,6 +3999,18 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -3592,45 +4064,58 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonLightGreen"
+                      data-testid="icon-PersonLight"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
-                          viewBox="0 0 25 24"
-                          width="25"
+                          viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                            fill="#E2F0E6"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.0005 14.9337C14.8356 14.9337 17.1339 12.6354 17.1339 9.80033C17.1339 6.96526 14.8356 4.66699 12.0005 4.66699C9.16546 4.66699 6.86719 6.96526 6.86719 9.80033C6.86719 12.6354 9.16546 14.9337 12.0005 14.9337Z"
+                                  fill="#E6EFF9"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M18.7609 20.6784C16.9721 18.8784 14.5393 17.8662 12.0016 17.8662C9.46387 17.8662 7.03099 18.8784 5.24219 20.6784"
+                                  id="Shape"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -3969,7 +4454,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -4157,6 +4642,18 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -4192,6 +4689,18 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -4227,6 +4736,18 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -4262,6 +4783,18 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -4297,6 +4830,18 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -4332,6 +4877,18 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -4367,6 +4924,18 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -4420,45 +4989,58 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonDarkGreen"
+                      data-testid="icon-PersonDark"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 25 24"
-                          width="25"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                            fill="#26372B"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5005 14.9337C15.3356 14.9337 17.6339 12.6354 17.6339 9.80033C17.6339 6.96526 15.3356 4.66699 12.5005 4.66699C9.66546 4.66699 7.36719 6.96526 7.36719 9.80033C7.36719 12.6354 9.66546 14.9337 12.5005 14.9337Z"
+                                  fill="#1A486B"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M19.2609 20.6784C17.4721 18.8784 15.0393 17.8662 12.5016 17.8662C9.96387 17.8662 7.53099 18.8784 5.74219 20.6784"
+                                  id="Shape"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -4797,7 +5379,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -4985,6 +5567,18 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5020,6 +5614,18 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5055,6 +5661,18 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5090,6 +5708,18 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5125,6 +5755,18 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5160,6 +5802,18 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5195,6 +5849,18 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5248,45 +5914,58 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonLightGreen"
+                      data-testid="icon-PersonLight"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
-                          viewBox="0 0 25 24"
-                          width="25"
+                          viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                            fill="#E2F0E6"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.0005 14.9337C14.8356 14.9337 17.1339 12.6354 17.1339 9.80033C17.1339 6.96526 14.8356 4.66699 12.0005 4.66699C9.16546 4.66699 6.86719 6.96526 6.86719 9.80033C6.86719 12.6354 9.16546 14.9337 12.0005 14.9337Z"
+                                  fill="#E6EFF9"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M18.7609 20.6784C16.9721 18.8784 14.5393 17.8662 12.0016 17.8662C9.46387 17.8662 7.03099 18.8784 5.24219 20.6784"
+                                  id="Shape"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -5530,7 +6209,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -5718,6 +6397,18 @@ exports[`Welcome > should render with profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5753,6 +6444,18 @@ exports[`Welcome > should render with profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5788,6 +6491,18 @@ exports[`Welcome > should render with profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5823,6 +6538,18 @@ exports[`Welcome > should render with profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5858,6 +6585,18 @@ exports[`Welcome > should render with profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5893,6 +6632,18 @@ exports[`Welcome > should render with profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5928,6 +6679,18 @@ exports[`Welcome > should render with profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -5981,45 +6744,58 @@ exports[`Welcome > should render with profiles 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonDarkGreen"
+                      data-testid="icon-PersonDark"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
                           viewBox="0 0 25 24"
-                          width="25"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9346C15.3356 14.9346 17.6339 12.6364 17.6339 9.8013C17.6339 6.96624 15.3356 4.66797 12.5005 4.66797C9.66546 4.66797 7.36719 6.96624 7.36719 9.8013C7.36719 12.6364 9.66546 14.9346 12.5005 14.9346Z"
-                            fill="#26372B"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5005 14.9337C15.3356 14.9337 17.6339 12.6354 17.6339 9.80033C17.6339 6.96526 15.3356 4.66699 12.5005 4.66699C9.66546 4.66699 7.36719 6.96526 7.36719 9.80033C7.36719 12.6354 9.66546 14.9337 12.5005 14.9337Z"
+                                  fill="#1A486B"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M19.2609 20.6784C17.4721 18.8784 15.0393 17.8662 12.5016 17.8662C9.96387 17.8662 7.53099 18.8784 5.74219 20.6784"
+                                  id="Shape"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#0D7ED6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -6358,7 +7134,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -6546,6 +7322,18 @@ exports[`Welcome > should render without profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -6581,6 +7369,18 @@ exports[`Welcome > should render without profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -6616,6 +7416,18 @@ exports[`Welcome > should render without profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -6651,6 +7463,18 @@ exports[`Welcome > should render without profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -6686,6 +7510,18 @@ exports[`Welcome > should render without profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Easy Access to Your Digital Assets"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-1-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Easy Access to Your Digital Assets"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
                           </div>
                         </div>
@@ -6721,6 +7557,18 @@ exports[`Welcome > should render without profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Integrated Exchanges"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-2-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Integrated Exchanges"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
                           </div>
                         </div>
@@ -6756,6 +7604,18 @@ exports[`Welcome > should render without profiles 1`] = `
                           >
                             <div
                               class="hidden aspect-[1.097] h-full w-full lg:block"
+                            >
+                              <img
+                                alt="Fully Customizable"
+                                loading="lazy"
+                                src="/src/domains/profile/images/welcome-slide-3-light.png"
+                              />
+                            </div>
+                            <img
+                              alt="Fully Customizable"
+                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              loading="lazy"
+                              src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
                           </div>
                         </div>
@@ -6809,45 +7669,58 @@ exports[`Welcome > should render without profiles 1`] = `
                     class="flex flex-col items-center space-y-2 text-center sm:px-4"
                   >
                     <div
-                      data-testid="icon-PersonLightGreen"
+                      data-testid="icon-PersonLight"
                     >
                       <div
                         style="height: 24px; width: 24px;"
                       >
                         <svg
                           fill="none"
-                          height="24"
                           style="height: 100%; width: 100%;"
-                          viewBox="0 0 25 24"
-                          width="25"
+                          viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                            fill="#E2F0E6"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.0005 14.9337C14.8356 14.9337 17.1339 12.6354 17.1339 9.80033C17.1339 6.96526 14.8356 4.66699 12.0005 4.66699C9.16546 4.66699 6.86719 6.96526 6.86719 9.80033C6.86719 12.6354 9.16546 14.9337 12.0005 14.9337Z"
+                                  fill="#E6EFF9"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M18.7609 20.6784C16.9721 18.8784 14.5393 17.8662 12.0016 17.8662C9.46387 17.8662 7.03099 18.8784 5.24219 20.6784"
+                                  id="Shape"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -6870,7 +7743,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       data-testid="ProfileList"
                     />
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                       data-testid="CreateProfile"
                       type="button"
                     >

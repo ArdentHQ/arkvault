@@ -42,7 +42,7 @@ export const ResetProfile = ({ isOpen, profile, onClose, onCancel, onReset }: Re
 	return (
 		<Modal
 			title={t("PROFILE.MODAL_RESET_PROFILE.TITLE")}
-			image={<Image name="Warning" useAccentColor={false} className="m-auto my-8 max-w-52" />}
+			image={<Image name="Warning" className="m-auto my-8 max-w-52" />}
 			size="lg"
 			isOpen={isOpen}
 			onClose={onClose}

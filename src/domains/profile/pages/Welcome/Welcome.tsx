@@ -9,7 +9,7 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { Page, Section } from "@/app/components/Layout";
 import { Link } from "@/app/components/Link";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useDeeplink, useTheme } from "@/app/hooks";
+import { useDeeplink, useTheme } from "@/app/hooks";
 import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
 import { toasts } from "@/app/services";
@@ -59,7 +59,6 @@ export const Welcome = () => {
 	);
 
 	const { setProfileTheme, resetTheme } = useTheme();
-	const { setProfileAccentColor } = useAccentColor();
 
 	useEffect(() => {
 		resetTheme();
@@ -91,14 +90,12 @@ export const Welcome = () => {
 				}
 
 				setProfileTheme(profile);
-				setProfileAccentColor(profile);
 
 				handleDeepLink(profile);
 				return;
 			}
 
 			setProfileTheme(profile);
-			setProfileAccentColor(profile);
 
 			history.push(`/profiles/${profile.id()}/${subPath}`);
 		},
@@ -108,7 +105,6 @@ export const Welcome = () => {
 	const navigateToPreviousPage = useCallback(
 		(profile: Contracts.IProfile) => {
 			setProfileTheme(profile);
-			setProfileAccentColor(profile);
 			history.push(history.location.state!.from!);
 		},
 		[history],
@@ -247,8 +243,6 @@ export const Welcome = () => {
 										<ThemeIcon
 											darkIcon="PersonDark"
 											lightIcon="PersonLight"
-											greenLightIcon="PersonLightGreen"
-											greenDarkIcon="PersonDarkGreen"
 											dimensions={[24, 24]}
 										/>
 

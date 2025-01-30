@@ -49,7 +49,7 @@ const ViewFinder = ({ error, isLoading }: { error?: QRError; isLoading: boolean 
 
 				{error && (
 					<>
-						<Image className="w-22" name="ErrorSmall" useAccentColor={false} />
+						<Image className="w-22" name="ErrorSmall" />
 					</>
 				)}
 

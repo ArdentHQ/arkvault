@@ -1,7 +1,6 @@
-import { AccentColorType, ViewingModeType } from "@/app/hooks";
+import { ViewingModeType } from "@/app/hooks";
 
 interface AppearanceSettingsState {
-	accentColor: AccentColorType;
 	dashboardTransactionHistory: boolean;
 	useNetworkWalletNames: boolean;
 	viewingMode: ViewingModeType;

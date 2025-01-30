@@ -7,7 +7,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
 
-import { useAccentColor, useTheme } from "@/app/hooks";
+import { useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import GeneralSettings from "@/domains/setting/pages/General";
@@ -549,19 +549,19 @@ describe("General Settings", () => {
 
 	it("should reset appearance settings on reset", async () => {
 		const toastSpy = vi.spyOn(toasts, "success");
-		const { setAccentColor, getCurrentAccentColor } = useAccentColor();
+
 		const {
 			result: { current },
 		} = renderHook(() => useTheme());
+
 		const { setTheme, theme } = current;
 
-		expect(getCurrentAccentColor()).toBe("navy");
 		expect(document.body.classList.contains("dark")).toBe(false);
 
-		setAccentColor("green");
-		setTheme("dark");
+		act(() => {
+			setTheme("dark");
+		});
 
-		expect(getCurrentAccentColor()).toBe("green");
 		// expect(document.body.classList.contains("dark")).toBe(true);
 		expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 
@@ -601,7 +601,6 @@ describe("General Settings", () => {
 			expect(toastSpy).toHaveBeenCalledWith(translations.PROFILE.MODAL_RESET_PROFILE.SUCCESS);
 		});
 
-		expect(getCurrentAccentColor()).toBe("navy");
 		expect(theme).toBe("light");
 
 		toastSpy.mockRestore();
