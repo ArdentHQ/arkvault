@@ -9,7 +9,7 @@ import { WalletActionsModalType } from "@/domains/wallet/components/WalletAction
 import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
 
-export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
+export const useWalletActions = (wallets: Contracts.IReadWriteWallet[]) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const history = useHistory();
@@ -17,50 +17,65 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
+	const hasNoWallets = wallets.length === 0;
+	const hasMultipleWallets = wallets.length > 1;
+
 	const stopEventBubbling = useCallback((event?: React.MouseEvent<HTMLElement>) => {
 		event?.preventDefault();
 		event?.stopPropagation();
 	}, []);
 
+	const wallet = wallets[0];
+
 	const handleOpen = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
-			if (!wallet) {
+			if (hasNoWallets) {
 				return;
 			}
+
 			stopEventBubbling(event);
 			history.push(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[history, profile, wallet, stopEventBubbling],
+		[hasNoWallets, stopEventBubbling, history, profile, wallet],
 	);
 
 	const handleSend = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
-			if (!wallet) {
+			if (hasNoWallets) {
 				return;
 			}
+
 			stopEventBubbling(event);
+
+			if (hasMultipleWallets) {
+				history.push(
+					generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() })
+				)
+				return;
+			}
+
 			history.push(
 				generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }),
 			);
 		},
-		[history, profile, wallet, stopEventBubbling],
+		[hasNoWallets, stopEventBubbling, hasMultipleWallets, history, profile, wallet],
 	);
 
 	const handleToggleStar = useCallback(
 		async (event?: React.MouseEvent<HTMLElement>) => {
-			if (!wallet) {
+			if (hasNoWallets) {
 				return;
 			}
 			stopEventBubbling(event);
 			wallet.toggleStarred();
 			await persist();
 		},
-		[wallet, persist, stopEventBubbling],
+		[hasNoWallets, stopEventBubbling, wallet, persist],
 	);
 
 	const handleDelete = useCallback(
 		async (event?: React.MouseEvent<HTMLElement>) => {
-			if (!wallet) {
+			if (hasNoWallets) {
 				return;
 			}
 
@@ -80,12 +95,12 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 
 			return true;
 		},
-		[profile, history, wallet, persist, stopEventBubbling],
+		[hasNoWallets, stopEventBubbling, profile, wallet, persist, history],
 	);
 
 	const handleSelectOption = useCallback(
 		(option: DropdownOption) => {
-			if (!wallet) {
+			if (hasNoWallets) {
 				return;
 			}
 
@@ -131,7 +146,7 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[wallet, history, profile, openExternal],
+		[hasNoWallets, history, profile, wallet, openExternal],
 	);
 
 	const handleCreate = useCallback(
