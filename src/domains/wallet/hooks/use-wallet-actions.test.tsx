@@ -43,7 +43,7 @@ describe("useWalletActions", () => {
 		expect(current.handleSelectOption({} as DropdownOption)).toBeUndefined();
 	});
 
-	it("should return undefined if there is no wallets in array", async () => {
+	it("should return undefined if there is no wallets in array", () => {
 		const {
 			result: { current },
 		} = renderHook(() => useWalletActions([]), { wrapper });
@@ -51,7 +51,7 @@ describe("useWalletActions", () => {
 		expect(current.handleSend()).toBeUndefined();
 	});
 
-	it("should push right url to history if there are multiple wallets", async () => {
+	it("should push right url to history if there are multiple wallets", () => {
 		const {
 			result: { current },
 		} = renderHook(() => useWalletActions([wallet, profile.wallets().last()]), { wrapper });
