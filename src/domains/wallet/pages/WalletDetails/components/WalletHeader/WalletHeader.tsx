@@ -259,14 +259,6 @@ export const WalletHeader = ({
 				onClose={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				onDeleteAddress={async (address: string) => {
-					const wallets = profile.wallets().filterByAddress(address);
-
-					profile.wallets().forget(wallets[0].id());
-
-					profile.notifications().transactions().forgetByRecipient(address);
-					await persist();
-				}}
 			/>
 
 			<WalletActionsModals

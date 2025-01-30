@@ -1,3 +1,5 @@
 export interface DashboardConfiguration {
-	selectedAddresses: string[];
+	walletsDisplayType: "all" | "starred" | "ledger";
+	selectedNetworkIds: string[];
+	selectedAddresses?: string[];
 }
