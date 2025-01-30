@@ -5,7 +5,7 @@ import { Column } from "react-table";
 
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 
-export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
+export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string; hideSender?: boolean }) => {
 	const { t } = useTranslation();
 	const coinLabel = coin ? `(${coin})` : "";
 
@@ -28,15 +28,23 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 			},
 			{
 				Header: t("COMMON.METHOD"),
-				cellWidth: "w-40 lg:w-48",
+				cellWidth: "w-40 lg:w-24",
 				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.ADDRESSING"),
 				headerClassName: "no-border",
 			},
+			...(hideSender
+				? []
+				: [
+						{
+							headerClassName: "no-border md-lg:table-cell lg:table-cell",
+							id: "recipient",
+						},
+					]),
 			{
-				Header: `${t("COMMON.AMOUNT")} ${coinLabel}`,
+				Header: `${hideSender ? t("COMMON.VALUE") : t("COMMON.AMOUNT")} ${coinLabel}`,
 				accessor: (transaction) => transaction.total?.(),
 				className: "justify-end",
 				headerClassName: "no-border",
@@ -47,13 +55,13 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 				accessor: () => "fiatValue",
 				cellWidth: "w-36",
 				className: "justify-end",
-				headerClassName: "no-border hidden lg:table-cell",
+				headerClassName: `no-border hidden lg:table-cell ${hideSender ? "" : "!pl-0 xl:min-w-28"}`,
 				noRoundedBorders: true,
 			},
 		];
 
 		return templateColumns;
-	}, [t, coinLabel]);
+	}, [t, coinLabel, hideSender]);
 };
 
 export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) => {
