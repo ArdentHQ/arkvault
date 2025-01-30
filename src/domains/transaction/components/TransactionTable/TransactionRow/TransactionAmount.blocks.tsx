@@ -63,11 +63,23 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 	);
 };
 
-export const TransactionTotalLabel = ({ transaction }: { transaction: ExtendedTransactionData }): JSX.Element => {
+export const TransactionTotalLabel = ({ transaction, hideStyles = false }: { transaction: ExtendedTransactionData; hideStyles?: boolean }): JSX.Element => {
 	const { t } = useTranslation();
 
 	const currency = transaction.wallet().currency();
 	const returnedAmount = calculateReturnedAmount(transaction);
+
+	if (hideStyles) {
+		return (
+			<Amount
+				showSign={false}
+				ticker={currency}
+				value={transaction.total()}
+				isNegative={transaction.isSent()}
+				className="text-sm font-semibold"
+			/>
+		);
+	}
 
 	return (
 		<AmountLabel
