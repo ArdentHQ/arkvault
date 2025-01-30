@@ -63,7 +63,13 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 	);
 };
 
-export const TransactionTotalLabel = ({ transaction, hideStyles = false }: { transaction: ExtendedTransactionData; hideStyles?: boolean }): JSX.Element => {
+export const TransactionTotalLabel = ({
+	transaction,
+	hideStyles = false,
+}: {
+	transaction: ExtendedTransactionData;
+	hideStyles?: boolean;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const currency = transaction.wallet().currency();
