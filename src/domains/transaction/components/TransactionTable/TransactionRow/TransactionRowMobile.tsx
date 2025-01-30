@@ -85,7 +85,7 @@ export const TransactionRowMobile = memo(
 								title={`${t("COMMON.VALUE")} (${transaction.wallet().currency()})`}
 								className="w-full"
 							>
-								<TransactionTotalLabel transaction={transaction} />
+								<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
 							</MobileSection>
 
 							<MobileSection title={t("COMMON.FIAT_VALUE")} className="w-full">
