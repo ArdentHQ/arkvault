@@ -3,23 +3,15 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { AppearanceSettingsState, UseAppearanceSettings } from "./Appearance.contracts";
-import { AppearanceAccentColor } from "./blocks/AppearanceAccentColor";
 import { AppearanceToggle } from "./blocks/AppearanceToggle";
 import { AppearanceViewingMode } from "./blocks/AppearanceViewingMode";
 import { ListDividedItemProperties } from "@/app/components/ListDivided/ListDivided.contracts";
-import { AccentColorType, ViewingModeType } from "@/app/hooks";
+import { ViewingModeType } from "@/app/hooks";
 
 export const useAppearanceItems = (): ListDividedItemProperties[] => {
 	const { t } = useTranslation();
 
 	return [
-		{
-			itemValueClass: "ml-5",
-			label: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE")}`,
-			labelDescription: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.DESCRIPTION")}`,
-			value: <AppearanceAccentColor />,
-			wrapperClass: "pb-6",
-		},
 		{
 			itemValueClass: "ml-5",
 			label: `${t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")}`,
@@ -44,21 +36,11 @@ export const useAppearanceItems = (): ListDividedItemProperties[] => {
 
 export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanceSettings => ({
 	getValues: (): AppearanceSettingsState => ({
-		accentColor: (() => {
-			let accentColor = profile.appearance().get("accentColor");
-
-			if (accentColor === "blue") {
-				accentColor = "navy";
-			}
-
-			return accentColor as AccentColorType;
-		})(),
 		dashboardTransactionHistory: profile.appearance().get("dashboardTransactionHistory"),
 		useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
 		viewingMode: profile.appearance().get("theme") as ViewingModeType,
 	}),
 	setValues: (values: AppearanceSettingsState): void => {
-		profile.settings().set(Contracts.ProfileSetting.AccentColor, values.accentColor);
 		profile
 			.settings()
 			.set(Contracts.ProfileSetting.DashboardTransactionHistory, values.dashboardTransactionHistory);

@@ -31,13 +31,7 @@ export const ReviewStep = ({
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						greenDarkIcon="SendTransactionDarkGreen"
-						greenLightIcon="SendTransactionLightGreen"
-					/>
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
 			/>
 

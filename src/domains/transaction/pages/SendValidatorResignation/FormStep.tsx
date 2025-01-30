@@ -24,13 +24,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 			<StepHeader
 				title={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE")}
 				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						greenDarkIcon="SendTransactionDarkGreen"
-						greenLightIcon="SendTransactionLightGreen"
-					/>
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
 				subtitle={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.DESCRIPTION")}
 			/>
