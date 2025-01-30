@@ -48,9 +48,7 @@ export const useWalletActions = (wallets: Contracts.IReadWriteWallet[]) => {
 			stopEventBubbling(event);
 
 			if (hasMultipleWallets) {
-				history.push(
-					generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() })
-				)
+				history.push(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
 				return;
 			}
 
