@@ -9,7 +9,8 @@ import { WalletActionsModalType } from "@/domains/wallet/components/WalletAction
 import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
 
-export const useWalletActions = (wallets: Contracts.IReadWriteWallet[]) => {
+
+export const useWalletActions = (wallets?: Contracts.IReadWriteWallet | Contracts.IReadWriteWallet[]) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const history = useHistory();
@@ -17,15 +18,18 @@ export const useWalletActions = (wallets: Contracts.IReadWriteWallet[]) => {
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
-	const hasNoWallets = wallets.length === 0;
-	const hasMultipleWallets = wallets.length > 1;
+	const isWalletsArray = Array.isArray(wallets);
+
+	const wallet = isWalletsArray ? wallets[0] : wallets;
+
+	const hasNoWallets = (isWalletsArray && wallets.length === 0) || !wallet;
+	const hasMultipleWallets = isWalletsArray && wallets.length > 1;
 
 	const stopEventBubbling = useCallback((event?: React.MouseEvent<HTMLElement>) => {
 		event?.preventDefault();
 		event?.stopPropagation();
 	}, []);
 
-	const wallet = wallets[0];
 
 	const handleOpen = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
