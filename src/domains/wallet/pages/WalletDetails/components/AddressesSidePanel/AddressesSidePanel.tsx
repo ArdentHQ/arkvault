@@ -16,20 +16,21 @@ import { useBreakpoint } from "@/app/hooks";
 
 export const AddressesSidePanel = ({
 	wallets,
-	selectedAddresses,
-	onSelectedAddressesChange,
+	defaultSelectedAddresses = [],
 	open,
 	onOpenChange,
 	onDeleteAddress,
+	onClose,
 }: {
 	wallets: IWalletRepository;
-	selectedAddresses: string[];
-	onSelectedAddressesChange: (addresses: string[]) => void;
+	defaultSelectedAddresses: string[];
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	onDeleteAddress: (address: string) => Promise<void>;
+	onDeleteAddress: (address: string) => void;
+	onClose: (addresses: string[]) => void;
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses);
 
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
 
@@ -69,11 +70,11 @@ export const AddressesSidePanel = ({
 				return;
 			}
 
-			onSelectedAddressesChange(remainingAddresses);
+			onSetSelectedAddresses(remainingAddresses);
 			return;
 		}
 
-		onSelectedAddressesChange([...selectedAddresses, address]);
+		onSetSelectedAddresses([...selectedAddresses, address]);
 	};
 
 	const markForDelete = (address: string) => {
@@ -107,7 +108,7 @@ export const AddressesSidePanel = ({
 
 		const activeAddresses = selectedAddresses.filter((address) => !addressesToDelete.includes(address));
 
-		onSelectedAddressesChange(activeAddresses);
+		onSetSelectedAddresses(activeAddresses);
 
 		resetDeleteState();
 	};
@@ -128,6 +129,10 @@ export const AddressesSidePanel = ({
 				resetDeleteState();
 				onOpenChange(open);
 				setSearchQuery("");
+
+				if (!open) {
+					onClose(selectedAddresses);
+				}
 			}}
 			dataTestId="AddressesSidePanel"
 		>
@@ -165,8 +170,8 @@ export const AddressesSidePanel = ({
 							checked={!isSelectAllDisabled && selectedAddresses.length === addressesToShow.length}
 							onChange={() => {
 								selectedAddresses.length === addressesToShow.length
-									? onSelectedAddressesChange([])
-									: onSelectedAddressesChange(addressesToShow.map((w) => w.address()));
+									? onSetSelectedAddresses([])
+									: onSetSelectedAddresses(addressesToShow.map((w) => w.address()));
 							}}
 						/>
 						<span className="font-semibold">{t("COMMON.SELECT_ALL")}</span>

@@ -297,8 +297,8 @@ export const PortfolioHeader = ({
 
 			<AddressesSidePanel
 				wallets={profile.wallets()}
-				selectedAddresses={selectedAddresses}
-				onSelectedAddressesChange={(addresses) => {
+				defaultSelectedAddresses={selectedAddresses}
+				onClose={(addresses) => {
 					setSelectedAddresses(addresses);
 				}}
 				open={showAddressesPanel}

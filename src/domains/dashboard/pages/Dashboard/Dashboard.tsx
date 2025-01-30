@@ -107,14 +107,16 @@ export const Dashboard = () => {
 					className="pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 					innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 				>
-					<PortfolioHeader
-						profile={activeProfile}
-						votes={votes}
-						handleVotesButtonClick={handleVoteButton}
-						isLoadingVotes={isLoadingVotes}
-						isUpdatingTransactions={isUpdatingTransactions}
-						onUpdate={setIsUpdatingWallet}
-					/>
+					{activeProfile.wallets().count() > 0 && (
+						<PortfolioHeader
+							profile={activeProfile}
+							votes={votes}
+							handleVotesButtonClick={handleVoteButton}
+							isLoadingVotes={isLoadingVotes}
+							isUpdatingTransactions={isUpdatingTransactions}
+							onUpdate={setIsUpdatingWallet}
+						/>
+					)}
 				</Section>
 
 				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
