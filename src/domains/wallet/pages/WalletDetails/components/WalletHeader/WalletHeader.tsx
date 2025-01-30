@@ -17,7 +17,6 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/Wall
 import { WalletActions } from "./WalletHeader.blocks";
 import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { Skeleton } from "@/app/components/Skeleton";
-import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 
 export const WalletHeader = ({
@@ -37,8 +36,6 @@ export const WalletHeader = ({
 	handleVotesButtonClick: (address?: string) => void;
 	onUpdate?: (status: boolean) => void;
 }) => {
-	const { persist } = useEnvironmentContext();
-
 	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } =
 		useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
