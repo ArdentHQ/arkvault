@@ -336,7 +336,5 @@ module.exports = {
 			borderColor: ["navy", "green"],
 		},
 	},
-	plugins: [
-		require("@tailwindcss/forms"),
-	],
+	plugins: [require("@tailwindcss/forms")],
 };
