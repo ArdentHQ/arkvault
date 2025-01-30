@@ -5,7 +5,6 @@ import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { TransactionRecipientsProperties } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
-import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
 import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 import { Amount } from "@/app/components/Amount";
 
@@ -41,8 +40,6 @@ export const TransactionRecipientsMobile: React.FC<TransactionRecipientsProperti
 										alignment="right"
 									/>
 								</div>
-
-								{recipient.isDelegate && <TransactionDelegateIcon />}
 								<Avatar size="xs" address={recipient.address} noShadow />
 							</div>
 						</RowWrapper>

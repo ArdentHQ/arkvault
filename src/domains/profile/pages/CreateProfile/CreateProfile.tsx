@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
+import { useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
 
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ThemeIcon } from "@/app/components/Icon";
@@ -27,7 +27,6 @@ export const CreateProfile = () => {
 	}, [resetTheme]);
 
 	const { setProfileTheme } = useTheme();
-	const { setProfileAccentColor } = useAccentColor();
 
 	const handleSubmit = async ({ name, password, currency, viewingMode }: ProfileFormState) => {
 		const profile = await env.profiles().create(name.trim());
@@ -44,7 +43,6 @@ export const CreateProfile = () => {
 		await persist();
 
 		setProfileTheme(profile);
-		setProfileAccentColor(profile);
 
 		history.push(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }));
 	};
@@ -60,15 +58,7 @@ export const CreateProfile = () => {
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 						titleClassName="text-lg leading-[21px] sm:text-2xl sm:leading-[29px]"
-						titleIcon={
-							<ThemeIcon
-								darkIcon="PersonDark"
-								lightIcon="PersonLight"
-								greenLightIcon="PersonLightGreen"
-								greenDarkIcon="PersonDarkGreen"
-								dimensions={[24, 24]}
-							/>
-						}
+						titleIcon={<ThemeIcon darkIcon="PersonDark" lightIcon="PersonLight" dimensions={[24, 24]} />}
 						subtitle={t("PROFILE.PAGE_CREATE_PROFILE.DESCRIPTION")}
 						className="block"
 					/>

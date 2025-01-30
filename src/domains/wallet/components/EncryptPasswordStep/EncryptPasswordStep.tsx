@@ -87,8 +87,6 @@ export const EncryptPasswordStep = ({ importedWallet }: EncryptPasswordStepPrope
 					<ThemeIcon
 						lightIcon="WalletEncryptionLight"
 						darkIcon="WalletEncryptionDark"
-						greenDarkIcon="WalletEncryptionDarkGreen"
-						greenLightIcon="WalletEncryptionLightGreen"
 						dimensions={[24, 24]}
 					/>
 				}

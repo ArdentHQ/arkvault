@@ -88,39 +88,6 @@ describe("Appearance Settings", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should allow to change the accent color", async () => {
-		const toastSuccess = vi.spyOn(toasts, "success");
-
-		renderPage();
-
-		const navyRadioButton = screen.getByLabelText(translations.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS.NAVY);
-
-		expect(navyRadioButton).not.toBeChecked();
-		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("navy");
-
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeDisabled();
-
-		userEvent.click(navyRadioButton);
-
-		await waitFor(() => {
-			expect(navyRadioButton).toBeChecked();
-		});
-
-		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("navy");
-
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
-
-		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
-
-		await waitFor(() => {
-			expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("navy");
-		});
-
-		await waitFor(() => {
-			expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
-		});
-	});
-
 	it("should allow to change the viewing mode", async () => {
 		const toastSuccess = vi.spyOn(toasts, "success");
 

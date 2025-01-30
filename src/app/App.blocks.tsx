@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useAccentColor, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
+import { useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
@@ -52,7 +52,6 @@ const Main: React.VFC = () => {
 	const history = useHistory();
 	const syncingMessageToastId = useRef<number | string>();
 
-	const { resetAccentColor } = useAccentColor();
 	const { resetTheme } = useTheme();
 
 	const { setShowMobileNavigation } = useNavigationContext();
@@ -72,7 +71,6 @@ const Main: React.VFC = () => {
 			}),
 		onProfileSignOut: () => {
 			resetTheme();
-			resetAccentColor();
 			toasts.dismiss();
 
 			setShowMobileNavigation(false);

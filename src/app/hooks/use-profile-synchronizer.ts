@@ -20,7 +20,6 @@ import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { delay } from "@/utils/delay";
 
-import { useAccentColor } from "@/app/hooks/use-accent-color";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { useZendesk } from "@/app/contexts/Zendesk";
 
@@ -375,7 +374,6 @@ export const useProfileSynchronizer = ({
 	const { start, stop, runAll } = useSynchronizer(allJobs);
 	const { setProfileTheme, resetTheme } = useTheme();
 	const { startIdleTimer, resetIdleTimer } = useAutoSignOut(profile);
-	const { setProfileAccentColor, resetAccentColor } = useAccentColor();
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
 	const lastPathname = useRef<string | undefined>();
 
@@ -460,7 +458,6 @@ export const useProfileSynchronizer = ({
 			hideSupportChat();
 			resetTheme();
 			resetIdleTimer();
-			resetAccentColor();
 
 			resetStatuses(env.profiles().values());
 			setConfiguration({ profileErroredNetworks: [] });
@@ -497,7 +494,6 @@ export const useProfileSynchronizer = ({
 				await restoreProfile(profile);
 
 				setProfileTheme(profile);
-				setProfileAccentColor(profile);
 
 				startIdleTimer();
 
@@ -523,10 +519,8 @@ export const useProfileSynchronizer = ({
 		delay(() => syncProfile(profile), 0);
 	}, [
 		env,
-		resetAccentColor,
 		resetTheme,
 		setProfileTheme,
-		setProfileAccentColor,
 		allJobs,
 		profile,
 		runAll,
