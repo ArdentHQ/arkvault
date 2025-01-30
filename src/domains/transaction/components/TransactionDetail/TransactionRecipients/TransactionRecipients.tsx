@@ -8,7 +8,6 @@ import { Avatar } from "@/app/components/Avatar";
 import { RecipientList } from "@/domains/transaction/components/RecipientList";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 import { useBreakpoint } from "@/app/hooks";
-import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
 import { TransactionRecipientsProperties } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = ({
@@ -26,7 +25,7 @@ export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = 
 	}
 
 	if (recipients.length === 1) {
-		const { address, alias, isDelegate } = recipients[0];
+		const { address, alias } = recipients[0];
 
 		const iconSize = isSm || isXs ? "xs" : "lg";
 		const iconSpaceClass = isSm || isXs ? "space-x-2" : "-space-x-1";
@@ -37,7 +36,6 @@ export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = 
 				label={t("TRANSACTION.RECIPIENT")}
 				extra={
 					<div className={cn("flex items-center", iconSpaceClass)}>
-						{isDelegate && <TransactionDelegateIcon />}
 						<Avatar address={address} size={iconSize} />
 					</div>
 				}
