@@ -6,7 +6,6 @@ export interface RecipientItem {
 	address: string;
 	alias?: string;
 	amount?: number;
-	isDelegate?: boolean;
 	isContract?: boolean;
 }
 
