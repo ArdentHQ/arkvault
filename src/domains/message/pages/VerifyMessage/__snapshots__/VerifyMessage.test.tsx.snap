@@ -627,38 +627,36 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                             class="flex items-center gap-3"
                           >
                             <div
-                              data-testid="icon-SendTransactionLightGreen"
+                              data-testid="icon-SendTransactionLight"
                             >
                               <div
                                 style="height: 24px; width: 24px;"
                               >
                                 <svg
                                   fill="none"
-                                  height="25"
                                   style="height: 100%; width: 100%;"
                                   viewBox="0 0 24 25"
-                                  width="24"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <g
-                                    clip-path="url(#clip0_18982_50179)"
+                                    clip-path="url(#clip0_13879_104416)"
                                   >
                                     <path
                                       clip-rule="evenodd"
                                       d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      fill="#E2F0E6"
+                                      fill="#E6EFF9"
                                       fill-rule="evenodd"
                                     />
                                     <path
                                       d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      stroke="#289548"
+                                      stroke="#235B95"
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
                                       stroke-width="2"
                                     />
                                     <path
                                       d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                      stroke="#289548"
+                                      stroke="#235B95"
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
                                       stroke-width="2"
@@ -666,9 +664,9 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                                     <path
                                       clip-rule="evenodd"
                                       d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                      fill="#E2F0E6"
+                                      fill="#E6EFF9"
                                       fill-rule="evenodd"
-                                      stroke="#289548"
+                                      stroke="#235B95"
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
                                       stroke-width="2"
@@ -676,7 +674,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                                   </g>
                                   <defs>
                                     <clippath
-                                      id="clip0_18982_50179"
+                                      id="clip0_13879_104416"
                                     >
                                       <rect
                                         fill="white"
@@ -838,7 +836,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="VerifyMessage__back-button"
                   type="button"
                 >
@@ -1497,38 +1495,36 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                             class="flex items-center gap-3"
                           >
                             <div
-                              data-testid="icon-SendTransactionLightGreen"
+                              data-testid="icon-SendTransactionLight"
                             >
                               <div
                                 style="height: 24px; width: 24px;"
                               >
                                 <svg
                                   fill="none"
-                                  height="25"
                                   style="height: 100%; width: 100%;"
                                   viewBox="0 0 24 25"
-                                  width="24"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <g
-                                    clip-path="url(#clip0_18982_50179)"
+                                    clip-path="url(#clip0_13879_104416)"
                                   >
                                     <path
                                       clip-rule="evenodd"
                                       d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      fill="#E2F0E6"
+                                      fill="#E6EFF9"
                                       fill-rule="evenodd"
                                     />
                                     <path
                                       d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      stroke="#289548"
+                                      stroke="#235B95"
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
                                       stroke-width="2"
                                     />
                                     <path
                                       d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                      stroke="#289548"
+                                      stroke="#235B95"
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
                                       stroke-width="2"
@@ -1536,9 +1532,9 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                                     <path
                                       clip-rule="evenodd"
                                       d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                      fill="#E2F0E6"
+                                      fill="#E6EFF9"
                                       fill-rule="evenodd"
-                                      stroke="#289548"
+                                      stroke="#235B95"
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
                                       stroke-width="2"
@@ -1546,7 +1542,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                                   </g>
                                   <defs>
                                     <clippath
-                                      id="clip0_18982_50179"
+                                      id="clip0_13879_104416"
                                     >
                                       <rect
                                         fill="white"
@@ -1708,7 +1704,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="VerifyMessage__back-button"
                   type="button"
                 >

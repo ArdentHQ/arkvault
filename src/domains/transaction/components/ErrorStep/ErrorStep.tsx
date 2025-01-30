@@ -37,12 +37,7 @@ export const ErrorStep = ({
 					<StepHeader
 						title={title || t("TRANSACTION.ERROR.TITLE")}
 						titleIcon={
-							<Image
-								name="ErrorHeaderIcon"
-								domain="transaction"
-								className="block h-[22px] w-[22px]"
-								useAccentColor={false}
-							/>
+							<Image name="ErrorHeaderIcon" domain="transaction" className="block h-[22px] w-[22px]" />
 						}
 					/>
 				</div>
@@ -70,7 +65,6 @@ export const ErrorStep = ({
 							name="TransactionErrorBanner"
 							domain="transaction"
 							className="mx-auto mt-4 block w-full max-w-[400px]"
-							useAccentColor={false}
 						/>
 					)}
 				</div>

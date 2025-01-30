@@ -54,7 +54,7 @@ export const ListenLedger = ({
 		<section data-testid="LedgerAuthStep" className="space-y-8">
 			{!noHeading && <Header title={t("WALLETS.CONNECT_LEDGER.HEADER")} />}
 
-			<Image name="AuthLedgerDevice" domain="wallet" className="mx-auto max-w-full" useAccentColor={false} />
+			<Image name="AuthLedgerDevice" domain="wallet" className="mx-auto max-w-full" />
 
 			<p className="text-theme-secondary-text">{t("WALLETS.CONNECT_LEDGER.DESCRIPTION")}</p>
 

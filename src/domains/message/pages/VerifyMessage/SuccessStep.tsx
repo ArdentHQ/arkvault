@@ -41,14 +41,7 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 
 	const titleIcon = () => {
 		if (!isVerified) {
-			return (
-				<Image
-					name="ErrorHeaderIcon"
-					domain="transaction"
-					className="block h-[22px] w-[22px]"
-					useAccentColor={false}
-				/>
-			);
+			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[22px] w-[22px]" />;
 		}
 
 		return (

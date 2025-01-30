@@ -162,7 +162,6 @@ describe("SelectRecipient", () => {
 			address,
 			alias: undefined,
 			isContact: false,
-			isDelegate: false,
 		});
 
 		contactsSpy.mockRestore();

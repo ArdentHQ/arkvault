@@ -12,7 +12,7 @@ exports[`ConfirmationStep > should render 1`] = `
       class="mx-auto mb-8 hidden items-center space-x-3 sm:flex"
     >
       <div
-        data-testid="icon-CircleCompletedLightGreen"
+        data-testid="icon-CircleCompletedLight"
       >
         <div
           style="height: 32px; width: 32px;"
@@ -27,13 +27,13 @@ exports[`ConfirmationStep > should render 1`] = `
               cx="16"
               cy="16"
               r="15"
-              stroke="#289548"
+              stroke="#235B95"
               stroke-width="2"
             />
             <path
               d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
-              fill="#E2F0E6"
-              stroke="#289548"
+              fill="#E6EFF9"
+              stroke="#235B95"
               stroke-linejoin="round"
               stroke-width="2"
             />
@@ -1001,7 +1001,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
             class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
               data-testid="ExchangeForm__back-button"
               type="button"
             >
@@ -1075,7 +1075,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
               class="mx-auto mb-8 hidden items-center space-x-3 sm:flex"
             >
               <div
-                data-testid="icon-CircleCompletedLightGreen"
+                data-testid="icon-CircleCompletedLight"
               >
                 <div
                   style="height: 32px; width: 32px;"
@@ -1090,13 +1090,13 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                       cx="16"
                       cy="16"
                       r="15"
-                      stroke="#289548"
+                      stroke="#235B95"
                       stroke-width="2"
                     />
                     <path
                       d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
-                      fill="#E2F0E6"
-                      stroke="#289548"
+                      fill="#E6EFF9"
+                      stroke="#235B95"
                       stroke-linejoin="round"
                       stroke-width="2"
                     />
@@ -1636,7 +1636,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
               class="flex w-full flex-col gap-3 sm:flex-row-reverse"
             >
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                 data-testid="ExchangeForm__finish-button"
                 type="button"
               >
@@ -1647,7 +1647,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 </div>
               </button>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                 data-testid="ExchangeForm__new-exchange"
                 type="button"
               >

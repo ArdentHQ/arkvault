@@ -348,7 +348,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
         data-testid="WalletVote__button_mobile"
         type="button"
       >
@@ -907,7 +907,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
         data-testid="WalletVote__button_mobile"
         type="button"
       >
@@ -1137,7 +1137,7 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
         data-testid="WalletVote__button_mobile"
         type="button"
       >
@@ -1358,7 +1358,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
         data-testid="WalletVote__button_mobile"
         type="button"
       >
