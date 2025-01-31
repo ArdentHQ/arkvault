@@ -68,18 +68,15 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	// 	return registrationOptions;
 	// }
 
-	const showValidatorActions = wallets.some(
-		(w) => w.balance() > 0 && !isMultiSignature(w) && isRestoredAndSynced(w)
-	)
+	const showValidatorActions = wallets.some((w) => w.balance() > 0 && !isMultiSignature(w) && isRestoredAndSynced(w));
 
 	if (showValidatorActions) {
 		if (
 			wallets.some(
-				w => (
+				(w) =>
 					w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
 					!w.isValidator() &&
-					!w.isResignedValidator()
-				)
+					!w.isResignedValidator(),
 			)
 		) {
 			registrationOptions.options.push({
@@ -90,11 +87,10 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 
 		if (
 			wallets.some(
-				w => (
+				(w) =>
 					w.network().allows(Enums.FeatureFlag.TransactionValidatorResignation) &&
 					w.isValidator() &&
-					!w.isResignedValidator()
-				)
+					!w.isResignedValidator(),
 			)
 		) {
 			registrationOptions.options.push({
@@ -104,8 +100,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 		}
 	}
 
-
-	if (wallets.some(w => allowsMultiSignature(w, profile))) {
+	if (wallets.some((w) => allowsMultiSignature(w, profile))) {
 		registrationOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
 			value: "multi-signature",
@@ -122,11 +117,7 @@ const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunctio
 		title: t("WALLETS.PAGE_WALLET_DETAILS.ADDITIONAL_OPTIONS"),
 	};
 
-	if (
-		wallets.some(
-			(w) => (w.balance() > 0 || w.publicKey()) && isRestoredAndSynced(w)
-		)
-	) {
+	if (wallets.some((w) => (w.balance() > 0 || w.publicKey()) && isRestoredAndSynced(w))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.TRANSACTION_HISTORY"),
 			value: "transaction-history",
@@ -138,11 +129,7 @@ const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunctio
 	// 	return additionalOptions;
 	// }
 
-	if (
-		wallets.some(
-			(w) => !isMultiSignature(w) && w.network().allows(Enums.FeatureFlag.MessageSign)
-		)
-	) {
+	if (wallets.some((w) => !isMultiSignature(w) && w.network().allows(Enums.FeatureFlag.MessageSign))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE"),
 			value: "sign-message",
@@ -181,7 +168,7 @@ export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?
 				secondaryLabel: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS_QR"),
 				value: "receive-funds",
 			},
-		)
+		);
 	}
 
 	const secondaryOptions: DropdownOptionGroup = {
@@ -204,12 +191,12 @@ export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DELETE"),
 				value: "delete-wallet",
 			},
-		)
+		);
 	}
 
 	const areWalletsRestoredAndSynced = useMemo(
-		() => wallets.map((wallet) => isRestoredAndSynced(wallet)).join('-'),
-		[wallets]
+		() => wallets.map((wallet) => isRestoredAndSynced(wallet)).join("-"),
+		[wallets],
 	);
 
 	return useMemo(
