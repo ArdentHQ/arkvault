@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { BIP39 } from "@ardenthq/sdk-cryptography";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
@@ -34,10 +34,6 @@ describe("CreateWallet", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(() => {
-		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			selectedAddresses: [],
-			setSelectedAddresses: () => {},
-		});
 
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
@@ -49,6 +45,11 @@ describe("CreateWallet", () => {
 	});
 
 	beforeEach(() => {
+		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			selectedAddresses: [],
+			setSelectedAddresses: () => {},
+		});
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		for (const wallet of profile.wallets().values()) {
