@@ -19,6 +19,7 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { act } from "@/utils/testing-library";
+import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
@@ -33,6 +34,11 @@ describe("CreateWallet", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(() => {
+		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			selectedAddresses: [],
+			setSelectedAddresses: () => {},
+		});
+
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
