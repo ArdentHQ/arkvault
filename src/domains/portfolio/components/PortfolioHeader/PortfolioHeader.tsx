@@ -47,7 +47,7 @@ export const PortfolioHeader = ({
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(...selectedWallets);
-	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
+	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(selectedWallets);
 
 	const { persist } = useEnvironmentContext();
 
@@ -260,21 +260,13 @@ export const PortfolioHeader = ({
 											secondaryOptions,
 										]}
 										toggleContent={
-											<Tooltip
-												content={t("COMMON.SWITCH_TO_SINGLE_VIEW")}
-												disabled={selectedWallets.length === 1}
+											<Button
+												variant="secondary"
+												size="icon"
+												className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
 											>
-												<span>
-													<Button
-														variant="secondary"
-														size="icon"
-														className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
-														disabled={selectedWallets.length > 1}
-													>
-														<Icon name="EllipsisVerticalFilled" size="lg" />
-													</Button>
-												</span>
-											</Tooltip>
+												<Icon name="EllipsisVerticalFilled" size="lg" />
+											</Button>
 										}
 										onSelect={handleSelectOption}
 									/>
