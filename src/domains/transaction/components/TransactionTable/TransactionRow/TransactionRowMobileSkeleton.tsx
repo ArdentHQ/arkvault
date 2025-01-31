@@ -19,7 +19,7 @@ export const TransactionRowMobileSkeleton = ({ hideSender = false }: { hideSende
 						<Skeleton height={17} width={70} />
 						{!hideSender && (
 							<div data-testid="TransactionRow__skeleton-sender">
-								<Skeleton height={17} width={70}/>
+								<Skeleton height={17} width={70} />
 							</div>
 						)}
 					</div>
