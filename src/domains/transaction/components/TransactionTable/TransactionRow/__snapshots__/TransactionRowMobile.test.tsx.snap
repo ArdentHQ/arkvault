@@ -63,7 +63,7 @@ exports[`TransactionRowMobile > should render 1`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
@@ -182,21 +182,12 @@ exports[`TransactionRowMobile > should render 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 DARK
-                      </span>
-                    </div>
-                  </div>
+                    121 DARK
+                  </span>
                 </div>
               </div>
               <div
@@ -290,7 +281,7 @@ exports[`TransactionRowMobile > should render 2`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
@@ -409,21 +400,12 @@ exports[`TransactionRowMobile > should render 2`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 DARK
-                      </span>
-                    </div>
-                  </div>
+                    121 DARK
+                  </span>
                 </div>
               </div>
               <div
@@ -484,19 +466,23 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
                 </span>
                 <br />
               </span>
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              <div
+                data-testid="TransactionRow__skeleton-sender"
               >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 70px; height: 17px;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
+              </div>
             </div>
             <div
               class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
@@ -512,6 +498,19 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
                   <span
                     class="react-loading-skeleton"
                     style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 1px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -630,19 +629,23 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
                 </span>
                 <br />
               </span>
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              <div
+                data-testid="TransactionRow__skeleton-sender"
               >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 70px; height: 17px;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
+              </div>
             </div>
             <div
               class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
@@ -658,6 +661,19 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
                   <span
                     class="react-loading-skeleton"
                     style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 1px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -809,7 +825,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
@@ -906,21 +922,12 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 BTC
-                      </span>
-                    </div>
-                  </div>
+                    121 BTC
+                  </span>
                 </div>
               </div>
               <div
@@ -1014,7 +1021,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
@@ -1111,21 +1118,12 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 BTC
-                      </span>
-                    </div>
-                  </div>
+                    121 BTC
+                  </span>
                 </div>
               </div>
               <div
