@@ -31,7 +31,6 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			if (!wallet) {
 				return;
 			}
-
 			stopEventBubbling(event);
 			history.push(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
 		},
@@ -143,7 +142,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[history, profile, wallet, openExternal],
+		[wallet, history, profile, openExternal],
 	);
 
 	const handleCreate = useCallback(
