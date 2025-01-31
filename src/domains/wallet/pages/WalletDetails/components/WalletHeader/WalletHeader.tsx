@@ -18,6 +18,7 @@ import { WalletActions } from "./WalletHeader.blocks";
 import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { Skeleton } from "@/app/components/Skeleton";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const WalletHeader = ({
 	profile,
@@ -47,12 +48,24 @@ export const WalletHeader = ({
 		network: wallet.network(),
 		profile,
 	});
+	const { persist } = useEnvironmentContext();
 
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
 	const isRestored = wallet.hasBeenFullyRestored();
 
 	const [addresses, setAddresses] = useState<string[]>([]);
+
+	const onDeleteAddresses = async (addresses: string[]) => {
+		for (const wallet of profile.wallets().values()) {
+			if (addresses.includes(wallet.address())) {
+				profile.wallets().forget(wallet.id());
+				profile.notifications().transactions().forgetByRecipient(wallet.address());
+			}
+		}
+
+		await persist();
+	};
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -256,6 +269,9 @@ export const WalletHeader = ({
 				onClose={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
+				onDelete={(addresses) => {
+					void onDeleteAddresses(addresses);
+				}}
 			/>
 
 			<WalletActionsModals
