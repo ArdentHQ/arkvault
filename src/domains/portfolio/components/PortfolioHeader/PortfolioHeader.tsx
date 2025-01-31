@@ -17,7 +17,6 @@ import { WalletActions } from "@/domains/wallet/pages/WalletDetails/components/W
 import { Skeleton } from "@/app/components/Skeleton";
 import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
-import { Tooltip } from "@/app/components/Tooltip";
 import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
