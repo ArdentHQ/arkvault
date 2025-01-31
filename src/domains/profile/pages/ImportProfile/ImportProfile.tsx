@@ -36,19 +36,18 @@ export const ImportProfile = () => {
 		setActiveTab(Step.ProcessingStep);
 	};
 
-	const handleProfileSave = async () => {
-		if (profile) {
-			restoreProfileConfig(profile);
-			const selectedAddresses = SelectedAddresses({ env, profile });
-			// If imported profile doesn't have selected addresses, mark them all as selected.
-			if (!selectedAddresses.hasSelected()) {
-				await selectedAddresses.set(
-					profile
-						.wallets()
-						.values()
-						.map((wallet) => wallet.address()),
-				);
-			}
+	const handleProfileSave = async (submittedProfile) => {
+		restoreProfileConfig(submittedProfile);
+
+		const selectedAddresses = SelectedAddresses({ env, profile: submittedProfile });
+		// If imported profile doesn't have selected addresses, mark them all as selected.
+		if (!selectedAddresses.hasSelected()) {
+			await selectedAddresses.set(
+				submittedProfile
+					.wallets()
+					.values()
+					.map((wallet) => wallet.address()),
+			);
 		}
 
 		await persist();
