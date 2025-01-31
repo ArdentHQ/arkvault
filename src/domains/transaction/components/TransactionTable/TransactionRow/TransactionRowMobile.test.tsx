@@ -151,4 +151,16 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 
 		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeInTheDocument();
 	});
+
+	it("should render skeleton with hideSender", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={true} isLoading />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRow__skeleton-sender")).toBeInTheDocument();
+	});
 });
