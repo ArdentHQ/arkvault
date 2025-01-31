@@ -34,7 +34,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			stopEventBubbling(event);
 			history.push(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[stopEventBubbling, history, profile, wallet],
+		[history, profile, wallet, stopEventBubbling],
 	);
 
 	const handleSend = useCallback(
@@ -91,7 +91,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			return true;
 		},
-		[stopEventBubbling, profile, wallet, persist, history],
+		[profile, history, wallet, persist, stopEventBubbling],
 	);
 
 	const handleSelectOption = useCallback(
