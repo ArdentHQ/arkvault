@@ -9,13 +9,17 @@ import { WalletActionsModalType } from "@/domains/wallet/components/WalletAction
 import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
 
-export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
+export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const history = useHistory();
 	const { openExternal } = useLink();
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
+
+	const wallet = wallets[0] as Contracts.IReadWriteWallet | undefined;
+
+	const hasMultipleWallets = wallets.length > 1;
 
 	const stopEventBubbling = useCallback((event?: React.MouseEvent<HTMLElement>) => {
 		event?.preventDefault();
@@ -38,12 +42,19 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 			if (!wallet) {
 				return;
 			}
+
 			stopEventBubbling(event);
+
+			if (hasMultipleWallets) {
+				history.push(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
+				return;
+			}
+
 			history.push(
 				generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }),
 			);
 		},
-		[history, profile, wallet, stopEventBubbling],
+		[stopEventBubbling, hasMultipleWallets, history, profile, wallet],
 	);
 
 	const handleToggleStar = useCallback(

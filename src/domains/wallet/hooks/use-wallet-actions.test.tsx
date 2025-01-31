@@ -43,6 +43,26 @@ describe("useWalletActions", () => {
 		expect(current.handleSelectOption({} as DropdownOption)).toBeUndefined();
 	});
 
+	it("should return undefined if no wallets passed", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions(), { wrapper });
+
+		expect(current.handleSend()).toBeUndefined();
+	});
+
+	it("should push right url to history if there are multiple wallets", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions(wallet, profile.wallets().last()), { wrapper });
+
+		act(() => {
+			current.handleSend();
+		});
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
+	});
+
 	it("should push right urls to history", () => {
 		const {
 			result: { current },
