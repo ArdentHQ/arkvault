@@ -17,9 +17,8 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
-	const wallet: Contracts.IReadWriteWallet | undefined = wallets[0];
+	const wallet = wallets[0] as Contracts.IReadWriteWallet | undefined;
 
-	const hasNoWallets = wallets.length === 0 || !wallet;
 	const hasMultipleWallets = wallets.length > 1;
 
 	const stopEventBubbling = useCallback((event?: React.MouseEvent<HTMLElement>) => {
@@ -29,19 +28,19 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 	const handleOpen = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
-			if (hasNoWallets) {
+			if (!wallet) {
 				return;
 			}
 
 			stopEventBubbling(event);
 			history.push(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[hasNoWallets, stopEventBubbling, history, profile, wallet],
+		[stopEventBubbling, history, profile, wallet],
 	);
 
 	const handleSend = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
-			if (hasNoWallets) {
+			if (!wallet) {
 				return;
 			}
 
@@ -56,24 +55,24 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 				generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }),
 			);
 		},
-		[hasNoWallets, stopEventBubbling, hasMultipleWallets, history, profile, wallet],
+		[stopEventBubbling, hasMultipleWallets, history, profile, wallet],
 	);
 
 	const handleToggleStar = useCallback(
 		async (event?: React.MouseEvent<HTMLElement>) => {
-			if (hasNoWallets) {
+			if (!wallet) {
 				return;
 			}
 			stopEventBubbling(event);
 			wallet.toggleStarred();
 			await persist();
 		},
-		[hasNoWallets, stopEventBubbling, wallet, persist],
+		[stopEventBubbling, wallet, persist],
 	);
 
 	const handleDelete = useCallback(
 		async (event?: React.MouseEvent<HTMLElement>) => {
-			if (hasNoWallets) {
+			if (!wallet) {
 				return;
 			}
 
@@ -93,12 +92,12 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			return true;
 		},
-		[hasNoWallets, stopEventBubbling, profile, wallet, persist, history],
+		[stopEventBubbling, profile, wallet, persist, history],
 	);
 
 	const handleSelectOption = useCallback(
 		(option: DropdownOption) => {
-			if (hasNoWallets) {
+			if (!wallet) {
 				return;
 			}
 
@@ -144,7 +143,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[hasNoWallets, history, profile, wallet, openExternal],
+		[history, profile, wallet, openExternal],
 	);
 
 	const handleCreate = useCallback(
