@@ -126,7 +126,7 @@ describe("Wallet Options Hook", () => {
 
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
-			options: [],
+			options: [{ label: "Validator", value: "delegate-registration" }],
 			title: "Register",
 		});
 
@@ -142,7 +142,6 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [],
-			// options: [{ label: "Validator", value: "delegate-registration" }],
 			title: "Register",
 		});
 
@@ -157,7 +156,12 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toMatchInlineSnapshot(`
 			{
 			  "key": "registrations",
-			  "options": [],
+			  "options": [
+			    {
+			      "label": "Multisignature",
+			      "value": "multi-signature",
+			    },
+			  ],
 			  "title": "Register",
 			}
 		`);
