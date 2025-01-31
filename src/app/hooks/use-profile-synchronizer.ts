@@ -6,7 +6,7 @@ import { isEqual } from "@ardenthq/sdk-helpers";
 import { usePrevious } from "./use-previous";
 import { useSynchronizer } from "./use-synchronizer";
 import { useTheme } from "./use-theme";
-import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
+import { enabledNetworksCount, profileAllEnabledNetworks } from "@/utils/network-utils";
 import {
 	getErroredNetworks,
 	getProfileById,
@@ -236,7 +236,8 @@ export const useProfileRestore = () => {
 
 	const restoreProfileConfig = (profile: Contracts.IProfile) => {
 		const defaultConfiguration: DashboardConfiguration = {
-			selectedNetworkIds: profileEnabledNetworkIds(profile),
+			selectedAddresses: [],
+			selectedNetworkIds: [],
 			walletsDisplayType: "all",
 		};
 
@@ -244,7 +245,7 @@ export const useProfileRestore = () => {
 			.settings()
 			.get(Contracts.ProfileSetting.DashboardConfiguration, defaultConfiguration) as DashboardConfiguration;
 
-		setConfiguration({ dashboard: config });
+		setConfiguration(config);
 	};
 
 	const restoreProfile = async (profile: Contracts.IProfile, passwordInput?: string) => {

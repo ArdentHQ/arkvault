@@ -17,8 +17,8 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/Wall
 import { WalletActions } from "./WalletHeader.blocks";
 import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { Skeleton } from "@/app/components/Skeleton";
-import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const WalletHeader = ({
 	profile,
@@ -37,8 +37,6 @@ export const WalletHeader = ({
 	handleVotesButtonClick: (address?: string) => void;
 	onUpdate?: (status: boolean) => void;
 }) => {
-	const { persist } = useEnvironmentContext();
-
 	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } =
 		useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
@@ -50,12 +48,24 @@ export const WalletHeader = ({
 		network: wallet.network(),
 		profile,
 	});
+	const { persist } = useEnvironmentContext();
 
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
 	const isRestored = wallet.hasBeenFullyRestored();
 
 	const [addresses, setAddresses] = useState<string[]>([]);
+
+	const onDeleteAddresses = async (addresses: string[]) => {
+		for (const wallet of profile.wallets().values()) {
+			if (addresses.includes(wallet.address())) {
+				profile.wallets().forget(wallet.id());
+				profile.notifications().transactions().forgetByRecipient(wallet.address());
+			}
+		}
+
+		await persist();
+	};
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -259,13 +269,8 @@ export const WalletHeader = ({
 				onClose={setAddresses}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				onDeleteAddress={async (address: string) => {
-					const wallets = profile.wallets().filterByAddress(address);
-
-					profile.wallets().forget(wallets[0].id());
-
-					profile.notifications().transactions().forgetByRecipient(address);
-					await persist();
+				onDelete={(addresses) => {
+					void onDeleteAddresses(addresses);
 				}}
 			/>
 

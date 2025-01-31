@@ -19,15 +19,15 @@ export const AddressesSidePanel = ({
 	defaultSelectedAddresses = [],
 	open,
 	onOpenChange,
-	onDeleteAddress,
 	onClose,
+	onDelete,
 }: {
 	wallets: IWalletRepository;
 	defaultSelectedAddresses: string[];
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	onDeleteAddress: (address: string) => void;
 	onClose: (addresses: string[]) => void;
+	onDelete?: (addresses: string[]) => void;
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses);
@@ -41,6 +41,10 @@ export const AddressesSidePanel = ({
 
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
+
+	useEffect(() => {
+		onSetSelectedAddresses(defaultSelectedAddresses);
+	}, [defaultSelectedAddresses]);
 
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
@@ -103,13 +107,8 @@ export const AddressesSidePanel = ({
 
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
 
-	const confirmAddressDeletion = async () => {
-		await Promise.all(addressesToDelete.map((address) => onDeleteAddress(address)));
-
-		const activeAddresses = selectedAddresses.filter((address) => !addressesToDelete.includes(address));
-
-		onSetSelectedAddresses(activeAddresses);
-
+	const confirmAddressDeletion = () => {
+		onDelete?.(addressesToDelete);
 		resetDeleteState();
 	};
 
