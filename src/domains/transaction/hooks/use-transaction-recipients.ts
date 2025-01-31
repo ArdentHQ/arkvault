@@ -21,6 +21,7 @@ export const useTransactionRecipients = ({
 					address: transaction.recipient(),
 					network: transaction.wallet().network(),
 					profile,
+					username: transaction.wallet().username(),
 				}),
 			);
 		}
