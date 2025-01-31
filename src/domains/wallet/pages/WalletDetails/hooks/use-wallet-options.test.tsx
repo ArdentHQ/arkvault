@@ -75,7 +75,7 @@ describe("Wallet Options Hook", () => {
 
 	it("should get registration options", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
-		const { result } = renderHook(() => useWalletOptions(wallet));
+		const { result } = renderHook(() => useWalletOptions([wallet]));
 
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
@@ -91,7 +91,7 @@ describe("Wallet Options Hook", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 
-		const { result } = renderHook(() => useWalletOptions(wallet));
+		const { result } = renderHook(() => useWalletOptions([wallet]));
 
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
@@ -122,7 +122,7 @@ describe("Wallet Options Hook", () => {
 			return true;
 		});
 
-		const { result } = renderHook(() => useWalletOptions(wallet));
+		const { result } = renderHook(() => useWalletOptions([wallet]));
 
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
@@ -137,7 +137,7 @@ describe("Wallet Options Hook", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		vi.spyOn(wallet.network(), "id").mockReturnValue("random.custom");
-		const { result } = renderHook(() => useWalletOptions(wallet));
+		const { result } = renderHook(() => useWalletOptions([wallet]));
 
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
@@ -152,7 +152,7 @@ describe("Wallet Options Hook", () => {
 	it("should not render actions if wallet is ledger and ledger transport is incompatible ", () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-		const { result } = renderHook(() => useWalletOptions(wallet));
+		const { result } = renderHook(() => useWalletOptions([wallet]));
 
 		expect(result.current.registrationOptions).toMatchInlineSnapshot(`
 			{

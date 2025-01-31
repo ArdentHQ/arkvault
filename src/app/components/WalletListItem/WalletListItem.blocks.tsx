@@ -428,7 +428,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 
 export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, onSelectOption }) => {
 	const { t } = useTranslation();
-	const { primaryOptions, secondaryOptions } = useWalletOptions(wallet);
+	const { primaryOptions, secondaryOptions } = useWalletOptions([wallet]);
 
 	const isRestoring = !wallet.hasBeenFullyRestored();
 	const isButtonDisabled =
