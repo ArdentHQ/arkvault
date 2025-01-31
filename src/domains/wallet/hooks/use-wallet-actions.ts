@@ -17,7 +17,6 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
-
 	const wallet: Contracts.IReadWriteWallet | undefined = wallets[0];
 
 	const hasNoWallets = wallets.length === 0 || !wallet;
