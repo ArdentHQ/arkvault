@@ -1,4 +1,3 @@
-
 import fs from "fs";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -24,6 +23,7 @@ const changeFileID = "SelectFileStep__change-file";
 const submitID = "PasswordModal__submit-button";
 const validPassword = "S3cUrePa$sword";
 const wrongPassword = "wrong password";
+const profileSubmitButton = "ProfileForm__submit-button";
 
 const createBlob = (fileContents: string | Buffer, fileName?: string) =>
 	new File([new Blob([fileContents])], fileName || "fileName.wwe");
@@ -33,7 +33,7 @@ describe("ImportProfile", () => {
 		history.push(importProfileURL);
 	});
 
-	it("should render first step", async () => {
+	it("should render first step", () => {
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
@@ -191,10 +191,10 @@ describe("ImportProfile", () => {
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(profileSubmitButton)).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
+		await userEvent.click(screen.getByTestId(profileSubmitButton));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
@@ -236,13 +236,12 @@ describe("ImportProfile", () => {
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(profileSubmitButton)).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
+		await userEvent.click(screen.getByTestId(profileSubmitButton));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
-
 	});
 
 	it("should successfully import legacy profile and return to home screen", async () => {
@@ -277,10 +276,10 @@ describe("ImportProfile", () => {
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(profileSubmitButton)).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
+		await userEvent.click(screen.getByTestId(profileSubmitButton));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
