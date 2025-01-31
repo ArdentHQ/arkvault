@@ -66,7 +66,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			wallet.toggleStarred();
 			await persist();
 		},
-		[stopEventBubbling, wallet, persist],
+		[wallet, persist, stopEventBubbling],
 	);
 
 	const handleDelete = useCallback(
