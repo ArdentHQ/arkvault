@@ -10,6 +10,7 @@ import { TransactionAddresses } from "@/domains/transaction/components/Transacti
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -39,6 +40,24 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			<div className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
 				<TransactionAddresses senderAddress={wallet.address()} profile={profile} network={network} />
 			</div>
+
+			<FormField name="senderAddress">
+				<SelectAddress
+					showWalletAvatar={false}
+					wallet={
+						wallet
+							? {
+								address: wallet.address(),
+								network: wallet.network(),
+							}
+							: undefined
+					}
+					wallets={[wallet]}
+					profile={profile}
+					disabled={[wallet].length === 0}
+					onChange={undefined}
+				/>
+			</FormField>
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="validatorPublicKey">
