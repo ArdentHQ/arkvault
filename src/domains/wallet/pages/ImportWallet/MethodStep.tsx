@@ -352,6 +352,7 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 							setValue("value", undefined);
 							clearErrors("value");
 						}}
+						readOnly
 					/>
 				</FormField>
 
