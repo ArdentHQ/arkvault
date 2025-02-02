@@ -117,7 +117,6 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 			style,
 			suggestion,
 			value,
-			// **Destructure readOnly explicitly**
 			readOnly,
 			...restProperties
 		}: InputProperties,
@@ -134,7 +133,6 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 
 		const focusReference = useRef<InputElement>(null);
 
-		// If isFocused is true we use our own focusReference
 		const mergedRef = isFocused ? focusReference : ref;
 
 		useEffect(() => {
@@ -180,7 +178,6 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							disabled={disabled}
 							value={value}
 							type="text"
-							// Pass the ref (or our focus ref)
 							// @ts-ignore
 							ref={mergedRef}
 							// **Pass readOnly explicitly**
