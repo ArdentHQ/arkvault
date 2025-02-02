@@ -23,6 +23,7 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 enum Step {
 	NetworkStep = 1,
@@ -39,8 +40,8 @@ export const CreateWallet = () => {
 	const activeProfile = useActiveProfile();
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const [activeTab, setActiveTab] = useState<Step>(onlyHasOneNetwork ? Step.WalletOverviewStep : Step.NetworkStep);
-
 	const { selectedNetworkIds, setValue: setConfiguration } = useWalletConfig({ profile: activeProfile });
+	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
 	const form = useForm<any>({
 		defaultValues: {
@@ -107,6 +108,7 @@ export const CreateWallet = () => {
 
 		try {
 			const { mnemonic, wallet } = await generateWallet();
+			setSelectedAddresses([...selectedAddresses, wallet.address()]);
 			setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
 			setValue("mnemonic", mnemonic, { shouldDirty: true, shouldValidate: true });
 			setActiveTab(Step.WalletOverviewStep);

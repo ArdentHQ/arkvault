@@ -30,7 +30,7 @@ function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 	};
 }
 
-function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environment }) {
+export function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environment }) {
 	return {
 		/**
 		 * Returns all the selected profile selected addresses.
@@ -134,7 +134,7 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 		setSelectedAddresses: async (selectedAddresses: string[]) => {
 			await addresses.set(selectedAddresses);
 
-			if (!addresses.hasSelected()) {
+			if (!addresses.hasSelected() && profile.wallets().first()) {
 				await addresses.set([profile.wallets().first().address()]);
 			}
 
