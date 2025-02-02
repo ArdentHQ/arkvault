@@ -30,9 +30,10 @@ type InputProperties = {
 	noBorder?: boolean;
 	noShadow?: boolean;
 	suggestion?: string;
+	readOnly?: boolean;
 } & React.HTMLProps<any>;
 
-export const InputWrapperStyled = ({
+const InputWrapperStyled = ({
 	noBorder,
 	noShadow,
 	valid,
@@ -74,20 +75,16 @@ export const InputWrapperStyled = ({
 	/>
 );
 
-interface InputStyledProps {
-	autocomplete?: string;
-	as?: React.ElementType;
-}
-
-const InputStyled = forwardRef<HTMLInputElement, InputStyledProps & React.ComponentPropsWithRef<"input">>(
-	({ autocomplete = "off", as: Component = "input", ...props }, ref) => (
-		<Component
+const InputStyled = forwardRef<HTMLInputElement, React.ComponentPropsWithRef<"input">>(
+	({ readOnly, className, ...props }, ref) => (
+		<input
 			{...props}
 			ref={ref}
-			autoComplete={autocomplete}
+			readOnly={readOnly}
+			autoComplete="off"
 			className={twMerge(
 				"!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none",
-				props.className,
+				className,
 			)}
 		/>
 	),
@@ -117,8 +114,9 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 			style,
 			suggestion,
 			value,
+			readOnly,
 			...properties
-		}: InputProperties,
+		},
 		reference,
 	) => {
 		let fieldContext = useFormField();
@@ -175,12 +173,11 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							name={fieldContext?.name}
 							aria-invalid={isInvalidValue}
 							disabled={disabled}
+							readOnly={readOnly}
 							value={value}
 							type="text"
-							// @ts-ignore
 							ref={reference}
 							{...properties}
-							autoComplete="off"
 						/>
 
 						<InputSuggestion
