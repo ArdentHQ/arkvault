@@ -46,10 +46,23 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
-	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(wallet);
+	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(...selectedWallets);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 
 	const { persist } = useEnvironmentContext();
+
+	const onDeleteAddresses = async (addresses: string[]) => {
+		setSelectedAddresses(selectedAddresses.filter((existingAddress) => addresses.includes(existingAddress)));
+
+		for (const wallet of profile.wallets().values()) {
+			if (addresses.includes(wallet.address())) {
+				profile.wallets().forget(wallet.id());
+				profile.notifications().transactions().forgetByRecipient(wallet.address());
+			}
+		}
+
+		await persist();
+	};
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -303,15 +316,8 @@ export const PortfolioHeader = ({
 				}}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				onDeleteAddress={async (address: string) => {
-					const wallets = profile.wallets().filterByAddress(address);
-
-					profile.wallets().forget(wallets[0].id());
-
-					setSelectedAddresses(selectedAddresses.filter((existingAddress) => existingAddress !== address));
-
-					profile.notifications().transactions().forgetByRecipient(address);
-					await persist();
+				onDelete={(addresses) => {
+					void onDeleteAddresses(addresses);
 				}}
 			/>
 		</header>

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import fs from "fs";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -9,6 +8,7 @@ import { ImportProfile } from "@/domains/profile/pages/ImportProfile/ImportProfi
 import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 const passwordProtectedWwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.wwe");
+const withSelectedAddresses = fs.readFileSync("src/tests/fixtures/profile/import/profile-with-selected-addresses.wwe");
 const corruptedWwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupted-profile.wwe");
 const legacyJson = fs.readFileSync("src/tests/fixtures/profile/import/legacy-profile.json");
 const darkThemeWwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-dark-theme.wwe");
@@ -23,6 +23,7 @@ const changeFileID = "SelectFileStep__change-file";
 const submitID = "PasswordModal__submit-button";
 const validPassword = "S3cUrePa$sword";
 const wrongPassword = "wrong password";
+const profileSubmitButton = "ProfileForm__submit-button";
 
 const createBlob = (fileContents: string | Buffer, fileName?: string) =>
 	new File([new Blob([fileContents])], fileName || "fileName.wwe");
@@ -32,7 +33,7 @@ describe("ImportProfile", () => {
 		history.push(importProfileURL);
 	});
 
-	it("should render first step", async () => {
+	it("should render first step", () => {
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
@@ -190,10 +191,55 @@ describe("ImportProfile", () => {
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(profileSubmitButton)).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
+		await userEvent.click(screen.getByTestId(profileSubmitButton));
+
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+	});
+
+	it("should not set selected addresses if profile has already", async () => {
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
+
+		render(
+			<EnvironmentProvider env={env}>
+				<ImportProfile />
+			</EnvironmentProvider>,
+			{ history },
+		);
+
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
+		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
+
+		fireEvent.drop(browseFiles(), {
+			dataTransfer: {
+				files: [createBlob(withSelectedAddresses)],
+			},
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ProcessingImport")).toBeVisible();
+		});
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), validPassword);
+		await waitFor(() => expect(screen.getByTestId("PasswordModal__input")).toHaveValue(validPassword));
+
+		await userEvent.click(screen.getByTestId(submitID));
+
+		await expect(screen.findByTestId("ProfileForm__form")).resolves.toBeVisible();
+
+		expect(screen.queryByTestId("InputPassword")).not.toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("checkbox"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId(profileSubmitButton)).toBeEnabled();
+		});
+
+		await userEvent.click(screen.getByTestId(profileSubmitButton));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
@@ -230,10 +276,10 @@ describe("ImportProfile", () => {
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(profileSubmitButton)).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
+		await userEvent.click(screen.getByTestId(profileSubmitButton));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});

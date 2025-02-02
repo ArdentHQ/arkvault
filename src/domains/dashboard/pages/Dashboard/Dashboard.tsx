@@ -12,7 +12,6 @@ import { Transactions } from "@/domains/transaction/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
-import { DashboardEmpty } from "./Dashboard.Empty";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
@@ -88,17 +87,6 @@ export const Dashboard = () => {
 			setIsUpdatingWallet(false);
 		}
 	}, [isUpdatingTransactions]);
-
-	if (activeProfile.wallets().count() === 0) {
-		if (activeProfile.status().isRestored() && !profileIsSyncing) {
-			return (
-				<Page pageTitle={t("COMMON.WELCOME")}>
-					<DashboardEmpty />
-				</Page>
-			);
-		}
-		return <div />;
-	}
 
 	return (
 		<>
