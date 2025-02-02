@@ -165,6 +165,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="Private Key"
                     />
@@ -521,6 +522,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="Private Key"
                     />
@@ -877,6 +879,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="WIF"
                     />
@@ -1233,6 +1236,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="WIF"
                     />
@@ -1589,6 +1593,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="Encrypted WIF"
                     />
@@ -2814,6 +2819,7 @@ exports[`ImportWallet > should render method step 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="Mnemonic"
                     />
