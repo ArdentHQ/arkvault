@@ -295,8 +295,8 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 					value={selected?.value || ""}
 					className="sr-only"
 					isInvalid={isInvalidField}
-					readOnly
 					tabIndex={-1}
+					readOnly
 				/>
 				<SelectDropdown
 					id={id}
