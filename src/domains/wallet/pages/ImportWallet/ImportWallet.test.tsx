@@ -3,7 +3,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import React from "react";
+import React, { act } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
@@ -489,7 +489,9 @@ describe("ImportWallet", () => {
 			await testFormValues(form);
 
 			// Trigger validation
-			form.trigger("value");
+			await act(async () => {
+				await form.trigger("value");
+			});
 
 			coinMock.mockRestore();
 
@@ -521,7 +523,9 @@ describe("ImportWallet", () => {
 			await testFormValues(form);
 
 			// Trigger validation
-			form.trigger("value");
+			await act(async () => {
+				await form.trigger("value");
+			});
 
 			coinMock.mockRestore();
 
@@ -606,7 +610,9 @@ describe("ImportWallet", () => {
 			});
 
 			// Trigger validation
-			form.trigger("value");
+			await act(async () => {
+				await form.trigger("value");
+			});
 
 			expect(container).toMatchSnapshot();
 
@@ -643,7 +649,9 @@ describe("ImportWallet", () => {
 			});
 
 			// Trigger validation
-			form.trigger("value");
+			await act(async () => {
+				await form.trigger("value");
+			});
 
 			expect(container).toMatchSnapshot();
 
@@ -709,7 +717,9 @@ describe("ImportWallet", () => {
 		});
 
 		// Trigger validation
-		form.trigger("value");
+		await act(async () => {
+			await form.trigger("value");
+		});
 
 		expect(container).toMatchSnapshot();
 	});
