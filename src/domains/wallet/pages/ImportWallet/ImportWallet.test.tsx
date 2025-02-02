@@ -200,8 +200,6 @@ describe("ImportWallet", () => {
 
 		await userEvent.click(selectDropdown);
 
-		await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).toBeInTheDocument());
-
 		await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
