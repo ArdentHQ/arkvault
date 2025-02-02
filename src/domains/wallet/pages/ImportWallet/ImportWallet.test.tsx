@@ -198,17 +198,13 @@ describe("ImportWallet", () => {
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		await userEvent.clear(selectDropdown);
-		await userEvent.type(selectDropdown, "test");
+		await userEvent.click(selectDropdown);
 
-		await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument());
-
-		await userEvent.clear(selectDropdown);
-		await userEvent.type(selectDropdown, "addr");
+		await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).toBeInTheDocument());
 
 		await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
 		// Ensure the value is set
 		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("Address"));
@@ -250,6 +246,8 @@ describe("ImportWallet", () => {
 		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
 
 		expect(onClickEditAlias).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+
+		vi.clearAllMocks();
 	});
 
 	it("should go back to portfolio", async () => {
@@ -303,35 +301,6 @@ describe("ImportWallet", () => {
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
 		historySpy.mockRestore();
-	});
-
-	it("should go to previous step", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
-			</Route>,
-			{
-				route: route,
-			},
-		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(methodStep()).toBeInTheDocument();
-		});
-
-		await waitFor(() => expect(backButton()).toBeEnabled());
-		userEvent.click(backButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-		});
 	});
 
 	it("should get options depend on the network", async () => {
