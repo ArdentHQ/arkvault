@@ -118,9 +118,9 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 			suggestion,
 			value,
 			readOnly,
-			...restProperties
+			...properties
 		}: InputProperties,
-		ref,
+		reference,
 	) => {
 		let fieldContext = useFormField();
 
@@ -133,7 +133,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 
 		const focusReference = useRef<InputElement>(null);
 
-		const mergedRef = isFocused ? focusReference : ref;
+		const inputReference = isFocused ? focusReference : reference;
 
 		useEffect(() => {
 			if (isFocused && focusReference.current) {
@@ -179,10 +179,9 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							value={value}
 							type="text"
 							// @ts-ignore
-							ref={mergedRef}
-							// **Pass readOnly explicitly**
+							ref={inputReference}
 							readOnly={readOnly}
-							{...restProperties}
+							{...properties}
 							autoComplete="off"
 						/>
 
