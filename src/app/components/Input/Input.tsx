@@ -30,10 +30,9 @@ type InputProperties = {
 	noBorder?: boolean;
 	noShadow?: boolean;
 	suggestion?: string;
-	readOnly?: boolean;
 } & React.HTMLProps<any>;
 
-const InputWrapperStyled = ({
+export const InputWrapperStyled = ({
 	noBorder,
 	noShadow,
 	valid,
@@ -75,16 +74,20 @@ const InputWrapperStyled = ({
 	/>
 );
 
-const InputStyled = forwardRef<HTMLInputElement, React.ComponentPropsWithRef<"input">>(
-	({ readOnly, className, ...props }, ref) => (
-		<input
+interface InputStyledProps {
+	autocomplete?: string;
+	as?: React.ElementType;
+}
+
+const InputStyled = forwardRef<HTMLInputElement, InputStyledProps & React.ComponentPropsWithRef<"input">>(
+	({ autocomplete = "off", as: Component = "input", ...props }, ref) => (
+		<Component
 			{...props}
 			ref={ref}
-			readOnly={readOnly}
-			autoComplete="off"
+			autoComplete={autocomplete}
 			className={twMerge(
 				"!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none",
-				className,
+				props.className,
 			)}
 		/>
 	),
@@ -114,10 +117,11 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 			style,
 			suggestion,
 			value,
+			// **Destructure readOnly explicitly**
 			readOnly,
-			...properties
-		},
-		reference,
+			...restProperties
+		}: InputProperties,
+		ref,
 	) => {
 		let fieldContext = useFormField();
 
@@ -130,7 +134,8 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 
 		const focusReference = useRef<InputElement>(null);
 
-		reference = isFocused ? focusReference : reference;
+		// If isFocused is true we use our own focusReference
+		const mergedRef = isFocused ? focusReference : ref;
 
 		useEffect(() => {
 			if (isFocused && focusReference.current) {
@@ -173,11 +178,15 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							name={fieldContext?.name}
 							aria-invalid={isInvalidValue}
 							disabled={disabled}
-							readOnly={readOnly}
 							value={value}
 							type="text"
-							ref={reference}
-							{...properties}
+							// Pass the ref (or our focus ref)
+							// @ts-ignore
+							ref={mergedRef}
+							// **Pass readOnly explicitly**
+							readOnly={readOnly}
+							{...restProperties}
+							autoComplete="off"
 						/>
 
 						<InputSuggestion
