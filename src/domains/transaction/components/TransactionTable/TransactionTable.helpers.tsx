@@ -39,7 +39,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 				? []
 				: [
 						{
-							headerClassName: "no-border md-lg:table-cell lg:table-cell",
+							headerClassName: "no-border hidden md-lg:table-cell lg:table-cell",
 							id: "recipient",
 						},
 					]),
