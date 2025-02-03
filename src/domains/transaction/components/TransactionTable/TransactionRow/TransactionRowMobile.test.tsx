@@ -13,9 +13,11 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 
 	const fixture = {
 		...TransactionFixture,
+		isSuccess: () => true,
 		wallet: () => ({
 			...TransactionFixture.wallet(),
 			currency: () => "DARK",
+			username: () => "test_username",
 		}),
 	};
 
@@ -41,9 +43,8 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getByTestId("TableRow__mobile")).toBeInTheDocument();
 		expect(screen.getAllByRole("cell")).toHaveLength(1);
-		expect(screen.getByRole("link", { name: "ea63b…5c79b" })).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(1);
+		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
 		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
 	});
 
@@ -125,5 +126,54 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
 		expect(screen.getByText("A few seconds ago")).toBeInTheDocument();
+	});
+
+	it("should not hide sender when hideSender is false", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={false} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_recipient")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toBeInTheDocument();
+	});
+
+	it("shoult hide sender when hideSender is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={true} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeInTheDocument();
+	});
+
+	it("should render value when hideSender is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={true} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByText("Value (DARK)")).toBeInTheDocument();
+	});
+
+	it("should render amount when hideSender is false", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={false} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByText("Amount (DARK)")).toBeInTheDocument();
 	});
 });
