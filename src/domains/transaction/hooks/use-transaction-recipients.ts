@@ -1,6 +1,6 @@
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { isContractTransaction } from "@/domains/transaction/utils";
 
 export const useTransactionRecipients = ({
@@ -11,37 +11,52 @@ export const useTransactionRecipients = ({
 	profile: Contracts.IProfile;
 }): { recipients: WalletAliasResult[] } => {
 	const { getWalletAlias } = useWalletAlias();
+	const [recipients, setRecipients] = useState<WalletAliasResult[]>([]);
 
-	const recipients: WalletAliasResult[] = useMemo(() => {
-		const recipients: WalletAliasResult[] = [];
+	const aliasRequests = useMemo(() => {
+		const requests: Parameters<typeof getWalletAlias>[0][] = [];
 
 		if (transaction.isTransfer() || isContractTransaction(transaction)) {
-			recipients.push(
-				getWalletAlias({
-					address: transaction.recipient(),
-					network: transaction.wallet().network(),
-					profile,
-					username: transaction.wallet().username(),
-				}),
-			);
+			requests.push({
+				address: transaction.recipient(),
+				network: transaction.wallet().network(),
+				profile,
+				username: transaction.wallet().username(),
+			});
 		}
 
 		if (transaction.isMultiPayment()) {
 			for (const recipient of transaction.recipients()) {
-				recipients.push(
-					getWalletAlias({
-						address: recipient.address,
-						network: transaction.wallet().network(),
-						profile,
-					}),
-				);
+				requests.push({
+					address: recipient.address,
+					network: transaction.wallet().network(),
+					profile,
+				});
 			}
 		}
 
-		return recipients;
-	}, [getWalletAlias, profile, transaction]);
+		return requests;
+	}, [transaction, profile, getWalletAlias]);
 
-	return {
-		recipients,
-	};
+	useEffect(() => {
+		const fetchRecipients = async () => {
+			if (transaction.isTransfer() || isContractTransaction(transaction)) {
+				const wallet = await profile.walletFactory().fromAddress({
+					address: transaction.recipient(),
+					coin: transaction.wallet().network().coin(),
+					network: transaction.wallet().network().id(),
+				});
+
+				await wallet.synchroniser().identity();
+				await wallet.synchroniser().coin();
+			}
+
+			const results = aliasRequests.map((request) => getWalletAlias(request));
+			setRecipients(results);
+		};
+
+		fetchRecipients();
+	}, [aliasRequests, transaction, profile, getWalletAlias]);
+
+	return { recipients };
 };
