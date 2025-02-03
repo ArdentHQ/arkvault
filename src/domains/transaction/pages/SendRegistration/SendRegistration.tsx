@@ -197,7 +197,7 @@ export const SendRegistration = () => {
 		abortReference.current.abort();
 
 		if (activeTab === 1) {
-			return history.push(`/profiles/${activeProfile.id()}`);
+			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -244,7 +244,7 @@ export const SendRegistration = () => {
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={10}>
 								<ErrorStep
-									onClose={() => history.push(`/profiles/${activeProfile.id()}`)}
+									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
 										setActiveTab(1);
@@ -280,7 +280,7 @@ export const SendRegistration = () => {
 							{!hideStepNavigation && (
 								<StepNavigation
 									onBackClick={handleBack}
-									onBackToWalletClick={() => history.push(`/profiles/${activeProfile.id()}`)}
+									onBackToWalletClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
 									isNextDisabled={isNextDisabled}
