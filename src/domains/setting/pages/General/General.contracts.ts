@@ -11,6 +11,7 @@ interface GeneralSettingsState {
 	timeFormat: string;
 	useNetworkWalletNames: boolean;
 	viewingMode: ViewingModeType;
+	showDevelopmentNetwork: boolean;
 }
 
 interface SettingsOption {
