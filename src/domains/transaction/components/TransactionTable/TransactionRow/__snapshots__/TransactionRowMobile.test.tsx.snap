@@ -63,7 +63,7 @@ exports[`TransactionRowMobile > should render 1`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
@@ -290,7 +290,7 @@ exports[`TransactionRowMobile > should render 2`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
@@ -809,7 +809,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"
@@ -1014,7 +1014,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
               </div>
             </div>
             <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
             >
               <div
                 class="flex flex-col gap-2 w-full"

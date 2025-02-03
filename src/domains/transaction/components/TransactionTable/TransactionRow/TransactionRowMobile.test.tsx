@@ -17,6 +17,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		wallet: () => ({
 			...TransactionFixture.wallet(),
 			currency: () => "DARK",
+			username: () => "test_username",
 		}),
 	};
 
@@ -150,5 +151,29 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		);
 
 		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeInTheDocument();
+	});
+
+	it("should render amount when hideSender is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={true} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByText("Amount (DARK)")).toBeInTheDocument();
+	});
+
+	it("should render value when hideSender is false", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={false} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByText("Value (DARK)")).toBeInTheDocument();
 	});
 });
