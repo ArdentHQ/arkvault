@@ -120,9 +120,9 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			if (option.value === "delegate-registration") {
 				let url = generatePath(ProfilePaths.SendDelegateRegistration, {
-						profileId: profile.id(),
-						walletId: wallet.id(),
-					});
+					profileId: profile.id(),
+					walletId: wallet.id(),
+				});
 
 				if (hasMultipleWallets) {
 					url = generatePath(ProfilePaths.SendValidatorRegistrationProfile, {

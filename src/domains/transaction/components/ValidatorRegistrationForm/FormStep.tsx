@@ -19,7 +19,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { getValues, register, setValue } = useFormContext();
 	const validatorPublicKey = getValues("validatorPublicKey");
 
-	const [network] = useNetworks({profile})
+	const [network] = useNetworks({ profile });
 	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
 	useEffect(() => {
@@ -56,9 +56,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					wallet={
 						wallet
 							? {
-								address: wallet.address(),
-								network: wallet.network(),
-							}
+									address: wallet.address(),
+									network: wallet.network(),
+								}
 							: undefined
 					}
 					wallets={profile.wallets().values()}

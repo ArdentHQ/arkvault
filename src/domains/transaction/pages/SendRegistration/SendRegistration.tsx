@@ -66,7 +66,7 @@ export const SendRegistration = () => {
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
-	const [network] = useNetworks({ profile: activeProfile })
+	const [network] = useNetworks({ profile: activeProfile });
 
 	const activeWallet = useMemo(() => {
 		if (activeWalletFromUrl) {
@@ -76,7 +76,7 @@ export const SendRegistration = () => {
 		if (senderAddress) {
 			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		}
-	}, [activeProfile, activeWalletFromUrl, network, senderAddress])
+	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
 
 	useEffect(() => {
 		register("fees");
