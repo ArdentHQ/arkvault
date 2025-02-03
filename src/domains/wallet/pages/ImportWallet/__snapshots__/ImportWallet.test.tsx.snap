@@ -165,6 +165,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="Private Key"
                     />
@@ -238,7 +239,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
@@ -248,12 +249,13 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           Private Key
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              aria-invalid="true"
               autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ImportWallet__privatekey-input"
@@ -263,11 +265,56 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
             />
           </div>
           <div
-            class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
             data-testid="Input__addon-end"
           >
+            <span
+              data-errortext="Invalid Private Key"
+              data-testid="Input__error"
+            >
+              <div
+                class="text-theme-danger-500"
+              >
+                <div
+                  style="height: 20px; width: 20px;"
+                >
+                  <svg
+                    id="circle-exclamation-mark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 10.5v-5"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 14h0"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </span>
             <div
-              class=""
+              class="pl-3"
             >
               <button
                 class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
@@ -521,6 +568,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="Private Key"
                     />
@@ -877,6 +925,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="WIF"
                     />
@@ -950,7 +999,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+        class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
@@ -960,12 +1009,13 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           WIF
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              aria-invalid="true"
               autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ImportWallet__wif-input"
@@ -975,11 +1025,56 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
             />
           </div>
           <div
-            class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
             data-testid="Input__addon-end"
           >
+            <span
+              data-errortext="Invalid WIF"
+              data-testid="Input__error"
+            >
+              <div
+                class="text-theme-danger-500"
+              >
+                <div
+                  style="height: 20px; width: 20px;"
+                >
+                  <svg
+                    id="circle-exclamation-mark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 10.5v-5"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 14h0"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </span>
             <div
-              class=""
+              class="pl-3"
             >
               <button
                 class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
@@ -1233,6 +1328,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="WIF"
                     />
@@ -1589,6 +1685,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="Encrypted WIF"
                     />
@@ -2814,6 +2911,7 @@ exports[`ImportWallet > should render method step 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="Mnemonic"
                     />
