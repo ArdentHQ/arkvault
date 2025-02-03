@@ -111,7 +111,14 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 	return network.displayName();
 };
 
-export const profileAllEnabledNetworks = (profile: Contracts.IProfile) => profile.availableNetworks();
+export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
+	profile.availableNetworks().filter((network) => {
+		if (isCustomNetwork(network)) {
+			return network.meta().enabled;
+		}
+
+		return true;
+	});
 
 export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	profileAllEnabledNetworks(profile).map((network) => network.id());
