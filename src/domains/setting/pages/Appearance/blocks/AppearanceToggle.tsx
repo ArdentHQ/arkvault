@@ -1,24 +1,19 @@
 import React from "react";
-import { useFormContext } from "react-hook-form";
-
 import { Toggle } from "@/app/components/Toggle";
-import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
 
-interface AppearanceToggleProperties {
+interface Properties {
 	name: string;
+	isChecked?: boolean;
+	onChange?: (isChecked: boolean) => void;
 }
 
-export const AppearanceToggle: React.FC<AppearanceToggleProperties> = ({ name }) => {
-	const form = useFormContext<AppearanceSettingsState>();
-
-	const value = form.watch(name);
-
-	return (
-		<Toggle
-			ref={form.register()}
-			name={name}
-			defaultChecked={!!value}
-			data-testid={`AppearanceToggle__toggle-${name}`}
-		/>
-	);
-};
+export const AppearanceToggle = ({ name, isChecked, onChange }: Properties) => (
+	<Toggle
+		name={name}
+		defaultChecked={!!isChecked}
+		data-testid={`AppearanceToggle__toggle-${name}`}
+		onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+			onChange?.(event.target.checked)
+		}
+	/>
+);
