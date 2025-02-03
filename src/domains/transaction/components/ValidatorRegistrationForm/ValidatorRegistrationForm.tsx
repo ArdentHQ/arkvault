@@ -14,7 +14,7 @@ const component = ({
 	profile,
 }: {
 	activeTab: number;
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }) => (
 	<Tabs activeId={activeTab}>
@@ -22,7 +22,7 @@ const component = ({
 			<FormStep wallet={wallet} profile={profile} />
 		</TabPanel>
 		<TabPanel tabId={2}>
-			<ReviewStep wallet={wallet} profile={profile} />
+			<ReviewStep wallet={wallet!} profile={profile} />
 		</TabPanel>
 	</Tabs>
 );
