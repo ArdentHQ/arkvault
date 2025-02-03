@@ -85,8 +85,10 @@ export const SendRegistration = () => {
 
 		const walletBalance = activeWallet?.balance() ?? 0;
 
+		const type = registrationType === "validatorRegistration" ? "delegateRegistration" : "multiSignature";
+
 		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
-		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit["transfer"], activeWallet?.network()));
+		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit[type], activeWallet?.network()));
 
 		register("inputFeeSettings");
 
