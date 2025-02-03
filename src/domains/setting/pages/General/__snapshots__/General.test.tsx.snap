@@ -733,102 +733,6 @@ exports[`General Settings > should disable submit button when profile is not res
                 </li>
                 <li
                   class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--appearance"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="pencil-ruler"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M4.6 19h0c-1.3 0-2.4-1.1-2.4-2.4h0V6.4c0-.4.1-.7.3-1.1l1.6-3.2c.1-.2.2-.4.6-.4.2 0 .4.2.4.4l1.6 3.2c.2.3.3.7.3 1.1v10.2C7 17.9 5.9 19 4.6 19zM2.3 5.8h4.6M2.2 16H7M10.6 2.2c0-.7.6-1.2 1.2-1.2h4.8c.6 0 1.2.5 1.2 1.2h0v15.6c0 .6-.6 1.2-1.2 1.2h0-4.8c-.6 0-1.2-.6-1.2-1.2h0V2.2zM10.6 4.6H13M10.6 8.2H13M10.6 11.8H13M10.6 15.4H13"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Appearance
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--networks"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="globe"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              transform="translate(.25 .406)"
-                            >
-                              <circle
-                                cx="9.75"
-                                cy="9.6"
-                                r="9"
-                              />
-                              <path
-                                d="M7.55 18.33c-1.2-1.8-2-5.136-2-8.736s.8-6.923 2-8.723M.75 9.6h18M2.073 14.3h15.354M2.2 4.7h15.1M11.95.87c1.2 1.8 1.9 5.03 1.9 8.73s-.7 6.93-1.9 8.73"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Networks
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
                   data-testid="side-menu__item--servers"
                 >
                   <div
@@ -2038,6 +1942,239 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </div>
                       </li>
+                      <li
+                        class="flex w-full flex-col py-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Viewing Mode
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Choose a light or dark viewing mode.
+                            </span>
+                          </div>
+                          <div
+                            class="ml-5"
+                          >
+                            <span
+                              data-testid="list-divided-item__value"
+                            >
+                              <div
+                                class="inline-flex w-full items-center space-x-3"
+                                data-testid="ButtonGroup"
+                                role="radiogroup"
+                              >
+                                <button
+                                  aria-checked="true"
+                                  aria-label="light"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-sun"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Light
+                                    </span>
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="dark"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-moon"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Dark
+                                    </span>
+                                  </div>
+                                </button>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Wallet Naming
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                                    name="useNetworkWalletNames"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Prioritize showing network provided names over wallet names.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Show Development Network
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    checked=""
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                    name="showDevelopmentNetwork"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Display an option to switch to the development network in the navigation menu.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                   <div
@@ -2791,102 +2928,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="text-lg font-semibold"
                     >
                       Password
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--appearance"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="pencil-ruler"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M4.6 19h0c-1.3 0-2.4-1.1-2.4-2.4h0V6.4c0-.4.1-.7.3-1.1l1.6-3.2c.1-.2.2-.4.6-.4.2 0 .4.2.4.4l1.6 3.2c.2.3.3.7.3 1.1v10.2C7 17.9 5.9 19 4.6 19zM2.3 5.8h4.6M2.2 16H7M10.6 2.2c0-.7.6-1.2 1.2-1.2h4.8c.6 0 1.2.5 1.2 1.2h0v15.6c0 .6-.6 1.2-1.2 1.2h0-4.8c-.6 0-1.2-.6-1.2-1.2h0V2.2zM10.6 4.6H13M10.6 8.2H13M10.6 11.8H13M10.6 15.4H13"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Appearance
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--networks"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="globe"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              transform="translate(.25 .406)"
-                            >
-                              <circle
-                                cx="9.75"
-                                cy="9.6"
-                                r="9"
-                              />
-                              <path
-                                d="M7.55 18.33c-1.2-1.8-2-5.136-2-8.736s.8-6.923 2-8.723M.75 9.6h18M2.073 14.3h15.354M2.2 4.7h15.1M11.95.87c1.2 1.8 1.9 5.03 1.9 8.73s-.7 6.93-1.9 8.73"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Networks
                     </span>
                   </div>
                 </li>
@@ -4137,13 +4178,246 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </div>
                       </li>
+                      <li
+                        class="flex w-full flex-col py-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Viewing Mode
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Choose a light or dark viewing mode.
+                            </span>
+                          </div>
+                          <div
+                            class="ml-5"
+                          >
+                            <span
+                              data-testid="list-divided-item__value"
+                            >
+                              <div
+                                class="inline-flex w-full items-center space-x-3"
+                                data-testid="ButtonGroup"
+                                role="radiogroup"
+                              >
+                                <button
+                                  aria-checked="true"
+                                  aria-label="light"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-sun"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Light
+                                    </span>
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="dark"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-moon"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Dark
+                                    </span>
+                                  </div>
+                                </button>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Wallet Naming
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                                    name="useNetworkWalletNames"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Prioritize showing network provided names over wallet names.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Show Development Network
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    checked=""
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                    name="showDevelopmentNetwork"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Display an option to switch to the development network in the navigation menu.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                   <div
                     class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -4889,102 +5163,6 @@ exports[`General Settings > should render 1`] = `
                       class="text-lg font-semibold"
                     >
                       Password
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--appearance"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="pencil-ruler"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M4.6 19h0c-1.3 0-2.4-1.1-2.4-2.4h0V6.4c0-.4.1-.7.3-1.1l1.6-3.2c.1-.2.2-.4.6-.4.2 0 .4.2.4.4l1.6 3.2c.2.3.3.7.3 1.1v10.2C7 17.9 5.9 19 4.6 19zM2.3 5.8h4.6M2.2 16H7M10.6 2.2c0-.7.6-1.2 1.2-1.2h4.8c.6 0 1.2.5 1.2 1.2h0v15.6c0 .6-.6 1.2-1.2 1.2h0-4.8c-.6 0-1.2-.6-1.2-1.2h0V2.2zM10.6 4.6H13M10.6 8.2H13M10.6 11.8H13M10.6 15.4H13"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Appearance
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--networks"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="globe"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              transform="translate(.25 .406)"
-                            >
-                              <circle
-                                cx="9.75"
-                                cy="9.6"
-                                r="9"
-                              />
-                              <path
-                                d="M7.55 18.33c-1.2-1.8-2-5.136-2-8.736s.8-6.923 2-8.723M.75 9.6h18M2.073 14.3h15.354M2.2 4.7h15.1M11.95.87c1.2 1.8 1.9 5.03 1.9 8.73s-.7 6.93-1.9 8.73"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Networks
                     </span>
                   </div>
                 </li>
@@ -6195,6 +6373,239 @@ exports[`General Settings > should render 1`] = `
                                   </span>
                                 </div>
                               </button>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col py-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Viewing Mode
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Choose a light or dark viewing mode.
+                            </span>
+                          </div>
+                          <div
+                            class="ml-5"
+                          >
+                            <span
+                              data-testid="list-divided-item__value"
+                            >
+                              <div
+                                class="inline-flex w-full items-center space-x-3"
+                                data-testid="ButtonGroup"
+                                role="radiogroup"
+                              >
+                                <button
+                                  aria-checked="true"
+                                  aria-label="light"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-sun"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Light
+                                    </span>
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="dark"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-moon"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Dark
+                                    </span>
+                                  </div>
+                                </button>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Wallet Naming
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                                    name="useNetworkWalletNames"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Prioritize showing network provided names over wallet names.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Show Development Network
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    checked=""
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                    name="showDevelopmentNetwork"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Display an option to switch to the development network in the navigation menu.
                             </span>
                           </div>
                         </div>
@@ -6957,102 +7368,6 @@ exports[`General Settings > should show identicon when removing image if name is
                 </li>
                 <li
                   class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--appearance"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="pencil-ruler"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M4.6 19h0c-1.3 0-2.4-1.1-2.4-2.4h0V6.4c0-.4.1-.7.3-1.1l1.6-3.2c.1-.2.2-.4.6-.4.2 0 .4.2.4.4l1.6 3.2c.2.3.3.7.3 1.1v10.2C7 17.9 5.9 19 4.6 19zM2.3 5.8h4.6M2.2 16H7M10.6 2.2c0-.7.6-1.2 1.2-1.2h4.8c.6 0 1.2.5 1.2 1.2h0v15.6c0 .6-.6 1.2-1.2 1.2h0-4.8c-.6 0-1.2-.6-1.2-1.2h0V2.2zM10.6 4.6H13M10.6 8.2H13M10.6 11.8H13M10.6 15.4H13"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Appearance
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--networks"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="globe"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              transform="translate(.25 .406)"
-                            >
-                              <circle
-                                cx="9.75"
-                                cy="9.6"
-                                r="9"
-                              />
-                              <path
-                                d="M7.55 18.33c-1.2-1.8-2-5.136-2-8.736s.8-6.923 2-8.723M.75 9.6h18M2.073 14.3h15.354M2.2 4.7h15.1M11.95.87c1.2 1.8 1.9 5.03 1.9 8.73s-.7 6.93-1.9 8.73"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Networks
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
                   data-testid="side-menu__item--servers"
                 >
                   <div
@@ -8262,6 +8577,239 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </div>
                       </li>
+                      <li
+                        class="flex w-full flex-col py-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Viewing Mode
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Choose a light or dark viewing mode.
+                            </span>
+                          </div>
+                          <div
+                            class="ml-5"
+                          >
+                            <span
+                              data-testid="list-divided-item__value"
+                            >
+                              <div
+                                class="inline-flex w-full items-center space-x-3"
+                                data-testid="ButtonGroup"
+                                role="radiogroup"
+                              >
+                                <button
+                                  aria-checked="true"
+                                  aria-label="light"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-sun"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Light
+                                    </span>
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="dark"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-moon"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Dark
+                                    </span>
+                                  </div>
+                                </button>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Wallet Naming
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                                    name="useNetworkWalletNames"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Prioritize showing network provided names over wallet names.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Show Development Network
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    checked=""
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                    name="showDevelopmentNetwork"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Display an option to switch to the development network in the navigation menu.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                   <div
@@ -9015,102 +9563,6 @@ exports[`General Settings > should update profile 1`] = `
                       class="text-lg font-semibold"
                     >
                       Password
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--appearance"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="pencil-ruler"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M4.6 19h0c-1.3 0-2.4-1.1-2.4-2.4h0V6.4c0-.4.1-.7.3-1.1l1.6-3.2c.1-.2.2-.4.6-.4.2 0 .4.2.4.4l1.6 3.2c.2.3.3.7.3 1.1v10.2C7 17.9 5.9 19 4.6 19zM2.3 5.8h4.6M2.2 16H7M10.6 2.2c0-.7.6-1.2 1.2-1.2h4.8c.6 0 1.2.5 1.2 1.2h0v15.6c0 .6-.6 1.2-1.2 1.2h0-4.8c-.6 0-1.2-.6-1.2-1.2h0V2.2zM10.6 4.6H13M10.6 8.2H13M10.6 11.8H13M10.6 15.4H13"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Appearance
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--networks"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="globe"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              transform="translate(.25 .406)"
-                            >
-                              <circle
-                                cx="9.75"
-                                cy="9.6"
-                                r="9"
-                              />
-                              <path
-                                d="M7.55 18.33c-1.2-1.8-2-5.136-2-8.736s.8-6.923 2-8.723M.75 9.6h18M2.073 14.3h15.354M2.2 4.7h15.1M11.95.87c1.2 1.8 1.9 5.03 1.9 8.73s-.7 6.93-1.9 8.73"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Networks
                     </span>
                   </div>
                 </li>
@@ -10325,6 +10777,239 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </div>
                       </li>
+                      <li
+                        class="flex w-full flex-col py-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Viewing Mode
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Choose a light or dark viewing mode.
+                            </span>
+                          </div>
+                          <div
+                            class="ml-5"
+                          >
+                            <span
+                              data-testid="list-divided-item__value"
+                            >
+                              <div
+                                class="inline-flex w-full items-center space-x-3"
+                                data-testid="ButtonGroup"
+                                role="radiogroup"
+                              >
+                                <button
+                                  aria-checked="true"
+                                  aria-label="light"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-sun"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Light
+                                    </span>
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="dark"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-moon"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Dark
+                                    </span>
+                                  </div>
+                                </button>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Wallet Naming
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                                    name="useNetworkWalletNames"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Prioritize showing network provided names over wallet names.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Show Development Network
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    checked=""
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                    name="showDevelopmentNetwork"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Display an option to switch to the development network in the navigation menu.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                   <div
@@ -11078,102 +11763,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="text-lg font-semibold"
                     >
                       Password
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--appearance"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="pencil-ruler"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M4.6 19h0c-1.3 0-2.4-1.1-2.4-2.4h0V6.4c0-.4.1-.7.3-1.1l1.6-3.2c.1-.2.2-.4.6-.4.2 0 .4.2.4.4l1.6 3.2c.2.3.3.7.3 1.1v10.2C7 17.9 5.9 19 4.6 19zM2.3 5.8h4.6M2.2 16H7M10.6 2.2c0-.7.6-1.2 1.2-1.2h4.8c.6 0 1.2.5 1.2 1.2h0v15.6c0 .6-.6 1.2-1.2 1.2h0-4.8c-.6 0-1.2-.6-1.2-1.2h0V2.2zM10.6 4.6H13M10.6 8.2H13M10.6 11.8H13M10.6 15.4H13"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Appearance
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--networks"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="globe"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              transform="translate(.25 .406)"
-                            >
-                              <circle
-                                cx="9.75"
-                                cy="9.6"
-                                r="9"
-                              />
-                              <path
-                                d="M7.55 18.33c-1.2-1.8-2-5.136-2-8.736s.8-6.923 2-8.723M.75 9.6h18M2.073 14.3h15.354M2.2 4.7h15.1M11.95.87c1.2 1.8 1.9 5.03 1.9 8.73s-.7 6.93-1.9 8.73"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Networks
                     </span>
                   </div>
                 </li>
@@ -12388,13 +12977,246 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </div>
                       </li>
+                      <li
+                        class="flex w-full flex-col py-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Viewing Mode
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Choose a light or dark viewing mode.
+                            </span>
+                          </div>
+                          <div
+                            class="ml-5"
+                          >
+                            <span
+                              data-testid="list-divided-item__value"
+                            >
+                              <div
+                                class="inline-flex w-full items-center space-x-3"
+                                data-testid="ButtonGroup"
+                                role="radiogroup"
+                              >
+                                <button
+                                  aria-checked="true"
+                                  aria-label="light"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-sun"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Light
+                                    </span>
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="dark"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-moon"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Dark
+                                    </span>
+                                  </div>
+                                </button>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Wallet Naming
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                                    name="useNetworkWalletNames"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Prioritize showing network provided names over wallet names.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Show Development Network
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    checked=""
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                    name="showDevelopmentNetwork"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Display an option to switch to the development network in the navigation menu.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                   <div
                     class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -13145,102 +13967,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 </li>
                 <li
                   class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--appearance"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="pencil-ruler"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M4.6 19h0c-1.3 0-2.4-1.1-2.4-2.4h0V6.4c0-.4.1-.7.3-1.1l1.6-3.2c.1-.2.2-.4.6-.4.2 0 .4.2.4.4l1.6 3.2c.2.3.3.7.3 1.1v10.2C7 17.9 5.9 19 4.6 19zM2.3 5.8h4.6M2.2 16H7M10.6 2.2c0-.7.6-1.2 1.2-1.2h4.8c.6 0 1.2.5 1.2 1.2h0v15.6c0 .6-.6 1.2-1.2 1.2h0-4.8c-.6 0-1.2-.6-1.2-1.2h0V2.2zM10.6 4.6H13M10.6 8.2H13M10.6 11.8H13M10.6 15.4H13"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Appearance
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
-                  data-testid="side-menu__item--networks"
-                >
-                  <div
-                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
-                  >
-                    <div
-                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="globe"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              transform="translate(.25 .406)"
-                            >
-                              <circle
-                                cx="9.75"
-                                cy="9.6"
-                                r="9"
-                              />
-                              <path
-                                d="M7.55 18.33c-1.2-1.8-2-5.136-2-8.736s.8-6.923 2-8.723M.75 9.6h18M2.073 14.3h15.354M2.2 4.7h15.1M11.95.87c1.2 1.8 1.9 5.03 1.9 8.73s-.7 6.93-1.9 8.73"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="text-lg font-semibold"
-                    >
-                      Networks
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
                   data-testid="side-menu__item--servers"
                 >
                   <div
@@ -13420,7 +14146,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               class="upload-button-wrapper h-full w-full"
                             >
                               <button
-                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                 data-testid="SelectProfileImage__upload-button"
                                 type="button"
                               >
@@ -14490,6 +15216,239 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   </span>
                                 </div>
                               </button>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col py-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Viewing Mode
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Choose a light or dark viewing mode.
+                            </span>
+                          </div>
+                          <div
+                            class="ml-5"
+                          >
+                            <span
+                              data-testid="list-divided-item__value"
+                            >
+                              <div
+                                class="inline-flex w-full items-center space-x-3"
+                                data-testid="ButtonGroup"
+                                role="radiogroup"
+                              >
+                                <button
+                                  aria-checked="true"
+                                  aria-label="light"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-sun"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Light
+                                    </span>
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="dark"
+                                  class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:bg-theme-primary-900 dark:aria-checked:text-theme-primary-50 h-14 rounded-xl"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center px-2"
+                                  >
+                                    <div>
+                                      <div
+                                        style="height: 20px; width: 20px;"
+                                      >
+                                        <svg
+                                          id="underline-moon"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <span
+                                      class="ml-2 hidden sm:inline"
+                                    >
+                                      Dark
+                                    </span>
+                                  </div>
+                                </button>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Wallet Naming
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                                    name="useNetworkWalletNames"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Prioritize showing network provided names over wallet names.
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        data-testid="list-divided-item__wrapper"
+                      >
+                        <div
+                          class="flex justify-between items-center"
+                          data-testid="list-divided-item__inner-wrapper"
+                        >
+                          <div
+                            class="flex w-full flex-col space-y-2"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5"
+                            >
+                              <span
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                data-testid="list-divided-item__label"
+                              >
+                                Show Development Network
+                              </span>
+                              <span>
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    checked=""
+                                    class="toggle-input sr-only"
+                                    data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                    name="showDevelopmentNetwork"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                            <span
+                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="list-divided-item__label--description"
+                            >
+                              Display an option to switch to the development network in the navigation menu.
                             </span>
                           </div>
                         </div>
