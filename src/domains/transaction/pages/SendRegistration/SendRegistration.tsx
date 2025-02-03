@@ -1,6 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
 
@@ -11,7 +11,13 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWallet, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import {
+	useActiveProfile,
+	useActiveWalletWhenNeeded,
+	useLedgerModelStatus,
+	useNetworks,
+	useValidation,
+} from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
@@ -23,6 +29,8 @@ import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { assertWallet } from "@/utils/assertions";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -37,7 +45,6 @@ export const SendRegistration = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
@@ -53,15 +60,36 @@ export const SendRegistration = () => {
 	const { formState, register, setValue, watch, getValues } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const { fee, fees, isLoading } = watch();
+	const { fee, fees, isLoading, senderAddress } = watch();
 
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
+	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
+
+	const [network] = useNetworks({ profile: activeProfile });
+
+	const activeWallet = useMemo(() => {
+		if (senderAddress) {
+			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+		}
+
+		if (activeWalletFromUrl) {
+			return activeWalletFromUrl;
+		}
+	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
+
 	useEffect(() => {
 		register("fees");
-		register("fee", common.fee(activeWallet.balance(), activeWallet.network(), fees));
+
+		const walletBalance = activeWallet?.balance() ?? 0;
+
+		const type = registrationType === "validatorRegistration" ? "delegateRegistration" : "multiSignature";
+
+		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
+		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit[type], activeWallet?.network()));
+
 		register("inputFeeSettings");
 
 		register("network", { required: true });
@@ -75,6 +103,10 @@ export const SendRegistration = () => {
 		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
+		if (!activeWallet) {
+			return;
+		}
+
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
 
 		const network = env
@@ -102,7 +134,7 @@ export const SendRegistration = () => {
 			return;
 		}
 
-		if (isAuthenticationStep && activeWallet.isLedger() && isLedgerModelSupported) {
+		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
 	}, [ledgerDevice]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -118,6 +150,8 @@ export const SendRegistration = () => {
 	});
 
 	const handleSubmit = async () => {
+		assertWallet(activeWallet);
+
 		try {
 			const { mnemonic, encryptionPassword, wif, privateKey, secret, participants, minParticipants, fee } =
 				getValues();
@@ -171,7 +205,7 @@ export const SendRegistration = () => {
 		abortReference.current.abort();
 
 		if (activeTab === 1) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -188,14 +222,14 @@ export const SendRegistration = () => {
 		}
 
 		// Skip authentication step
-		if (isNextStepAuthentication && activeWallet.isLedger() && isLedgerModelSupported) {
+		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
 
 		setActiveTab(nextStep);
 	};
 
-	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet.isLedger());
+	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet?.isLedger());
 
 	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
@@ -218,9 +252,7 @@ export const SendRegistration = () => {
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={10}>
 								<ErrorStep
-									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
-									}
+									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
 										setActiveTab(1);
@@ -239,7 +271,7 @@ export const SendRegistration = () => {
 
 									<TabPanel tabId={authenticationStep}>
 										<AuthenticationStep
-											wallet={activeWallet}
+											wallet={activeWallet!}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
 											ledgerIsAwaitingApp={!isConnected}
 											ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
@@ -248,7 +280,7 @@ export const SendRegistration = () => {
 									</TabPanel>
 
 									<TabPanel tabId={stepCount}>
-										<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
+										<TransactionSuccessful transaction={transaction} senderWallet={activeWallet!} />
 									</TabPanel>
 								</>
 							)}
@@ -257,7 +289,7 @@ export const SendRegistration = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										history.push(`/profiles/${activeProfile.id()}/dashboard`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
