@@ -85,7 +85,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         From
@@ -129,7 +129,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         To
@@ -177,26 +177,17 @@ exports[`TransactionRowMobile > should render 1`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Value (DARK)
+                  Amount
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 DARK
-                      </span>
-                    </div>
-                  </div>
+                    121 DARK
+                  </span>
                 </div>
               </div>
               <div
@@ -312,7 +303,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         From
@@ -356,7 +347,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         To
@@ -404,26 +395,17 @@ exports[`TransactionRowMobile > should render 2`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Value (DARK)
+                  Amount
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 DARK
-                      </span>
-                    </div>
-                  </div>
+                    121 DARK
+                  </span>
                 </div>
               </div>
               <div
@@ -831,7 +813,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         From
@@ -864,7 +846,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         To
@@ -901,26 +883,17 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Value (BTC)
+                  Amount
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 BTC
-                      </span>
-                    </div>
-                  </div>
+                    121 BTC
+                  </span>
                 </div>
               </div>
               <div
@@ -1036,7 +1009,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         From
@@ -1069,7 +1042,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         To
@@ -1106,26 +1079,17 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Value (BTC)
+                  Amount
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 BTC
-                      </span>
-                    </div>
-                  </div>
+                    121 BTC
+                  </span>
                 </div>
               </div>
               <div
