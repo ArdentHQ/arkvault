@@ -26,6 +26,7 @@ import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/u
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import {
 	enabledNetworksCount,
 	networkDisplayName,
@@ -56,6 +57,7 @@ export const ImportWallet = () => {
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
+	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
 	const { t } = useTranslation();
 	const { importWalletByType } = useWalletImport({ profile: activeProfile });
@@ -199,6 +201,7 @@ export const ImportWallet = () => {
 		);
 
 		await persist();
+		setSelectedAddresses([...selectedAddresses, wallet.address()]);
 
 		setImportedWallet(wallet);
 	};

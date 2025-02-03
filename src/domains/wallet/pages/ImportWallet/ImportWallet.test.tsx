@@ -27,6 +27,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
+import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -216,6 +217,11 @@ describe("ImportWallet", () => {
 	});
 
 	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
+		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			selectedAddresses: [],
+			setSelectedAddresses: () => {},
+		});
+
 		let form: ReturnType<typeof useForm>;
 		const onClickEditAlias = vi.fn();
 		const importedWallet = profile.wallets().first();

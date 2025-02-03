@@ -18,6 +18,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	act,
 } from "@/utils/testing-library";
+import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -37,6 +38,11 @@ describe("ImportWallet WIF", () => {
 	const wif = "wif.1111";
 
 	beforeEach(async () => {
+		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			selectedAddresses: [],
+			setSelectedAddresses: () => {},
+		});
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
