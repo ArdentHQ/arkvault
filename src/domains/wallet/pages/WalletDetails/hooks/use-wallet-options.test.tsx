@@ -166,4 +166,15 @@ describe("Wallet Options Hook", () => {
 			}
 		`);
 	});
+
+	it("should not render secondary options when multiple wallets passed", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+		const { result } = renderHook(() => useWalletOptions([wallet, profile.wallets().last()]));
+
+		expect(result.current.secondaryOptions).toStrictEqual({
+			hasDivider: true,
+			key: "secondary",
+			options: [],
+		});
+	});
 });
