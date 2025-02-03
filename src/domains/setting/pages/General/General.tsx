@@ -172,19 +172,6 @@ export const GeneralSettings: React.FC = () => {
 
 	const otherItems = [
 		{
-			itemValueClass: "w-full sm:w-auto",
-			label: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.TITLE"),
-			labelDescription: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.DESCRIPTION"),
-			labelWrapperClass: "flex flex-col sm:flex-row space-y-3 justify-between items-center",
-			value: (
-				<Button onClick={() => setIsResetProfileOpen(true)} variant="danger" className="w-full sm:w-auto">
-					<Icon name="ArrowRotateLeft" />
-					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
-				</Button>
-			),
-			wrapperClass: "sm:pb-6",
-		},
-		{
 			itemValueClass: "ml-5",
 			label: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.TITLE")}`,
 			labelDescription: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.DESCRIPTION")}`,
@@ -199,7 +186,7 @@ export const GeneralSettings: React.FC = () => {
 					}}
 				/>
 			),
-			wrapperClass: "py-6",
+			wrapperClass: "sm:pb-6",
 		},
 		{
 			label: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.TITLE"),
@@ -235,6 +222,19 @@ export const GeneralSettings: React.FC = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
+			wrapperClass: "pt-6 sm:pb-6",
+		},
+		{
+			itemValueClass: "w-full sm:w-auto",
+			label: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.TITLE"),
+			labelDescription: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.DESCRIPTION"),
+			labelWrapperClass: "flex flex-col sm:flex-row space-y-3 justify-between items-center",
+			value: (
+				<Button onClick={() => setIsResetProfileOpen(true)} variant="danger" className="w-full sm:w-auto">
+					<Icon name="ArrowRotateLeft" />
+					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
+				</Button>
+			),
 			wrapperClass: "pt-6 sm:pb-6",
 		},
 	];
