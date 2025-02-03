@@ -1,3 +1,5 @@
+import { ViewingModeType } from "@/app/hooks";
+
 interface GeneralSettingsState {
 	automaticSignOutPeriod: string;
 	avatar: string;
@@ -7,6 +9,9 @@ interface GeneralSettingsState {
 	marketProvider: string;
 	name: string;
 	timeFormat: string;
+	useNetworkWalletNames: boolean;
+	viewingMode: ViewingModeType;
+	showDevelopmentNetwork: boolean;
 }
 
 interface SettingsOption {
