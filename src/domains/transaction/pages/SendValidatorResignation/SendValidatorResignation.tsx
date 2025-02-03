@@ -18,6 +18,7 @@ import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { assertWallet } from "@/utils/assertions";
 
 enum Step {
 	FormStep = 1,
@@ -108,6 +109,8 @@ export const SendValidatorResignation = () => {
 	};
 
 	const handleSubmit = async () => {
+		assertWallet(activeWallet);
+
 		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } = getValues();
 
 		try {
