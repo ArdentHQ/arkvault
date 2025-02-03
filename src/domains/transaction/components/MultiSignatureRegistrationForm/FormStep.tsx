@@ -12,6 +12,7 @@ import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
+import { assertWallet } from "@/utils/assertions";
 
 const MINIMUM_PARTICIPANTS = 2;
 
@@ -19,6 +20,8 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { errors, setValue, register, watch } = useFormContext();
 	const { participants, minParticipants } = watch();
+
+	assertWallet(wallet);
 
 	const { common, multiSignatureRegistration } = useValidation();
 

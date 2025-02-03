@@ -39,7 +39,7 @@ export const WalletHeader = ({
 }) => {
 	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } =
 		useWalletActions(wallet);
-	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
+	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions([wallet]);
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 
 	const { getWalletAlias } = useWalletAlias();
