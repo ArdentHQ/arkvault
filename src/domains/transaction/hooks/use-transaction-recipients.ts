@@ -15,7 +15,6 @@ export const useTransactionRecipients = ({
 
 	const aliasRequests = useMemo(() => {
 		const requests: Parameters<typeof getWalletAlias>[0][] = [];
-
 		if (transaction.isTransfer() || isContractTransaction(transaction)) {
 			requests.push({
 				address: transaction.recipient(),
@@ -24,7 +23,6 @@ export const useTransactionRecipients = ({
 				username: transaction.wallet().username(),
 			});
 		}
-
 		if (transaction.isMultiPayment()) {
 			for (const recipient of transaction.recipients()) {
 				requests.push({
@@ -34,11 +32,17 @@ export const useTransactionRecipients = ({
 				});
 			}
 		}
-
 		return requests;
 	}, [transaction, profile, getWalletAlias]);
 
 	useEffect(() => {
+		const fallbackRecipients: WalletAliasResult[] = aliasRequests.map((request) => ({
+			address: request.address,
+			alias: "",
+			isContact: false,
+		}));
+		setRecipients(fallbackRecipients);
+
 		const fetchRecipients = async () => {
 			if (transaction.isTransfer() || isContractTransaction(transaction)) {
 				const wallet = await profile.walletFactory().fromAddress({
@@ -46,7 +50,6 @@ export const useTransactionRecipients = ({
 					coin: transaction.wallet().network().coin(),
 					network: transaction.wallet().network().id(),
 				});
-
 				await wallet.synchroniser().identity();
 				await wallet.synchroniser().coin();
 			}
