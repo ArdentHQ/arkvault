@@ -36,7 +36,7 @@ export const SendValidatorResignation = () => {
 	const { formState, getValues, register, watch } = form;
 	const { isValid, isSubmitting } = formState;
 
-	const { senderAddress } = watch();
+	const { senderAddress, gasLimit, gasPrice } = watch();
 	const { common } = useValidation();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
@@ -52,12 +52,12 @@ export const SendValidatorResignation = () => {
 	const [network] = useNetworks({ profile: activeProfile });
 
 	const activeWallet = useMemo(() => {
-		if (activeWalletFromUrl) {
-			return activeWalletFromUrl;
-		}
-
 		if (senderAddress) {
 			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+		}
+
+		if (activeWalletFromUrl) {
+			return activeWalletFromUrl;
 		}
 	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
 
@@ -68,6 +68,8 @@ export const SendValidatorResignation = () => {
 
 		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
 		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit["delegateResignation"], activeWallet?.network()));
+
+		register("senderAddress", { required: true });
 
 		register("inputFeeSettings");
 
@@ -120,8 +122,8 @@ export const SendValidatorResignation = () => {
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({
-				// @TODO: Remove hardcoded fee once fees are implemented for evm.
-				fee: 5,
+				gasPrice,
+				gasLimit,
 				signatory,
 			});
 

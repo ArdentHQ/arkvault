@@ -89,7 +89,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 								{t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}
 							</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-								{senderWallet.validatorPublicKey()}
+								{senderWallet && senderWallet.validatorPublicKey()}
 							</div>
 						</div>
 					</div>
@@ -100,7 +100,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 					<FeeField
 						type="delegateResignation"
 						data={undefined}
-						network={senderWallet.network()}
+						network={network}
 						profile={profile}
 					/>
 				</FormField>

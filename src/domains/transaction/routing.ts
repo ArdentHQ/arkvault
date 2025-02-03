@@ -25,6 +25,11 @@ export const TransactionRoutes: RouteItem[] = [
 		path: ProfilePaths.SendValidatorResignation,
 	},
 	{
+		component: SendValidatorResignation,
+		exact: true,
+		path: ProfilePaths.SendValidatorResignationProfile,
+	},
+	{
 		component: SendTransfer,
 		exact: true,
 		path: ProfilePaths.SendTransferWallet,
