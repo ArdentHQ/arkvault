@@ -56,9 +56,9 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 						wallet={
 							senderWallet
 								? {
-									address: senderWallet.address(),
-									network: senderWallet.network(),
-								}
+										address: senderWallet.address(),
+										network: senderWallet.network(),
+									}
 								: undefined
 						}
 						wallets={profile.wallets().values()}
@@ -96,12 +96,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 
 				<FormField name="fee">
 					<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
-					<FeeField
-						type="delegateResignation"
-						data={undefined}
-						network={network}
-						profile={profile}
-					/>
+					<FeeField type="delegateResignation" data={undefined} network={network} profile={profile} />
 				</FormField>
 			</div>
 		</section>
