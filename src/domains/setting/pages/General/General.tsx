@@ -93,6 +93,7 @@ export const GeneralSettings: React.FC = () => {
 	useEffect(() => {
 		register("avatar");
 		register("viewingMode");
+		register("useNetworkWalletNames");
 	}, [register]);
 
 	const formattedName = name.trim();
