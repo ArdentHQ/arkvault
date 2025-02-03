@@ -20,7 +20,6 @@ const defaultServerStatus = () => {
 
 	const allNetworks = [...Object.entries(ARK.manifest.networks), ...Object.entries(Mainsail.manifest.networks)];
 
-
 	for (const [network, networkConfiguration] of allNetworks) {
 		const fullHost = networkConfiguration.hosts.find((host) => host.type === "full");
 		status[network] = { [fullHost!.host]: true };
