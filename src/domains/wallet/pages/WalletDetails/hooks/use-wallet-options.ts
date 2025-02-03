@@ -68,11 +68,11 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	// 	return registrationOptions;
 	// }
 
-	const showValidatorActions = wallets.some((w) => w.balance() > 0 && !isMultiSignature(w) && isRestoredAndSynced(w));
+	const walletsWithValidatorActions= wallets.filter((w) => w.balance() > 0 && !isMultiSignature(w) && isRestoredAndSynced(w));
 
-	if (showValidatorActions) {
+	if (walletsWithValidatorActions.length > 0) {
 		if (
-			wallets.some(
+			walletsWithValidatorActions.some(
 				(w) =>
 					w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
 					!w.isValidator() &&
@@ -86,7 +86,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 		}
 
 		if (
-			wallets.some(
+			walletsWithValidatorActions.some(
 				(w) =>
 					w.network().allows(Enums.FeatureFlag.TransactionValidatorResignation) &&
 					w.isValidator() &&

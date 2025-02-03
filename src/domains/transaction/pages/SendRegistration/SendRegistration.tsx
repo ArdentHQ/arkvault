@@ -1,6 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
 
@@ -11,7 +11,14 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWallet, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import {
+	useActiveProfile,
+	useActiveWallet,
+	useActiveWalletWhenNeeded,
+	useLedgerModelStatus,
+	useNetworks,
+	useValidation,
+} from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
@@ -37,7 +44,6 @@ export const SendRegistration = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
@@ -53,15 +59,29 @@ export const SendRegistration = () => {
 	const { formState, register, setValue, watch, getValues } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const { fee, fees, isLoading } = watch();
+	const { fee, fees, isLoading, senderAddress } = watch();
 
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
+	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
+
+	const [network] = useNetworks({ profile: activeProfile })
+
+	const activeWallet = useMemo(() => {
+		if (activeWalletFromUrl) {
+			return activeWalletFromUrl;
+		}
+
+		if (senderAddress) {
+			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+		}
+	}, [activeProfile, activeWalletFromUrl, network, senderAddress])
+
 	useEffect(() => {
 		register("fees");
-		register("fee", common.fee(activeWallet.balance(), activeWallet.network(), fees));
+		register("fee", common.fee(activeWallet?.balance() ?? 0, activeWallet?.network(), fees));
 		register("inputFeeSettings");
 
 		register("network", { required: true });
@@ -75,6 +95,10 @@ export const SendRegistration = () => {
 		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
+		if (!activeWallet) {
+			return;
+		}
+
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
 
 		const network = env
@@ -239,7 +263,7 @@ export const SendRegistration = () => {
 
 									<TabPanel tabId={authenticationStep}>
 										<AuthenticationStep
-											wallet={activeWallet}
+											wallet={activeWallet!}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
 											ledgerIsAwaitingApp={!isConnected}
 											ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
@@ -248,7 +272,7 @@ export const SendRegistration = () => {
 									</TabPanel>
 
 									<TabPanel tabId={stepCount}>
-										<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
+										<TransactionSuccessful transaction={transaction} senderWallet={activeWallet!} />
 									</TabPanel>
 								</>
 							)}
