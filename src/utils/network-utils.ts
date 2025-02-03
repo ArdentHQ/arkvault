@@ -3,8 +3,34 @@ import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { uniq } from "@ardenthq/sdk-helpers";
-import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+
+export interface NodeConfigurationResponse {
+	constants?: {
+		epoch?: string;
+	} & Record<string, any>;
+	core?: {
+		version?: string;
+	};
+	explorer?: string;
+	nethash: string;
+	ports?: Record<string, number | null>;
+	slip44: number;
+	symbol?: string;
+	token?: string;
+	transactionPool?: {
+		dynamicFees:
+			| {
+					addonBytes?: Record<string, any>;
+					enabled?: boolean;
+					minFeeBroadcast?: number;
+					minFeePool?: number;
+			  }
+			| undefined;
+	} & Record<string, any>;
+	version: number;
+	wif: number;
+}
 
 export const networkName = (network: Networks.NetworkManifest) => `${network.name}`;
 
