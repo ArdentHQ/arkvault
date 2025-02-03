@@ -30,6 +30,7 @@ import { MultiSignatureRegistrationForm } from "@/domains/transaction/components
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -81,7 +82,15 @@ export const SendRegistration = () => {
 
 	useEffect(() => {
 		register("fees");
-		register("fee", common.fee(activeWallet?.balance() ?? 0, activeWallet?.network(), fees));
+
+		const walletBalance = activeWallet?.balance() ?? 0;
+
+		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
+		register(
+			"gasLimit",
+			common.gasLimit(walletBalance, getValues, GasLimit["transfer"], activeWallet?.network()),
+		);
+
 		register("inputFeeSettings");
 
 		register("network", { required: true });
