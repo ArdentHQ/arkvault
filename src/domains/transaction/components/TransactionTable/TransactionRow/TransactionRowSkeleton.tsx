@@ -42,7 +42,10 @@ export const TransactionRowSkeleton = ({ hideSender = false }: { hideSender?: bo
 						<Skeleton height={17} width={senderWidth} />
 					</div>
 					{!hideSender && (
-						<div className="flex flex-row gap-2 md-lg:hidden" data-testid="TransactionRowSkeleton__recipient-mobile">
+						<div
+							className="flex flex-row gap-2 md-lg:hidden"
+							data-testid="TransactionRowSkeleton__recipient-mobile"
+						>
 							<Skeleton height={17} width={37} />
 							<Skeleton height={17} width={recipientWidth} />
 						</div>
@@ -50,16 +53,14 @@ export const TransactionRowSkeleton = ({ hideSender = false }: { hideSender?: bo
 				</div>
 			</TableCell>
 
-			{
-				!hideSender && (
-					<TableCell className="hidden md-lg:table-cell" data-testid="TransactionRowSkeleton__sender-desktop">
-						<div className="flex flex-row gap-2">
-							<Skeleton height={17} width={37} />
-							<Skeleton height={17} width={senderWidth} />
-						</div>
-					</TableCell>
-				)
-			}
+			{!hideSender && (
+				<TableCell className="hidden md-lg:table-cell" data-testid="TransactionRowSkeleton__sender-desktop">
+					<div className="flex flex-row gap-2">
+						<Skeleton height={17} width={37} />
+						<Skeleton height={17} width={senderWidth} />
+					</div>
+				</TableCell>
+			)}
 
 			<TableCell innerClassName="justify-end" className="table-cell sm:hidden lg:table-cell">
 				<div className="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800">
