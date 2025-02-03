@@ -65,7 +65,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					}
 					wallets={profile.wallets().values()}
 					profile={profile}
-					disabled={profile.wallets().count() === 0 || !!activeWalletFromUrl}
+					disabled={profile.wallets().count() === 0}
 					onChange={handleSelectSender}
 				/>
 			</FormField>

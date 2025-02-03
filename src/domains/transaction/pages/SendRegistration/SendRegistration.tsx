@@ -71,12 +71,12 @@ export const SendRegistration = () => {
 	const [network] = useNetworks({ profile: activeProfile });
 
 	const activeWallet = useMemo(() => {
-		if (activeWalletFromUrl) {
-			return activeWalletFromUrl;
-		}
-
 		if (senderAddress) {
 			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+		}
+
+		if (activeWalletFromUrl) {
+			return activeWalletFromUrl;
 		}
 	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
 
