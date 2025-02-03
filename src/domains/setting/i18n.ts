@@ -2,18 +2,6 @@ export const translations = {
 	APPEARANCE: {
 		MENU_ITEM: "Appearance",
 		OPTIONS: {
-			ACCENT_COLOR: {
-				COLORS: {
-					GREEN: "Green",
-					NAVY: "Navy",
-				},
-				DESCRIPTION: "Choose a color for buttons and other wallet features.",
-				TITLE: "Accent Color",
-			},
-			LATEST_TRANSACTIONS: {
-				DESCRIPTION: "Enables latest transactions on Portfolio page.",
-				TITLE: "Portfolio Latest Transactions",
-			},
 			VIEWING_MODE: {
 				DESCRIPTION: "Choose a light or dark viewing mode.",
 				TITLE: "Viewing Mode",
@@ -67,7 +55,23 @@ export const translations = {
 				DESCRIPTION: "Restore Profile settings to the default.",
 				TITLE: "Reset Settings",
 			},
+			SHOW_DEVELOPMENT_NETWORK: {
+				DESCRIPTION: "Display an option to switch to the development network in the navigation menu.",
+				TITLE: "Show Development Network",
+			},
 			TITLE: "Other",
+			VIEWING_MODE: {
+				DESCRIPTION: "Choose a light or dark viewing mode.",
+				TITLE: "Viewing Mode",
+				VIEWING_MODES: {
+					DARK: "Dark",
+					LIGHT: "Light",
+				},
+			},
+			WALLET_NAMING: {
+				DESCRIPTION: "Prioritize showing network provided names over wallet names.",
+				TITLE: "Wallet Naming",
+			},
 		},
 		PERSONAL: {
 			CONFIRM_PASSWORD: "Confirm Password",
@@ -106,65 +110,6 @@ export const translations = {
 		DESCRIPTION:
 			"Disabling this setting will hide your wallets associated with development networks. Are you sure you want to continue?",
 		TITLE: "Development Network",
-	},
-
-	NETWORKS: {
-		ADD_NEW_NETWORK: {
-			DESCRIPTION: "Add a custom network by providing a valid seed address.",
-			TITLE: "Add Network",
-		},
-		CUSTOM_NETWORKS: {
-			ADD_NETWORK: "Add Network",
-		},
-		DELETE_MODAL: {
-			DESCRIPTION:
-				"This action cannot be undone and will result in  removal of all wallets and contact addresses that  were added for this network. To confirm this action, enter the network name below.",
-			TITLE: "Remove Network",
-		},
-		DETAILS_MODAL: {
-			DESCRIPTION: "Overview of the data obtained from the network.",
-			TITLE: "Network Information",
-		},
-		FORM: {
-			DELETE_CONFIRM_PLACEHOLDER: "Enter the network name to confirm removal",
-			EXPLORER: "Explorer",
-			FETCHING_ERROR: "Cannot obtain network data. Check Seed Server.",
-			INVALID_KNOWN_WALLETS_URL: "Invalid Known Wallets URL",
-			INVALID_MARKET_TICKER_FORMAT: "Incorrect market ticker format",
-			INVALID_SEED_SERVER_FORMAT: "Invalid seed server format",
-			INVALID_SLIP_FORMAT: "Invalid SLIP (BIP44) format",
-			KNOWN_WALLETS: "Known Wallets URL",
-			MARKET_TICKER: "Market Ticker",
-			NETWORK_HASH_MISMATCH:
-				"Seed server you are trying to add is not part of this network. Add new custom network or provide correct seed server for current network.",
-			NETWORK_NAME: "Network Name",
-			SEED_SERVER: "Seed Server",
-			SEED_SERVER_PLACEHOLDER: "https://ip:port or https://domain",
-			SLIP: "SLIP (BIP44)",
-		},
-		MENU_ITEM: "Networks",
-		MESSAGES: {
-			AT_LEAST_ONE_DEFAULT_NETWORK: "At least 1 default network required.",
-			CUSTOM_NETWORK_ADDED: "Custom network <strong>{{- networkName}}</strong> was successfully added.",
-			CUSTOM_NETWORK_DELETED:
-				"<strong>{{- networkName}}</strong> has been successfully deleted from your profile.",
-		},
-		OPTIONS: {
-			CUSTOM_NETWORKS: {
-				DESCRIPTION: "Add and manage Custom Networks for your Profile.",
-				TITLE: "Custom Networks",
-			},
-			DEFAULT_NETWORKS: {
-				DESCRIPTION: "Manage the default networks that are active for your Profile",
-				TITLE: "Default Networks",
-			},
-		},
-		SUBTITLE: "Customize and manage networks. Enabled and selected networks will be visible in your Profile.",
-		TITLE: "Manage Networks",
-		UPDATE_NETWORK: {
-			DESCRIPTION: "Modify settings of the selected network.",
-			TITLE: "Edit Network",
-		},
 	},
 
 	PASSWORD: {

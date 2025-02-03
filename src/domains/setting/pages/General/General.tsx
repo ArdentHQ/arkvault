@@ -14,20 +14,23 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
 import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
-import { SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { SettingsGroup, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
+import { useZendesk } from "@/app/contexts/Zendesk";
+import { Toggle } from "@/app/components/Toggle";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
 
 export const GeneralSettings: React.FC = () => {
 	const profile = useActiveProfile();
+	const { setProfileTheme } = useTheme();
 
 	const isProfileRestored = profile.status().isRestored();
 
@@ -35,6 +38,8 @@ export const GeneralSettings: React.FC = () => {
 
 	const { persist } = useEnvironmentContext();
 	const { syncExchangeRates } = useProfileJobs(profile);
+
+	const { hideSupportChat, showSupportChat, isSupportChatOpen } = useZendesk();
 
 	const { resetProfileTheme } = useTheme();
 
@@ -54,7 +59,10 @@ export const GeneralSettings: React.FC = () => {
 			locale: settings.get(Contracts.ProfileSetting.Locale),
 			marketProvider: settings.get(Contracts.ProfileSetting.MarketProvider),
 			name,
+			showDevelopmentNetwork: settings.get(Contracts.ProfileSetting.UseTestNetworks),
 			timeFormat: settings.get(Contracts.ProfileSetting.TimeFormat),
+			useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
+			viewingMode: profile.appearance().get("theme") as ViewingModeType,
 		};
 	};
 
@@ -67,7 +75,15 @@ export const GeneralSettings: React.FC = () => {
 	const { register, watch, formState, setValue, reset } = form;
 	const { isValid, isSubmitting, isDirty, dirtyFields } = formState;
 
-	const { name, avatar, marketProvider, exchangeCurrency } = watch();
+	const {
+		name,
+		avatar,
+		marketProvider,
+		exchangeCurrency,
+		viewingMode,
+		useNetworkWalletNames,
+		showDevelopmentNetwork,
+	} = watch();
 
 	const currencyOptions = useCurrencyOptions(marketProvider);
 
@@ -84,6 +100,9 @@ export const GeneralSettings: React.FC = () => {
 
 	useEffect(() => {
 		register("avatar");
+		register("viewingMode");
+		register("useNetworkWalletNames");
+		register("showDevelopmentNetwork");
 	}, [register]);
 
 	const formattedName = name.trim();
@@ -153,6 +172,59 @@ export const GeneralSettings: React.FC = () => {
 
 	const otherItems = [
 		{
+			itemValueClass: "ml-5",
+			label: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.TITLE")}`,
+			labelDescription: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.DESCRIPTION")}`,
+			value: (
+				<ViewingMode
+					viewingMode={viewingMode}
+					onChange={(value) => {
+						setValue("viewingMode", value, {
+							shouldDirty: true,
+							shouldValidate: true,
+						});
+					}}
+				/>
+			),
+			wrapperClass: "sm:pb-6",
+		},
+		{
+			label: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.TITLE"),
+			labelAddon: (
+				<Toggle
+					name="useNetworkWalletNames"
+					defaultChecked={useNetworkWalletNames}
+					data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+						setValue("useNetworkWalletNames", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						})
+					}
+				/>
+			),
+			labelDescription: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.DESCRIPTION"),
+			wrapperClass: "pt-6 sm:pb-6",
+		},
+		{
+			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
+			labelAddon: (
+				<Toggle
+					name="showDevelopmentNetwork"
+					defaultChecked={showDevelopmentNetwork}
+					data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+						setValue("showDevelopmentNetwork", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						})
+					}
+				/>
+			),
+			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
+			wrapperClass: "pt-6 sm:pb-6",
+		},
+		{
 			itemValueClass: "w-full sm:w-auto",
 			label: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.TITLE"),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.DESCRIPTION"),
@@ -163,7 +235,7 @@ export const GeneralSettings: React.FC = () => {
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
 				</Button>
 			),
-			wrapperClass: "sm:pb-6",
+			wrapperClass: "pt-6 sm:pb-6",
 		},
 	];
 
@@ -176,6 +248,9 @@ export const GeneralSettings: React.FC = () => {
 		marketProvider,
 		name,
 		timeFormat,
+		viewingMode,
+		useNetworkWalletNames,
+		showDevelopmentNetwork,
 	}: GeneralSettingsState) => {
 		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, automaticSignOutPeriod);
 		profile.settings().set(Contracts.ProfileSetting.Bip39Locale, bip39Locale);
@@ -185,10 +260,22 @@ export const GeneralSettings: React.FC = () => {
 		profile.settings().set(Contracts.ProfileSetting.Name, name);
 		profile.settings().set(Contracts.ProfileSetting.TimeFormat, timeFormat);
 		profile.settings().set(Contracts.ProfileSetting.Avatar, avatar);
+		profile.settings().set(Contracts.ProfileSetting.Theme, viewingMode);
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, useNetworkWalletNames);
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, showDevelopmentNetwork);
+
+		const isChatOpen = isSupportChatOpen();
+
+		hideSupportChat();
+		setProfileTheme(profile);
 
 		await syncExchangeRates();
 
 		await persist();
+
+		if (isChatOpen) {
+			showSupportChat(profile);
+		}
 
 		reset(getDefaultValues());
 

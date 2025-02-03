@@ -35,10 +35,8 @@ export enum ProfilePaths {
 	Settings = "/profiles/:profileId/settings",
 	PasswordSettings = "/profiles/:profileId/settings/password",
 	ExportSettings = "/profiles/:profileId/settings/export",
-	AppearanceSettings = "/profiles/:profileId/settings/appearance",
 	GeneralSettings = "/profiles/:profileId/settings/general",
 	ServerManagmentSettings = "/profiles/:profileId/settings/servers",
-	NetworkManagmentSettings = "/profiles/:profileId/settings/networks",
 	// Votes
 	Votes = "/profiles/:profileId/votes",
 	VotesWallet = "/profiles/:profileId/wallets/:walletId/votes",
