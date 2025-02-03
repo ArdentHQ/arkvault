@@ -75,7 +75,15 @@ export const GeneralSettings: React.FC = () => {
 	const { register, watch, formState, setValue, reset } = form;
 	const { isValid, isSubmitting, isDirty, dirtyFields } = formState;
 
-	const { name, avatar, marketProvider, exchangeCurrency, viewingMode, useNetworkWalletNames, showDevelopmentNetwork } = watch();
+	const {
+		name,
+		avatar,
+		marketProvider,
+		exchangeCurrency,
+		viewingMode,
+		useNetworkWalletNames,
+		showDevelopmentNetwork,
+	} = watch();
 
 	const currencyOptions = useCurrencyOptions(marketProvider);
 
@@ -176,49 +184,56 @@ export const GeneralSettings: React.FC = () => {
 			itemValueClass: "ml-5",
 			label: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.TITLE")}`,
 			labelDescription: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.DESCRIPTION")}`,
-			value: <ViewingMode viewingMode={viewingMode} onChange={(value) => {
-				setValue("viewingMode", value, {
-					shouldDirty: true,
-					shouldValidate: true
-				})
-			}} />,
+			value: (
+				<ViewingMode
+					viewingMode={viewingMode}
+					onChange={(value) => {
+						setValue("viewingMode", value, {
+							shouldDirty: true,
+							shouldValidate: true,
+						});
+					}}
+				/>
+			),
 			wrapperClass: "py-6",
 		},
 		{
 			label: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.TITLE"),
-			labelAddon: <Toggle
-				name="useNetworkWalletNames"
-				defaultChecked={useNetworkWalletNames}
-				data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
-				onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-					setValue("useNetworkWalletNames", event.target.checked, {
-						shouldDirty: true,
-						shouldValidate: true
-					})
-				}
-			/>,
+			labelAddon: (
+				<Toggle
+					name="useNetworkWalletNames"
+					defaultChecked={useNetworkWalletNames}
+					data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+						setValue("useNetworkWalletNames", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						})
+					}
+				/>
+			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.DESCRIPTION"),
 			wrapperClass: "pt-6 sm:pb-6",
 		},
 		{
 			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
-			labelAddon: <Toggle
-				name="showDevelopmentNetwork"
-				defaultChecked={showDevelopmentNetwork}
-				data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
-				onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-					setValue("showDevelopmentNetwork", event.target.checked, {
-						shouldDirty: true,
-						shouldValidate: true
-					})
-				}
-			/>,
+			labelAddon: (
+				<Toggle
+					name="showDevelopmentNetwork"
+					defaultChecked={showDevelopmentNetwork}
+					data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+						setValue("showDevelopmentNetwork", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						})
+					}
+				/>
+			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
 			wrapperClass: "pt-6 sm:pb-6",
 		},
 	];
-
-
 
 	const handleSubmit = async ({
 		automaticSignOutPeriod,
@@ -264,7 +279,7 @@ export const GeneralSettings: React.FC = () => {
 		window.scrollTo({ behavior: "smooth", top: 0 });
 	};
 
-	console.log({ isDirty, isValid })
+	console.log({ isDirty, isValid });
 	const isSaveButtonDisabled = isSubmitting || !isProfileRestored || (isDirty ? !isValid : true);
 
 	return (

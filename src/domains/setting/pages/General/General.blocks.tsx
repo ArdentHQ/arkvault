@@ -12,7 +12,6 @@ interface ViewingModeItem {
 	value: string;
 }
 
-
 export const SettingsGroup = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
 	<div
 		{...props}
@@ -23,7 +22,13 @@ export const SettingsGroup = ({ ...props }: React.HTMLProps<HTMLDivElement>) => 
 	/>
 );
 
-export const ViewingMode = ({ viewingMode, onChange }: { viewingMode: ViewingModeType, onChange?: (mode: ViewingModeType) => void }) => {
+export const ViewingMode = ({
+	viewingMode,
+	onChange,
+}: {
+	viewingMode: ViewingModeType;
+	onChange?: (mode: ViewingModeType) => void;
+}) => {
 	const { t } = useTranslation();
 
 	const viewingModes: ViewingModeItem[] = [
@@ -54,8 +59,7 @@ export const ViewingMode = ({ viewingMode, onChange }: { viewingMode: ViewingMod
 						<span className="ml-2 hidden sm:inline">{name}</span>
 					</div>
 				</ButtonGroupOption>
-			))
-			}
-		</ButtonGroup >
+			))}
+		</ButtonGroup>
 	);
 };
