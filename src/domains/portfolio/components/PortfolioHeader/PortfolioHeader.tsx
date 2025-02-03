@@ -138,7 +138,7 @@ export const PortfolioHeader = ({
 							{selectedWallets.length > 1 && (
 								<div className="flex flex-row items-center gap-1.5">
 									<p className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5">
-										{t("COMMON.ARK_BALANCE")}
+										{wallet.currency()} {t("COMMON.BALANCE")}
 									</p>
 									<div>
 										<Amount
