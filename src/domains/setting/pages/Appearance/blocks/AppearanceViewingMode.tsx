@@ -1,10 +1,9 @@
 import React from "react";
-import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { Icon } from "@/app/components/Icon";
-import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
+import { ViewingModeType } from "@/app/hooks";
 
 interface ViewingModeItem {
 	icon: string;
@@ -12,12 +11,8 @@ interface ViewingModeItem {
 	value: string;
 }
 
-export const AppearanceViewingMode: React.FC = () => {
+export const AppearanceViewingMode = ({ viewingMode, onChange }: { viewingMode: ViewingModeType, onChange?: (mode: ViewingModeType) => void }) => {
 	const { t } = useTranslation();
-
-	const form = useFormContext<AppearanceSettingsState>();
-
-	const viewingMode = form.watch("viewingMode");
 
 	const viewingModes: ViewingModeItem[] = [
 		{
@@ -38,12 +33,7 @@ export const AppearanceViewingMode: React.FC = () => {
 				<ButtonGroupOption
 					key={value}
 					isSelected={() => viewingMode === value}
-					setSelectedValue={() =>
-						form.setValue("viewingMode", value, {
-							shouldDirty: true,
-							shouldValidate: true,
-						})
-					}
+					setSelectedValue={() => onChange?.(value as ViewingModeType)}
 					value={value}
 					variant="modern"
 				>
@@ -52,7 +42,8 @@ export const AppearanceViewingMode: React.FC = () => {
 						<span className="ml-2 hidden sm:inline">{name}</span>
 					</div>
 				</ButtonGroupOption>
-			))}
-		</ButtonGroup>
+			))
+			}
+		</ButtonGroup >
 	);
 };

@@ -14,7 +14,7 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
@@ -22,12 +22,18 @@ import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { useAppearanceItems } from "../Appearance/Appearance.helpers";
+import { AppearanceViewingMode } from "../Appearance/blocks/AppearanceViewingMode";
+import { AppearanceToggle } from "../Appearance/blocks/AppearanceToggle";
+import { useZendesk } from "@/app/contexts/Zendesk";
+import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
 
 export const GeneralSettings: React.FC = () => {
 	const profile = useActiveProfile();
+	const { setProfileTheme } = useTheme();
 
 	const isProfileRestored = profile.status().isRestored();
 
@@ -35,6 +41,8 @@ export const GeneralSettings: React.FC = () => {
 
 	const { persist } = useEnvironmentContext();
 	const { syncExchangeRates } = useProfileJobs(profile);
+
+	const { hideSupportChat, showSupportChat, isSupportChatOpen } = useZendesk();
 
 	const { resetProfileTheme } = useTheme();
 
@@ -55,6 +63,8 @@ export const GeneralSettings: React.FC = () => {
 			marketProvider: settings.get(Contracts.ProfileSetting.MarketProvider),
 			name,
 			timeFormat: settings.get(Contracts.ProfileSetting.TimeFormat),
+			useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
+			viewingMode: profile.appearance().get("theme") as ViewingModeType,
 		};
 	};
 
@@ -67,7 +77,7 @@ export const GeneralSettings: React.FC = () => {
 	const { register, watch, formState, setValue, reset } = form;
 	const { isValid, isSubmitting, isDirty, dirtyFields } = formState;
 
-	const { name, avatar, marketProvider, exchangeCurrency } = watch();
+	const { name, avatar, marketProvider, exchangeCurrency, viewingMode } = watch();
 
 	const currencyOptions = useCurrencyOptions(marketProvider);
 
@@ -84,6 +94,7 @@ export const GeneralSettings: React.FC = () => {
 
 	useEffect(() => {
 		register("avatar");
+		register("viewingMode");
 	}, [register]);
 
 	const formattedName = name.trim();
@@ -161,7 +172,27 @@ export const GeneralSettings: React.FC = () => {
 			),
 			wrapperClass: "sm:pb-6",
 		},
+		{
+			itemValueClass: "ml-5",
+			label: `${t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")}`,
+			labelDescription: `${t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.DESCRIPTION")}`,
+			value: <AppearanceViewingMode viewingMode={viewingMode} onChange={(value) => {
+				setValue("viewingMode", value, {
+					shouldDirty: true,
+					shouldValidate: true
+				})
+			}} />,
+			wrapperClass: "py-6",
+		},
+		{
+			label: t("SETTINGS.APPEARANCE.OPTIONS.WALLET_NAMING.TITLE"),
+			labelAddon: <AppearanceToggle name="useNetworkWalletNames" />,
+			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.WALLET_NAMING.DESCRIPTION"),
+			wrapperClass: "pt-6 sm:pb-6",
+		},
 	];
+
+
 
 	const handleSubmit = async ({
 		automaticSignOutPeriod,
@@ -172,6 +203,7 @@ export const GeneralSettings: React.FC = () => {
 		marketProvider,
 		name,
 		timeFormat,
+		viewingMode
 	}: GeneralSettingsState) => {
 		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, automaticSignOutPeriod);
 		profile.settings().set(Contracts.ProfileSetting.Bip39Locale, bip39Locale);
@@ -181,10 +213,20 @@ export const GeneralSettings: React.FC = () => {
 		profile.settings().set(Contracts.ProfileSetting.Name, name);
 		profile.settings().set(Contracts.ProfileSetting.TimeFormat, timeFormat);
 		profile.settings().set(Contracts.ProfileSetting.Avatar, avatar);
+		profile.settings().set(Contracts.ProfileSetting.Theme, viewingMode);
+
+		const isChatOpen = isSupportChatOpen();
+
+		hideSupportChat();
+		setProfileTheme(profile);
 
 		await syncExchangeRates();
 
 		await persist();
+
+		if (isChatOpen) {
+			showSupportChat(profile);
+		}
 
 		reset(getDefaultValues());
 
@@ -192,6 +234,7 @@ export const GeneralSettings: React.FC = () => {
 		window.scrollTo({ behavior: "smooth", top: 0 });
 	};
 
+	console.log({ isDirty, isValid })
 	const isSaveButtonDisabled = isSubmitting || !isProfileRestored || (isDirty ? !isValid : true);
 
 	return (

@@ -20,12 +20,6 @@ export const useAppearanceItems = (): ListDividedItemProperties[] => {
 			wrapperClass: "py-6",
 		},
 		{
-			label: t("SETTINGS.APPEARANCE.OPTIONS.LATEST_TRANSACTIONS.TITLE"),
-			labelAddon: <AppearanceToggle name="dashboardTransactionHistory" />,
-			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.LATEST_TRANSACTIONS.DESCRIPTION"),
-			wrapperClass: "py-6",
-		},
-		{
 			label: t("SETTINGS.APPEARANCE.OPTIONS.WALLET_NAMING.TITLE"),
 			labelAddon: <AppearanceToggle name="useNetworkWalletNames" />,
 			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.WALLET_NAMING.DESCRIPTION"),
