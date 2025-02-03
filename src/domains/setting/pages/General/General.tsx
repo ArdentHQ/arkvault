@@ -135,7 +135,7 @@ export const GeneralSettings: React.FC = () => {
 							value: `${count}`,
 						}))}
 						onChange={(signOutPeriod: SettingsOption | null) => {
-							if(signOutPeriod) {
+							if (signOutPeriod) {
 								setValue("automaticSignOutPeriod", signOutPeriod.value, {
 									shouldDirty: true,
 									shouldValidate: true,
@@ -259,11 +259,11 @@ export const GeneralSettings: React.FC = () => {
 										}).toString(),
 									})}
 									onChange={(bip39Locale: SettingsOption | null) => {
-										if(bip39Locale) {
+										if (bip39Locale) {
 											setValue("bip39Locale", bip39Locale.value, {
 												shouldDirty: true,
 												shouldValidate: true,
-											})
+											});
 										} else {
 											setValue("bip39Locale", "", { shouldDirty: true, shouldValidate: true });
 										}
@@ -288,13 +288,16 @@ export const GeneralSettings: React.FC = () => {
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
 									onChange={(exchangeCurrency: SettingsOption) => {
-										if(exchangeCurrency) {
+										if (exchangeCurrency) {
 											setValue("exchangeCurrency", exchangeCurrency.value, {
 												shouldDirty: true,
 												shouldValidate: true,
-											})
+											});
 										} else {
-											setValue("exchangeCurrency", "", { shouldDirty: true, shouldValidate: true });
+											setValue("exchangeCurrency", "", {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
 										}
 									}}
 								/>
@@ -317,8 +320,11 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.languages}
 									defaultValue={getDefaultValues().locale}
 									onChange={(locale: SettingsOption) => {
-										if(locale) {
-											setValue("locale", locale.value, { shouldDirty: true, shouldValidate: true })
+										if (locale) {
+											setValue("locale", locale.value, {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
 										} else {
 											setValue("locale", "", { shouldDirty: true, shouldValidate: true });
 										}
@@ -364,7 +370,6 @@ export const GeneralSettings: React.FC = () => {
 										});
 									}}
 								/>
-
 							</FormField>
 
 							<FormField className="mt-5" name="timeFormat">
@@ -382,11 +387,11 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.timeFormats}
 									defaultValue={getDefaultValues().timeFormat}
 									onChange={(timeFormat: SettingsOption) => {
-										if(timeFormat) {
+										if (timeFormat) {
 											setValue("timeFormat", timeFormat.value, {
 												shouldDirty: true,
 												shouldValidate: true,
-											})
+											});
 										} else {
 											setValue("timeFormat", "", { shouldDirty: true, shouldValidate: true });
 										}
