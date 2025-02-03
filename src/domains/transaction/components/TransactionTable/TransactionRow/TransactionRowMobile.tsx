@@ -82,7 +82,7 @@ export const TransactionRowMobile = memo(
 							</MobileSection>
 
 							<MobileSection
-								title={`${hideSender ? t("COMMON.AMOUNT") : t("COMMON.VALUE")} (${transaction.wallet().currency()})`}
+								title={`${hideSender ? t("COMMON.VALUE") : t("COMMON.AMOUNT")} (${transaction.wallet().currency()})`}
 								className="w-full"
 							>
 								<TransactionTotalLabel transaction={transaction} />

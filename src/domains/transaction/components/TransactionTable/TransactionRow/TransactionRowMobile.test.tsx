@@ -153,7 +153,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeInTheDocument();
 	});
 
-	it("should render amount when hideSender is true", () => {
+	it("should render value when hideSender is true", () => {
 		render(
 			<table>
 				<tbody>
@@ -162,10 +162,10 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			</table>,
 		);
 
-		expect(screen.getByText("Amount (DARK)")).toBeInTheDocument();
+		expect(screen.getByText("Value (DARK)")).toBeInTheDocument();
 	});
 
-	it("should render value when hideSender is false", () => {
+	it("should render amount when hideSender is false", () => {
 		render(
 			<table>
 				<tbody>
@@ -174,6 +174,6 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			</table>,
 		);
 
-		expect(screen.getByText("Value (DARK)")).toBeInTheDocument();
+		expect(screen.getByText("Amount (DARK)")).toBeInTheDocument();
 	});
 });
