@@ -11,6 +11,7 @@ let profile: Contracts.IProfile;
 describe("TransactionRow", () => {
 	const fixture = {
 		...TransactionFixture,
+		isSuccess: () => true,
 		wallet: () => ({
 			...TransactionFixture.wallet(),
 			currency: () => "DARK",
@@ -42,11 +43,11 @@ describe("TransactionRow", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(screen.getAllByRole("cell")).toHaveLength(6);
+		expect(screen.getAllByRole("cell")).toHaveLength(7);
 		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(1);
+		expect(screen.getAllByTestId("Address__address")).toHaveLength(3);
 		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 	});
 
@@ -68,9 +69,8 @@ describe("TransactionRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getByTestId("TableRow__mobile")).toBeInTheDocument();
 		expect(screen.getAllByRole("cell")).toHaveLength(1);
-		expect(screen.getByRole("link", { name: "ea63b…5c79b" })).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(1);
+		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
 		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
 	});
 

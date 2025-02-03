@@ -36,8 +36,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 				headerClassName: "no-border",
 			},
 			{
-				Header: `${t("COMMON.VALUE")} ${coinLabel}`,
-
+				Header: `${t("COMMON.AMOUNT")} ${coinLabel}`,
 				accessor: (transaction) => transaction.total?.(),
 				className: "justify-end",
 				headerClassName: "no-border",

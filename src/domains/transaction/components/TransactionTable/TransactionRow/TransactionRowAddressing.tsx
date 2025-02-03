@@ -11,7 +11,7 @@ import { Link } from "@/app/components/Link";
 import { isContractDeployment, isContractTransaction } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
-export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
+export const TransactionRowLabel = ({ direction, style }: { direction: Direction; style?: Direction }) => {
 	const { t } = useTranslation();
 
 	const color: Record<typeof direction, ColorType> = {
@@ -28,95 +28,14 @@ export const TransactionRowLabel = ({ direction }: { direction: Direction }) => 
 
 	return (
 		<Label
-			color={color[direction]}
+			color={color[style || direction]}
 			size="xs"
 			noBorder
-			className="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+			className="!flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
 			data-testid="TransactionRowAddressing__label"
 		>
 			{title[direction]}
 		</Label>
-	);
-};
-
-export const TransactionRowAddressing = ({
-	transaction,
-	profile,
-}: {
-	transaction: DTO.RawTransactionData;
-	profile: Contracts.IProfile;
-}): JSX.Element => {
-	const isMusigTransfer = [
-		!!transaction.usesMultiSignature?.(),
-		!transaction.isConfirmed(),
-		!transaction.isMultiSignatureRegistration(),
-	].every(Boolean);
-
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
-
-	let direction: Direction = isNegative ? "sent" : "received";
-
-	const isReturn = transaction.isReturn() || (isMusigTransfer && transaction.sender() === transaction.recipient());
-
-	if (isReturn) {
-		direction = "return";
-	}
-
-	const { t } = useTranslation();
-	const { getWalletAlias } = useWalletAlias();
-	const { alias } = useMemo(
-		() =>
-			getWalletAlias({
-				address: isNegative ? transaction.recipient() : transaction.sender(),
-				network: transaction.wallet().network(),
-				profile,
-				username: transaction.wallet().username(),
-			}),
-		[profile, getWalletAlias, transaction],
-	);
-	const isContract = isContractTransaction(transaction);
-
-	if (transaction.isMultiPayment()) {
-		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
-				<TransactionRowLabel direction={direction} />
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-					{(direction === "return" || direction === "sent") && (
-						<>
-							{t("COMMON.MULTIPLE")}{" "}
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-								({transaction.recipients().length})
-							</span>
-						</>
-					)}
-
-					{direction === "received" && <FormattedAddress address={transaction.sender()} alias={alias} />}
-				</span>
-			</div>
-		);
-	}
-
-	if (isContract || isContractDeployment(transaction)) {
-		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
-				<TransactionRowLabel direction={direction} />
-				<Link
-					to={transaction.wallet().coin().link().wallet(transaction.recipient())}
-					isExternal
-					showExternalIcon={false}
-					className="text-sm font-semibold"
-				>
-					{t("COMMON.CONTRACT")}
-				</Link>
-			</div>
-		);
-	}
-
-	return (
-		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
-			<TransactionRowLabel direction={direction} />
-			<FormattedAddress address={isNegative ? transaction.recipient() : transaction.sender()} alias={alias} />
-		</div>
 	);
 };
 
@@ -140,3 +59,170 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 		/>
 	</div>
 );
+
+const ContractAddressing = ({
+	transaction,
+	direction,
+	t,
+}: {
+	transaction: DTO.RawTransactionData;
+	direction: Direction;
+	t: any;
+}) => (
+	<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
+		<TransactionRowLabel direction={direction} />
+		<Link
+			to={transaction.wallet().coin().link().wallet(transaction.recipient())}
+			isExternal
+			showExternalIcon={false}
+			className="text-sm font-semibold"
+		>
+			{t("COMMON.CONTRACT")}
+		</Link>
+	</div>
+);
+
+const MultiPaymentAddressing = ({
+	direction,
+	transaction,
+	isAdvanced,
+	variant,
+	alias,
+}: {
+	direction: Direction;
+	transaction: DTO.RawTransactionData;
+	isAdvanced?: boolean;
+	variant?: string;
+	alias?: string;
+}) => {
+	const { t } = useTranslation();
+
+	return (
+		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
+			<TransactionRowLabel
+				direction={direction}
+				style={isAdvanced && variant === "recipient" ? "return" : direction}
+			/>
+			<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+				{(direction === "return" || direction === "sent") && (
+					<>
+						{t("COMMON.MULTIPLE")}{" "}
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+							({transaction.recipients().length})
+						</span>
+					</>
+				)}
+				{direction === "received" && <FormattedAddress address={transaction.sender()} alias={alias} />}
+			</span>
+		</div>
+	);
+};
+
+export const TransactionRowAddressing = ({
+	transaction,
+	profile,
+	variant = "sender",
+	isAdvanced,
+}: {
+	transaction: DTO.RawTransactionData;
+	profile: Contracts.IProfile;
+	variant?: "sender" | "recipient";
+	isAdvanced?: boolean;
+}): JSX.Element => {
+	const { t } = useTranslation();
+	const { getWalletAlias } = useWalletAlias();
+
+	const isMusigTransfer = [
+		!!transaction.usesMultiSignature?.(),
+		!transaction.isConfirmed(),
+		!transaction.isMultiSignatureRegistration(),
+	].every(Boolean);
+
+	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+	const isContract = isContractTransaction(transaction);
+
+	let direction: Direction = isNegative ? "sent" : "received";
+	if (transaction.isReturn() || (isMusigTransfer && transaction.sender() === transaction.recipient())) {
+		direction = "return";
+	}
+
+	const { alias } = useMemo(
+		() =>
+			getWalletAlias({
+				address: isNegative ? transaction.recipient() : transaction.sender(),
+				network: transaction.wallet().network(),
+				profile,
+				username: transaction.wallet().username(),
+			}),
+		[profile, getWalletAlias, transaction],
+	);
+
+	const { alias: senderAlias } = useMemo(
+		() =>
+			isAdvanced && variant === "sender"
+				? getWalletAlias({
+						address: transaction.sender(),
+						network: transaction.wallet().network(),
+						profile,
+					})
+				: { alias: undefined },
+		[profile, getWalletAlias, transaction, isAdvanced, variant],
+	);
+
+	if (isAdvanced && variant === "sender") {
+		return (
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container_advanced_sender">
+				<TransactionRowLabel direction="received" style="return" />
+				<FormattedAddress address={transaction.sender()} alias={senderAlias} />
+			</div>
+		);
+	}
+
+	if (isAdvanced && variant === "recipient" && !transaction.isMultiPayment()) {
+		if (isContract || isContractDeployment(transaction)) {
+			return (
+				<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote_advanced_recipient">
+					<TransactionRowLabel direction="sent" style="return" />
+					<Link
+						to={transaction.wallet().coin().link().wallet(transaction.recipient())}
+						isExternal
+						showExternalIcon={false}
+						className="text-sm font-semibold"
+					>
+						{t("COMMON.CONTRACT")}
+					</Link>
+				</div>
+			);
+		}
+
+		return (
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container_advanced_recipient">
+				<TransactionRowLabel direction="sent" style="return" />
+				<FormattedAddress address={transaction.recipient()} alias={alias} />
+			</div>
+		);
+	}
+
+	if (transaction.isMultiPayment()) {
+		return (
+			<MultiPaymentAddressing
+				direction={direction}
+				transaction={transaction}
+				isAdvanced={isAdvanced}
+				variant={variant}
+				alias={alias}
+			/>
+		);
+	}
+
+	if (isContract || isContractDeployment(transaction)) {
+		return <ContractAddressing transaction={transaction} direction={direction} t={t} />;
+	}
+
+	return (
+		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
+			<TransactionRowLabel direction={direction} />
+			<FormattedAddress address={isNegative ? transaction.recipient() : transaction.sender()} alias={alias} />
+		</div>
+	);
+};
