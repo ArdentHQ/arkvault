@@ -40,11 +40,11 @@ const getBaseUrl = (address: string): string => {
 
 const isPeer = (body?: { data?: string }): boolean => {
 	if (!body?.data) {
-		return false
+		return false;
 	}
 
 	return body.data.toLowerCase().includes("hello world");
-}
+};
 
 const isMusig = (body: object): boolean => {
 	if (typeof body["name"] !== "string") {
