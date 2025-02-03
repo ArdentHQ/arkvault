@@ -153,11 +153,15 @@ export const GeneralSettings: React.FC = () => {
 							label: t("COMMON.DATETIME.MINUTES", { count }),
 							value: `${count}`,
 						}))}
-						onChange={(signOutPeriod: SettingsOption) => {
-							setValue("automaticSignOutPeriod", signOutPeriod.value, {
-								shouldDirty: true,
-								shouldValidate: true,
-							});
+						onChange={(signOutPeriod: SettingsOption | null) => {
+							if (signOutPeriod) {
+								setValue("automaticSignOutPeriod", signOutPeriod.value, {
+									shouldDirty: true,
+									shouldValidate: true,
+								});
+							} else {
+								setValue("automaticSignOutPeriod", "", { shouldDirty: true, shouldValidate: true });
+							}
 						}}
 						defaultValue={`${getDefaultValues().automaticSignOutPeriod}`}
 					/>
@@ -341,12 +345,16 @@ export const GeneralSettings: React.FC = () => {
 											field: t("SETTINGS.GENERAL.PERSONAL.PASSPHRASE_LANGUAGE"),
 										}).toString(),
 									})}
-									onChange={(bip39Locale: SettingsOption) =>
-										setValue("bip39Locale", bip39Locale.value, {
-											shouldDirty: true,
-											shouldValidate: true,
-										})
-									}
+									onChange={(bip39Locale: SettingsOption | null) => {
+										if (bip39Locale) {
+											setValue("bip39Locale", bip39Locale.value, {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
+										} else {
+											setValue("bip39Locale", "", { shouldDirty: true, shouldValidate: true });
+										}
+									}}
 									options={PlatformSdkChoices.passphraseLanguages}
 									defaultValue={getDefaultValues().bip39Locale}
 								/>
@@ -366,12 +374,19 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
-									onChange={(exchangeCurrency: SettingsOption) =>
-										setValue("exchangeCurrency", exchangeCurrency.value, {
-											shouldDirty: true,
-											shouldValidate: true,
-										})
-									}
+									onChange={(exchangeCurrency: SettingsOption) => {
+										if (exchangeCurrency) {
+											setValue("exchangeCurrency", exchangeCurrency.value, {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
+										} else {
+											setValue("exchangeCurrency", "", {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
+										}
+									}}
 								/>
 							</FormField>
 						</div>
@@ -391,9 +406,16 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={PlatformSdkChoices.languages}
 									defaultValue={getDefaultValues().locale}
-									onChange={(locale: SettingsOption) =>
-										setValue("locale", locale.value, { shouldDirty: true, shouldValidate: true })
-									}
+									onChange={(locale: SettingsOption) => {
+										if (locale) {
+											setValue("locale", locale.value, {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
+										} else {
+											setValue("locale", "", { shouldDirty: true, shouldValidate: true });
+										}
+									}}
 								/>
 							</FormField>
 
@@ -411,12 +433,15 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={PlatformSdkChoices.marketProviders}
 									defaultValue={marketProvider}
-									onChange={(marketProvider: SettingsOption) => {
-										if (marketProvider.unsupportedCurrencies?.includes(exchangeCurrency)) {
+									onChange={(selectedMarketProvider: SettingsOption | null) => {
+										if (!selectedMarketProvider) {
+											return;
+										}
+										if (selectedMarketProvider.unsupportedCurrencies?.includes(exchangeCurrency)) {
 											toasts.warning(
 												t("SETTINGS.GENERAL.UNSUPPORTED_CURRENCY", {
 													currency: exchangeCurrency,
-													provider: marketProvider.label,
+													provider: selectedMarketProvider.label,
 												}),
 											);
 
@@ -426,7 +451,7 @@ export const GeneralSettings: React.FC = () => {
 											});
 										}
 
-										setValue("marketProvider", marketProvider.value, {
+										setValue("marketProvider", selectedMarketProvider.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
@@ -448,12 +473,16 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={PlatformSdkChoices.timeFormats}
 									defaultValue={getDefaultValues().timeFormat}
-									onChange={(timeFormat: SettingsOption) =>
-										setValue("timeFormat", timeFormat.value, {
-											shouldDirty: true,
-											shouldValidate: true,
-										})
-									}
+									onChange={(timeFormat: SettingsOption) => {
+										if (timeFormat) {
+											setValue("timeFormat", timeFormat.value, {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
+										} else {
+											setValue("timeFormat", "", { shouldDirty: true, shouldValidate: true });
+										}
+									}}
 								/>
 							</FormField>
 						</div>
