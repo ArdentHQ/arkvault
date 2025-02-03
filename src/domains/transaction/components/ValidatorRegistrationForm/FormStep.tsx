@@ -4,12 +4,12 @@ import { useTranslation } from "react-i18next";
 
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputDefault } from "@/app/components/Input";
-import { useValidation } from "@/app/hooks";
+import { useNetworks, useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -19,12 +19,26 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { getValues, register, setValue } = useFormContext();
 	const validatorPublicKey = getValues("validatorPublicKey");
 
-	const network = useMemo(() => wallet.network(), [wallet]);
+	const [network] = useNetworks({ profile });
 	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
 	useEffect(() => {
-		register("validatorPublicKey", validatorRegistration.validatorPublicKey(wallet));
-	}, [register, validatorRegistration]);
+		if (wallet) {
+			register("validatorPublicKey", validatorRegistration.validatorPublicKey(wallet));
+		}
+	}, [register, validatorRegistration, wallet]);
+
+	const handleSelectSender = (address: any) => {
+		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
+
+		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+		const isFullyRestoredAndSynced =
+			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+
+		if (!isFullyRestoredAndSynced) {
+			newSenderWallet?.synchroniser().identity();
+		}
+	};
 
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
@@ -36,9 +50,23 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				}
 			/>
 
-			<div className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
-				<TransactionAddresses senderAddress={wallet.address()} profile={profile} network={network} />
-			</div>
+			<FormField name="senderAddress" className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
+				<SelectAddress
+					showWalletAvatar={false}
+					wallet={
+						wallet
+							? {
+									address: wallet.address(),
+									network: wallet.network(),
+								}
+							: undefined
+					}
+					wallets={profile.wallets().values()}
+					profile={profile}
+					disabled={profile.wallets().count() === 0}
+					onChange={handleSelectSender}
+				/>
+			</FormField>
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="validatorPublicKey">

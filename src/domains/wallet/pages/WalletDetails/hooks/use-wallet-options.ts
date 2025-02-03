@@ -7,7 +7,6 @@ import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { isCustomNetwork } from "@/utils/network-utils";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
-import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
 	try {
@@ -20,67 +19,67 @@ const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
 const isRestoredAndSynced = (wallet: Contracts.IReadWriteWallet) =>
 	wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork();
 
-const walletSignatures = (wallet: Contracts.IReadWriteWallet, profile?: Contracts.IProfile) => {
-	const allowsMultiSignature = () => {
-		const networkAllowsMuSig = wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature);
-		const allowsMusig =
-			wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerS) ||
-			wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerX);
+const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Contracts.IProfile) => {
+	const networkAllowsMuSig = wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature);
+	const allowsMusig =
+		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerS) ||
+		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerX);
 
-		if (!isRestoredAndSynced(wallet)) {
-			return false;
-		}
+	if (!isRestoredAndSynced(wallet)) {
+		return false;
+	}
 
-		if (!networkAllowsMuSig) {
-			return false;
-		}
+	if (!networkAllowsMuSig) {
+		return false;
+	}
 
-		if (!wallet.publicKey()) {
-			return false;
-		}
+	if (!wallet.publicKey()) {
+		return false;
+	}
 
-		if (wallet.balance() === 0) {
-			return false;
-		}
+	if (wallet.balance() === 0) {
+		return false;
+	}
 
-		if (isMultiSignature(wallet)) {
-			return false;
-		}
+	if (isMultiSignature(wallet)) {
+		return false;
+	}
 
-		if (wallet.isLedger() && !allowsMusig) {
-			return false;
-		}
+	if (wallet.isLedger() && !allowsMusig) {
+		return false;
+	}
 
-		if (isCustomNetwork(wallet.network())) {
-			return hasAvailableMusigServer({ network: wallet.network(), profile });
-		}
+	if (isCustomNetwork(wallet.network())) {
+		return hasAvailableMusigServer({ network: wallet.network(), profile });
+	}
 
-		return true;
-	};
-
-	return {
-		allowsMultiSignature,
-	};
+	return true;
 };
 
-const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction, profile?: Contracts.IProfile) => {
-	const { allowsMultiSignature } = walletSignatures(wallet, profile);
-
+const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction, profile?: Contracts.IProfile) => {
 	const registrationOptions: DropdownOptionGroup = {
 		key: "registrations",
 		options: [],
 		title: t("WALLETS.PAGE_WALLET_DETAILS.REGISTRATION_OPTIONS"),
 	};
 
-	if (wallet.isLedger() && !isLedgerTransportSupported()) {
-		return registrationOptions;
-	}
+	// @TODO enable when we add ledger support
+	// if (wallets.isLedger() && !isLedgerTransportSupported()) {
+	// 	return registrationOptions;
+	// }
 
-	if (wallet.balance() > 0 && !wallet.isLedger() && !isMultiSignature(wallet) && isRestoredAndSynced(wallet)) {
+	const walletsWithValidatorActions = wallets.filter(
+		(w) => w.balance() > 0 && !isMultiSignature(w) && isRestoredAndSynced(w),
+	);
+
+	if (walletsWithValidatorActions.length > 0) {
 		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
-			!wallet.isValidator() &&
-			!wallet.isResignedValidator()
+			walletsWithValidatorActions.some(
+				(w) =>
+					w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
+					!w.isValidator() &&
+					!w.isResignedValidator(),
+			)
 		) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR"),
@@ -89,9 +88,12 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		}
 
 		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionValidatorResignation) &&
-			wallet.isValidator() &&
-			!wallet.isResignedValidator()
+			walletsWithValidatorActions.some(
+				(w) =>
+					w.network().allows(Enums.FeatureFlag.TransactionValidatorResignation) &&
+					w.isValidator() &&
+					!w.isResignedValidator(),
+			)
 		) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR"),
@@ -100,7 +102,7 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		}
 	}
 
-	if (allowsMultiSignature()) {
+	if (wallets.some((w) => allowsMultiSignature(w, profile))) {
 		registrationOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
 			value: "multi-signature",
@@ -110,36 +112,33 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 	return registrationOptions;
 };
 
-const getAdditionalOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction) => {
+const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
 	const additionalOptions: DropdownOptionGroup = {
 		key: "additional",
 		options: [],
 		title: t("WALLETS.PAGE_WALLET_DETAILS.ADDITIONAL_OPTIONS"),
 	};
 
-	if (
-		!wallet.networkId().endsWith("custom") &&
-		(wallet.balance() > 0 || wallet.publicKey()) &&
-		isRestoredAndSynced(wallet)
-	) {
+	if (wallets.some((w) => (w.balance() > 0 || w.publicKey()) && isRestoredAndSynced(w))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.TRANSACTION_HISTORY"),
 			value: "transaction-history",
 		});
 	}
 
-	if (wallet.isLedger() && !isLedgerTransportSupported()) {
-		return additionalOptions;
-	}
+	// @TODO enable when we add ledger support
+	// if (wallets.isLedger() && !isLedgerTransportSupported()) {
+	// 	return additionalOptions;
+	// }
 
-	if (!isMultiSignature(wallet) && wallet.network().allows(Enums.FeatureFlag.MessageSign)) {
+	if (wallets.some((w) => !isMultiSignature(w) && w.network().allows(Enums.FeatureFlag.MessageSign))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE"),
 			value: "sign-message",
 		});
 	}
 
-	if (wallet.network().allows(Enums.FeatureFlag.MessageVerify)) {
+	if (wallets.some((w) => w.network().allows(Enums.FeatureFlag.MessageVerify))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE"),
 			value: "verify-message",
@@ -149,12 +148,19 @@ const getAdditionalOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction) 
 	return additionalOptions;
 };
 
-export const useWalletOptions = (wallet: Contracts.IReadWriteWallet, profile?: Contracts.IProfile) => {
+export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?: Contracts.IProfile) => {
 	const { t } = useTranslation();
+
+	const hasMultipleWallets = wallets.length > 1;
 
 	const primaryOptions: DropdownOptionGroup = {
 		key: "primary",
-		options: [
+		options: [],
+		title: t("WALLETS.PAGE_WALLET_DETAILS.PRIMARY_OPTIONS"),
+	};
+
+	if (!hasMultipleWallets) {
+		primaryOptions.options.push(
 			{
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.ADDRESS_NAME"),
 				value: "wallet-name",
@@ -164,14 +170,17 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet, profile?: C
 				secondaryLabel: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS_QR"),
 				value: "receive-funds",
 			},
-		],
-		title: t("WALLETS.PAGE_WALLET_DETAILS.PRIMARY_OPTIONS"),
-	};
+		);
+	}
 
 	const secondaryOptions: DropdownOptionGroup = {
 		hasDivider: true,
 		key: "secondary",
-		options: [
+		options: [],
+	};
+
+	if (!hasMultipleWallets) {
+		secondaryOptions.options.push(
 			{
 				icon: "ArrowExternal",
 				iconPosition: "start",
@@ -184,18 +193,21 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet, profile?: C
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DELETE"),
 				value: "delete-wallet",
 			},
-		],
-	};
+		);
+	}
 
-	const isWalletRestoredAndSynced = useMemo(() => isRestoredAndSynced(wallet), [wallet]);
+	const areWalletsRestoredAndSynced = useMemo(
+		() => wallets.map((wallet) => isRestoredAndSynced(wallet)).join("-"),
+		[wallets],
+	);
 
 	return useMemo(
 		() => ({
-			additionalOptions: getAdditionalOptions(wallet, t),
+			additionalOptions: getAdditionalOptions(wallets, t),
 			primaryOptions,
-			registrationOptions: getRegistrationOptions(wallet, t, profile),
+			registrationOptions: getRegistrationOptions(wallets, t, profile),
 			secondaryOptions,
 		}),
-		[t, wallet, isWalletRestoredAndSynced], // eslint-disable-line react-hooks/exhaustive-deps
+		[t, wallets, areWalletsRestoredAndSynced], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 };

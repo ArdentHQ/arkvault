@@ -15,7 +15,7 @@ export interface SendRegistrationDetailsOptions {
 
 export interface SendRegistrationComponent {
 	activeTab: number;
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }
 
@@ -27,7 +27,7 @@ export interface SendRegistrationSignOptions {
 }
 
 export interface FormStepProperties {
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }
 
