@@ -98,6 +98,7 @@ export const SendValidatorResignation = () => {
 		setActiveTab(activeTab - 1);
 	};
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const handleNext = (suppressWarning?: boolean) => {
 		const newIndex = activeTab + 1;
 
