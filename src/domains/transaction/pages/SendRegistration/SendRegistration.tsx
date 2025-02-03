@@ -29,6 +29,7 @@ import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { assertWallet } from "@/utils/assertions";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -125,7 +126,7 @@ export const SendRegistration = () => {
 			return;
 		}
 
-		if (isAuthenticationStep && activeWallet.isLedger() && isLedgerModelSupported) {
+		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
 	}, [ledgerDevice]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -141,6 +142,8 @@ export const SendRegistration = () => {
 	});
 
 	const handleSubmit = async () => {
+		assertWallet(activeWallet);
+
 		try {
 			const { mnemonic, encryptionPassword, wif, privateKey, secret, participants, minParticipants, fee } =
 				getValues();
@@ -194,7 +197,7 @@ export const SendRegistration = () => {
 		abortReference.current.abort();
 
 		if (activeTab === 1) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return history.push(`/profiles/${activeProfile.id()}`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -211,14 +214,14 @@ export const SendRegistration = () => {
 		}
 
 		// Skip authentication step
-		if (isNextStepAuthentication && activeWallet.isLedger() && isLedgerModelSupported) {
+		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
 
 		setActiveTab(nextStep);
 	};
 
-	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet.isLedger());
+	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet?.isLedger());
 
 	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
@@ -242,7 +245,7 @@ export const SendRegistration = () => {
 							<TabPanel tabId={10}>
 								<ErrorStep
 									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										history.push(`/profiles/${activeProfile.id()}`)
 									}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
@@ -280,7 +283,7 @@ export const SendRegistration = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										history.push(`/profiles/${activeProfile.id()}`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
