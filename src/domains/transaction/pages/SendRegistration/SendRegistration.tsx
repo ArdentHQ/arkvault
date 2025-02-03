@@ -13,7 +13,6 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import {
 	useActiveProfile,
-	useActiveWallet,
 	useActiveWalletWhenNeeded,
 	useLedgerModelStatus,
 	useNetworks,
