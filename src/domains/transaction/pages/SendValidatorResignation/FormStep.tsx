@@ -10,14 +10,33 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
+import { useFormContext } from "react-hook-form";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { useNetworks } from "@/app/hooks";
 
 interface FormStepProperties {
-	senderWallet: ProfilesContracts.IReadWriteWallet;
+	senderWallet?: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
 }
 
 export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
+
+	const { setValue } = useFormContext();
+
+	const [network] = useNetworks({ profile });
+
+	const handleSelectSender = (address: any) => {
+		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
+
+		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+		const isFullyRestoredAndSynced =
+			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+
+		if (!isFullyRestoredAndSynced) {
+			newSenderWallet?.synchroniser().identity();
+		}
+	};
 
 	return (
 		<section data-testid="SendValidatorResignation__form-step" className="space-y-6 sm:space-y-4">
@@ -33,12 +52,20 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 
 			<div className="space-y-3 sm:space-y-4">
 				<FormField name="senderAddress">
-					<TransactionAddresses
-						senderAddress={senderWallet.address()}
-						network={senderWallet.network()}
-						recipients={[]}
+					<SelectAddress
+						showWalletAvatar={false}
+						wallet={
+							senderWallet
+								? {
+									address: senderWallet.address(),
+									network: senderWallet.network(),
+								}
+								: undefined
+						}
+						wallets={profile.wallets().values()}
 						profile={profile}
-						labelClassName="w-auto sm:min-w-32"
+						disabled={profile.wallets().count() === 0}
+						onChange={handleSelectSender}
 					/>
 				</FormField>
 
