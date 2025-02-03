@@ -21,6 +21,7 @@ export const TransactionRowMobile = memo(
 		isLoading = false,
 		profile,
 		exchangeCurrency,
+		hideSender = false,
 		...properties
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
@@ -54,17 +55,34 @@ export const TransactionRowMobile = memo(
 							</div>
 						</div>
 
-						<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2">
+						<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
 							<MobileSection
 								title={getLabel(transaction.type())}
 								className="w-full"
 								data-testid="TransactionRowMobile__label"
 							>
-								<TransactionRowAddressing transaction={transaction} profile={profile} />
+								{hideSender ? (
+									<TransactionRowAddressing transaction={transaction} profile={profile} />
+								) : (
+									<div className="flex flex-col gap-2">
+										<TransactionRowAddressing
+											transaction={transaction}
+											profile={profile}
+											isAdvanced
+											variant="sender"
+										/>
+										<TransactionRowAddressing
+											transaction={transaction}
+											profile={profile}
+											isAdvanced
+											variant="recipient"
+										/>
+									</div>
+								)}
 							</MobileSection>
 
 							<MobileSection
-								title={`${t("COMMON.VALUE")} (${transaction.wallet().currency()})`}
+								title={`${hideSender ? t("COMMON.VALUE") : t("COMMON.AMOUNT")} (${transaction.wallet().currency()})`}
 								className="w-full"
 							>
 								<TransactionTotalLabel transaction={transaction} />
