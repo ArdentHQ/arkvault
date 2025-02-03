@@ -61,6 +61,13 @@ describe("useWalletActions", () => {
 		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
+
+
+		act(() => {
+			current.handleSelectOption({value: "delegate-registration"} as DropdownOption);
+		});
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-registration/validatorRegistration`);
 	});
 
 	it("should push right urls to history", () => {
