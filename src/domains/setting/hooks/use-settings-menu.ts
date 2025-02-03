@@ -17,18 +17,6 @@ export const useSettingsMenu = () => {
 			route: "password",
 		},
 		{
-			icon: "PencilRuler",
-			itemKey: "appearance",
-			label: t("SETTINGS.APPEARANCE.MENU_ITEM"),
-			route: "appearance",
-		},
-		{
-			icon: "Globe",
-			itemKey: "networks",
-			label: t("SETTINGS.NETWORKS.MENU_ITEM"),
-			route: "networks",
-		},
-		{
 			icon: "Server",
 			itemKey: "servers",
 			label: t("SETTINGS.SERVERS.MENU_ITEM"),
