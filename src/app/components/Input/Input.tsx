@@ -117,6 +117,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 			style,
 			suggestion,
 			value,
+			readOnly,
 			...properties
 		}: InputProperties,
 		reference,
@@ -132,7 +133,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 
 		const focusReference = useRef<InputElement>(null);
 
-		reference = isFocused ? focusReference : reference;
+		const inputReference = isFocused ? focusReference : reference;
 
 		useEffect(() => {
 			if (isFocused && focusReference.current) {
@@ -178,7 +179,8 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							value={value}
 							type="text"
 							// @ts-ignore
-							ref={reference}
+							ref={inputReference}
+							readOnly={readOnly}
 							{...properties}
 							autoComplete="off"
 						/>

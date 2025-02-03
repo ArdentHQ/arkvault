@@ -165,6 +165,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                       id="ImportWallet__select-input"
                       name=""
                       placeholder="Select option"
+                      readonly=""
                       type="text"
                       value="WIF"
                     />
