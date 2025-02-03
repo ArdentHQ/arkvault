@@ -289,7 +289,9 @@ export const SendRegistration = () => {
 							{!hideStepNavigation && (
 								<StepNavigation
 									onBackClick={handleBack}
-									onBackToWalletClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+									onBackToWalletClick={() =>
+										history.push(`/profiles/${activeProfile.id()}/dashboard`)
+									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
 									isNextDisabled={isNextDisabled}
