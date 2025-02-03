@@ -279,7 +279,6 @@ export const GeneralSettings: React.FC = () => {
 		window.scrollTo({ behavior: "smooth", top: 0 });
 	};
 
-	console.log({ isDirty, isValid });
 	const isSaveButtonDisabled = isSubmitting || !isProfileRestored || (isDirty ? !isValid : true);
 
 	return (
