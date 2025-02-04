@@ -15,6 +15,7 @@ describe("TransactionRow", () => {
 		wallet: () => ({
 			...TransactionFixture.wallet(),
 			currency: () => "DARK",
+			username: () => "test_username",
 		}),
 	};
 
@@ -43,11 +44,11 @@ describe("TransactionRow", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(screen.getAllByRole("cell")).toHaveLength(7);
+		expect(screen.getAllByRole("cell")).toHaveLength(8);
 		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(3);
+		expect(screen.getAllByTestId("Address__address")).toHaveLength(4);
 		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 	});
 

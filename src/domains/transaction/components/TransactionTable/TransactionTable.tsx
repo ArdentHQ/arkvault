@@ -21,7 +21,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 }) => {
 	const [coinName, setCoinName] = useState<string>();
 	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
-	const columns = useTransactionTableColumns({ coin: coinName });
+	const columns = useTransactionTableColumns({ coin: coinName, hideSender });
 
 	useEffect(() => {
 		try {
