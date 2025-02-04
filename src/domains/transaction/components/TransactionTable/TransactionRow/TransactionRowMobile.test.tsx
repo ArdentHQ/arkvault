@@ -174,6 +174,18 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			</table>,
 		);
 
-		expect(screen.getByText("Amount (DARK)")).toBeInTheDocument();
+		expect(screen.getByText("Amount")).toBeInTheDocument();
+	});
+
+	it("should render skeleton with hideSender", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={true} isLoading />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRow__skeleton-sender")).toBeInTheDocument();
 	});
 });
