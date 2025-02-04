@@ -12,7 +12,6 @@ import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
-import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
@@ -29,13 +28,17 @@ const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement
 );
 
 export const FormStep = ({
+	senderWallet,
 	profile,
 	deeplinkProps,
 	onScan,
+	onChange,
 }: {
+	senderWallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 	deeplinkProps: Record<string, string>;
 	onScan?: () => void;
+	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
 }) => {
 	const isMounted = useRef(true);
 
@@ -47,15 +50,7 @@ export const FormStep = ({
 
 	const { getValues, setValue, watch } = useFormContext();
 	const { recipients } = getValues();
-	const { network, senderAddress } = watch();
-
-	const senderWallet = useMemo(() => {
-		if (!network) {
-			return;
-		}
-		assertNetwork(network);
-		return profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
-	}, [network, profile, senderAddress]);
+	const { network } = watch();
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
@@ -111,16 +106,17 @@ export const FormStep = ({
 		return recipients;
 	};
 
-	const handleSelectSender = (address: any) => {
-		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
-
-		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-		const isFullyRestoredAndSynced =
-			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+	const handleSelectSender = async (address: any) => {
+		const sender = profile.wallets().findByAddressWithNetwork(address, network.id());
+		const isFullyRestoredAndSynced = sender?.hasBeenFullyRestored() && sender.hasSyncedWithNetwork();
 
 		if (!isFullyRestoredAndSynced) {
-			newSenderWallet?.synchroniser().identity();
+			await sender?.synchroniser().identity();
 		}
+
+		onChange?.({
+			sender,
+		});
 	};
 
 	const showFeeInput = useMemo(() => !network?.chargesZeroFees(), [network]);

@@ -44,6 +44,8 @@ export const SendTransfer = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeWallet = useActiveWalletWhenNeeded(false);
+	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+
 	const activeProfile = useActiveProfile();
 	const networks = useNetworks({
 		filter: (network) => profileEnabledNetworkIds(activeProfile).includes(network.id()),
@@ -63,7 +65,7 @@ export const SendTransfer = () => {
 
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const showNetworkStep = !hasDeepLinkParameters && !activeWallet && networks.length > 1;
+	const showNetworkStep = !hasDeepLinkParameters && !wallet && networks.length > 1;
 	const firstTabIndex = showNetworkStep ? SendTransferStep.NetworkStep : SendTransferStep.FormStep;
 	const [activeTab, setActiveTab] = useState<SendTransferStep>(firstTabIndex);
 
@@ -71,7 +73,6 @@ export const SendTransfer = () => {
 	const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
-	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 	const { urlSearchParameters } = useTransactionURL();
 	const { buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
@@ -82,7 +83,6 @@ export const SendTransfer = () => {
 		handleSubmit,
 		getValues,
 		lastEstimatedExpiration,
-		values: { network, senderAddress },
 		formState: { isDirty, isValid, isSubmitting },
 	} = useSendTransferForm(wallet);
 
@@ -97,9 +97,11 @@ export const SendTransfer = () => {
 	});
 
 	const connectLedger = useCallback(async () => {
-		await connect(activeProfile, activeWallet!.coinId(), activeWallet!.networkId());
-		void handleSubmit(() => submit(true))();
-	}, [activeWallet, activeProfile, connect]);
+		if (wallet) {
+			await connect(activeProfile, wallet.coinId(), wallet.networkId());
+			void handleSubmit(() => submit(true))();
+		}
+	}, [wallet, activeProfile, connect]);
 
 	useEffect(() => {
 		if (!shouldResetForm) {
@@ -141,12 +143,6 @@ export const SendTransfer = () => {
 	// @TODO enable when Mainsail has dynamic fees ready
 	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 	// 	useFeeConfirmation(fee, fees);
-
-	useEffect(() => {
-		if (network) {
-			setWallet(activeProfile.wallets().findByAddressWithNetwork(senderAddress || "", network.id()));
-		}
-	}, [activeProfile, network, senderAddress]);
 
 	const submit = useCallback(
 		async (skipUnconfirmedCheck = false) => {
@@ -325,9 +321,13 @@ export const SendTransfer = () => {
 
 			<TabPanel tabId={SendTransferStep.FormStep}>
 				<FormStep
+					senderWallet={wallet}
 					profile={activeProfile}
 					deeplinkProps={deepLinkParameters}
 					onScan={() => setShowQRModal(true)}
+					onChange={({ sender }) => {
+						setWallet(sender);
+					}}
 				/>
 			</TabPanel>
 
