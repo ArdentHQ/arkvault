@@ -79,6 +79,7 @@ export const TransactionTotalLabel = ({
 		return (
 			<Amount
 				showSign={false}
+				showTicker={false}
 				ticker={currency}
 				value={transaction.total()}
 				isNegative={transaction.isSent()}
