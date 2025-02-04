@@ -87,6 +87,31 @@ describe("TransactionRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render skeleton with hideSender in mobile", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRow profile={profile} isLoading hideSender={false} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRowSkeleton__recipient-mobile")).toBeInTheDocument();
+	});
+
+	it("should render skeleton with hideSender in desktop", () => {
+		renderResponsive(
+			<table>
+				<tbody>
+					<TransactionRow profile={profile} isLoading hideSender={false} />
+				</tbody>
+			</table>,
+			"lg",
+		);
+
+		expect(screen.getByTestId("TransactionRowSkeleton__sender-desktop")).toBeInTheDocument();
+	});
+
 	it("should render with currency", () => {
 		const { asFragment } = render(
 			<table>
