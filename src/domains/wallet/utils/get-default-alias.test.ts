@@ -30,7 +30,7 @@ describe("getDefaultAlias", () => {
 			profile,
 		});
 
-		expect(result).toBe("ARK Devnet #1");
+		expect(result).toBe("Address #1");
 	});
 
 	it("should not return alias that already exist", async () => {
@@ -42,13 +42,13 @@ describe("getDefaultAlias", () => {
 
 		profile.wallets().push(wallet);
 
-		wallet.mutator().alias("ARK Devnet #1");
+		wallet.mutator().alias("Address #1");
 
 		const result = getDefaultAlias({
 			network: wallet.network(),
 			profile,
 		});
 
-		expect(result).toBe("ARK Devnet #2");
+		expect(result).toBe("Address #2");
 	});
 });
