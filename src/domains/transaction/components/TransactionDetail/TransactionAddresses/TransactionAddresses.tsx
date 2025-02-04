@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { useTranslation } from "react-i18next";
-import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { Address } from "@/app/components/Address";
 import { WalletAliasResult } from "@/app/hooks";
@@ -13,7 +12,6 @@ interface Properties {
 	senderAddress: string;
 	senderAlias?: WalletAliasResult;
 	recipients?: RecipientItem[];
-	profile: Contracts.IProfile;
 	labelClassName?: string;
 	network: Networks.Network;
 	explorerLink?: string;
@@ -21,7 +19,6 @@ interface Properties {
 
 export const TransactionAddresses = ({
 	recipients = [],
-	profile,
 	senderAddress,
 	senderAlias,
 	network,

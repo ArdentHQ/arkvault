@@ -3,11 +3,11 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useEffect, useMemo, useState } from "react";
 import { isContractTransaction } from "@/domains/transaction/utils";
 
-type TransactionProps = {
+interface TransactionProps {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	profile: Contracts.IProfile;
 	senderAlias?: WalletAliasResult;
-};
+}
 
 const createRecipientRequest = (
 	address: string,
@@ -32,7 +32,7 @@ export const useTransactionRecipients = ({ transaction, profile, senderAlias }: 
 
 	const aliasRequests = useMemo(() => {
 		const requests: Parameters<typeof getWalletAlias>[0][] = [];
-		
+
 		const addRecipientRequest = (address: string) => {
 			if (!senderAlias || senderAlias.address !== address) {
 				requests.push(createRecipientRequest(address, transaction, profile));
@@ -42,7 +42,9 @@ export const useTransactionRecipients = ({ transaction, profile, senderAlias }: 
 		if (transaction.isTransfer() || isContractTransaction(transaction)) {
 			addRecipientRequest(transaction.recipient());
 		} else if (transaction.isMultiPayment()) {
-			transaction.recipients().forEach(({ address }) => addRecipientRequest(address));
+			for (const { address } of transaction.recipients()) {
+				addRecipientRequest(address);
+			}
 		}
 
 		return requests;
@@ -62,7 +64,9 @@ export const useTransactionRecipients = ({ transaction, profile, senderAlias }: 
 		if (transaction.isTransfer() || isContractTransaction(transaction)) {
 			addRecipient(transaction.recipient());
 		} else if (transaction.isMultiPayment()) {
-			transaction.recipients().forEach(({ address }) => addRecipient(address));
+			for (const { address } of transaction.recipients()) {
+				addRecipient(address);
+			}
 		}
 
 		setRecipients(initialRecipients);
@@ -84,7 +88,7 @@ export const useTransactionRecipients = ({ transaction, profile, senderAlias }: 
 
 			const results = await Promise.all(aliasRequests.map((request) => getWalletAlias(request)));
 			const finalRecipients: WalletAliasResult[] = [];
-			
+
 			const addFinalRecipient = (address: string, index: number) => {
 				if (senderAlias?.address === address) {
 					finalRecipients.push(senderAlias);
@@ -97,14 +101,14 @@ export const useTransactionRecipients = ({ transaction, profile, senderAlias }: 
 				addFinalRecipient(transaction.recipient(), 0);
 			} else if (transaction.isMultiPayment()) {
 				let resultIndex = 0;
-				transaction.recipients().forEach(({ address }) => {
+				for (const { address } of transaction.recipients()) {
 					addFinalRecipient(address, resultIndex);
 					if (!senderAlias || senderAlias.address !== address) {
 						resultIndex++;
 					}
-				});
+				}
 			}
-			
+
 			setRecipients(finalRecipients);
 		};
 

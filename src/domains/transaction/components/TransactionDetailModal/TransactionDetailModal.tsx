@@ -42,18 +42,20 @@ export const TransactionDetailContent = ({
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
-	const senderAlias = useMemo(() => 
-		getWalletAlias({
-			address: transaction.sender(),
-			network: transaction.wallet().network(),
-			profile,
-		}),
-	[transaction, profile, getWalletAlias]);
+	const senderAlias = useMemo(
+		() =>
+			getWalletAlias({
+				address: transaction.sender(),
+				network: transaction.wallet().network(),
+				profile,
+			}),
+		[transaction, profile, getWalletAlias],
+	);
 
-	const { recipients } = useTransactionRecipients({ 
-		profile, 
-		transaction,
+	const { recipients } = useTransactionRecipients({
+		profile,
 		senderAlias,
+		transaction,
 	});
 
 	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(
@@ -82,7 +84,6 @@ export const TransactionDetailContent = ({
 				<DetailPadded>
 					<TransactionAddresses
 						explorerLink={transaction.explorerLink()}
-						profile={profile}
 						senderAddress={transaction.sender()}
 						senderAlias={senderAlias}
 						network={transaction.wallet().network()}

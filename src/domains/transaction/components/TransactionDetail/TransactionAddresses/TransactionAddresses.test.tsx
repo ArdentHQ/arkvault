@@ -32,7 +32,6 @@ describe("TransactionAddresses", () => {
 				senderAddress={wallet.address()}
 				network={wallet.network()}
 				recipients={[recipients[1]]}
-				profile={profile}
 			/>,
 			breakpoint,
 		);
@@ -55,7 +54,6 @@ describe("TransactionAddresses", () => {
 			<TransactionAddresses
 				senderAddress={wallet.address()}
 				network={wallet.network()}
-				profile={profile}
 				recipients={recipients}
 			/>,
 		);
@@ -69,7 +67,6 @@ describe("TransactionAddresses", () => {
 			<TransactionAddresses
 				senderAddress={wallet.address()}
 				network={wallet.network()}
-				profile={profile}
 				recipients={recipients}
 			/>,
 		);
