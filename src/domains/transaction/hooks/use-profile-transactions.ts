@@ -124,7 +124,7 @@ export const useProfileTransactions = ({
 		return hasMorePages;
 	};
 
-	const selectedWalletAddresses = wallets.map(wallet => wallet.address()).join('-')
+	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 	useEffect(() => {
 		const loadTransactions = async () => {
 			const response = await fetchTransactions({
