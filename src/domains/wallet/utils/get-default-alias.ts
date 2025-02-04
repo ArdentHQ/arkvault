@@ -6,8 +6,7 @@ interface GetDefaultAliasInput {
 
 const makeAlias = (count: number) => `Address #${count}`;
 
-export const getDefaultAlias = ({ profile}: GetDefaultAliasInput): string => {
-
+export const getDefaultAlias = ({ profile }: GetDefaultAliasInput): string => {
 	let counter = profile.wallets().count();
 
 	if (counter === 0) {
