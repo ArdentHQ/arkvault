@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 import { useTranslation } from "react-i18next";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
@@ -24,6 +24,7 @@ import { DTO } from "@ardenthq/sdk";
 import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
 import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 import { isContractTransaction } from "@/domains/transaction/utils";
+import { useWalletAlias } from "@/app/hooks";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -39,6 +40,21 @@ export const TransactionDetailContent = ({
 	containerClassname?: string;
 }) => {
 	const { t } = useTranslation();
+	const { getWalletAlias } = useWalletAlias();
+
+	const senderAlias = useMemo(() => 
+		getWalletAlias({
+			address: transaction.sender(),
+			network: transaction.wallet().network(),
+			profile,
+		}),
+	[transaction, profile, getWalletAlias]);
+
+	const { recipients } = useTransactionRecipients({ 
+		profile, 
+		transaction,
+		senderAlias,
+	});
 
 	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(
 		Boolean,
@@ -48,7 +64,6 @@ export const TransactionDetailContent = ({
 		profile,
 		transaction,
 	});
-	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const labelClassName = cn({
 		"min-w-24": !transaction.isVoteCombination(),
@@ -69,6 +84,7 @@ export const TransactionDetailContent = ({
 						explorerLink={transaction.explorerLink()}
 						profile={profile}
 						senderAddress={transaction.sender()}
+						senderAlias={senderAlias}
 						network={transaction.wallet().network()}
 						recipients={recipients.map(({ address, alias }) => ({
 							address,

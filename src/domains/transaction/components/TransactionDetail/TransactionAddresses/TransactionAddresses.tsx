@@ -4,13 +4,14 @@ import { useTranslation } from "react-i18next";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { Address } from "@/app/components/Address";
-import { useWalletAlias } from "@/app/hooks";
+import { WalletAliasResult } from "@/app/hooks";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { TransactionRecipients, TransactionRecipientsModal } from "./TransactionRecipient";
 import cn from "classnames";
 
 interface Properties {
 	senderAddress: string;
+	senderAlias?: WalletAliasResult;
 	recipients?: RecipientItem[];
 	profile: Contracts.IProfile;
 	labelClassName?: string;
@@ -22,18 +23,12 @@ export const TransactionAddresses = ({
 	recipients = [],
 	profile,
 	senderAddress,
+	senderAlias,
 	network,
 	labelClassName,
 	explorerLink,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
-	const { getWalletAlias } = useWalletAlias();
-
-	const { alias } = getWalletAlias({
-		address: senderAddress,
-		network: network,
-		profile,
-	});
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")} className="flex flex-col gap-3">
@@ -42,12 +37,12 @@ export const TransactionAddresses = ({
 				<Address
 					truncateOnTable
 					address={senderAddress}
-					walletName={alias}
+					walletName={senderAlias?.alias}
 					showCopyButton
 					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 					wrapperClass="justify-end sm:justify-start"
 					addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
-						"text-theme-secondary-500 dark:text-theme-secondary-700 ": !!alias,
+						"text-theme-secondary-500 dark:text-theme-secondary-700": !!senderAlias?.alias,
 					})}
 				/>
 			</div>
