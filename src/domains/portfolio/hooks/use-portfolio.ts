@@ -1,4 +1,4 @@
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber, isEqual } from "@ardenthq/sdk-helpers";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
@@ -121,7 +121,7 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	const allAddresses = addresses.all();
 
 	useEffect(() => {
-		if (selectedAddresses.length === 0) {
+		if (selectedAddresses.length === 0 && allAddresses.length > 0 && !isEqual(selectedAddresses, allAddresses)) {
 			setConfiguration({ selectedAddresses: allAddresses });
 		}
 	}, [selectedAddresses, allAddresses]);
