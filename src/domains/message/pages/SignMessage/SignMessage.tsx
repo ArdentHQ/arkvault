@@ -36,7 +36,7 @@ export const SignMessage: React.VFC = () => {
 
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
-	const [activeNetwork] = useNetworks({profile: activeProfile})
+	const [activeNetwork] = useNetworks({profile: activeProfile});
 
 	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
 	const walletFromDeeplink = useMemo(() => {
@@ -112,7 +112,7 @@ export const SignMessage: React.VFC = () => {
 		abortReference.current.abort();
 
 		if (selectedWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${selectedWallet.id()}`);
+			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		return history.push(ProfilePaths.Welcome);
