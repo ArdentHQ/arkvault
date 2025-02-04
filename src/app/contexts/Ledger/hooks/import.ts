@@ -25,7 +25,6 @@ export const useLedgerImport = ({ device, env }: LedgerWalletImportProperties) =
 
 				wallet.mutator().alias(
 					getDefaultAlias({
-						network: wallet.network(),
 						profile,
 					}),
 				);
