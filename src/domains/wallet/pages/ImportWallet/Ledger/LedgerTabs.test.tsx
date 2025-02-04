@@ -57,7 +57,6 @@ describe("LedgerTabs", () => {
 
 		ledgerWallet.mutator().alias(
 			getDefaultAlias({
-				network: wallet.network(),
 				profile,
 			}),
 		);
