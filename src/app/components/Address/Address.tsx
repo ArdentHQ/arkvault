@@ -87,7 +87,9 @@ export const Address = ({
 				/* istanbul ignore next -- @preserve */
 				return (
 					width -
-					(walletName && aliasReference.current ? aliasReference.current.getBoundingClientRect().width + 8 : 0) -
+					(walletName && aliasReference.current
+						? aliasReference.current.getBoundingClientRect().width + 8
+						: 0) -
 					(showCopyButton ? 22 : 0)
 				);
 			} else {
