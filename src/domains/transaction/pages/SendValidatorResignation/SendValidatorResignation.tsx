@@ -80,6 +80,7 @@ export const SendValidatorResignation = () => {
 		register("suppressWarning");
 	}, [activeWallet, common, getValues, register]);
 
+	// @TODO enable when Mainsail has dynamic fees ready
 	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 	// 	useFeeConfirmation(fee, fees);
 
