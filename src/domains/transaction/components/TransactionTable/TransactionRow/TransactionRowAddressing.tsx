@@ -42,7 +42,7 @@ export const TransactionRowLabel = ({ direction, style }: { direction: Direction
 const FormattedAddress = ({ alias, address }: { alias?: string; address: string }): JSX.Element => (
 	<div
 		className={cn({
-			"w-40 sm:w-40 md:w-32 lg:w-50": alias,
+			"w-40 sm:w-40 md:w-32": alias,
 			"w-40 xs:w-50 sm:w-30": !alias,
 		})}
 		data-testid="TransactionRowAddressing__address-container"
