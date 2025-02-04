@@ -7,8 +7,8 @@ interface GetDefaultAliasInput {
 	network: Networks.Network;
 }
 
-export const getDefaultAlias = ({ profile, network }: GetDefaultAliasInput): string => {
-	const makeAlias = (count: number) => `${networkDisplayName(network)} #${count}`;
+export const getDefaultAlias = ({ profile, network}: GetDefaultAliasInput): string => {
+	const makeAlias = (count: number) => `Address #${count}`;
 
 	const sameCoinWallets = profile.wallets().findByCoinWithNetwork(network.coin(), network.id());
 
