@@ -1,13 +1,12 @@
-import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { networkDisplayName } from "@/utils/network-utils";
 
 interface GetDefaultAliasInput {
 	profile: Contracts.IProfile;
 }
 
+const makeAlias = (count: number) => `Address #${count}`;
+
 export const getDefaultAlias = ({ profile}: GetDefaultAliasInput): string => {
-	const makeAlias = (count: number) => `Address #${count}`;
 
 	let counter = profile.wallets().count();
 
