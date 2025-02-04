@@ -4,15 +4,12 @@ import { networkDisplayName } from "@/utils/network-utils";
 
 interface GetDefaultAliasInput {
 	profile: Contracts.IProfile;
-	network: Networks.Network;
 }
 
-export const getDefaultAlias = ({ profile, network}: GetDefaultAliasInput): string => {
+export const getDefaultAlias = ({ profile}: GetDefaultAliasInput): string => {
 	const makeAlias = (count: number) => `Address #${count}`;
 
-	const sameCoinWallets = profile.wallets().findByCoinWithNetwork(network.coin(), network.id());
-
-	let counter = sameCoinWallets.length;
+	let counter = profile.wallets().count();
 
 	if (counter === 0) {
 		counter = 1;

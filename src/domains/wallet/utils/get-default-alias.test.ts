@@ -26,7 +26,6 @@ describe("getDefaultAlias", () => {
 		profile.wallets().push(wallet);
 
 		const result = getDefaultAlias({
-			network: wallet.network(),
 			profile,
 		});
 
@@ -45,10 +44,39 @@ describe("getDefaultAlias", () => {
 		wallet.mutator().alias("Address #1");
 
 		const result = getDefaultAlias({
-			network: wallet.network(),
 			profile,
 		});
 
 		expect(result).toBe("Address #2");
+	});
+
+	it("should increase the alias number regardless of the network", async () => {
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[0],
+			network: "ark.devnet",
+		});
+
+		profile.wallets().push(wallet);
+
+		const result = getDefaultAlias({
+			profile,
+		});
+
+		expect(result).toBe("Address #1");
+
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[0],
+			network: "ark.mainnet",
+		});
+
+		profile.wallets().push(wallet2);
+
+		const result2 = getDefaultAlias({
+			profile,
+		});
+
+		expect(result2).toBe("Address #2");
 	});
 });
