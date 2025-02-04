@@ -1210,10 +1210,10 @@ exports[`TransactionRow > should render skeleton 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
           >
             <div
-              class="mr-2"
+              class="flex flex-col gap-1"
             >
               <div
-                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                class="flex flex-row gap-2"
               >
                 <span
                   aria-busy="true"
@@ -1222,7 +1222,51 @@ exports[`TransactionRow > should render skeleton 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 37px; height: 13px;"
+                    style="width: 37px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 1px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="flex flex-row gap-2 md-lg:hidden"
+                data-testid="TransactionRowSkeleton__recipient-mobile"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 37px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 1px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -1230,19 +1274,45 @@ exports[`TransactionRow > should render skeleton 1`] = `
                 </span>
               </div>
             </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+          </div>
+        </td>
+        <td
+          class="hidden md-lg:table-cell"
+          data-testid="TransactionRowSkeleton__sender-desktop"
+        >
+          <div
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+          >
+            <div
+              class="flex flex-row gap-2"
             >
               <span
-                class="react-loading-skeleton"
-                style="width: 1px; height: 17px;"
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
-                ‌
+                <span
+                  class="react-loading-skeleton"
+                  style="width: 37px; height: 17px;"
+                >
+                  ‌
+                </span>
+                <br />
               </span>
-              <br />
-            </span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton"
+                  style="width: 1px; height: 17px;"
+                >
+                  ‌
+                </span>
+                <br />
+              </span>
+            </div>
           </div>
         </td>
         <td

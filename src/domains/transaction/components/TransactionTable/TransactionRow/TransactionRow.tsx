@@ -46,7 +46,7 @@ export const TransactionRow = memo(
 		}
 
 		if (isLoading) {
-			return <TransactionRowSkeleton />;
+			return <TransactionRowSkeleton hideSender={hideSender} />;
 		}
 
 		const timeStamp = transaction.timestamp();
