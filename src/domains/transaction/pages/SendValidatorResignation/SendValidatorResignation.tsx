@@ -68,7 +68,10 @@ export const SendValidatorResignation = () => {
 		const walletBalance = activeWallet?.balance() ?? 0;
 
 		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
-		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit["delegateResignation"], activeWallet?.network()));
+		register(
+			"gasLimit",
+			common.gasLimit(walletBalance, getValues, GasLimit["delegateResignation"], activeWallet?.network()),
+		);
 
 		register("senderAddress", { required: true });
 
@@ -126,8 +129,8 @@ export const SendValidatorResignation = () => {
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({
-				gasPrice,
 				gasLimit,
+				gasPrice,
 				signatory,
 			});
 
@@ -172,9 +175,7 @@ export const SendValidatorResignation = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/dashboard`)
-									}
+									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting || !isValid}
 									onBack={() => {
 										setActiveTab(Step.FormStep);

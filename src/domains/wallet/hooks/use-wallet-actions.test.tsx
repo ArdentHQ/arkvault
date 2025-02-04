@@ -62,9 +62,8 @@ describe("useWalletActions", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
 
-
 		act(() => {
-			current.handleSelectOption({value: "delegate-registration"} as DropdownOption);
+			current.handleSelectOption({ value: "delegate-registration" } as DropdownOption);
 		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-registration/validatorRegistration`);
