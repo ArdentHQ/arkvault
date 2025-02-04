@@ -40,13 +40,7 @@ export const TransactionRowLabel = ({ direction, style }: { direction: Direction
 };
 
 const FormattedAddress = ({ alias, address }: { alias?: string; address: string }): JSX.Element => (
-	<div
-		className={cn({
-			"w-40 sm:w-40 md:w-32": alias,
-			"w-40 xs:w-50 sm:w-30": !alias,
-		})}
-		data-testid="TransactionRowAddressing__address-container"
-	>
+	<div className="grow" data-testid="TransactionRowAddressing__address-container">
 		<Address
 			walletName={alias}
 			address={address}
@@ -69,7 +63,7 @@ const ContractAddressing = ({
 	direction: Direction;
 	t: any;
 }) => (
-	<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
+	<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 		<TransactionRowLabel direction={direction} />
 		<Link
 			to={transaction.wallet().coin().link().wallet(transaction.recipient())}
@@ -171,7 +165,10 @@ export const TransactionRowAddressing = ({
 
 	if (isAdvanced && variant === "sender") {
 		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container_advanced_sender">
+			<div
+				className="flex w-full flex-row gap-2"
+				data-testid="TransactionRowAddressing__container_advanced_sender"
+			>
 				<TransactionRowLabel direction="received" style="return" />
 				<FormattedAddress address={transaction.sender()} alias={senderAlias} />
 			</div>
@@ -181,7 +178,10 @@ export const TransactionRowAddressing = ({
 	if (isAdvanced && variant === "recipient" && !transaction.isMultiPayment()) {
 		if (isContract || isContractDeployment(transaction)) {
 			return (
-				<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote_advanced_recipient">
+				<div
+					className="flex w-full flex-row gap-2"
+					data-testid="TransactionRowAddressing__vote_advanced_recipient"
+				>
 					<TransactionRowLabel direction="sent" style="return" />
 					<Link
 						to={transaction.wallet().coin().link().wallet(transaction.recipient())}
@@ -196,7 +196,10 @@ export const TransactionRowAddressing = ({
 		}
 
 		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container_advanced_recipient">
+			<div
+				className="flex w-full flex-row gap-2"
+				data-testid="TransactionRowAddressing__container_advanced_recipient"
+			>
 				<TransactionRowLabel direction="sent" style="return" />
 				<FormattedAddress address={transaction.recipient()} alias={alias} />
 			</div>
@@ -220,7 +223,7 @@ export const TransactionRowAddressing = ({
 	}
 
 	return (
-		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
+		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__container">
 			<TransactionRowLabel direction={direction} />
 			<FormattedAddress address={isNegative ? transaction.recipient() : transaction.sender()} alias={alias} />
 		</div>

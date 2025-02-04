@@ -335,7 +335,7 @@ describe("CreateWallet", () => {
 
 		const wallet = profile.wallets().first();
 
-		expect(wallet.alias()).toBe("ARK Devnet #1");
+		expect(wallet.alias()).toBe("Address #1");
 
 		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`));
 
