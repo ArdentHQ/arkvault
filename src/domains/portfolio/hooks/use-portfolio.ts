@@ -121,7 +121,7 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	const allAddresses = addresses.all();
 
 	useEffect(() => {
-		if (selectedAddresses.length === 0 && allAddresses.length > 0 && !isEqual(selectedAddresses, allAddresses)) {
+		if (selectedAddresses.length === 0 && !isEqual(selectedAddresses, allAddresses)) {
 			setConfiguration({ selectedAddresses: allAddresses });
 		}
 	}, [selectedAddresses, allAddresses]);
