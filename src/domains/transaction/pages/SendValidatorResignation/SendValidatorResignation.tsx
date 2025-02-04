@@ -1,5 +1,5 @@
 import { DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
@@ -11,14 +11,14 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWallet, useValidation } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useNetworks, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
-import { useFeeConfirmation } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { assertWallet } from "@/utils/assertions";
 
 enum Step {
 	FormStep = 1,
@@ -37,7 +37,7 @@ export const SendValidatorResignation = () => {
 	const { formState, getValues, register, watch } = form;
 	const { isValid, isSubmitting } = formState;
 
-	const { fee, fees } = watch();
+	const { senderAddress, gasLimit, gasPrice } = watch();
 	const { common } = useValidation();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
@@ -47,18 +47,42 @@ export const SendValidatorResignation = () => {
 	const { persist } = useEnvironmentContext();
 
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
+
+	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
+
+	const [network] = useNetworks({ profile: activeProfile });
+
+	const activeWallet = useMemo(() => {
+		if (senderAddress) {
+			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+		}
+
+		if (activeWalletFromUrl) {
+			return activeWalletFromUrl;
+		}
+	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
 
 	useEffect(() => {
 		register("fees");
-		register("fee", common.fee(activeWallet.balance(), activeWallet.network()));
+
+		const walletBalance = activeWallet?.balance() ?? 0;
+
+		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
+		register(
+			"gasLimit",
+			common.gasLimit(walletBalance, getValues, GasLimit["delegateResignation"], activeWallet?.network()),
+		);
+
+		register("senderAddress", { required: true });
+
 		register("inputFeeSettings");
 
 		register("suppressWarning");
-	}, [activeWallet, common, register]);
+	}, [activeWallet, common, getValues, register]);
 
-	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-		useFeeConfirmation(fee, fees);
+	// @TODO enable when Mainsail has dynamic fees ready
+	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+	// 	useFeeConfirmation(fee, fees);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -72,23 +96,26 @@ export const SendValidatorResignation = () => {
 
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		setActiveTab(activeTab - 1);
 	};
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const handleNext = (suppressWarning?: boolean) => {
 		const newIndex = activeTab + 1;
 
-		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-			return setShowFeeWarning(true);
-		}
+		// if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
+		// 	return setShowFeeWarning(true);
+		// }
 
 		setActiveTab(newIndex);
 	};
 
 	const handleSubmit = async () => {
+		assertWallet(activeWallet);
+
 		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } = getValues();
 
 		try {
@@ -103,8 +130,8 @@ export const SendValidatorResignation = () => {
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({
-				// @TODO: Remove hardcoded fee once fees are implemented for evm.
-				fee: 5,
+				gasLimit,
+				gasPrice,
 				signatory,
 			});
 
@@ -136,22 +163,20 @@ export const SendValidatorResignation = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>
-								<ReviewStep senderWallet={activeWallet} profile={activeProfile} />
+								<ReviewStep senderWallet={activeWallet!} profile={activeProfile} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.AuthenticationStep}>
-								<AuthenticationStep wallet={activeWallet} />
+								<AuthenticationStep wallet={activeWallet!} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.SummaryStep}>
-								<TransactionSuccessful senderWallet={activeWallet} transaction={transaction} />
+								<TransactionSuccessful senderWallet={activeWallet!} transaction={transaction} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
-									}
+									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting || !isValid}
 									onBack={() => {
 										setActiveTab(Step.FormStep);
@@ -164,7 +189,7 @@ export const SendValidatorResignation = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										history.push(`/profiles/${activeProfile.id()}/dashboard`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}
@@ -175,14 +200,14 @@ export const SendValidatorResignation = () => {
 							)}
 						</Tabs>
 
-						<FeeWarning
-							isOpen={showFeeWarning}
-							variant={feeWarningVariant}
-							onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}
-							onConfirm={(suppressWarning: boolean) =>
-								dismissFeeWarning(() => handleNext(true), suppressWarning)
-							}
-						/>
+						{/*<FeeWarning*/}
+						{/*	isOpen={showFeeWarning}*/}
+						{/*	variant={feeWarningVariant}*/}
+						{/*	onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}*/}
+						{/*	onConfirm={(suppressWarning: boolean) =>*/}
+						{/*		dismissFeeWarning(() => handleNext(true), suppressWarning)*/}
+						{/*	}*/}
+						{/*/>*/}
 					</Form>
 				</StepsProvider>
 			</Section>

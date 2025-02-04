@@ -134,12 +134,18 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			}
 
 			if (option.value === "delegate-resignation") {
-				history.push(
-					generatePath(ProfilePaths.SendValidatorResignation, {
+				let url = generatePath(ProfilePaths.SendValidatorResignation, {
+					profileId: profile.id(),
+					walletId: wallet.id(),
+				});
+
+				if (hasMultipleWallets) {
+					url = generatePath(ProfilePaths.SendValidatorResignationProfile, {
 						profileId: profile.id(),
-						walletId: wallet.id(),
-					}),
-				);
+					});
+				}
+
+				history.push(url);
 			}
 
 			if (option.value === "open-explorer") {
