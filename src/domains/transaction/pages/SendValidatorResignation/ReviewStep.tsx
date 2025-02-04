@@ -10,13 +10,7 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 
-export const ReviewStep = ({
-	senderWallet,
-	profile,
-}: {
-	senderWallet: Contracts.IReadWriteWallet;
-	profile: Contracts.IProfile;
-}) => {
+export const ReviewStep = ({ senderWallet }: { senderWallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();
 
 	const { getValues, unregister } = useFormContext();

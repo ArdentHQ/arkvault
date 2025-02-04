@@ -273,7 +273,6 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 										<TransferLedgerReview
 											wallet={senderWallet}
 											estimatedExpiration={lastEstimatedExpiration}
-											profile={profile}
 										/>
 									}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}

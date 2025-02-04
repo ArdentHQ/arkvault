@@ -14,40 +14,34 @@ describe("TransferLedgerReview", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = renderWithForm(
-			<TransferLedgerReview wallet={wallet} estimatedExpiration={123} profile={profile} />,
-			{
-				defaultValues: {
-					fee: "0",
-					recipients: [],
-				},
-				registerCallback: ({ register }) => {
-					register("fee");
-					register("recipients");
-				},
+		const { asFragment } = renderWithForm(<TransferLedgerReview wallet={wallet} estimatedExpiration={123} />, {
+			defaultValues: {
+				fee: "0",
+				recipients: [],
 			},
-		);
+			registerCallback: ({ register }) => {
+				register("fee");
+				register("recipients");
+			},
+		});
 
 		expect(screen.getByText("123")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with memo", () => {
-		const { asFragment } = renderWithForm(
-			<TransferLedgerReview wallet={wallet} estimatedExpiration={123} profile={profile} />,
-			{
-				defaultValues: {
-					fee: "0",
-					memo: "test",
-					recipients: [],
-				},
-				registerCallback: ({ register }) => {
-					register("memo");
-					register("fee");
-					register("recipients");
-				},
+		const { asFragment } = renderWithForm(<TransferLedgerReview wallet={wallet} estimatedExpiration={123} />, {
+			defaultValues: {
+				fee: "0",
+				memo: "test",
+				recipients: [],
 			},
-		);
+			registerCallback: ({ register }) => {
+				register("memo");
+				register("fee");
+				register("recipients");
+			},
+		});
 
 		expect(screen.getByText("123")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -55,7 +49,7 @@ describe("TransferLedgerReview", () => {
 
 	it("should render skeleton while loading expiration", () => {
 		const { asFragment } = renderWithForm(
-			<TransferLedgerReview wallet={wallet} estimatedExpiration={undefined} profile={profile} />,
+			<TransferLedgerReview wallet={wallet} estimatedExpiration={undefined} />,
 			{
 				defaultValues: {
 					fee: "0",

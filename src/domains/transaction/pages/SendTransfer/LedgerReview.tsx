@@ -13,11 +13,9 @@ import { DetailWrapper } from "@/app/components/DetailWrapper";
 export const TransferLedgerReview = ({
 	wallet,
 	estimatedExpiration,
-	profile,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	estimatedExpiration?: number;
-	profile: Contracts.IProfile;
 }) => {
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
@@ -50,11 +48,7 @@ export const TransferLedgerReview = ({
 
 	return (
 		<div className="space-y-3 sm:space-y-4">
-			<TransactionAddresses
-				senderAddress={wallet.address()}
-				recipients={recipients}
-				network={wallet.network()}
-			/>
+			<TransactionAddresses senderAddress={wallet.address()} recipients={recipients} network={wallet.network()} />
 
 			<DetailWrapper
 				label={
