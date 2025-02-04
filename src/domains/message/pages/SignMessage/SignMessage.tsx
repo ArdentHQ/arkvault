@@ -36,7 +36,7 @@ export const SignMessage: React.VFC = () => {
 
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
-	const [activeNetwork] = useNetworks({profile: activeProfile});
+	const [activeNetwork] = useNetworks({ profile: activeProfile });
 
 	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
 	const walletFromDeeplink = useMemo(() => {
@@ -153,7 +153,7 @@ export const SignMessage: React.VFC = () => {
 
 	const handleSelectAddress: any = useCallback(
 		(address: string) => {
-			setSelectedWallet(activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork!.id()));
+			setSelectedWallet(activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id()));
 		},
 		[activeProfile, activeNetwork],
 	);

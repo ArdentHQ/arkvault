@@ -101,7 +101,10 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			}
 
 			if (option.value === "sign-message") {
-				let url = generatePath(ProfilePaths.SignMessageWallet, { profileId: profile.id(), walletId: wallet.id() })
+				let url = generatePath(ProfilePaths.SignMessageWallet, {
+					profileId: profile.id(),
+					walletId: wallet.id(),
+				});
 
 				if (hasMultipleWallets) {
 					url = generatePath(ProfilePaths.SignMessage, {
