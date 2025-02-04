@@ -114,7 +114,7 @@ export const TransactionRow = memo(
 						"min-h-16 my-1 py-2": !hideSender,
 					})}
 				>
-					<div className="flex flex-col gap-2">
+					<div className="flex grow flex-col gap-2">
 						<TransactionRowAddressing
 							transaction={transaction}
 							profile={profile}
