@@ -5,19 +5,37 @@ import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
+import { useFormContext } from "react-hook-form";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { useNetworks } from "@/app/hooks";
 
 interface FormStepProperties {
-	senderWallet: ProfilesContracts.IReadWriteWallet;
+	senderWallet?: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
 }
 
 export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
+
+	const { setValue } = useFormContext();
+
+	const [network] = useNetworks({ profile });
+
+	const handleSelectSender = (address: any) => {
+		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
+
+		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+		const isFullyRestoredAndSynced =
+			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+
+		if (!isFullyRestoredAndSynced) {
+			newSenderWallet?.synchroniser().identity();
+		}
+	};
 
 	return (
 		<section data-testid="SendValidatorResignation__form-step" className="space-y-6 sm:space-y-4">
@@ -33,11 +51,20 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 
 			<div className="space-y-3 sm:space-y-4">
 				<FormField name="senderAddress">
-					<TransactionAddresses
-						senderAddress={senderWallet.address()}
-						network={senderWallet.network()}
-						recipients={[]}
-						labelClassName="w-auto sm:min-w-32"
+					<SelectAddress
+						showWalletAvatar={false}
+						wallet={
+							senderWallet
+								? {
+										address: senderWallet.address(),
+										network: senderWallet.network(),
+									}
+								: undefined
+						}
+						wallets={profile.wallets().values()}
+						profile={profile}
+						disabled={profile.wallets().count() === 0}
+						onChange={handleSelectSender}
 					/>
 				</FormField>
 
@@ -61,7 +88,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 								{t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}
 							</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-								{senderWallet.validatorPublicKey()}
+								{senderWallet && senderWallet.validatorPublicKey()}
 							</div>
 						</div>
 					</div>
@@ -69,12 +96,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 
 				<FormField name="fee">
 					<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
-					<FeeField
-						type="delegateResignation"
-						data={undefined}
-						network={senderWallet.network()}
-						profile={profile}
-					/>
+					<FeeField type="delegateResignation" data={undefined} network={network} profile={profile} />
 				</FormField>
 			</div>
 		</section>
