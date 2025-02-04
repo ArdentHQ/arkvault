@@ -85,7 +85,7 @@ export const TransactionRowMobile = memo(
 								title={
 									hideSender
 										? `${t("COMMON.VALUE")} (${transaction.wallet().currency()})`
-										: t("COMMON.AMOUNT")
+										: `${t("COMMON.AMOUNT")} (${transaction.wallet().currency()})`
 								}
 								className="w-full"
 							>

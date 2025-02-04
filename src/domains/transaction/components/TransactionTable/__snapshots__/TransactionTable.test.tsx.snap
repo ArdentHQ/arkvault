@@ -84,7 +84,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -116,9 +116,25 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden md-lg:table-cell lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--4"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                   
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+              colspan="1"
+              data-testid="table__th--5"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -129,7 +145,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Amount (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -165,9 +181,9 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden lg:table-cell w-36 min-w-36"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden lg:table-cell !pl-0 xl:min-w-28 w-36 min-w-36"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--6"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -328,10 +344,10 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -340,7 +356,51 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -348,19 +408,45 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -562,10 +648,10 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -574,7 +660,51 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -582,19 +712,45 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -796,10 +952,10 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -808,7 +964,51 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -816,19 +1016,45 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -1030,10 +1256,10 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -1042,7 +1268,51 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -1050,19 +1320,45 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -1264,10 +1560,10 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -1276,7 +1572,51 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -1284,19 +1624,45 @@ exports[`TransactionTable > loading state > should render 1`] = `
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -1479,7 +1845,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -1511,9 +1877,25 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden md-lg:table-cell lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--4"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                   
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+              colspan="1"
+              data-testid="table__th--5"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -1524,7 +1906,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Amount (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -1560,9 +1942,9 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden lg:table-cell w-36 min-w-36"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden lg:table-cell !pl-0 xl:min-w-28 w-36 min-w-36"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--6"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -1723,10 +2105,10 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -1735,7 +2117,51 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -1743,19 +2169,45 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -1957,10 +2409,10 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -1969,7 +2421,51 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -1977,19 +2473,45 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -2191,10 +2713,10 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -2203,7 +2725,51 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -2211,19 +2777,45 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -2425,10 +3017,10 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -2437,7 +3029,51 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -2445,19 +3081,45 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -2659,10 +3321,10 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
               >
                 <div
-                  class="mr-2"
+                  class="flex flex-col gap-1"
                 >
                   <div
-                    class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                    class="flex flex-row gap-2"
                   >
                     <span
                       aria-busy="true"
@@ -2671,7 +3333,51 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 37px; height: 13px;"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 md-lg:hidden"
+                    data-testid="TransactionRowSkeleton__recipient-mobile"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 37px; height: 17px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 17px;"
                       >
                         ‌
                       </span>
@@ -2679,19 +3385,45 @@ exports[`TransactionTable > loading state > should render with currency column 1
                     </span>
                   </div>
                 </div>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              </div>
+            </td>
+            <td
+              class="hidden md-lg:table-cell"
+              data-testid="TransactionRowSkeleton__sender-desktop"
+            >
+              <div
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+              >
+                <div
+                  class="flex flex-row gap-2"
                 >
                   <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    ‌
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 37px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
-                  <br />
-                </span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 17px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                </div>
               </div>
             </td>
             <td
