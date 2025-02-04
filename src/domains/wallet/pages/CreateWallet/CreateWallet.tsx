@@ -172,7 +172,7 @@ export const CreateWallet = () => {
 
 			assertWallet(wallet);
 
-			wallet.mutator().alias(getDefaultAlias({ network, profile: activeProfile }));
+			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
 			setValue("wallet", wallet);
 

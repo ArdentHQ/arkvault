@@ -36,7 +36,6 @@ describe("LedgerImportStep", () => {
 
 			wallet.mutator().alias(
 				getDefaultAlias({
-					network: wallet.network(),
 					profile,
 				}),
 			);
