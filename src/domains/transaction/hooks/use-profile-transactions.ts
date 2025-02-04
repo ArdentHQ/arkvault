@@ -124,6 +124,7 @@ export const useProfileTransactions = ({
 		return hasMorePages;
 	};
 
+	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 	useEffect(() => {
 		const loadTransactions = async () => {
 			const response = await fetchTransactions({
@@ -168,7 +169,7 @@ export const useProfileTransactions = ({
 		return () => {
 			isMounted.current = false;
 		};
-	}, [wallets.length, activeMode, activeTransactionType, timestamp, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const updateFilters = useCallback(
 		({ activeMode, activeTransactionType, timestamp, selectedTransactionTypes }: TransactionFilters) => {
