@@ -13,10 +13,10 @@ import { Icon } from "@/app/components/Icon";
 import { Page, Section } from "@/app/components/Layout";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useNetworks, useValidation } from "@/app/hooks";
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { useNetworkFromQueryParameters, useQueryParameters } from "@/app/hooks/use-query-parameters";
+import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { ProfilePaths } from "@/router/paths";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 
@@ -36,8 +36,7 @@ export const SignMessage: React.VFC = () => {
 
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
-	const activeNetwork = useNetworkFromQueryParameters(activeProfile);
-	const isDeeplink = !!activeNetwork;
+	const [activeNetwork] = useNetworks({profile: activeProfile})
 
 	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
 	const walletFromDeeplink = useMemo(() => {
@@ -168,7 +167,7 @@ export const SignMessage: React.VFC = () => {
 							<TabPanel tabId={Step.FormStep}>
 								<div>
 									<FormStep
-										disabled={!isDeeplink}
+										disabled={false}
 										profile={activeProfile}
 										wallets={wallets}
 										disableMessageInput={false}
