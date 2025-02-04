@@ -147,9 +147,9 @@ describe("SignMessage", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			await expect(
-				screen.findByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
-			).resolves.toBeVisible();
+			expect(
+				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
+			).toBeInTheDocument();
 
 			expect(messageInput()).toHaveValue(signMessage);
 
