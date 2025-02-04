@@ -93,7 +93,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         class="flex flex-col gap-2"
       >
         <div
-          class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
+          class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background"
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
@@ -232,7 +232,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
           </div>
         </div>
         <div
-          class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
+          class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background"
           data-testid="LedgerMobileItem__wrapper"
         >
           <div

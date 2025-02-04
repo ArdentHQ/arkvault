@@ -10,7 +10,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
       >
         <td>
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -243,7 +243,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
       >
         <td>
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -467,7 +467,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
       >
         <td>
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -691,7 +691,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
       >
         <td>
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -953,7 +953,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
       >
         <td>
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -1182,7 +1182,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
       >
         <td>
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -1409,7 +1409,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
   >
     <td>
       <div
-        class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+        class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
       >
         <div
           class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -1628,7 +1628,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
   >
     <td>
       <div
-        class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+        class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
       >
         <div
           class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
