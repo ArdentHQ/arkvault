@@ -174,6 +174,6 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			</table>,
 		);
 
-		expect(screen.getByText("Amount (DARK)")).toBeInTheDocument();
+		expect(screen.getByText("Amount")).toBeInTheDocument();
 	});
 });
