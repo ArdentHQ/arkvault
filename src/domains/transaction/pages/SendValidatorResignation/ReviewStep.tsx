@@ -41,7 +41,6 @@ export const ReviewStep = ({
 					senderAddress={senderWallet.address()}
 					network={senderWallet.network()}
 					recipients={[]}
-					profile={profile}
 				/>
 
 				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>

@@ -31,7 +31,6 @@ describe("TransactionAddresses", () => {
 				senderAddress={wallet.address()}
 				network={wallet.network()}
 				recipients={[recipients[1]]}
-				profile={profile}
 			/>,
 			breakpoint,
 		);

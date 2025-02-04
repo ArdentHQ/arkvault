@@ -37,7 +37,6 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 						senderAddress={senderWallet.address()}
 						network={senderWallet.network()}
 						recipients={[]}
-						profile={profile}
 						labelClassName="w-auto sm:min-w-32"
 					/>
 				</FormField>

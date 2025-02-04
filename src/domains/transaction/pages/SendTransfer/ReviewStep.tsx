@@ -56,7 +56,6 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 				<TransactionAddresses
 					senderAddress={wallet.address()}
 					recipients={recipients}
-					profile={profile}
 					network={wallet.network()}
 					labelClassName="w-14 sm:w-36"
 				/>

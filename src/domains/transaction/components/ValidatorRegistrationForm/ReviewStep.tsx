@@ -43,7 +43,6 @@ export const ReviewStep = ({
 					labelClassName="w-auto sm:min-w-36"
 					senderAddress={wallet.address()}
 					recipients={[]}
-					profile={profile}
 					network={wallet.network()}
 				/>
 

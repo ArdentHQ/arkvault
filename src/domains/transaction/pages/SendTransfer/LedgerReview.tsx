@@ -53,7 +53,6 @@ export const TransferLedgerReview = ({
 			<TransactionAddresses
 				senderAddress={wallet.address()}
 				recipients={recipients}
-				profile={profile}
 				network={wallet.network()}
 			/>
 

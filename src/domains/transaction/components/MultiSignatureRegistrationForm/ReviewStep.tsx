@@ -54,7 +54,6 @@ export const ReviewStep = ({
 						senderAddress={wallet.address()}
 						network={wallet.network()}
 						recipients={[]}
-						profile={profile}
 						labelClassName="min-w-24"
 					/>
 				</FormField>
