@@ -28,7 +28,7 @@ export const TransactionRowMobile = memo(
 		const { getLabel } = useTransactionTypes();
 
 		if (isLoading) {
-			return <TransactionRowMobileSkeleton />;
+			return <TransactionRowMobileSkeleton hideSender={hideSender} />;
 		}
 
 		const timeStamp = transaction.timestamp();
