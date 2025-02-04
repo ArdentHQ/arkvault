@@ -4,8 +4,9 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useRandomNumber } from "@/app/hooks";
 
-export const TransactionRowSkeleton = () => {
+export const TransactionRowSkeleton = ({ hideSender = false }: { hideSender?: boolean }) => {
 	const recipientWidth = useRandomNumber(120, 150);
+	const senderWidth = useRandomNumber(120, 150);
 	const amountWidth = useRandomNumber(100, 120);
 	const currencyWidth = Math.floor(amountWidth * 0.45);
 
@@ -35,13 +36,31 @@ export const TransactionRowSkeleton = () => {
 			</TableCell>
 
 			<TableCell>
-				<div className="mr-2">
-					<div className="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800">
-						<Skeleton height={13} width={37} />
+				<div className="flex flex-col gap-1">
+					<div className="flex flex-row gap-2">
+						<Skeleton height={17} width={37} />
+						<Skeleton height={17} width={senderWidth} />
 					</div>
+					{!hideSender && (
+						<div
+							className="flex flex-row gap-2 md-lg:hidden"
+							data-testid="TransactionRowSkeleton__recipient-mobile"
+						>
+							<Skeleton height={17} width={37} />
+							<Skeleton height={17} width={recipientWidth} />
+						</div>
+					)}
 				</div>
-				<Skeleton height={17} width={recipientWidth} />
 			</TableCell>
+
+			{!hideSender && (
+				<TableCell className="hidden md-lg:table-cell" data-testid="TransactionRowSkeleton__sender-desktop">
+					<div className="flex flex-row gap-2">
+						<Skeleton height={17} width={37} />
+						<Skeleton height={17} width={senderWidth} />
+					</div>
+				</TableCell>
+			)}
 
 			<TableCell innerClassName="justify-end" className="table-cell sm:hidden lg:table-cell">
 				<div className="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800">
