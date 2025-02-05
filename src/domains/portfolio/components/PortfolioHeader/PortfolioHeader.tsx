@@ -20,6 +20,7 @@ import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
+import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 
 export const PortfolioHeader = ({
 	profile,
@@ -45,7 +46,7 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
-	const { handleImport, handleCreate, handleSelectOption, handleSend } = useWalletActions(...selectedWallets);
+	const { handleImport, handleCreate, handleSelectOption, handleSend, setActiveModal, activeModal } = useWalletActions(...selectedWallets);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 
@@ -310,6 +311,15 @@ export const PortfolioHeader = ({
 				onOpenChange={setShowAddressesPanel}
 				onDelete={(addresses) => {
 					void onDeleteAddresses(addresses);
+				}}
+			/>
+
+			<WalletActionsModals
+				wallet={wallet}
+				activeModal={activeModal}
+				setActiveModal={setActiveModal}
+				onUpdateWallet={() => {
+					onUpdate?.(true);
 				}}
 			/>
 		</header>
