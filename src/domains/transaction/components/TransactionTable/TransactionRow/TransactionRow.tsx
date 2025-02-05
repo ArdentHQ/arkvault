@@ -153,7 +153,7 @@ export const TransactionRow = memo(
 					className={cn({
 						hidden: !hideSender,
 					})}
-					innerClassName="space-x-4 items-start my-1 pt-2 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1"
+					innerClassName="space-x-4 items-start my-1 pt-2 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
 				>
 					<TransactionRowAddressing transaction={transaction} profile={profile} isAdvanced={false} />
 				</TableCell>
