@@ -9,7 +9,6 @@ import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, withi
 import { requestMock, server } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import { act } from "@testing-library/react";
 
 const history = createHashHistory();
 
@@ -111,18 +110,14 @@ describe("TransactionExportModal", () => {
 
 		expect(exportButton()).not.toBeDisabled();
 
-		userEvent.click(exportButton());
-
-		await waitFor(() => {
-			expect(dateToggle()).toBeEnabled();
-		});
+		await userEvent.click(exportButton());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render error status", async () => {
-		const transactionIndexMock = vi.spyOn(profile, "transactionAggregate").mockImplementation(() => {
-			throw new Error("error");
+		const transactionIndexMock = vi.spyOn(profile.transactionAggregate(), "received").mockImplementation(() => {
+			throw new Error("error")
 		});
 
 		const { asFragment } = render(
@@ -141,9 +136,7 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		await act(async () => {
-			await userEvent.click(exportButton());
-		})
+		await userEvent.click(exportButton());
 
 		await expect(screen.findByTestId("TransactionExportError__back-button")).resolves.toBeInTheDocument();
 
@@ -251,9 +244,7 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		await act(async () => {
-			await userEvent.click(exportButton());
-		})
+		await userEvent.click(exportButton());
 
 		await waitFor(() => {
 			expect(downloadButton()).toBeEnabled();
