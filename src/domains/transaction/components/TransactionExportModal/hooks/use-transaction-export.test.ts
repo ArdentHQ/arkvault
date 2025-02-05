@@ -171,7 +171,6 @@ describe("useTransactionExport hook", () => {
 			const url = new URL(request.url);
 			const to = url.searchParams.get("timestamp.to");
 
-			console.log(to)
 			// return OK response for the first request
 			if (to === "0") {
 				return HttpResponse.json({
