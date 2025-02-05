@@ -24,6 +24,7 @@ const walletUrl = (walletId: string) => `/profiles/${getDefaultProfileId()}/wall
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let wallet2: Contracts.IReadWriteWallet;
 
 const mnemonic = MNEMONICS[0];
 
@@ -58,7 +59,14 @@ describe("SignMessage", () => {
 			network: "ark.devnet",
 		});
 
+		wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic,
+			network: "ark.mainnet",
+		});
+
 		profile.wallets().push(wallet);
+		profile.wallets().push(wallet2);
 
 		profile.coins().set("ARK", "ark.devnet");
 
@@ -123,7 +131,7 @@ describe("SignMessage", () => {
 		it("should select address from deeplinking", async () => {
 			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
 				signMessage,
-			)}&address=${wallet.address()}`;
+			)}&address=${wallet2.address()}`;
 
 			history.push(signUrl);
 
