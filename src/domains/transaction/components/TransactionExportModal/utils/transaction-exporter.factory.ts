@@ -35,7 +35,7 @@ const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]
 	});
 
 interface ExtendedAggregateQuery extends AggregateQuery {
-	timestamp: Services.RangeCriteria|undefined;
+	timestamp: Services.RangeCriteria | undefined;
 	senderId?: string;
 	recipientId?: string;
 }

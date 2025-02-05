@@ -24,14 +24,14 @@ export const TransactionExportForm = ({ wallets, onCancel, profile }: Transactio
 			);
 
 			const queryParameters = {
-				identifiers:  wallets.map((wallet) => ({
+				identifiers: wallets.map((wallet) => ({
 					type: "address",
 					value: wallet.address(),
 				})),
 				limit: 1,
 				orderBy: "timestamp:asc",
 				page: 1,
-			}
+			};
 
 			try {
 				// @ts-ignore
