@@ -39,7 +39,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", async (breakpoint: string) => {
-		const { asFragment } = renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />, {
+		const { asFragment } = renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />, {
 			breakpoint,
 		});
 
@@ -55,7 +55,7 @@ describe("TransactionExportForm", () => {
 	it("should emit cancel", async () => {
 		const onCancel = vi.fn();
 
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={onCancel} />);
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} onCancel={onCancel} />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
@@ -74,7 +74,7 @@ describe("TransactionExportForm", () => {
 		const onCancel = vi.fn();
 
 		const { asFragment } = renderWithForm(
-			<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />,
+			<TransactionExportForm onCancel={onCancel} profile={profile} wallets={[profile.wallets().first()]} />,
 		);
 
 		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
@@ -89,7 +89,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should select outgoing transactions", async () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />);
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
@@ -101,7 +101,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should select last month", async () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />);
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
@@ -117,7 +117,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should render custom date range", async () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={vi.fn()} />, {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} onCancel={vi.fn()} />, {
 			defaultValues: {
 				from: new Date(),
 				to: new Date(),
@@ -143,7 +143,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should select tab delimiter", async () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />, {
+		renderWithForm(<TransactionExportForm profile={profile} wallets={[profile.wallets().first()]} />, {
 			defaultValues: {
 				delimiter: ",",
 			},
