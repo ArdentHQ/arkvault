@@ -165,7 +165,7 @@ export const TransactionRow = memo(
 					})}
 				>
 					<div className="flex flex-col items-end gap-1">
-						<TransactionTotalLabel transaction={transaction} />
+						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
@@ -189,7 +189,7 @@ export const TransactionRow = memo(
 						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
 					) : (
 						<div className="flex w-40 flex-col items-end gap-1">
-							<TransactionTotalLabel transaction={transaction} />
+							<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
 							<span
 								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 								data-testid="TransactionRow__exchange-currency"
