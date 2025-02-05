@@ -101,9 +101,18 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			}
 
 			if (option.value === "sign-message") {
-				history.push(
-					generatePath(ProfilePaths.SignMessageWallet, { profileId: profile.id(), walletId: wallet.id() }),
-				);
+				let url = generatePath(ProfilePaths.SignMessageWallet, {
+					profileId: profile.id(),
+					walletId: wallet.id(),
+				});
+
+				if (hasMultipleWallets) {
+					url = generatePath(ProfilePaths.SignMessage, {
+						profileId: profile.id(),
+					});
+				}
+
+				history.push(url);
 			}
 
 			if (option.value === "verify-message") {
@@ -154,7 +163,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[wallet, history, profile, openExternal],
+		[wallet, history, profile, hasMultipleWallets, openExternal],
 	);
 
 	const handleCreate = useCallback(

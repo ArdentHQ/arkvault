@@ -70,8 +70,6 @@ export const FormStep = ({
 					showWalletAvatar={false}
 					title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_TITLE")}
 					description={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_DESCRIPTION")}
-					showUserIcon={false}
-					showWalletName={false}
 					wallet={
 						wallet
 							? {

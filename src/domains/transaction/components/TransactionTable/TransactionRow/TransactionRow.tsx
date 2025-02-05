@@ -153,7 +153,7 @@ export const TransactionRow = memo(
 					className={cn({
 						hidden: !hideSender,
 					})}
-					innerClassName="space-x-4 items-start my-1 pt-2 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1"
+					innerClassName="space-x-4 items-start my-1 pt-2 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
 				>
 					<TransactionRowAddressing transaction={transaction} profile={profile} isAdvanced={false} />
 				</TableCell>
@@ -165,7 +165,7 @@ export const TransactionRow = memo(
 					})}
 				>
 					<div className="flex flex-col items-end gap-1">
-						<TransactionTotalLabel transaction={transaction} />
+						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
@@ -189,7 +189,7 @@ export const TransactionRow = memo(
 						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
 					) : (
 						<div className="flex w-40 flex-col items-end gap-1">
-							<TransactionTotalLabel transaction={transaction} />
+							<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
 							<span
 								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 								data-testid="TransactionRow__exchange-currency"
