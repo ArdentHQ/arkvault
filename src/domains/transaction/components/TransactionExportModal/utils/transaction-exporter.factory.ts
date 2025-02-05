@@ -4,6 +4,7 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { assertString } from "@/utils/assertions";
+import { AggregateQuery } from "@ardenthq/sdk-profiles/distribution/esm/transaction.aggregate.contract";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
@@ -34,11 +35,11 @@ const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]
 
 export const TransactionExporter = ({
 	profile,
-	wallet,
+	wallets,
 	limit = 100,
 }: {
 	profile: Contracts.IProfile;
-	wallet: Contracts.IReadWriteWallet;
+	wallets: Contracts.IReadWriteWallet[];
 	limit?: number;
 }) => {
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
@@ -68,11 +69,29 @@ export const TransactionExporter = ({
 			return;
 		}
 
-		const page = await wallet.transactionIndex()[type]({
+		const queryParameters: AggregateQuery = {
 			limit,
 			orderBy: "timestamp:desc,sequence:desc",
 			timestamp: dateRange,
-		});
+		};
+
+		if (type === "all") {
+			queryParameters.identifiers = wallets.map((wallet) => ({
+				type: "address",
+				value: wallet.address(),
+			}));
+		}
+
+		if (type === "sent") {
+			queryParameters.senderId = wallets.map((wallet) => wallet.address()).join(",");
+		}
+
+		if (type === "received") {
+			queryParameters.recipientId = wallets.map((wallet) => wallet.address()).join(",");
+		}
+
+		const page = await profile.transactionAggregate()[type](queryParameters);
+		console.log({type, queryParameters, items: page.items()})
 
 		const fetchedTransactions = page.items();
 		const fetchedTransactionsCount = fetchedTransactions.length;
@@ -85,9 +104,6 @@ export const TransactionExporter = ({
 		// TODO: Not relying on totalCount because it is an estimate
 		//        and is not giving accurate pagination info. Address this issue after initial implementation.
 		if (fetchedTransactionsCount < limit) {
-			if (type === "received") {
-				transactions = filterTransactions(transactions);
-			}
 			return transactions.length;
 		}
 

@@ -46,10 +46,10 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 
 export const useTransactionExport = ({
 	profile,
-	wallet,
+	wallets,
 }: {
 	profile: Contracts.IProfile;
-	wallet: Contracts.IReadWriteWallet;
+	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const [status, setStatus] = useState<ExportProgressStatus>(ExportProgressStatus.Idle);
 	const [finalCount, setFinalCount] = useState<number>(0);
@@ -58,12 +58,14 @@ export const useTransactionExport = ({
 	const [file] = useState({
 		content: "",
 		extension: "csv",
-		name: wallet.address(),
+		name: wallets.map((w) => w.address()).join("-"),
 	});
 
 	const { t } = useTranslation();
 
-	const exporter = useMemo(() => TransactionExporter({ profile, wallet }), [profile, wallet]);
+	const addresses = wallets.map((w) => w.address()).join("-");
+
+	const exporter = useMemo(() => TransactionExporter({ profile, wallets }), [profile, addresses]);
 
 	return {
 		cancelExport: () => {

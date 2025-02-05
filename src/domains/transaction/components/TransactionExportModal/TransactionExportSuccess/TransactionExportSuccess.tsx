@@ -45,7 +45,7 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 
 				<Button
 					disabled={count === 0}
-					type="submit"
+					type="button"
 					variant="primary"
 					data-testid="TransactionExportSuccess__download-button"
 					onClick={async () => {

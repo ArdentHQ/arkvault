@@ -5,8 +5,9 @@ import { BasicSettings, CSVSettings, ColumnSettings } from ".";
 import { TransactionExportFormProperties } from "@/domains/transaction/components/TransactionExportModal";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
-export const TransactionExportForm = ({ wallet, onCancel }: TransactionExportFormProperties) => {
+export const TransactionExportForm = ({ wallets, onCancel, profile }: TransactionExportFormProperties) => {
 	const { t } = useTranslation();
 
 	const form = useFormContext();
@@ -16,12 +17,24 @@ export const TransactionExportForm = ({ wallet, onCancel }: TransactionExportFor
 
 	useEffect(() => {
 		const fetchFirstTransaction = async () => {
+			const wallet = wallets.at(0) as Contracts.IReadWriteWallet;
+
 			let date: Date | undefined = new Date(
 				wallet.manifest().get<object>("networks")[wallet.networkId()].constants.epoch,
 			);
 
+			const queryParameters = {
+				identifiers:  wallets.map((wallet) => ({
+					type: "address",
+					value: wallet.address(),
+				})),
+				limit: 1,
+				orderBy: "timestamp:asc",
+				page: 1,
+			}
+
 			try {
-				const transactions = await wallet.transactionIndex().all({ orderBy: "timestamp:asc" });
+				const transactions = await profile.transactionAggregate().all(queryParameters);
 				date = transactions.first().timestamp()?.toDate();
 			} catch {
 				//
@@ -30,10 +43,10 @@ export const TransactionExportForm = ({ wallet, onCancel }: TransactionExportFor
 			setMinStartDate(date);
 		};
 
-		fetchFirstTransaction();
-	}, [wallet]);
+		void fetchFirstTransaction();
+	}, [profile, wallets]);
 
-	const showFiatColumn = wallet.network().isLive();
+	const showFiatColumn = wallets[0].network().isLive();
 
 	return (
 		<div data-testid="TransactionExportForm">

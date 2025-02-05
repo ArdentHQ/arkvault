@@ -6,16 +6,17 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { WalletActionsProperties } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 import { TransactionExportModal } from "@/domains/transaction/components/TransactionExportModal";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 export const WalletActionsModals: VFC<WalletActionsProperties> = ({
-	wallet,
+	wallets,
 	activeModal,
 	setActiveModal,
 	onUpdateWallet,
 }) => {
 	const profile = useActiveProfile();
 	const { getWalletAlias } = useWalletAlias();
-	const { handleDelete } = useWalletActions(wallet);
+	const { handleDelete } = useWalletActions(...wallets);
 
 	const hideActiveModal = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
@@ -25,6 +26,8 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 		},
 		[setActiveModal],
 	);
+
+	const wallet = wallets.at(0) as Contracts.IReadWriteWallet;
 
 	const { alias } = useMemo(
 		() =>
@@ -74,7 +77,7 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 			)}
 
 			{activeModal === "transaction-history" && (
-				<TransactionExportModal wallet={wallet} isOpen onClose={hideActiveModal} />
+				<TransactionExportModal wallets={wallets} isOpen onClose={hideActiveModal} />
 			)}
 		</>
 	);
