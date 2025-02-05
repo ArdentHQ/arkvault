@@ -33,6 +33,12 @@ const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]
 		return false;
 	});
 
+interface ExtendedAggregateQuery extends AggregateQuery {
+	timestamp: Services.RangeCriteria|undefined;
+	senderId?: string;
+	recipientId?: string;
+}
+
 export const TransactionExporter = ({
 	profile,
 	wallets,
@@ -69,7 +75,7 @@ export const TransactionExporter = ({
 			return;
 		}
 
-		const queryParameters: AggregateQuery = {
+		const queryParameters: ExtendedAggregateQuery = {
 			limit,
 			orderBy: "timestamp:desc,sequence:desc",
 			timestamp: dateRange,
@@ -91,7 +97,6 @@ export const TransactionExporter = ({
 		}
 
 		const page = await profile.transactionAggregate()[type](queryParameters);
-		console.log({type, queryParameters, items: page.items()})
 
 		const fetchedTransactions = page.items();
 		const fetchedTransactionsCount = fetchedTransactions.length;

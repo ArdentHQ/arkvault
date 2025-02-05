@@ -34,6 +34,7 @@ export const TransactionExportForm = ({ wallets, onCancel, profile }: Transactio
 			}
 
 			try {
+				// @ts-ignore
 				const transactions = await profile.transactionAggregate().all(queryParameters);
 				date = transactions.first().timestamp()?.toDate();
 			} catch {
