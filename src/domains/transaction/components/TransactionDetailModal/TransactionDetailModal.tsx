@@ -72,7 +72,7 @@ export const TransactionDetailContent = ({
 						network={transaction.wallet().network()}
 						recipients={recipients.map(({ address, alias }) => ({
 							address,
-							alias,
+							alias: isContractTransaction(transaction) ? undefined : alias,
 							isContract: isContractTransaction(transaction),
 						}))}
 						labelClassName={labelClassName}
