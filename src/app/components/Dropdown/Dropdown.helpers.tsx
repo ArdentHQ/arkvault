@@ -41,7 +41,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 			)}
 			<ul>
 				{title && (
-					<li className="mb-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-8 py-1 text-left text-xs font-semibold text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
+					<li className="my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-8 py-1 text-left text-xs font-semibold text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{title}
 					</li>
 				)}

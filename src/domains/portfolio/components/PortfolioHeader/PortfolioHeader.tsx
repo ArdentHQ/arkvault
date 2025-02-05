@@ -46,7 +46,7 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
-	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } =
+	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend , setActiveModal, activeModal } =
 		useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
