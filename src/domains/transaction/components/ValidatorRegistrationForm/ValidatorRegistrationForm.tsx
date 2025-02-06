@@ -66,8 +66,8 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 		data: {
 			validatorPublicKey,
 		},
-		gasPrice,
 		gasLimit,
+		gasPrice,
 		signatory,
 	});
 

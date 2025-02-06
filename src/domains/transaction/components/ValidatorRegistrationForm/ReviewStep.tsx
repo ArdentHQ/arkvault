@@ -22,7 +22,7 @@ export const ReviewStep = ({
 
 	const { getValues, unregister } = useFormContext();
 
-	const  {gasPrice, gasLimit} = getValues();
+	const { gasPrice, gasLimit } = getValues();
 
 	const fee = calculateGasFee(gasPrice, gasLimit);
 

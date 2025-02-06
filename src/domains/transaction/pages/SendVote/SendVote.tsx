@@ -301,8 +301,8 @@ export const SendVote = () => {
 			});
 
 			const voteTransactionInput: Services.TransactionInput = {
-				gasPrice,
 				gasLimit,
+				gasPrice,
 				signatory,
 			};
 
