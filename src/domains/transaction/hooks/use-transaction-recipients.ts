@@ -2,6 +2,7 @@ import { useWalletAlias, WalletAliasResult } from "@/app/hooks";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useEffect, useMemo, useState } from "react";
 import { isContractTransaction } from "@/domains/transaction/utils";
+import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 
 export const useTransactionRecipients = ({
 	transaction,
@@ -13,55 +14,82 @@ export const useTransactionRecipients = ({
 	const { getWalletAlias } = useWalletAlias();
 	const [recipients, setRecipients] = useState<WalletAliasResult[]>([]);
 
-	const aliasRequests = useMemo(() => {
-		const requests: Parameters<typeof getWalletAlias>[0][] = [];
-		if (transaction.isTransfer() || isContractTransaction(transaction)) {
-			requests.push({
-				address: transaction.recipient(),
-				network: transaction.wallet().network(),
-				profile,
-			});
-		}
+	const recipientAddresses = useMemo(() => {
 		if (transaction.isMultiPayment()) {
-			for (const recipient of transaction.recipients()) {
-				requests.push({
-					address: recipient.address,
-					network: transaction.wallet().network(),
-					profile,
-				});
-			}
+			return transaction.recipients().map((recipient) => ({
+				address: recipient.address,
+				network: transaction.wallet().network().id(),
+				coin: transaction.wallet().network().coin(),
+			}));
 		}
-		return requests;
-	}, [transaction, profile, getWalletAlias]);
+
+		if (transaction.isTransfer() || isContractTransaction(transaction)) {
+			return [{
+				address: transaction.recipient(),
+				network: transaction.wallet().network().id(),
+				coin: transaction.wallet().network().coin(),
+			}];
+		}
+
+		return [];
+	}, [transaction]);
 
 	useEffect(() => {
-		const fallbackRecipients: WalletAliasResult[] = aliasRequests.map((request) => ({
-			address: request.address,
-			alias: "",
-			isContact: false,
-		}));
-		setRecipients(fallbackRecipients);
-
-		const fetchRecipients = async () => {
-			if (transaction.isTransfer() || isContractTransaction(transaction)) {
+		const fetchWalletFromAddress = async ({ address, network, coin }) => {
+			try {
 				const wallet = await profile.walletFactory().fromAddress({
-					address: transaction.recipient(),
-					coin: transaction.wallet().network().coin(),
-					network: transaction.wallet().network().id(),
+					address,
+					coin,
+					network,
 				});
+
 				await wallet.synchroniser().identity();
 				await wallet.synchroniser().coin();
 
-				const request = aliasRequests[0];
-				request.username = wallet.username();
+				return {
+					wallet,
+					...getWalletAlias({
+						address,
+						network: transaction.wallet().network(),
+						profile,
+						username: wallet.username(),
+					}),
+				};
+			} catch {
+				return {
+					address,
+					alias: "",
+					isContact: false,
+				};
 			}
+		};
 
-			const results = aliasRequests.map((request) => getWalletAlias(request));
-			setRecipients(results);
+		const fetchRecipients = async () => {
+			// Set fallback recipients immediately
+			const fallbackRecipients = recipientAddresses.map(({ address }) => ({
+				address,
+				alias: "",
+				isContact: false,
+			}));
+			setRecipients(fallbackRecipients);
+
+			// Fetch all wallet data in parallel
+			const results = await Promise.allSettled(
+				recipientAddresses.map((addressData) => fetchWalletFromAddress(addressData))
+			);
+
+
+			const validRecipients = results
+				.filter((result): result is PromiseFulfilledResult<{wallet: IReadWriteWallet, address: string, alias: string, isContact: boolean}> => 
+					result.status === "fulfilled"
+				)
+				.map((result) => result.value);
+
+			setRecipients(validRecipients);
 		};
 
 		fetchRecipients();
-	}, [aliasRequests, transaction, profile, getWalletAlias]);
+	}, [recipientAddresses, profile, transaction, getWalletAlias]);
 
 	return { recipients };
 };
