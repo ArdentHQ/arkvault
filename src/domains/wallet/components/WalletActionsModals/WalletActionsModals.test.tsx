@@ -39,7 +39,7 @@ describe("WalletActionsModals", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletActionsModals
-					wallet={mainnetWallet}
+					wallets={[mainnetWallet]}
 					activeModal={"receive-funds"}
 					setActiveModal={setActiveModal}
 				/>
@@ -59,7 +59,7 @@ describe("WalletActionsModals", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletActionsModals
-					wallet={mainnetWallet}
+					wallets={[mainnetWallet]}
 					activeModal={"wallet-name"}
 					setActiveModal={setActiveModal}
 				/>
@@ -79,7 +79,7 @@ describe("WalletActionsModals", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletActionsModals
-					wallet={mainnetWallet}
+					wallets={[mainnetWallet]}
 					activeModal={"delete-wallet"}
 					setActiveModal={setActiveModal}
 				/>
@@ -99,7 +99,7 @@ describe("WalletActionsModals", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletActionsModals
-					wallet={mainnetWallet}
+					wallets={[mainnetWallet]}
 					activeModal={"transaction-history"}
 					setActiveModal={setActiveModal}
 				/>

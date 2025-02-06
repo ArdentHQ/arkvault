@@ -10,7 +10,7 @@ export type WalletActionsModalType =
 	| "transaction-history";
 
 export interface WalletActionsProperties {
-	wallet: Contracts.IReadWriteWallet;
+	wallets: Contracts.IReadWriteWallet[];
 	activeModal: WalletActionsModalType | undefined;
 	setActiveModal: (modal: WalletActionsModalType | undefined) => void;
 	onUpdateWallet?: () => void;

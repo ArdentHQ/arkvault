@@ -10,13 +10,14 @@ export enum ExportProgressStatus {
 
 export interface TransactionExportModalProperties {
 	isOpen: boolean;
-	wallet: Contracts.IReadWriteWallet;
+	wallets: Contracts.IReadWriteWallet[];
 	onClose: () => void;
 }
 
 export interface TransactionExportFormProperties {
-	wallet: Contracts.IReadWriteWallet;
+	wallets: Contracts.IReadWriteWallet[];
 	onCancel: () => void;
+	profile: Contracts.IProfile;
 }
 
 export interface TransactionExportProgressProperties {

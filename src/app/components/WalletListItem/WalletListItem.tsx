@@ -57,7 +57,7 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 					<tr>
 						<td>
 							<WalletActionsModals
-								wallet={wallet}
+								wallets={[wallet]}
 								activeModal={activeModal}
 								setActiveModal={setActiveModal}
 							/>

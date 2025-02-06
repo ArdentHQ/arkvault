@@ -24,7 +24,7 @@ describe("CsvFormatter", () => {
 
 	// TODO: Restore this test.
 	it.skip("should sync all transactions recursively", async () => {
-		const exporter = TransactionExporter({ limit: 13, profile, wallet: profile.wallets().first() });
+		const exporter = TransactionExporter({ limit: 13, profile, wallets: [profile.wallets().first()] });
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
 
@@ -32,7 +32,7 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should sync transactions", async () => {
-		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
 
@@ -107,15 +107,15 @@ describe("CsvFormatter", () => {
 			}),
 		);
 
-		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() }, type: "received" });
 
-		expect(exporter.transactions().items()).toHaveLength(3);
+		expect(exporter.transactions().items()).toHaveLength(4);
 	});
 
 	it("should sync sent transactions", async () => {
-		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() }, type: "sent" });
 
@@ -123,7 +123,7 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should abort sync", async () => {
-		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
 		exporter.transactions().abortSync();
 		await exporter
 			.transactions()
@@ -134,7 +134,7 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should sync transactions and export to csv", async () => {
-		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
 

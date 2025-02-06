@@ -16,19 +16,19 @@ import { toasts } from "@/app/services";
 import { useActiveProfile } from "@/app/hooks";
 import { Form } from "@/app/components/Form";
 
-export const TransactionExportModal = ({ wallet, isOpen, onClose }: TransactionExportModalProperties) => {
+export const TransactionExportModal = ({ wallets, isOpen, onClose }: TransactionExportModalProperties) => {
 	const { t } = useTranslation();
 
 	const profile = useActiveProfile();
 
 	const { count, finalCount, file, startExport, cancelExport, status, resetStatus, error } = useTransactionExport({
 		profile,
-		wallet,
+		wallets,
 	});
 
 	const form = useTransactionExportForm();
 
-	const showFiatColumn = wallet.network().isLive();
+	const showFiatColumn = wallets[0].network().isLive();
 
 	useEffect(() => {
 		if (showFiatColumn) {
@@ -53,7 +53,7 @@ export const TransactionExportModal = ({ wallet, isOpen, onClose }: TransactionE
 			<Form context={form} onSubmit={handleSubmit} className="mt-8">
 				<Tabs activeId={status}>
 					<TabPanel tabId={ExportProgressStatus.Idle}>
-						<TransactionExportForm wallet={wallet} onCancel={onClose} />
+						<TransactionExportForm profile={profile} wallets={wallets} onCancel={onClose} />
 					</TabPanel>
 
 					<TabPanel tabId={ExportProgressStatus.Progress}>
