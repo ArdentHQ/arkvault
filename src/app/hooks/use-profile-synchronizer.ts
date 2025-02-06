@@ -236,9 +236,9 @@ export const useProfileRestore = () => {
 
 	const restoreProfileConfig = (profile: Contracts.IProfile) => {
 		const defaultConfiguration: DashboardConfiguration = {
+			activeNetworkId: undefined,
 			selectedAddresses: [],
 			selectedNetworkIds: [],
-			walletsDisplayType: "all",
 		};
 
 		const config = profile
