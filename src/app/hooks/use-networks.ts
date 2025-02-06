@@ -37,3 +37,11 @@ export const useNetworks = ({
 		return sortNetworks(profile.availableNetworks());
 	}, [profile, filter, isProfileRestored]);
 };
+
+export const useProfileNetworks = ({ profile, }: { profile: Contracts.IProfile; }): Networks.Network[] => {
+	if (profile.status().isRestored()) {
+		return profile.availableNetworks()
+	}
+
+	return []
+};
