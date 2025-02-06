@@ -47,7 +47,7 @@ export const useTransactionRecipients = ({
 				const wallet = await profile.walletFactory().fromAddress({
 					address: transaction.recipient(),
 					coin: transaction.wallet().network().coin(),
-					network: transaction.wallet().network().id()
+					network: transaction.wallet().network().id(),
 				});
 				await wallet.synchroniser().identity();
 				await wallet.synchroniser().coin();
