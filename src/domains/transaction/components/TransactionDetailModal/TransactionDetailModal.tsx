@@ -49,7 +49,7 @@ export const TransactionDetailContent = ({
 		transaction,
 	});
 	const { recipients } = useTransactionRecipients({ profile, transaction });
-
+	console.log({ recipients });
 	const labelClassName = cn({
 		"min-w-24": !transaction.isVoteCombination(),
 		"min-w-32": transaction.isVoteCombination(),
@@ -72,7 +72,7 @@ export const TransactionDetailContent = ({
 						network={transaction.wallet().network()}
 						recipients={recipients.map(({ address, alias }) => ({
 							address,
-							alias: isContractTransaction(transaction) ? undefined : alias,
+							alias,
 							isContract: isContractTransaction(transaction),
 						}))}
 						labelClassName={labelClassName}

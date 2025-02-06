@@ -20,7 +20,6 @@ export const useTransactionRecipients = ({
 				address: transaction.recipient(),
 				network: transaction.wallet().network(),
 				profile,
-				username: transaction.wallet().username(),
 			});
 		}
 		if (transaction.isMultiPayment()) {
@@ -48,10 +47,13 @@ export const useTransactionRecipients = ({
 				const wallet = await profile.walletFactory().fromAddress({
 					address: transaction.recipient(),
 					coin: transaction.wallet().network().coin(),
-					network: transaction.wallet().network().id(),
+					network: transaction.wallet().network().id()
 				});
 				await wallet.synchroniser().identity();
 				await wallet.synchroniser().coin();
+
+				const request = aliasRequests[0];
+				request.username = wallet.username();
 			}
 
 			const results = aliasRequests.map((request) => getWalletAlias(request));
