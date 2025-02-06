@@ -117,7 +117,7 @@ describe("TransactionExportModal", () => {
 
 	it("should render error status", async () => {
 		const transactionIndexMock = vi.spyOn(profile.transactionAggregate(), "received").mockImplementation(() => {
-			throw new Error("error")
+			throw new Error("error");
 		});
 
 		const { asFragment } = render(
