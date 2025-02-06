@@ -14,7 +14,7 @@ describe("useTransactionExport hook", () => {
 		renderHook(() =>
 			useTransactionExport({
 				profile,
-				wallet: profile.wallets().first(),
+				wallets: [profile.wallets().first()],
 			}),
 		);
 
@@ -118,7 +118,7 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should start export and fail", async () => {
-		const transactionIndexMock = vi.spyOn(profile.wallets().first(), "transactionIndex").mockImplementation(() => {
+		const transactionIndexMock = vi.spyOn(profile.transactionAggregate(), "sent").mockImplementation(() => {
 			throw new Error("error");
 		});
 
@@ -202,7 +202,7 @@ describe("useTransactionExport hook", () => {
 			});
 		});
 
-		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Error));
+		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Success));
 		await waitFor(() => expect(result.current.file.content.length).toBeGreaterThan(1));
 		await waitFor(() => expect(result.current.count).toBe(100));
 

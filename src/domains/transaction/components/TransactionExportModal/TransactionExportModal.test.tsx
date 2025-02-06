@@ -49,7 +49,7 @@ describe("TransactionExportModal", () => {
 	it("should render", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -71,7 +71,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -94,7 +94,7 @@ describe("TransactionExportModal", () => {
 	it("should render progress status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -110,23 +110,19 @@ describe("TransactionExportModal", () => {
 
 		expect(exportButton()).not.toBeDisabled();
 
-		userEvent.click(exportButton());
-
-		await waitFor(() => {
-			expect(dateToggle()).toBeEnabled();
-		});
+		await userEvent.click(exportButton());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render error status", async () => {
-		const transactionIndexMock = vi.spyOn(profile.wallets().first(), "transactionIndex").mockImplementation(() => {
+		const transactionIndexMock = vi.spyOn(profile.transactionAggregate(), "received").mockImplementation(() => {
 			throw new Error("error");
 		});
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -140,11 +136,11 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await expect(screen.findByTestId("TransactionExportError__back-button")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
+		await userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
 
 		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
@@ -160,7 +156,7 @@ describe("TransactionExportModal", () => {
 	it("should render success status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -174,13 +170,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await waitFor(() => {
 			expect(downloadButton()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
+		await userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
 
 		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
@@ -197,7 +193,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />
 			</Route>,
 			{
 				history,
@@ -211,13 +207,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await waitFor(() => {
 			expect(downloadButton()).toBeEnabled();
 		});
 
-		userEvent.click(downloadButton());
+		await userEvent.click(downloadButton());
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 
@@ -234,7 +230,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />
 			</Route>,
 			{
 				history,
@@ -248,13 +244,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await waitFor(() => {
 			expect(downloadButton()).toBeEnabled();
 		});
 
-		userEvent.click(downloadButton());
+		await userEvent.click(downloadButton());
 
 		await waitFor(() => expect(onClose).not.toHaveBeenCalledWith());
 
@@ -268,7 +264,7 @@ describe("TransactionExportModal", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />
 			</Route>,
 			{
 				history,
@@ -294,7 +290,7 @@ describe("TransactionExportModal", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
+				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,

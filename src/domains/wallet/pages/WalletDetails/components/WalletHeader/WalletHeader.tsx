@@ -275,7 +275,7 @@ export const WalletHeader = ({
 			/>
 
 			<WalletActionsModals
-				wallet={wallet}
+				wallets={[wallet]}
 				activeModal={activeModal}
 				setActiveModal={setActiveModal}
 				onUpdateWallet={() => {
