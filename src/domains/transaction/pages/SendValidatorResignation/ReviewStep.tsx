@@ -9,6 +9,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export const ReviewStep = ({
 	senderWallet,
@@ -20,6 +21,10 @@ export const ReviewStep = ({
 	const { t } = useTranslation();
 
 	const { getValues, unregister } = useFormContext();
+
+	const { gasPrice, gasLimit } = getValues();
+
+	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -73,7 +78,7 @@ export const ReviewStep = ({
 				<div className="mx-3 mt-2 sm:mx-0">
 					<TotalAmountBox
 						amount={0}
-						fee={getValues("fee")}
+						fee={fee}
 						ticker={senderWallet.currency()}
 						convertValues={!senderWallet.network().isTest()}
 					/>

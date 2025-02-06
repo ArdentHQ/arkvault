@@ -25,9 +25,8 @@ import {
 	signValidatorRegistration,
 } from "@/domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
-import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
+import { useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
@@ -60,7 +59,7 @@ export const SendRegistration = () => {
 	const { formState, register, setValue, watch, getValues } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const { fee, fees, isLoading, senderAddress } = watch();
+	const { fees, isLoading, senderAddress } = watch();
 
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
@@ -99,8 +98,8 @@ export const SendRegistration = () => {
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
 
-	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-		useFeeConfirmation(fee, fees);
+	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+	// 	useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		if (!activeWallet) {
@@ -211,15 +210,16 @@ export const SendRegistration = () => {
 		setActiveTab(activeTab - 1);
 	};
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const handleNext = (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
 
-		if (isNextStepAuthentication && requireFeeConfirmation && !suppressWarning) {
-			return setShowFeeWarning(true);
-		}
+		// if (isNextStepAuthentication && requireFeeConfirmation && !suppressWarning) {
+		// 	return setShowFeeWarning(true);
+		// }
 
 		// Skip authentication step
 		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
@@ -300,16 +300,16 @@ export const SendRegistration = () => {
 							)}
 						</Tabs>
 
-						<FeeWarning
-							isOpen={showFeeWarning}
-							variant={feeWarningVariant}
-							onCancel={(suppressWarning: boolean) =>
-								dismissFeeWarning(() => setActiveTab(1), suppressWarning)
-							}
-							onConfirm={(suppressWarning: boolean) =>
-								dismissFeeWarning(() => handleNext(true), suppressWarning)
-							}
-						/>
+						{/*<FeeWarning*/}
+						{/*	isOpen={showFeeWarning}*/}
+						{/*	variant={feeWarningVariant}*/}
+						{/*	onCancel={(suppressWarning: boolean) =>*/}
+						{/*		dismissFeeWarning(() => setActiveTab(1), suppressWarning)*/}
+						{/*	}*/}
+						{/*	onConfirm={(suppressWarning: boolean) =>*/}
+						{/*		dismissFeeWarning(() => handleNext(true), suppressWarning)*/}
+						{/*	}*/}
+						{/*/>*/}
 					</Form>
 				</StepsProvider>
 			</Section>

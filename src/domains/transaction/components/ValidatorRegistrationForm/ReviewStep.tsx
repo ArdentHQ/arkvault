@@ -9,6 +9,7 @@ import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export const ReviewStep = ({
 	wallet,
@@ -19,10 +20,11 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister, watch } = useFormContext();
+	const { getValues, unregister } = useFormContext();
 
-	const [defaultFee] = useState(() => watch("fee"));
-	const fee = getValues("fee") ?? defaultFee;
+	const  {gasPrice, gasLimit} = getValues();
+
+	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	useEffect(() => {
 		unregister("mnemonic");
