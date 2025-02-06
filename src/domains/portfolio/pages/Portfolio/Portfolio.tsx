@@ -9,7 +9,7 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 export const Portfolio = () => {
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
-	const activeNetwork = useActiveNetwork({ profile })
+	const activeNetwork = useActiveNetwork({ profile });
 
 	if (!activeNetwork || profile.wallets().count() === 0) {
 		if (profile.status().isRestored()) {
