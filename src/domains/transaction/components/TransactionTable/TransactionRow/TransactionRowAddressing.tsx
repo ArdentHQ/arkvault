@@ -9,6 +9,7 @@ import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";
 import { Link } from "@/app/components/Link";
 import { isContractDeployment, isContractTransaction } from "@/domains/transaction/utils";
+import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction, style }: { direction: Direction; style?: Direction }) => {
@@ -140,28 +141,41 @@ export const TransactionRowAddressing = ({
 		direction = "return";
 	}
 
-	const { alias } = useMemo(
-		() =>
-			getWalletAlias({
-				address: isNegative ? transaction.recipient() : transaction.sender(),
-				network: transaction.wallet().network(),
-				profile,
-				username: transaction.wallet().username(),
-			}),
-		[profile, getWalletAlias, transaction],
-	);
+	const { recipients } = useTransactionRecipients({ profile, transaction });
 
-	const { alias: senderAlias } = useMemo(
-		() =>
-			isAdvanced && variant === "sender"
-				? getWalletAlias({
-						address: transaction.sender(),
-						network: transaction.wallet().network(),
-						profile,
-					})
-				: { alias: undefined },
-		[profile, getWalletAlias, transaction, isAdvanced, variant],
-	);
+	const network = transaction.wallet().network();
+	const recipientAddress = transaction.recipient();
+	const senderAddress = transaction.sender();
+
+	const recipientAlias = useMemo(() => {
+		const found = recipients.find((r) => r.address === recipientAddress);
+		if (found && found.alias) {
+			return found.alias;
+		}
+		const result = getWalletAlias({
+			address: recipientAddress,
+			network,
+			profile,
+		});
+		return result.alias;
+	}, [recipients, recipientAddress, network, profile, getWalletAlias]);
+
+	const senderAlias = useMemo(() => {
+		const result = getWalletAlias({
+			address: senderAddress,
+			network,
+			profile,
+			username: transaction.username(),
+		});
+		return result.alias;
+	}, [senderAddress, network, profile, getWalletAlias]);
+
+	const alias = useMemo(() => {
+		if (isAdvanced) {
+			return variant === "sender" ? senderAlias : recipientAlias;
+		}
+		return isNegative ? recipientAlias : senderAlias;
+	}, [isAdvanced, variant, isNegative, senderAlias, recipientAlias]);
 
 	if (isAdvanced && variant === "sender") {
 		return (
@@ -170,7 +184,7 @@ export const TransactionRowAddressing = ({
 				data-testid="TransactionRowAddressing__container_advanced_sender"
 			>
 				<TransactionRowLabel direction="received" style="return" />
-				<FormattedAddress address={transaction.sender()} alias={senderAlias} />
+				<FormattedAddress address={senderAddress} alias={senderAlias} />
 			</div>
 		);
 	}
@@ -184,7 +198,7 @@ export const TransactionRowAddressing = ({
 				>
 					<TransactionRowLabel direction="sent" style="return" />
 					<Link
-						to={transaction.wallet().coin().link().wallet(transaction.recipient())}
+						to={transaction.wallet().coin().link().wallet(recipientAddress)}
 						isExternal
 						showExternalIcon={false}
 						className="text-sm font-semibold"
@@ -201,7 +215,7 @@ export const TransactionRowAddressing = ({
 				data-testid="TransactionRowAddressing__container_advanced_recipient"
 			>
 				<TransactionRowLabel direction="sent" style="return" />
-				<FormattedAddress address={transaction.recipient()} alias={alias} />
+				<FormattedAddress address={recipientAddress} alias={recipientAlias} />
 			</div>
 		);
 	}
@@ -225,7 +239,7 @@ export const TransactionRowAddressing = ({
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__container">
 			<TransactionRowLabel direction={direction} />
-			<FormattedAddress address={isNegative ? transaction.recipient() : transaction.sender()} alias={alias} />
+			<FormattedAddress address={isNegative ? recipientAddress : senderAddress} alias={alias} />
 		</div>
 	);
 };
