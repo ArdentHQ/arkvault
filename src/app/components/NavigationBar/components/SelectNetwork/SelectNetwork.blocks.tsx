@@ -5,8 +5,8 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 
 export enum NetworkOption {
-	Mainnet = "Mainnet",
-	Testnet = "Testnet",
+	Mainnet = "mainsail.mainnet",
+	Testnet = "mainsail.devnet",
 }
 
 export const MainnetOption = () => (
@@ -59,7 +59,7 @@ export const SelectNetworkToggleButton = ({ isOpen, isMainnet }: { isOpen?: bool
 	</Button>
 );
 
-export const selectNetworkOptions = (isMainnet: boolean): DropdownOption[] => [
+export const selectNetworkOptions = ({ isMainnet }: { isMainnet: boolean }): DropdownOption[] => [
 	{
 		element: (
 			<NetworkDropdownOption isSelected={isMainnet}>

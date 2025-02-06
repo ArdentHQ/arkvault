@@ -1,22 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { Dropdown } from "@/app/components/Dropdown";
-import { NetworkOption, selectNetworkOptions, SelectNetworkToggleButton } from "./SelectNetwork.blocks";
+import { selectNetworkOptions, SelectNetworkToggleButton } from "./SelectNetwork.blocks";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const SelectNetwork = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { persist } = useEnvironmentContext();
-	const isTestnetEnabled = profile.settings().get(Contracts.ProfileSetting.IsTestnetEnabled)
+	const { activeNetwork, setActiveNetwork } = useActiveNetwork({ profile })
+	const isMainnet = activeNetwork?.isLive()
 
 	return (
 		<div>
 			<Dropdown
-				toggleContent={(isOpen) => <SelectNetworkToggleButton isOpen={isOpen} isMainnet={!isTestnetEnabled} />}
+				toggleContent={(isOpen) => <SelectNetworkToggleButton isOpen={isOpen} isMainnet={isMainnet} />}
 				onSelect={async (option) => {
-					profile.settings().set(Contracts.ProfileSetting.IsTestnetEnabled, option.value === NetworkOption.Testnet)
-					await persist()
+					await setActiveNetwork(option.value)
 				}}
-				options={selectNetworkOptions(!isTestnetEnabled)}
+				options={selectNetworkOptions({ isMainnet })}
 			/>
 		</div>
 	);

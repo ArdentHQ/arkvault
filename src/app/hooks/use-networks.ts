@@ -45,13 +45,3 @@ export const useProfileNetworks = ({ profile }: { profile: Contracts.IProfile })
 
 	return [];
 };
-
-export const useProfileActiveNetwork = ({ profile }: { profile: Contracts.IProfile }): Networks.Network | undefined => {
-	const isTestnetEnabled = profile.settings().get(Contracts.ProfileSetting.IsTestnetEnabled)
-
-	if (isTestnetEnabled) {
-		return profile.availableNetworks().find(network => network.isTest())
-	}
-
-	return profile.availableNetworks().find(network => network.isLive())
-};
