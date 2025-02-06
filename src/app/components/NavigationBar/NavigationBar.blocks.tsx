@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { ReactElement, useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, NavLink, useHistory } from "react-router-dom";
 import cn from "classnames";
@@ -28,6 +28,7 @@ import { Logo } from "@/app/components/Logo";
 import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
+import { SelectNetwork } from "./components/SelectNetwork";
 
 const NavWrapper = ({
 	noBorder,
@@ -177,76 +178,6 @@ const NavigationBarMobile: React.VFC<{
 		</NavigationBarMobileWrapper>
 	);
 };
-
-
-const NavigationNetworkSelection = () => {
-	const [isMainnet, setIsMainnet] = useState(true)
-
-	const MainnetOption = () => (
-		<>
-			<span className="bg-theme-primary-50 dark:bg-theme-dark-900 border-2 border-theme-primary-300 dark:border-theme-primary-500 rounded-sm p-[3px] text-theme-primary-600">
-				<Icon name="Mainnet" width={14} height={14} />
-			</span>
-
-			<span className="text-sm">Mainnet</span>
-		</>
-	)
-
-	const TestnetOption = () => (
-		<>
-			<span className="bg-theme-warning-50 dark:bg-transparent border-2 border-theme-warning-300 dark:border-theme-danger-info-border rounded-sm p-[3px] text-theme-warning-600 dark:text-theme-danger-info-text ">
-				<Icon name="Testnet" width={14} height={14} />
-			</span>
-
-			<span className="text-sm">Testnet</span>
-		</>
-	)
-
-	const NetworkDropdownOption = ({ isSelected, children }: { isSelected?: boolean, children: ReactElement }) => (
-		<div className="flex items-center justify-between min-w-40">
-			<div className="flex items-center space-x-2">
-				{children}
-			</div>
-
-			{isSelected && <Icon name="CheckmarkDouble" className="text-theme-primary-600 dark:text-theme-text" />}
-		</div>
-	)
-
-	return (
-		<div>
-			<Dropdown
-				toggleContent={(isOpen) => (
-					<Button
-						className="text-theme-secondary-900 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 hover:bg-theme-primary-100 hover:text-theme-primary-600 dark:hover:bg-theme-secondary-800"
-						data-testid="NavigationBar__buttons--network"
-						size="icon"
-						variant="transparent"
-					>
-						{isMainnet && (
-							<MainnetOption />
-						)}
-
-						{!isMainnet && (
-							<TestnetOption />
-						)}
-
-						<Icon role="img" name="ChevronDownSmall" className={cn("transition-transform", {
-							"rotate-180": isOpen
-						})} size="sm" />
-
-					</Button>
-				)}
-				onSelect={(option) => setIsMainnet(option.value)}
-				options={[{
-					element: <NetworkDropdownOption isSelected={isMainnet}><MainnetOption /></NetworkDropdownOption>,
-					value: true
-				}, {
-					element: <NetworkDropdownOption isSelected={!isMainnet}><TestnetOption /></NetworkDropdownOption>,
-					value: false
-				}]}
-			/>
-		</div>)
-}
 
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	isBackDisabled,
@@ -416,11 +347,10 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 							<NotificationsDropdown profile={profile} />
 
-
 							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && (
 								<div className="hidden md:flex">
 									<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
-									<NavigationNetworkSelection />
+									<SelectNetwork />
 								</div>
 							)}
 

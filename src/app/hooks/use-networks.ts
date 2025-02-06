@@ -38,10 +38,10 @@ export const useNetworks = ({
 	}, [profile, filter, isProfileRestored]);
 };
 
-export const useProfileNetworks = ({ profile, }: { profile: Contracts.IProfile; }): Networks.Network[] => {
+export const useProfileNetworks = ({ profile }: { profile: Contracts.IProfile }): Networks.Network[] => {
 	if (profile.status().isRestored()) {
-		return profile.availableNetworks()
+		return profile.availableNetworks();
 	}
 
-	return []
+	return [];
 };
