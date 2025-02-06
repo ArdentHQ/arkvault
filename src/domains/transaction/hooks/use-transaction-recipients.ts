@@ -18,17 +18,19 @@ export const useTransactionRecipients = ({
 		if (transaction.isMultiPayment()) {
 			return transaction.recipients().map((recipient) => ({
 				address: recipient.address,
-				network: transaction.wallet().network().id(),
 				coin: transaction.wallet().network().coin(),
+				network: transaction.wallet().network().id(),
 			}));
 		}
 
 		if (transaction.isTransfer() || isContractTransaction(transaction)) {
-			return [{
-				address: transaction.recipient(),
-				network: transaction.wallet().network().id(),
-				coin: transaction.wallet().network().coin(),
-			}];
+			return [
+				{
+					address: transaction.recipient(),
+					coin: transaction.wallet().network().coin(),
+					network: transaction.wallet().network().id(),
+				},
+			];
 		}
 
 		return [];
@@ -75,13 +77,19 @@ export const useTransactionRecipients = ({
 
 			// Fetch all wallet data in parallel
 			const results = await Promise.allSettled(
-				recipientAddresses.map((addressData) => fetchWalletFromAddress(addressData))
+				recipientAddresses.map((addressData) => fetchWalletFromAddress(addressData)),
 			);
 
-
 			const validRecipients = results
-				.filter((result): result is PromiseFulfilledResult<{wallet: IReadWriteWallet, address: string, alias: string, isContact: boolean}> => 
-					result.status === "fulfilled"
+				.filter(
+					(
+						result,
+					): result is PromiseFulfilledResult<{
+						wallet: IReadWriteWallet;
+						address: string;
+						alias: string;
+						isContact: boolean;
+					}> => result.status === "fulfilled",
 				)
 				.map((result) => result.value);
 
