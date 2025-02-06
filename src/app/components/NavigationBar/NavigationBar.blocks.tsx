@@ -350,7 +350,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && (
 								<div className="hidden md:flex">
 									<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
-									<SelectNetwork />
+									<SelectNetwork profile={profile} />
 								</div>
 							)}
 

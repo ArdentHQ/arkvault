@@ -4,13 +4,15 @@ import { DashboardEmpty } from "@/domains/dashboard/pages/Dashboard/Dashboard.Em
 import { useActiveProfile } from "@/app/hooks/env";
 import { useTranslation } from "react-i18next";
 import { Dashboard } from "@/domains/dashboard/pages/Dashboard/Dashboard";
+import { useProfileActiveNetwork } from "@/app/hooks";
 
 export const Portfolio = () => {
-	const activeProfile = useActiveProfile();
+	const profile = useActiveProfile();
 	const { t } = useTranslation();
+	const activeNetwork = useProfileActiveNetwork({ profile })
 
-	if (activeProfile.wallets().count() === 0) {
-		if (activeProfile.status().isRestored()) {
+	if (!activeNetwork || profile.wallets().count() === 0) {
+		if (profile.status().isRestored()) {
 			return (
 				<Page pageTitle={t("COMMON.WELCOME")}>
 					<DashboardEmpty />
