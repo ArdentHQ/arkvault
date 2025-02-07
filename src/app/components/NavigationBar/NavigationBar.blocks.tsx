@@ -231,7 +231,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
-							className="cursor-pointer rounded py-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+							className="cursor-pointer rounded py-2 text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
 						>
 							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
 						</button>
@@ -335,6 +335,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 												disabled={wallets.length === 0}
 												size="icon"
 												variant="transparent"
+												className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
 												onClick={receiveButtonClickHandler}
 											>
 												<Icon name="Received" size="lg" className="p-1" />
@@ -353,6 +354,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 												disabled={wallets.length === 0}
 												size="icon"
 												variant="transparent"
+												className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
 												onClick={sendButtonClickHandler}
 											>
 												<Icon name="Sent" size="lg" className="p-1" />

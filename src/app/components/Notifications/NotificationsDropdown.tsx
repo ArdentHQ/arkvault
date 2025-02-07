@@ -21,7 +21,12 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 			<Dropdown
 				toggleContent={
 					<NavigationButtonWrapper className="group">
-						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--notifications">
+						<Button
+							variant="transparent"
+							size="icon"
+							data-testid="NavigationBar__buttons--notifications"
+							className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+						>
 							<Icon name="Bell" size="lg" className="p-1" />
 							{hasUnread && <Dot />}
 						</Button>
