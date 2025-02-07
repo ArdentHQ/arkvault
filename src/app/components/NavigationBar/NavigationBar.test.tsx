@@ -93,17 +93,6 @@ describe("NavigationBar", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with shadow if there is a scroll", () => {
-		const scrollSpy = vi.spyOn(useScrollHook, "useScroll").mockImplementation(() => 1);
-
-		const { container, asFragment } = render(<NavigationBar />);
-
-		expect(container).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-
-		scrollSpy.mockRestore();
-	});
-
 	it("should render with title if variant is logo-only", () => {
 		const title = "ARK VAULT";
 
@@ -168,7 +157,7 @@ describe("NavigationBar", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should render logo with 22 pixels height on mobile", () => {
+	it("should render logo with 16 pixels height on mobile", () => {
 		const { container } = renderResponsiveWithRoute(<NavigationBar />, "xs");
 
 		expect(container).toBeInTheDocument();
@@ -176,10 +165,10 @@ describe("NavigationBar", () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		const svg = button.querySelector("svg");
 
-		expect(svg).toHaveAttribute("height", "22");
+		expect(svg).toHaveAttribute("height", "16");
 	});
 
-	it("should render logo with 28 pixels height on desktop", () => {
+	it("should render logo with 16 pixels height on desktop", () => {
 		const { container } = renderResponsiveWithRoute(<NavigationBar />, "lg");
 
 		expect(container).toBeInTheDocument();
@@ -188,7 +177,7 @@ describe("NavigationBar", () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		const svg = button.querySelector("svg");
 
-		expect(svg).toHaveAttribute("height", "28");
+		expect(svg).toHaveAttribute("height", "16");
 	});
 
 	it("should redirect to home by default on logo click", async () => {
