@@ -7,7 +7,7 @@ export const initializeMainsailNetworks = ({ data }) => {
 
 	data.networks.mainsail = {
 		devnet: Mainsail.manifest.networks["mainsail.devnet"],
-		mainnet: Mainsail.manifest.networks["mainsail.mainnet"]
+		mainnet: Mainsail.manifest.networks["mainsail.mainnet"],
 	};
 
 	data.networks.mainsail.devnet.meta.enabled = true;
