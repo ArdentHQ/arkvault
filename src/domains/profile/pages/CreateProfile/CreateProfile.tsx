@@ -15,7 +15,6 @@ import { ProfilePaths } from "@/router/paths";
 
 export const CreateProfile = () => {
 	const { env, persist } = useEnvironmentContext();
-	const { restoreProfileConfig } = useProfileRestore();
 	const { t } = useTranslation();
 	const history = useHistory();
 
@@ -39,7 +38,6 @@ export const CreateProfile = () => {
 			profile.auth().setPassword(password);
 		}
 
-		restoreProfileConfig(profile);
 		await persist();
 
 		setProfileTheme(profile);

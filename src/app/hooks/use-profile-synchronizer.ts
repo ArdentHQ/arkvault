@@ -231,22 +231,7 @@ export const useProfileSyncStatus = () => {
 export const useProfileRestore = () => {
 	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus();
 	const { persist, env } = useEnvironmentContext();
-	const { setConfiguration } = useConfiguration();
 	const history = useHistory();
-
-	const restoreProfileConfig = (profile: Contracts.IProfile) => {
-		const defaultConfiguration: DashboardConfiguration = {
-			activeNetworkId: undefined,
-			selectedAddresses: [],
-			selectedNetworkIds: [],
-		};
-
-		const config = profile
-			.settings()
-			.get(Contracts.ProfileSetting.DashboardConfiguration, defaultConfiguration) as DashboardConfiguration;
-
-		setConfiguration(config);
-	};
 
 	const restoreProfile = async (profile: Contracts.IProfile, passwordInput?: string) => {
 		if (!shouldRestore(profile)) {
@@ -262,7 +247,6 @@ export const useProfileRestore = () => {
 		markAsRestored(profile.id());
 
 		// Restore profile's config
-		restoreProfileConfig(profile);
 
 		// Profile restore finished but url changed in the meanwhile.
 		// Prevent from unnecessary save of old profile.
@@ -278,7 +262,6 @@ export const useProfileRestore = () => {
 
 	return {
 		restoreProfile,
-		restoreProfileConfig,
 	};
 };
 

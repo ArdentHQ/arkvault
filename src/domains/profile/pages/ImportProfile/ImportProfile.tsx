@@ -10,7 +10,6 @@ import { ReadableFile } from "@/app/hooks/use-files";
 import { ProcessingImport } from "@/domains/profile/pages/ImportProfile/ProcessingImportStep";
 import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
 import { SelectFileStep } from "@/domains/profile/pages/ImportProfile/SelectFileStep";
-import { useProfileRestore } from "@/app/hooks";
 import { SelectedAddresses } from "@/domains/portfolio/hooks/use-portfolio";
 
 enum Step {
@@ -29,7 +28,6 @@ export const ImportProfile = () => {
 	const [selectedFile, setSelectedFile] = useState<ReadableFile>();
 	const [password, setPassword] = useState<string>();
 	const [profile, setProfile] = useState<Contracts.IProfile>();
-	const { restoreProfileConfig } = useProfileRestore();
 
 	const handleSelectedFile = (file: ReadableFile) => {
 		setSelectedFile(file);
@@ -37,17 +35,19 @@ export const ImportProfile = () => {
 	};
 
 	const handleProfileSave = async (submittedProfile) => {
-		restoreProfileConfig(submittedProfile);
+		const availableNetworks = submittedProfile.availableNetworks();
+		for (const network of availableNetworks) {
+			const selectedAddresses = SelectedAddresses({ activeNetwork: network, profile: submittedProfile });
+			// If imported profile doesn't have selected addresses, mark them all as selected.
+			if (!selectedAddresses.hasSelected()) {
+				await selectedAddresses.set(
+					submittedProfile
+						.wallets()
+						.findByCoinWithNetwork(network.coin(), network.id())
+						.map((wallet) => wallet.address()),
+				);
+			}
 
-		const selectedAddresses = SelectedAddresses({ env, profile: submittedProfile });
-		// If imported profile doesn't have selected addresses, mark them all as selected.
-		if (!selectedAddresses.hasSelected()) {
-			await selectedAddresses.set(
-				submittedProfile
-					.wallets()
-					.values()
-					.map((wallet) => wallet.address()),
-			);
 		}
 
 		await persist();

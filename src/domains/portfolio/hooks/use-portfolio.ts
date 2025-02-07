@@ -57,8 +57,6 @@ export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfil
 					.map((wallet) => wallet.address()),
 			);
 
-			console.log({ profileAddresses, selectedAddresses })
-
 			return selectedAddresses.filter((address) => profileAddresses.has(address));
 		},
 
@@ -99,6 +97,11 @@ export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfil
 			const nethash = activeNetwork.meta().nethash
 
 			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, defaultConfig) as DashboardConfiguration;
+
+			if (!config.selectedAddressesByNetwork) {
+				config.selectedAddressesByNetwork = { [nethash]: [] }
+			}
+
 			config.selectedAddressesByNetwork[nethash] = selectedAddresses
 
 			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, config);
