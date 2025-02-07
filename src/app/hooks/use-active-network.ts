@@ -17,7 +17,7 @@ export const useActiveNetwork = ({
 }: {
 	profile: Contracts.IProfile;
 }): {
-	activeNetwork: Networks.Network | undefined;
+	activeNetwork: Networks.Network;
 	setActiveNetwork: (networkId: string) => Promise<void>;
 } => {
 	const environment = useEnvironmentContext();

@@ -25,11 +25,7 @@ import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
-import {
-	enabledNetworksCount,
-	networkDisplayName,
-	profileAllEnabledNetworkIds,
-} from "@/utils/network-utils";
+import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
@@ -192,8 +188,8 @@ export const ImportWallet = () => {
 			}),
 		);
 
+		await setSelectedAddresses([...selectedAddresses, wallet.address()]);
 		await persist();
-		setSelectedAddresses([...selectedAddresses, wallet.address()]);
 
 		setImportedWallet(wallet);
 	};

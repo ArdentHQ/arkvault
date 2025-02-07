@@ -4,10 +4,8 @@ import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contra
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 import { useEnvironmentContext } from "@/app/contexts";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-
-interface PortfolioConfiguration {
-	selectedAddresses: string[];
-}
+import { Networks } from "@ardenthq/sdk";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 	return {
@@ -30,7 +28,7 @@ function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 	};
 }
 
-export function SelectedAddresses({ profile }: { profile: IProfile; }) {
+export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfile; activeNetwork: Networks.Network }) {
 	return {
 		/**
 		 * Returns all the selected profile selected addresses.
@@ -38,13 +36,28 @@ export function SelectedAddresses({ profile }: { profile: IProfile; }) {
 		 * @returns {string[]}
 		 */
 		all(): string[] {
+			const nethash = activeNetwork.meta().nethash
+
 			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
 				selectedAddresses: [],
-			}) as PortfolioConfiguration;
+				selectedAddressesByActiveNetwork: { [nethash]: [] }
+			}) as unknown as DashboardConfiguration;
 
-			const selectedAddresses = config.selectedAddresses ?? [];
-			const addressesByActiveNetwork = this.filterByActiveNetwork(profile.wallets().values())
-			const profileAddresses = new Set(addressesByActiveNetwork.map((wallet) => wallet.address()));
+			if (!config.selectedAddressesByNetwork || !config.selectedAddressesByNetwork[nethash]) {
+				return []
+			}
+
+			const selectedAddresses = config.selectedAddressesByNetwork[nethash]
+
+			const profileAddresses = new Set(
+				profile
+					.wallets()
+					.findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
+					.values()
+					.map((wallet) => wallet.address()),
+			);
+
+			console.log({ profileAddresses, selectedAddresses })
 
 			return selectedAddresses.filter((address) => profileAddresses.has(address));
 		},
@@ -67,15 +80,6 @@ export function SelectedAddresses({ profile }: { profile: IProfile; }) {
 
 			return this.toWallets().at(0);
 		},
-		filterByActiveNetwork(wallets: Contracts.IReadWriteWallet[]) {
-			const { activeNetworkId } = (profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration) ?? { activeNetworkId: undefined };
-
-			if (!activeNetworkId) {
-				return wallets
-			}
-
-			return wallets.filter(wallet => wallet.network().id() === activeNetworkId)
-		},
 		/**
 		 * Determines whether the profile has a selected address.
 		 *
@@ -91,11 +95,13 @@ export function SelectedAddresses({ profile }: { profile: IProfile; }) {
 		 * @returns {Promise<void>}
 		 */
 		set(selectedAddresses: string[]): void {
-			const config = (profile
-				.settings()
-				.get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration);
+			const defaultConfig = { selectedAddressesByNetwork: { [activeNetwork.meta().nethash]: [] } }
+			const nethash = activeNetwork.meta().nethash
 
-			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, { ...config, selectedAddresses });
+			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, defaultConfig) as DashboardConfiguration;
+			config.selectedAddressesByNetwork[nethash] = selectedAddresses
+
+			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, config);
 		},
 		/**
 		 * Returns the selected addresses as wallets.
@@ -104,21 +110,22 @@ export function SelectedAddresses({ profile }: { profile: IProfile; }) {
 		 */
 		toWallets(): IReadWriteWallet[] {
 			const selected = this.all();
-			const walletsByNetwork = this.filterByActiveNetwork(profile.wallets().values())
 
-			return walletsByNetwork.filter((wallet) => selected.includes(wallet.address()));
+			return profile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
+				.filter((wallet) => selected.includes(wallet.address()));
 		},
 	};
 }
 
 export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { persist } = useEnvironmentContext();
-	const addresses = SelectedAddresses({ profile });
+	const { activeNetwork } = useActiveNetwork({ profile })
+	const addresses = SelectedAddresses({ activeNetwork, profile });
 	const wallets = addresses.toWallets();
 	const balance = Balance({ wallets });
 
 	return {
-		allWallets: addresses.filterByActiveNetwork(profile.wallets().values()),
+		allWallets: profile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id()),
 		balance,
 		selectedAddresses: addresses.all(),
 		selectedWallet: addresses.defaultSelectedWallet(),

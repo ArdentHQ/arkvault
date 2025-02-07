@@ -1,5 +1,5 @@
 export interface DashboardConfiguration {
-	selectedNetworkIds: string[];
 	selectedAddresses?: string[];
+	selectedAddressesByNetwork: Record<string, string[]>;
 	activeNetworkId?: string;
 }
