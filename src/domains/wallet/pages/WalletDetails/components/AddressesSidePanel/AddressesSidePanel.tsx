@@ -22,7 +22,7 @@ export const AddressesSidePanel = ({
 	onClose,
 	onDelete,
 }: {
-	wallets: IWalletRepository;
+	wallets: Contracts.IReadWriteWallet[];
 	defaultSelectedAddresses: string[];
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
@@ -91,7 +91,6 @@ export const AddressesSidePanel = ({
 	};
 
 	const addressesToShow = wallets
-		.values()
 		.filter((wallet) => !addressesToDelete.includes(wallet.address()))
 		.filter((wallet) => {
 			if (!searchQuery) {

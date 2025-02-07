@@ -4,6 +4,7 @@ import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contra
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useEffect } from "react";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 
 interface PortfolioConfiguration {
 	selectedAddresses: string[];
@@ -43,15 +44,12 @@ export function SelectedAddresses({ profile, env }: { profile: IProfile; env: En
 			}) as PortfolioConfiguration;
 
 			const selectedAddresses = config.selectedAddresses ?? [];
-			const profileAddresses = new Set(
-				profile
-					.wallets()
-					.values()
-					.map((wallet) => wallet.address()),
-			);
+			const addressesByActiveNetwork = this.filterByActiveNetwork(profile.wallets().values())
+			const profileAddresses = new Set(addressesByActiveNetwork.map((wallet) => wallet.address()));
 
 			return selectedAddresses.filter((address) => profileAddresses.has(address));
 		},
+
 		/**
 		 * Find the default selected wallet.
 		 * Returns the first available wallet if profile hasn't stored any selection yet.
@@ -69,6 +67,15 @@ export function SelectedAddresses({ profile, env }: { profile: IProfile; env: En
 			}
 
 			return this.toWallets().at(0);
+		},
+		filterByActiveNetwork(wallets: Contracts.IReadWriteWallet[]) {
+			const { activeNetworkId } = (profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration) ?? { activeNetworkId: undefined };
+
+			if (!activeNetworkId) {
+				return wallets
+			}
+
+			return wallets.filter(wallet => wallet.network().id() === activeNetworkId)
 		},
 		/**
 		 * Determines whether the profile has a selected address.
@@ -95,18 +102,9 @@ export function SelectedAddresses({ profile, env }: { profile: IProfile; env: En
 		 */
 		toWallets(): IReadWriteWallet[] {
 			const selected = this.all();
+			const walletsByNetwork = this.filterByActiveNetwork(profile.wallets().values())
 
-			const wallets = profile
-				.wallets()
-				.values()
-				.filter((wallet) => selected.includes(wallet.address()));
-
-			if (wallets.length === 0) {
-				// TODO: Define default active wallet none are selected.
-				return [profile.wallets().first()];
-			}
-
-			return wallets;
+			return walletsByNetwork.filter((wallet) => selected.includes(wallet.address()));
 		},
 	};
 }
@@ -126,9 +124,14 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 		}
 	}, [selectedAddresses, allAddresses]);
 
+
 	return {
+		allWallets: addresses.filterByActiveNetwork(profile.wallets().values()),
 		balance,
-		selectedAddresses,
+		selectedAddresses: selectedAddresses.filter(selectedAddress => {
+			const addressesByNetwork = wallets.map(wallet => wallet.address())
+			return addressesByNetwork.includes(selectedAddress)
+		}),
 		selectedWallet: addresses.defaultSelectedWallet(),
 		selectedWallets: wallets,
 		setSelectedAddresses: async (selectedAddresses: string[]) => {
