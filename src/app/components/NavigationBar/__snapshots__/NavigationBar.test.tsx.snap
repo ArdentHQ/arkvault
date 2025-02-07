@@ -370,7 +370,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -937,7 +937,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -1455,7 +1455,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -1973,7 +1973,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -2491,7 +2491,7 @@ exports[`NavigationBar > should render in md 1`] = `
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -3009,7 +3009,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -3527,7 +3527,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -4045,7 +4045,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -4563,7 +4563,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                       class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
