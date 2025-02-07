@@ -53,7 +53,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	}, [history]);
 
 	return (
-		<div className="my-auto flex items-center">
+		<div className="my-auto flex items-center h-12">
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
@@ -63,7 +63,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 				<Logo height={16} />
 			</button>
 
-			{title && <span className="text-lg uppercase">{title}</span>}
+			{title && <span className="ml-4 text-lg uppercase">{title}</span>}
 		</div>
 	);
 };
