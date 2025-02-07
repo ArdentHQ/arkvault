@@ -112,7 +112,7 @@ export const CreateWallet = () => {
 	};
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || activeTab === Step.WalletOverviewStep) {
+		if (activeTab === Step.WalletOverviewStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -261,7 +261,7 @@ export const CreateWallet = () => {
 										<Button
 											data-testid="CreateWallet__continue-button"
 											disabled={isDirty ? !isValid || isGeneratingWallet : true}
-											isLoading={isGeneratingWallet && activeTab === Step.NetworkStep}
+											isLoading={isGeneratingWallet}
 											onClick={() => handleNext()}
 										>
 											{t("COMMON.CONTINUE")}

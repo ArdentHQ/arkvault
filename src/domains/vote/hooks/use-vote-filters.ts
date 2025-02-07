@@ -56,7 +56,7 @@ export const useVoteFilters = ({
 			return true;
 		}
 
-		return selectedNetworkIds.length < defaultConfiguration.selectedNetworkIds.length;
+		return false
 	}, [walletsDisplayType, selectedNetworkIds, defaultConfiguration]);
 
 	const filterProperties = {

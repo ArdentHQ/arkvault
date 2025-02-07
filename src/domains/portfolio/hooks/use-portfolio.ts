@@ -53,7 +53,6 @@ export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfil
 				profile
 					.wallets()
 					.findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
-					.values()
 					.map((wallet) => wallet.address()),
 			);
 

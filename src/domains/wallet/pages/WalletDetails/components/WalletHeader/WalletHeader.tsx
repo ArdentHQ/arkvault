@@ -264,7 +264,7 @@ export const WalletHeader = ({
 			</div>
 
 			<AddressesSidePanel
-				wallets={profile.wallets()}
+				wallets={profile.wallets().values()}
 				defaultSelectedAddresses={addresses}
 				onClose={setAddresses}
 				open={showAddressesPanel}
