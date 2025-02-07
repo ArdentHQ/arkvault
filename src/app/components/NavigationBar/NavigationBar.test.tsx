@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
 import * as environmentHooks from "@/app/hooks/env";
-import * as useScrollHook from "@/app/hooks/use-scroll";
 import { useNavigationContext } from "@/app/contexts";
 import {
 	env as mockedTestEnvironment,

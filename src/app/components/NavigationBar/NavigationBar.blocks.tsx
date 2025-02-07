@@ -9,14 +9,13 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { BackButton } from "@/app/components/NavigationBar/components/BackButton";
-import { Balance } from "@/app/components/NavigationBar/components/Balance";
 import { UserMenu } from "@/app/components/NavigationBar/components/UserMenu/UserMenu";
 import { NotificationsDropdown } from "@/app/components/Notifications";
 import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
 import { Tooltip } from "@/app/components/Tooltip";
 import { getNavigationMenu } from "@/app/constants/navigation";
-import { useConfiguration, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useInputFocus, useScroll } from "@/app/hooks";
+import { useNavigationContext } from "@/app/contexts";
+import { useActiveProfile, useBreakpoint, useInputFocus } from "@/app/hooks";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
@@ -29,16 +28,11 @@ import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 
-const NavWrapper = ({
-	noBorder,
-	noShadow,
-	scroll,
-	...props
-}: React.HTMLProps<HTMLDivElement> & { noBorder?: boolean; noShadow?: boolean; scroll?: number }) => (
+const NavWrapper = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
 	<nav
 		{...props}
 		className={twMerge(
-			"custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white border-b border-b-theme-secondary-300 transition-all duration-200 h-12 dark:bg-theme-dark-900 dark:border-b-theme-dark-700",
+			"custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900",
 			props.className,
 		)}
 	/>
@@ -74,19 +68,15 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	);
 };
 
-export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> = ({ title }) => {
-	const scroll = useScroll();
-
-	return (
-		<NavWrapper aria-labelledby="main menu" noBorder scroll={scroll}>
-			<div className="relative flex">
-				<div className="flex flex-1 px-6 md:px-10">
-					<NavigationBarLogo title={title} />
-				</div>
+export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> = ({ title }) => (
+	<NavWrapper aria-labelledby="main menu">
+		<div className="relative flex">
+			<div className="flex flex-1 px-6 md:px-10">
+				<NavigationBarLogo title={title} />
 			</div>
-		</NavWrapper>
-	);
-};
+		</div>
+	</NavWrapper>
+);
 
 const NavigationBarMobileWrapper = ({
 	hasFixedFormButtons,
@@ -179,7 +169,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const history = useHistory();
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
-	const scroll = useScroll();
 	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
 	const { showSupportChat } = useZendesk();
@@ -199,8 +188,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	}, [isLg, isMd]);
 
 	const { hasFixedFormButtons, showMobileNavigation } = useNavigationContext();
-
-	const { profileIsSyncingExchangeRates } = useConfiguration();
 
 	const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);
 
@@ -229,7 +216,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<NavLink
 							to={menuItem.mountPath(profile.id())}
 							title={menuItem.title}
-							className="text-sm ring-focus relative flex items-center font-semibold text-theme-secondary-700 dark:text-theme-dark-200 transition-colors duration-200 focus:outline-none"
+							className="ring-focus relative flex items-center text-sm font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none dark:text-theme-dark-200"
 							data-ring-focus-margin="-mx-2"
 						>
 							{menuItem.title}
@@ -245,7 +232,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
-							className="py-2 cursor-pointer rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+							className="cursor-pointer rounded py-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
 						>
 							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
 						</button>
@@ -323,8 +310,8 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 				/>
 			)}
 
-			<NavWrapper aria-labelledby="main menu" scroll={scroll}>
-				<div className="relative flex flex-row h-12">
+			<NavWrapper aria-labelledby="main menu">
+				<div className="relative flex h-12 flex-row">
 					<div className="hidden w-9 sm:flex">
 						<BackButton disabled={isBackDisabled} />
 					</div>
@@ -337,10 +324,10 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 						<div className="flex flex-row items-center justify-center gap-4 sm:gap-6">
 							<NotificationsDropdown profile={profile} />
-							<div className="h-6 sm:h-12 border-r border-theme-secondary-300 dark:border-theme-dark-700" />
+							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
 							<ServerStatusIndicator profile={profile} />
-							<div className="h-6 sm:h-12 border-r border-theme-secondary-300 dark:border-theme-dark-700 hidden sm:flex" />
-							<div className="sm:flex items-center hidden">
+							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12" />
+							<div className="hidden items-center sm:flex">
 								<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
 									<div>
 										<NavigationButtonWrapper>
@@ -357,8 +344,8 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									</div>
 								</Tooltip>
 							</div>
-							<div className="h-6 sm:h-12 border-r border-theme-secondary-300 dark:border-theme-dark-700 hidden sm:flex" />
-							<div className="sm:flex items-center hidden">
+							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12" />
+							<div className="hidden items-center sm:flex">
 								<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
 									<div>
 										<NavigationButtonWrapper>
@@ -375,7 +362,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									</div>
 								</Tooltip>
 							</div>
-							<div className="h-6 sm:h-12 border-r border-theme-secondary-300 dark:border-theme-dark-700" />
+							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
 							<UserMenu
 								userInitials={userInitials}
 								avatarImage={profile.avatar()}
@@ -392,7 +379,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								}}
 							/>
 						</div>
-						
 					</div>
 				</div>
 

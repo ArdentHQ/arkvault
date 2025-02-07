@@ -43,7 +43,7 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 					<NavigationButtonWrapper className="group">
 						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--server-status">
 							<Icon name="Cloud" size="lg" className="p-1" />
-							<div className="absolute right-0 top-0 flex items-center justify-center rounded-full  p-1 transition-all duration-100 ease-linear ">
+							<div className="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear">
 								<StatusDot status={status.value} />
 							</div>
 						</Button>
