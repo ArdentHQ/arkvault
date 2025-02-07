@@ -10,7 +10,6 @@ import { SuccessStep } from "./SuccessStep";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
-import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -18,19 +17,16 @@ import { useActiveProfile } from "@/app/hooks/env";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { toasts } from "@/app/services";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
-import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/use-wallet-import";
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
-import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
-	NetworkStep = 1,
-	MethodStep,
+	MethodStep = 1,
 	EncryptPasswordStep,
 	SummaryStep,
 }
@@ -40,13 +36,12 @@ export const ImportWallet = () => {
 	const isLedgerImport = history.location.pathname.includes("/import/ledger");
 	const activeProfile = useActiveProfile();
 	const { env, persist } = useEnvironmentContext();
-	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
+	const [activeTab, setActiveTab] = useState<Step>(Step.MethodStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
 
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
-	const [isSyncingCoin, setIsSyncingCoin] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
@@ -57,9 +52,6 @@ export const ImportWallet = () => {
 	const { syncAll } = useWalletSync({ env, profile: activeProfile });
 
 	const form = useForm<any>({
-		defaultValues: {
-			network: activeNetwork
-		},
 		mode: "onChange",
 	});
 
@@ -68,7 +60,6 @@ export const ImportWallet = () => {
 	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
 
 	useEffect(() => {
-		register("network", { required: true });
 		register({ name: "importOption", type: "custom" });
 		register("useEncryption");
 	}, [register]);
@@ -86,10 +77,6 @@ export const ImportWallet = () => {
 			handleNext();
 		}
 	});
-
-	useEffect(() => {
-		handleNext();
-	}, []);
 
 	const handleNext = () =>
 		({
@@ -118,45 +105,11 @@ export const ImportWallet = () => {
 				setActiveTab(Step.SummaryStep);
 
 				setIsEncrypting(false);
-			},
-			[Step.NetworkStep]: async () => {
-				// Construct coin before moving to MethodStep.
-				// Will be used in import input validations
-				const network = getValues("network");
-
-				const coin = activeProfile.coins().set(network.coin(), network.id(), {
-					networks: {
-						[network.id()]: network.toObject(),
-					},
-				});
-
-				setIsSyncingCoin(true);
-
-				try {
-					toasts.dismiss();
-					await coin.__construct();
-					setIsSyncingCoin(false);
-				} catch {
-					setIsSyncingCoin(false);
-
-					return toasts.warning(
-						<SyncErrorMessage
-							failedNetworkNames={[networkDisplayName(network)]}
-							onRetry={async () => {
-								setIsSyncingCoin(true);
-								await toasts.dismiss();
-								handleNext();
-							}}
-						/>,
-					);
-				}
-
-				setActiveTab(activeTab + 1);
-			},
+			}
 		})[activeTab as Exclude<Step, Step.SummaryStep>]();
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || activeTab === Step.MethodStep) {
+		if (activeTab === Step.MethodStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -169,11 +122,12 @@ export const ImportWallet = () => {
 	};
 
 	const importWallet = async (): Promise<void> => {
-		const { network, importOption, encryptedWif, value: walletInput } = getValues();
+		console.log("importing  wallet")
+		const { importOption, encryptedWif, value: walletInput } = getValues();
 
 		const wallet = await importWalletByType({
 			encryptedWif,
-			network,
+			network: activeNetwork,
 			type: importOption.value,
 			value: walletInput,
 		});
@@ -271,19 +225,8 @@ export const ImportWallet = () => {
 							<StepIndicator steps={allSteps} activeIndex={activeTab} />
 
 							<div className="mt-8">
-								<TabPanel tabId={Step.NetworkStep}>
-									<NetworkStep
-										filter={(network) =>
-											profileAllEnabledNetworkIds(activeProfile).includes(network.id())
-										}
-										profile={activeProfile}
-										title={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE")}
-										subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}
-									/>
-								</TabPanel>
-
 								<TabPanel tabId={Step.MethodStep}>
-									<MethodStep profile={activeProfile} />
+									<MethodStep profile={activeProfile} network={activeNetwork} />
 								</TabPanel>
 
 								<TabPanel tabId={Step.EncryptPasswordStep}>
@@ -309,8 +252,8 @@ export const ImportWallet = () => {
 										</Button>
 
 										<Button
-											disabled={isNextDisabled || isSyncingCoin}
-											isLoading={isEncrypting || isImporting || isSyncingCoin}
+											disabled={isNextDisabled}
+											isLoading={isEncrypting || isImporting}
 											onClick={handleNext}
 											data-testid="ImportWallet__continue-button"
 										>

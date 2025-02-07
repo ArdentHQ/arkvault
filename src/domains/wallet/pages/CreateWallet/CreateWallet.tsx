@@ -1,4 +1,3 @@
-import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -16,22 +15,18 @@ import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
-import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
-import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
-	NetworkStep = 1,
-	WalletOverviewStep = 2,
-	ConfirmPassphraseStep = 3,
-	EncryptPasswordStep = 4,
-	SuccessStep = 5,
+	WalletOverviewStep = 1,
+	ConfirmPassphraseStep = 2,
+	EncryptPasswordStep = 3,
+	SuccessStep = 4,
 }
 
 export const CreateWallet = () => {
@@ -39,9 +34,8 @@ export const CreateWallet = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
-	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const [activeTab, setActiveTab] = useState<Step>(Step.WalletOverviewStep);
-	const { activeNetwork } = useActiveNetwork({ profile })
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile })
 
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
@@ -234,19 +228,6 @@ export const CreateWallet = () => {
 						<StepIndicator steps={allSteps} activeIndex={activeTab} />
 
 						<div className="mt-8">
-							<TabPanel tabId={Step.NetworkStep}>
-								<NetworkStep
-									filter={(network) =>
-										profileAllEnabledNetworkIds(activeProfile).includes(network.id())
-									}
-									profile={activeProfile}
-									title={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.TITLE")}
-									subtitle={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.SUBTITLE")}
-									disabled={isGeneratingWallet}
-									error={`${generationError}`}
-								/>
-							</TabPanel>
-
 							<TabPanel tabId={Step.WalletOverviewStep}>
 								<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} />
 							</TabPanel>

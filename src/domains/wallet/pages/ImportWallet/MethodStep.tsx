@@ -152,16 +152,15 @@ const ImportInputField = ({
 	type,
 	coin,
 	profile,
+	network,
 }: {
 	type: OptionsValue;
 	coin: Coins.Coin;
 	profile: Contracts.IProfile;
+	network: Networks.Network
 }) => {
 	const { t } = useTranslation();
-	const { register, getValues } = useFormContext();
-
-	const network = getValues("network");
-	assertNetwork(network);
+	const { register } = useFormContext();
 
 	if (type.startsWith("bip")) {
 		const findAddress = async (value: string) => {
@@ -300,12 +299,9 @@ const ImportInputField = ({
 	);
 };
 
-export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
+export const MethodStep = ({ profile, network }: { profile: Contracts.IProfile, network: Networks.Network }) => {
 	const { t } = useTranslation();
 	const { getValues, watch, setValue, clearErrors } = useFormContext();
-
-	const network = getValues("network");
-	assertNetwork(network);
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
@@ -356,7 +352,7 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 					/>
 				</FormField>
 
-				<ImportInputField type={importOption.value} coin={coin} profile={profile} />
+				<ImportInputField type={importOption.value} coin={coin} profile={profile} network={network} />
 
 				<Divider dashed />
 
