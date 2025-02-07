@@ -13,7 +13,7 @@ import { Icon } from "@/app/components/Icon";
 const StatusDot = ({ status }: { status: ServerHealthStatus }) => {
 	const dotColorClass = () => {
 		if (status === ServerHealthStatus.Healthy) {
-			return "bg-theme-success-700 dark:bg-theme-success-500";
+			return "bg-theme-success-600 dark:bg-theme-success-500";
 		}
 
 		if (status === ServerHealthStatus.Downgraded) {
