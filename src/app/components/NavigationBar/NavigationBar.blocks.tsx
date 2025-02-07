@@ -53,7 +53,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	}, [history]);
 
 	return (
-		<div className="my-auto flex items-center h-12">
+		<div className="my-auto flex h-12 items-center">
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
@@ -210,14 +210,13 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="hidden h-12 space-x-4 xl:flex" data-testid="NavigationBar__menu">
+			<ul className="hidden h-12 items-center xl:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => (
 					<li key={index} className="flex">
 						<NavLink
 							to={menuItem.mountPath(profile.id())}
 							title={menuItem.title}
-							className="ring-focus relative flex items-center text-sm font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none dark:text-theme-dark-200"
-							data-ring-focus-margin="-mx-2"
+							className="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
 						>
 							{menuItem.title}
 						</NavLink>
@@ -322,7 +321,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							{renderNavigationMenu()}
 						</div>
 
-						<div className="flex flex-row items-center justify-center gap-4 sm:gap-6">
+						<div className="flex flex-row items-center justify-center gap-4 sm:gap-5">
 							<NotificationsDropdown profile={profile} />
 							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
 							<ServerStatusIndicator profile={profile} />
