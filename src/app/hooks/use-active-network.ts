@@ -12,41 +12,45 @@ export const useProfileNetworks = ({ profile }: { profile: Contracts.IProfile })
 };
 
 export const useActiveNetwork = ({
-	profile
+	profile,
 }: {
-	profile: Contracts.IProfile
+	profile: Contracts.IProfile;
 }): {
-	activeNetwork: Networks.Network | undefined,
-	setActiveNetwork: (networkId: string) => Promise<void>
+	activeNetwork: Networks.Network | undefined;
+	setActiveNetwork: (networkId: string) => Promise<void>;
 } => {
 	const environment = useEnvironmentContext();
-	const { activeNetworkId, setConfiguration } = useConfiguration()
-	const dashboardConfig = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration ?? { activeNetworkId: undefined }
+	const { activeNetworkId, setConfiguration } = useConfiguration();
+	const dashboardConfig = (profile
+		.settings()
+		.get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration) ?? {
+		activeNetworkId: undefined,
+	};
 
-	const activeNetwork = profile.availableNetworks().find(network => {
+	const activeNetwork = profile.availableNetworks().find((network) => {
 		if (dashboardConfig.activeNetworkId === network.id()) {
-			return network
+			return network;
 		}
 
 		if (activeNetworkId === network.id()) {
-			return network
+			return network;
 		}
 
 		// @TODO: Return mainnet as the default network once it will be available.
-		return network.isTest()
-
-	})
+		return network.isTest();
+	});
 
 	const setActiveNetwork = async (activeNetworkId: string) => {
-		const dashboardConfiguration = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {})
-		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, { ...dashboardConfiguration, activeNetworkId });
-		setConfiguration({ activeNetworkId })
+		const dashboardConfiguration = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
+		profile
+			.settings()
+			.set(Contracts.ProfileSetting.DashboardConfiguration, { ...dashboardConfiguration, activeNetworkId });
+		setConfiguration({ activeNetworkId });
 		await environment.persist();
 	};
 
-
 	return {
 		activeNetwork,
-		setActiveNetwork
-	}
+		setActiveNetwork,
+	};
 };
