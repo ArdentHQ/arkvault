@@ -12,10 +12,10 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
       >
         <div
-          class="relative flex h-14 sm:h-21"
+          class="relative flex"
         >
           <div
             class="flex flex-1 px-6 md:px-10"
@@ -24,7 +24,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
               class="my-auto flex items-center"
             >
               <button
-                class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
+                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -33,7 +33,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                 >
                   <svg
                     fill="none"
-                    height="28"
+                    height="16"
                     viewBox="0 0 363 363"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -307,10 +307,10 @@ exports[`ApplicationError > should render without error message 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
       >
         <div
-          class="relative flex h-14 sm:h-21"
+          class="relative flex"
         >
           <div
             class="flex flex-1 px-6 md:px-10"
@@ -319,7 +319,7 @@ exports[`ApplicationError > should render without error message 1`] = `
               class="my-auto flex items-center"
             >
               <button
-                class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
+                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -328,7 +328,7 @@ exports[`ApplicationError > should render without error message 1`] = `
                 >
                   <svg
                     fill="none"
-                    height="28"
+                    height="16"
                     viewBox="0 0 363 363"
                     xmlns="http://www.w3.org/2000/svg"
                   >

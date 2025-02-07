@@ -45,7 +45,7 @@ exports[`Avatar > should render with highlight 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-600 rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-200 dark:ring-theme-primary-600 rounded-full"
     >
       <img
         alt="abc"
@@ -64,7 +64,7 @@ exports[`Avatar > should render with highlight and custom shadow color 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-600 rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-200 dark:ring-theme-primary-600 rounded-full"
     >
       <img
         alt="abc"
