@@ -27,7 +27,7 @@ const StatusDot = ({ status }: { status: ServerHealthStatus }) => {
 		return "bg-theme-gray-100";
 	};
 
-	return <div className={`h-2 w-2 rounded-full ${dotColorClass()}`} />;
+	return <div className={`h-1.5 w-1.5 rounded-full ${dotColorClass()}`} />;
 };
 
 export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile }) => {
@@ -43,7 +43,7 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 					<NavigationButtonWrapper className="group">
 						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--server-status">
 							<Icon name="Cloud" size="lg" className="p-1" />
-							<div className="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800">
+							<div className="absolute right-0 top-0 flex items-center justify-center rounded-full  p-1 transition-all duration-100 ease-linear ">
 								<StatusDot status={status.value} />
 							</div>
 						</Button>
