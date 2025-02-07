@@ -6,7 +6,6 @@ import { Checkbox } from "@/app/components/Checkbox";
 import { t } from "i18next";
 import { Button } from "@/app/components/Button";
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { IWalletRepository } from "@ardenthq/sdk-profiles/distribution/esm/wallet.repository.contract";
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";

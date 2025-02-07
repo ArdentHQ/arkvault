@@ -28,7 +28,7 @@ export const useVoteFilters = ({
 		() => (hasWalletId ? wallet.network().maximumVotesPerWallet() : undefined),
 		[hasWalletId, wallet],
 	);
-	const { activeNetwork } = useActiveNetwork({ profile })
+	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const [walletsDisplayType, setWalletsDisplayType] = useState(defaultConfiguration.walletsDisplayType);
 	const [selectedNetworkIds, setSelectedNetworkIds] = useState([activeNetwork.id()]);
@@ -56,7 +56,7 @@ export const useVoteFilters = ({
 			return true;
 		}
 
-		return false
+		return false;
 	}, [walletsDisplayType, selectedNetworkIds, defaultConfiguration]);
 
 	const filterProperties = {

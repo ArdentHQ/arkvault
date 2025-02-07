@@ -10,7 +10,7 @@ export const Portfolio = () => {
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
 
-	const { selectedWallets } = usePortfolio({ profile })
+	const { selectedWallets } = usePortfolio({ profile });
 
 	if (selectedWallets.length === 0) {
 		if (profile.status().isRestored()) {

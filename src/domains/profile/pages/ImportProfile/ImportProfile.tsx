@@ -47,7 +47,6 @@ export const ImportProfile = () => {
 						.map((wallet) => wallet.address()),
 				);
 			}
-
 		}
 
 		await persist();

@@ -16,7 +16,6 @@ import {
 } from "@/utils/profile-utils";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
-import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { delay } from "@/utils/delay";
 

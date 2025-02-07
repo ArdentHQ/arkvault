@@ -14,7 +14,7 @@ import { Select } from "@/app/components/SelectDropdown";
 import { Toggle } from "@/app/components/Toggle";
 import { Tooltip } from "@/app/components/Tooltip";
 import { OptionsValue, useImportOptions } from "@/domains/wallet/hooks/use-import-options";
-import { assertNetwork, assertString } from "@/utils/assertions";
+import { assertString } from "@/utils/assertions";
 import { Alert } from "@/app/components/Alert";
 import { ThemeIcon } from "@/app/components/Icon";
 
@@ -157,7 +157,7 @@ const ImportInputField = ({
 	type: OptionsValue;
 	coin: Coins.Coin;
 	profile: Contracts.IProfile;
-	network: Networks.Network
+	network: Networks.Network;
 }) => {
 	const { t } = useTranslation();
 	const { register } = useFormContext();
@@ -299,9 +299,9 @@ const ImportInputField = ({
 	);
 };
 
-export const MethodStep = ({ profile, network }: { profile: Contracts.IProfile, network: Networks.Network }) => {
+export const MethodStep = ({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) => {
 	const { t } = useTranslation();
-	const { getValues, watch, setValue, clearErrors } = useFormContext();
+	const { watch, setValue, clearErrors } = useFormContext();
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 

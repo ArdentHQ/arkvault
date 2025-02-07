@@ -45,7 +45,7 @@ export const ImportWallet = () => {
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
-	const { activeNetwork } = useActiveNetwork({ profile: activeProfile })
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const { t } = useTranslation();
 	const { importWalletByType } = useWalletImport({ profile: activeProfile });
@@ -105,7 +105,7 @@ export const ImportWallet = () => {
 				setActiveTab(Step.SummaryStep);
 
 				setIsEncrypting(false);
-			}
+			},
 		})[activeTab as Exclude<Step, Step.SummaryStep>]();
 
 	const handleBack = () => {
@@ -122,7 +122,7 @@ export const ImportWallet = () => {
 	};
 
 	const importWallet = async (): Promise<void> => {
-		console.log("importing  wallet")
+		console.log("importing  wallet");
 		const { importOption, encryptedWif, value: walletInput } = getValues();
 
 		const wallet = await importWalletByType({

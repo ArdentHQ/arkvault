@@ -1,6 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { useEnvironmentContext } from "@/app/contexts";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { assertNetwork } from "@/utils/assertions";
 
@@ -37,7 +37,7 @@ export const useActiveNetwork = ({
 		return network.isTest();
 	});
 
-	assertNetwork(activeNetwork)
+	assertNetwork(activeNetwork);
 
 	const setActiveNetwork = async (activeNetworkId: string) => {
 		const dashboardConfiguration = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});

@@ -35,7 +35,7 @@ export const CreateWallet = () => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<Step>(Step.WalletOverviewStep);
-	const { activeNetwork } = useActiveNetwork({ profile: activeProfile })
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
@@ -52,7 +52,7 @@ export const CreateWallet = () => {
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
-	const [generationError, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
+	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	useEffect(() => {
