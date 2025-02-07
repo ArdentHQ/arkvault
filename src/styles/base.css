@@ -92,18 +92,10 @@ main {
   .custom-button-nav-wrapper {
     @apply w-7 h-7
   }
-  
+
   .custom-button-nav-wrapper button {
     @apply w-7 h-7 p-0 overflow-hidden rounded text-theme-secondary-700 dark:text-theme-dark-200 [&:not(:disabled)]:hover:text-theme-primary-700 [&:not(:disabled)]:hover:bg-theme-primary-200 [&:not(:disabled)]:dark:hover:bg-theme-dark-700 [&:not(:disabled)]:dark:hover:text-theme-dark-50;
     }
-
-  .custom-nav-wrapper li a {
-	@apply border-t-2 border-t-transparent border-b-2 border-b-transparent hover:border-b-theme-primary-600 hover:text-theme-text
-  }
-
-  .custom-nav-wrapper li a.active {
-	@apply border-b-theme-primary-600 text-theme-text
-  }
   
   @supports (padding-bottom: env(safe-area-inset-bottom)) {
 	.padding-bottom-safe {
