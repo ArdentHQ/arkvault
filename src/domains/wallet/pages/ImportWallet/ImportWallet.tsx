@@ -1,4 +1,3 @@
-import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -18,7 +17,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks/env";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { toasts } from "@/app/services";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
@@ -31,8 +29,8 @@ import {
 	enabledNetworksCount,
 	networkDisplayName,
 	profileAllEnabledNetworkIds,
-	profileAllEnabledNetworks,
 } from "@/utils/network-utils";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
 	NetworkStep = 1,
@@ -46,7 +44,6 @@ export const ImportWallet = () => {
 	const isLedgerImport = history.location.pathname.includes("/import/ledger");
 	const activeProfile = useActiveProfile();
 	const { env, persist } = useEnvironmentContext();
-	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
@@ -56,8 +53,8 @@ export const ImportWallet = () => {
 	const [isSyncingCoin, setIsSyncingCoin] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
-	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile })
 
 	const { t } = useTranslation();
 	const { importWalletByType } = useWalletImport({ profile: activeProfile });
@@ -65,7 +62,7 @@ export const ImportWallet = () => {
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHasOneNetwork ? profileAllEnabledNetworks(activeProfile)[0] : undefined,
+			network: activeNetwork
 		},
 		mode: "onChange",
 	});
@@ -95,9 +92,7 @@ export const ImportWallet = () => {
 	});
 
 	useEffect(() => {
-		if (onlyHasOneNetwork) {
-			handleNext();
-		}
+		handleNext();
 	}, []);
 
 	const handleNext = () =>
@@ -165,7 +160,7 @@ export const ImportWallet = () => {
 		})[activeTab as Exclude<Step, Step.SummaryStep>]();
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHasOneNetwork)) {
+		if (activeTab === Step.NetworkStep || activeTab === Step.MethodStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -188,8 +183,6 @@ export const ImportWallet = () => {
 		});
 
 		assertWallet(wallet);
-
-		setValue("selectedNetworkIds", uniq([...selectedNetworkIds, wallet.network().id()]));
 
 		await syncAll(wallet);
 
@@ -255,10 +248,6 @@ export const ImportWallet = () => {
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
 
-		if (!onlyHasOneNetwork) {
-			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
-		}
-
 		steps.push(t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE"));
 
 		if (useEncryption) {
@@ -269,15 +258,6 @@ export const ImportWallet = () => {
 
 		return steps;
 	}, [useEncryption, activeTab]);
-
-	const activeTabIndex = useMemo(() => {
-		// Since it removes the select network step
-		if (onlyHasOneNetwork) {
-			return activeTab - 1;
-		}
-
-		return activeTab;
-	}, [onlyHasOneNetwork, activeTab]);
 
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_IMPORT_WALLET.TITLE")}>
@@ -292,7 +272,7 @@ export const ImportWallet = () => {
 						<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
 					) : (
 						<Tabs activeId={activeTab}>
-							<StepIndicator steps={allSteps} activeIndex={activeTabIndex} />
+							<StepIndicator steps={allSteps} activeIndex={activeTab} />
 
 							<div className="mt-8">
 								<TabPanel tabId={Step.NetworkStep}>
