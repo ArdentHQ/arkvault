@@ -404,7 +404,7 @@ exports[`Votes > should filter current delegates 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -1637,7 +1637,7 @@ exports[`Votes > should render 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -3172,7 +3172,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -4699,7 +4699,7 @@ exports[`Votes > should render with no wallets 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -5409,7 +5409,7 @@ exports[`Votes > should select a validator 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -6942,7 +6942,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -7844,7 +7844,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -8746,7 +8746,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -10159,7 +10159,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>

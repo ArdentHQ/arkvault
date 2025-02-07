@@ -400,7 +400,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -1239,7 +1239,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-700"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
