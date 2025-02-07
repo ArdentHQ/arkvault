@@ -24,6 +24,7 @@ import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
 	NetworkStep = 1,
@@ -39,13 +40,14 @@ export const CreateWallet = () => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
-	const [activeTab, setActiveTab] = useState<Step>(onlyHasOneNetwork ? Step.WalletOverviewStep : Step.NetworkStep);
-	const { selectedNetworkIds, setValue: setConfiguration } = useWalletConfig({ profile: activeProfile });
+	const [activeTab, setActiveTab] = useState<Step>(Step.WalletOverviewStep);
+	const { activeNetwork } = useActiveNetwork({ profile })
+
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHasOneNetwork ? profileAllEnabledNetworks(activeProfile)[0] : undefined,
+			network: activeNetwork,
 			passphraseDisclaimer: false,
 		},
 		mode: "onChange",
@@ -55,7 +57,7 @@ export const CreateWallet = () => {
 
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
-	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHasOneNetwork);
+	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [generationError, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
@@ -74,9 +76,7 @@ export const CreateWallet = () => {
 	}, [wallet, mnemonic]);
 
 	useEffect(() => {
-		if (onlyHasOneNetwork) {
-			handleGenerateWallet();
-		}
+		handleGenerateWallet();
 	}, []);
 
 	const handleFinish = () => {
@@ -118,7 +118,7 @@ export const CreateWallet = () => {
 	};
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || (activeTab === Step.WalletOverviewStep && onlyHasOneNetwork)) {
+		if (activeTab === Step.NetworkStep || activeTab === Step.WalletOverviewStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -178,8 +178,6 @@ export const CreateWallet = () => {
 
 			activeProfile.wallets().push(wallet);
 
-			setConfiguration("selectedNetworkIds", uniq([...selectedNetworkIds, network.id()]));
-
 			await persist();
 		}
 
@@ -214,10 +212,6 @@ export const CreateWallet = () => {
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
 
-		if (!onlyHasOneNetwork) {
-			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
-		}
-
 		steps.push(
 			t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE"),
 			t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE"),
@@ -232,21 +226,12 @@ export const CreateWallet = () => {
 		return steps;
 	}, [useEncryption, activeTab]);
 
-	const activeTabIndex = useMemo(() => {
-		// Since it removes the select network step
-		if (onlyHasOneNetwork) {
-			return activeTab - 1;
-		}
-
-		return activeTab;
-	}, [onlyHasOneNetwork, activeTab]);
-
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_CREATE_WALLET.TITLE")}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleFinish}>
 					<Tabs activeId={activeTab}>
-						<StepIndicator steps={allSteps} activeIndex={activeTabIndex} />
+						<StepIndicator steps={allSteps} activeIndex={activeTab} />
 
 						<div className="mt-8">
 							<TabPanel tabId={Step.NetworkStep}>
