@@ -117,7 +117,7 @@ exports[`Avatar > should render with size 2`] = `
 exports[`Avatar > should render with size 3`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-[25px] w-[25px] text-sm ring-6 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-6 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
