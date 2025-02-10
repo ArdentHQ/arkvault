@@ -1,23 +1,23 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import {
-	TransactionAddresses,
-	TransactionDetail,
-} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses, } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Divider } from "@/app/components/Divider";
+import { ThemeIcon } from "@/app/components/Icon";
 
 export const ReviewStep = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet, profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister, watch } = useFormContext();
-	const username = getValues("username");
+	const { getValues, unregister } = useFormContext();
+	const { username, gasLimit, gasPrice } = getValues();
 
-	const [defaultFee] = useState(() => watch("fee"));
-	const fee = getValues("fee") ?? defaultFee;
+	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -28,6 +28,9 @@ export const ReviewStep = ({ wallet, profile }: { wallet: Contracts.IReadWriteWa
 			<StepHeader
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
 			/>
 
 			<TransactionAddresses
@@ -38,7 +41,31 @@ export const ReviewStep = ({ wallet, profile }: { wallet: Contracts.IReadWriteWa
 				network={wallet.network()}
 			/>
 
-			<TransactionDetail label={t("TRANSACTION.USERNAME")}>{username}</TransactionDetail>
+			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
+				<div className="space-y-3 sm:space-y-0">
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+						<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.CATEGORY")}</DetailTitle>
+						<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
+								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
+									{t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION")}
+								</span>
+						</div>
+					</div>
+
+					<div className="hidden sm:block">
+						<Divider dashed />
+					</div>
+
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+						<DetailTitle className="w-auto sm:min-w-40">
+							{t("COMMON.USERNAME")}
+						</DetailTitle>
+						<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
+							{username}
+						</div>
+					</div>
+				</div>
+			</DetailWrapper>
 
 			<div className="mt-2">
 				<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />

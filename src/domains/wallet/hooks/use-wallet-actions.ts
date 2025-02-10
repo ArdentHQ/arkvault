@@ -134,8 +134,25 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 				});
 
 				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendValidatorRegistrationProfile, {
+					url = generatePath(ProfilePaths.SendRegistrationProfile, {
 						profileId: profile.id(),
+						registrationType: "validatorRegistration",
+					});
+				}
+
+				history.push(url);
+			}
+
+			if (option.value === "username-registration") {
+				let url = generatePath(ProfilePaths.SendUsernameRegistration, {
+					profileId: profile.id(),
+					walletId: wallet.id(),
+				});
+
+				if (hasMultipleWallets) {
+					url = generatePath(ProfilePaths.SendRegistrationProfile, {
+						profileId: profile.id(),
+						registrationType: "usernameRegistration",
 					});
 				}
 

@@ -100,6 +100,20 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 				value: "delegate-resignation",
 			});
 		}
+
+
+		if (
+			walletsWithValidatorActions.some(
+				(w) =>
+					w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
+					!w.username()
+			)
+		) {
+			registrationOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME"),
+				value: "username-registration",
+			});
+		}
 	}
 
 	if (wallets.some((w) => allowsMultiSignature(w, profile))) {

@@ -30,6 +30,10 @@ import { useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import {
+	signUsernameRegistration,
+	UsernameRegistrationForm,
+} from "@/domains/transaction/components/UsernameRegistrationForm";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -118,6 +122,7 @@ export const SendRegistration = () => {
 		const registrations = {
 			default: () => setRegistrationForm(ValidatorRegistrationForm),
 			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
+			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
 		};
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
@@ -190,6 +195,18 @@ export const SendRegistration = () => {
 				setTransaction(transaction);
 				handleNext();
 			}
+
+			if (registrationType === "usernameRegistration") {
+				const transaction = await signUsernameRegistration({
+					env,
+					form,
+					profile: activeProfile,
+					signatory,
+				});
+
+				setTransaction(transaction);
+				handleNext();
+			}
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(10);
@@ -229,6 +246,7 @@ export const SendRegistration = () => {
 		({
 			default: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
+			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 		})[registrationType];
 
 	return (

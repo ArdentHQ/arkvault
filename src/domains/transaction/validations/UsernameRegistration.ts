@@ -29,8 +29,8 @@ export const usernameRegistration = (t: any) => ({
 
 const usernameExists = async (network: Networks.Network, username: string,) => {
 	const endpoints = {
-		"mainsail.devnet": 'https://dwallets.mainsailhq.com/api/wallets/',
-		"mainsail.mainnet": 'https://wallets.mainsailhq.com/api/wallets/',
+		"mainsail.devnet": 'https://dwallets-evm.mainsailhq.com/api/wallets/',
+		"mainsail.mainnet": 'https://wallets-evm.mainsailhq.com/api/wallets/',
 	}
 
 	if (username.length === 0) return;
