@@ -23,8 +23,7 @@ import {
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
-import { useFeeConfirmation, useTransactionBuilder } from "@/domains/transaction/hooks";
+import { useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
@@ -32,6 +31,7 @@ import { useValidatorsFromURL } from "@/domains/vote/hooks/use-vote-query-parame
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
 enum Step {
 	FormStep = 1,
@@ -75,7 +75,7 @@ export const SendVote = () => {
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isSubmitting, errors } = formState;
 
-	const { fee, fees } = watch();
+	const { fees } = watch();
 	const { sendVote, common } = useValidation();
 
 	const abortReference = useRef(new AbortController());
@@ -90,7 +90,12 @@ export const SendVote = () => {
 		register("network", sendVote.network());
 		register("senderAddress", sendVote.senderAddress({ network: activeNetwork, profile: activeProfile, votes }));
 		register("fees");
-		register("fee", common.fee(activeWallet?.balance(), activeWallet?.network(), fees));
+
+		const walletBalance = activeWallet?.balance() ?? 0;
+
+		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
+		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit["vote"], activeWallet?.network()));
+
 		register("inputFeeSettings");
 
 		register("suppressWarning");
@@ -120,9 +125,6 @@ export const SendVote = () => {
 	useEffect(() => {
 		setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: false });
 	}, [wallet]);
-
-	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		const updateWallet = async () => {
@@ -196,14 +198,10 @@ export const SendVote = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = (suppressWarning?: boolean) => {
+	const handleNext = () => {
 		abortReference.current = new AbortController();
 
 		const newIndex = activeTab + 1;
-
-		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-			return setShowFeeWarning(true);
-		}
 
 		const { network, senderAddress } = getValues();
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
@@ -275,6 +273,8 @@ export const SendVote = () => {
 			privateKey,
 			secret,
 			secondSecret,
+			gasPrice,
+			gasLimit,
 		} = getValues();
 
 		const abortSignal = abortReference.current.signal;
@@ -293,8 +293,8 @@ export const SendVote = () => {
 			});
 
 			const voteTransactionInput: Services.TransactionInput = {
-				// @TODO: Remove hardcoded fee once fees are implemented for evm.
-				fee: 5,
+				gasLimit,
+				gasPrice,
 				signatory,
 			};
 
@@ -522,15 +522,6 @@ export const SendVote = () => {
 								/>
 							)}
 						</Tabs>
-
-						<FeeWarning
-							isOpen={showFeeWarning}
-							variant={feeWarningVariant}
-							onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}
-							onConfirm={(suppressWarning: boolean) =>
-								dismissFeeWarning(() => handleNext(true), suppressWarning)
-							}
-						/>
 					</Form>
 				</StepsProvider>
 			</Section>

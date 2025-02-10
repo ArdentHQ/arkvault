@@ -34,7 +34,7 @@ export const SendValidatorResignation = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch } = form;
+	const { formState, getValues, register, watch, setValue } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { senderAddress, gasLimit, gasPrice } = watch();
@@ -80,9 +80,13 @@ export const SendValidatorResignation = () => {
 		register("suppressWarning");
 	}, [activeWallet, common, getValues, register]);
 
-	// @TODO enable when Mainsail has dynamic fees ready
-	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-	// 	useFeeConfirmation(fee, fees);
+	useEffect(() => {
+		if (!activeWallet || activeWallet.address() === senderAddress) {
+			return;
+		}
+
+		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
+	}, [activeWallet, senderAddress, setValue]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -102,13 +106,8 @@ export const SendValidatorResignation = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const handleNext = (suppressWarning?: boolean) => {
+	const handleNext = () => {
 		const newIndex = activeTab + 1;
-
-		// if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-		// 	return setShowFeeWarning(true);
-		// }
 
 		setActiveTab(newIndex);
 	};
@@ -199,15 +198,6 @@ export const SendValidatorResignation = () => {
 								/>
 							)}
 						</Tabs>
-
-						{/*<FeeWarning*/}
-						{/*	isOpen={showFeeWarning}*/}
-						{/*	variant={feeWarningVariant}*/}
-						{/*	onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}*/}
-						{/*	onConfirm={(suppressWarning: boolean) =>*/}
-						{/*		dismissFeeWarning(() => handleNext(true), suppressWarning)*/}
-						{/*	}*/}
-						{/*/>*/}
 					</Form>
 				</StepsProvider>
 			</Section>
