@@ -8,6 +8,8 @@ interface GetDefaultAliasInput {
 
 const makeAlias = (count: number) => `Address #${count}`;
 
+const findByAlias = (alias: string, wallets: Contracts.IReadWriteWallet[]) => wallets.find(wallet => wallet.alias() === alias)
+
 export const getDefaultAlias = ({ profile, network }: GetDefaultAliasInput): string => {
 	const wallets = network ?
 		profile.wallets().findByCoinWithNetwork(network.coin(), network.id()) :
@@ -19,7 +21,7 @@ export const getDefaultAlias = ({ profile, network }: GetDefaultAliasInput): str
 		counter = 1;
 	}
 
-	while (profile.wallets().findByAlias(makeAlias(counter))) {
+	while (findByAlias(makeAlias(counter), wallets)) {
 		counter++;
 	}
 
