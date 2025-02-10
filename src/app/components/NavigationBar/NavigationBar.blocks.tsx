@@ -28,7 +28,10 @@ import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 
-const NavWrapper = ({ variant = "default", ...props }: React.HTMLProps<HTMLDivElement> & { variant?: "default" | "logo-only" }) => (
+const NavWrapper = ({
+	variant = "default",
+	...props
+}: React.HTMLProps<HTMLDivElement> & { variant?: "default" | "logo-only" }) => (
 	<nav
 		{...props}
 		className={twMerge(
@@ -60,22 +63,33 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 		history.push("/");
 	}, [history]);
 
+	const getLogoHeight = () => {
+		if (variant === "default") {
+			return 16;
+		}
+
+		return isXs ? 22 : 32;
+	};
+
 	return (
-		<div className="my-auto flex h-16 sm:h-21 items-center">
+		<div className="my-auto flex h-16 items-center sm:h-21">
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
-				className={cn("my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500", {
-					"h-6 w-6": variant === "default",
-					"h-11 w-11": variant === "logo-only" && !isXs,
-					"h-8 w-8": variant === "logo-only" && isXs,
-				})}
+				className={cn(
+					"my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500",
+					{
+						"h-11 w-11": variant === "logo-only" && !isXs,
+						"h-6 w-6": variant === "default",
+						"h-8 w-8": variant === "logo-only" && isXs,
+					},
+				)}
 				onClick={() => (onClick ? onClick() : defaultHandler())}
 			>
-				<Logo height={variant === "default" ? 16 : isXs ? 22 : 32} />
+				<Logo height={getLogoHeight()} />
 			</button>
 
-			{title && <span className="ml-4 text-lg leading-[21px] uppercase">{title}</span>}
+			{title && <span className="ml-4 text-lg uppercase leading-[21px]">{title}</span>}
 		</div>
 	);
 };
