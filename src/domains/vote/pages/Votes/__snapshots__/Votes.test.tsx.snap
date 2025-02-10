@@ -136,7 +136,7 @@ exports[`Votes > should filter current delegates 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -182,10 +182,10 @@ exports[`Votes > should filter current delegates 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -1369,7 +1369,7 @@ exports[`Votes > should render 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -1415,10 +1415,10 @@ exports[`Votes > should render 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -2904,7 +2904,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -2950,10 +2950,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -4437,7 +4437,7 @@ exports[`Votes > should render with no wallets 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -4483,10 +4483,10 @@ exports[`Votes > should render with no wallets 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -5141,7 +5141,7 @@ exports[`Votes > should select a validator 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -5187,10 +5187,10 @@ exports[`Votes > should select a validator 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -6673,7 +6673,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -6719,10 +6719,10 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -7575,7 +7575,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -7621,10 +7621,10 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -8477,7 +8477,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -8523,10 +8523,10 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -9891,7 +9891,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -9937,10 +9937,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >

@@ -12,19 +12,19 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
       >
         <div
           class="relative flex"
         >
           <div
-            class="flex flex-1 px-6 md:px-10"
+            class="flex flex-1 px-4 sm:px-6 md:px-10"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -33,7 +33,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                 >
                   <svg
                     fill="none"
-                    height="16"
+                    height="32"
                     viewBox="0 0 363 363"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -49,7 +49,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                 </span>
               </button>
               <span
-                class="ml-4 text-lg uppercase"
+                class="ml-4 text-lg uppercase leading-[21px]"
               >
                 <strong>
                   ARK
@@ -307,19 +307,19 @@ exports[`ApplicationError > should render without error message 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
       >
         <div
           class="relative flex"
         >
           <div
-            class="flex flex-1 px-6 md:px-10"
+            class="flex flex-1 px-4 sm:px-6 md:px-10"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -328,7 +328,7 @@ exports[`ApplicationError > should render without error message 1`] = `
                 >
                   <svg
                     fill="none"
-                    height="16"
+                    height="32"
                     viewBox="0 0 363 363"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -344,7 +344,7 @@ exports[`ApplicationError > should render without error message 1`] = `
                 </span>
               </button>
               <span
-                class="ml-4 text-lg uppercase"
+                class="ml-4 text-lg uppercase leading-[21px]"
               >
                 <strong>
                   ARK

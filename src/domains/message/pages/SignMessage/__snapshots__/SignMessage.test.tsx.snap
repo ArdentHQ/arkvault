@@ -134,7 +134,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -180,10 +180,10 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -1084,7 +1084,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -1130,10 +1130,10 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="my-auto flex h-16 items-center sm:h-21"
             >
               <button
-                class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
