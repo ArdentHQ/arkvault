@@ -101,12 +101,9 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 			});
 		}
 
-
 		if (
 			walletsWithValidatorActions.some(
-				(w) =>
-					w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
-					!w.username()
+				(w) => w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) && !w.username(),
 			)
 		) {
 			registrationOptions.options.push({

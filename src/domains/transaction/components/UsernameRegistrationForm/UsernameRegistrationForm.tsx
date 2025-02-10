@@ -9,10 +9,10 @@ import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistrati
 import { handleBroadcastError } from "@/domains/transaction/utils";
 
 const component = ({
-					   activeTab,
-					   wallet,
-					   profile,
-				   }: {
+	activeTab,
+	wallet,
+	profile,
+}: {
 	activeTab: number;
 	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
@@ -28,18 +28,16 @@ const component = ({
 );
 
 const transactionDetails = ({
-								transaction,
-								translations,
-								wallet,
-							}: {
+	transaction,
+	translations,
+	wallet,
+}: {
 	transaction: DTO.ExtendedSignedTransactionData;
 	translations: any;
 	wallet: Contracts.IReadWriteWallet;
 }) => (
 	<>
-		<TransactionDetail label={translations("TRANSACTION.USERNAME")}>
-			{transaction.username()}
-		</TransactionDetail>
+		<TransactionDetail label={translations("COMMON.USERNAME")}>{transaction.username()}</TransactionDetail>
 
 		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
 	</>

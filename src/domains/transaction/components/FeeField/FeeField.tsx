@@ -7,14 +7,15 @@ import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 
 interface Properties {
-	type: "transfer"
+	type:
+		| "transfer"
 		| "multiPayment"
 		| "vote"
 		| "delegateRegistration"
 		| "delegateResignation"
 		| "multiSignature"
-		|"usernameRegistration"
-		|"usernameResignation";
+		| "usernameRegistration"
+		| "usernameResignation";
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
