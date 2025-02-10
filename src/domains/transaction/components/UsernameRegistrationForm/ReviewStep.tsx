@@ -39,40 +39,42 @@ export const ReviewStep = ({
 				}
 			/>
 
-			<TransactionAddresses
-				labelClassName="w-auto sm:min-w-36"
-				senderAddress={wallet.address()}
-				recipients={[]}
-				profile={profile}
-				network={wallet.network()}
-			/>
+			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
+				<TransactionAddresses
+					labelClassName="w-auto sm:min-w-36"
+					senderAddress={wallet.address()}
+					recipients={[]}
+					profile={profile}
+					network={wallet.network()}
+				/>
 
-			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
-				<div className="space-y-3 sm:space-y-0">
-					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-						<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.CATEGORY")}</DetailTitle>
-						<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
-							<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-								{t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION")}
-							</span>
+				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
+					<div className="space-y-3 sm:space-y-0">
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.CATEGORY")}</DetailTitle>
+							<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
+								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
+									{t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION")}
+								</span>
+							</div>
+						</div>
+
+						<div className="hidden sm:block">
+							<Divider dashed className="h-px border-theme-secondary-300 dark:border-theme-secondary-800" />
+						</div>
+
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.USERNAME")}</DetailTitle>
+							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
+								{username}
+							</div>
 						</div>
 					</div>
+				</DetailWrapper>
 
-					<div className="hidden sm:block">
-						<Divider dashed />
-					</div>
-
-					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-						<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.USERNAME")}</DetailTitle>
-						<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-							{username}
-						</div>
-					</div>
+				<div className="mt-2">
+					<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
 				</div>
-			</DetailWrapper>
-
-			<div className="mt-2">
-				<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
 			</div>
 		</section>
 	);
