@@ -85,7 +85,7 @@ export const ImportWallet = () => {
 				setIsImporting(true);
 
 				try {
-					await importWallets()
+					await importWallets();
 
 					if (useEncryption && importOption.canBeEncrypted) {
 						setActiveTab(Step.EncryptPasswordStep);
@@ -122,7 +122,17 @@ export const ImportWallet = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const importWallet = async ({ network, value, type, encryptedWif }: { value: WalletGenerationInput, network: Networks.Network, type: string, encryptedWif: string }): Promise<void> => {
+	const importWallet = async ({
+		network,
+		value,
+		type,
+		encryptedWif,
+	}: {
+		value: WalletGenerationInput;
+		network: Networks.Network;
+		type: string;
+		encryptedWif: string;
+	}): Promise<void> => {
 		const wallet = await importWalletByType({
 			encryptedWif,
 			network,
@@ -151,11 +161,11 @@ export const ImportWallet = () => {
 		const { importOption, encryptedWif, value } = getValues();
 
 		for (const network of activeProfile.availableNetworks()) {
-			await importWallet({ encryptedWif, network, type: importOption.value, value })
+			await importWallet({ encryptedWif, network, type: importOption.value, value });
 		}
 
 		await persist();
-	}
+	};
 
 	const encryptInputs = async () => {
 		assertWallet(importedWallet);

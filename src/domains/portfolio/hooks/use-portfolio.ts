@@ -93,7 +93,7 @@ export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfil
 		 */
 		set(selectedAddresses: string[], network?: Networks.Network): void {
 			const defaultConfig = { selectedAddressesByNetwork: { [activeNetwork.meta().nethash]: [] } };
-			const actingNetwork = network ?? activeNetwork
+			const actingNetwork = network ?? activeNetwork;
 			const nethash = actingNetwork.meta().nethash;
 
 			const config = profile
