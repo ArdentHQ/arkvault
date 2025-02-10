@@ -3,10 +3,14 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
-import { FeeWarningVariant } from "@/domains/transaction/components/FeeWarning";
 import { TransactionFees } from "@/types";
 
 type CallbackFunction = () => void;
+
+enum FeeWarningVariant {
+	Low = "LOW",
+	High = "HIGH",
+}
 
 export const useFeeConfirmation = (fee: number | string, fees: TransactionFees) => {
 	const [showFeeWarning, setShowFeeWarning] = useState(false);
