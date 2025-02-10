@@ -38,7 +38,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		network: Networks.Network;
 		type: string;
 		value: WalletGenerationInput;
-		encryptedWif: string;
+		encryptedWif?: string;
 	}): Promise<Contracts.IReadWriteWallet | undefined> => {
 		const defaultOptions = {
 			coin: network.coin(),
@@ -115,7 +115,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 							.fromWIF({
 								...defaultOptions,
 								password: value,
-								wif: encryptedWif,
+								wif: encryptedWif!,
 							})
 							.then((wallet) => {
 								profile.wallets().push(wallet);
@@ -157,7 +157,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value: WalletGenerationInput;
 		network: Networks.Network;
 		type: string;
-		encryptedWif: string;
+		encryptedWif?: string;
 	}): Promise<Contracts.IReadWriteWallet> => {
 		const wallet = await importWalletByType({
 			encryptedWif,
@@ -189,7 +189,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value: WalletGenerationInput;
 		networks: Networks.Network[];
 		type: string;
-		encryptedWif: string;
+		encryptedWif?: string;
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = []
 
