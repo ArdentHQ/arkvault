@@ -24,6 +24,7 @@ import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { Networks } from "@ardenthq/sdk";
 
 enum Step {
 	MethodStep = 1,
@@ -84,7 +85,7 @@ export const ImportWallet = () => {
 				setIsImporting(true);
 
 				try {
-					await importWallet();
+					await importWallets()
 
 					if (useEncryption && importOption.canBeEncrypted) {
 						setActiveTab(Step.EncryptPasswordStep);
@@ -121,15 +122,12 @@ export const ImportWallet = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const importWallet = async (): Promise<void> => {
-		console.log("importing  wallet");
-		const { importOption, encryptedWif, value: walletInput } = getValues();
-
+	const importWallet = async ({ network, value, type, encryptedWif }: { value: WalletGenerationInput, network: Networks.Network, type: string, encryptedWif: string }): Promise<void> => {
 		const wallet = await importWalletByType({
 			encryptedWif,
-			network: activeNetwork,
-			type: importOption.value,
-			value: walletInput,
+			network,
+			type,
+			value,
 		});
 
 		assertWallet(wallet);
@@ -142,11 +140,22 @@ export const ImportWallet = () => {
 			}),
 		);
 
-		await setSelectedAddresses([...selectedAddresses, wallet.address()]);
-		await persist();
+		await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
 
-		setImportedWallet(wallet);
+		if (wallet.network().id() === activeNetwork.id()) {
+			setImportedWallet(wallet);
+		}
 	};
+
+	const importWallets = async () => {
+		const { importOption, encryptedWif, value } = getValues();
+
+		for (const network of activeProfile.availableNetworks()) {
+			await importWallet({ encryptedWif, network, type: importOption.value, value })
+		}
+
+		await persist();
+	}
 
 	const encryptInputs = async () => {
 		assertWallet(importedWallet);

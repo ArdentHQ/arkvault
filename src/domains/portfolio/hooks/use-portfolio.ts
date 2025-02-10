@@ -91,9 +91,10 @@ export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfil
 		 * @param {string[]} selectedAddresses
 		 * @returns {Promise<void>}
 		 */
-		set(selectedAddresses: string[]): void {
+		set(selectedAddresses: string[], network?: Networks.Network): void {
 			const defaultConfig = { selectedAddressesByNetwork: { [activeNetwork.meta().nethash]: [] } };
-			const nethash = activeNetwork.meta().nethash;
+			const actingNetwork = network ?? activeNetwork
+			const nethash = actingNetwork.meta().nethash;
 
 			const config = profile
 				.settings()
@@ -136,11 +137,11 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 		selectedAddresses: addresses.all(),
 		selectedWallet: addresses.defaultSelectedWallet(),
 		selectedWallets: wallets,
-		setSelectedAddresses: async (selectedAddresses: string[]) => {
-			addresses.set(selectedAddresses);
+		setSelectedAddresses: async (selectedAddresses: string[], network?: Networks.Network) => {
+			addresses.set(selectedAddresses, network);
 
 			if (!addresses.hasSelected() && profile.wallets().first()) {
-				addresses.set([profile.wallets().first().address()]);
+				addresses.set([profile.wallets().first().address()], network);
 			}
 
 			await persist();
