@@ -128,7 +128,7 @@ describe("Wallet Options Hook", () => {
 			key: "registrations",
 			options: [
 				{ label: "Validator", value: "delegate-registration" },
-				{ label: "Username", value: "username-registration" }
+				{ label: "Username", value: "username-registration" },
 			],
 			title: "Register",
 		});
