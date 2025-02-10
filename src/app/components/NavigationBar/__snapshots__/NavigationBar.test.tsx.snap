@@ -124,7 +124,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -170,10 +170,10 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -522,19 +522,19 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
 <DocumentFragment>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
   >
     <div
       class="relative flex"
     >
       <div
-        class="flex flex-1 px-6 md:px-10"
+        class="flex flex-1 px-4 sm:px-6 md:px-10"
       >
         <div
-          class="my-auto flex h-12 items-center"
+          class="my-auto flex h-16 sm:h-21 items-center"
         >
           <button
-            class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+            class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -543,7 +543,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
             >
               <svg
                 fill="none"
-                height="16"
+                height="32"
                 viewBox="0 0 363 363"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -691,7 +691,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -737,10 +737,10 @@ exports[`NavigationBar > should render full variant when profile restored is fal
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -1209,7 +1209,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -1255,10 +1255,10 @@ exports[`NavigationBar > should render full variant when profile restored is tru
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -1727,7 +1727,7 @@ exports[`NavigationBar > should render in lg 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -1773,10 +1773,10 @@ exports[`NavigationBar > should render in lg 1`] = `
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -2245,7 +2245,7 @@ exports[`NavigationBar > should render in md 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -2291,10 +2291,10 @@ exports[`NavigationBar > should render in md 1`] = `
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -2763,7 +2763,7 @@ exports[`NavigationBar > should render in sm 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -2809,10 +2809,10 @@ exports[`NavigationBar > should render in sm 1`] = `
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -3281,7 +3281,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -3327,10 +3327,10 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -3799,7 +3799,7 @@ exports[`NavigationBar > should render in xs 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -3845,10 +3845,10 @@ exports[`NavigationBar > should render in xs 1`] = `
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -4317,7 +4317,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
   >
     <div
       class="relative flex h-12 flex-row"
@@ -4363,10 +4363,10 @@ exports[`NavigationBar > should render with custom menu 1`] = `
           class="flex flex-row items-center gap-6"
         >
           <div
-            class="my-auto flex h-12 items-center"
+            class="my-auto flex h-16 sm:h-21 items-center"
           >
             <button
-              class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -4715,19 +4715,19 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
 <DocumentFragment>
   <nav
     aria-labelledby="main menu"
-    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
   >
     <div
       class="relative flex"
     >
       <div
-        class="flex flex-1 px-6 md:px-10"
+        class="flex flex-1 px-4 sm:px-6 md:px-10"
       >
         <div
-          class="my-auto flex h-12 items-center"
+          class="my-auto flex h-16 sm:h-21 items-center"
         >
           <button
-            class="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+            class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -4736,7 +4736,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
             >
               <svg
                 fill="none"
-                height="16"
+                height="32"
                 viewBox="0 0 363 363"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -4752,7 +4752,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
             </span>
           </button>
           <span
-            class="ml-4 text-lg uppercase"
+            class="ml-4 text-lg leading-[21px] uppercase"
           >
             ARK VAULT
           </span>

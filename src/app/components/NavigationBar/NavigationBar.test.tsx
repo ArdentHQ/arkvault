@@ -483,4 +483,37 @@ describe("NavigationBar", () => {
 
 		expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
 	});
+
+	it("should render logo-only variant", () => {
+		render(<NavigationBar variant="logo-only" />);
+
+		expect(screen.getByRole("navigation")).toHaveClass("h-21");
+	});
+
+	it("should render default variant", () => {
+		render(<NavigationBar variant="default" />);
+		expect(screen.getByRole("navigation")).toHaveClass("h-12");
+	});
+
+	it("should render logo-only variant on xs screen", () => {
+		const { container } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "xs");
+
+		expect(container).toBeInTheDocument();
+		const button = screen.getByTestId("NavigationBarLogo--button");
+		// eslint-disable-next-line testing-library/no-node-access
+		const svg = button.querySelector("svg");
+
+		expect(svg).toHaveAttribute("height", "22");
+	});
+
+	it("should render logo-only variant on large screen", () => {
+		const { container } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "lg");
+
+		expect(container).toBeInTheDocument();
+		const button = screen.getByTestId("NavigationBarLogo--button");
+		// eslint-disable-next-line testing-library/no-node-access
+		const svg = button.querySelector("svg");
+
+		expect(svg).toHaveAttribute("height", "32");
+	});
 });
