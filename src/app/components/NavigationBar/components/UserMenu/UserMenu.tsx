@@ -6,7 +6,7 @@ import { Avatar } from "@/app/components/Avatar";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem, UserMenuProperties } from "@/app/components/NavigationBar";
 import { getUserMenuActions } from "@/app/constants/navigation";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { useActiveProfile } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
@@ -17,7 +17,6 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 	const profile = useActiveProfile();
 
 	const { profileIsSyncingExchangeRates } = useConfiguration();
-	const { isXs } = useBreakpoint();
 
 	const renderAvatar = useCallback(
 		(isOpen: boolean) => (
@@ -25,18 +24,18 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 				className="relative cursor-pointer items-center justify-center rounded-full align-middle"
 				data-testid="UserMenu"
 			>
-				<Avatar size={isXs ? "avatarMobile" : "lg"} highlight={isOpen}>
+				<Avatar size="avatarMobile" highlight={isOpen}>
 					{avatarImage.endsWith("</svg>") ? (
 						<>
 							<img alt="Profile Avatar" src={`data:image/svg+xml;utf8,${avatarImage}`} />
-							<span className="absolute text-sm font-semibold text-theme-background dark:text-theme-text">
+							<span className="absolute text-xs font-semibold text-theme-background dark:text-theme-text">
 								{userInitials}
 							</span>
 						</>
 					) : (
 						<img
 							alt="Profile Avatar"
-							className="h-[25px] w-[25px] rounded-full bg-cover bg-center bg-no-repeat object-cover sm:h-11 sm:w-11"
+							className="h-6 w-6 rounded-full bg-cover bg-center bg-no-repeat object-cover"
 							src={avatarImage}
 						/>
 					)}

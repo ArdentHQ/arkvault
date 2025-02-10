@@ -13,7 +13,7 @@ import { Icon } from "@/app/components/Icon";
 const StatusDot = ({ status }: { status: ServerHealthStatus }) => {
 	const dotColorClass = () => {
 		if (status === ServerHealthStatus.Healthy) {
-			return "bg-theme-success-700";
+			return "bg-theme-success-600 dark:bg-theme-success-500";
 		}
 
 		if (status === ServerHealthStatus.Downgraded) {
@@ -27,7 +27,7 @@ const StatusDot = ({ status }: { status: ServerHealthStatus }) => {
 		return "bg-theme-gray-100";
 	};
 
-	return <div className={`h-2 w-2 rounded-full ${dotColorClass()}`} />;
+	return <div className={`h-1.5 w-1.5 rounded-full ${dotColorClass()}`} />;
 };
 
 export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile }) => {
@@ -41,9 +41,14 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 				placement="bottom"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
-						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--server-status">
+						<Button
+							variant="transparent"
+							size="icon"
+							data-testid="NavigationBar__buttons--server-status"
+							className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+						>
 							<Icon name="Cloud" size="lg" className="p-1" />
-							<div className="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800">
+							<div className="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear">
 								<StatusDot status={status.value} />
 							</div>
 						</Button>

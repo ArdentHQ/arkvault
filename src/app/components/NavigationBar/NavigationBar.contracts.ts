@@ -23,6 +23,7 @@ export interface UserMenuProperties {
 export interface NavigationBarLogoOnlyProperties {
 	title?: string | React.ReactNode;
 	onClick?: () => void;
+	variant?: "default" | "logo-only";
 }
 
 export interface NavigationBarFullProperties {

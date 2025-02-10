@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
 import * as environmentHooks from "@/app/hooks/env";
-import * as useScrollHook from "@/app/hooks/use-scroll";
 import { useNavigationContext } from "@/app/contexts";
 import {
 	env as mockedTestEnvironment,
@@ -24,6 +23,7 @@ import {
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 const webWidgetSelector = "#webWidget";
+const navigationBarLogoButtonSelector = "NavigationBarLogo--button";
 
 vi.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() =>
 	mockedTestEnvironment.profiles().findById(getDefaultProfileId()),
@@ -93,17 +93,6 @@ describe("NavigationBar", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with shadow if there is a scroll", () => {
-		const scrollSpy = vi.spyOn(useScrollHook, "useScroll").mockImplementation(() => 1);
-
-		const { container, asFragment } = render(<NavigationBar />);
-
-		expect(container).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-
-		scrollSpy.mockRestore();
-	});
-
 	it("should render with title if variant is logo-only", () => {
 		const title = "ARK VAULT";
 
@@ -161,34 +150,34 @@ describe("NavigationBar", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		await userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
+		await userEvent.click(screen.getByTestId(navigationBarLogoButtonSelector));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);
 
 		historySpy.mockRestore();
 	});
 
-	it("should render logo with 22 pixels height on mobile", () => {
+	it("should render logo with 16 pixels height on mobile", () => {
 		const { container } = renderResponsiveWithRoute(<NavigationBar />, "xs");
 
 		expect(container).toBeInTheDocument();
-		const button = screen.getByTestId("NavigationBarLogo--button");
+		const button = screen.getByTestId(navigationBarLogoButtonSelector);
 		// eslint-disable-next-line testing-library/no-node-access
 		const svg = button.querySelector("svg");
 
-		expect(svg).toHaveAttribute("height", "22");
+		expect(svg).toHaveAttribute("height", "16");
 	});
 
-	it("should render logo with 28 pixels height on desktop", () => {
+	it("should render logo with 16 pixels height on desktop", () => {
 		const { container } = renderResponsiveWithRoute(<NavigationBar />, "lg");
 
 		expect(container).toBeInTheDocument();
-		const button = screen.getByTestId("NavigationBarLogo--button");
+		const button = screen.getByTestId(navigationBarLogoButtonSelector);
 
 		// eslint-disable-next-line testing-library/no-node-access
 		const svg = button.querySelector("svg");
 
-		expect(svg).toHaveAttribute("height", "28");
+		expect(svg).toHaveAttribute("height", "16");
 	});
 
 	it("should redirect to home by default on logo click", async () => {
@@ -196,7 +185,7 @@ describe("NavigationBar", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		await userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
+		await userEvent.click(screen.getByTestId(navigationBarLogoButtonSelector));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 
@@ -494,5 +483,34 @@ describe("NavigationBar", () => {
 		await userEvent.type(screen.getByTestId("input"), "text");
 
 		expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
+	});
+
+	it("should render logo-only variant", () => {
+		render(<NavigationBar variant="logo-only" />);
+
+		expect(screen.getByRole("navigation")).toHaveClass("h-21");
+	});
+
+	it("should render default variant", () => {
+		render(<NavigationBar variant="default" />);
+		expect(screen.getByRole("navigation")).toHaveClass("h-12");
+	});
+
+	it("should render logo-only variant on xs screen", () => {
+		const { container } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "xs");
+
+		expect(container).toBeInTheDocument();
+		const button = screen.getByTestId(navigationBarLogoButtonSelector);
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(button.querySelector("svg")).toHaveAttribute("height", "22");
+	});
+
+	it("should render logo-only variant on large screen", () => {
+		const { container } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "lg");
+
+		expect(container).toBeInTheDocument();
+		const button = screen.getByTestId(navigationBarLogoButtonSelector);
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(button.querySelector("svg")).toHaveAttribute("height", "32");
 	});
 });

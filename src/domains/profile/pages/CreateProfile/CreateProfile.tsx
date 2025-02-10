@@ -51,7 +51,7 @@ export const CreateProfile = () => {
 			navbarVariant="logo-only"
 			title={<Trans i18nKey="COMMON.APP_NAME" />}
 		>
-			<Section className="flex flex-1 flex-col sm:-mt-5 sm:justify-center">
+			<Section className="flex flex-1 flex-col sm:justify-center">
 				<div className="mx-auto max-w-lg" data-testid="CreateProfile">
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}

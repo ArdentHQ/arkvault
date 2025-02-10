@@ -398,7 +398,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									<SelectNetwork profile={profile} />
 								</div>
 							)}
-
 							<UserMenu
 								userInitials={userInitials}
 								avatarImage={profile.avatar()}
