@@ -20,11 +20,9 @@ import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPassword
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/use-wallet-import";
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
-import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { Networks } from "@ardenthq/sdk";
 
 enum Step {
 	MethodStep = 1,
@@ -36,7 +34,7 @@ export const ImportWallet = () => {
 	const history = useHistory();
 	const isLedgerImport = history.location.pathname.includes("/import/ledger");
 	const activeProfile = useActiveProfile();
-	const { env, persist } = useEnvironmentContext();
+	const { persist } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState<Step>(Step.MethodStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
@@ -45,12 +43,10 @@ export const ImportWallet = () => {
 	const [isEncrypting, setIsEncrypting] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
-	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const { t } = useTranslation();
-	const { importWalletByType } = useWalletImport({ profile: activeProfile });
-	const { syncAll } = useWalletSync({ env, profile: activeProfile });
+	const { importWallets } = useWalletImport({ profile: activeProfile });
 
 	const form = useForm<any>({
 		mode: "onChange",
@@ -85,7 +81,7 @@ export const ImportWallet = () => {
 				setIsImporting(true);
 
 				try {
-					await importWallets();
+					await importWalletsInAllNetworks();
 
 					if (useEncryption && importOption.canBeEncrypted) {
 						setActiveTab(Step.EncryptPasswordStep);
@@ -122,50 +118,12 @@ export const ImportWallet = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const importWallet = async ({
-		network,
-		value,
-		type,
-		encryptedWif,
-	}: {
-		value: WalletGenerationInput;
-		network: Networks.Network;
-		type: string;
-		encryptedWif: string;
-	}): Promise<void> => {
-		const wallet = await importWalletByType({
-			encryptedWif,
-			network,
-			type,
-			value,
-		});
-
-		assertWallet(wallet);
-
-		await syncAll(wallet);
-
-		wallet.mutator().alias(
-			getDefaultAlias({
-				network,
-				profile: activeProfile
-			}),
-		);
-
-		await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
-
-		if (wallet.network().id() === activeNetwork.id()) {
-			setImportedWallet(wallet);
-		}
-	};
-
-	const importWallets = async () => {
+	const importWalletsInAllNetworks = async () => {
 		const { importOption, encryptedWif, value } = getValues();
+		const wallets = await importWallets({ encryptedWif, networks: activeProfile.availableNetworks(), type: importOption.value, value })
 
-		for (const network of activeProfile.availableNetworks()) {
-			await importWallet({ encryptedWif, network, type: importOption.value, value });
-		}
-
-		await persist();
+		const currentWallet = wallets.find(wallet => wallet.network().id() === activeNetwork.id())
+		setImportedWallet(currentWallet)
 	};
 
 	const encryptInputs = async () => {
