@@ -21,7 +21,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	const { profileIsSyncingExchangeRates } = useConfiguration();
 
-	const showNetworkToggle = [isXs, !!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks)].every(Boolean)
+	const showNetworkToggle = [isXs, !!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks)].every(Boolean);
 
 	const renderAvatar = useCallback(
 		(isOpen: boolean) => (
