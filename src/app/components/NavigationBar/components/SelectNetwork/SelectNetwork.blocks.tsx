@@ -39,7 +39,7 @@ export const NetworkDropdownOption = ({ isSelected, children }: { isSelected?: b
 
 export const SelectNetworkToggleButton = ({ isOpen, isMainnet }: { isOpen?: boolean; isMainnet?: boolean }) => (
 	<Button
-		className="w-auto text-theme-secondary-700 text-theme-secondary-900 hover:bg-theme-primary-100 hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800"
+		className="w-auto text-theme-secondary-700 text-theme-secondary-900 hover:bg-theme-primary-100 hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 p-1"
 		data-testid="NavigationBar__buttons--network"
 		size="icon"
 		variant="transparent"
