@@ -9,6 +9,7 @@ import { getUserMenuActions } from "@/app/constants/navigation";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
 import { SelectNetworkMobile } from "@/app/components/NavigationBar/components/SelectNetwork";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();
@@ -19,6 +20,8 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 	const profile = useActiveProfile();
 
 	const { profileIsSyncingExchangeRates } = useConfiguration();
+
+	const showNetworkToggle = [isXs, !!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks)].every(Boolean)
 
 	const renderAvatar = useCallback(
 		(isOpen: boolean) => (
@@ -59,7 +62,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 					<Balance profile={profile} isLoading={profileIsSyncingExchangeRates} />
 				</div>
 			}
-			bottom={isXs ? <SelectNetworkMobile profile={profile} /> : undefined}
+			bottom={showNetworkToggle ? <SelectNetworkMobile profile={profile} /> : undefined}
 		/>
 	);
 };
