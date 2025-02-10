@@ -34,11 +34,13 @@ const usernameExists = async (network: Networks.Network, username: string) => {
 		"mainsail.mainnet": "https://wallets-evm.mainsailhq.com/api/wallets/",
 	};
 
-	if (username.length === 0) return;
+	if (username.length === 0) {
+		return;
+	}
 
 	const response = await fetch(endpoints[network.id()] + username);
 
 	if (response.ok) {
-		throw Error("Username is occupied!");
+		throw new Error("Username is occupied!");
 	}
 };

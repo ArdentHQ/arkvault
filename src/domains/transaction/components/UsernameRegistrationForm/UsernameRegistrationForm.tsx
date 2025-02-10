@@ -64,8 +64,8 @@ export const signUsernameRegistration = async ({ env, form, profile, signatory }
 		data: {
 			username,
 		},
-		gasPrice,
 		gasLimit,
+		gasPrice,
 		signatory,
 	});
 
