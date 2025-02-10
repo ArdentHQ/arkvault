@@ -33,6 +33,7 @@ export const Wrapper = ({ variant, ...props }: { variant: DropdownVariantType } 
 export const Dropdown: FC<DropdownProperties> = ({
 	children,
 	top,
+	bottom,
 	wrapperClass,
 	variant,
 	options,
@@ -127,11 +128,12 @@ export const Dropdown: FC<DropdownProperties> = ({
 					>
 						<Wrapper
 							variant={variant || options ? "options" : "custom"}
-							className="dropdown-body overflow-hidden rounded-xl bg-theme-background px-1 py-0 shadow-xl"
+							className="dropdown-body overflow-hidden rounded-xl bg-theme-background md:px-1 py-0 shadow-xl"
 						>
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
 							{clonedElement && <div>{clonedElement}</div>}
+							{bottom}
 						</Wrapper>
 					</div>
 				</FloatingPortal>

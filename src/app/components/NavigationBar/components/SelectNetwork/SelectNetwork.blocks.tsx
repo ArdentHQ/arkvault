@@ -15,7 +15,7 @@ export const MainnetOption = () => (
 			<Icon name="Mainnet" width={14} height={14} />
 		</span>
 
-		<span className="text-sm">Mainnet</span>
+		<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50">Mainnet</span>
 	</>
 );
 
@@ -25,12 +25,12 @@ export const TestnetOption = () => (
 			<Icon name="Testnet" width={14} height={14} />
 		</span>
 
-		<span className="text-sm">Testnet</span>
+		<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50">Testnet</span>
 	</>
 );
 
 export const NetworkDropdownOption = ({ isSelected, children }: { isSelected?: boolean; children: ReactElement }) => (
-	<div className="flex min-w-40 items-center justify-between">
+	<div className={cn("flex min-w-40 items-center justify-between")}>
 		<div className="flex items-center space-x-2">{children}</div>
 
 		{isSelected && <Icon name="CheckmarkDouble" className="text-theme-primary-600 dark:text-theme-text" />}
@@ -38,25 +38,27 @@ export const NetworkDropdownOption = ({ isSelected, children }: { isSelected?: b
 );
 
 export const SelectNetworkToggleButton = ({ isOpen, isMainnet }: { isOpen?: boolean; isMainnet?: boolean }) => (
-	<Button
-		className="w-auto text-theme-secondary-700 text-theme-secondary-900 hover:bg-theme-primary-100 hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 p-1"
-		data-testid="NavigationBar__buttons--network"
-		size="icon"
-		variant="transparent"
-	>
-		{isMainnet && <MainnetOption />}
+	<div className="group">
+		<Button
+			className="w-auto text-theme-secondary-700 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 p-1"
+			data-testid="NavigationBar__buttons--network"
+			size="icon"
+			variant="transparent"
+		>
+			{isMainnet && <MainnetOption />}
 
-		{!isMainnet && <TestnetOption />}
+			{!isMainnet && <TestnetOption />}
 
-		<Icon
-			role="img"
-			name="ChevronDownSmall"
-			className={cn("transition-transform", {
-				"rotate-180": isOpen,
-			})}
-			size="sm"
-		/>
-	</Button>
+			<Icon
+				role="img"
+				name="ChevronDownSmall"
+				className={cn("transition-transform text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50", {
+					"rotate-180": isOpen,
+				})}
+				size="sm"
+			/>
+		</Button>
+	</div>
 );
 
 export const selectNetworkOptions = ({ isMainnet }: { isMainnet: boolean }): DropdownOption[] => [

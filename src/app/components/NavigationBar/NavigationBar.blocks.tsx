@@ -393,9 +393,13 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
 
-							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && <div className="hidden sm:block"><SelectNetwork profile={profile} /></div>}
+							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && (
+								<>
+									<div className="hidden sm:block"><SelectNetwork profile={profile} /></div>
+									<div className="hidden sm:block h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
+								</>
+							)}
 
-							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
 
 							<UserMenu
 								userInitials={userInitials}

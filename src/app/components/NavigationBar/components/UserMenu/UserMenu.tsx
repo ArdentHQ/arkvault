@@ -6,13 +6,15 @@ import { Avatar } from "@/app/components/Avatar";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem, UserMenuProperties } from "@/app/components/NavigationBar";
 import { getUserMenuActions } from "@/app/constants/navigation";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
+import { SelectNetworkMobile } from "../SelectNetwork";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();
 
 	const userMenuActions = useMemo<(DropdownOption & NavigationBarMenuItem)[]>(() => getUserMenuActions(t), [t]);
+	const { isXs } = useBreakpoint()
 
 	const profile = useActiveProfile();
 
@@ -47,6 +49,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	return (
 		<Dropdown
+			wrapperClass="rounded-none"
 			placement="bottom-end"
 			onSelect={onUserAction}
 			options={userMenuActions}
@@ -56,6 +59,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 					<Balance profile={profile} isLoading={profileIsSyncingExchangeRates} />
 				</div>
 			}
+			bottom={isXs ? <SelectNetworkMobile profile={profile} /> : undefined}
 		/>
 	);
 };
