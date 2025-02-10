@@ -19,6 +19,7 @@ export const useActiveNetwork = ({
 }): {
 	activeNetwork: Networks.Network;
 	setActiveNetwork: (networkId: string) => Promise<void>;
+	resetToDefaults: () => Promise<void>;
 } => {
 	const environment = useEnvironmentContext();
 
@@ -48,8 +49,17 @@ export const useActiveNetwork = ({
 		await environment.persist();
 	};
 
+	const resetToDefaults = async () => {
+		// @TODO: Change it to mainnet when available.
+		const defaultNetwork = profile.availableNetworks().find(network => network.isTest())
+		if (defaultNetwork) {
+			await setActiveNetwork(defaultNetwork.id())
+		}
+	}
+
 	return {
 		activeNetwork,
+		resetToDefaults,
 		setActiveNetwork,
 	};
 };
