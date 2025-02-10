@@ -211,14 +211,27 @@ exports[`SideBar > should render responsive dropdown 1`] = `
             style="height: 20px; width: 20px;"
           >
             <svg
+              fill="none"
               style="height: 100%; width: 100%;"
-              viewBox="0 0 20 20"
-              xml:space="preserve"
+              viewBox="0 0 20 14"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M1 15.5h18M1 10h9M1 4.5h14.3"
-                fill="none"
+                d="M1 12.0781H7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 6.53906H11"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 1H19"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -404,14 +417,27 @@ exports[`SideBar > should render responsive dropdown 2`] = `
             style="height: 20px; width: 20px;"
           >
             <svg
+              fill="none"
               style="height: 100%; width: 100%;"
-              viewBox="0 0 20 20"
-              xml:space="preserve"
+              viewBox="0 0 20 14"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M1 15.5h18M1 10h9M1 4.5h14.3"
-                fill="none"
+                d="M1 12.0781H7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 6.53906H11"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 1H19"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -597,14 +623,27 @@ exports[`SideBar > should render responsive dropdown 3`] = `
             style="height: 20px; width: 20px;"
           >
             <svg
+              fill="none"
               style="height: 100%; width: 100%;"
-              viewBox="0 0 20 20"
-              xml:space="preserve"
+              viewBox="0 0 20 14"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M1 15.5h18M1 10h9M1 4.5h14.3"
-                fill="none"
+                d="M1 12.0781H7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 6.53906H11"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 1H19"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"

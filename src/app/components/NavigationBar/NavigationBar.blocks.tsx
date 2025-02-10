@@ -9,14 +9,13 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { BackButton } from "@/app/components/NavigationBar/components/BackButton";
-import { Balance } from "@/app/components/NavigationBar/components/Balance";
 import { UserMenu } from "@/app/components/NavigationBar/components/UserMenu/UserMenu";
 import { NotificationsDropdown } from "@/app/components/Notifications";
 import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
 import { Tooltip } from "@/app/components/Tooltip";
 import { getNavigationMenu } from "@/app/constants/navigation";
-import { useConfiguration, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useInputFocus, useScroll } from "@/app/hooks";
+import { useNavigationContext } from "@/app/contexts";
+import { useActiveProfile, useBreakpoint, useInputFocus } from "@/app/hooks";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
@@ -30,31 +29,32 @@ import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 
 const NavWrapper = ({
-	noBorder,
-	noShadow,
-	scroll,
+	variant = "default",
 	...props
-}: React.HTMLProps<HTMLDivElement> & { noBorder?: boolean; noShadow?: boolean; scroll?: number }) => (
+}: React.HTMLProps<HTMLDivElement> & { variant?: "default" | "logo-only" }) => (
 	<nav
 		{...props}
 		className={twMerge(
-			"custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200",
-			cn({
-				"border-theme-secondary-300 dark:border-theme-secondary-800": !noBorder && !scroll,
-				"shadow-header-smooth dark:shadow-header-smooth-dark": !noShadow && scroll,
-			}),
+			cn(
+				"custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900",
+				{
+					"h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700": variant === "default",
+					"h-21": variant === "logo-only",
+				},
+			),
 			props.className,
 		)}
 	/>
 );
 
 export const NavigationButtonWrapper = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
-	<div {...props} className={twMerge("custom-button-wrapper", props.className)} />
+	<div {...props} className={twMerge("custom-button-nav-wrapper", props.className)} />
 );
 
 const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	title,
 	onClick,
+	variant = "default",
 }: NavigationBarLogoOnlyProperties) => {
 	const history = useHistory();
 	const { isXs } = useBreakpoint();
@@ -63,35 +63,46 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 		history.push("/");
 	}, [history]);
 
+	const getLogoHeight = () => {
+		if (variant === "default") {
+			return 16;
+		}
+
+		return isXs ? 22 : 32;
+	};
+
 	return (
-		<div className="my-auto flex items-center">
+		<div className="my-auto flex h-16 items-center sm:h-21">
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
-				className="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
+				className={cn(
+					"my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500",
+					{
+						"h-11 w-11": variant === "logo-only" && !isXs,
+						"h-6 w-6": variant === "default",
+						"h-8 w-8": variant === "logo-only" && isXs,
+					},
+				)}
 				onClick={() => (onClick ? onClick() : defaultHandler())}
 			>
-				<Logo height={isXs ? 22 : 28} />
+				<Logo height={getLogoHeight()} />
 			</button>
 
-			{title && <span className="text-lg uppercase">{title}</span>}
+			{title && <span className="ml-4 text-lg uppercase leading-[21px]">{title}</span>}
 		</div>
 	);
 };
 
-export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> = ({ title }) => {
-	const scroll = useScroll();
-
-	return (
-		<NavWrapper aria-labelledby="main menu" noBorder scroll={scroll}>
-			<div className="relative flex h-14 sm:h-21">
-				<div className="flex flex-1 px-6 md:px-10">
-					<NavigationBarLogo title={title} />
-				</div>
+export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> = ({ title }) => (
+	<NavWrapper aria-labelledby="main menu" variant="logo-only">
+		<div className="relative flex">
+			<div className="flex flex-1 px-4 sm:px-6 md:px-10">
+				<NavigationBarLogo title={title} variant="logo-only" />
 			</div>
-		</NavWrapper>
-	);
-};
+		</div>
+	</NavWrapper>
+);
 
 const NavigationBarMobileWrapper = ({
 	hasFixedFormButtons,
@@ -184,7 +195,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const history = useHistory();
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
-	const scroll = useScroll();
 	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
 	const { showSupportChat } = useZendesk();
@@ -204,8 +214,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	}, [isLg, isMd]);
 
 	const { hasFixedFormButtons, showMobileNavigation } = useNavigationContext();
-
-	const { profileIsSyncingExchangeRates } = useConfiguration();
 
 	const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);
 
@@ -228,14 +236,13 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex" data-testid="NavigationBar__menu">
+			<ul className="hidden h-12 items-center xl:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => (
 					<li key={index} className="flex">
 						<NavLink
 							to={menuItem.mountPath(profile.id())}
 							title={menuItem.title}
-							className="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-							data-ring-focus-margin="-mx-2"
+							className="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
 						>
 							{menuItem.title}
 						</NavLink>
@@ -244,13 +251,13 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			</ul>
 			<div
 				data-testid="NavigationBar__menu-toggle"
-				className="ml-2 mr-auto flex content-center items-center lg:hidden"
+				className="mr-auto flex content-center items-center xl:hidden"
 			>
 				<Dropdown
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
-							className="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+							className="cursor-pointer rounded py-2 text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
 						>
 							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
 						</button>
@@ -328,88 +335,77 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 				/>
 			)}
 
-			<NavWrapper aria-labelledby="main menu" scroll={scroll}>
-				<div className="relative flex h-14 sm:h-21">
-					<div className="hidden w-12 sm:flex">
+			<NavWrapper aria-labelledby="main menu">
+				<div className="relative flex h-12 flex-row">
+					<div className="hidden w-9 sm:flex">
 						<BackButton disabled={isBackDisabled} />
 					</div>
 
-					<div className="flex flex-1 items-center px-6 sm:px-8">
-						<NavigationBarLogo onClick={homeButtonHandler} />
+					<div className="flex flex-1 items-center justify-between px-6">
+						<div className="flex flex-row items-center gap-6">
+							<NavigationBarLogo onClick={homeButtonHandler} />
+							{renderNavigationMenu()}
+						</div>
 
-						{renderNavigationMenu()}
-
-						<div className="mr-4 flex items-center space-x-2 sm:space-x-4">
-							<ServerStatusIndicator profile={profile} />
-
-							<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
-
+						<div className="flex flex-row items-center justify-center gap-4 sm:gap-5">
 							<NotificationsDropdown profile={profile} />
-
-							<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
-
-							<div className="hidden items-center space-x-4 sm:flex">
-								<div className="flex items-center">
-									<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
-										<div>
-											<NavigationButtonWrapper>
-												<Button
-													data-testid="NavigationBar__buttons--receive"
-													disabled={wallets.length === 0}
-													size="icon"
-													variant="transparent"
-													onClick={receiveButtonClickHandler}
-												>
-													<Icon name="Received" size="lg" className="p-1" />
-												</Button>
-											</NavigationButtonWrapper>
-										</div>
-									</Tooltip>
-								</div>
-
-								<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
-
-								<div className="flex items-center">
-									<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
-										<div>
-											<NavigationButtonWrapper>
-												<Button
-													data-testid="NavigationBar__buttons--send"
-													disabled={wallets.length === 0}
-													size="icon"
-													variant="transparent"
-													onClick={sendButtonClickHandler}
-												>
-													<Icon name="Sent" size="lg" className="p-1" />
-												</Button>
-											</NavigationButtonWrapper>
-										</div>
-									</Tooltip>
-								</div>
-
-								<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
+							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
+							<ServerStatusIndicator profile={profile} />
+							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12" />
+							<div className="hidden items-center sm:flex">
+								<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
+									<div>
+										<NavigationButtonWrapper>
+											<Button
+												data-testid="NavigationBar__buttons--receive"
+												disabled={wallets.length === 0}
+												size="icon"
+												variant="transparent"
+												className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+												onClick={receiveButtonClickHandler}
+											>
+												<Icon name="Received" size="lg" className="p-1" />
+											</Button>
+										</NavigationButtonWrapper>
+									</div>
+								</Tooltip>
 							</div>
+							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12" />
+							<div className="hidden items-center sm:flex">
+								<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
+									<div>
+										<NavigationButtonWrapper>
+											<Button
+												data-testid="NavigationBar__buttons--send"
+												disabled={wallets.length === 0}
+												size="icon"
+												variant="transparent"
+												className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+												onClick={sendButtonClickHandler}
+											>
+												<Icon name="Sent" size="lg" className="p-1" />
+											</Button>
+										</NavigationButtonWrapper>
+									</div>
+								</Tooltip>
+							</div>
+							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
+							<UserMenu
+								userInitials={userInitials}
+								avatarImage={profile.avatar()}
+								onUserAction={(action: DropdownOption) => {
+									if (action.value === "contact") {
+										return showSupportChat(profile);
+									}
+
+									if (action.isExternal) {
+										return openExternal(action.mountPath());
+									}
+
+									return history.push(action.mountPath(profile.id()));
+								}}
+							/>
 						</div>
-
-						<div className="mx-4 my-auto hidden items-center md:flex" data-testid="NavigationBar__balance">
-							<Balance profile={profile} isLoading={profileIsSyncingExchangeRates} />
-						</div>
-
-						<UserMenu
-							userInitials={userInitials}
-							avatarImage={profile.avatar()}
-							onUserAction={(action: DropdownOption) => {
-								if (action.value === "contact") {
-									return showSupportChat(profile);
-								}
-
-								if (action.isExternal) {
-									return openExternal(action.mountPath());
-								}
-
-								return history.push(action.mountPath(profile.id()));
-							}}
-						/>
 					</div>
 				</div>
 
