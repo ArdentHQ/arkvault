@@ -1,7 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -26,8 +25,8 @@ type ImportOptionsType = {
 export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 	const { env, persist } = useEnvironmentContext();
-	const { syncAll } = useWalletSync({ env, profile })
-	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile })
+	const { syncAll } = useWalletSync({ env, profile });
+	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile });
 
 	const importWalletByType = async ({
 		network,
@@ -147,7 +146,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		return (importOptions[type as keyof typeof importOptions] || importOptions.default)();
 	};
 
-
 	const importWallet = async ({
 		network,
 		value,
@@ -173,11 +171,11 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		wallet.mutator().alias(
 			getDefaultAlias({
 				network,
-				profile
+				profile,
 			}),
 		);
 
-		return wallet
+		return wallet;
 	};
 
 	const importWallets = async ({
@@ -191,18 +189,18 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		type: string;
 		encryptedWif?: string;
 	}) => {
-		const wallets: Contracts.IReadWriteWallet[] = []
+		const wallets: Contracts.IReadWriteWallet[] = [];
 
 		for (const network of networks) {
 			const wallet = await importWallet({ encryptedWif, network, type, value });
-			wallets.push(wallet)
+			wallets.push(wallet);
 
 			await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
 		}
 
 		await persist();
 
-		return wallets
+		return wallets;
 	};
 
 	return { importWallet, importWallets };

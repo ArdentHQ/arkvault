@@ -21,7 +21,7 @@ import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { useWalletImport } from "../../hooks";
+import { useWalletImport } from "@/domains/wallet/hooks";
 
 enum Step {
 	WalletOverviewStep = 1,
@@ -37,7 +37,7 @@ export const CreateWallet = () => {
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<Step>(Step.WalletOverviewStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-	const { importWallets } = useWalletImport({ profile: activeProfile })
+	const { importWallets } = useWalletImport({ profile: activeProfile });
 
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
@@ -166,16 +166,15 @@ export const CreateWallet = () => {
 				}
 			}
 
-
 			assertWallet(wallet);
 			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
 			await importWallets({
 				encryptedWif: parameters.encryptionPassword,
-				networks: activeProfile.availableNetworks().filter(network => network.id() !== wallet.network().id()),
+				networks: activeProfile.availableNetworks().filter((network) => network.id() !== wallet.network().id()),
 				type: "bip39",
 				value: mnemonic,
-			})
+			});
 
 			setValue("wallet", wallet);
 

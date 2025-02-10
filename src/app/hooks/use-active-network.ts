@@ -51,11 +51,11 @@ export const useActiveNetwork = ({
 
 	const resetToDefaults = async () => {
 		// @TODO: Change it to mainnet when available.
-		const defaultNetwork = profile.availableNetworks().find(network => network.isTest())
+		const defaultNetwork = profile.availableNetworks().find((network) => network.isTest());
 		if (defaultNetwork) {
-			await setActiveNetwork(defaultNetwork.id())
+			await setActiveNetwork(defaultNetwork.id());
 		}
-	}
+	};
 
 	return {
 		activeNetwork,

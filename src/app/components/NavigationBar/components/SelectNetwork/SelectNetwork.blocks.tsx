@@ -15,7 +15,9 @@ export const MainnetOption = () => (
 			<Icon name="Mainnet" width={14} height={14} />
 		</span>
 
-		<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50">Mainnet</span>
+		<span className="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50">
+			Mainnet
+		</span>
 	</>
 );
 
@@ -25,7 +27,9 @@ export const TestnetOption = () => (
 			<Icon name="Testnet" width={14} height={14} />
 		</span>
 
-		<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50">Testnet</span>
+		<span className="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50">
+			Testnet
+		</span>
 	</>
 );
 
@@ -40,7 +44,7 @@ export const NetworkDropdownOption = ({ isSelected, children }: { isSelected?: b
 export const SelectNetworkToggleButton = ({ isOpen, isMainnet }: { isOpen?: boolean; isMainnet?: boolean }) => (
 	<div className="group">
 		<Button
-			className="w-auto text-theme-secondary-700 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 p-1"
+			className="w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
 			data-testid="NavigationBar__buttons--network"
 			size="icon"
 			variant="transparent"
@@ -52,9 +56,12 @@ export const SelectNetworkToggleButton = ({ isOpen, isMainnet }: { isOpen?: bool
 			<Icon
 				role="img"
 				name="ChevronDownSmall"
-				className={cn("transition-transform text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50", {
-					"rotate-180": isOpen,
-				})}
+				className={cn(
+					"text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50",
+					{
+						"rotate-180": isOpen,
+					},
+				)}
 				size="sm"
 			/>
 		</Button>

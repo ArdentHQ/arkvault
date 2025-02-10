@@ -8,13 +8,13 @@ import { NavigationBarMenuItem, UserMenuProperties } from "@/app/components/Navi
 import { getUserMenuActions } from "@/app/constants/navigation";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
-import { SelectNetworkMobile } from "../SelectNetwork";
+import { SelectNetworkMobile } from "@/app/components/NavigationBar/components/SelectNetwork";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();
 
 	const userMenuActions = useMemo<(DropdownOption & NavigationBarMenuItem)[]>(() => getUserMenuActions(t), [t]);
-	const { isXs } = useBreakpoint()
+	const { isXs } = useBreakpoint();
 
 	const profile = useActiveProfile();
 

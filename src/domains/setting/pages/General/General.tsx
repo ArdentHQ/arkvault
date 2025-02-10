@@ -32,7 +32,7 @@ const selectOption = "COMMON.SELECT_OPTION";
 export const GeneralSettings: React.FC = () => {
 	const profile = useActiveProfile();
 	const { setProfileTheme } = useTheme();
-	const { resetToDefaults } = useActiveNetwork({ profile })
+	const { resetToDefaults } = useActiveNetwork({ profile });
 
 	const isProfileRestored = profile.status().isRestored();
 
@@ -280,7 +280,7 @@ export const GeneralSettings: React.FC = () => {
 		}
 
 		if (!showDevelopmentNetwork) {
-			await resetToDefaults()
+			await resetToDefaults();
 		}
 
 		reset(getDefaultValues());

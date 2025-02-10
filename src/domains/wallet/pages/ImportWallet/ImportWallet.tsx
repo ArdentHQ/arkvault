@@ -19,9 +19,7 @@ import { toasts } from "@/app/services";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/use-wallet-import";
-import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { assertString, assertWallet } from "@/utils/assertions";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
@@ -120,10 +118,15 @@ export const ImportWallet = () => {
 
 	const importWalletsInAllNetworks = async () => {
 		const { importOption, encryptedWif, value } = getValues();
-		const wallets = await importWallets({ encryptedWif, networks: activeProfile.availableNetworks(), type: importOption.value, value })
+		const wallets = await importWallets({
+			encryptedWif,
+			networks: activeProfile.availableNetworks(),
+			type: importOption.value,
+			value,
+		});
 
-		const currentWallet = wallets.find(wallet => wallet.network().id() === activeNetwork.id())
-		setImportedWallet(currentWallet)
+		const currentWallet = wallets.find((wallet) => wallet.network().id() === activeNetwork.id());
+		setImportedWallet(currentWallet);
 	};
 
 	const encryptInputs = async () => {
