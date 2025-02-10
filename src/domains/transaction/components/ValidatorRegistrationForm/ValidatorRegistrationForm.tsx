@@ -59,15 +59,15 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { network, senderAddress, validatorPublicKey } = getValues();
+	const { network, senderAddress, validatorPublicKey, gasPrice, gasLimit } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 	const transactionId = await senderWallet.transaction().signValidatorRegistration({
 		data: {
 			validatorPublicKey,
 		},
-		// @TODO: Remove hardcoded fee once fees are implemented for evm.
-		fee: 5,
+		gasLimit,
+		gasPrice,
 		signatory,
 	});
 

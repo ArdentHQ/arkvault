@@ -9,12 +9,15 @@ import { Address } from "@/app/components/Address";
 import { ThemeIcon } from "@/app/components/Icon";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import cn from "classnames";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) => {
 	const { t } = useTranslation();
 	const { getValues, unregister } = useFormContext();
 
-	const { fee } = getValues();
+	const { gasPrice, gasLimit } = getValues();
+
+	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	useEffect(() => {
 		unregister("mnemonic");

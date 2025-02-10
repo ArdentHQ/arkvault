@@ -34,7 +34,7 @@ export const SendValidatorResignation = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch } = form;
+	const { formState, getValues, register, watch, setValue } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { senderAddress, gasLimit, gasPrice } = watch();
@@ -79,6 +79,14 @@ export const SendValidatorResignation = () => {
 
 		register("suppressWarning");
 	}, [activeWallet, common, getValues, register]);
+
+	useEffect(() => {
+		if (!activeWallet || activeWallet.address() === senderAddress) {
+			return;
+		}
+
+		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
+	}, [activeWallet, senderAddress, setValue]);
 
 	// @TODO enable when Mainsail has dynamic fees ready
 	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
