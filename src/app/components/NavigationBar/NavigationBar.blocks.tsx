@@ -28,11 +28,17 @@ import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 
-const NavWrapper = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
+const NavWrapper = ({ variant = "default", ...props }: React.HTMLProps<HTMLDivElement> & { variant?: "default" | "logo-only" }) => (
 	<nav
 		{...props}
 		className={twMerge(
-			"custom-nav-wrapper sticky inset-x-0 top-0 z-40 h-12 border-b border-b-theme-secondary-300 bg-white transition-all duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-900",
+			cn(
+				"custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900",
+				{
+					"h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700": variant === "default",
+					"h-21": variant === "logo-only",
+				},
+			),
 			props.className,
 		)}
 	/>
@@ -45,34 +51,40 @@ export const NavigationButtonWrapper = ({ ...props }: React.HTMLProps<HTMLDivEle
 const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	title,
 	onClick,
+	variant = "default",
 }: NavigationBarLogoOnlyProperties) => {
 	const history = useHistory();
+	const { isXs } = useBreakpoint();
 
 	const defaultHandler = useCallback(() => {
 		history.push("/");
 	}, [history]);
 
 	return (
-		<div className="my-auto flex h-12 items-center">
+		<div className="my-auto flex h-16 sm:h-21 items-center">
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
-				className="my-auto flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500"
+				className={cn("my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500", {
+					"h-6 w-6": variant === "default",
+					"h-11 w-11": variant === "logo-only" && !isXs,
+					"h-8 w-8": variant === "logo-only" && isXs,
+				})}
 				onClick={() => (onClick ? onClick() : defaultHandler())}
 			>
-				<Logo height={16} />
+				<Logo height={variant === "default" ? 16 : isXs ? 22 : 32} />
 			</button>
 
-			{title && <span className="ml-4 text-lg uppercase">{title}</span>}
+			{title && <span className="ml-4 text-lg leading-[21px] uppercase">{title}</span>}
 		</div>
 	);
 };
 
 export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> = ({ title }) => (
-	<NavWrapper aria-labelledby="main menu">
+	<NavWrapper aria-labelledby="main menu" variant="logo-only">
 		<div className="relative flex">
-			<div className="flex flex-1 px-6 md:px-10">
-				<NavigationBarLogo title={title} />
+			<div className="flex flex-1 px-4 sm:px-6 md:px-10">
+				<NavigationBarLogo title={title} variant="logo-only" />
 			</div>
 		</div>
 	</NavWrapper>
