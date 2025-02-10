@@ -126,9 +126,6 @@ export const SendVote = () => {
 		setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: false });
 	}, [wallet]);
 
-	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-	// 	useFeeConfirmation(fee, fees);
-
 	useEffect(() => {
 		const updateWallet = async () => {
 			const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
@@ -201,15 +198,10 @@ export const SendVote = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const handleNext = (suppressWarning?: boolean) => {
+	const handleNext = () => {
 		abortReference.current = new AbortController();
 
 		const newIndex = activeTab + 1;
-
-		// if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-		// 	return setShowFeeWarning(true);
-		// }
 
 		const { network, senderAddress } = getValues();
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
@@ -530,15 +522,6 @@ export const SendVote = () => {
 								/>
 							)}
 						</Tabs>
-
-						{/*<FeeWarning*/}
-						{/*	isOpen={showFeeWarning}*/}
-						{/*	variant={feeWarningVariant}*/}
-						{/*	onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}*/}
-						{/*	onConfirm={(suppressWarning: boolean) =>*/}
-						{/*		dismissFeeWarning(() => handleNext(true), suppressWarning)*/}
-						{/*	}*/}
-						{/*/>*/}
 					</Form>
 				</StepsProvider>
 			</Section>

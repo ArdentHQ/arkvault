@@ -140,10 +140,6 @@ export const SendTransfer = () => {
 
 	const [showQRModal, setShowQRModal] = useState(false);
 
-	// @TODO enable when Mainsail has dynamic fees ready
-	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-	// 	useFeeConfirmation(fee, fees);
-
 	const submit = useCallback(
 		async (skipUnconfirmedCheck = false) => {
 			assertWallet(wallet);
@@ -181,8 +177,7 @@ export const SendTransfer = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const handleNext = async (suppressWarning?: boolean) => {
+	const handleNext = async () => {
 		abortReference.current = new AbortController();
 
 		const { network, senderAddress } = getValues();
@@ -190,11 +185,6 @@ export const SendTransfer = () => {
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 		const nextStep = activeTab + 1;
-
-		// if (nextStep === SendTransferStep.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-		// 	setShowFeeWarning(true);
-		// 	return;
-		// }
 
 		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
 			await handleSubmit(() => submit(true))();
@@ -429,15 +419,6 @@ export const SendTransfer = () => {
 						currentData={currentFormData}
 						newData={overwriteData}
 					/>
-
-					{/*<FeeWarning*/}
-					{/*	isOpen={showFeeWarning}*/}
-					{/*	variant={feeWarningVariant}*/}
-					{/*	onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}*/}
-					{/*	onConfirm={(suppressWarning: boolean) =>*/}
-					{/*		dismissFeeWarning(async () => await handleNext(true), suppressWarning)*/}
-					{/*	}*/}
-					{/*/>*/}
 
 					<ConfirmSendTransaction
 						profile={activeProfile}

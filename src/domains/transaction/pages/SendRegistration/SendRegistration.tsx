@@ -98,9 +98,6 @@ export const SendRegistration = () => {
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
 
-	// const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-	// 	useFeeConfirmation(fee, fees);
-
 	useEffect(() => {
 		if (!activeWallet) {
 			return;
@@ -210,16 +207,11 @@ export const SendRegistration = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const handleNext = (suppressWarning?: boolean) => {
+	const handleNext = () => {
 		abortReference.current = new AbortController();
 
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
-
-		// if (isNextStepAuthentication && requireFeeConfirmation && !suppressWarning) {
-		// 	return setShowFeeWarning(true);
-		// }
 
 		// Skip authentication step
 		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
@@ -299,17 +291,6 @@ export const SendRegistration = () => {
 								/>
 							)}
 						</Tabs>
-
-						{/*<FeeWarning*/}
-						{/*	isOpen={showFeeWarning}*/}
-						{/*	variant={feeWarningVariant}*/}
-						{/*	onCancel={(suppressWarning: boolean) =>*/}
-						{/*		dismissFeeWarning(() => setActiveTab(1), suppressWarning)*/}
-						{/*	}*/}
-						{/*	onConfirm={(suppressWarning: boolean) =>*/}
-						{/*		dismissFeeWarning(() => handleNext(true), suppressWarning)*/}
-						{/*	}*/}
-						{/*/>*/}
 					</Form>
 				</StepsProvider>
 			</Section>
