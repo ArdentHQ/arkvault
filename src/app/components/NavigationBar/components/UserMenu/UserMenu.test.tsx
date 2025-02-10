@@ -40,7 +40,7 @@ describe("UserMenu", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render the avatar with 25px on mobile", () => {
+	it("should render the avatar with 24px on mobile", () => {
 		const avatarImage = "<svg></svg>";
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId">
@@ -52,10 +52,10 @@ describe("UserMenu", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Avatar")).toHaveClass("w-[25px]");
+		expect(screen.getByTestId("Avatar")).toHaveClass("w-6");
 	});
 
-	it("should render the avatar with 44px on desktop", () => {
+	it("should render the avatar with 24px on desktop", () => {
 		const avatarImage = "<svg></svg>";
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId">
@@ -67,6 +67,6 @@ describe("UserMenu", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Avatar")).toHaveClass("w-11");
+		expect(screen.getByTestId("Avatar")).toHaveClass("w-6");
 	});
 });
