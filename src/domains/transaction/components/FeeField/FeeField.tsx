@@ -24,11 +24,11 @@ interface Properties {
 export const GasLimit: Record<Properties["type"], number> = {
 	delegateRegistration: 500_000,
 	delegateResignation: 150_000,
-	usernameRegistration: 500_000,
 	multiPayment: 21_000,
-	usernameResignation: 150_000,
 	multiSignature: 21_000,
 	transfer: 21_000,
+	usernameRegistration: 500_000,
+	usernameResignation: 150_000,
 	vote: 200_000,
 };
 
