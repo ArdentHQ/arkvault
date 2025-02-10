@@ -1,6 +1,7 @@
 import { validatePattern } from "@/utils/validations";
 import { Networks } from "@ardenthq/sdk";
 import {debounceAsync} from "@/utils/debounce";
+import { ValidateResult } from "react-hook-form";
 
 export const usernameRegistration = (t: any) => ({
 	username: (network: Networks.Network) => ({
@@ -19,10 +20,10 @@ export const usernameRegistration = (t: any) => ({
 			unique: debounceAsync(async (value) => {
 				try {
 					await usernameExists(network, value);
-				} catch (_e) {
+				} catch {
 					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") })
 				}
-			}, 500),
+			}, 500) as () => Promise<ValidateResult>,
 		},
 	}),
 });
