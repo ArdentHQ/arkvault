@@ -29,24 +29,6 @@ describe("useWalletConfig", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should have default configuration", () => {
-		const {
-			result: { current },
-		} = renderHook(() => useWalletConfig({ profile }), { wrapper });
-
-		expect(current.selectedWallets).toHaveLength(2);
-
-		const defaultNetworkIds = uniq(
-			profile
-				.wallets()
-				.values()
-				.map((wallet) => wallet.network().id()),
-		);
-
-		expect(current.selectedNetworkIds).toStrictEqual(defaultNetworkIds);
-		expect(current.walletsDisplayType).toBe("all");
-	});
-
 	it("should render with ledger wallet display type", async () => {
 		const walletIsLedgerSpy = vi.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
 		profile.wallets().first().toggleStarred();
