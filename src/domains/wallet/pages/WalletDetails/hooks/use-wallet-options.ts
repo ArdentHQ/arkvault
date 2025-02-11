@@ -102,8 +102,8 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 		}
 
 		if (
-			walletsWithValidatorActions.some(
-				(w) => w.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)
+			walletsWithValidatorActions.some((w) =>
+				w.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration),
 			)
 		) {
 			registrationOptions.options.push({
