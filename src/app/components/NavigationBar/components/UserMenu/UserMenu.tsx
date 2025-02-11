@@ -22,7 +22,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	const { profileIsSyncingExchangeRates } = useConfiguration();
 	const { convertedBalance } = useProfileBalance({ isLoading: profileIsSyncingExchangeRates, profile });
-	const ticker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
+	const ticker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) || "USD";
 
 	assertString(ticker);
 
