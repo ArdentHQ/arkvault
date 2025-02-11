@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import MockDate from "mockdate";
 import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
-import { env } from "@/utils/testing-library";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
@@ -103,10 +103,6 @@ beforeAll(async () => {
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 
-	const network = env.profiles().first().wallets().first().network();
-	for (const profile of env.profiles().values()) {
-		vi.spyOn(profile, "availableNetworks").mockReturnValue([network])
-	}
 
 	return;
 });
@@ -125,6 +121,16 @@ beforeEach(() => {
 
 		return originalTippyRender(context);
 	});
+
+	if (process.env.MOCK_AVAILABLE_NETWORKS !== "false") {
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const networks = profile.wallets().values().map(wallet => wallet.network())
+
+		for (const profile of env.profiles().values()) {
+			vi.spyOn(profile, "availableNetworks").mockReturnValue([networks[0]])
+		}
+	}
+
 });
 
 afterEach(() => {
