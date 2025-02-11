@@ -532,8 +532,8 @@ describe("useProfileSynchronizer", () => {
 
 describe("useProfileRestore", () => {
 	beforeAll(() => {
-		process.env.MOCK_AVAILABLE_NETWORKS = "false"
-	})
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
+	});
 
 	it("should not restore profile if already restored in tests", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
