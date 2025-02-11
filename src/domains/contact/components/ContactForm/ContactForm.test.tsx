@@ -34,8 +34,8 @@ const ARKDevnet = "ARK Devnet";
 
 describe("ContactForm", () => {
 	beforeAll(() => {
-		process.env.MOCK_AVAILABLE_NETWORKS = "false"
-	})
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
+	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
