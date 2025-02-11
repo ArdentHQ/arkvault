@@ -2,7 +2,6 @@ import React from "react";
 
 import { DropdownOption } from "@/app/components/Dropdown";
 import { NavbarVariant } from "@/types";
-import { Contracts } from "@ardenthq/sdk-profiles";
 
 export interface NavigationBarMenuItem {
 	title: string;

@@ -4,78 +4,77 @@ import { BalanceVisibilityProvider, useBalanceVisibilityContext } from "./Balanc
 import userEvent from "@testing-library/user-event";
 
 describe("BalanceVisibility Context", () => {
-    const TestComponent = () => {
-        const { hideBalance, setHideBalance } = useBalanceVisibilityContext();
+	const TestComponent = () => {
+		const { hideBalance, setHideBalance } = useBalanceVisibilityContext();
 
-        return (
-            <div>
-                <p data-testid="hideBalance-status">{JSON.stringify(hideBalance)}</p>
-                <button onClick={() => setHideBalance(!hideBalance)}>Toggle Balance</button>
-            </div>
-        );
-    };
+		return (
+			<div>
+				<p data-testid="hideBalance-status">{JSON.stringify(hideBalance)}</p>
+				<button onClick={() => setHideBalance(!hideBalance)}>Toggle Balance</button>
+			</div>
+		);
+	};
 
-    beforeEach(() => {
-        localStorage.clear();
-    });
-    
+	beforeEach(() => {
+		localStorage.clear();
+	});
 
-    it("should render the wrapper properly", () => {
-        render(
-            <BalanceVisibilityProvider>
-                <span data-testid="BalanceVisibilityProvider__content">BalanceVisibility Provider content</span>
-            </BalanceVisibilityProvider>,
-        );
+	it("should render the wrapper properly", () => {
+		render(
+			<BalanceVisibilityProvider>
+				<span data-testid="BalanceVisibilityProvider__content">BalanceVisibility Provider content</span>
+			</BalanceVisibilityProvider>,
+		);
 
-        expect(screen.getByTestId("BalanceVisibilityProvider__content")).toBeInTheDocument();
-    });
+		expect(screen.getByTestId("BalanceVisibilityProvider__content")).toBeInTheDocument();
+	});
 
-    it("should throw without provider", () => {
-        const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+	it("should throw without provider", () => {
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
-        const Test = () => {
-            useBalanceVisibilityContext();
-            return <p>BalanceVisibility content</p>;
-        };
+		const Test = () => {
+			useBalanceVisibilityContext();
+			return <p>BalanceVisibility content</p>;
+		};
 
-        expect(() => render(<Test />, { withProviders: false })).toThrow(
-            "useBalanceVisibilityContext must be used within a BalanceVisibilityProvider",
-        );
+		expect(() => render(<Test />, { withProviders: false })).toThrow(
+			"useBalanceVisibilityContext must be used within a BalanceVisibilityProvider",
+		);
 
-        consoleSpy.mockRestore();
-    });
+		consoleSpy.mockRestore();
+	});
 
-    it("should initialize hideBalance from localStorage", () => {
-        localStorage.setItem("hideBalance", JSON.stringify(true));
+	it("should initialize hideBalance from localStorage", () => {
+		localStorage.setItem("hideBalance", JSON.stringify(true));
 
-        render(
-            <BalanceVisibilityProvider>
-                <TestComponent />
-            </BalanceVisibilityProvider>
-        );
+		render(
+			<BalanceVisibilityProvider>
+				<TestComponent />
+			</BalanceVisibilityProvider>,
+		);
 
-        expect(screen.getByTestId("hideBalance-status")).toHaveTextContent("true");
-    });
+		expect(screen.getByTestId("hideBalance-status")).toHaveTextContent("true");
+	});
 
-    it("should update hideBalance and persist it to localStorage", async () => {
-        render(
-            <BalanceVisibilityProvider>
-                <TestComponent />
-            </BalanceVisibilityProvider>
-        );
+	it("should update hideBalance and persist it to localStorage", async () => {
+		render(
+			<BalanceVisibilityProvider>
+				<TestComponent />
+			</BalanceVisibilityProvider>,
+		);
 
-        const toggleButton = screen.getByRole("button", { name: "Toggle Balance" });
+		const toggleButton = screen.getByRole("button", { name: "Toggle Balance" });
 
-        await userEvent.click(toggleButton);
+		await userEvent.click(toggleButton);
 
-        await waitFor(() => {
-            expect(localStorage.getItem("hideBalance")).toBe(JSON.stringify(true));
-        });
+		await waitFor(() => {
+			expect(localStorage.getItem("hideBalance")).toBe(JSON.stringify(true));
+		});
 
-        await userEvent.click(toggleButton);
+		await userEvent.click(toggleButton);
 
-        await waitFor(() => {
-            expect(localStorage.getItem("hideBalance")).toBe(JSON.stringify(false));
-        });
-    });
+		await waitFor(() => {
+			expect(localStorage.getItem("hideBalance")).toBe(JSON.stringify(false));
+		});
+	});
 });

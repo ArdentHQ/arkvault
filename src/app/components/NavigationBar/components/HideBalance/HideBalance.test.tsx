@@ -1,9 +1,8 @@
 import React from "react";
 
-import {  render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 import { HideBalance } from "./HideBalance";
 import userEvent from "@testing-library/user-event";
-
 
 describe("HideBalance", () => {
 	it("should render", () => {
@@ -15,8 +14,8 @@ describe("HideBalance", () => {
 	it("should render with icon hide", async () => {
 		render(<HideBalance />);
 
-        const button = screen.getByTestId("HideBalance-button");
-        await userEvent.click(button);
+		const button = screen.getByTestId("HideBalance-button");
+		await userEvent.click(button);
 
 		expect(screen.getByTestId("HideBalance-icon-hide")).toBeInTheDocument();
 	});
@@ -26,20 +25,20 @@ describe("HideBalance", () => {
 		expect(screen.getByTestId("HideBalance-icon-show")).toBeInTheDocument();
 	});
 
-    it("should call setHideBalance when clicked", async () => {
-        const setHideBalanceSpy = vi.fn();
-        const mockContextValue = {
-            hideBalance: false,
-            setHideBalance: setHideBalanceSpy
-        };
+	it("should call setHideBalance when clicked", async () => {
+		const setHideBalanceSpy = vi.fn();
+		const mockContextValue = {
+			hideBalance: false,
+			setHideBalance: setHideBalanceSpy,
+		};
 
-        vi.spyOn(React, 'useContext').mockReturnValue(mockContextValue);
+		vi.spyOn(React, "useContext").mockReturnValue(mockContextValue);
 
-        render(<HideBalance />);
+		render(<HideBalance />);
 
-        const button = screen.getByTestId("HideBalance-button");
-        await userEvent.click(button);
+		const button = screen.getByTestId("HideBalance-button");
+		await userEvent.click(button);
 
-        expect(setHideBalanceSpy).toHaveBeenCalledWith(true);
-    });
+		expect(setHideBalanceSpy).toHaveBeenCalledWith(true);
+	});
 });

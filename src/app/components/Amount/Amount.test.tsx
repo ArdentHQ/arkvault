@@ -1,5 +1,4 @@
 import React from "react";
-import { fireEvent } from "@testing-library/react";
 
 import { Amount } from "./Amount";
 import { render, screen } from "@/utils/testing-library";
@@ -79,7 +78,7 @@ describe("Amount", () => {
 		render(
 			<BalanceVisibilityProvider>
 				<TestComponent />
-			</BalanceVisibilityProvider>
+			</BalanceVisibilityProvider>,
 		);
 
 		// Initially visible

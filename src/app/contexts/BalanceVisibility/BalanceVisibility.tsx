@@ -1,26 +1,24 @@
-import { useActiveProfile } from "@/app/hooks";
 import React, { useState } from "react";
-import { useParams } from "react-router";
 
 interface BalanceVisibilityContextType {
-    hideBalance: boolean;
-    setHideBalance: (hideBalance: boolean) => void;
+	hideBalance: boolean;
+	setHideBalance: (hideBalance: boolean) => void;
 }
 
 interface Properties {
-    children: React.ReactNode;
+	children: React.ReactNode;
 }
 
 const BalanceVisibilityContext = React.createContext<BalanceVisibilityContextType | undefined>(undefined);
 
 export const BalanceVisibilityProvider = ({ children }: Properties) => {
 	const [hideBalance, setHideBalance] = useState(() => {
-		const stored = localStorage.getItem('hideBalance');
+		const stored = localStorage.getItem("hideBalance");
 		return stored ? JSON.parse(stored) : false;
 	});
 
 	const updateHideBalance = (value: boolean) => {
-		localStorage.setItem('hideBalance', JSON.stringify(value));
+		localStorage.setItem("hideBalance", JSON.stringify(value));
 		setHideBalance(value);
 	};
 

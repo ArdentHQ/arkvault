@@ -13,14 +13,26 @@ interface AmountProperties {
 	allowHideBalance?: boolean;
 }
 
-const Amount: React.VFC<AmountProperties> = ({ value, ticker, showTicker = true, isNegative, showSign, className, allowHideBalance = false }) => {
+const Amount: React.VFC<AmountProperties> = ({
+	value,
+	ticker,
+	showTicker = true,
+	isNegative,
+	showSign,
+	className,
+	allowHideBalance = false,
+}) => {
 	let formattedAmount = Helpers.Currency.format(value, ticker, { withTicker: showTicker });
 
 	const { hideBalance } = useBalanceVisibilityContext();
 
 	if (hideBalance && allowHideBalance) {
-		formattedAmount = formattedAmount.replace(/[\d.,]+/g, "****");
-		return <span data-testid="Amount" className={cn("whitespace-nowrap", className)}>{formattedAmount}</span>;
+		formattedAmount = formattedAmount.replaceAll(/[\d,.]+/g, "****");
+		return (
+			<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+				{formattedAmount}
+			</span>
+		);
 	}
 
 	if (showSign) {

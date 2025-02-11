@@ -76,7 +76,7 @@ describe("AmountLabel", () => {
 
 		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("$123.46");
 	});
-	
+
 	it("should hide balance if allowHideBalance is true and hideBalance is true", async () => {
 		const TestComponent = () => {
 			const { hideBalance, setHideBalance } = useBalanceVisibilityContext();
@@ -91,7 +91,7 @@ describe("AmountLabel", () => {
 		render(
 			<BalanceVisibilityProvider>
 				<TestComponent />
-			</BalanceVisibilityProvider>
+			</BalanceVisibilityProvider>,
 		);
 
 		// Initially visible
