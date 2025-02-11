@@ -74,7 +74,6 @@ describe("useWalletActions", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-validator-resignation`);
 
-
 		act(() => {
 			current.handleSelectOption({ value: "username-registration" } as DropdownOption);
 		});
