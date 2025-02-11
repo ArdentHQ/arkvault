@@ -154,7 +154,6 @@ describe("ImportWallet Validations", () => {
 			},
 		);
 
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
@@ -218,7 +217,6 @@ describe("ImportWallet Validations", () => {
 			},
 		);
 
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
@@ -250,7 +248,6 @@ describe("ImportWallet Validations", () => {
 				route: route,
 			},
 		);
-
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -289,7 +286,6 @@ describe("ImportWallet Validations", () => {
 				route: route,
 			},
 		);
-
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -342,7 +338,6 @@ describe("ImportWallet Validations", () => {
 				route: route,
 			},
 		);
-
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

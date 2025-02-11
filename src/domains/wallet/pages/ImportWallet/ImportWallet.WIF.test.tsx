@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 import { MethodStep } from "./MethodStep";
 import { EnvironmentProvider } from "@/app/contexts";
 import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
-import { assertNetwork } from "@/utils/assertions";
 import {
 	env,
 	getDefaultProfileId,
@@ -31,7 +30,7 @@ const methodStep = () => screen.getByTestId("ImportWallet__method-step");
 const wifInput = () => screen.getByTestId("ImportWallet__wif-input");
 
 const testNetwork = "ark.devnet";
-let network
+let network;
 
 describe("ImportWallet WIF", () => {
 	let resetProfileNetworksMock: () => void;

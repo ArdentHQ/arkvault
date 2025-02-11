@@ -76,7 +76,6 @@ describe("ImportWallet", () => {
 			},
 		);
 
-
 		await waitFor(() => expect(() => mnemonicInput()).not.toThrow());
 
 		expect(mnemonicInput()).toBeInTheDocument();
@@ -167,7 +166,6 @@ describe("ImportWallet", () => {
 			},
 		);
 
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
@@ -204,7 +202,6 @@ describe("ImportWallet", () => {
 				route: route,
 			},
 		);
-
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

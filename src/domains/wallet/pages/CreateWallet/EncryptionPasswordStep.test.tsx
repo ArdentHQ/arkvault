@@ -136,6 +136,7 @@ describe("EncryptionPasswordStep", () => {
 
 		await waitFor(() => expect(walletSpy).toHaveBeenCalledWith());
 		walletSpy.mockRestore();
+		historySpy.mockRestore();
 	});
 
 	it("should create a wallet and use encryption password", async () => {

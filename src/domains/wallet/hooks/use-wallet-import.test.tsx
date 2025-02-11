@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
@@ -6,14 +6,13 @@ import { renderHook } from "@testing-library/react";
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
 import { env, MNEMONICS } from "@/utils/testing-library";
-import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "@/app/contexts";
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
 let wallet: Contracts.IReadWriteWallet;
 
 describe("useWalletImport", () => {
-
 	const wrapper = ({ children }: any) => (
 		<EnvironmentProvider env={env}>
 			<ConfigurationProvider>{children}</ConfigurationProvider>

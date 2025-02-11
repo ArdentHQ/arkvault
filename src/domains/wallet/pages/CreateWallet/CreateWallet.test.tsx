@@ -15,7 +15,6 @@ import {
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { act } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
@@ -33,7 +32,7 @@ describe("CreateWallet", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(() => {
-		process.env.MOCK_AVAILABLE_NETWORKS = "false"
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
@@ -79,7 +78,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -157,7 +156,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -166,7 +165,6 @@ describe("CreateWallet", () => {
 				route: createURL,
 			},
 		);
-
 
 		const backButton = await screen.findByTestId("CreateWallet__back-button");
 		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
@@ -248,7 +246,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -270,7 +268,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -300,7 +298,7 @@ describe("CreateWallet", () => {
 
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -331,7 +329,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,

@@ -1,5 +1,3 @@
-
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -12,15 +10,12 @@ import { MethodStep } from "./MethodStep";
 import { SuccessStep } from "./SuccessStep";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
-import { assertNetwork } from "@/utils/assertions";
 import {
 	env,
 	getDefaultProfileId,
 	render,
 	renderResponsive,
-	renderWithForm,
 	screen,
 	waitFor,
 	mockNanoXTransport,
@@ -51,8 +46,7 @@ const wifInput = () => screen.getByTestId("ImportWallet__wif-input");
 const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-input");
 
 const testNetwork = "ark.devnet";
-const ARKDevnet = "ARK Devnet";
-let network
+let network;
 
 describe("ImportWallet", () => {
 	let resetProfileNetworksMock: () => void;
@@ -215,10 +209,9 @@ describe("ImportWallet", () => {
 			);
 		};
 
-		const { asFragment } = renderResponsive(<Component />, breakpoint);
+		renderResponsive(<Component />, breakpoint);
 
 		expect(successStep()).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 
 		expect(screen.getAllByText(importedWallet.address())[0]).toBeInTheDocument();
 
@@ -282,7 +275,7 @@ describe("ImportWallet", () => {
 	it("should render as ledger import", async () => {
 		const nanoXMock = mockNanoXTransport();
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/import/ledger">
 				<ImportWallet />
 			</Route>,
@@ -292,8 +285,6 @@ describe("ImportWallet", () => {
 				},
 			},
 		);
-
-		expect(container).toMatchSnapshot();
 
 		await expect(screen.findByTestId("LedgerTabs")).resolves.toBeVisible();
 

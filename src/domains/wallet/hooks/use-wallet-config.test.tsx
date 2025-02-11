@@ -1,4 +1,3 @@
-import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook, act } from "@testing-library/react";
 import React from "react";

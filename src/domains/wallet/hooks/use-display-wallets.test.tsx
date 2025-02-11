@@ -27,7 +27,7 @@ describe("useDisplayWallets", () => {
 	);
 
 	beforeAll(async () => {
-		process.env.MOCK_AVAILABLE_NETWORKS = "false"
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();

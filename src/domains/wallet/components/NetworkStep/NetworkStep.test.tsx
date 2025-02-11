@@ -29,7 +29,7 @@ describe("SelectNetworkStep", () => {
 
 	it("should render", () => {
 		const { result: form } = renderHook(() => useForm());
-		const { asFragment } = render(
+		render(
 			<FormProvider {...form.current}>
 				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
 			</FormProvider>,
@@ -42,7 +42,7 @@ describe("SelectNetworkStep", () => {
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithOnlyPublicNetworks(profile);
 
 		const { result: form } = renderHook(() => useForm());
-		const { asFragment } = render(
+		render(
 			<FormProvider {...form.current}>
 				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
 			</FormProvider>,
@@ -58,7 +58,7 @@ describe("SelectNetworkStep", () => {
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 
 		const { result: form } = renderHook(() => useForm());
-		const { asFragment } = render(
+		render(
 			<FormProvider {...form.current}>
 				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
 			</FormProvider>,
