@@ -122,14 +122,18 @@ beforeEach(() => {
 	});
 
 	if (process.env.MOCK_AVAILABLE_NETWORKS !== "false") {
-		const profile = env.profiles().findById(getDefaultProfileId());
-		const networks = profile
-			.wallets()
-			.values()
-			.map((wallet) => wallet.network());
+		try {
+			const profile = env.profiles().findById(getDefaultProfileId());
+			const networks = profile
+				.wallets()
+				.values()
+				.map((wallet) => wallet.network());
 
-		for (const profile of env.profiles().values()) {
-			vi.spyOn(profile, "availableNetworks").mockReturnValue([networks[0]]);
+			for (const profile of env.profiles().values()) {
+				vi.spyOn(profile, "availableNetworks").mockReturnValue([networks[0]]);
+			}
+		} catch {
+			// No profiles. Ignore.
 		}
 	}
 });

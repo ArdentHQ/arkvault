@@ -33,6 +33,10 @@ const addAddressID = "contact-form__add-address-btn";
 const ARKDevnet = "ARK Devnet";
 
 describe("ContactForm", () => {
+	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false"
+	})
+
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);

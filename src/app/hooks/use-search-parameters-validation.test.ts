@@ -15,6 +15,7 @@ const requiredParameters = {
 
 describe("useSearchParametersValidation", () => {
 	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false"
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		mockProfileWithPublicAndTestNetworks(profile);
