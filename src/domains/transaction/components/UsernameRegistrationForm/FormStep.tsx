@@ -1,5 +1,5 @@
 import { FormField, FormLabel } from "@/app/components/Form";
-import React, { ChangeEvent, useEffect, useMemo } from "react";
+import React, { ChangeEvent, useEffect, useMemo, useRef } from "react";
 
 import { Alert } from "@/app/components/Alert";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -17,17 +17,28 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { usernameRegistration } = useValidation();
 
-	const { getValues, register, setValue } = useFormContext();
+	const { getValues, register, setValue, errors } = useFormContext();
 	const username = getValues("username");
+
+	const userExistsController = useRef<AbortController | undefined>(undefined);
 
 	const [network] = useNetworks({ profile });
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
 	useEffect(() => {
 		if (!username) {
-			register("username", usernameRegistration.username(network));
+			register("username", usernameRegistration.username(network, userExistsController));
 		}
 	}, [usernameRegistration, register, network, username]);
+
+
+	const hasUsernameErrors = "username" in errors;
+
+	useEffect(() => {
+		if (hasUsernameErrors) {
+			userExistsController.current?.abort();
+		}
+	}, [hasUsernameErrors]);
 
 	const handleSelectSender = (address: any) => {
 		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
@@ -79,9 +90,11 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					<InputDefault
 						data-testid="Input__username"
 						defaultValue={username}
-						onChange={(event: ChangeEvent<HTMLInputElement>) =>
-							setValue("username", event.target.value, { shouldDirty: true, shouldValidate: true })
-						}
+						onChange={(event: ChangeEvent<HTMLInputElement>) => {
+							userExistsController.current?.abort();
+							userExistsController.current = new AbortController();
+							setValue("username", event.target.value, { shouldDirty: true, shouldValidate: true });
+						}}
 					/>
 				</FormField>
 
