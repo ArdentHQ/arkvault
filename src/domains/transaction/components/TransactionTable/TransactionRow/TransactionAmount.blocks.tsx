@@ -59,6 +59,7 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
+			allowHideBalance
 		/>
 	);
 };
@@ -84,6 +85,7 @@ export const TransactionTotalLabel = ({
 				value={transaction.total()}
 				isNegative={transaction.isSent()}
 				className="text-sm font-semibold"
+				allowHideBalance
 			/>
 		);
 	}
@@ -101,6 +103,7 @@ export const TransactionTotalLabel = ({
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
+			allowHideBalance
 		/>
 	);
 };
@@ -117,5 +120,5 @@ export const TransactionFiatAmount = ({
 	const returnedAmount = calculateReturnedAmount(transaction);
 	const amount = transaction.total() - returnedAmount;
 
-	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} />;
+	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance />;
 };

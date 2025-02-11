@@ -186,7 +186,7 @@ export const TransactionRow = memo(
 					)}
 				>
 					{isLgAndAbove ? (
-						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
+						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} allowHideBalance />
 					) : (
 						<div className="flex w-40 flex-col items-end gap-1">
 							<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
