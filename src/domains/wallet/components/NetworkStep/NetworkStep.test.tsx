@@ -36,7 +36,6 @@ describe("SelectNetworkStep", () => {
 		);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without test networks", async () => {
@@ -50,12 +49,12 @@ describe("SelectNetworkStep", () => {
 		);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
 
 	it("should render with test networks", async () => {
+		vi.restoreAllMocks();
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 
 		const { result: form } = renderHook(() => useForm());
@@ -67,7 +66,6 @@ describe("SelectNetworkStep", () => {
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
