@@ -42,6 +42,7 @@ describe("LedgerTabs", () => {
 	let mockFindWallet: vi.SpyInstance;
 
 	beforeAll(async () => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false"
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
