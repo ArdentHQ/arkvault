@@ -29,6 +29,7 @@ const delegateAddresses = [
 
 describe("useWalletFromQueryParameters hook", () => {
 	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getDefaultProfileId());
 		nethash = profile.wallets().first().network().meta().nethash;
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);

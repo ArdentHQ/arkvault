@@ -21,6 +21,7 @@ const wrapper = ({ children }: any) => (
 
 describe("Use Vote Filters", () => {
 	beforeAll(async () => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -53,13 +54,24 @@ describe("Use Vote Filters", () => {
 	});
 
 	it("should get wallets by excluding test network if unavailable", async () => {
+		vi.restoreAllMocks();
+
 		const { wallet: arkMainWallet } = await profile.walletFactory().generate({
 			coin: "ARK",
 			network: "ark.mainnet",
 		});
+
 		const profileWalletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([arkMainWallet]);
 
 		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
+		profile
+			.settings()
+			.set(Contracts.ProfileSetting.DashboardConfiguration, {
+				...config,
+				activeNetworkId: arkMainWallet.networkId(),
+			});
 
 		const {
 			result: {
