@@ -1,7 +1,10 @@
 import React from "react";
+import { fireEvent } from "@testing-library/react";
 
 import { Amount } from "./Amount";
 import { render, screen } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
+import { BalanceVisibilityProvider, useBalanceVisibilityContext } from "@/app/contexts/BalanceVisibility";
 
 describe("Amount", () => {
 	it("should format crypto or fiat depending on the ticker", () => {
@@ -60,5 +63,35 @@ describe("Amount", () => {
 		rerender(<Amount value={1} ticker="USD" showSign isNegative />);
 
 		expect(screen.getByTestId("Amount")).toHaveTextContent(/^- \$1.00$/);
+	});
+
+	it("should respect the balance visibility context when allowHideBalance is true", async () => {
+		const TestComponent = () => {
+			const { hideBalance, setHideBalance } = useBalanceVisibilityContext();
+			return (
+				<>
+					<Amount value={123.456} ticker="USD" allowHideBalance />
+					<button onClick={() => setHideBalance(!hideBalance)}>Toggle</button>
+				</>
+			);
+		};
+
+		render(
+			<BalanceVisibilityProvider>
+				<TestComponent />
+			</BalanceVisibilityProvider>
+		);
+
+		// Initially visible
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.46$/);
+
+		await userEvent.click(screen.getByRole("button"));
+		expect(screen.getByTestId("Amount")).toHaveTextContent("****");
+	});
+
+	it("should not hide balance by default", () => {
+		render(<Amount value={123.456} ticker="USD" />);
+
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.46$/);
 	});
 });

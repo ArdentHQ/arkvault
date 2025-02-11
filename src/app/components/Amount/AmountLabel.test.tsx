@@ -3,6 +3,7 @@ import React from "react";
 
 import { AmountLabel } from "./AmountLabel";
 import { render, screen } from "@/utils/testing-library";
+import { BalanceVisibilityProvider, useBalanceVisibilityContext } from "@/app/contexts/BalanceVisibility";
 
 describe("AmountLabel", () => {
 	it("should render", () => {
@@ -68,5 +69,35 @@ describe("AmountLabel", () => {
 		);
 
 		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveClass("custom-className");
+	});
+
+	it("should not hide balance by default", () => {
+		render(<AmountLabel value={123.456} ticker="USD" />);
+
+		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("$123.46");
+	});
+	
+	it("should hide balance if allowHideBalance is true and hideBalance is true", async () => {
+		const TestComponent = () => {
+			const { hideBalance, setHideBalance } = useBalanceVisibilityContext();
+			return (
+				<>
+					<AmountLabel value={123.456} ticker="USD" allowHideBalance />
+					<button onClick={() => setHideBalance(!hideBalance)}>Toggle</button>
+				</>
+			);
+		};
+
+		render(
+			<BalanceVisibilityProvider>
+				<TestComponent />
+			</BalanceVisibilityProvider>
+		);
+
+		// Initially visible
+		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("$123.46");
+
+		await userEvent.click(screen.getByRole("button"));
+		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("****");
 	});
 });

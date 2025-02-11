@@ -39,6 +39,7 @@ interface AmountLabelProperties {
 	className?: string;
 	textClassName?: string;
 	hideSign?: boolean;
+	allowHideBalance?: boolean;
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
@@ -51,6 +52,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	className,
 	textClassName,
 	hideSign,
+	allowHideBalance = false,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -88,6 +90,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 					value={value}
 					isNegative={isNegative}
 					className={twMerge("text-sm", textClassName)}
+					allowHideBalance={allowHideBalance}
 				/>
 			</div>
 		</Label>
