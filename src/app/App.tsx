@@ -11,6 +11,7 @@ import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { AppRouter, Main } from "@/app/App.blocks";
 import { initializeEnvironment } from "@/utils/environment";
 import { ApplicationError } from "@/domains/error/pages";
+import { BalanceVisibilityProvider } from "@/app/contexts/BalanceVisibility";
 
 export const App: React.VFC = () => {
 	/**
@@ -29,7 +30,9 @@ export const App: React.VFC = () => {
 								<ErrorBoundary FallbackComponent={ApplicationError}>
 									<LedgerProvider>
 										<AppRouter>
-											<Main />
+											<BalanceVisibilityProvider>
+												<Main />
+											</BalanceVisibilityProvider>
 										</AppRouter>
 									</LedgerProvider>
 								</ErrorBoundary>
