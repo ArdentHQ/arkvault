@@ -101,7 +101,7 @@ export const isCustomNetwork = (network?: Networks.NetworkManifest | Networks.Ne
 		return network.id().endsWith(".custom");
 	}
 
-	return network.id.endsWith(".custom");
+	return network?.id.endsWith(".custom");
 };
 
 export const isValidKnownWalletUrlResponse = (response: PromiseSettledResult<any>): boolean => {
@@ -147,7 +147,9 @@ export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
 	});
 
 export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
-	profileAllEnabledNetworks(profile).map((network) => network.id());
+	profileAllEnabledNetworks(profile)
+		.filter((network) => !!network)
+		.map((network) => network.id());
 
 export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	uniq(

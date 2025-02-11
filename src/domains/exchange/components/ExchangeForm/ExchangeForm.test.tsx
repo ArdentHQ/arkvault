@@ -144,7 +144,7 @@ describe("ExchangeForm", () => {
 	let queryParametersMock;
 
 	beforeAll(() => {
-		process.env.MOCK_AVAILABLE_NETWORKS = "false"
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({

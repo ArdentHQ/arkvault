@@ -19,8 +19,6 @@ import {
 
 const history = createHashHistory();
 
-const walletUrl = (walletId: string) => `/profiles/${getDefaultProfileId()}/wallets/${walletId}/sign-message`;
-
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallet2: Contracts.IReadWriteWallet;
@@ -50,7 +48,7 @@ vi.stubGlobal(
 
 describe("SignMessage", () => {
 	beforeAll(async () => {
-		process.env.MOCK_AVAILABLE_NETWORKS = "false"
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -157,7 +155,7 @@ describe("SignMessage", () => {
 			await userEvent.type(mnemonicInput, mnemonic);
 
 			expect(continueButton()).toBeEnabled();
-			vi.restoreAllMocks()
+			vi.restoreAllMocks();
 		});
 
 		it("back button sends to welcome page", async () => {
