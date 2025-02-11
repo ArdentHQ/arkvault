@@ -61,7 +61,10 @@ export const ReviewStep = ({
 						</div>
 
 						<div className="hidden sm:block">
-							<Divider dashed />
+							<Divider
+								dashed
+								className="h-px border-theme-secondary-300 dark:border-theme-secondary-800"
+							/>
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
