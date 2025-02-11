@@ -61,6 +61,7 @@ describe("Welcome with deeplink", () => {
 	let profile: Contracts.IProfile;
 
 	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false"
 		profile = env.profiles().findById(fixtureProfileId);
 	});
 
