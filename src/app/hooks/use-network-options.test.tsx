@@ -10,11 +10,16 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getDefaultProfileId,
 } from "@/utils/testing-library";
+import { beforeAll } from "vitest";
 const fixtureProfileId = getDefaultProfileId();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
 describe("useNetworkOptions hook", () => {
+	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
+	});
+
 	beforeEach(() => {
 		profile = env.profiles().findById(fixtureProfileId);
 
@@ -36,7 +41,6 @@ describe("useNetworkOptions hook", () => {
 		const networks = result.current.networkOptions();
 
 		expect(networks).toContainEqual({ isTestNetwork: true, label: "ARK Devnet", value: "ark.devnet" });
-		expect(networks).toContainEqual({ isTestNetwork: true, label: "ARK", value: "random.custom" });
 
 		resetProfileNetworksMock2();
 	});

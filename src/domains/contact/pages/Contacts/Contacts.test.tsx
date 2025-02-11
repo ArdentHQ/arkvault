@@ -75,6 +75,7 @@ describe("Contacts", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
