@@ -27,8 +27,8 @@ export const GasLimit: Record<Properties["type"], number> = {
 	multiPayment: 21_000,
 	multiSignature: 21_000,
 	transfer: 21_000,
-	usernameRegistration: 500_000,
-	usernameResignation: 150_000,
+	usernameRegistration: 200_000,
+	usernameResignation: 200_000,
 	vote: 200_000,
 };
 
