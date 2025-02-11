@@ -6,7 +6,15 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+      class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6 mx-8 mt-2 sm:-mt-1 md:mx-0 md:mb-3"
+      data-testid="EmptyBlock"
+    >
+      <div>
+        You don't have any wallets matching the selected networks.
+      </div>
+    </div>
+    <div
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-secondary-300 dark:ring-theme-secondary-800 md:ring-1 transition-all"
     >
       <div
         class="flex h-20 items-center px-8 py-4 md:px-4"
@@ -14,21 +22,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
       >
         <div
           class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
-        >
-          <span
-            aria-busy="true"
-            aria-live="polite"
-            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-          >
-            <span
-              class="react-loading-skeleton"
-              style="width: 20px; height: 20px;"
-            >
-              ‌
-            </span>
-            <br />
-          </span>
-        </div>
+        />
         <div
           class="grow justify-between space-x-3 px-3 py-3"
         >
@@ -36,23 +30,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
             class="mb-0 text-lg text-theme-secondary-700 dark:text-theme-secondary-700"
             data-testid="header__title"
           >
-            <div
-              class="flex h-7 items-center"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 150px; height: 18px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
+            Cryptoasset
           </h1>
         </div>
         <div
@@ -69,23 +47,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
             <span
               class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
             >
-              <div
-                class="flex items-center justify-end sm:h-6"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5"
-                    style="width: 60px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
+              N/A
             </span>
           </div>
           <div
@@ -99,23 +61,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
             <span
               class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
             >
-              <div
-                class="flex items-center justify-end sm:h-6"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5"
-                    style="width: 160px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
+              N/A
             </span>
           </div>
           <div
@@ -129,23 +75,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
             <span
               class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
             >
-              <div
-                class="flex items-center justify-end sm:h-6"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5"
-                    style="width: 130px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
+              N/A
             </span>
           </div>
         </div>
