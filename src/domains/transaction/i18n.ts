@@ -248,6 +248,19 @@ export const translations = {
 			TITLE: "Select a Cryptoasset",
 		},
 	},
+	PAGE_USERNAME_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new username for an address on the network below.",
+			INFO: "Username registrations are stored on-chain and publicly visible.",
+			TITLE: "Register Username",
+		},
+	},
+	PAGE_USERNAME_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Remove your existing username from the address.",
+			TITLE: "Resign Username",
+		},
+	},
 	PAGE_VALIDATOR_REGISTRATION: {
 		FORM_STEP: {
 			DESCRIPTION: "Register a new Validator address on the network below.",
