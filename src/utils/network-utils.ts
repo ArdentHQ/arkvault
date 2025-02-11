@@ -101,7 +101,7 @@ export const isCustomNetwork = (network?: Networks.NetworkManifest | Networks.Ne
 		return network.id().endsWith(".custom");
 	}
 
-	return network?.id.endsWith(".custom");
+	return !!network?.id.endsWith(".custom");
 };
 
 export const isValidKnownWalletUrlResponse = (response: PromiseSettledResult<any>): boolean => {
