@@ -99,8 +99,14 @@ beforeAll(async () => {
 	server.listen({ onUnhandledRequest: "error" });
 
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
+
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
+
+	const network = env.profiles().first().wallets().first().network();
+	for (const profile of env.profiles().values()) {
+		vi.spyOn(profile, "availableNetworks").mockReturnValue([network])
+	}
 
 	return;
 });
