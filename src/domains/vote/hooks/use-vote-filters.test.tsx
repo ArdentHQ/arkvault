@@ -66,12 +66,10 @@ describe("Use Vote Filters", () => {
 		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
-		profile
-			.settings()
-			.set(Contracts.ProfileSetting.DashboardConfiguration, {
-				...config,
-				activeNetworkId: arkMainWallet.networkId(),
-			});
+		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
+			...config,
+			activeNetworkId: arkMainWallet.networkId(),
+		});
 
 		const {
 			result: {

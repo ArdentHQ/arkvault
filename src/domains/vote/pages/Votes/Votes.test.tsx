@@ -706,12 +706,10 @@ describe("Votes", () => {
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 
-		profile
-			.settings()
-			.set(Contracts.ProfileSetting.DashboardConfiguration, {
-				...config,
-				activeNetworkId: mainnetWallet.networkId(),
-			});
+		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
+			...config,
+			activeNetworkId: mainnetWallet.networkId(),
+		});
 
 		vi.spyOn(profile, "availableNetworks").mockReturnValue([mainnetWallet.network()]);
 
