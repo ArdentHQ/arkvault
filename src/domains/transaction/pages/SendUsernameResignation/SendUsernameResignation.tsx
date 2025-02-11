@@ -70,7 +70,7 @@ export const SendUsernameResignation = () => {
 		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
 		register(
 			"gasLimit",
-			common.gasLimit(walletBalance, getValues, GasLimit["delegateResignation"], activeWallet?.network()),
+			common.gasLimit(walletBalance, getValues, GasLimit["usernameResignation"], activeWallet?.network()),
 		);
 
 		register("senderAddress", { required: true });
@@ -128,7 +128,7 @@ export const SendUsernameResignation = () => {
 				wif,
 			});
 
-			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({
+			const signedTransactionId = await activeWallet.transaction().signUsernameResignation({
 				gasLimit,
 				gasPrice,
 				signatory,
@@ -152,7 +152,7 @@ export const SendUsernameResignation = () => {
 	const hideStepNavigation = activeTab === Step.ErrorStep;
 
 	return (
-		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION")}>
+		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION")}>
 			<Section className="flex-1">
 				<StepsProvider steps={4} activeStep={activeTab}>
 					<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
