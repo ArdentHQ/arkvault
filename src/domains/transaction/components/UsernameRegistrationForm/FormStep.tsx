@@ -31,7 +31,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		}
 	}, [usernameRegistration, register, network, username]);
 
-
 	const hasUsernameErrors = "username" in errors;
 
 	useEffect(() => {
