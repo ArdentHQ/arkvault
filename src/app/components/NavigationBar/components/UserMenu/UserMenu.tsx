@@ -11,6 +11,7 @@ import { useProfileBalance } from "@/app/hooks/use-profile-balance";
 import { Amount } from "@/app/components/Amount";
 import { assertString } from "@/utils/assertions";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();

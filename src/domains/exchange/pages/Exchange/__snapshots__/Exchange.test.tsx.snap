@@ -514,32 +514,96 @@ exports[`Exchange > should render empty 1`] = `
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
-              aria-expanded="false"
-              aria-haspopup="dialog"
-              data-testid="dropdown__toggle"
+              class="flex items-center gap-2"
             >
               <div
-                class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-                data-testid="UserMenu"
+                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
-                <div
-                  class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-6 ring-theme-background shrink-0"
-                  data-testid="Avatar"
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  data-testid="HideBalance-button"
+                  type="button"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                    class="flex items-center space-x-2"
                   >
-                    <img
-                      alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                    />
-                    <span
-                      class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                    <div
+                      data-testid="HideBalance-icon-show"
                     >
-                      JO
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="eye"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                            />
+                            <path
+                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
+              >
+                <button
+                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                >
+                  <div
+                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
                     </span>
                   </div>
-                </div>
+                  <div
+                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    data-testid="UserMenu"
+                  >
+                    <div
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      data-testid="Avatar"
+                    >
+                      <div
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      >
+                        <img
+                          alt="Profile Avatar"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        />
+                        <span
+                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                        >
+                          JO
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -1164,32 +1228,96 @@ exports[`Exchange > should render with exchanges 1`] = `
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
-              aria-expanded="false"
-              aria-haspopup="dialog"
-              data-testid="dropdown__toggle"
+              class="flex items-center gap-2"
             >
               <div
-                class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-                data-testid="UserMenu"
+                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
-                <div
-                  class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-6 ring-theme-background shrink-0"
-                  data-testid="Avatar"
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  data-testid="HideBalance-button"
+                  type="button"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                    class="flex items-center space-x-2"
                   >
-                    <img
-                      alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                    />
-                    <span
-                      class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                    <div
+                      data-testid="HideBalance-icon-show"
                     >
-                      JO
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="eye"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                            />
+                            <path
+                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
+              >
+                <button
+                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                >
+                  <div
+                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
                     </span>
                   </div>
-                </div>
+                  <div
+                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    data-testid="UserMenu"
+                  >
+                    <div
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      data-testid="Avatar"
+                    >
+                      <div
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      >
+                        <img
+                          alt="Profile Avatar"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        />
+                        <span
+                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                        >
+                          JO
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
