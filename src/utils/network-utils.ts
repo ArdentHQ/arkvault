@@ -96,8 +96,8 @@ export const buildNetwork = (
 	};
 };
 
-export const isCustomNetwork = (network: Networks.NetworkManifest | Networks.Network): boolean => {
-	if (typeof network.id === "function") {
+export const isCustomNetwork = (network?: Networks.NetworkManifest | Networks.Network): boolean => {
+	if (typeof network?.id === "function") {
 		return network.id().endsWith(".custom");
 	}
 
