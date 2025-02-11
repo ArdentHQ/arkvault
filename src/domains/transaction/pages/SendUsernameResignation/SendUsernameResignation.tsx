@@ -34,7 +34,7 @@ export const SendUsernameResignation = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch, setValue } = form;
+	const { formState, getValues, register, watch, setValue, errors } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { senderAddress, gasLimit, gasPrice } = watch();
@@ -67,6 +67,8 @@ export const SendUsernameResignation = () => {
 
 		const walletBalance = activeWallet?.balance() ?? 0;
 
+		console.log("Resetting", walletBalance)
+
 		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
 		register(
 			"gasLimit",
@@ -87,6 +89,8 @@ export const SendUsernameResignation = () => {
 
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
 	}, [activeWallet, senderAddress, setValue]);
+
+	console.log(senderAddress, activeWallet?.address(), form.getValues(), errors, isValid)
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";

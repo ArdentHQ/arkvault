@@ -111,6 +111,17 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 				value: "username-registration",
 			});
 		}
+
+		if (
+			walletsWithValidatorActions.some((w) =>
+				w.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration) && w.username(),
+			)
+		) {
+			registrationOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_USERNAME"),
+				value: "username-resignation",
+			});
+		}
 	}
 
 	if (wallets.some((w) => allowsMultiSignature(w, profile))) {
