@@ -52,7 +52,7 @@ export const SendUsernameResignation = () => {
 
 	const [network] = useNetworks({ profile: activeProfile });
 
-	const activeWallet = useMemo(() => {
+	const [activeWallet, setActiveWallet] = useState(() => {
 		if (senderAddress) {
 			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		}
@@ -60,14 +60,12 @@ export const SendUsernameResignation = () => {
 		if (activeWalletFromUrl) {
 			return activeWalletFromUrl;
 		}
-	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
+	});
 
 	useEffect(() => {
 		register("fees");
 
 		const walletBalance = activeWallet?.balance() ?? 0;
-
-		console.log("Resetting", walletBalance)
 
 		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
 		register(
@@ -89,8 +87,6 @@ export const SendUsernameResignation = () => {
 
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
 	}, [activeWallet, senderAddress, setValue]);
-
-	console.log(senderAddress, activeWallet?.address(), form.getValues(), errors, isValid)
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -162,7 +158,11 @@ export const SendUsernameResignation = () => {
 					<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
-								<FormStep senderWallet={activeWallet} profile={activeProfile} />
+								<FormStep
+									senderWallet={activeWallet}
+									profile={activeProfile}
+									onChangeWallet={setActiveWallet}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>

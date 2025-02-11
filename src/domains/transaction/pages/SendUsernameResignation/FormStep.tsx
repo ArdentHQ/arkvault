@@ -2,7 +2,6 @@ import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { StepHeader } from "@/app/components/StepHeader";
@@ -16,24 +15,25 @@ import { useNetworks } from "@/app/hooks";
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
+	onChangeWallet: (wallet: ProfilesContracts.IReadWriteWallet) => void;
 }
 
-export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
+export const FormStep = ({ senderWallet, profile, onChangeWallet }: FormStepProperties) => {
 	const { t } = useTranslation();
-
-	const { setValue } = useFormContext();
 
 	const [network] = useNetworks({ profile });
 
 	const handleSelectSender = (address: any) => {
-		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
-
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 		const isFullyRestoredAndSynced =
 			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
 		if (!isFullyRestoredAndSynced) {
 			newSenderWallet?.synchroniser().identity();
+		}
+
+		if (newSenderWallet) {
+			onChangeWallet(newSenderWallet);
 		}
 	};
 
