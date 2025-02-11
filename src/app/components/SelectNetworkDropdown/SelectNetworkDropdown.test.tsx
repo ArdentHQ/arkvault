@@ -18,6 +18,10 @@ let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
 describe("SelectNetworkDropdown", () => {
+	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false"
+	})
+
 	beforeEach(() => {
 		vi.spyOn(Tippy as any, "render").mockRestore();
 
