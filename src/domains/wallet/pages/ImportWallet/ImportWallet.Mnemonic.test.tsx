@@ -76,10 +76,6 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.keyboard("{Enter}");
 
 		await waitFor(() => expect(() => mnemonicInput()).not.toThrow());
 
@@ -126,13 +122,6 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
@@ -178,12 +167,6 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -222,12 +205,6 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -282,13 +259,6 @@ describe("ImportWallet", () => {
 				withProviders: true,
 			},
 		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

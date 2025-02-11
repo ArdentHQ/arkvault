@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/await-thenable */
-/* eslint-disable @typescript-eslint/require-await */
+
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -52,12 +52,14 @@ const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-i
 
 const testNetwork = "ark.devnet";
 const ARKDevnet = "ARK Devnet";
+let network
 
 describe("ImportWallet", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
+		network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 
 		await env.profiles().restore(profile);
 
@@ -74,28 +76,10 @@ describe("ImportWallet", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should render network step", async () => {
-		const { asFragment } = renderWithForm(<NetworkStep profile={profile} title="title" subtitle="subtitle" />);
-
-		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.clear(selectNetworkInput);
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.keyboard("{Enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
-	});
-
 	it("should render method step", async () => {
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
-			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
-			assertNetwork(network);
-
 			network.importMethods = () => ({
 				bip39: {
 					default: false,
@@ -113,7 +97,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} />
+						<MethodStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -154,9 +138,6 @@ describe("ImportWallet", () => {
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
-			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
-			assertNetwork(network);
-
 			network.importMethods = () => ({
 				address: {
 					default: false,
@@ -178,7 +159,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} />
+						<MethodStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -263,8 +244,6 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
 		await waitFor(() => expect(backButton()).toBeEnabled());
 		await userEvent.click(backButton());
 
@@ -300,40 +279,6 @@ describe("ImportWallet", () => {
 
 		historySpy.mockRestore();
 	});
-
-	it("should get options depend on the network", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
-			</Route>,
-			{
-				route: route,
-			},
-		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
-		expect(screen.getAllByText(commonTranslations.MNEMONIC_TYPE.BIP39)).toHaveLength(3);
-
-		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.queryByText(commonTranslations.MNEMONIC_TYPE.BIP49)).not.toBeInTheDocument());
-		await waitFor(() => expect(screen.queryByText(commonTranslations.PRIVATE_KEY)).not.toBeInTheDocument());
-		await waitFor(() => expect(screen.queryByText(commonTranslations.WIF)).not.toBeInTheDocument());
-		await waitFor(() => expect(screen.queryByText(commonTranslations.ENCRYPTED_WIF)).not.toBeInTheDocument());
-	});
-
 	it("should render as ledger import", async () => {
 		const nanoXMock = mockNanoXTransport();
 
@@ -376,13 +321,6 @@ describe("ImportWallet", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
@@ -419,9 +357,6 @@ describe("ImportWallet", () => {
 		const privateKey = "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712";
 
 		const Component = () => {
-			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
-			assertNetwork(network);
-
 			network.importMethods = () => ({
 				privateKey: {
 					canBeEncrypted: true,
@@ -443,7 +378,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} />
+						<MethodStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -538,9 +473,6 @@ describe("ImportWallet", () => {
 		const wif = "wif.1111";
 
 		const Component = () => {
-			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
-			assertNetwork(network);
-
 			network.importMethods = () => ({
 				wif: {
 					canBeEncrypted: true,
@@ -562,7 +494,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} />
+						<MethodStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -665,9 +597,6 @@ describe("ImportWallet", () => {
 		const wifPassword = "password";
 
 		const Component = () => {
-			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
-			assertNetwork(network);
-
 			//ts-ignore
 			network.importMethods = () => ({
 				//ts-ignore
@@ -687,7 +616,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} />
+						<MethodStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);

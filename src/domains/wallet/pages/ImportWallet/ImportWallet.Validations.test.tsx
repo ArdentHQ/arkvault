@@ -2,11 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 
 import { ImportWallet } from "./ImportWallet";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { toasts } from "@/app/services";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
@@ -15,7 +13,6 @@ import {
 	render,
 	screen,
 	waitFor,
-	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
@@ -79,13 +76,6 @@ describe("ImportWallet Validations", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
@@ -117,13 +107,6 @@ describe("ImportWallet Validations", () => {
 				route: route,
 			},
 		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -171,12 +154,6 @@ describe("ImportWallet Validations", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -241,12 +218,6 @@ describe("ImportWallet Validations", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -280,12 +251,6 @@ describe("ImportWallet Validations", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -325,12 +290,6 @@ describe("ImportWallet Validations", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -384,12 +343,6 @@ describe("ImportWallet Validations", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -440,41 +393,5 @@ describe("ImportWallet Validations", () => {
 		});
 
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
-	});
-
-	it("should show warning sync error toast in network step and retry sync", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<>
-					<ToastContainer closeOnClick={false} newestOnTop />
-					<ImportWallet />
-				</>
-			</Route>,
-			{
-				route: route,
-			},
-		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		const coin = profile.coins().get("ARK", testNetwork);
-		const coinMock = vi.spyOn(coin, "__construct").mockImplementationOnce(() => {
-			throw new Error("test");
-		});
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
-
-		const toastDismissMock = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-		await userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
-
-		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
-
-		coinMock.mockRestore();
-		toastDismissMock.mockRestore();
 	});
 });
