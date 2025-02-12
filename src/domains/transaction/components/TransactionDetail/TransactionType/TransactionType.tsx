@@ -38,7 +38,7 @@ export const TransactionType = ({
 								<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
 
 								<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
-									{transaction.wallet()?.username()}
+									{transaction.username()}
 								</div>
 							</div>
 						</>

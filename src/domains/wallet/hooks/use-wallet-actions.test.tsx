@@ -73,6 +73,12 @@ describe("useWalletActions", () => {
 		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-validator-resignation`);
+
+		act(() => {
+			current.handleSelectOption({ value: "username-registration" } as DropdownOption);
+		});
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-registration/usernameRegistration`);
 	});
 
 	it("should push right urls to history", () => {
