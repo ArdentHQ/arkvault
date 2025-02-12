@@ -20,7 +20,7 @@ interface FormStepProperties {
 export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProperties) => {
 	const { t } = useTranslation();
 
-	const {activeNetwork: network} = useActiveNetwork({profile});
+	const { activeNetwork: network } = useActiveNetwork({ profile });
 
 	const handleSelectSender = (address: any) => {
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
