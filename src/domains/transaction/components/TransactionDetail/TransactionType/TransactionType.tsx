@@ -8,6 +8,15 @@ import { DTO } from "@ardenthq/sdk-profiles";
 import { MusigGeneratedAddress } from "@/domains/transaction/components/TransactionDetail/MusigGeneratedAddress/MusigGeneratedAddress";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
+const validatorPublickey = (transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData) => {
+	try {
+		return transaction.validatorPublicKey();
+	} catch {
+		// Exception is thrown if public key is invalid. Return zeros to match explorer.
+		return "0x0000000000000000000000000000000000000000000000000000000000000000";
+	}
+};
+
 export const TransactionType = ({
 	transaction,
 }: {
@@ -52,7 +61,7 @@ export const TransactionType = ({
 								<DetailLabelText>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
 								<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
-									{transaction.validatorPublicKey()}
+									{validatorPublickey(transaction)}
 								</div>
 							</div>
 						</>
@@ -60,7 +69,7 @@ export const TransactionType = ({
 
 					{transaction.isMultiSignatureRegistration() && (
 						<>
-							{transaction.wallet?.() && (
+							{transaction.wallet() && (
 								<>
 									<DetailDivider />
 
