@@ -30,7 +30,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 		(isOpen: boolean) => (
 			<button className="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700">
 				<div className="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex">
-					<Amount value={convertedBalance} ticker={ticker} allowHideBalance />
+					<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 				</div>
 				<div
 					className="relative cursor-pointer items-center justify-center rounded-full align-middle"
@@ -69,7 +69,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 					<p>{t("COMMON.BALANCE")}:</p>
 					<div className="flex items-center gap-2">
 						<HideBalance className="md-lg:hidden" profile={profile} />
-						<Amount value={convertedBalance} ticker={ticker} allowHideBalance />
+						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>
 				</div>
 			}

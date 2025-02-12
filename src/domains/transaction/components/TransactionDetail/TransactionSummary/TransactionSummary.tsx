@@ -10,8 +10,9 @@ interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
 	labelClassName?: string;
+	profile?: Contracts.IProfile;
 }
-export const TransactionSummary = ({ transaction, senderWallet, labelClassName }: Properties): ReactElement => {
+export const TransactionSummary = ({ transaction, senderWallet, labelClassName, profile }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
 	return (
@@ -21,7 +22,7 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 					<>
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>
-							<TransactionAmountLabel transaction={transaction} />
+							<TransactionAmountLabel transaction={transaction} profile={profile} />
 						</div>
 
 						<DetailDivider />
@@ -35,6 +36,7 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 						value={transaction.fee()}
 						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 						allowHideBalance
+						profile={profile}
 					/>
 				</div>
 
@@ -47,6 +49,7 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 						value={transaction.convertedAmount()}
 						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 						allowHideBalance
+						profile={profile}
 					/>
 				</div>
 			</div>

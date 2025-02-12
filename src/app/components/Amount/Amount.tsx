@@ -25,6 +25,7 @@ const Amount: React.VFC<AmountProperties> = ({
 	profile,
 }) => {
 	let formattedAmount = Helpers.Currency.format(value, ticker, { withTicker: showTicker });
+
 	const { hideBalance } = useBalanceVisibility({ profile });
 
 	if (hideBalance && allowHideBalance) {
