@@ -11,12 +11,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import {
-	useActiveProfile,
-	useActiveWalletWhenNeeded,
-	useLedgerModelStatus,
-	useValidation,
-} from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useLedgerModelStatus, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
@@ -71,7 +66,7 @@ export const SendRegistration = () => {
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
-	const {activeNetwork: network} = useActiveNetwork({profile: activeProfile});
+	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
 	const activeWallet = useMemo(() => {
 		if (senderAddress) {
