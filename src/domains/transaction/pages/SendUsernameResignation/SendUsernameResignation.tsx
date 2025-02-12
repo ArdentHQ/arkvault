@@ -19,6 +19,7 @@ import { handleBroadcastError } from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import { assertWallet } from "@/utils/assertions";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
 	FormStep = 1,
@@ -50,7 +51,7 @@ export const SendUsernameResignation = () => {
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
-	const [network] = useNetworks({ profile: activeProfile });
+	const {activeNetwork: network} = useActiveNetwork({profile: activeProfile});
 
 	const [activeWallet, setActiveWallet] = useState(() => {
 		if (senderAddress) {
