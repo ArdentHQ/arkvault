@@ -157,10 +157,7 @@
 				"USE_TEST_NETWORKS": true,
 				"DASHBOARD_TRANSACTION_HISTORY": true,
 				"DO_NOT_SHOW_FEE_WARNING": false,
-				"ERROR_REPORTING": false,
-				"DASHBOARD_CONFIGURATION": {
-					"hideBalance": false
-				}
+				"ERROR_REPORTING": false
 			}
 		},
 		"cba050f1-880f-45f0-9af9-cfe48f406052": {
