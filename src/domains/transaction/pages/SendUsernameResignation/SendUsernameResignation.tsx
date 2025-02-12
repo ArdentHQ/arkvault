@@ -162,7 +162,7 @@ export const SendUsernameResignation = () => {
 								<FormStep
 									senderWallet={activeWallet}
 									profile={activeProfile}
-									onChangeWallet={setActiveWallet}
+									onWalletChange={setActiveWallet}
 								/>
 							</TabPanel>
 
