@@ -8,7 +8,6 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
-import { useFormContext } from "react-hook-form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useNetworks } from "@/app/hooks";
 

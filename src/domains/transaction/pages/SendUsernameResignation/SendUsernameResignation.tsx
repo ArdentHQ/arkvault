@@ -1,5 +1,5 @@
 import { DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
@@ -34,7 +34,7 @@ export const SendUsernameResignation = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch, setValue, errors } = form;
+	const { formState, getValues, register, watch, setValue } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { senderAddress, gasLimit, gasPrice } = watch();
