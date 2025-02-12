@@ -84,9 +84,7 @@ export const FormStep = ({ senderWallet, profile, onChangeWallet }: FormStepProp
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-40">
-								{t("COMMON.USERNAME")}
-							</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.USERNAME")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{senderWallet && senderWallet.username()}
 							</div>
