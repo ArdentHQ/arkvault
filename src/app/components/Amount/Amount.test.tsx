@@ -87,7 +87,6 @@ describe("Amount", () => {
 
 		render(<TestComponent />);
 
-		// Initially visible
 		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.46$/);
 
 		await userEvent.click(screen.getByRole("button"));
