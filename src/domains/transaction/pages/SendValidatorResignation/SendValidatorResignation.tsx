@@ -51,7 +51,7 @@ export const SendValidatorResignation = () => {
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
-	const {activeNetwork: network} = useActiveNetwork({profile: activeProfile});
+	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
 	const [activeWallet, setActiveWallet] = useState(() => {
 		if (senderAddress) {
