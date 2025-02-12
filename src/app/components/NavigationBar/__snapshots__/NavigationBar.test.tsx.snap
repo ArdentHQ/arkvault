@@ -572,9 +572,6 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-          />
-          <div
             class="flex items-center gap-2"
           >
             <div
@@ -1297,9 +1294,6 @@ exports[`NavigationBar > should render full variant when profile restored is fal
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-          />
-          <div
             class="flex items-center gap-2"
           >
             <div
@@ -1967,9 +1961,6 @@ exports[`NavigationBar > should render full variant when profile restored is tru
           </div>
           <div
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-          />
-          <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
           />
           <div
             class="flex items-center gap-2"
@@ -2643,9 +2634,6 @@ exports[`NavigationBar > should render in lg 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-          />
-          <div
             class="flex items-center gap-2"
           >
             <div
@@ -3315,9 +3303,6 @@ exports[`NavigationBar > should render in md 1`] = `
           </div>
           <div
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-          />
-          <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
           />
           <div
             class="flex items-center gap-2"
@@ -3991,9 +3976,6 @@ exports[`NavigationBar > should render in sm 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-          />
-          <div
             class="flex items-center gap-2"
           >
             <div
@@ -4663,9 +4645,6 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
           </div>
           <div
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-          />
-          <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
           />
           <div
             class="flex items-center gap-2"
@@ -5339,9 +5318,6 @@ exports[`NavigationBar > should render in xs 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-          />
-          <div
             class="flex items-center gap-2"
           >
             <div
@@ -6011,9 +5987,6 @@ exports[`NavigationBar > should render with custom menu 1`] = `
           </div>
           <div
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-          />
-          <div
-            class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
           />
           <div
             class="flex items-center gap-2"

@@ -599,9 +599,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
@@ -2349,9 +2346,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
@@ -3826,9 +3820,6 @@ exports[`Contacts > should render with contacts 1`] = `
             </div>
             <div
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-            />
-            <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
               class="flex items-center gap-2"
@@ -5576,9 +5567,6 @@ exports[`Contacts > should render without contacts 1`] = `
             </div>
             <div
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-            />
-            <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
               class="flex items-center gap-2"

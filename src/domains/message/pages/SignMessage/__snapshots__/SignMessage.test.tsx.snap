@@ -602,9 +602,6 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
@@ -1702,9 +1699,6 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
             </div>
             <div
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-            />
-            <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
               class="flex items-center gap-2"

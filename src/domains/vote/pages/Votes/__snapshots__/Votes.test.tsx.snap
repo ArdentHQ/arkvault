@@ -606,9 +606,6 @@ exports[`Votes > should filter current delegates 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
@@ -1993,9 +1990,6 @@ exports[`Votes > should render 1`] = `
             </div>
             <div
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-            />
-            <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
               class="flex items-center gap-2"
@@ -3686,9 +3680,6 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
@@ -5282,9 +5273,6 @@ exports[`Votes > should render with no wallets 1`] = `
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
@@ -6144,9 +6132,6 @@ exports[`Votes > should select a validator 1`] = `
             </div>
             <div
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-            />
-            <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
               class="flex items-center gap-2"
@@ -7835,9 +7820,6 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
@@ -8893,9 +8875,6 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
@@ -9949,9 +9928,6 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
             </div>
             <div
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-            />
-            <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
               class="flex items-center gap-2"
@@ -11518,9 +11494,6 @@ exports[`Votes > should trigger network connection warning 1`] = `
             </div>
             <div
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
-            />
-            <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
               class="flex items-center gap-2"

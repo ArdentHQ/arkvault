@@ -600,9 +600,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
-            />
-            <div
               class="flex items-center gap-2"
             >
               <div
