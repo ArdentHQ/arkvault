@@ -1,5 +1,5 @@
-import { useBalanceVisibilityContext } from "@/app/contexts/BalanceVisibility";
-import { Helpers } from "@ardenthq/sdk-profiles";
+import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
+import { Contracts, Helpers } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React from "react";
 
@@ -11,6 +11,7 @@ interface AmountProperties {
 	isNegative?: boolean;
 	className?: string;
 	allowHideBalance?: boolean;
+	profile?: Contracts.IProfile;
 }
 
 const Amount: React.VFC<AmountProperties> = ({
@@ -21,10 +22,10 @@ const Amount: React.VFC<AmountProperties> = ({
 	showSign,
 	className,
 	allowHideBalance = false,
+	profile
 }) => {
 	let formattedAmount = Helpers.Currency.format(value, ticker, { withTicker: showTicker });
-
-	const { hideBalance } = useBalanceVisibilityContext();
+	const { hideBalance } = useBalanceVisibility({ profile });
 
 	if (hideBalance && allowHideBalance) {
 		formattedAmount = formattedAmount.replaceAll(/[\d,.]+/g, "****");
