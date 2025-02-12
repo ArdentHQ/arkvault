@@ -27,6 +27,7 @@ import { Logo } from "@/app/components/Logo";
 import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
+import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetwork } from "./components/SelectNetwork";
 
 const NavWrapper = ({
@@ -402,21 +403,24 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								</>
 							)}
 
-							<UserMenu
-								userInitials={userInitials}
-								avatarImage={profile.avatar()}
-								onUserAction={(action: DropdownOption) => {
-									if (action.value === "contact") {
-										return showSupportChat(profile);
-									}
+							<div className="flex items-center gap-2">
+								<HideBalance className="hidden md-lg:flex" profile={profile} />
+								<UserMenu
+									userInitials={userInitials}
+									avatarImage={profile.avatar()}
+									onUserAction={(action: DropdownOption) => {
+										if (action.value === "contact") {
+											return showSupportChat(profile);
+										}
 
-									if (action.isExternal) {
-										return openExternal(action.mountPath());
-									}
+										if (action.isExternal) {
+											return openExternal(action.mountPath());
+										}
 
-									return history.push(action.mountPath(profile.id()));
-								}}
-							/>
+										return history.push(action.mountPath(profile.id()));
+									}}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>

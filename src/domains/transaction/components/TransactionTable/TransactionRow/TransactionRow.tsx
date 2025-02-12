@@ -165,12 +165,16 @@ export const TransactionRow = memo(
 					})}
 				>
 					<div className="flex flex-col items-end gap-1">
-						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
+						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} profile={profile} />
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
 						>
-							<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
+							<TransactionFiatAmount
+								transaction={transaction}
+								exchangeCurrency={exchangeCurrency}
+								profile={profile}
+							/>
 						</span>
 					</div>
 				</TableCell>
@@ -186,15 +190,28 @@ export const TransactionRow = memo(
 					)}
 				>
 					{isLgAndAbove ? (
-						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
+						<Amount
+							value={transaction.convertedTotal()}
+							ticker={exchangeCurrency || ""}
+							allowHideBalance
+							profile={profile}
+						/>
 					) : (
 						<div className="flex w-40 flex-col items-end gap-1">
-							<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
+							<TransactionTotalLabel
+								transaction={transaction}
+								hideStyles={!hideSender}
+								profile={profile}
+							/>
 							<span
 								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 								data-testid="TransactionRow__exchange-currency"
 							>
-								<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
+								<TransactionFiatAmount
+									transaction={transaction}
+									exchangeCurrency={exchangeCurrency}
+									profile={profile}
+								/>
 							</span>
 						</div>
 					)}

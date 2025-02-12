@@ -7,6 +7,7 @@ import { Label } from "@/app/components/Label";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
 import { twMerge } from "tailwind-merge";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 interface AmountLabelHintProperties {
 	className: string;
@@ -39,6 +40,8 @@ interface AmountLabelProperties {
 	className?: string;
 	textClassName?: string;
 	hideSign?: boolean;
+	allowHideBalance?: boolean;
+	profile?: Contracts.IProfile;
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
@@ -51,6 +54,8 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	className,
 	textClassName,
 	hideSign,
+	allowHideBalance = false,
+	profile,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -88,6 +93,8 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 					value={value}
 					isNegative={isNegative}
 					className={twMerge("text-sm", textClassName)}
+					allowHideBalance={allowHideBalance}
+					profile={profile}
 				/>
 			</div>
 		</Label>

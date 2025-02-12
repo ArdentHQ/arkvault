@@ -89,6 +89,7 @@ export const TransactionDetailContent = ({
 						labelClassName={labelClassName}
 						transaction={transaction}
 						senderWallet={transaction.wallet()}
+						profile={profile}
 					/>
 				</DetailPadded>
 
