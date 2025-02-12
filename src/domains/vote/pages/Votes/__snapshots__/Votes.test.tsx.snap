@@ -517,6 +517,95 @@ exports[`Votes > should filter current delegates 1`] = `
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+            />
+            <div
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
@@ -660,7 +749,7 @@ exports[`Votes > should filter current delegates 1`] = `
                 </span>
                 <div>
                   <div
-                    aria-controls=":r2q:"
+                    aria-controls=":r36:"
                     aria-expanded="true"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle-VotesFilter"
@@ -1748,6 +1837,95 @@ exports[`Votes > should render 1`] = `
             </div>
             <div
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+            />
+            <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
               aria-expanded="false"
@@ -3283,6 +3461,95 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             </div>
             <div
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+            />
+            <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
               aria-expanded="false"
@@ -5522,6 +5789,95 @@ exports[`Votes > should select a validator 1`] = `
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+            />
+            <div
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
@@ -7055,6 +7411,95 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+            />
+            <div
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
@@ -7206,7 +7651,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                   data-testid="Votes__FilterWallets"
                 >
                   <div
-                    aria-controls=":r2c:"
+                    aria-controls=":r2m:"
                     aria-expanded="true"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
@@ -7957,6 +8402,95 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+            />
+            <div
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
@@ -8108,7 +8642,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                   data-testid="Votes__FilterWallets"
                 >
                   <div
-                    aria-controls=":r1u:"
+                    aria-controls=":r26:"
                     aria-expanded="true"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
@@ -8859,6 +9393,95 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
             />
             <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+            />
+            <div
               aria-expanded="false"
               aria-haspopup="dialog"
               data-testid="dropdown__toggle"
@@ -9010,7 +9633,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   data-testid="Votes__FilterWallets"
                 >
                   <div
-                    aria-controls=":r14:"
+                    aria-controls=":r1a:"
                     aria-expanded="true"
                     aria-haspopup="dialog"
                     data-testid="dropdown__toggle"
@@ -10270,6 +10893,95 @@ exports[`Votes > should trigger network connection warning 1`] = `
             </div>
             <div
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+            />
+            <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
               aria-expanded="false"

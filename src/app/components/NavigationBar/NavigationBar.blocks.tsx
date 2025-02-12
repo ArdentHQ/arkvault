@@ -27,6 +27,7 @@ import { Logo } from "@/app/components/Logo";
 import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
+import { SelectNetwork } from "./components/SelectNetwork";
 
 const NavWrapper = ({
 	variant = "default",
@@ -389,7 +390,18 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									</div>
 								</Tooltip>
 							</div>
+
 							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
+
+							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && (
+								<>
+									<div className="hidden sm:block">
+										<SelectNetwork profile={profile} />
+									</div>
+									<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12" />
+								</>
+							)}
+
 							<UserMenu
 								userInitials={userInitials}
 								avatarImage={profile.avatar()}

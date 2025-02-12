@@ -24,6 +24,7 @@ import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { SettingsGroup, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -31,6 +32,7 @@ const selectOption = "COMMON.SELECT_OPTION";
 export const GeneralSettings: React.FC = () => {
 	const profile = useActiveProfile();
 	const { setProfileTheme } = useTheme();
+	const { resetToDefaults } = useActiveNetwork({ profile });
 
 	const isProfileRestored = profile.status().isRestored();
 
@@ -275,6 +277,10 @@ export const GeneralSettings: React.FC = () => {
 
 		if (isChatOpen) {
 			showSupportChat(profile);
+		}
+
+		if (!showDevelopmentNetwork) {
+			await resetToDefaults();
 		}
 
 		reset(getDefaultValues());

@@ -26,6 +26,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { beforeAll } from "vitest";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -385,7 +386,7 @@ describe("useProfileSynchronizer", () => {
 		await expect(screen.findByTestId("ResetSyncProfile")).resolves.toBeVisible();
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(false));
-		/* 
+		/*
 		await userEvent.click(screen.getByTestId("ResetSyncProfile"));
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(true)); */
@@ -530,6 +531,10 @@ describe("useProfileSynchronizer", () => {
 });
 
 describe("useProfileRestore", () => {
+	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
+	});
+
 	it("should not restore profile if already restored in tests", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 		const profile = env.profiles().findById(getDefaultProfileId());

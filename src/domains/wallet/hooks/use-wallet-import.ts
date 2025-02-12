@@ -1,8 +1,13 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
+import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
+import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+import { useEnvironmentContext } from "@/app/contexts";
 
 import { OptionsValue } from "./use-import-options";
+import { assertWallet } from "@/utils/assertions";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 type PrivateKey = string;
 type Mnemonic = string;
@@ -19,6 +24,9 @@ type ImportOptionsType = {
 
 export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
+	const { env, persist } = useEnvironmentContext();
+	const { syncAll } = useWalletSync({ env, profile });
+	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile });
 
 	const importWalletByType = async ({
 		network,
@@ -29,7 +37,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		network: Networks.Network;
 		type: string;
 		value: WalletGenerationInput;
-		encryptedWif: string;
+		encryptedWif?: string;
 	}): Promise<Contracts.IReadWriteWallet | undefined> => {
 		const defaultOptions = {
 			coin: network.coin(),
@@ -106,7 +114,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 							.fromWIF({
 								...defaultOptions,
 								password: value,
-								wif: encryptedWif,
+								wif: encryptedWif!,
 							})
 							.then((wallet) => {
 								profile.wallets().push(wallet);
@@ -138,5 +146,62 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		return (importOptions[type as keyof typeof importOptions] || importOptions.default)();
 	};
 
-	return { importWalletByType };
+	const importWallet = async ({
+		network,
+		value,
+		type,
+		encryptedWif,
+	}: {
+		value: WalletGenerationInput;
+		network: Networks.Network;
+		type: string;
+		encryptedWif?: string;
+	}): Promise<Contracts.IReadWriteWallet> => {
+		const wallet = await importWalletByType({
+			encryptedWif,
+			network,
+			type,
+			value,
+		});
+
+		assertWallet(wallet);
+
+		await syncAll(wallet);
+
+		wallet.mutator().alias(
+			getDefaultAlias({
+				network,
+				profile,
+			}),
+		);
+
+		return wallet;
+	};
+
+	const importWallets = async ({
+		networks,
+		value,
+		type,
+		encryptedWif,
+	}: {
+		value: WalletGenerationInput;
+		networks: Networks.Network[];
+		type: string;
+		encryptedWif?: string;
+	}) => {
+		const wallets: Contracts.IReadWriteWallet[] = [];
+
+		for (const network of networks) {
+			const wallet = await importWallet({ encryptedWif, network, type, value });
+			wallets.push(wallet);
+
+			await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
+		}
+
+		await persist();
+
+		return wallets;
+	};
+
+	return { importWallet, importWallets };
 };

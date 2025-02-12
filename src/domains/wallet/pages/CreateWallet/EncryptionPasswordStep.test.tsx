@@ -66,42 +66,10 @@ describe("EncryptionPasswordStep", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		expect(backButton).toBeEnabled();
-
-		await userEvent.click(backButton);
-
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton).toBeEnabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton).toBeDisabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton).toBeEnabled());
-
-		await userEvent.click(continueButton);
-
-		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
-
-		await userEvent.click(backButton);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(continueButton);
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -168,6 +136,7 @@ describe("EncryptionPasswordStep", () => {
 
 		await waitFor(() => expect(walletSpy).toHaveBeenCalledWith());
 		walletSpy.mockRestore();
+		historySpy.mockRestore();
 	});
 
 	it("should create a wallet and use encryption password", async () => {
@@ -185,40 +154,10 @@ describe("EncryptionPasswordStep", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		expect(backButton).toBeEnabled();
-
-		await userEvent.click(backButton);
-
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
-
-		await waitFor(() => expect(continueButton).toBeEnabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
-
-		await waitFor(() => expect(continueButton).toBeDisabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
-
-		await waitFor(() => expect(continueButton).toBeEnabled());
-
-		await userEvent.click(continueButton);
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
-
-		await userEvent.click(backButton);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(continueButton);
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 

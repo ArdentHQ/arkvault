@@ -130,7 +130,9 @@ exports[`ContactListMobile > should render 1`] = `
             >
               <div
                 class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
-              />
+              >
+                ARK Devnet
+              </div>
               <div
                 class="flex items-center overflow-hidden"
               >

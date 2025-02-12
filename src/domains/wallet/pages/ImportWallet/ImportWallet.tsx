@@ -1,4 +1,3 @@
-import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -11,32 +10,20 @@ import { SuccessStep } from "./SuccessStep";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
-import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks/env";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { toasts } from "@/app/services";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
-import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/use-wallet-import";
-import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
-import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
-import {
-	enabledNetworksCount,
-	networkDisplayName,
-	profileAllEnabledNetworkIds,
-	profileAllEnabledNetworks,
-} from "@/utils/network-utils";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
-	NetworkStep = 1,
-	MethodStep,
+	MethodStep = 1,
 	EncryptPasswordStep,
 	SummaryStep,
 }
@@ -45,28 +32,21 @@ export const ImportWallet = () => {
 	const history = useHistory();
 	const isLedgerImport = history.location.pathname.includes("/import/ledger");
 	const activeProfile = useActiveProfile();
-	const { env, persist } = useEnvironmentContext();
-	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
-	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
+	const { persist } = useEnvironmentContext();
+	const [activeTab, setActiveTab] = useState<Step>(Step.MethodStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
 
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
-	const [isSyncingCoin, setIsSyncingCoin] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
-	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
-	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const { t } = useTranslation();
-	const { importWalletByType } = useWalletImport({ profile: activeProfile });
-	const { syncAll } = useWalletSync({ env, profile: activeProfile });
+	const { importWallets } = useWalletImport({ profile: activeProfile });
 
 	const form = useForm<any>({
-		defaultValues: {
-			network: onlyHasOneNetwork ? profileAllEnabledNetworks(activeProfile)[0] : undefined,
-		},
 		mode: "onChange",
 	});
 
@@ -75,7 +55,6 @@ export const ImportWallet = () => {
 	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
 
 	useEffect(() => {
-		register("network", { required: true });
 		register({ name: "importOption", type: "custom" });
 		register("useEncryption");
 	}, [register]);
@@ -94,19 +73,13 @@ export const ImportWallet = () => {
 		}
 	});
 
-	useEffect(() => {
-		if (onlyHasOneNetwork) {
-			handleNext();
-		}
-	}, []);
-
 	const handleNext = () =>
 		({
 			[Step.MethodStep]: async () => {
 				setIsImporting(true);
 
 				try {
-					await importWallet();
+					await importWalletsInAllNetworks();
 
 					if (useEncryption && importOption.canBeEncrypted) {
 						setActiveTab(Step.EncryptPasswordStep);
@@ -128,44 +101,10 @@ export const ImportWallet = () => {
 
 				setIsEncrypting(false);
 			},
-			[Step.NetworkStep]: async () => {
-				// Construct coin before moving to MethodStep.
-				// Will be used in import input validations
-				const network = getValues("network");
-
-				const coin = activeProfile.coins().set(network.coin(), network.id(), {
-					networks: {
-						[network.id()]: network.toObject(),
-					},
-				});
-
-				setIsSyncingCoin(true);
-
-				try {
-					toasts.dismiss();
-					await coin.__construct();
-					setIsSyncingCoin(false);
-				} catch {
-					setIsSyncingCoin(false);
-
-					return toasts.warning(
-						<SyncErrorMessage
-							failedNetworkNames={[networkDisplayName(network)]}
-							onRetry={async () => {
-								setIsSyncingCoin(true);
-								await toasts.dismiss();
-								handleNext();
-							}}
-						/>,
-					);
-				}
-
-				setActiveTab(activeTab + 1);
-			},
 		})[activeTab as Exclude<Step, Step.SummaryStep>]();
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHasOneNetwork)) {
+		if (activeTab === Step.MethodStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -177,32 +116,17 @@ export const ImportWallet = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const importWallet = async (): Promise<void> => {
-		const { network, importOption, encryptedWif, value: walletInput } = getValues();
-
-		const wallet = await importWalletByType({
+	const importWalletsInAllNetworks = async () => {
+		const { importOption, encryptedWif, value } = getValues();
+		const wallets = await importWallets({
 			encryptedWif,
-			network,
+			networks: activeProfile.availableNetworks(),
 			type: importOption.value,
-			value: walletInput,
+			value,
 		});
 
-		assertWallet(wallet);
-
-		setValue("selectedNetworkIds", uniq([...selectedNetworkIds, wallet.network().id()]));
-
-		await syncAll(wallet);
-
-		wallet.mutator().alias(
-			getDefaultAlias({
-				profile: activeProfile,
-			}),
-		);
-
-		await persist();
-		setSelectedAddresses([...selectedAddresses, wallet.address()]);
-
-		setImportedWallet(wallet);
+		const currentWallet = wallets.find((wallet) => wallet.network().id() === activeNetwork.id());
+		setImportedWallet(currentWallet);
 	};
 
 	const encryptInputs = async () => {
@@ -255,10 +179,6 @@ export const ImportWallet = () => {
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
 
-		if (!onlyHasOneNetwork) {
-			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
-		}
-
 		steps.push(t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE"));
 
 		if (useEncryption) {
@@ -269,15 +189,6 @@ export const ImportWallet = () => {
 
 		return steps;
 	}, [useEncryption, activeTab]);
-
-	const activeTabIndex = useMemo(() => {
-		// Since it removes the select network step
-		if (onlyHasOneNetwork) {
-			return activeTab - 1;
-		}
-
-		return activeTab;
-	}, [onlyHasOneNetwork, activeTab]);
 
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_IMPORT_WALLET.TITLE")}>
@@ -292,22 +203,11 @@ export const ImportWallet = () => {
 						<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
 					) : (
 						<Tabs activeId={activeTab}>
-							<StepIndicator steps={allSteps} activeIndex={activeTabIndex} />
+							<StepIndicator steps={allSteps} activeIndex={activeTab} />
 
 							<div className="mt-8">
-								<TabPanel tabId={Step.NetworkStep}>
-									<NetworkStep
-										filter={(network) =>
-											profileAllEnabledNetworkIds(activeProfile).includes(network.id())
-										}
-										profile={activeProfile}
-										title={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE")}
-										subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}
-									/>
-								</TabPanel>
-
 								<TabPanel tabId={Step.MethodStep}>
-									<MethodStep profile={activeProfile} />
+									<MethodStep profile={activeProfile} network={activeNetwork} />
 								</TabPanel>
 
 								<TabPanel tabId={Step.EncryptPasswordStep}>
@@ -333,8 +233,8 @@ export const ImportWallet = () => {
 										</Button>
 
 										<Button
-											disabled={isNextDisabled || isSyncingCoin}
-											isLoading={isEncrypting || isImporting || isSyncingCoin}
+											disabled={isNextDisabled}
+											isLoading={isEncrypting || isImporting}
 											onClick={handleNext}
 											data-testid="ImportWallet__continue-button"
 										>

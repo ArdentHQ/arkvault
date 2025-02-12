@@ -29,37 +29,36 @@ describe("SelectNetworkStep", () => {
 
 	it("should render", () => {
 		const { result: form } = renderHook(() => useForm());
-		const { asFragment } = render(
+		render(
 			<FormProvider {...form.current}>
 				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
 			</FormProvider>,
 		);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without test networks", async () => {
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithOnlyPublicNetworks(profile);
 
 		const { result: form } = renderHook(() => useForm());
-		const { asFragment } = render(
+		render(
 			<FormProvider {...form.current}>
 				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
 			</FormProvider>,
 		);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
 
 	it("should render with test networks", async () => {
+		vi.restoreAllMocks();
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 
 		const { result: form } = renderHook(() => useForm());
-		const { asFragment } = render(
+		render(
 			<FormProvider {...form.current}>
 				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
 			</FormProvider>,
@@ -67,7 +66,6 @@ describe("SelectNetworkStep", () => {
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
