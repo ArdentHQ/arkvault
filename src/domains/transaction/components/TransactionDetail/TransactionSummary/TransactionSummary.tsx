@@ -12,7 +12,12 @@ interface Properties {
 	labelClassName?: string;
 	profile?: Contracts.IProfile;
 }
-export const TransactionSummary = ({ transaction, senderWallet, labelClassName, profile }: Properties): ReactElement => {
+export const TransactionSummary = ({
+	transaction,
+	senderWallet,
+	labelClassName,
+	profile,
+}: Properties): ReactElement => {
 	const { t } = useTranslation();
 
 	return (

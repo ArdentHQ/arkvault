@@ -40,7 +40,13 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	return returnedAmount;
 };
 
-export const TransactionAmountLabel = ({ transaction, profile }: { transaction: ExtendedTransactionData; profile?: Contracts.IProfile }): JSX.Element => {
+export const TransactionAmountLabel = ({
+	transaction,
+	profile,
+}: {
+	transaction: ExtendedTransactionData;
+	profile?: Contracts.IProfile;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const currency = transaction.wallet().currency();
