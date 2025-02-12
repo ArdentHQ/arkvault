@@ -4,7 +4,7 @@ import { Amount } from "./Amount";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useBalanceVisibility } from '@/app/hooks/use-balance-visibility';
+import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
 
 let profile: Contracts.IProfile;
 
@@ -12,7 +12,7 @@ describe("Amount", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-        await env.profiles().restore(profile);
+		await env.profiles().restore(profile);
 		await profile.sync();
 	});
 
@@ -85,7 +85,7 @@ describe("Amount", () => {
 			);
 		};
 
-		render(<TestComponent  />);
+		render(<TestComponent />);
 
 		// Initially visible
 		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.46$/);

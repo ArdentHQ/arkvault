@@ -12,7 +12,7 @@ describe("HideBalance", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-        await env.profiles().restore(profile);
+		await env.profiles().restore(profile);
 		await profile.sync();
 	});
 
@@ -42,9 +42,9 @@ describe("HideBalance", () => {
 
 	it("should call setHideBalance when clicked", async () => {
 		const setHideBalanceSpy = vi.fn();
-		
+
 		vi.spyOn(balanceVisibilityHook, "useBalanceVisibility").mockReturnValue({
-			hideBalance: true, 
+			hideBalance: true,
 			setHideBalance: setHideBalanceSpy,
 		});
 

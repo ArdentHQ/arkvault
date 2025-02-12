@@ -12,14 +12,16 @@ export const useBalanceVisibility = ({
 } => {
 	const environment = useEnvironmentContext();
 
-	const dashboardConfig = profile?.settings().get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration;
+	const dashboardConfig = profile
+		?.settings()
+		.get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration;
 
-    const hideBalance = dashboardConfig?.hideBalance ?? false;
+	const hideBalance = dashboardConfig?.hideBalance ?? false;
 
-    const setHideBalance = async (hideBalance: boolean) => {
-        profile?.settings().set(Contracts.ProfileSetting.DashboardConfiguration, { ...dashboardConfig, hideBalance });
-        await environment.persist();
-    }
+	const setHideBalance = async (hideBalance: boolean) => {
+		profile?.settings().set(Contracts.ProfileSetting.DashboardConfiguration, { ...dashboardConfig, hideBalance });
+		await environment.persist();
+	};
 
 	return {
 		hideBalance,

@@ -1,5 +1,5 @@
 export interface DashboardConfiguration {
-    hideBalance: boolean;
+	hideBalance: boolean;
 	walletsDisplayType: "all" | "starred" | "ledger";
 	selectedNetworkIds: string[];
 	selectedAddresses?: string[];
