@@ -81,8 +81,13 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			const profileId = profile.id();
 			const walletId = wallet.id();
 
-			profile.wallets().forget(walletId);
-			profile.notifications().transactions().forgetByRecipient(wallet.address());
+			for (const profileWallet of profile.wallets().values()) {
+				if (profileWallet.address() === wallet.address()) {
+					profile.wallets().forget(profileWallet.id());
+					profile.notifications().transactions().forgetByRecipient(wallet.address());
+				}
+			}
+
 			await persist();
 
 			if (history.location.pathname === generatePath(ProfilePaths.WalletDetails, { profileId, walletId })) {
