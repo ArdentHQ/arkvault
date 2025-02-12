@@ -1,4 +1,3 @@
-import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -16,21 +15,19 @@ import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
-import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
-import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useWalletImport } from "@/domains/wallet/hooks";
 
 enum Step {
-	NetworkStep = 1,
-	WalletOverviewStep = 2,
-	ConfirmPassphraseStep = 3,
-	EncryptPasswordStep = 4,
-	SuccessStep = 5,
+	WalletOverviewStep = 1,
+	ConfirmPassphraseStep = 2,
+	EncryptPasswordStep = 3,
+	SuccessStep = 4,
 }
 
 export const CreateWallet = () => {
@@ -38,14 +35,15 @@ export const CreateWallet = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
-	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
-	const [activeTab, setActiveTab] = useState<Step>(onlyHasOneNetwork ? Step.WalletOverviewStep : Step.NetworkStep);
-	const { selectedNetworkIds, setValue: setConfiguration } = useWalletConfig({ profile: activeProfile });
+	const [activeTab, setActiveTab] = useState<Step>(Step.WalletOverviewStep);
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+	const { importWallets } = useWalletImport({ profile: activeProfile });
+
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHasOneNetwork ? profileAllEnabledNetworks(activeProfile)[0] : undefined,
+			network: activeNetwork,
 			passphraseDisclaimer: false,
 		},
 		mode: "onChange",
@@ -55,8 +53,8 @@ export const CreateWallet = () => {
 
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
-	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHasOneNetwork);
-	const [generationError, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
+	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
+	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	useEffect(() => {
@@ -74,9 +72,7 @@ export const CreateWallet = () => {
 	}, [wallet, mnemonic]);
 
 	useEffect(() => {
-		if (onlyHasOneNetwork) {
-			handleGenerateWallet();
-		}
+		handleGenerateWallet();
 	}, []);
 
 	const handleFinish = () => {
@@ -118,7 +114,7 @@ export const CreateWallet = () => {
 	};
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || (activeTab === Step.WalletOverviewStep && onlyHasOneNetwork)) {
+		if (activeTab === Step.WalletOverviewStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -171,14 +167,18 @@ export const CreateWallet = () => {
 			}
 
 			assertWallet(wallet);
-
 			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
+
+			await importWallets({
+				encryptedWif: parameters.encryptionPassword,
+				networks: activeProfile.availableNetworks().filter((network) => network.id() !== wallet.network().id()),
+				type: "bip39",
+				value: mnemonic,
+			});
 
 			setValue("wallet", wallet);
 
 			activeProfile.wallets().push(wallet);
-
-			setConfiguration("selectedNetworkIds", uniq([...selectedNetworkIds, network.id()]));
 
 			await persist();
 		}
@@ -214,10 +214,6 @@ export const CreateWallet = () => {
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
 
-		if (!onlyHasOneNetwork) {
-			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
-		}
-
 		steps.push(
 			t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE"),
 			t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE"),
@@ -232,36 +228,14 @@ export const CreateWallet = () => {
 		return steps;
 	}, [useEncryption, activeTab]);
 
-	const activeTabIndex = useMemo(() => {
-		// Since it removes the select network step
-		if (onlyHasOneNetwork) {
-			return activeTab - 1;
-		}
-
-		return activeTab;
-	}, [onlyHasOneNetwork, activeTab]);
-
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_CREATE_WALLET.TITLE")}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleFinish}>
 					<Tabs activeId={activeTab}>
-						<StepIndicator steps={allSteps} activeIndex={activeTabIndex} />
+						<StepIndicator steps={allSteps} activeIndex={activeTab} />
 
 						<div className="mt-8">
-							<TabPanel tabId={Step.NetworkStep}>
-								<NetworkStep
-									filter={(network) =>
-										profileAllEnabledNetworkIds(activeProfile).includes(network.id())
-									}
-									profile={activeProfile}
-									title={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.TITLE")}
-									subtitle={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.SUBTITLE")}
-									disabled={isGeneratingWallet}
-									error={`${generationError}`}
-								/>
-							</TabPanel>
-
 							<TabPanel tabId={Step.WalletOverviewStep}>
 								<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} />
 							</TabPanel>
@@ -295,7 +269,7 @@ export const CreateWallet = () => {
 										<Button
 											data-testid="CreateWallet__continue-button"
 											disabled={isDirty ? !isValid || isGeneratingWallet : true}
-											isLoading={isGeneratingWallet && activeTab === Step.NetworkStep}
+											isLoading={isGeneratingWallet}
 											onClick={() => handleNext()}
 										>
 											{t("COMMON.CONTINUE")}

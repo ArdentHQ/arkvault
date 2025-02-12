@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+import React from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
@@ -6,12 +6,18 @@ import { renderHook } from "@testing-library/react";
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
 import { env, MNEMONICS } from "@/utils/testing-library";
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
 let wallet: Contracts.IReadWriteWallet;
 
 describe("useWalletImport", () => {
+	const wrapper = ({ children }: any) => (
+		<EnvironmentProvider env={env}>
+			<ConfigurationProvider>{children}</ConfigurationProvider>
+		</EnvironmentProvider>
+	);
 	beforeAll(async () => {
 		profile = env.profiles().first();
 		await env.profiles().restore(profile);
@@ -24,9 +30,9 @@ describe("useWalletImport", () => {
 	it("should import wallet from mnemonic with bip39", async () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletImport({ profile }));
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
-		const wallet = await current.importWalletByType({
+		const wallet = await current.importWallet({
 			encryptedWif: "",
 			network,
 			type: OptionsValue.BIP39,
@@ -41,7 +47,7 @@ describe("useWalletImport", () => {
 		async (mnemonicType) => {
 			const {
 				result: { current },
-			} = renderHook(() => useWalletImport({ profile }));
+			} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 			const mockMnemonicMethod = vi
 				.spyOn(profile.walletFactory(), `fromMnemonicWith${mnemonicType.toUpperCase()}` as never)
@@ -50,7 +56,7 @@ describe("useWalletImport", () => {
 				});
 
 			await expect(
-				current.importWalletByType({
+				current.importWallet({
 					encryptedWif: "",
 					network,
 					type: mnemonicType,
@@ -67,7 +73,7 @@ describe("useWalletImport", () => {
 		async (importType) => {
 			const {
 				result: { current },
-			} = renderHook(() => useWalletImport({ profile }));
+			} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 			const methodName = `from${importType.charAt(0).toUpperCase()}${importType.slice(1)}` as never;
 			const mockEncryptedWif = vi.spyOn(profile.walletFactory(), methodName).mockImplementation(() => {
@@ -75,7 +81,7 @@ describe("useWalletImport", () => {
 			});
 
 			await expect(
-				current.importWalletByType({
+				current.importWallet({
 					encryptedWif: "",
 					network,
 					type: importType,
@@ -90,14 +96,14 @@ describe("useWalletImport", () => {
 	it("should reject import wallet from WIF", async () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletImport({ profile }));
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		const mockEncryptedWif = vi.spyOn(profile.walletFactory(), "fromWIF").mockImplementation(() => {
 			throw new Error("error");
 		});
 
 		await expect(
-			current.importWalletByType({
+			current.importWallet({
 				encryptedWif: "",
 				network,
 				type: OptionsValue.WIF,
@@ -111,7 +117,7 @@ describe("useWalletImport", () => {
 	it("should import wallet from encryptedWif", async () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletImport({ profile }));
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		const { wallet: newWallet } = await profile.walletFactory().generate({
 			coin: network.coin(),
@@ -125,7 +131,7 @@ describe("useWalletImport", () => {
 			.mockImplementation(() => Promise.resolve(newWallet));
 
 		await expect(
-			current.importWalletByType({
+			current.importWallet({
 				encryptedWif: "wif",
 				network,
 				type: OptionsValue.ENCRYPTED_WIF,
@@ -141,12 +147,12 @@ describe("useWalletImport", () => {
 	it("should import wallet from secret", async () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletImport({ profile }));
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		const countBefore = profile.wallets().count();
 
 		await expect(
-			current.importWalletByType({
+			current.importWallet({
 				encryptedWif: "",
 				network,
 				type: OptionsValue.SECRET,
@@ -160,14 +166,14 @@ describe("useWalletImport", () => {
 	it("should reject import wallet from encryptedWif", async () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletImport({ profile }));
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		const mockEncryptedWif = vi
 			.spyOn(profile.walletFactory(), "fromWIF")
 			.mockImplementation(() => Promise.reject(new Error("error")));
 
 		await expect(
-			current.importWalletByType({
+			current.importWallet({
 				encryptedWif: "wif",
 				network,
 				type: OptionsValue.ENCRYPTED_WIF,
@@ -181,10 +187,10 @@ describe("useWalletImport", () => {
 	it("should return undefined for type unknown", async () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletImport({ profile }));
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		await expect(
-			current.importWalletByType({ encryptedWif: "", network, type: "unknown", value: "value" }),
-		).resolves.toBeUndefined();
+			current.importWallet({ encryptedWif: "", network, type: "unknown", value: "value" }),
+		).rejects.toThrow();
 	});
 });

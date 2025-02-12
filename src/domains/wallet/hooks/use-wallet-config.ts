@@ -3,7 +3,6 @@ import { useMemo } from "react";
 
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useNetworks } from "@/app/hooks";
 
 export const useWalletConfig = ({
@@ -17,8 +16,7 @@ export const useWalletConfig = ({
 
 	const availableNetworks = useNetworks({ profile });
 
-	const defaultConfiguration: DashboardConfiguration = {
-		selectedNetworkIds: profileEnabledNetworkIds(profile),
+	const defaultConfiguration = {
 		walletsDisplayType: "all",
 		...defaults,
 	};

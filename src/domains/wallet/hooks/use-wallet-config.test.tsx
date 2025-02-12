@@ -1,4 +1,3 @@
-import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook, act } from "@testing-library/react";
 import React from "react";
@@ -27,24 +26,6 @@ describe("useWalletConfig", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
-	});
-
-	it("should have default configuration", () => {
-		const {
-			result: { current },
-		} = renderHook(() => useWalletConfig({ profile }), { wrapper });
-
-		expect(current.selectedWallets).toHaveLength(2);
-
-		const defaultNetworkIds = uniq(
-			profile
-				.wallets()
-				.values()
-				.map((wallet) => wallet.network().id()),
-		);
-
-		expect(current.selectedNetworkIds).toStrictEqual(defaultNetworkIds);
-		expect(current.walletsDisplayType).toBe("all");
 	});
 
 	it("should render with ledger wallet display type", async () => {
