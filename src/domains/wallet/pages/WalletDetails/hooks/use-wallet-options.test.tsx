@@ -126,7 +126,10 @@ describe("Wallet Options Hook", () => {
 
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
-			options: [{ label: "Validator", value: "delegate-registration" }],
+			options: [
+				{ label: "Validator", value: "delegate-registration" },
+				{ label: "Username", value: "username-registration" },
+			],
 			title: "Register",
 		});
 

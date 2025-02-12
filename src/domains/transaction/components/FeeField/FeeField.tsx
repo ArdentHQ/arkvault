@@ -7,7 +7,15 @@ import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 
 interface Properties {
-	type: "transfer" | "multiPayment" | "vote" | "delegateRegistration" | "delegateResignation" | "multiSignature";
+	type:
+		| "transfer"
+		| "multiPayment"
+		| "vote"
+		| "delegateRegistration"
+		| "delegateResignation"
+		| "multiSignature"
+		| "usernameRegistration"
+		| "usernameResignation";
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
@@ -19,6 +27,8 @@ export const GasLimit: Record<Properties["type"], number> = {
 	multiPayment: 21_000,
 	multiSignature: 21_000,
 	transfer: 21_000,
+	usernameRegistration: 200_000,
+	usernameResignation: 200_000,
 	vote: 200_000,
 };
 

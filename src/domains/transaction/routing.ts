@@ -17,7 +17,7 @@ export const TransactionRoutes: RouteItem[] = [
 	{
 		component: SendRegistration,
 		exact: true,
-		path: ProfilePaths.SendValidatorRegistrationProfile,
+		path: ProfilePaths.SendRegistrationProfile,
 	},
 	{
 		component: SendValidatorResignation,

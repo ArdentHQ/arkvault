@@ -12,29 +12,29 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@ardenthq/sdk':
-        specifier: 2.0.0-alpha.44
-        version: 2.0.0-alpha.44
+        specifier: 2.0.0-alpha.45
+        version: 2.0.0-alpha.45
       '@ardenthq/sdk-ark':
-        specifier: 2.0.0-alpha.44
-        version: 2.0.0-alpha.44
+        specifier: 2.0.0-alpha.45
+        version: 2.0.0-alpha.45
       '@ardenthq/sdk-cryptography':
-        specifier: 2.0.0-alpha.44
-        version: 2.0.0-alpha.44
+        specifier: 2.0.0-alpha.45
+        version: 2.0.0-alpha.45
       '@ardenthq/sdk-helpers':
-        specifier: 2.0.0-alpha.44
-        version: 2.0.0-alpha.44
+        specifier: 2.0.0-alpha.45
+        version: 2.0.0-alpha.45
       '@ardenthq/sdk-intl':
-        specifier: 2.0.0-alpha.44
-        version: 2.0.0-alpha.44
+        specifier: 2.0.0-alpha.45
+        version: 2.0.0-alpha.45
       '@ardenthq/sdk-ledger':
-        specifier: 2.0.0-alpha.44
-        version: 2.0.0-alpha.44
+        specifier: 2.0.0-alpha.45
+        version: 2.0.0-alpha.45
       '@ardenthq/sdk-mainsail':
-        specifier: 2.0.0-alpha.44
-        version: 2.0.0-alpha.44(encoding@0.1.13)(typescript@5.5.4)
+        specifier: 2.0.0-alpha.45
+        version: 2.0.0-alpha.45(encoding@0.1.13)(typescript@5.5.4)
       '@ardenthq/sdk-profiles':
-        specifier: 2.0.0-alpha.44
-        version: 2.0.0-alpha.44
+        specifier: 2.0.0-alpha.45
+        version: 2.0.0-alpha.45
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0(encoding@0.1.13)
@@ -400,40 +400,40 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-  '@ardenthq/sdk-ark@2.0.0-alpha.44':
-    resolution: {integrity: sha512-Z+jIvSsd51FSYV3AqtiYUWBxDTu57PdyImuRGAFxzArja660BCmANOl1YAuOVIryfbhtp2SCWyPAw/96zlkY5Q==}
+  '@ardenthq/sdk-ark@2.0.0-alpha.45':
+    resolution: {integrity: sha512-h00IiQqp+yBwZt/PuA1QJck5BmO2zHN4osjL+eo5/nvtuvfRExDRE7BErrjZohfT8WeRu5CPPCjyaCFWoTNq8g==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-cryptography@2.0.0-alpha.44':
-    resolution: {integrity: sha512-2tmuJqiD6DyPF3rfXVfjjQCidRBd1qAdq+bJWLiPkv1ZtWN+DYhdIw57B24k5e0U6583++J9pxWySl1G8AY0XQ==}
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.45':
+    resolution: {integrity: sha512-wlTRLB8fA++PnSgORXEs0Lmvn+KgxsSHy4HpLHKlp3vakYcyVlosRXis0F0z3gmW8rTLUCyD0WMlwinJtzIPMw==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-helpers@2.0.0-alpha.44':
-    resolution: {integrity: sha512-pnZWbvbtLQnIqcJsr1jRX0N4tvZ3wum9NUvbdie7VkdYd0qjNGATaFApm5VlBPJ7MNQuQmUwshm/YwGbvEhCkw==}
+  '@ardenthq/sdk-helpers@2.0.0-alpha.45':
+    resolution: {integrity: sha512-BSiwxuTBDwkY5z8d3pxgYKfZcUpQcBuIdLPzvCfdorpY+n1boPyw1tp5K2KJ2mFVEs33Wo4/Ny/eI781p6EBIw==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-intl@2.0.0-alpha.44':
-    resolution: {integrity: sha512-DHsmI4USWHIJl2kyfwG7+J0r39nWhrT8V5RlYMC46qu+0VZlg87Mn2Xpp+0ujLUMEWixdY13HdxHTt0scDtkRw==}
+  '@ardenthq/sdk-intl@2.0.0-alpha.45':
+    resolution: {integrity: sha512-zEECKj66q7pLuHBduJnUIAqlaUUaqBmbYF7KTIm2hSRq2njZ0ZwuClgeI/KNDym0FecADaMxv/cBzDlc1A9DhA==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-ledger@2.0.0-alpha.44':
-    resolution: {integrity: sha512-TW7GEtmwpc9kdEKzibTQOtphyhUcdCNXm+xwRINXTyWSviIUcJiHT6QlausAvjv4W/95LMsURT17ZyfbbBCPAA==}
+  '@ardenthq/sdk-ledger@2.0.0-alpha.45':
+    resolution: {integrity: sha512-85Gy8U+Q96y5iHVtdzpCcHdlXJrc5ymUOoPfe1yad4hBgMTDX9nlWRx9/NXm/IdJMPT6Py8DnrJlhzLFUWKKzQ==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-mainsail@2.0.0-alpha.44':
-    resolution: {integrity: sha512-w/3HDNlkKrfgo5SyQFyT4jYnJIdEtBioEk3Ja4HVNMQsZRoKaQ9IGMWC8xQFDmDt8Fhr1j2Z1K3U20/gbFpekA==}
+  '@ardenthq/sdk-mainsail@2.0.0-alpha.45':
+    resolution: {integrity: sha512-VfreKMHrunF8ul+B+LO9pSYZ5+gGFPiRXmpv5EUbuwjVZBfk9SIPIlQ9EKklSZPOJ0yGMmN8Y+Pv6yRGz8hG4A==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-markets@2.0.0-alpha.44':
-    resolution: {integrity: sha512-m85YStuwnU73VkdRJyAAaA/K0xwZL5yJ0fOh3zbB+n70eCmuhPCtrUjhHBSKP7/Kswa+OTIphTnd35pKfh2UKA==}
+  '@ardenthq/sdk-markets@2.0.0-alpha.45':
+    resolution: {integrity: sha512-42KPz8sfBPDEWjcf/wDvzdJUWBgSfF1hu2QmY+wnKFHsvFdiixGFT9UJWfECHhysOyz0BkfAvBikJHqEk/D0Rw==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-profiles@2.0.0-alpha.44':
-    resolution: {integrity: sha512-4yvHw1mlNL5XdI6qF6W1BXx9vjBJ879lbO7cwKj11VXfq/3ND/VcbmcSNLDWTmGU0rQIj/tOBdPPBWrGna2P4w==}
+  '@ardenthq/sdk-profiles@2.0.0-alpha.45':
+    resolution: {integrity: sha512-L0sKI/6bhgioEZ82DujNk8nYivgDHySPhEWc4uTvNvXGoCnZFdR29RE8OU4clwMYrNZOrcCVxvNtip0PeilN8Q==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk@2.0.0-alpha.44':
-    resolution: {integrity: sha512-Wet73cBQAD501ZyAFyirhHYRqS3C/NEn9NmR3p1dJ/o/VOlT/owvgXtULTL17G1AxeqCDHpVGBP5Hk+Yis0gwg==}
+  '@ardenthq/sdk@2.0.0-alpha.45':
+    resolution: {integrity: sha512-IyCsB+Bq5BmBF2ochAtKdTXF9L+WPTvyQAWJ0gSH18IFEuVffG73iXXjocGDMX1xGydA0ZsuL1l69rvmor5P6Q==}
     engines: {node: '>=16.0.0'}
 
   '@arkecosystem/ledger-transport@2.0.0':
@@ -2008,8 +2008,8 @@ packages:
   '@noble/curves@1.2.0':
     resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
 
-  '@noble/curves@1.7.0':
-    resolution: {integrity: sha512-UTMhXK9SeDhFJVrHeUJ5uZlI6ajXg10O6Ddocf9S6GjbSBVZsJo88HzKwXznNfGpMTRDyJkqMjNDPYgf0qFWnw==}
+  '@noble/curves@1.8.1':
+    resolution: {integrity: sha512-warwspo+UYUPep0Q+vtdVB4Ugn8GGQj8iyB3gnRWsztmUHTI3S1nhdiWNsPUGL0vud7JlRRk1XEu7Lq1KGTnMQ==}
     engines: {node: ^14.21.3 || >=16}
 
   '@noble/hashes@0.5.9':
@@ -2024,16 +2024,8 @@ packages:
     resolution: {integrity: sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==}
     engines: {node: '>= 16'}
 
-  '@noble/hashes@1.6.0':
-    resolution: {integrity: sha512-YUULf0Uk4/mAA89w+k3+yUYh6NrEvxZa5T6SY3wlMvE2chHkxFUUIDI8/XW1QSC357iA5pSnqt7XEhvFOqmDyQ==}
-    engines: {node: ^14.21.3 || >=16}
-
-  '@noble/hashes@1.6.1':
-    resolution: {integrity: sha512-pq5D8h10hHBjyqX+cfBm0i8JUXJ0UhczFc4r74zbuT9XgewFo2E3J1cOaGtdZynILNmQ685YWGzGE1Zv6io50w==}
-    engines: {node: ^14.21.3 || >=16}
-
-  '@noble/hashes@1.7.0':
-    resolution: {integrity: sha512-HXydb0DgzTpDPwbVeDGCG1gIu7X6+AuU6Zl6av/E/KG8LMsvPntvq+w17CHRpKBmN6Ybdrt1eP3k4cj8DJa78w==}
+  '@noble/hashes@1.7.1':
+    resolution: {integrity: sha512-B8XBPsn4vT/KJAGqDzbwztd+6Yte3P4V7iafm24bxgDe/mlRuK6xmWPuCNrKt2vDafZ8MfJLlchDG/vYafQEjQ==}
     engines: {node: ^14.21.3 || >=16}
 
   '@noble/secp256k1@1.7.1':
@@ -2307,17 +2299,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scure/base@1.2.1':
-    resolution: {integrity: sha512-DGmGtC8Tt63J5GfHgfl5CuAXh96VF/LD8K9Hr/Gv0J2lAoRGlPOMpqMpMbCTOoOJMZCk2Xt+DskdDyn6dEFdzQ==}
+  '@scure/base@1.2.4':
+    resolution: {integrity: sha512-5Yy9czTO47mqz+/J8GM6GIId4umdCk1wc1q8rKERQulIoc8VP9pzDcghv10Tl2E7R96ZUx/PhND3ESYUQX8NuQ==}
 
-  '@scure/bip32@1.6.0':
-    resolution: {integrity: sha512-82q1QfklrUUdXJzjuRU7iG7D7XiFx5PHYVS0+oeNKhyDLT7WPqs6pBcM2W5ZdwOwKCwoE1Vy1se+DHjcXwCYnA==}
+  '@scure/bip32@1.6.2':
+    resolution: {integrity: sha512-t96EPDMbtGgtb7onKKqxRLfE5g05k7uHnHRM2xdE6BP/ZmxaLtPek4J4KfVn/90IQNrU1IOAqMgiDtUdtbe3nw==}
 
-  '@scure/bip39@1.5.0':
-    resolution: {integrity: sha512-Dop+ASYhnrwm9+HA/HwXg7j2ZqM6yk2fyLWb5znexjctFY3+E+eU8cIWI0Pql0Qx4hPZCijlGq4OL71g+Uz30A==}
-
-  '@scure/bip39@1.5.1':
-    resolution: {integrity: sha512-GnlufVSP9UdAo/H2Patfv22VTtpNTyfi+I3qCKpvuB5l1KWzEYx+l2TNpBy9Ksh4xTs3Rn06tBlpWCi/1Vz8gw==}
+  '@scure/bip39@1.5.4':
+    resolution: {integrity: sha512-TFM4ni0vKvCfBpohoh+/lY05i9gRbSwXWngAsF4CABQxoaOHijxuaZ2R6cStDQ5CHtHO9aGJTr4ksVJASRRyMA==}
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -2778,8 +2767,8 @@ packages:
   abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
 
-  abitype@1.0.7:
-    resolution: {integrity: sha512-ZfYYSktDQUwc2eduYu8C4wOs+RDPmnRYMh7zNfzeMtGGgb0U+6tLGjixUic6mXf5xKKCcgT5Qp6cv39tOARVFw==}
+  abitype@1.0.8:
+    resolution: {integrity: sha512-ZeiI6h3GnW06uYDLx0etQtX/p8E24UaHHBj57RSjK7YBFe7iuVn07EDpOeP451D06sF27VOz9JJPlIKJmXgkEg==}
     peerDependencies:
       typescript: '>=5.0.4'
       zod: ^3 >=3.22.0
@@ -5892,8 +5881,8 @@ packages:
     resolution: {integrity: sha512-hYgYZNcRfIZ2JppSTqh6mxdU1zkUXsGlwy4eBsRG91R6CiZk7cB+AfHl+SVKBdynQvAnNHNfu0ZrtJN1jj7Mow==}
     engines: {node: '>=6'}
 
-  ox@0.6.0:
-    resolution: {integrity: sha512-blUzTLidvUlshv0O02CnLFqBLidNzPoAZdIth894avUAotTuWziznv6IENv5idRuOSSP3dH8WzcYw84zVdu0Aw==}
+  ox@0.6.7:
+    resolution: {integrity: sha512-17Gk/eFsFRAZ80p5eKqv89a57uXjd3NgIf1CaXojATPBuujVc/fQSVhBeAU9JCRB+k7J50WQAyWTxK19T9GgbA==}
     peerDependencies:
       typescript: '>=5.4.0'
     peerDependenciesMeta:
@@ -7595,8 +7584,8 @@ packages:
   value-equal@1.0.1:
     resolution: {integrity: sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==}
 
-  viem@2.22.8:
-    resolution: {integrity: sha512-iB3PW/a/qzpYbpjo3R662u6a/zo6piZHez/N/bOC25C79FYXBCs8mQDqwiHk3FYErUhS4KVZLabKV9zGMd+EgQ==}
+  viem@2.23.1:
+    resolution: {integrity: sha512-c5AyJCTA5LeNI/KCu++vkbqbh7irYjUSHxLIAHPKJ6IEcBNMt8+7sPG7gjMXpqVWnqPMzaW9CA2n+yUsKWttDA==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
@@ -7739,9 +7728,6 @@ packages:
 
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
-
-  webauthn-p256@0.0.10:
-    resolution: {integrity: sha512-EeYD+gmIT80YkSIDb2iWq0lq2zbHo1CxHlQTeJ+KkCILWpVy3zASH3ByD4bopzfk0uCwXxLqKGLqp2W4O28VFA==}
 
   webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
@@ -8029,12 +8015,12 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-  '@ardenthq/sdk-ark@2.0.0-alpha.44':
+  '@ardenthq/sdk-ark@2.0.0-alpha.45':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.44
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.44
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.44
-      '@ardenthq/sdk-intl': 2.0.0-alpha.44
+      '@ardenthq/sdk': 2.0.0-alpha.45
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.45
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.45
+      '@ardenthq/sdk-intl': 2.0.0-alpha.45
       '@arkecosystem/ledger-transport': 2.0.0
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
@@ -8048,7 +8034,7 @@ snapshots:
       lodash.set: 4.3.2
       node-dotify: 1.1.0
 
-  '@ardenthq/sdk-cryptography@2.0.0-alpha.44':
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.45':
     dependencies:
       '@noble/hashes': 0.5.9
       '@noble/secp256k1': 1.7.1
@@ -8066,7 +8052,7 @@ snapshots:
       typeforce: 1.18.0
       uuid: 8.3.2
 
-  '@ardenthq/sdk-helpers@2.0.0-alpha.44':
+  '@ardenthq/sdk-helpers@2.0.0-alpha.45':
     dependencies:
       '@hapi/bourne': 2.1.0
       bad-words: 3.0.4
@@ -8080,24 +8066,24 @@ snapshots:
       qrcode: 1.5.4
       query-string: 7.1.3
 
-  '@ardenthq/sdk-intl@2.0.0-alpha.44':
+  '@ardenthq/sdk-intl@2.0.0-alpha.45':
     dependencies:
       dayjs: 1.11.13
       dinero.js: 1.9.1
 
-  '@ardenthq/sdk-ledger@2.0.0-alpha.44':
+  '@ardenthq/sdk-ledger@2.0.0-alpha.45':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.44
+      '@ardenthq/sdk': 2.0.0-alpha.45
       '@ledgerhq/hw-transport-webhid': 6.30.0
       '@ledgerhq/hw-transport-webusb': 6.29.4
       platform: 1.3.6
 
-  '@ardenthq/sdk-mainsail@2.0.0-alpha.44(encoding@0.1.13)(typescript@5.5.4)':
+  '@ardenthq/sdk-mainsail@2.0.0-alpha.45(encoding@0.1.13)(typescript@5.5.4)':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.44
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.44
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.44
-      '@ardenthq/sdk-intl': 2.0.0-alpha.44
+      '@ardenthq/sdk': 2.0.0-alpha.45
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.45
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.45
+      '@ardenthq/sdk-intl': 2.0.0-alpha.45
       '@arkecosystem/ledger-transport': 2.0.0
       '@mainsail/container': 0.0.1-evm.13
       '@mainsail/contracts': 0.0.1-evm.13
@@ -8127,7 +8113,7 @@ snapshots:
       lodash.get: 4.4.2
       lodash.set: 4.3.2
       node-dotify: 1.1.0
-      viem: 2.22.8(typescript@5.5.4)
+      viem: 2.23.1(typescript@5.5.4)
     transitivePeerDependencies:
       - bluebird
       - bufferutil
@@ -8137,18 +8123,18 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@ardenthq/sdk-markets@2.0.0-alpha.44':
+  '@ardenthq/sdk-markets@2.0.0-alpha.45':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.44
-      '@ardenthq/sdk-intl': 2.0.0-alpha.44
+      '@ardenthq/sdk': 2.0.0-alpha.45
+      '@ardenthq/sdk-intl': 2.0.0-alpha.45
 
-  '@ardenthq/sdk-profiles@2.0.0-alpha.44':
+  '@ardenthq/sdk-profiles@2.0.0-alpha.45':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.44
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.44
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.44
-      '@ardenthq/sdk-intl': 2.0.0-alpha.44
-      '@ardenthq/sdk-markets': 2.0.0-alpha.44
+      '@ardenthq/sdk': 2.0.0-alpha.45
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.45
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.45
+      '@ardenthq/sdk-intl': 2.0.0-alpha.45
+      '@ardenthq/sdk-markets': 2.0.0-alpha.45
       '@vechain/picasso': 2.1.1
       joi: 17.13.3
       localforage: 1.10.0
@@ -8158,10 +8144,10 @@ snapshots:
       semver: 7.6.3
       type-fest: 2.19.0
 
-  '@ardenthq/sdk@2.0.0-alpha.44':
+  '@ardenthq/sdk@2.0.0-alpha.45':
     dependencies:
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.44
-      '@ardenthq/sdk-intl': 2.0.0-alpha.44
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.45
+      '@ardenthq/sdk-intl': 2.0.0-alpha.45
       bad-words: 3.0.4
       bent: 7.3.12
       bip39: 3.1.0
@@ -9090,13 +9076,13 @@ snapshots:
 
   '@chainsafe/bls-hd-key@0.3.0':
     dependencies:
-      '@noble/hashes': 1.7.0
+      '@noble/hashes': 1.7.1
 
   '@chainsafe/bls-keygen@0.4.0':
     dependencies:
       '@chainsafe/bls-hd-key': 0.3.0
-      '@noble/hashes': 1.7.0
-      '@scure/bip39': 1.5.1
+      '@noble/hashes': 1.7.1
+      '@scure/bip39': 1.5.4
 
   '@chainsafe/bls@7.1.3(@chainsafe/blst@0.2.11(encoding@0.1.13))':
     dependencies:
@@ -10038,7 +10024,7 @@ snapshots:
       '@mainsail/contracts': 0.0.1-evm.13
       '@mainsail/kernel': 0.0.1-evm.13
       '@mainsail/utils': 0.0.1-evm.13
-      '@scure/bip39': 1.5.1
+      '@scure/bip39': 1.5.4
       bls12-381-keygen: 0.2.4
       wif: 4.0.0
     transitivePeerDependencies:
@@ -10237,9 +10223,9 @@ snapshots:
     dependencies:
       '@noble/hashes': 1.3.2
 
-  '@noble/curves@1.7.0':
+  '@noble/curves@1.8.1':
     dependencies:
-      '@noble/hashes': 1.6.0
+      '@noble/hashes': 1.7.1
 
   '@noble/hashes@0.5.9': {}
 
@@ -10247,11 +10233,7 @@ snapshots:
 
   '@noble/hashes@1.4.0': {}
 
-  '@noble/hashes@1.6.0': {}
-
-  '@noble/hashes@1.6.1': {}
-
-  '@noble/hashes@1.7.0': {}
+  '@noble/hashes@1.7.1': {}
 
   '@noble/secp256k1@1.7.1': {}
 
@@ -10459,23 +10441,18 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.28.1':
     optional: true
 
-  '@scure/base@1.2.1': {}
+  '@scure/base@1.2.4': {}
 
-  '@scure/bip32@1.6.0':
+  '@scure/bip32@1.6.2':
     dependencies:
-      '@noble/curves': 1.7.0
-      '@noble/hashes': 1.6.1
-      '@scure/base': 1.2.1
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
+      '@scure/base': 1.2.4
 
-  '@scure/bip39@1.5.0':
+  '@scure/bip39@1.5.4':
     dependencies:
-      '@noble/hashes': 1.6.1
-      '@scure/base': 1.2.1
-
-  '@scure/bip39@1.5.1':
-    dependencies:
-      '@noble/hashes': 1.7.0
-      '@scure/base': 1.2.1
+      '@noble/hashes': 1.7.1
+      '@scure/base': 1.2.4
 
   '@sideway/address@4.1.5':
     dependencies:
@@ -11005,7 +10982,7 @@ snapshots:
 
   abbrev@1.1.1: {}
 
-  abitype@1.0.7(typescript@5.5.4):
+  abitype@1.0.8(typescript@5.5.4):
     optionalDependencies:
       typescript: 5.5.4
 
@@ -11401,7 +11378,7 @@ snapshots:
 
   bip39@3.1.0:
     dependencies:
-      '@noble/hashes': 1.7.0
+      '@noble/hashes': 1.7.1
 
   bls-eth-wasm@0.4.8: {}
 
@@ -11464,7 +11441,7 @@ snapshots:
 
   bs58check@3.0.1:
     dependencies:
-      '@noble/hashes': 1.7.0
+      '@noble/hashes': 1.7.1
       bs58: 5.0.0
 
   bser@2.1.1:
@@ -14598,14 +14575,14 @@ snapshots:
 
   ow@0.8.0: {}
 
-  ox@0.6.0(typescript@5.5.4):
+  ox@0.6.7(typescript@5.5.4):
     dependencies:
       '@adraffy/ens-normalize': 1.11.0
-      '@noble/curves': 1.7.0
-      '@noble/hashes': 1.7.0
-      '@scure/bip32': 1.6.0
-      '@scure/bip39': 1.5.1
-      abitype: 1.0.7(typescript@5.5.4)
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
+      '@scure/bip32': 1.6.2
+      '@scure/bip39': 1.5.4
+      abitype: 1.0.8(typescript@5.5.4)
       eventemitter3: 5.0.1
     optionalDependencies:
       typescript: 5.5.4
@@ -16489,16 +16466,15 @@ snapshots:
 
   value-equal@1.0.1: {}
 
-  viem@2.22.8(typescript@5.5.4):
+  viem@2.23.1(typescript@5.5.4):
     dependencies:
-      '@noble/curves': 1.7.0
-      '@noble/hashes': 1.6.1
-      '@scure/bip32': 1.6.0
-      '@scure/bip39': 1.5.0
-      abitype: 1.0.7(typescript@5.5.4)
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
+      '@scure/bip32': 1.6.2
+      '@scure/bip39': 1.5.4
+      abitype: 1.0.8(typescript@5.5.4)
       isows: 1.0.6(ws@8.18.0)
-      ox: 0.6.0(typescript@5.5.4)
-      webauthn-p256: 0.0.10
+      ox: 0.6.7(typescript@5.5.4)
       ws: 8.18.0
     optionalDependencies:
       typescript: 5.5.4
@@ -16626,11 +16602,6 @@ snapshots:
   walker@1.0.8:
     dependencies:
       makeerror: 1.0.12
-
-  webauthn-p256@0.0.10:
-    dependencies:
-      '@noble/curves': 1.7.0
-      '@noble/hashes': 1.7.0
 
   webidl-conversions@3.0.1: {}
 
