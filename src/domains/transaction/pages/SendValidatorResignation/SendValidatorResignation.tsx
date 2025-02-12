@@ -1,5 +1,5 @@
 import { DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
@@ -11,7 +11,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useNetworks, useValidation } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
