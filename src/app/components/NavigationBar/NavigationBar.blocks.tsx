@@ -392,7 +392,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							</div>
 							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
 							<div className="flex items-center gap-2">
-								<HideBalance className="hidden md-lg:flex" />
+								<HideBalance className="hidden md-lg:flex" profile={profile} />
 								<UserMenu
 									userInitials={userInitials}
 									avatarImage={profile.avatar()}
