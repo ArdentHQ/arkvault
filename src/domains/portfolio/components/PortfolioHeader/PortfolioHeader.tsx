@@ -56,7 +56,7 @@ export const PortfolioHeader = ({
 	const onDeleteAddresses = async (addresses: string[]) => {
 		setSelectedAddresses(selectedAddresses.filter((existingAddress) => addresses.includes(existingAddress)));
 
-		for (const wallet of allWallets) {
+		for (const wallet of profile.wallets().values()) {
 			if (addresses.includes(wallet.address())) {
 				profile.wallets().forget(wallet.id());
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
