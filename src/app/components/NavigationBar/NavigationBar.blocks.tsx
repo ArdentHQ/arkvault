@@ -402,7 +402,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12" />
 								</>
 							)}
-							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
 
 							<div className="flex items-center gap-2">
 							<HideBalance className="hidden md-lg:flex" profile={profile} />
