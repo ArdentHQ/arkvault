@@ -1,11 +1,21 @@
 import React from "react";
 
 import { Amount } from "./Amount";
-import { render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
-import { BalanceVisibilityProvider, useBalanceVisibilityContext } from "@/app/contexts/BalanceVisibility";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useBalanceVisibility } from '@/app/hooks/use-balance-visibility';
+
+let profile: Contracts.IProfile;
 
 describe("Amount", () => {
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+        await env.profiles().restore(profile);
+		await profile.sync();
+	});
+
 	it("should format crypto or fiat depending on the ticker", () => {
 		const { rerender } = render(<Amount value={123.456} ticker="EUR" />);
 
@@ -66,20 +76,16 @@ describe("Amount", () => {
 
 	it("should respect the balance visibility context when allowHideBalance is true", async () => {
 		const TestComponent = () => {
-			const { hideBalance, setHideBalance } = useBalanceVisibilityContext();
+			const { hideBalance, setHideBalance } = useBalanceVisibility({ profile });
 			return (
 				<>
-					<Amount value={123.456} ticker="USD" allowHideBalance />
+					<Amount value={123.456} ticker="USD" allowHideBalance profile={profile} />
 					<button onClick={() => setHideBalance(!hideBalance)}>Toggle</button>
 				</>
 			);
 		};
 
-		render(
-			<BalanceVisibilityProvider>
-				<TestComponent />
-			</BalanceVisibilityProvider>,
-		);
+		render(<TestComponent  />);
 
 		// Initially visible
 		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.46$/);
