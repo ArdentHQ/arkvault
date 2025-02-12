@@ -30,7 +30,6 @@ export {
 } from "./ledger-test-helpers";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import { DTO } from "@ardenthq/sdk-profiles";
-import { BalanceVisibilityProvider } from "@/app/contexts/BalanceVisibility/BalanceVisibility";
 
 const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode; options?: Record<string, any> }) => {
 	const { profile, profileIsSyncing } = useProfileSynchronizer(options);
@@ -52,7 +51,7 @@ export const WithProviders = ({ children }: { children?: React.ReactNode }) => (
 			<LedgerProvider>
 				<ConfigurationProvider>
 					<NavigationProvider>
-						<BalanceVisibilityProvider>{children}</BalanceVisibilityProvider>
+						{children}
 					</NavigationProvider>
 				</ConfigurationProvider>
 			</LedgerProvider>
