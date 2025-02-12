@@ -39,6 +39,7 @@ export interface DropdownProperties extends JSX.IntrinsicAttributes {
 	as?: React.ElementType;
 	children?: React.ReactElement;
 	top?: React.ReactNode;
+	bottom?: React.ReactNode;
 	onSelect?: OnSelectProperties;
 	variant?: DropdownVariantType;
 	options?: DropdownOption[] | DropdownOptionGroup[];

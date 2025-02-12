@@ -25,7 +25,7 @@ describe("AddressesSidePanel", () => {
 	it("should render", () => {
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
@@ -43,7 +43,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={onClose}
@@ -63,7 +63,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[wallets.first().address(), wallets.last().address()]}
 				open={true}
 				onClose={onClose}
@@ -83,7 +83,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={onClose}
@@ -103,7 +103,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={wallets.values().map((w) => w.address())}
 				open={true}
 				onClose={onClose}
@@ -121,7 +121,7 @@ describe("AddressesSidePanel", () => {
 	it("should show delete buttons when `manage` clicked", async () => {
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
@@ -139,7 +139,7 @@ describe("AddressesSidePanel", () => {
 	it("should disable `select all` when delete mode enabled", async () => {
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
@@ -159,7 +159,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={wallets.values().map((wallet) => wallet.address())}
 				open={true}
 				onClose={onClose}
@@ -190,7 +190,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
@@ -216,7 +216,7 @@ describe("AddressesSidePanel", () => {
 	it("should filter wallets by address", async () => {
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
@@ -233,7 +233,7 @@ describe("AddressesSidePanel", () => {
 	it("should filter wallets by displayName", async () => {
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
@@ -252,7 +252,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
@@ -271,7 +271,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
@@ -292,7 +292,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
-				wallets={wallets}
+				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}

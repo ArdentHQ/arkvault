@@ -1,13 +1,11 @@
-import { BigNumber, isEqual } from "@ardenthq/sdk-helpers";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useEffect } from "react";
-
-interface PortfolioConfiguration {
-	selectedAddresses: string[];
-}
+import { useEnvironmentContext } from "@/app/contexts";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import { Networks } from "@ardenthq/sdk";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 	return {
@@ -30,7 +28,7 @@ function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 	};
 }
 
-export function SelectedAddresses({ profile, env }: { profile: IProfile; env: Environment }) {
+export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfile; activeNetwork: Networks.Network }) {
 	return {
 		/**
 		 * Returns all the selected profile selected addresses.
@@ -38,20 +36,29 @@ export function SelectedAddresses({ profile, env }: { profile: IProfile; env: En
 		 * @returns {string[]}
 		 */
 		all(): string[] {
+			const nethash = activeNetwork.meta().nethash;
+
 			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
 				selectedAddresses: [],
-			}) as PortfolioConfiguration;
+				selectedAddressesByActiveNetwork: { [nethash]: [] },
+			}) as unknown as DashboardConfiguration;
 
-			const selectedAddresses = config.selectedAddresses ?? [];
+			if (!config.selectedAddressesByNetwork || !config.selectedAddressesByNetwork[nethash]) {
+				return [];
+			}
+
+			const selectedAddresses = config.selectedAddressesByNetwork[nethash];
+
 			const profileAddresses = new Set(
 				profile
 					.wallets()
-					.values()
+					.findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
 					.map((wallet) => wallet.address()),
 			);
 
 			return selectedAddresses.filter((address) => profileAddresses.has(address));
 		},
+
 		/**
 		 * Find the default selected wallet.
 		 * Returns the first available wallet if profile hasn't stored any selection yet.
@@ -84,9 +91,22 @@ export function SelectedAddresses({ profile, env }: { profile: IProfile; env: En
 		 * @param {string[]} selectedAddresses
 		 * @returns {Promise<void>}
 		 */
-		async set(selectedAddresses: string[]): Promise<void> {
-			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, { selectedAddresses });
-			await env.persist();
+		set(selectedAddresses: string[], network?: Networks.Network): void {
+			const defaultConfig = { selectedAddressesByNetwork: { [activeNetwork.meta().nethash]: [] } };
+			const actingNetwork = network ?? activeNetwork;
+			const nethash = actingNetwork.meta().nethash;
+
+			const config = profile
+				.settings()
+				.get(Contracts.ProfileSetting.DashboardConfiguration, defaultConfig) as DashboardConfiguration;
+
+			if (!config.selectedAddressesByNetwork) {
+				config.selectedAddressesByNetwork = { [nethash]: [] };
+			}
+
+			config.selectedAddressesByNetwork[nethash] = selectedAddresses;
+
+			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, config);
 		},
 		/**
 		 * Returns the selected addresses as wallets.
@@ -96,49 +116,35 @@ export function SelectedAddresses({ profile, env }: { profile: IProfile; env: En
 		toWallets(): IReadWriteWallet[] {
 			const selected = this.all();
 
-			const wallets = profile
+			return profile
 				.wallets()
-				.values()
+				.findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
 				.filter((wallet) => selected.includes(wallet.address()));
-
-			if (wallets.length === 0) {
-				// TODO: Define default active wallet none are selected.
-				return [profile.wallets().first()];
-			}
-
-			return wallets;
 		},
 	};
 }
 
 export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { env } = useEnvironmentContext();
-	const { selectedAddresses, setConfiguration } = useConfiguration();
-
-	const addresses = SelectedAddresses({ env, profile });
+	const { persist } = useEnvironmentContext();
+	const { activeNetwork } = useActiveNetwork({ profile });
+	const addresses = SelectedAddresses({ activeNetwork, profile });
 	const wallets = addresses.toWallets();
 	const balance = Balance({ wallets });
-	const allAddresses = addresses.all();
-
-	useEffect(() => {
-		if (selectedAddresses.length === 0 && !isEqual(selectedAddresses, allAddresses)) {
-			setConfiguration({ selectedAddresses: allAddresses });
-		}
-	}, [selectedAddresses, allAddresses]);
 
 	return {
+		allWallets: profile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id()),
 		balance,
-		selectedAddresses,
+		selectedAddresses: addresses.all(),
 		selectedWallet: addresses.defaultSelectedWallet(),
 		selectedWallets: wallets,
-		setSelectedAddresses: async (selectedAddresses: string[]) => {
-			await addresses.set(selectedAddresses);
+		setSelectedAddresses: async (selectedAddresses: string[], network?: Networks.Network) => {
+			addresses.set(selectedAddresses, network);
 
 			if (!addresses.hasSelected() && profile.wallets().first()) {
-				await addresses.set([profile.wallets().first().address()]);
+				addresses.set([profile.wallets().first().address()], network);
 			}
 
-			setConfiguration({ selectedAddresses: addresses.all() });
+			await persist();
 		},
 	};
 };

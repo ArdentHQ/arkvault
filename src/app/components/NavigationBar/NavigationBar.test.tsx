@@ -62,6 +62,7 @@ describe("NavigationBar", () => {
 	let profile: Contracts.IProfile;
 
 	beforeAll(async () => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = mockedTestEnvironment.profiles().findById(getDefaultProfileId());
 
 		history.push(dashboardURL);

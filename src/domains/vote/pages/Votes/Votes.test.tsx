@@ -695,6 +695,7 @@ describe("Votes", () => {
 	});
 
 	it("should hide testnet wallets if disabled from profile setting", async () => {
+		vi.restoreAllMocks();
 		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
 		const mainnetWallet = await profile.walletFactory().fromAddress({
@@ -702,6 +703,15 @@ describe("Votes", () => {
 			coin: "ARK",
 			network: "ark.mainnet",
 		});
+
+		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
+
+		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
+			...config,
+			activeNetworkId: mainnetWallet.networkId(),
+		});
+
+		vi.spyOn(profile, "availableNetworks").mockReturnValue([mainnetWallet.network()]);
 
 		profile.wallets().push(mainnetWallet);
 

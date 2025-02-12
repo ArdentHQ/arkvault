@@ -75,15 +75,6 @@ describe("ImportWallet Methods", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
-
 		expect(methodStep()).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
@@ -120,13 +111,6 @@ describe("ImportWallet Methods", () => {
 				route: route,
 			},
 		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -167,13 +151,6 @@ describe("ImportWallet Methods", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
@@ -206,13 +183,6 @@ describe("ImportWallet Methods", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
@@ -242,13 +212,6 @@ describe("ImportWallet Methods", () => {
 		);
 
 		const countBefore = profile.wallets().count();
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -286,13 +249,6 @@ describe("ImportWallet Methods", () => {
 				route: route,
 			},
 		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -359,13 +315,6 @@ describe("ImportWallet Methods", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
@@ -425,13 +374,6 @@ describe("ImportWallet Methods", () => {
 				route: route,
 			},
 		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

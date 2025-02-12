@@ -96,12 +96,12 @@ export const buildNetwork = (
 	};
 };
 
-export const isCustomNetwork = (network: Networks.NetworkManifest | Networks.Network): boolean => {
-	if (typeof network.id === "function") {
+export const isCustomNetwork = (network?: Networks.NetworkManifest | Networks.Network): boolean => {
+	if (typeof network?.id === "function") {
 		return network.id().endsWith(".custom");
 	}
 
-	return network.id.endsWith(".custom");
+	return !!network?.id.endsWith(".custom");
 };
 
 export const isValidKnownWalletUrlResponse = (response: PromiseSettledResult<any>): boolean => {
@@ -147,7 +147,9 @@ export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
 	});
 
 export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
-	profileAllEnabledNetworks(profile).map((network) => network.id());
+	profileAllEnabledNetworks(profile)
+		.filter((network) => !!network)
+		.map((network) => network.id());
 
 export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	uniq(
@@ -166,16 +168,16 @@ export const networksAsOptions = (networks?: Networks.Network[]) => {
 	}
 
 	return networks.map((network) => {
-		let label = network?.coinName();
+		let label = network.coinName();
 
-		if (network?.isTest() && !isCustomNetwork(network)) {
+		if (network.isTest() && !isCustomNetwork(network)) {
 			label = `${label} ${network.name()}`;
 		}
 
 		return {
-			isTestNetwork: network?.isTest(),
+			isTestNetwork: network.isTest(),
 			label,
-			value: network?.id(),
+			value: network.id(),
 		};
 	});
 };

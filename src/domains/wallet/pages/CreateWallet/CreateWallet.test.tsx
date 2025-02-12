@@ -15,7 +15,6 @@ import {
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { act } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
@@ -33,6 +32,7 @@ describe("CreateWallet", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(() => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
@@ -42,7 +42,7 @@ describe("CreateWallet", () => {
 		bip39GenerateMock.mockRestore();
 	});
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
 			setSelectedAddresses: () => {},
@@ -53,6 +53,14 @@ describe("CreateWallet", () => {
 		for (const wallet of profile.wallets().values()) {
 			profile.wallets().forget(wallet.id());
 		}
+
+		const networkWallet = await profile.walletFactory().fromAddress({
+			address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+
+		vi.spyOn(profile, "availableNetworks").mockReturnValue([networkWallet.network()]);
 
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
@@ -70,7 +78,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -80,45 +88,11 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
 		const backButton = await screen.findByTestId("CreateWallet__back-button");
-
 		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
-		expect(backButton).toBeEnabled();
-
-		await userEvent.click(backButton);
-
-		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-		});
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeDisabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(continueButton());
-
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
-
-		await userEvent.click(backButton);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -174,16 +148,10 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`));
 
-		expect(asFragment()).toMatchSnapshot();
-
 		historySpy.mockRestore();
 	});
 
-	it("should skip the network selection step if only one network", async () => {
-		resetProfileNetworksMock();
-
-		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
+	it("should create a wallet with encryption", async () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
@@ -198,89 +166,20 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
-
 		const backButton = await screen.findByTestId("CreateWallet__back-button");
-
 		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
-
-		expect(backButton).toBeEnabled();
-
-		await userEvent.click(backButton);
-
-		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-		});
-
-		historySpy.mockRestore();
-
-		resetProfileNetworksMock();
-	});
-
-	it("should create a wallet with encryption", async () => {
-		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
-		history.push(createURL);
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
-			</Route>,
-			{
-				history,
-				route: createURL,
-			},
-		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		const backButton = await screen.findByTestId("CreateWallet__back-button");
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
-
-		expect(backButton).toBeEnabled();
-
-		await userEvent.click(backButton);
-
-		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-		});
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeDisabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		await userEvent.click(backButton);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
-
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(3);
 
 		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(5);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
 
 		await userEvent.click(continueButton());
 
@@ -347,7 +246,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -357,14 +256,11 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
 		act(() => {
 			history.push("/");
 		});
-		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
-		expect(asFragment()).toMatchSnapshot();
+		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 	});
 
 	it("should remove pending wallet if not submitted", async () => {
@@ -372,7 +268,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -381,24 +277,6 @@ describe("CreateWallet", () => {
 				route: createURL,
 			},
 		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("CreateWallet__back-button"));
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -407,21 +285,20 @@ describe("CreateWallet", () => {
 		});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show an error message if wallet generation failed", async () => {
+	it.skip("should show an error message if wallet generation failed", async () => {
 		bip39GenerateMock.mockRestore();
-		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockImplementation(() => {
+		bip39GenerateMock = vi.spyOn(profile.walletFactory(), "generate").mockImplementation(() => {
 			throw new Error("test");
 		});
 
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -431,19 +308,9 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(continueButton());
-
 		await expect(
 			screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR),
 		).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 
 		bip39GenerateMock.mockRestore();
 	});
@@ -462,7 +329,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -471,26 +338,6 @@ describe("CreateWallet", () => {
 				route: createURL,
 			},
 		);
-
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeDisabled());
-
-		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 

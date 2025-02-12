@@ -6,7 +6,6 @@ import { Checkbox } from "@/app/components/Checkbox";
 import { t } from "i18next";
 import { Button } from "@/app/components/Button";
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { IWalletRepository } from "@ardenthq/sdk-profiles/distribution/esm/wallet.repository.contract";
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -22,7 +21,7 @@ export const AddressesSidePanel = ({
 	onClose,
 	onDelete,
 }: {
-	wallets: IWalletRepository;
+	wallets: Contracts.IReadWriteWallet[];
 	defaultSelectedAddresses: string[];
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
@@ -91,7 +90,6 @@ export const AddressesSidePanel = ({
 	};
 
 	const addressesToShow = wallets
-		.values()
 		.filter((wallet) => !addressesToDelete.includes(wallet.address()))
 		.filter((wallet) => {
 			if (!searchQuery) {

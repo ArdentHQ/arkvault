@@ -28,7 +28,7 @@ export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) =
 			return true;
 		}
 
-		if (selectedNetworkIds.length < defaultConfiguration.selectedNetworkIds.length) {
+		if (selectedNetworkIds.length < defaultConfiguration.selectedNetworkIds?.length) {
 			return true;
 		}
 
