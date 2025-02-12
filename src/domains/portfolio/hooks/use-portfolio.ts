@@ -98,7 +98,7 @@ export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfil
 
 			const config = profile
 				.settings()
-				.get(Contracts.ProfileSetting.DashboardConfiguration, defaultConfig) as DashboardConfiguration;
+				.get(Contracts.ProfileSetting.DashboardConfiguration, defaultConfig) as unknown as DashboardConfiguration;
 
 			if (!config.selectedAddressesByNetwork) {
 				config.selectedAddressesByNetwork = { [nethash]: [] };
