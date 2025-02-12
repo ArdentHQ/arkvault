@@ -100,7 +100,6 @@ describe("AmountLabel", () => {
 
 		render(<TestComponent />);
 
-		// Initially visible
 		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("$123.46");
 
 		await userEvent.click(screen.getByRole("button"));
