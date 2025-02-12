@@ -404,22 +404,22 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							)}
 
 							<div className="flex items-center gap-2">
-							<HideBalance className="hidden md-lg:flex" profile={profile} />
-							<UserMenu
-								userInitials={userInitials}
-								avatarImage={profile.avatar()}
-								onUserAction={(action: DropdownOption) => {
-									if (action.value === "contact") {
-										return showSupportChat(profile);
-									}
+								<HideBalance className="hidden md-lg:flex" profile={profile} />
+								<UserMenu
+									userInitials={userInitials}
+									avatarImage={profile.avatar()}
+									onUserAction={(action: DropdownOption) => {
+										if (action.value === "contact") {
+											return showSupportChat(profile);
+										}
 
-									if (action.isExternal) {
-										return openExternal(action.mountPath());
-									}
+										if (action.isExternal) {
+											return openExternal(action.mountPath());
+										}
 
-									return history.push(action.mountPath(profile.id()));
-								}}
-							/>
+										return history.push(action.mountPath(profile.id()));
+									}}
+								/>
 							</div>
 						</div>
 					</div>
