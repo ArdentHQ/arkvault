@@ -15,7 +15,6 @@ import {
 	useActiveProfile,
 	useActiveWalletWhenNeeded,
 	useLedgerModelStatus,
-	useNetworks,
 	useValidation,
 } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
