@@ -239,6 +239,7 @@ export const useProfileRestore = () => {
 			selectedAddresses: [],
 			selectedNetworkIds: [],
 			walletsDisplayType: "all",
+			hideBalance: false,
 		};
 
 		const config = profile

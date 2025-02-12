@@ -20,6 +20,7 @@ export const useWalletConfig = ({
 	const defaultConfiguration: DashboardConfiguration = {
 		selectedNetworkIds: profileEnabledNetworkIds(profile),
 		walletsDisplayType: "all",
+		hideBalance: false,
 		...defaults,
 	};
 
