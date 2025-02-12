@@ -40,7 +40,7 @@ export const ReviewStep = ({
 				}
 			/>
 
-			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
+			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-28"
 					senderAddress={senderWallet.address()}
@@ -61,7 +61,10 @@ export const ReviewStep = ({
 						</div>
 
 						<div className="hidden sm:block">
-							<Divider dashed />
+							<Divider
+								dashed
+								className="h-px border-theme-secondary-300 dark:border-theme-secondary-800"
+							/>
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">

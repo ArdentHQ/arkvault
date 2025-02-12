@@ -9,31 +9,31 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
-import { useFormContext } from "react-hook-form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { useNetworks } from "@/app/hooks";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
+	onWalletChange: (wallet: ProfilesContracts.IReadWriteWallet) => void;
 }
 
-export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
+export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProperties) => {
 	const { t } = useTranslation();
 
-	const { setValue } = useFormContext();
-
-	const [network] = useNetworks({ profile });
+	const {activeNetwork: network} = useActiveNetwork({profile});
 
 	const handleSelectSender = (address: any) => {
-		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
-
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 		const isFullyRestoredAndSynced =
 			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
 		if (!isFullyRestoredAndSynced) {
 			newSenderWallet?.synchroniser().identity();
+		}
+
+		if (newSenderWallet) {
+			onWalletChange(newSenderWallet);
 		}
 	};
 
@@ -80,7 +80,10 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 						</div>
 
 						<div className="hidden sm:block">
-							<Divider dashed />
+							<Divider
+								dashed
+								className="h-px border-theme-secondary-300 dark:border-theme-secondary-800"
+							/>
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
