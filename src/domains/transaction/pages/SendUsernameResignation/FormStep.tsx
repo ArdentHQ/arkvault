@@ -14,13 +14,13 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
-	onChangeWallet: (wallet: ProfilesContracts.IReadWriteWallet) => void;
+	onWalletChange: (wallet: ProfilesContracts.IReadWriteWallet) => void;
 }
 
-export const FormStep = ({ senderWallet, profile, onChangeWallet }: FormStepProperties) => {
+export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProperties) => {
 	const { t } = useTranslation();
 
-	const {activeNetwork: network} = useActiveNetwork({profile});
+	const { activeNetwork: network } = useActiveNetwork({ profile });
 
 	const handleSelectSender = (address: any) => {
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
@@ -32,7 +32,7 @@ export const FormStep = ({ senderWallet, profile, onChangeWallet }: FormStepProp
 		}
 
 		if (newSenderWallet) {
-			onChangeWallet(newSenderWallet);
+			onWalletChange(newSenderWallet);
 		}
 	};
 

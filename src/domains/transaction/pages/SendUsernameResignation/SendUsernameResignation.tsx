@@ -51,7 +51,7 @@ export const SendUsernameResignation = () => {
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
-	const {activeNetwork: network} = useActiveNetwork({profile: activeProfile});
+	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
 	const [activeWallet, setActiveWallet] = useState(() => {
 		if (senderAddress) {
@@ -162,7 +162,7 @@ export const SendUsernameResignation = () => {
 								<FormStep
 									senderWallet={activeWallet}
 									profile={activeProfile}
-									onChangeWallet={setActiveWallet}
+									onWalletChange={setActiveWallet}
 								/>
 							</TabPanel>
 
