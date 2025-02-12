@@ -5,18 +5,20 @@ import { Avatar } from "@/app/components/Avatar";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem, UserMenuProperties } from "@/app/components/NavigationBar";
 import { getUserMenuActions } from "@/app/constants/navigation";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
 import { useProfileBalance } from "@/app/hooks/use-profile-balance";
 import { Amount } from "@/app/components/Amount";
 import { assertString } from "@/utils/assertions";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
+import { SelectNetworkMobile } from "@/app/components/NavigationBar/components/SelectNetwork";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();
 
 	const userMenuActions = useMemo<(DropdownOption & NavigationBarMenuItem)[]>(() => getUserMenuActions(t), [t]);
+	const { isXs } = useBreakpoint();
 
 	const profile = useActiveProfile();
 
@@ -25,6 +27,8 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 	const ticker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) || "USD";
 
 	assertString(ticker);
+
+	const showNetworkToggle = [isXs, !!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks)].every(Boolean);
 
 	const renderAvatarSection = useCallback(
 		(isOpen: boolean) => (
@@ -60,6 +64,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	return (
 		<Dropdown
+			wrapperClass="rounded-none"
 			placement="bottom-end"
 			onSelect={onUserAction}
 			options={userMenuActions}
@@ -73,6 +78,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 					</div>
 				</div>
 			}
+			bottom={showNetworkToggle ? <SelectNetworkMobile profile={profile} /> : undefined}
 		/>
 	);
 };

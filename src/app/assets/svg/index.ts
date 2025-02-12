@@ -59,6 +59,8 @@ import List from "./list.svg?react";
 import LoaderLogo from "./loader-logo.svg?react";
 import Lock from "./lock.svg?react";
 import MagnifyingGlass from "./magnifying-glass.svg?react";
+import Mainnet from "./mainnet.svg?react";
+import Testnet from "./testnet.svg?react";
 import MagnifyingGlassAlt from "./magnifying-glass-alt.svg?react";
 import MagnifyingGlassId from "./magnifying-glass-id.svg?react";
 import Menu from "./menu.svg?react";
@@ -178,6 +180,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MagnifyingGlass,
 	MagnifyingGlassAlt,
 	MagnifyingGlassId,
+	Mainnet,
 	Menu,
 	MenuOpen,
 	MoneyCoinSwap,
@@ -202,6 +205,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	StatusError,
 	StatusOk,
 	StatusStandby,
+	Testnet,
 	Trash,
 	UnderlineMoon,
 	UnderlineSun,

@@ -39,7 +39,7 @@ export const PortfolioHeader = ({
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets } = usePortfolio({ profile });
+	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets, allWallets } = usePortfolio({ profile });
 
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
@@ -56,7 +56,7 @@ export const PortfolioHeader = ({
 	const onDeleteAddresses = async (addresses: string[]) => {
 		setSelectedAddresses(selectedAddresses.filter((existingAddress) => addresses.includes(existingAddress)));
 
-		for (const wallet of profile.wallets().values()) {
+		for (const wallet of allWallets) {
 			if (addresses.includes(wallet.address())) {
 				profile.wallets().forget(wallet.id());
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
@@ -311,7 +311,7 @@ export const PortfolioHeader = ({
 			</div>
 
 			<AddressesSidePanel
-				wallets={profile.wallets()}
+				wallets={allWallets}
 				defaultSelectedAddresses={selectedAddresses}
 				onClose={(addresses) => {
 					setSelectedAddresses(addresses);

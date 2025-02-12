@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
+import { useLocaleCurrency, useTheme } from "@/app/hooks";
 
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ThemeIcon } from "@/app/components/Icon";
@@ -15,7 +15,6 @@ import { ProfilePaths } from "@/router/paths";
 
 export const CreateProfile = () => {
 	const { env, persist } = useEnvironmentContext();
-	const { restoreProfileConfig } = useProfileRestore();
 	const { t } = useTranslation();
 	const history = useHistory();
 
@@ -39,7 +38,6 @@ export const CreateProfile = () => {
 			profile.auth().setPassword(password);
 		}
 
-		restoreProfileConfig(profile);
 		await persist();
 
 		setProfileTheme(profile);

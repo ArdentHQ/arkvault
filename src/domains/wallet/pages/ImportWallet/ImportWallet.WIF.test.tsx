@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 import { MethodStep } from "./MethodStep";
 import { EnvironmentProvider } from "@/app/contexts";
 import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
-import { assertNetwork } from "@/utils/assertions";
 import {
 	env,
 	getDefaultProfileId,
@@ -31,6 +30,7 @@ const methodStep = () => screen.getByTestId("ImportWallet__method-step");
 const wifInput = () => screen.getByTestId("ImportWallet__wif-input");
 
 const testNetwork = "ark.devnet";
+let network;
 
 describe("ImportWallet WIF", () => {
 	let resetProfileNetworksMock: () => void;
@@ -44,6 +44,7 @@ describe("ImportWallet WIF", () => {
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
+		network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 
 		await env.profiles().restore(profile);
 
@@ -61,9 +62,6 @@ describe("ImportWallet WIF", () => {
 	});
 
 	const Component = () => {
-		const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
-		assertNetwork(network);
-
 		network.importMethods = () => ({
 			wif: {
 				canBeEncrypted: true,
@@ -85,7 +83,7 @@ describe("ImportWallet WIF", () => {
 		return (
 			<EnvironmentProvider env={env}>
 				<FormProvider {...form}>
-					<MethodStep profile={profile} />
+					<MethodStep profile={profile} network={network} />
 				</FormProvider>
 			</EnvironmentProvider>
 		);

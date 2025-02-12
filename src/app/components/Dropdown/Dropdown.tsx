@@ -33,6 +33,7 @@ export const Wrapper = ({ variant, ...props }: { variant: DropdownVariantType } 
 export const Dropdown: FC<DropdownProperties> = ({
 	children,
 	top,
+	bottom,
 	wrapperClass,
 	variant,
 	options,
@@ -132,6 +133,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
 							{clonedElement && <div>{clonedElement}</div>}
+							{bottom}
 						</Wrapper>
 					</div>
 				</FloatingPortal>

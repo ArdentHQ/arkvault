@@ -28,6 +28,7 @@ import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
+import { SelectNetwork } from "./components/SelectNetwork";
 
 const NavWrapper = ({
 	variant = "default",
@@ -390,24 +391,36 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									</div>
 								</Tooltip>
 							</div>
+
 							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
+
+							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && (
+								<>
+									<div className="hidden sm:block">
+										<SelectNetwork profile={profile} />
+									</div>
+									<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12" />
+								</>
+							)}
+							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
+
 							<div className="flex items-center gap-2">
-								<HideBalance className="hidden md-lg:flex" profile={profile} />
-								<UserMenu
-									userInitials={userInitials}
-									avatarImage={profile.avatar()}
-									onUserAction={(action: DropdownOption) => {
-										if (action.value === "contact") {
-											return showSupportChat(profile);
-										}
+							<HideBalance className="hidden md-lg:flex" profile={profile} />
+							<UserMenu
+								userInitials={userInitials}
+								avatarImage={profile.avatar()}
+								onUserAction={(action: DropdownOption) => {
+									if (action.value === "contact") {
+										return showSupportChat(profile);
+									}
 
-										if (action.isExternal) {
-											return openExternal(action.mountPath());
-										}
+									if (action.isExternal) {
+										return openExternal(action.mountPath());
+									}
 
-										return history.push(action.mountPath(profile.id()));
-									}}
-								/>
+									return history.push(action.mountPath(profile.id()));
+								}}
+							/>
 							</div>
 						</div>
 					</div>

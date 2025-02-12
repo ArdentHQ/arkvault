@@ -7,6 +7,7 @@ import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets/h
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
 import { sortWallets } from "@/utils/wallet-utils";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const useVoteFilters = ({
 	profile,
@@ -27,9 +28,10 @@ export const useVoteFilters = ({
 		() => (hasWalletId ? wallet.network().maximumVotesPerWallet() : undefined),
 		[hasWalletId, wallet],
 	);
+	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const [walletsDisplayType, setWalletsDisplayType] = useState(defaultConfiguration.walletsDisplayType);
-	const [selectedNetworkIds, setSelectedNetworkIds] = useState(defaultConfiguration.selectedNetworkIds);
+	const [selectedNetworkIds, setSelectedNetworkIds] = useState([activeNetwork.id()]);
 	const [voteFilter, setVoteFilter] = useState<FilterOption>(filter);
 	const [selectedAddress, setSelectedAddress] = useState(walletAddress);
 	const [selectedNetwork, setSelectedNetwork] = useState(walletNetwork);
@@ -54,7 +56,7 @@ export const useVoteFilters = ({
 			return true;
 		}
 
-		return selectedNetworkIds.length < defaultConfiguration.selectedNetworkIds.length;
+		return false;
 	}, [walletsDisplayType, selectedNetworkIds, defaultConfiguration]);
 
 	const filterProperties = {
@@ -124,7 +126,7 @@ export const useVoteFilters = ({
 					profile,
 				});
 
-				return wallet.address().toLowerCase().includes(query) || alias?.toLowerCase()?.includes(query);
+				return wallet.address().toLowerCase().includes(query) || alias?.toLowerCase().includes(query);
 			});
 		}
 
