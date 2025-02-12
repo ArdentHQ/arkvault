@@ -26,9 +26,7 @@ describe("useBalanceVisibility", () => {
 	it("should hide balance on click", async () => {
 		render(<TestComponent />);
 
-		expect(profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration)).toStrictEqual({
-			hideBalance: false,
-		});
+		expect(profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration)).toStrictEqual(undefined);
 
 		const button = screen.getByTestId("HideBalance-button");
 		await userEvent.click(button);
