@@ -68,7 +68,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 				<div className="flex items-center justify-between bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-950 dark:text-theme-dark-200 md-lg:hidden">
 					<p>{t("COMMON.BALANCE")}:</p>
 					<div className="flex items-center gap-2">
-						<HideBalance className="md-lg:hidden" />
+						<HideBalance className="md-lg:hidden" profile={profile} />
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance />
 					</div>
 				</div>
