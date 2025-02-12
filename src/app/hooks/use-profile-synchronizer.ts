@@ -236,10 +236,10 @@ export const useProfileRestore = () => {
 
 	const restoreProfileConfig = (profile: Contracts.IProfile) => {
 		const defaultConfiguration: DashboardConfiguration = {
+			hideBalance: false,
 			selectedAddresses: [],
 			selectedNetworkIds: [],
 			walletsDisplayType: "all",
-			hideBalance: false,
 		};
 
 		const config = profile
