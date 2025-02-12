@@ -34,6 +34,7 @@ import {
 	signUsernameRegistration,
 	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -71,7 +72,7 @@ export const SendRegistration = () => {
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
-	const [network] = useNetworks({ profile: activeProfile });
+	const {activeNetwork: network} = useActiveNetwork({profile: activeProfile});
 
 	const activeWallet = useMemo(() => {
 		if (senderAddress) {

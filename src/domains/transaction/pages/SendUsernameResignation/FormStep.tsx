@@ -9,7 +9,7 @@ import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { useNetworks } from "@/app/hooks";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
@@ -20,7 +20,7 @@ interface FormStepProperties {
 export const FormStep = ({ senderWallet, profile, onChangeWallet }: FormStepProperties) => {
 	const { t } = useTranslation();
 
-	const [network] = useNetworks({ profile });
+	const {activeNetwork: network} = useActiveNetwork({profile});
 
 	const handleSelectSender = (address: any) => {
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
