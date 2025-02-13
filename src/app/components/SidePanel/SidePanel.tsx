@@ -18,10 +18,11 @@ interface SidePanelProps {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	header?: React.ReactNode | string;
+	footer?: React.ReactNode;
 	dataTestId?: string;
 }
 
-export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: SidePanelProps): JSX.Element => {
+export const SidePanel = ({ children, open, onOpenChange, header, dataTestId, footer }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
 		open,
@@ -92,6 +93,9 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 										</div>
 									</div>
 									<div>{children}</div>
+									{footer && <div className="sticky bottom-0 bg-theme-background">
+										{footer}
+									</div>}
 								</div>
 							</div>
 						</FloatingFocusManager>
