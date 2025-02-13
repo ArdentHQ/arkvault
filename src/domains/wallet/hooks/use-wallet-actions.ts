@@ -149,6 +149,21 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 				history.push(url);
 			}
 
+			if (option.value === "delegate-resignation") {
+				let url = generatePath(ProfilePaths.SendValidatorResignation, {
+					profileId: profile.id(),
+					walletId: wallet.id(),
+				});
+
+				if (hasMultipleWallets) {
+					url = generatePath(ProfilePaths.SendValidatorResignationProfile, {
+						profileId: profile.id(),
+					});
+				}
+
+				history.push(url);
+			}
+
 			if (option.value === "username-registration") {
 				let url = generatePath(ProfilePaths.SendUsernameRegistration, {
 					profileId: profile.id(),
@@ -165,14 +180,14 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 				history.push(url);
 			}
 
-			if (option.value === "delegate-resignation") {
-				let url = generatePath(ProfilePaths.SendValidatorResignation, {
+			if (option.value === "username-resignation") {
+				let url = generatePath(ProfilePaths.SendUsernameResignation, {
 					profileId: profile.id(),
 					walletId: wallet.id(),
 				});
 
 				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendValidatorResignationProfile, {
+					url = generatePath(ProfilePaths.SendUsernameResignationProfile, {
 						profileId: profile.id(),
 					});
 				}
