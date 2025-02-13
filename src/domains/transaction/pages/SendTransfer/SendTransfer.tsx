@@ -35,6 +35,7 @@ import {
 	TransferOverwriteModal,
 } from "@/domains/transaction/pages/SendTransfer/TransferOverwriteModal";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 const MAX_TABS = 5;
 
@@ -47,6 +48,8 @@ export const SendTransfer = () => {
 	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
 	const activeProfile = useActiveProfile();
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+
 	const networks = useNetworks({
 		filter: (network) => profileEnabledNetworkIds(activeProfile).includes(network.id()),
 		profile: activeProfile,
@@ -65,8 +68,7 @@ export const SendTransfer = () => {
 
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const showNetworkStep = !hasDeepLinkParameters && !wallet && networks.length > 1;
-	const firstTabIndex = showNetworkStep ? SendTransferStep.NetworkStep : SendTransferStep.FormStep;
+	const firstTabIndex = SendTransferStep.FormStep;
 	const [activeTab, setActiveTab] = useState<SendTransferStep>(firstTabIndex);
 
 	const [unconfirmedTransactions, setUnconfirmedTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
@@ -126,14 +128,6 @@ export const SendTransfer = () => {
 			window.clearTimeout(resetValues);
 		};
 	}, [firstTabIndex, history, resetForm, shouldResetForm]);
-
-	useEffect(() => {
-		if (!showNetworkStep) {
-			return;
-		}
-
-		resetForm();
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const [showOverwriteModal, setShowOverwriteModal] = useState(false);
 	const [overwriteData, setOverwriteData] = useState<TransferFormData>({} as TransferFormData);
@@ -302,8 +296,8 @@ export const SendTransfer = () => {
 
 	const renderTabs = () => (
 		<StepsProvider
-			steps={showNetworkStep ? MAX_TABS : MAX_TABS - 1}
-			activeStep={showNetworkStep ? activeTab + 1 : activeTab}
+			steps={MAX_TABS - 1}
+			activeStep={activeTab}
 		>
 			<TabPanel tabId={SendTransferStep.NetworkStep}>
 				<NetworkStep profile={activeProfile} networks={networks} />
@@ -311,6 +305,7 @@ export const SendTransfer = () => {
 
 			<TabPanel tabId={SendTransferStep.FormStep}>
 				<FormStep
+					network={activeNetwork}
 					senderWallet={wallet}
 					profile={activeProfile}
 					deeplinkProps={deepLinkParameters}
