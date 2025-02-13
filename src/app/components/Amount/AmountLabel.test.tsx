@@ -2,9 +2,20 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { AmountLabel } from "./AmountLabel";
-import { render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
+
+let profile: Contracts.IProfile;
 
 describe("AmountLabel", () => {
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+	});
+
 	it("should render", () => {
 		const { asFragment } = render(<AmountLabel isNegative={false} value={10} ticker="ARK" />);
 
@@ -68,5 +79,30 @@ describe("AmountLabel", () => {
 		);
 
 		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveClass("custom-className");
+	});
+
+	it("should not hide balance by default", () => {
+		render(<AmountLabel value={123.456} ticker="USD" />);
+
+		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("$123.46");
+	});
+
+	it("should hide balance if allowHideBalance is true and hideBalance is true", async () => {
+		const TestComponent = () => {
+			const { hideBalance, setHideBalance } = useBalanceVisibility({ profile });
+			return (
+				<>
+					<AmountLabel value={123.456} ticker="USD" allowHideBalance profile={profile} />
+					<button onClick={() => setHideBalance(!hideBalance)}>Toggle</button>
+				</>
+			);
+		};
+
+		render(<TestComponent />);
+
+		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("$123.46");
+
+		await userEvent.click(screen.getByRole("button"));
+		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveTextContent("****");
 	});
 });

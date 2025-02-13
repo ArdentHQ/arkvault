@@ -17,6 +17,7 @@ export const useWalletConfig = ({
 	const availableNetworks = useNetworks({ profile });
 
 	const defaultConfiguration = {
+		hideBalance: false,
 		walletsDisplayType: "all",
 		...defaults,
 	};

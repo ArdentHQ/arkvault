@@ -147,6 +147,8 @@ export const PortfolioHeader = ({
 											value={balance.total().toNumber()}
 											ticker={wallet.currency()}
 											className="text-sm font-semibold leading-[17px] text-theme-primary-900 dark:text-theme-dark-50 md:text-base md:leading-5"
+											allowHideBalance
+											profile={profile}
 										/>
 									</div>
 								</div>
@@ -206,6 +208,8 @@ export const PortfolioHeader = ({
 										value={convert(wallet.balance())}
 										ticker={wallet.exchangeCurrency()}
 										className="md-lg:hidden"
+										allowHideBalance
+										profile={profile}
 									/>
 								</div>
 
@@ -215,6 +219,8 @@ export const PortfolioHeader = ({
 											value={wallet.balance()}
 											ticker={wallet.currency()}
 											className="dark:text-theme-dark-50"
+											allowHideBalance
+											profile={profile}
 										/>
 									)}
 									{!isRestored && (
@@ -231,6 +237,8 @@ export const PortfolioHeader = ({
 											value={balance.totalConverted().toNumber()}
 											ticker={wallet.exchangeCurrency()}
 											className="hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block"
+											allowHideBalance
+											profile={profile}
 										/>
 									)}
 									{!isRestored && <Skeleton width={67} className="h-[21px] md:h-[1.813rem]" />}

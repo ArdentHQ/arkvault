@@ -1,9 +1,21 @@
 import React from "react";
 
 import { Amount } from "./Amount";
-import { render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
+
+let profile: Contracts.IProfile;
 
 describe("Amount", () => {
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+	});
+
 	it("should format crypto or fiat depending on the ticker", () => {
 		const { rerender } = render(<Amount value={123.456} ticker="EUR" />);
 
@@ -60,5 +72,30 @@ describe("Amount", () => {
 		rerender(<Amount value={1} ticker="USD" showSign isNegative />);
 
 		expect(screen.getByTestId("Amount")).toHaveTextContent(/^- \$1.00$/);
+	});
+
+	it("should respect the balance visibility context when allowHideBalance is true", async () => {
+		const TestComponent = () => {
+			const { hideBalance, setHideBalance } = useBalanceVisibility({ profile });
+			return (
+				<>
+					<Amount value={123.456} ticker="USD" allowHideBalance profile={profile} />
+					<button onClick={() => setHideBalance(!hideBalance)}>Toggle</button>
+				</>
+			);
+		};
+
+		render(<TestComponent />);
+
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.46$/);
+
+		await userEvent.click(screen.getByRole("button"));
+		expect(screen.getByTestId("Amount")).toHaveTextContent("****");
+	});
+
+	it("should not hide balance by default", () => {
+		render(<Amount value={123.456} ticker="USD" />);
+
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.46$/);
 	});
 });
