@@ -86,10 +86,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
-              class="flex flex-col gap-2"
+              class="flex grow flex-col gap-2"
             >
               <div
-                class="flex flex-row gap-2"
+                class="flex w-full flex-row gap-2"
                 data-testid="TransactionRowAddressing__container_advanced_sender"
               >
                 <div
@@ -99,17 +99,28 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   From
                 </div>
                 <div
-                  class="w-40 xs:w-50 sm:w-30"
+                  class="grow"
                   data-testid="TransactionRowAddressing__address-container"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
+                    </span>
                     <div
                       class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
                       <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                         data-testid="Address__address"
                       >
                         D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -125,7 +136,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 class="md-lg:hidden"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__container_advanced_recipient"
                 >
                   <div
@@ -135,17 +146,28 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     To
                   </div>
                   <div
-                    class="w-40 xs:w-50 sm:w-30"
+                    class="grow"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
+                      <span
+                        class="font-semibold text-sm text-theme-text"
+                        data-testid="Address__alias"
+                      >
+                        <span
+                          class="no-ligatures transition-colors duration-200"
+                          data-testid="TruncateEnd"
+                        >
+                          ARK Wallet 1
+                        </span>
+                      </span>
                       <div
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -168,7 +190,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
-              class="flex flex-row gap-2"
+              class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container_advanced_recipient"
             >
               <div
@@ -178,17 +200,28 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 To
               </div>
               <div
-                class="w-40 xs:w-50 sm:w-30"
+                class="grow"
                 data-testid="TransactionRowAddressing__address-container"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
+                  <span
+                    class="font-semibold text-sm text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures transition-colors duration-200"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
                   <div
                     class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -206,10 +239,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
           >
             <div
-              class="flex flex-row gap-2"
+              class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container"
             >
               <div
@@ -219,17 +252,28 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 To
               </div>
               <div
-                class="w-40 xs:w-50 sm:w-30"
+                class="grow"
                 data-testid="TransactionRowAddressing__address-container"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
+                  <span
+                    class="font-semibold text-sm text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures transition-colors duration-200"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
                   <div
                     class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -252,21 +296,12 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             <div
               class="flex flex-col items-end gap-1"
             >
-              <div
-                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                data-testid="AmountLabel__wrapper"
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
               >
-                <div
-                  class="flex h-full items-center space-x-1"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    - 121 BTC
-                  </span>
-                </div>
-              </div>
+                121
+              </span>
               <span
                 class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                 data-testid="TransactionRow__exchange-currency"
@@ -275,7 +310,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  0 BTC
+                  0 DARK
                 </span>
               </span>
             </div>
@@ -289,7 +324,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              0 BTC
+              0 DARK
             </span>
           </div>
         </td>
@@ -385,10 +420,10 @@ exports[`TransactionRow > should render 1`] = `
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
-              class="flex flex-col gap-2"
+              class="flex grow flex-col gap-2"
             >
               <div
-                class="flex flex-row gap-2"
+                class="flex w-full flex-row gap-2"
                 data-testid="TransactionRowAddressing__container_advanced_sender"
               >
                 <div
@@ -398,7 +433,7 @@ exports[`TransactionRow > should render 1`] = `
                   From
                 </div>
                 <div
-                  class="w-40 sm:w-40 md:w-32"
+                  class="grow"
                   data-testid="TransactionRowAddressing__address-container"
                 >
                   <div
@@ -412,7 +447,7 @@ exports[`TransactionRow > should render 1`] = `
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        ARK Wallet 1
+                        test_username
                       </span>
                     </span>
                     <div
@@ -435,7 +470,7 @@ exports[`TransactionRow > should render 1`] = `
                 class="md-lg:hidden"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__container_advanced_recipient"
                 >
                   <div
@@ -445,28 +480,17 @@ exports[`TransactionRow > should render 1`] = `
                     To
                   </div>
                   <div
-                    class="w-40 sm:w-40 md:w-32"
+                    class="grow"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <span
-                        class="font-semibold text-sm text-theme-text"
-                        data-testid="Address__alias"
-                      >
-                        <span
-                          class="no-ligatures transition-colors duration-200"
-                          data-testid="TruncateEnd"
-                        >
-                          ARK Wallet 1
-                        </span>
-                      </span>
                       <div
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -489,7 +513,7 @@ exports[`TransactionRow > should render 1`] = `
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
-              class="flex flex-row gap-2"
+              class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container_advanced_recipient"
             >
               <div
@@ -499,28 +523,17 @@ exports[`TransactionRow > should render 1`] = `
                 To
               </div>
               <div
-                class="w-40 sm:w-40 md:w-32"
+                class="grow"
                 data-testid="TransactionRowAddressing__address-container"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
-                  <span
-                    class="font-semibold text-sm text-theme-text"
-                    data-testid="Address__alias"
-                  >
-                    <span
-                      class="no-ligatures transition-colors duration-200"
-                      data-testid="TruncateEnd"
-                    >
-                      ARK Wallet 1
-                    </span>
-                  </span>
                   <div
                     class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -538,10 +551,10 @@ exports[`TransactionRow > should render 1`] = `
           class="hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
           >
             <div
-              class="flex flex-row gap-2"
+              class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container"
             >
               <div
@@ -551,28 +564,17 @@ exports[`TransactionRow > should render 1`] = `
                 To
               </div>
               <div
-                class="w-40 sm:w-40 md:w-32"
+                class="grow"
                 data-testid="TransactionRowAddressing__address-container"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
-                  <span
-                    class="font-semibold text-sm text-theme-text"
-                    data-testid="Address__alias"
-                  >
-                    <span
-                      class="no-ligatures transition-colors duration-200"
-                      data-testid="TruncateEnd"
-                    >
-                      ARK Wallet 1
-                    </span>
-                  </span>
                   <div
                     class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -595,21 +597,12 @@ exports[`TransactionRow > should render 1`] = `
             <div
               class="flex flex-col items-end gap-1"
             >
-              <div
-                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                data-testid="AmountLabel__wrapper"
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
               >
-                <div
-                  class="flex h-full items-center space-x-1"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    - 121 DARK
-                  </span>
-                </div>
-              </div>
+                121
+              </span>
               <span
                 class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                 data-testid="TransactionRow__exchange-currency"
@@ -654,7 +647,7 @@ exports[`TransactionRow > should render responsive 1`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -723,7 +716,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                     class="flex flex-col gap-2"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
@@ -733,7 +726,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                         From
                       </div>
                       <div
-                        class="w-40 sm:w-40 md:w-32"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
@@ -747,7 +740,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                               class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
-                              ARK Wallet 1
+                              test_username
                             </span>
                           </span>
                           <div
@@ -767,7 +760,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
@@ -777,28 +770,17 @@ exports[`TransactionRow > should render responsive 1`] = `
                         To
                       </div>
                       <div
-                        class="w-40 sm:w-40 md:w-32"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <span
-                            class="font-semibold text-sm text-theme-text"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
                           <div
                             class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -819,26 +801,17 @@ exports[`TransactionRow > should render responsive 1`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Amount
+                  Amount (DARK)
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 DARK
-                      </span>
-                    </div>
-                  </div>
+                    121
+                  </span>
                 </div>
               </div>
               <div
@@ -881,7 +854,7 @@ exports[`TransactionRow > should render responsive 2`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -950,7 +923,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                     class="flex flex-col gap-2"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
@@ -960,7 +933,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                         From
                       </div>
                       <div
-                        class="w-40 sm:w-40 md:w-32"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
@@ -974,7 +947,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                               class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
-                              ARK Wallet 1
+                              test_username
                             </span>
                           </span>
                           <div
@@ -994,7 +967,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
@@ -1004,28 +977,17 @@ exports[`TransactionRow > should render responsive 2`] = `
                         To
                       </div>
                       <div
-                        class="w-40 sm:w-40 md:w-32"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <span
-                            class="font-semibold text-sm text-theme-text"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
                           <div
                             class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1046,26 +1008,17 @@ exports[`TransactionRow > should render responsive 2`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Amount
+                  Amount (DARK)
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
-                  <div
-                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                    data-testid="AmountLabel__wrapper"
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
                   >
-                    <div
-                      class="flex h-full items-center space-x-1"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        - 121 DARK
-                      </span>
-                    </div>
-                  </div>
+                    121
+                  </span>
                 </div>
               </div>
               <div
@@ -1495,10 +1448,10 @@ exports[`TransactionRow > should render with currency 1`] = `
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
-              class="flex flex-col gap-2"
+              class="flex grow flex-col gap-2"
             >
               <div
-                class="flex flex-row gap-2"
+                class="flex w-full flex-row gap-2"
                 data-testid="TransactionRowAddressing__container_advanced_sender"
               >
                 <div
@@ -1508,17 +1461,28 @@ exports[`TransactionRow > should render with currency 1`] = `
                   From
                 </div>
                 <div
-                  class="w-40 xs:w-50 sm:w-30"
+                  class="grow"
                   data-testid="TransactionRowAddressing__address-container"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        test_username
+                      </span>
+                    </span>
                     <div
                       class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
                       <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                         data-testid="Address__address"
                       >
                         D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1534,7 +1498,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 class="md-lg:hidden"
               >
                 <div
-                  class="flex flex-row gap-2"
+                  class="flex w-full flex-row gap-2"
                   data-testid="TransactionRowAddressing__container_advanced_recipient"
                 >
                   <div
@@ -1544,7 +1508,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                     To
                   </div>
                   <div
-                    class="w-40 xs:w-50 sm:w-30"
+                    class="grow"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -1577,7 +1541,7 @@ exports[`TransactionRow > should render with currency 1`] = `
             class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
-              class="flex flex-row gap-2"
+              class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container_advanced_recipient"
             >
               <div
@@ -1587,7 +1551,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 To
               </div>
               <div
-                class="w-40 xs:w-50 sm:w-30"
+                class="grow"
                 data-testid="TransactionRowAddressing__address-container"
               >
                 <div
@@ -1615,10 +1579,10 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
           >
             <div
-              class="flex flex-row gap-2"
+              class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container"
             >
               <div
@@ -1628,7 +1592,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 To
               </div>
               <div
-                class="w-40 xs:w-50 sm:w-30"
+                class="grow"
                 data-testid="TransactionRowAddressing__address-container"
               >
                 <div
@@ -1661,21 +1625,12 @@ exports[`TransactionRow > should render with currency 1`] = `
             <div
               class="flex flex-col items-end gap-1"
             >
-              <div
-                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
-                data-testid="AmountLabel__wrapper"
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
               >
-                <div
-                  class="flex h-full items-center space-x-1"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    - 121 BTC
-                  </span>
-                </div>
-              </div>
+                121
+              </span>
               <span
                 class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                 data-testid="TransactionRow__exchange-currency"
@@ -1684,7 +1639,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  0 BTC
+                  0 DARK
                 </span>
               </span>
             </div>
@@ -1698,7 +1653,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              0 BTC
+              0 DARK
             </span>
           </div>
         </td>

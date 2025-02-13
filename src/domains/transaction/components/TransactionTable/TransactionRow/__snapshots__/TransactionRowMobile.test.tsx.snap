@@ -12,7 +12,7 @@ exports[`TransactionRowMobile > should render 1`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -81,7 +81,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                     class="flex flex-col gap-2"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
@@ -91,7 +91,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                         From
                       </div>
                       <div
-                        class="w-40 sm:w-40 md:w-32"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
@@ -105,7 +105,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                               class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
-                              ARK Wallet 1
+                              test_username
                             </span>
                           </span>
                           <div
@@ -125,7 +125,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
@@ -135,28 +135,17 @@ exports[`TransactionRowMobile > should render 1`] = `
                         To
                       </div>
                       <div
-                        class="w-40 sm:w-40 md:w-32"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <span
-                            class="font-semibold text-sm text-theme-text"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
                           <div
                             class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -186,7 +175,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121 DARK
+                    121
                   </span>
                 </div>
               </div>
@@ -230,7 +219,7 @@ exports[`TransactionRowMobile > should render 2`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -299,7 +288,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                     class="flex flex-col gap-2"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
@@ -309,7 +298,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                         From
                       </div>
                       <div
-                        class="w-40 sm:w-40 md:w-32"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
@@ -323,7 +312,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                               class="no-ligatures transition-colors duration-200"
                               data-testid="TruncateEnd"
                             >
-                              ARK Wallet 1
+                              test_username
                             </span>
                           </span>
                           <div
@@ -343,7 +332,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
@@ -353,28 +342,17 @@ exports[`TransactionRowMobile > should render 2`] = `
                         To
                       </div>
                       <div
-                        class="w-40 sm:w-40 md:w-32"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <span
-                            class="font-semibold text-sm text-theme-text"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures transition-colors duration-200"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Wallet 1
-                            </span>
-                          </span>
                           <div
                             class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -404,7 +382,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121 DARK
+                    121
                   </span>
                 </div>
               </div>
@@ -448,7 +426,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
           data-testid="TransactionRow__skeleton"
         >
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -611,7 +589,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
           data-testid="TransactionRow__skeleton"
         >
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -774,7 +752,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -843,7 +821,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                     class="flex flex-col gap-2"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
@@ -853,17 +831,28 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         From
                       </div>
                       <div
-                        class="w-40 xs:w-50 sm:w-30"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
+                          >
+                            <span
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
+                            >
+                              test_username
+                            </span>
+                          </span>
                           <div
                             class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -876,7 +865,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
@@ -886,7 +875,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         To
                       </div>
                       <div
-                        class="w-40 xs:w-50 sm:w-30"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
@@ -926,7 +915,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121 BTC
+                    121
                   </span>
                 </div>
               </div>
@@ -970,7 +959,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
           >
             <div
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -1039,7 +1028,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                     class="flex flex-col gap-2"
                   >
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
@@ -1049,17 +1038,28 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         From
                       </div>
                       <div
-                        class="w-40 xs:w-50 sm:w-30"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
+                          >
+                            <span
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
+                            >
+                              test_username
+                            </span>
+                          </span>
                           <div
                             class="relative grow leading-[17px] sm:leading-5 text-left"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1072,7 +1072,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-2"
+                      class="flex w-full flex-row gap-2"
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
@@ -1082,7 +1082,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         To
                       </div>
                       <div
-                        class="w-40 xs:w-50 sm:w-30"
+                        class="grow"
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
@@ -1122,7 +1122,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121 BTC
+                    121
                   </span>
                 </div>
               </div>
