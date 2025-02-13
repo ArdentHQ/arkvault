@@ -68,12 +68,6 @@ export const Contacts: FC = () => {
 				minimumWidth: true,
 			},
 			{
-				Header: t("COMMON.CRYPTOASSET"),
-				className: "justify-start",
-				headerClassName: "no-border",
-				minimumWidth: true,
-			},
-			{
 				Header: t("COMMON.ADDRESS"),
 				headerClassName: "no-border",
 			},

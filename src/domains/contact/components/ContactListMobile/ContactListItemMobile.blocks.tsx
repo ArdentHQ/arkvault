@@ -6,8 +6,7 @@ import { Address } from "@/app/components/Address";
 import { Icon } from "@/app/components/Icon";
 import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useNetworkOptions, useNetworks } from "@/app/hooks";
-import { networkDisplayName } from "@/utils/network-utils";
+import { useNetworks } from "@/app/hooks";
 interface ContactListItemMobileAddressProperties {
 	profile: Contracts.IProfile;
 	address: Contracts.IContactAddress;
@@ -22,8 +21,6 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 	profile,
 }) => {
 	const { t } = useTranslation();
-
-	const { networkById } = useNetworkOptions({ profile });
 
 	let sendButtonTooltip = "";
 
@@ -46,8 +43,6 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 		return !profileAvailableNetworks.some((network) => network.id() === address.network());
 	}, [hasBalance, profileAvailableNetworks]);
 
-	const network = networkById(address.network());
-
 	return (
 		<div className="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800">
 			<div
@@ -59,9 +54,6 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 					},
 				)}
 			>
-				<div className="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700">
-					{network && networkDisplayName(network)}
-				</div>
 				<div className="flex items-center overflow-hidden">
 					<Address address={address.address()} showCopyButton />
 				</div>

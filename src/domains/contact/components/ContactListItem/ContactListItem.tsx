@@ -1,4 +1,3 @@
-import { Networks } from "@ardenthq/sdk";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -16,7 +15,6 @@ import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useNetworks } from "@/app/hooks";
-import { networkDisplayName } from "@/utils/network-utils";
 import { Divider } from "@/app/components/Divider";
 
 const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
@@ -46,10 +44,6 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	const borderClasses = () =>
 		isLast ? "" : "border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800";
 
-	const network = profile
-		.availableNetworks()
-		.find((network: Networks.Network) => network.coin() === address.coin() && network.id() === address.network());
-
 	let sendButtonTooltip = "";
 
 	const availableNetwork = availableNetworks.find((network) => network.id === address.network());
@@ -77,12 +71,6 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 		>
 			<TableCell variant="start" innerClassName="space-x-4 whitespace-nowrap">
 				{index === 0 && renderName()}
-			</TableCell>
-
-			<TableCell className={borderClasses()}>
-				<span className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text">
-					{networkDisplayName(network)}
-				</span>
 			</TableCell>
 
 			<TableCell data-testid="ContactListItem__address" className={borderClasses()} innerClassName="space-x-4">
