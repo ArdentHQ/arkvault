@@ -15,11 +15,11 @@ describe("TransactionRow", () => {
 		wallet: () => ({
 			...TransactionFixture.wallet(),
 			currency: () => "DARK",
-			username: () => "test_username",
 			network: () => ({
-				id: () => "ark.mainnet",
 				coin: () => "DARK",
+				id: () => "ark.mainnet",
 			}),
+			username: () => "test_username",
 		}),
 	};
 
@@ -130,8 +130,8 @@ describe("TransactionRow", () => {
 									currency: () => "DARK",
 									isLedger: () => false,
 									network: () => ({
-										id: () => "ark.mainnet",
 										coin: () => "DARK",
+										id: () => "ark.mainnet",
 									}),
 								}),
 							} as any
@@ -163,8 +163,8 @@ describe("TransactionRow", () => {
 									currency: () => "shouldUseDarkColors",
 									isLedger: () => false,
 									network: () => ({
-										id: () => "ark.devnet",
 										coin: () => "DARK",
+										id: () => "ark.devnet",
 									}),
 								}),
 							} as any
