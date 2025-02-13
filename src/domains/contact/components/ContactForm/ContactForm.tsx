@@ -39,7 +39,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 
-	const network = profile.availableNetworks()[0]
+	const network = profile.availableNetworks()[0];
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
@@ -49,13 +49,12 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 		mode: "onChange",
 	});
 
-	const { formState, register, setError, setValue, watch, trigger } = form;
+	const { formState, register, setError, setValue, watch } = form;
 	const { isValid } = formState;
 
 	const { name, address } = watch();
 
 	const contactFormValidation = contactForm(t, profile);
-
 
 	useEffect(() => {
 		for (const [field, message] of Object.entries(errors) as [keyof ContactFormState, string][]) {
