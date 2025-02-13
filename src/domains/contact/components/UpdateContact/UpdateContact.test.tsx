@@ -121,16 +121,6 @@ describe("UpdateContact", () => {
 			expect(nameInput()).toHaveValue(newName);
 		});
 
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.clear(selectNetworkInput);
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.tab();
-
-		await waitFor(() => {
-			expect(selectNetworkInput).toHaveValue("ARK Devnet");
-		});
-
 		const addressInput = screen.getByTestId("contact-form__address-input");
 		await waitFor(() => expect(addressInput).toHaveValue(""));
 		await userEvent.clear(addressInput);
