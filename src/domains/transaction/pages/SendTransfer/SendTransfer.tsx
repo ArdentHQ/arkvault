@@ -58,10 +58,7 @@ export const SendTransfer = () => {
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
-	const {
-		hasReset: shouldResetForm,
-		queryParameters: deepLinkParameters,
-	} = useTransactionQueryParameters();
+	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
 
 	const abortReference = useRef(new AbortController());
 
@@ -294,10 +291,7 @@ export const SendTransfer = () => {
 	};
 
 	const renderTabs = () => (
-		<StepsProvider
-			steps={MAX_TABS - 1}
-			activeStep={activeTab}
-		>
+		<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
 			<TabPanel tabId={SendTransferStep.NetworkStep}>
 				<NetworkStep profile={activeProfile} networks={networks} />
 			</TabPanel>

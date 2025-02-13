@@ -56,7 +56,6 @@ export const FormStep = ({
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
 	useEffect(() => {
-
 		const updateFeeTransactionData = async () => {
 			const transferData = await buildTransferData({
 				coin: profile.coins().get(network.coin(), network.id()),
@@ -165,9 +164,9 @@ export const FormStep = ({
 							wallet={
 								senderWallet
 									? {
-										address: senderWallet.address(),
-										network,
-									}
+											address: senderWallet.address(),
+											network,
+										}
 									: undefined
 							}
 							wallets={wallets}
