@@ -1,6 +1,6 @@
 import { Coins } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -10,11 +10,8 @@ import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel, SubForm } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { InputAddress, InputDefault } from "@/app/components/Input";
-import { useBreakpoint, useNetworkOptions } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
-import { assertNetwork } from "@/utils/assertions";
-import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
-import { enabledNetworksCount } from "@/utils/network-utils";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
@@ -42,10 +39,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 
-	const { networks } = useNetworkOptions({ profile });
-	// still will be used just for validation of address
 	const network = profile.availableNetworks()[0]
-	const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
