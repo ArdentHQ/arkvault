@@ -56,7 +56,7 @@ export const ExportSettings = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.EXPORT.OPTIONS.EXCLUDE_LEDGER_WALLETS.DESCRIPTION"),
-			wrapperClass: "pt-6 sm:pb-6",
+			wrapperClass: "py-6",
 		},
 	];
 
