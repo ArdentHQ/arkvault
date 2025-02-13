@@ -10,7 +10,6 @@ import {
 	screen,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { translations } from "@/domains/contact/i18n";
 
 const options = [
 	{ label: "Option 1", value: "option_1" },
