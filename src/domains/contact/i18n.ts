@@ -12,7 +12,6 @@ export const translations = {
 		ADDRESS: "Address",
 		ADDRESSES: "Addresses",
 		ADD_ADDRESS: "Add Address",
-		CRYPTOASSET: "Cryptoasset",
 		DELETE_CONTACT: "Delete Contact",
 		NAME: "Name",
 	},
