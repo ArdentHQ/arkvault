@@ -21,6 +21,7 @@ import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
 
 export const PortfolioHeader = ({
 	profile,
@@ -38,6 +39,7 @@ export const PortfolioHeader = ({
 	onUpdate?: (status: boolean) => void;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
+	const [showCreateAddressPanel, setCreateAddressPanel] = useState(false);
 
 	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets, allWallets } = usePortfolio({ profile });
 
@@ -105,7 +107,7 @@ export const PortfolioHeader = ({
 						<Button
 							variant="secondary"
 							className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
-							onClick={handleCreate}
+							onClick={() => setCreateAddressPanel(true)}
 						>
 							<Icon name="Plus" size="md" />
 							<p className="hidden text-base font-semibold leading-5 sm:block">{t("COMMON.CREATE")}</p>
@@ -321,6 +323,11 @@ export const PortfolioHeader = ({
 				onDelete={(addresses) => {
 					void onDeleteAddresses(addresses);
 				}}
+			/>
+
+			<CreateAddressesSidePanel
+				open={showCreateAddressPanel}
+				onOpenChange={setCreateAddressPanel}
 			/>
 
 			<WalletActionsModals

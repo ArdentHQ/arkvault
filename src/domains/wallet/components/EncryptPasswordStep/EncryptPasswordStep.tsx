@@ -80,18 +80,6 @@ export const EncryptPasswordStep = ({ importedWallet }: EncryptPasswordStepPrope
 
 	return (
 		<section data-testid="EncryptPassword">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
-				className="hidden sm:block"
-				titleIcon={
-					<ThemeIcon
-						lightIcon="WalletEncryptionLight"
-						darkIcon="WalletEncryptionDark"
-						dimensions={[24, 24]}
-					/>
-				}
-			/>
-
 			<Alert className="mt-4" variant="warning">
 				<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.WARNING" />
 			</Alert>

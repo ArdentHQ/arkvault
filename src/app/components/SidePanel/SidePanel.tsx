@@ -71,7 +71,7 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 									style={{ ...styles }}
 									className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:w-[608px] md:p-8"
 								>
-									<div className="relative mb-4 flex items-center justify-between">
+									<div className="relative mb-4 flex items-start justify-between">
 										{typeof header === "string" ? (
 											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">
 												{header}

@@ -45,16 +45,8 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 
 	return (
 		<section data-testid="CreateWallet__WalletOverviewStep">
-			<Header
-				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
-				titleIcon={
-					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
-				}
-				className="hidden sm:block"
-			/>
-
-			<div className="mt-4 space-y-4">
-				<Alert className="mt-6">{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
+			<div className="space-y-4">
+				<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
 				{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 
