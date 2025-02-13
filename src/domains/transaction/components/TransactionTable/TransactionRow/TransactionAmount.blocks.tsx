@@ -1,6 +1,6 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import React from "react";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
@@ -40,7 +40,13 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	return returnedAmount;
 };
 
-export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedTransactionData }): JSX.Element => {
+export const TransactionAmountLabel = ({
+	transaction,
+	profile,
+}: {
+	transaction: ExtendedTransactionData;
+	profile?: Contracts.IProfile;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const currency = transaction.wallet().currency();
@@ -59,6 +65,8 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
+			allowHideBalance
+			profile={profile}
 		/>
 	);
 };
@@ -66,9 +74,11 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 export const TransactionTotalLabel = ({
 	transaction,
 	hideStyles = false,
+	profile,
 }: {
 	transaction: ExtendedTransactionData;
 	hideStyles?: boolean;
+	profile?: Contracts.IProfile;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -84,6 +94,8 @@ export const TransactionTotalLabel = ({
 				value={transaction.total()}
 				isNegative={transaction.isSent()}
 				className="text-sm font-semibold"
+				allowHideBalance
+				profile={profile}
 			/>
 		);
 	}
@@ -101,6 +113,8 @@ export const TransactionTotalLabel = ({
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
+			allowHideBalance
+			profile={profile}
 		/>
 	);
 };
@@ -108,14 +122,16 @@ export const TransactionTotalLabel = ({
 export const TransactionFiatAmount = ({
 	transaction,
 	exchangeCurrency,
+	profile,
 }: {
 	transaction: ExtendedTransactionData;
 	exchangeCurrency?: string;
+	profile?: Contracts.IProfile;
 }): JSX.Element => {
 	const currency = transaction.wallet().currency();
 	const { convert } = useExchangeRate({ exchangeTicker: exchangeCurrency, ticker: currency });
 	const returnedAmount = calculateReturnedAmount(transaction);
 	const amount = transaction.total() - returnedAmount;
 
-	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} />;
+	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
 };

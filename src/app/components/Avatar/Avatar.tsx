@@ -26,8 +26,8 @@ const AvatarWrapper = ({ size, noShadow, shadowClassName, ...props }: AvatarWrap
 				"h-5 w-5 text-sm": size === "xs",
 				"h-6 w-6 text-xs": size === "avatarMobile",
 				"h-8 w-8 text-sm": size === "sm",
-				"ring-6": !noShadow && shadowClassName,
-				"ring-6 ring-theme-background": !noShadow && !shadowClassName,
+				"ring-0": !noShadow && shadowClassName,
+				"ring-0 ring-theme-background": !noShadow && !shadowClassName,
 			}),
 			props.className,
 		)}

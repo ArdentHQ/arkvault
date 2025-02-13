@@ -89,11 +89,19 @@ export const TransactionRowMobile = memo(
 								}
 								className="w-full"
 							>
-								<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} />
+								<TransactionTotalLabel
+									transaction={transaction}
+									hideStyles={!hideSender}
+									profile={profile}
+								/>
 							</MobileSection>
 
 							<MobileSection title={t("COMMON.FIAT_VALUE")} className="w-full">
-								<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
+								<TransactionFiatAmount
+									transaction={transaction}
+									exchangeCurrency={exchangeCurrency}
+									profile={profile}
+								/>
 							</MobileSection>
 						</div>
 					</MobileCard>
