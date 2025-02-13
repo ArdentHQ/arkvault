@@ -32,9 +32,8 @@ export const UpdateContact: React.VFC<UpdateContactProperties> = ({
 	const { persist } = useEnvironmentContext();
 
 	const handleSave = async ({ name, addresses }: ContactFormData) => {
-		// @TODO: Remove this once the psdk has been updated
 		profile.contacts().update(contact.id(), {
-			addresses: addresses.map((address) => ({ ...address, network: profile.availableNetworks()[0].id() })),
+			addresses,
 			name,
 		});
 		await persist();

@@ -22,11 +22,7 @@ export const CreateContact: React.VFC<CreateContactProperties> = ({ profile, onC
 	const { persist } = useEnvironmentContext();
 
 	const handleOnSave = async ({ name, addresses }: ContactFormData) => {
-		// @TODO: Remove this once the psdk has been updated
-		const contact = profile.contacts().create(
-			name,
-			addresses.map((address) => ({ ...address, network: profile.availableNetworks()[0].id() })),
-		);
+		const contact = profile.contacts().create(name, addresses);
 		await persist();
 		onSave(contact.id());
 		setErrors({});
