@@ -1,4 +1,4 @@
-import { Enums } from "@ardenthq/sdk";
+import { Enums, Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -28,12 +28,14 @@ const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement
 );
 
 export const FormStep = ({
+	network,
 	senderWallet,
 	profile,
 	deeplinkProps,
 	onScan,
 	onChange,
 }: {
+	network: Networks.Network;
 	senderWallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 	deeplinkProps: Record<string, string>;
@@ -48,17 +50,12 @@ export const FormStep = ({
 
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
-	const { getValues, setValue, watch } = useFormContext();
+	const { getValues, setValue } = useFormContext();
 	const { recipients } = getValues();
-	const { network } = watch();
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
 	useEffect(() => {
-		if (!network) {
-			return;
-		}
-
 		const updateFeeTransactionData = async () => {
 			const transferData = await buildTransferData({
 				coin: profile.coins().get(network.coin(), network.id()),
@@ -75,10 +72,6 @@ export const FormStep = ({
 	}, [network, recipients, profile, isMounted]);
 
 	useEffect(() => {
-		if (!network) {
-			return;
-		}
-
 		setWallets(profile.wallets().findByCoinWithNetwork(network.coin(), network.id()));
 	}, [network, profile]);
 
@@ -119,12 +112,12 @@ export const FormStep = ({
 		});
 	};
 
-	const showFeeInput = useMemo(() => !network?.chargesZeroFees(), [network]);
+	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 
 	return (
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
+				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network.ticker() })}
 				titleIcon={
 					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
@@ -172,7 +165,7 @@ export const FormStep = ({
 								senderWallet
 									? {
 											address: senderWallet.address(),
-											network: senderWallet.network(),
+											network,
 										}
 									: undefined
 							}
@@ -192,7 +185,7 @@ export const FormStep = ({
 						}}
 						profile={profile}
 						recipients={getRecipients()}
-						showMultiPaymentOption={network?.allows(Enums.FeatureFlag.TransactionMultiPayment)}
+						showMultiPaymentOption={network.allows(Enums.FeatureFlag.TransactionMultiPayment)}
 						wallet={senderWallet}
 					/>
 				</div>
