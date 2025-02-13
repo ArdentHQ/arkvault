@@ -1,28 +1,13 @@
-import { Networks } from "@ardenthq/sdk";
-import React, { useMemo } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { AddressListItemProperties, AddressListProperties } from "./ContactForm.contracts";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
-import { useEnvironmentContext } from "@/app/contexts";
-import { networkDisplayName } from "@/utils/network-utils";
 
 const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemove }) => {
 	const { t } = useTranslation();
-
-	const { env } = useEnvironmentContext();
-
-	const network = useMemo(
-		() =>
-			env
-				.availableNetworks()
-				.find(
-					(network: Networks.Network) => network.coin() === address.coin && network.id() === address.network,
-				),
-		[address, env],
-	);
 
 	return (
 		<div
@@ -31,9 +16,6 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 		>
 			<div className="w-full min-w-0">
 				<div className="flex items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent">
-					<div className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:mb-2">
-						{networkDisplayName(network)}
-					</div>
 					<Button
 						data-testid="contact-form__remove-address-btn-xs"
 						size="icon"
