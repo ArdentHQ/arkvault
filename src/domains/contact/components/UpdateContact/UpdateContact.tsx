@@ -33,12 +33,10 @@ export const UpdateContact: React.VFC<UpdateContactProperties> = ({
 
 	const handleSave = async ({ name, addresses }: ContactFormData) => {
 		// @TODO: Remove this once the psdk has been updated
-		profile
-			.contacts()
-			.update(contact.id(), {
-				addresses: addresses.map((address) => ({ ...address, network: profile.availableNetworks()[0].id() })),
-				name,
-			});
+		profile.contacts().update(contact.id(), {
+			addresses: addresses.map((address) => ({ ...address, network: profile.availableNetworks()[0].id() })),
+			name,
+		});
 		await persist();
 		onSave(contact.id());
 	};
