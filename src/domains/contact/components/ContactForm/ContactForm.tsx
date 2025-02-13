@@ -30,8 +30,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 					.map((address: Contracts.IContactAddress) => ({
 						address: address.address(),
 						coin: address.coin(),
-						name: contact.name(),
-						network: address.network(),
+						name: contact.name()
 					}))
 			: [],
 	);
@@ -39,7 +38,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 
-	const network = profile.availableNetworks()[0];
+	const network = profile.wallets().first().network();
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
@@ -133,7 +132,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 						data-testid="contact-form__add-address-btn"
 						variant="secondary"
 						className="w-full"
-						disabled={!network || !address}
+						disabled={!address}
 						onClick={handleAddAddress}
 					>
 						{t("CONTACTS.CONTACT_FORM.ADD_ADDRESS")}
