@@ -277,6 +277,12 @@ describe("ContactForm", () => {
 	});
 
 	it("should remove network from options", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
@@ -302,6 +308,8 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId(addressListID)).toBeVisible();
 		});
+
+		validateMock.mockRestore();
 	});
 
 	it("should remove an address", async () => {

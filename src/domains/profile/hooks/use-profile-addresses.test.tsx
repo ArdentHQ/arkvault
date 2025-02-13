@@ -33,20 +33,6 @@ describe("useProfileAddresses", () => {
 		expect(result.current.profileAddresses).toHaveLength(2);
 	});
 
-	it("should filter address by selected network", async () => {
-		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.mainnet",
-		});
-		await profile.sync();
-		const { result } = renderHook(() => useProfileAddresses({ network: wallet.network(), profile }));
-
-		expect(result.current.allAddresses).toHaveLength(0);
-		expect(result.current.contactAddresses).toHaveLength(0);
-		expect(result.current.profileAddresses).toHaveLength(0);
-	});
-
 	it("should return all available addresses except MultiSignature", () => {
 		const walletMultiSignatureSpy = vi
 			.spyOn(profile.wallets().first(), "isMultiSignature")

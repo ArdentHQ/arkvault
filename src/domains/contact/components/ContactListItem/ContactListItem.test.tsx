@@ -17,8 +17,6 @@ const options = [
 	{ label: "Option 2", value: "option_2" },
 ];
 
-const devnet = "ark.devnet";
-
 let contact: Contracts.IContact;
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
@@ -47,7 +45,7 @@ describe("ContactListItem", () => {
 						onAction={vi.fn()}
 						onSend={vi.fn()}
 						item={contact}
-						availableNetworks={[{ hasBalance: true, id: devnet }]}
+						hasBalance={true}
 					/>
 				</tbody>
 			</table>,
@@ -66,7 +64,7 @@ describe("ContactListItem", () => {
 						onAction={onAction}
 						onSend={onSend}
 						item={item}
-						availableNetworks={[{ hasBalance: true, id: devnet }]}
+						hasBalance={true}
 					/>
 				</tbody>
 			</table>,
@@ -99,42 +97,15 @@ describe("ContactListItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show no wallets message", async () => {
-		const contactAddresses = contact
-			.addresses()
-			.values()
-			.map((address) => ({
-				address: address.address(),
-				coin: address.coin(),
-				network: address.network(),
-			}));
-
-		contact.addresses().create({
-			address: "AXtmcoxmKcuKHAivTRc2TJev48WkmnzPuC",
-			coin: "INVALID",
-			network: "invalid",
-		});
-
-		renderContactList({ options });
-
-		await userEvent.hover(screen.getAllByTestId("ContactListItem__send-button")[1]);
-
-		await expect(screen.findByText(translations.VALIDATION.NO_WALLETS)).resolves.toBeVisible();
-
-		profile.contacts().update(contact.id(), { addresses: contactAddresses });
-	});
-
 	it("should render with multiple addresses", () => {
 		contact.addresses().create({
 			address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
 			coin: "ARK",
-			network: "ark.devnet",
 		});
 
 		contact.addresses().create({
 			address: "DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
 			coin: "ARK",
-			network: "ark.devnet",
 		});
 
 		const { asFragment } = renderContactList({ options });
