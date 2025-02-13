@@ -45,7 +45,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 						},
 					]),
 			{
-				Header: `${t(hideSender ? "COMMON.VALUE" : "COMMON.AMOUNT")} ${coinLabel}`,
+				Header: `${t("COMMON.AMOUNT")} ${coinLabel}`,
 				accessor: (transaction) => transaction.total?.(),
 				className: "justify-end",
 				headerClassName: "no-border",
