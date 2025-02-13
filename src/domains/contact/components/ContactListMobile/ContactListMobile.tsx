@@ -6,7 +6,7 @@ import { ContactListItemOption } from "@/domains/contact/components/ContactListI
 
 interface Properties {
 	profile: Contracts.IProfile;
-	availableNetworks: AvailableNetwork[];
+	hasBalance: boolean;
 	options: ContactListItemOption[];
 	contacts: Contracts.IContact[];
 	onAction: (action: ContactListItemOption, contact: Contracts.IContact) => void;
@@ -15,7 +15,7 @@ interface Properties {
 
 export const ContactListMobile: React.VFC<Properties> = ({
 	profile,
-	availableNetworks,
+	hasBalance,
 	contacts,
 	options,
 	onAction,
@@ -30,7 +30,7 @@ export const ContactListMobile: React.VFC<Properties> = ({
 				onSend={onSend}
 				options={options}
 				onAction={(action) => onAction(action, contact)}
-				availableNetworks={availableNetworks}
+				hasBalance={hasBalance}
 			/>
 		))}
 	</div>

@@ -12,7 +12,7 @@ export interface ContactListItemProperties {
 	options: ContactListItemOption[];
 	onAction: (action: ContactListItemOption) => void;
 	onSend: (address: Contracts.IContactAddress) => void;
-	availableNetworks: AvailableNetwork[];
+	hasBalance: boolean;
 }
 
 export interface ContactListItemAddressProperties extends ContactListItemProperties {

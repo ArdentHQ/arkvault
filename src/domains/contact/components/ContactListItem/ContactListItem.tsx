@@ -14,7 +14,6 @@ import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
-import { useNetworks } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
 
 const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
@@ -23,13 +22,11 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	isLast,
 	item,
 	address,
-	availableNetworks,
+	hasBalance,
 	options,
 	onAction,
 	onSend,
 }) => {
-	const profileAvailableNetworks = useNetworks({ profile });
-
 	const { t } = useTranslation();
 
 	const renderName = useCallback(
@@ -46,12 +43,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 	let sendButtonTooltip = "";
 
-	const availableNetwork = availableNetworks.find((network) => network.id === address.network());
-	const hasBalance = availableNetwork?.hasBalance ?? false;
-
-	if (!availableNetwork) {
-		sendButtonTooltip = t("CONTACTS.VALIDATION.NO_WALLETS");
-	} else if (!hasBalance) {
+	if (!hasBalance) {
 		sendButtonTooltip = t("CONTACTS.VALIDATION.NO_BALANCE");
 	}
 
@@ -60,8 +52,8 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 			return true;
 		}
 
-		return !profileAvailableNetworks.some((network) => network.id() === address.network());
-	}, [hasBalance, profileAvailableNetworks]);
+		return false;
+	}, [hasBalance]);
 
 	return (
 		<TableRow

@@ -11,25 +11,20 @@ interface ContactListItemMobileAddressProperties {
 	profile: Contracts.IProfile;
 	address: Contracts.IContactAddress;
 	onSend: () => void;
-	availableNetworks: AvailableNetwork[];
+	hasBalance: boolean;
 }
 
 export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddressProperties> = ({
 	address,
 	onSend,
-	availableNetworks,
+	hasBalance,
 	profile,
 }) => {
 	const { t } = useTranslation();
 
 	let sendButtonTooltip = "";
 
-	const availableNetwork = availableNetworks.find((network) => network.id === address.network());
-	const hasBalance = availableNetwork?.hasBalance ?? false;
-
-	if (!availableNetwork) {
-		sendButtonTooltip = t("CONTACTS.VALIDATION.NO_WALLETS");
-	} else if (!hasBalance) {
+	if (!hasBalance) {
 		sendButtonTooltip = t("CONTACTS.VALIDATION.NO_BALANCE");
 	}
 
@@ -40,7 +35,7 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 			return true;
 		}
 
-		return !profileAvailableNetworks.some((network) => network.id() === address.network());
+		return false;
 	}, [hasBalance, profileAvailableNetworks]);
 
 	return (
