@@ -5,7 +5,6 @@ interface AddressItem {
 	address: string;
 	coin: string;
 	name: string;
-	network: string;
 }
 
 interface AddressListItemProperties {
@@ -40,7 +39,6 @@ interface ContactFormData {
 }
 
 interface ContactFormState {
-	network: Networks.Network;
 	name: string;
 	address: string;
 }
