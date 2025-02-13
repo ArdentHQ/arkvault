@@ -11,13 +11,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import {
-	useActiveProfile,
-	useActiveWalletWhenNeeded,
-	useLedgerModelStatus,
-	useNetworks,
-	useValidation,
-} from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useLedgerModelStatus, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
@@ -34,6 +28,7 @@ import {
 	signUsernameRegistration,
 	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -71,7 +66,7 @@ export const SendRegistration = () => {
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
-	const [network] = useNetworks({ profile: activeProfile });
+	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
 	const activeWallet = useMemo(() => {
 		if (senderAddress) {
@@ -88,7 +83,7 @@ export const SendRegistration = () => {
 
 		const walletBalance = activeWallet?.balance() ?? 0;
 
-		const type = registrationType === "validatorRegistration" ? "delegateRegistration" : "multiSignature";
+		const type = registrationType === "validatorRegistration" ? "delegateRegistration" : registrationType;
 
 		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
 		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit[type], activeWallet?.network()));

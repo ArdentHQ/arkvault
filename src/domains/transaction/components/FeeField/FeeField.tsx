@@ -73,7 +73,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		};
 
 		void recalculateFee();
-	}, [calculate, data, getValues, network, setValue, type]);
+	}, [calculate, data, getValues, network.id(), setValue, type]);
 
 	return (
 		<InputFee
