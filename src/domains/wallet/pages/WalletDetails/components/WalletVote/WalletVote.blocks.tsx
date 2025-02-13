@@ -33,7 +33,15 @@ export const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusPropert
 	const activeCount = votes.filter(({ wallet }) => wallet?.rank() <= activeDelegates).length;
 	const resignedCount = votes.filter(({ wallet }) => wallet?.isResignedDelegate()).length;
 	const standbyCount = votes.length - activeCount - resignedCount;
-
+	return (
+		<Label
+			color="danger"
+			className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+			variant="solid"
+		>
+			{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
+		</Label>
+	);
 	if (activeCount === votes.length) {
 		return (
 			<Label
@@ -61,6 +69,7 @@ export const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusPropert
 			<Label
 				color="danger"
 				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				variant="solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
 			</Label>
