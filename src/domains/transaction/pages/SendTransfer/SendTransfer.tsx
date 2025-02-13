@@ -59,7 +59,6 @@ export const SendTransfer = () => {
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
 	const {
-		hasAnyParameters: hasDeepLinkParameters,
 		hasReset: shouldResetForm,
 		queryParameters: deepLinkParameters,
 	} = useTransactionQueryParameters();

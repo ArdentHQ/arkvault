@@ -50,7 +50,7 @@ export const FormStep = ({
 
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
-	const { getValues, setValue, watch } = useFormContext();
+	const { getValues, setValue } = useFormContext();
 	const { recipients } = getValues();
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
