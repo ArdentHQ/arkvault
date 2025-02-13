@@ -17,12 +17,12 @@ let profile: Contracts.IProfile;
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 const addressInput = () => screen.getByTestId("contact-form__address-input");
 const addAddressButton = () => screen.getByTestId("contact-form__add-address-btn");
-const saveButton = () => screen.getByTestId("contact-form__save-btn")
+const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const modalInner = () => screen.getByTestId("Modal__inner");
 
 const newContact = {
-    name: "Test Contact",
-    address: "0x6F0182a0cc707b055322CcF6d4CB6a5Aff1aEb22",
+	address: "0x6F0182a0cc707b055322CcF6d4CB6a5Aff1aEb22",
+	name: "Test Contact",
 };
 
 describe("CreateContact", () => {
@@ -44,24 +44,22 @@ describe("CreateContact", () => {
 	});
 
 	it("should call onSave when form is submitted", async () => {
-        const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-            __construct: vi.fn(),
-            address: () => ({
-                validate: vi.fn().mockResolvedValue(true),
-            }),
-        });
-        render(
-            <CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />
-        );
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
+		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
 
-        await waitFor(() => {
-            expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
-        });
+		await waitFor(() => {
+			expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
+		});
 
-        await userEvent.type(nameInput(), newContact.name);
-        await userEvent.tab();
-        await userEvent.type(addressInput(), newContact.address);
-        await userEvent.tab();
+		await userEvent.type(nameInput(), newContact.name);
+		await userEvent.tab();
+		await userEvent.type(addressInput(), newContact.address);
+		await userEvent.tab();
 
 		await waitFor(() => {
 			expect(addAddressButton()).not.toBeDisabled();
@@ -73,31 +71,29 @@ describe("CreateContact", () => {
 			expect(saveButton()).not.toBeDisabled();
 		});
 
-        await userEvent.click(saveButton());
+		await userEvent.click(saveButton());
 
-        await waitFor(() => {
-            expect(onSave).toHaveBeenCalled();
-        });
-        validateMock.mockRestore();
-    });
+		await waitFor(() => {
+			expect(onSave).toHaveBeenCalled();
+		});
+		validateMock.mockRestore();
+	});
 
 	it("should update errors when handleChange is called", async () => {
-        render(
-            <CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />
-        );
+		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
 
-        await waitFor(() => {
-            expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
-        });
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
+		});
 
 		await userEvent.type(nameInput(), newContact.name);
 		await userEvent.tab();
 
-        await userEvent.clear(nameInput());
-        await userEvent.tab();
+		await userEvent.clear(nameInput());
+		await userEvent.tab();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveAttribute("aria-invalid", "true");
 		});
-    });
+	});
 });
