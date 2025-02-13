@@ -30,7 +30,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 					.map((address: Contracts.IContactAddress) => ({
 						address: address.address(),
 						coin: address.coin(),
-						name: contact.name()
+						name: contact.name(),
 					}))
 			: [],
 	);

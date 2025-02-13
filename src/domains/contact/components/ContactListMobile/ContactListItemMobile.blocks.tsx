@@ -4,7 +4,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import { Address } from "@/app/components/Address";
 import { Icon } from "@/app/components/Icon";
-import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useNetworks } from "@/app/hooks";
 interface ContactListItemMobileAddressProperties {

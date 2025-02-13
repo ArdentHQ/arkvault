@@ -4,7 +4,6 @@ import { ContactListItemMobileAddress } from "./ContactListItemMobile.blocks";
 import { Icon } from "@/app/components/Icon";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { Dropdown } from "@/app/components/Dropdown";
-import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
 import { useAccordion } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";

@@ -1,7 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { ContactListItemMobile } from "./ContactListItemMobile";
-import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 
 interface Properties {

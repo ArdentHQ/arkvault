@@ -3,8 +3,6 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { Column } from "react-table";
-
-import { AvailableNetwork } from "./Contacts.contracts";
 import { useFilteredContacts } from "./Contacts.helpers";
 import { ContactsHeader } from "./Contacts.blocks";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
@@ -103,9 +101,10 @@ export const Contacts: FC = () => {
 		[t],
 	);
 
-	const hasBalance = useMemo(() => {
-		return Object.values(activeProfile.wallets().all()).reduce((acc, wallet) => acc + wallet.balance(), 0) > 0;
-	}, [activeProfile]);
+	const hasBalance = useMemo(
+		() => Object.values(activeProfile.wallets().all()).reduce((acc, wallet) => acc + wallet.balance(), 0) > 0,
+		[activeProfile],
+	);
 
 	const renderTableRow = useCallback(
 		(contact: Contracts.IContact) => (

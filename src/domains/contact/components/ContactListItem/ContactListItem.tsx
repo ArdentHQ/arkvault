@@ -17,7 +17,6 @@ import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { Divider } from "@/app/components/Divider";
 
 const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
-	profile,
 	index,
 	isLast,
 	item,
