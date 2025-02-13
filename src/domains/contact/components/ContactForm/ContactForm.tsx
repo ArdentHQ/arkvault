@@ -43,13 +43,14 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { isXs } = useBreakpoint();
 
 	const { networks } = useNetworkOptions({ profile });
+	// still will be used just for validation of address
+	const network = profile.availableNetworks()[0]
 	const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
 			address: "",
 			name: contact?.name() ?? "",
-			network: onlyHasOneNetwork ? networks[0] : undefined,
 		},
 		mode: "onChange",
 	});
@@ -57,13 +58,10 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { formState, register, setError, setValue, watch, trigger } = form;
 	const { isValid } = formState;
 
-	const { name, network, address } = watch();
+	const { name, address } = watch();
 
 	const contactFormValidation = contactForm(t, profile);
 
-	useEffect(() => {
-		register("network");
-	}, [register]);
 
 	useEffect(() => {
 		for (const [field, message] of Object.entries(errors) as [keyof ContactFormState, string][]) {
@@ -71,13 +69,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 		}
 	}, [errors, setError]);
 
-	const filteredNetworks = useMemo(() => {
-		const usedNetworks = new Set(addresses.map((address) => address.network));
-		return networks.filter((network) => !usedNetworks.has(network.id()));
-	}, [addresses, networks]);
-
 	const handleAddAddress = async () => {
-		assertNetwork(network);
 		const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
 		await instance.__construct();
 		const isValidAddress: boolean = await instance.address().validate(address);
@@ -98,18 +90,14 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 				address,
 				coin: network.coin(),
 				name: address,
-				network: network.id(),
 			},
 		]);
 
-		setValue("network", undefined);
 		setValue("address", "");
 	};
 
 	const handleRemoveAddress = (item: AddressItem) => {
-		setAddresses(
-			addresses.filter((current) => !(current.address === item.address && current.network === item.network)),
-		);
+		setAddresses(addresses.filter((current) => !(current.address === item.address)));
 	};
 
 	return (
@@ -135,20 +123,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 			</FormField>
 
 			<SubForm className="!-mx-4 !mt-4 !p-4">
-				<FormField name="network">
-					<FormLabel>{t("CONTACTS.CONTACT_FORM.CRYPTOASSET")}</FormLabel>
-					<SelectNetworkDropdown
-						profile={profile}
-						networks={filteredNetworks}
-						placeholder={t("COMMON.INPUT_NETWORK.PLACEHOLDER")}
-						selectedNetwork={network}
-						onChange={(selectedNetwork) => {
-							setValue("network", selectedNetwork, { shouldDirty: true, shouldValidate: true });
-							trigger("address");
-						}}
-					/>
-				</FormField>
-
 				<FormField name="address" data-testid="ContactForm__address">
 					<FormLabel>{t("CONTACTS.CONTACT_FORM.ADDRESS")}</FormLabel>
 
