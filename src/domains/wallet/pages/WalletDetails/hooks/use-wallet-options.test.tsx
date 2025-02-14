@@ -87,6 +87,28 @@ describe("Wallet Options Hook", () => {
 		});
 	});
 
+	it("should get registration/resignation options", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+		const spy = vi.spyOn(wallet, "username").mockReturnValue("test_username");
+		const networkSpy = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptions).toStrictEqual({
+			key: "registrations",
+			options: [
+				{ label: "Validator", value: "delegate-registration" },
+				{ label: "Username", value: "username-registration" },
+				{ label: "Resign Username", value: "username-resignation" },
+				{ label: "Multisignature", value: "multi-signature" },
+			],
+			title: "Register",
+		});
+
+		spy.mockRestore();
+		networkSpy.mockRestore();
+	});
+
 	it("should get registration options for wallet without mnemonic", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);

@@ -274,7 +274,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
           Delegate Status
         </p>
         <div
-          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-500 border-theme-danger-100 bg-theme-danger-100 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
         >
           All Resigned
         </div>

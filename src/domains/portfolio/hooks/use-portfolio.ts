@@ -137,6 +137,19 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	return {
 		allWallets: profile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id()),
 		balance,
+		removeSelectedAddresses: async (selectedAddresses: string[], network: Networks.Network) => {
+			const selected = SelectedAddresses({ activeNetwork: network, profile });
+
+			const updated = selected.all().filter((address) => !selectedAddresses.includes(address));
+
+			addresses.set(updated, network);
+
+			if (!addresses.hasSelected() && profile.wallets().first()) {
+				addresses.set([profile.wallets().first().address()], network);
+			}
+
+			await persist();
+		},
 		selectedAddresses: addresses.all(),
 		selectedWallet: addresses.defaultSelectedWallet(),
 		selectedWallets: wallets,

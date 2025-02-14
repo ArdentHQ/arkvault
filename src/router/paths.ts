@@ -28,6 +28,8 @@ export enum ProfilePaths {
 	SendValidatorResignationProfile = "/profiles/:profileId/send-validator-resignation",
 	SendUsernameRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/usernameRegistration",
 	SendRegistrationProfile = "/profiles/:profileId/send-registration/:registrationType",
+	SendUsernameResignation = "/profiles/:profileId/wallets/:walletId/send-username-resignation",
+	SendUsernameResignationProfile = "/profiles/:profileId/send-username-resignation",
 	// Exchange
 	ExchangeView = "/profiles/:profileId/exchange/view",
 	// Profile
