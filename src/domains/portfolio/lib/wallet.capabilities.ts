@@ -14,7 +14,7 @@ export const WalletCapabilities = (wallet: IReadWriteWallet) => ({
 	 * @returns {boolean}
 	 */
 	canSendTransfer() {
-		return this.canBroadcast()
+		return this.canBroadcast();
 	},
 
 	/**
@@ -26,7 +26,7 @@ export const WalletCapabilities = (wallet: IReadWriteWallet) => ({
 			return false;
 		}
 
-		return wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)
+		return wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration);
 	},
 
 	/**
@@ -38,10 +38,7 @@ export const WalletCapabilities = (wallet: IReadWriteWallet) => ({
 			return false;
 		}
 
-		return (
-			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration) &&
-			!!wallet.username()
-		);
+		return wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration) && !!wallet.username();
 	},
 
 	/**
