@@ -80,7 +80,7 @@ describe("CreateAddressSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -159,7 +159,7 @@ describe("CreateAddressSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -250,7 +250,7 @@ describe("CreateAddressSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -270,7 +270,7 @@ describe("CreateAddressSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -298,7 +298,7 @@ describe("CreateAddressSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -329,7 +329,7 @@ describe("CreateAddressSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
