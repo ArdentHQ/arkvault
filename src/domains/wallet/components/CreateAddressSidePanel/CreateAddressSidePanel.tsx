@@ -72,7 +72,14 @@ export const CreateAddressesSidePanel = ({
 		register("mnemonic");
 		register("useEncryption");
 		register("passphraseDisclaimer");
-	}, [register]);
+	}, [register, open]);
+
+	useEffect(() => {
+		if (open) {
+			setActiveTab(Step.WalletOverviewStep);
+			void handleGenerateWallet();
+		}
+	}, [open]);
 
 	useEffect(() => {
 		if (wallet && mnemonic) {
@@ -80,16 +87,8 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [wallet, mnemonic]);
 
-	useEffect(() => {
-		handleGenerateWallet();
-	}, []);
-
 	const handleFinish = () => {
-		const wallet = getValues("wallet");
-
-		assertWallet(wallet);
-
-		history.push(`/profiles/${activeProfile.id()}/dashboard`);
+		onOpenChange(false);
 	};
 
 	const generateWallet = () => {
