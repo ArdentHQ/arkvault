@@ -1,9 +1,8 @@
+import { Column } from "react-table";
 import { DTO } from "@ardenthq/sdk-profiles";
+import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Column } from "react-table";
-
-import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 
 export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string; hideSender?: boolean }) => {
 	const { t } = useTranslation();
@@ -14,7 +13,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 			{
 				Header: t("COMMON.TX_ID"),
 				cellWidth: "w-32 lg:w-36 xl:w-48",
-				headerClassName: "no-border text-nowrap",
+				headerClassName: "no-border whitespace-nowrap",
 				noRoundedBorders: true,
 			},
 			{
@@ -34,7 +33,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 			{
 				Header: t("COMMON.ADDRESSING"),
 				cellWidth: "w-full lg:w-24",
-				headerClassName: "no-border text-nowrap",
+				headerClassName: "no-border whitespace-nowrap",
 			},
 			...(hideSender
 				? []
@@ -48,7 +47,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 				Header: `${t("COMMON.AMOUNT")} ${coinLabel}`,
 				accessor: (transaction) => transaction.total?.(),
 				className: "justify-end",
-				headerClassName: "no-border text-nowrap",
+				headerClassName: "no-border whitespace-nowrap",
 				id: "amount",
 			},
 			{
@@ -56,7 +55,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 				accessor: () => "fiatValue",
 				cellWidth: "w-36",
 				className: "justify-end",
-				headerClassName: `no-border text-nowrap hidden lg:table-cell ${hideSender ? "" : "!pl-0 xl:min-w-28"}`,
+				headerClassName: `no-border whitespace-nowrap hidden lg:table-cell ${hideSender ? "" : "!pl-0 xl:min-w-28"}`,
 				noRoundedBorders: true,
 			},
 		];
