@@ -1,9 +1,8 @@
-import { DefaultTReturn, t, TOptions } from "i18next";
+import { DefaultTReturn, TOptions } from "i18next";
 import React, { ReactNode, useEffect, useMemo, useState } from "react";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Form, FormButtons } from "@/app/components/Form";
+import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-// import { StepIndicator } from "@/app/components/StepIndicator";
 import { WalletOverviewStep } from "@/domains/wallet/pages/CreateWallet/WalletOverviewStep";
 import { ConfirmPassphraseStep } from "@/domains/wallet/pages/CreateWallet/ConfirmPassphraseStep";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";

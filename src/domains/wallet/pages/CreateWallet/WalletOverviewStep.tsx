@@ -3,13 +3,11 @@ import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
-import { Header } from "@/app/components/Header";
 import { Toggle } from "@/app/components/Toggle";
 import { toasts } from "@/app/services";
 import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/MnemonicList";
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
-import { ThemeIcon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 
 export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {

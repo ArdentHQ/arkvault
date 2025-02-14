@@ -5,11 +5,9 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { InputPassword } from "@/app/components/Input";
 import { assertWallet } from "@/utils/assertions";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
-import { ThemeIcon } from "@/app/components/Icon";
 
 interface EncryptPasswordStepProperties {
 	importedWallet?: Contracts.IReadWriteWallet;
