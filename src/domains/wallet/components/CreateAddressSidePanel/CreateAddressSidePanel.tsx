@@ -235,10 +235,8 @@ export const CreateAddressesSidePanel = ({
 		return steps;
 	}, [useEncryption, t]);
 
-	const Header = getSidePanelHeader(activeTab, t);
-
 	return (
-		<SidePanel header={Header} open={open} onOpenChange={onOpenChange} dataTestId="CreateAddressSidePanel">
+		<SidePanel header={<StepHeader step={activeTab}/>} open={open} onOpenChange={onOpenChange} dataTestId="CreateAddressSidePanel">
 			<Form context={form} onSubmit={handleFinish} className="space-y-0">
 				<Tabs activeId={activeTab} className="pb-20">
 					<div className="mb-4 sm:hidden">
@@ -326,11 +324,14 @@ export const CreateAddressesSidePanel = ({
 	);
 };
 
-const getSidePanelHeader = (activeStep: Step, t: any) => {
-	const title: Record<Step, ReactNode> = {
+const StepHeader= ({step}: {step: Step}): JSX.Element => {
+	const { t } = useTranslation();
+
+	const headers: Record<Step, JSX.Element> = {
 		[Step.WalletOverviewStep]: (
 			<Header
 				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
 				titleIcon={
 					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
 				}
@@ -339,6 +340,7 @@ const getSidePanelHeader = (activeStep: Step, t: any) => {
 		),
 		[Step.ConfirmPassphraseStep]: (
 			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
 				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
 				titleIcon={
 					<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />
@@ -349,6 +351,7 @@ const getSidePanelHeader = (activeStep: Step, t: any) => {
 		),
 		[Step.EncryptPasswordStep]: (
 			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
 				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
 				className="mt-px"
 				titleIcon={
@@ -362,6 +365,7 @@ const getSidePanelHeader = (activeStep: Step, t: any) => {
 		),
 		[Step.SuccessStep]: (
 			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
 				title={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE")}
 				titleIcon={
 					<Icon
@@ -377,5 +381,5 @@ const getSidePanelHeader = (activeStep: Step, t: any) => {
 		),
 	};
 
-	return title[activeStep];
+	return headers[step];
 };
