@@ -51,7 +51,7 @@ const SearchWalletListItem = ({
 		}
 
 		return (
-			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+			<Tooltip content={t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE")} >
 				<div>
 					<Button
 						data-testid={`SearchWalletListItem__select-${index}`}
