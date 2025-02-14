@@ -61,6 +61,7 @@ export const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusPropert
 			<Label
 				color="danger"
 				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				variant="solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
 			</Label>
