@@ -17,7 +17,7 @@ describe("TransactionRow", () => {
 			currency: () => "DARK",
 			network: () => ({
 				coin: () => "DARK",
-				id: () => "ark.mainnet",
+				id: () => "ark.devnet",
 			}),
 			username: () => "test_username",
 		}),
