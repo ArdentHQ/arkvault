@@ -7,6 +7,7 @@ interface StepIndicatorProperties {
 	activeIndex?: number;
 	steps: string[];
 	activeStepTitle?: string;
+	showTitle?: boolean;
 }
 
 const StepStyled = ({ isActive, ...props }: React.HTMLProps<HTMLLIElement> & { isActive: boolean }) => (
@@ -27,6 +28,7 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 	activeIndex = 1,
 	steps,
 	activeStepTitle,
+	showTitle = false,
 }: StepIndicatorProperties) => {
 	const title = useMemo(() => {
 		if (activeStepTitle) {
@@ -46,7 +48,7 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 
 	return (
 		<div className="flex flex-col">
-			<span className="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden">{title}</span>
+			{showTitle && <span className="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden">{title}</span>}
 			<ul className="flex space-x-3">
 				{steps.map((_, index) => (
 					<StepStyled key={index} isActive={activeIndex >= index + 1} />

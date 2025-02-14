@@ -18,11 +18,10 @@ interface SidePanelProps {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	header?: React.ReactNode | string;
-	footer?: React.ReactNode;
 	dataTestId?: string;
 }
 
-export const SidePanel = ({ children, open, onOpenChange, header, dataTestId, footer }: SidePanelProps): JSX.Element => {
+export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
 		open,
@@ -70,32 +69,31 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId, fo
 							>
 								<div
 									style={{ ...styles }}
-									className="custom-scroll fixed right-0 top-0 h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:w-[608px] md:p-8"
+									className="fixed right-0 top-0"
 								>
-									<div className="relative mb-4 flex items-start justify-between">
-										{typeof header === "string" ? (
-											<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">
-												{header}
-											</h2>
-										) : (
-											<>{header}</>
-										)}
-										<div className="h-8 w-8 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
-											<Button
-												data-testid="SidePanel__close-button"
-												variant="transparent"
-												size="icon"
-												onClick={() => onOpenChange(false)}
-												className="h-8 w-8"
-											>
-												<Icon name="Cross" />
-											</Button>
+									<div className="custom-scroll h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:w-[608px] md:p-8">
+										<div className="relative mb-4 flex items-start justify-between">
+											{typeof header === "string" ? (
+												<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">
+													{header}
+												</h2>
+											) : (
+												<>{header}</>
+											)}
+											<div className="h-8 w-8 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
+												<Button
+													data-testid="SidePanel__close-button"
+													variant="transparent"
+													size="icon"
+													onClick={() => onOpenChange(false)}
+													className="h-8 w-8"
+												>
+													<Icon name="Cross" />
+												</Button>
+											</div>
 										</div>
+										<div>{children}</div>
 									</div>
-									<div>{children}</div>
-									{footer && <div className="sticky bottom-0 bg-theme-background">
-										{footer}
-									</div>}
 								</div>
 							</div>
 						</FloatingFocusManager>

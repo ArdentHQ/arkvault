@@ -23,6 +23,7 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Header } from "@/app/components/Header";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { StepIndicator } from "@/app/components/StepIndicator";
 
 enum Step {
 	WalletOverviewStep = 1,
@@ -240,99 +241,95 @@ export const CreateAddressesSidePanel = ({
 	const Header = getSidePanelHeader(activeTab, t);
 
 	return (
-		<SidePanel
-			header={Header}
-			open={open}
-			onOpenChange={onOpenChange}
-			dataTestId="CreateAddressSidePanel"
-			footer={<div>
-				{activeTab <= Step.EncryptPasswordStep && (
-					<FormButtons>
-						{activeTab < Step.SuccessStep && (
-							<Button
-								data-testid="CreateWallet__back-button"
-								disabled={isGeneratingWallet}
-								variant="secondary"
-								onClick={handleBack}
-							>
-								{t("COMMON.BACK")}
-							</Button>
+		<SidePanel header={Header} open={open} onOpenChange={onOpenChange} dataTestId="CreateAddressSidePanel">
+			<Form context={form} onSubmit={handleFinish} className="space-y-0">
+				<Tabs activeId={activeTab} className="pb-20">
+					<div className="sm:hidden  mb-4">
+						<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
+					</div>
+
+					<div>
+						<TabPanel tabId={Step.WalletOverviewStep}>
+							<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} />
+						</TabPanel>
+
+						<TabPanel tabId={Step.ConfirmPassphraseStep}>
+							<ConfirmPassphraseStep />
+						</TabPanel>
+
+						<TabPanel tabId={Step.EncryptPasswordStep}>
+							<EncryptPasswordStep />
+						</TabPanel>
+
+						<TabPanel tabId={Step.SuccessStep}>
+							<SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />
+						</TabPanel>
+					</div>
+				</Tabs>
+
+				<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
+					<div className="hidden w-[136px] sm:block">
+						<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
+					</div>
+
+					<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
+						{activeTab <= Step.EncryptPasswordStep && (
+							<>
+								{activeTab < Step.SuccessStep && activeTab !== Step.WalletOverviewStep && (
+									<Button
+										data-testid="CreateWallet__back-button"
+										disabled={isGeneratingWallet}
+										variant="secondary"
+										onClick={handleBack}
+									>
+										{t("COMMON.BACK")}
+									</Button>
+								)}
+
+								{activeTab < Step.EncryptPasswordStep && (
+									<Button
+										data-testid="CreateWallet__continue-button"
+										disabled={isDirty ? !isValid || isGeneratingWallet : true}
+										isLoading={isGeneratingWallet}
+										onClick={() => handleNext()}
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								)}
+
+								{activeTab === Step.EncryptPasswordStep && (
+									<Button
+										data-testid="CreateWallet__continue-encryption-button"
+										disabled={
+											!isValid ||
+											isGeneratingWallet ||
+											!encryptionPassword ||
+											!confirmEncryptionPassword
+										}
+										isLoading={isGeneratingWallet}
+										onClick={handlePasswordSubmit}
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								)}
+							</>
 						)}
 
-						{activeTab < Step.EncryptPasswordStep && (
-							<Button
-								data-testid="CreateWallet__continue-button"
-								disabled={isDirty ? !isValid || isGeneratingWallet : true}
-								isLoading={isGeneratingWallet}
-								onClick={() => handleNext()}
-							>
-								{t("COMMON.CONTINUE")}
+						{activeTab === Step.SuccessStep && (
+							<Button disabled={isSubmitting} type="submit" data-testid="CreateWallet__finish-button">
+								{t("COMMON.GO_TO_WALLET")}
 							</Button>
 						)}
+					</div>
+				</div>
+			</Form>
 
-						{activeTab === Step.EncryptPasswordStep && (
-							<Button
-								data-testid="CreateWallet__continue-encryption-button"
-								disabled={
-									!isValid ||
-									isGeneratingWallet ||
-									!encryptionPassword ||
-									!confirmEncryptionPassword
-								}
-								isLoading={isGeneratingWallet}
-								onClick={handlePasswordSubmit}
-							>
-								{t("COMMON.CONTINUE")}
-							</Button>
-						)}
-					</FormButtons>
-				)}
-
-				{activeTab === Step.SuccessStep && (
-					<FormButtons>
-						<Button
-							disabled={isSubmitting}
-							type="submit"
-							data-testid="CreateWallet__finish-button"
-						>
-							{t("COMMON.GO_TO_WALLET")}
-						</Button>
-					</FormButtons>
-				)}
-			</div>}
-		>
-			<div className="flex-1">
-				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleFinish}>
-					<Tabs activeId={activeTab}>
-						{/*<StepIndicator steps={allSteps} activeIndex={activeTab} />*/}
-
-						<div>
-							<TabPanel tabId={Step.WalletOverviewStep}>
-								<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} />
-							</TabPanel>
-
-							<TabPanel tabId={Step.ConfirmPassphraseStep}>
-								<ConfirmPassphraseStep />
-							</TabPanel>
-
-							<TabPanel tabId={Step.EncryptPasswordStep}>
-								<EncryptPasswordStep />
-							</TabPanel>
-
-							<TabPanel tabId={Step.SuccessStep}>
-								<SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />
-							</TabPanel>
-						</div>
-					</Tabs>
-				</Form>
-
-				{renderUpdateWalletNameModal()}
-			</div>
+			{renderUpdateWalletNameModal()}
 		</SidePanel>
 	);
 };
 
-const getSidePanelHeader = (activeStep: Step, t:any) => {
+const getSidePanelHeader = (activeStep: Step, t: any) => {
 	const title: Record<Step, ReactNode> = {
 		[Step.WalletOverviewStep]: <Header
 			title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
