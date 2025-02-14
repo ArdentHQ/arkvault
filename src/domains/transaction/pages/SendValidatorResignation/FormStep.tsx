@@ -11,7 +11,6 @@ import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { getRegistrationOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 
 interface FormStepProperties {
