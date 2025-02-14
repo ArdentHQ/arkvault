@@ -19,7 +19,7 @@ const ContractLabel = () => {
 			color="neutral"
 			size="xs"
 			noBorder
-			className="rounded px-1 py-[2px] dark:border whitespace-nowrap"
+			className="rounded px-1 py-[2px] dark:border whitespace-nowrap max-w-40 truncate"
 			data-testid="TransactionRow__type"
 		>
 			<div className="flex items-center space-x-1.5">
