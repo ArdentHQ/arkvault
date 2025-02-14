@@ -39,7 +39,7 @@ export const PortfolioHeader = ({
 	onUpdate?: (status: boolean) => void;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
-	const [showCreateAddressPanel, setCreateAddressPanel] = useState(false);
+	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 
 	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets, allWallets, removeSelectedAddresses } =
 		usePortfolio({ profile });
@@ -110,7 +110,7 @@ export const PortfolioHeader = ({
 						<Button
 							variant="secondary"
 							className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
-							onClick={() => setCreateAddressPanel(true)}
+							onClick={() => setShowCreateAddressPanel(true)}
 						>
 							<Icon name="Plus" size="md" />
 							<p className="hidden text-base font-semibold leading-5 sm:block">{t("COMMON.CREATE")}</p>
@@ -328,7 +328,7 @@ export const PortfolioHeader = ({
 				}}
 			/>
 
-			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setCreateAddressPanel} />
+			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 
 			<WalletActionsModals
 				wallets={selectedWallets}
