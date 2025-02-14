@@ -28,7 +28,7 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 	activeIndex = 1,
 	steps,
 	activeStepTitle,
-	showTitle = false,
+	showTitle = true,
 }: StepIndicatorProperties) => {
 	const title = useMemo(() => {
 		if (activeStepTitle) {
