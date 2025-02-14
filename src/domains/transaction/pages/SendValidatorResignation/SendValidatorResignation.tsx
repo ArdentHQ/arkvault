@@ -1,5 +1,5 @@
 import { DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
@@ -11,7 +11,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useNetworks, useValidation } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -19,6 +19,7 @@ import { handleBroadcastError } from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import { assertWallet } from "@/utils/assertions";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
 	FormStep = 1,
@@ -50,9 +51,9 @@ export const SendValidatorResignation = () => {
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
-	const [network] = useNetworks({ profile: activeProfile });
+	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
-	const activeWallet = useMemo(() => {
+	const [activeWallet, setActiveWallet] = useState(() => {
 		if (senderAddress) {
 			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		}
@@ -60,7 +61,7 @@ export const SendValidatorResignation = () => {
 		if (activeWalletFromUrl) {
 			return activeWalletFromUrl;
 		}
-	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
+	});
 
 	useEffect(() => {
 		register("fees");
@@ -158,7 +159,11 @@ export const SendValidatorResignation = () => {
 					<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
-								<FormStep senderWallet={activeWallet} profile={activeProfile} />
+								<FormStep
+									senderWallet={activeWallet}
+									profile={activeProfile}
+									onWalletChange={setActiveWallet}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>
