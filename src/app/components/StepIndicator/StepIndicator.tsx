@@ -48,7 +48,11 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 
 	return (
 		<div className="flex flex-col">
-			{showTitle && <span className="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden">{title}</span>}
+			{showTitle && (
+				<span className="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden">
+					{title}
+				</span>
+			)}
 			<ul className="flex space-x-3">
 				{steps.map((_, index) => (
 					<StepStyled key={index} isActive={activeIndex >= index + 1} />

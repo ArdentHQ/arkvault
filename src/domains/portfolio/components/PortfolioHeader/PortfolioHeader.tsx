@@ -48,8 +48,9 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
-	const { activeModal, setActiveModal, handleImport, handleSelectOption, handleSend } =
-		useWalletActions(...selectedWallets);
+	const { activeModal, setActiveModal, handleImport, handleSelectOption, handleSend } = useWalletActions(
+		...selectedWallets,
+	);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 
@@ -325,10 +326,7 @@ export const PortfolioHeader = ({
 				}}
 			/>
 
-			<CreateAddressesSidePanel
-				open={showCreateAddressPanel}
-				onOpenChange={setCreateAddressPanel}
-			/>
+			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setCreateAddressPanel} />
 
 			<WalletActionsModals
 				wallets={selectedWallets}
