@@ -16,6 +16,8 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { twMerge } from "tailwind-merge";
+import { getAdditionalOptions, getRegistrationOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 
 const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button
@@ -164,15 +166,16 @@ export const FormStep = ({
 							wallet={
 								senderWallet
 									? {
-											address: senderWallet.address(),
-											network,
-										}
+										address: senderWallet.address(),
+										network,
+									}
 									: undefined
 							}
 							wallets={wallets}
 							profile={profile}
 							disabled={wallets.length === 0}
 							onChange={handleSelectSender}
+							disableAction={(wallet) => !WalletCapabilities(wallet).canSendTransfer()}
 						/>
 					</div>
 				</FormField>

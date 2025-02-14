@@ -11,6 +11,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -57,15 +58,16 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					wallet={
 						wallet
 							? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
+								address: wallet.address(),
+								network: wallet.network(),
+							}
 							: undefined
 					}
 					wallets={profile.wallets().values()}
 					profile={profile}
 					disabled={profile.wallets().count() === 0}
 					onChange={handleSelectSender}
+					disableAction={(wallet) => !WalletCapabilities(wallet).canSendValidatorRegistration()}
 				/>
 			</FormField>
 
