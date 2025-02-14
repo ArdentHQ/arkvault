@@ -4,18 +4,18 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
+import { ThemeIcon } from "@/app/components/Icon";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
-import { ThemeIcon } from "@/app/components/Icon";
-import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export const ReviewStep = ({
-	wallet,
+	senderWallet,
 	profile,
 }: {
-	wallet: Contracts.IReadWriteWallet;
+	senderWallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }) => {
 	const { t } = useTranslation();
@@ -31,7 +31,7 @@ export const ReviewStep = ({
 	}, [unregister]);
 
 	return (
-		<section data-testid="DelegateRegistrationForm__review-step">
+		<section data-testid="SendUsernameResignation__review-step">
 			<StepHeader
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
@@ -42,20 +42,20 @@ export const ReviewStep = ({
 
 			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
 				<TransactionAddresses
-					labelClassName="w-auto sm:min-w-36"
-					senderAddress={wallet.address()}
+					labelClassName="w-auto sm:min-w-28"
+					senderAddress={senderWallet.address()}
+					network={senderWallet.network()}
 					recipients={[]}
 					profile={profile}
-					network={wallet.network()}
 				/>
 
 				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 					<div className="space-y-3 sm:space-y-0">
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.CATEGORY")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.CATEGORY")}</DetailTitle>
 							<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
 								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-									{t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION")}
+									{t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION")}
 								</span>
 							</div>
 						</div>
@@ -68,25 +68,21 @@ export const ReviewStep = ({
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-40">
-								{t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}
-							</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.USERNAME")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-								{getValues("validatorPublicKey")}
+								{senderWallet.username()}
 							</div>
 						</div>
 					</div>
 				</DetailWrapper>
 
-				<div data-testid="DetailWrapper">
-					<div className="mt-0 p-3 sm:p-0">
-						<TotalAmountBox
-							amount={0}
-							fee={fee}
-							ticker={wallet.currency()}
-							convertValues={!wallet.network().isTest()}
-						/>
-					</div>
+				<div className="mx-3 mt-2 sm:mx-0">
+					<TotalAmountBox
+						amount={0}
+						fee={fee}
+						ticker={senderWallet.currency()}
+						convertValues={!senderWallet.network().isTest()}
+					/>
 				</div>
 			</div>
 		</section>

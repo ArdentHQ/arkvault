@@ -9,12 +9,15 @@ import { useActiveProfile } from "@/app/hooks";
 import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const history = useHistory();
 	const { openExternal } = useLink();
+
+	const { removeSelectedAddresses } = usePortfolio({ profile });
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
@@ -83,6 +86,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			for (const profileWallet of profile.wallets().values()) {
 				if (profileWallet.address() === wallet.address()) {
+					removeSelectedAddresses([wallet.address()], wallet.network());
 					profile.wallets().forget(profileWallet.id());
 					profile.notifications().transactions().forgetByRecipient(wallet.address());
 				}
@@ -149,6 +153,21 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 				history.push(url);
 			}
 
+			if (option.value === "delegate-resignation") {
+				let url = generatePath(ProfilePaths.SendValidatorResignation, {
+					profileId: profile.id(),
+					walletId: wallet.id(),
+				});
+
+				if (hasMultipleWallets) {
+					url = generatePath(ProfilePaths.SendValidatorResignationProfile, {
+						profileId: profile.id(),
+					});
+				}
+
+				history.push(url);
+			}
+
 			if (option.value === "username-registration") {
 				let url = generatePath(ProfilePaths.SendUsernameRegistration, {
 					profileId: profile.id(),
@@ -165,14 +184,14 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 				history.push(url);
 			}
 
-			if (option.value === "delegate-resignation") {
-				let url = generatePath(ProfilePaths.SendValidatorResignation, {
+			if (option.value === "username-resignation") {
+				let url = generatePath(ProfilePaths.SendUsernameResignation, {
 					profileId: profile.id(),
 					walletId: wallet.id(),
 				});
 
 				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendValidatorResignationProfile, {
+					url = generatePath(ProfilePaths.SendUsernameResignationProfile, {
 						profileId: profile.id(),
 					});
 				}

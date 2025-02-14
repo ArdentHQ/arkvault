@@ -32,8 +32,8 @@ enum Step {
 }
 
 export const CreateAddressesSidePanel = ({
-	 open,
-	 onOpenChange,
+	open,
+	onOpenChange,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
@@ -235,14 +235,13 @@ export const CreateAddressesSidePanel = ({
 		return steps;
 	}, [useEncryption, t]);
 
-
 	const Header = getSidePanelHeader(activeTab, t);
 
 	return (
 		<SidePanel header={Header} open={open} onOpenChange={onOpenChange} dataTestId="CreateAddressSidePanel">
 			<Form context={form} onSubmit={handleFinish} className="space-y-0">
 				<Tabs activeId={activeTab} className="pb-20">
-					<div className="sm:hidden  mb-4">
+					<div className="mb-4 sm:hidden">
 						<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
 					</div>
 
@@ -329,46 +328,54 @@ export const CreateAddressesSidePanel = ({
 
 const getSidePanelHeader = (activeStep: Step, t: any) => {
 	const title: Record<Step, ReactNode> = {
-		[Step.WalletOverviewStep]: <Header
-			title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
-			titleIcon={
-				<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
-			}
-			className="mt-px"
-		/>,
-		[Step.ConfirmPassphraseStep]: <Header
-			title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
-			titleIcon={
-				<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />
-			}
-			subtitle={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
-			className="mt-px"
-		/>,
-		[Step.EncryptPasswordStep]: <Header
-			title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
-			className="mt-px"
-			titleIcon={
-				<ThemeIcon
-					lightIcon="WalletEncryptionLight"
-					darkIcon="WalletEncryptionDark"
-					dimensions={[24, 24]}
-				/>
-			}
-		/>,
-		[Step.SuccessStep]: <Header
-			title={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE")}
-			titleIcon={
-				<Icon
-					className="text-theme-success-100 dark:text-theme-success-900"
-					dimensions={[24, 24]}
-					name="Completed"
-					data-testid="icon-Completed"
-				/>
-			}
-			subtitle={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.SUBTITLE")}
-			className="mt-px"
-		/>
-	}
+		[Step.WalletOverviewStep]: (
+			<Header
+				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
+				titleIcon={
+					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
+				}
+				className="mt-px"
+			/>
+		),
+		[Step.ConfirmPassphraseStep]: (
+			<Header
+				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
+				titleIcon={
+					<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />
+				}
+				subtitle={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
+				className="mt-px"
+			/>
+		),
+		[Step.EncryptPasswordStep]: (
+			<Header
+				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
+				className="mt-px"
+				titleIcon={
+					<ThemeIcon
+						lightIcon="WalletEncryptionLight"
+						darkIcon="WalletEncryptionDark"
+						dimensions={[24, 24]}
+					/>
+				}
+			/>
+		),
+		[Step.SuccessStep]: (
+			<Header
+				title={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE")}
+				titleIcon={
+					<Icon
+						className="text-theme-success-100 dark:text-theme-success-900"
+						dimensions={[24, 24]}
+						name="Completed"
+						data-testid="icon-Completed"
+					/>
+				}
+				subtitle={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.SUBTITLE")}
+				className="mt-px"
+			/>
+		),
+	};
 
 	return title[activeStep];
-}
+};

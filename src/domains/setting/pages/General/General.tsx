@@ -188,7 +188,7 @@ export const GeneralSettings: React.FC = () => {
 					}}
 				/>
 			),
-			wrapperClass: "sm:pb-6",
+			wrapperClass: "pb-6",
 		},
 		{
 			label: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.TITLE"),
@@ -206,7 +206,7 @@ export const GeneralSettings: React.FC = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.DESCRIPTION"),
-			wrapperClass: "pt-6 sm:pb-6",
+			wrapperClass: "py-6",
 		},
 		{
 			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
@@ -224,7 +224,7 @@ export const GeneralSettings: React.FC = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
-			wrapperClass: "pt-6 sm:pb-6",
+			wrapperClass: "py-6",
 		},
 		{
 			itemValueClass: "w-full sm:w-auto",
@@ -237,7 +237,7 @@ export const GeneralSettings: React.FC = () => {
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
 				</Button>
 			),
-			wrapperClass: "pt-6 sm:pb-6",
+			wrapperClass: "py-6",
 		},
 	];
 

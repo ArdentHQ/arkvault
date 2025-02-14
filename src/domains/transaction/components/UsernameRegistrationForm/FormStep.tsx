@@ -8,9 +8,10 @@ import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useNetworks, useValidation } from "@/app/hooks";
+import { useValidation } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { ThemeIcon } from "@/app/components/Icon";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -22,7 +23,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const userExistsController = useRef<AbortController | undefined>(undefined);
 
-	const [network] = useNetworks({ profile });
+	const { activeNetwork: network } = useActiveNetwork({ profile });
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
 	useEffect(() => {
