@@ -12,7 +12,7 @@ import { useValidation } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { ThemeIcon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.permissions";
+import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
