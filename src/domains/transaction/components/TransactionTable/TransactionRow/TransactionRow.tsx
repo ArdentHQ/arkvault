@@ -99,7 +99,7 @@ export const TransactionRow = memo(
 						color="secondary"
 						size="xs"
 						noBorder
-						className="rounded px-1 py-[3px] dark:border"
+						className="rounded px-1 py-[3px] dark:border whitespace-nowrap"
 						data-testid="TransactionRow__type"
 					>
 						{getLabel(transaction.type())}
