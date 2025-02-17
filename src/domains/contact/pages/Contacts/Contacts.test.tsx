@@ -172,6 +172,12 @@ describe("Contacts", () => {
 	});
 
 	it("should successfully add contact", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
 		renderComponent();
 
 		await waitFor(() => {
@@ -214,6 +220,7 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(profile.contacts().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).toHaveLength(1);
 		});
+		validateMock.mockRestore();
 	});
 
 	it("should successfully delete contact", async () => {
