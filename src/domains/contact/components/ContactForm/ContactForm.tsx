@@ -12,6 +12,7 @@ import { Icon } from "@/app/components/Icon";
 import { InputAddress, InputDefault } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
@@ -37,8 +38,9 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
+	const { env } = useEnvironmentContext();
 
-	const network = profile.wallets().first().network();
+	const network = env.availableNetworks()[0]
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
