@@ -40,7 +40,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { isXs } = useBreakpoint();
 	const { env } = useEnvironmentContext();
 
-	const network = env.availableNetworks()[0]
+	const network = env.availableNetworks()[0];
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
