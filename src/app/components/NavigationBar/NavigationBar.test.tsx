@@ -443,7 +443,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should disable send transfer button when no Live wallets in test network", () => {
-		const walletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([])
+		const walletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
 		const mockProfile = environmentHooks.useActiveProfile();
 		const profileSettingsMock = vi.spyOn(mockProfile.settings(), "get").mockImplementation((key: string) => {
 			if (key === Contracts.ProfileSetting.Name) {
