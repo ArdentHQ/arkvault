@@ -12,6 +12,7 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -22,6 +23,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const validatorPublicKey = getValues("validatorPublicKey");
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
+	const { allWallets } = usePortfolio({ profile })
 	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
 	useEffect(() => {
@@ -58,14 +60,14 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					wallet={
 						wallet
 							? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
+								address: wallet.address(),
+								network: wallet.network(),
+							}
 							: undefined
 					}
-					wallets={profile.wallets().values()}
+					wallets={allWallets}
 					profile={profile}
-					disabled={profile.wallets().count() === 0}
+					disabled={allWallets.length === 0}
 					onChange={handleSelectSender}
 					disableAction={(wallet) => !WalletCapabilities(wallet).canSendValidatorRegistration()}
 				/>
