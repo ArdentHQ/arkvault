@@ -1,5 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useHistory } from "react-router-dom";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
