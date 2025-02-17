@@ -81,6 +81,12 @@ describe("UpdateContact", () => {
 	});
 
 	it("should update contact name and address", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
 		const onSaveFunction = vi.fn();
 
 		const newName = "Updated name";
@@ -146,5 +152,6 @@ describe("UpdateContact", () => {
 		const savedContact = profile.contacts().findById(contact.id());
 		expect(savedContact.name()).toBe(newName);
 		expect(savedContact.addresses().findByAddress(newAddress.address)).toHaveLength(1);
+		validateMock.mockRestore();
 	});
 });
