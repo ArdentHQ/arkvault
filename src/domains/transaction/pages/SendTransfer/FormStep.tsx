@@ -53,7 +53,7 @@ export const FormStep = ({
 	const { getValues, setValue } = useFormContext();
 	const { recipients } = getValues();
 
-	const { allWallets } = usePortfolio({ profile })
+	const { allWallets } = usePortfolio({ profile });
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
@@ -162,9 +162,9 @@ export const FormStep = ({
 							wallet={
 								senderWallet
 									? {
-										address: senderWallet.address(),
-										network,
-									}
+											address: senderWallet.address(),
+											network,
+										}
 									: undefined
 							}
 							wallets={allWallets}

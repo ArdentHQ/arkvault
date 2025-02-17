@@ -24,7 +24,7 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 	const { t } = useTranslation();
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
-	const { allWallets } = usePortfolio({ profile })
+	const { allWallets } = usePortfolio({ profile });
 
 	const handleSelectSender = (address: any) => {
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
@@ -59,9 +59,9 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 						wallet={
 							senderWallet
 								? {
-									address: senderWallet.address(),
-									network: senderWallet.network(),
-								}
+										address: senderWallet.address(),
+										network: senderWallet.network(),
+									}
 								: undefined
 						}
 						wallets={allWallets}
