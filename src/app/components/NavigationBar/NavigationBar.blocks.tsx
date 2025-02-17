@@ -200,7 +200,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
 	const { showSupportChat } = useZendesk();
-	const { allWallets: wallets } = usePortfolio({ profile })
+	const { allWallets: wallets } = usePortfolio({ profile });
 
 	const modalSize = useMemo<Size>(() => {
 		if (isLg) {
