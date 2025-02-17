@@ -8,10 +8,10 @@ exports[`UserMenu > should render with regular image 1`] = `
     data-testid="dropdown__toggle"
   >
     <button
-      class="flex items-center gap-2 p-0 bg-transparent group hover:bg-theme-secondary-200 rounded dark:hover:bg-theme-dark-700 px-1 py-0.5"
+      class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
     >
       <div
-        class="text-xs leading-[17px] font-semibold text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50"
+        class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
       >
         <span
           class="whitespace-nowrap"
@@ -52,10 +52,10 @@ exports[`UserMenu > should render with svg image 1`] = `
     data-testid="dropdown__toggle"
   >
     <button
-      class="flex items-center gap-2 p-0 bg-transparent group hover:bg-theme-secondary-200 rounded dark:hover:bg-theme-dark-700 px-1 py-0.5"
+      class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
     >
       <div
-        class="text-xs leading-[17px] font-semibold text-theme-secondary-700 dark:text-theme-dark-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50"
+        class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
       >
         <span
           class="whitespace-nowrap"
