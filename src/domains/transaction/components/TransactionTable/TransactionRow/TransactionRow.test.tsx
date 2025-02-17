@@ -15,6 +15,10 @@ describe("TransactionRow", () => {
 		wallet: () => ({
 			...TransactionFixture.wallet(),
 			currency: () => "DARK",
+			network: () => ({
+				coin: () => "DARK",
+				id: () => "ark.devnet",
+			}),
 			username: () => "test_username",
 		}),
 	};
@@ -123,13 +127,16 @@ describe("TransactionRow", () => {
 								amount: () => 0,
 								wallet: () => ({
 									...fixture.wallet(),
-									currency: () => "BTC",
+									currency: () => "DARK",
 									isLedger: () => false,
-									network: () => ({ isTest: () => false }),
+									network: () => ({
+										coin: () => "DARK",
+										id: () => "ark.devnet",
+									}),
 								}),
 							} as any
 						}
-						exchangeCurrency="BTC"
+						exchangeCurrency="DARK"
 						profile={profile}
 						onClick={() => {}}
 					/>
@@ -153,13 +160,16 @@ describe("TransactionRow", () => {
 								amount: () => 0,
 								wallet: () => ({
 									...fixture.wallet(),
-									currency: () => "BTC",
+									currency: () => "shouldUseDarkColors",
 									isLedger: () => false,
-									network: () => ({ isTest: () => true }),
+									network: () => ({
+										coin: () => "DARK",
+										id: () => "ark.devnet",
+									}),
 								}),
 							} as any
 						}
-						exchangeCurrency="BTC"
+						exchangeCurrency="DARK"
 						profile={profile}
 						onClick={() => {}}
 					/>
