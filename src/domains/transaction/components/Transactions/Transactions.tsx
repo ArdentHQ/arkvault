@@ -245,7 +245,7 @@ export const Transactions = memo(function Transactions({
 				{hasEmptyResults && (
 					<>
 						{selectedTransactionTypes?.length ? (
-							<EmptyBlock className="border-none sm:text-left">
+							<div className="mt-3 px-6 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 md:px-6">
 								<Trans
 									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
 									values={{
@@ -253,11 +253,11 @@ export const Transactions = memo(function Transactions({
 									}}
 									components={{ bold: <strong /> }}
 								/>
-							</EmptyBlock>
+							</div>
 						) : (
-							<EmptyBlock className="border-none sm:text-left">
+							<div className="mt-3 px-6 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 md:px-6">
 								{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
-							</EmptyBlock>
+							</div>
 						)}
 					</>
 				)}
