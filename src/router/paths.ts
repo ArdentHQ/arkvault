@@ -6,8 +6,6 @@ export enum ProfilePaths {
 	// Contacts
 	Contacts = "/profiles/:profileId/contacts",
 	// Wallet
-	WalletDetails = "/profiles/:profileId/wallets/:walletId",
-	CreateWallet = "/profiles/:profileId/wallets/create",
 	ImportWallet = "/profiles/:profileId/wallets/import",
 	ImportWalletLedger = "/profiles/:profileId/wallets/import/ledger",
 	WalletGroupPage = "/profiles/:profileId/network/:networkId",

@@ -13,15 +13,15 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
-import { WalletActions } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader/WalletHeader.blocks";
+import { WalletActions } from "@/domains/portfolio/components/WalletHeader/WalletHeader.blocks";
 import { Skeleton } from "@/app/components/Skeleton";
-import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
+import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 
 export const PortfolioHeader = ({
 	profile,

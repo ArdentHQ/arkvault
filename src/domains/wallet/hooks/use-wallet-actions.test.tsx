@@ -93,12 +93,6 @@ describe("useWalletActions", () => {
 		} = renderHook(() => useWalletActions(wallet), { wrapper });
 
 		act(() => {
-			current.handleCreate();
-		});
-
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/create`);
-
-		act(() => {
 			current.handleImport();
 		});
 

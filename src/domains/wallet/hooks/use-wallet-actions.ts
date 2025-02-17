@@ -36,7 +36,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 				return;
 			}
 			stopEventBubbling(event);
-			history.push(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
+			// history.push(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
 		},
 		[history, profile, wallet, stopEventBubbling],
 	);
@@ -93,11 +93,6 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			}
 
 			await persist();
-
-			if (history.location.pathname === generatePath(ProfilePaths.WalletDetails, { profileId, walletId })) {
-				history.push(generatePath(ProfilePaths.Dashboard, { profileId }));
-				return;
-			}
 
 			return true;
 		},
@@ -208,14 +203,6 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 		[wallet, history, profile, hasMultipleWallets, openExternal],
 	);
 
-	const handleCreate = useCallback(
-		(event?: React.MouseEvent<HTMLElement>) => {
-			stopEventBubbling(event);
-			history.push(generatePath(ProfilePaths.CreateWallet, { profileId: profile.id() }));
-		},
-		[history, profile, stopEventBubbling],
-	);
-
 	const handleImport = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
 			stopEventBubbling(event);
@@ -234,7 +221,6 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 	return {
 		activeModal,
-		handleCreate,
 		handleDelete,
 		handleImport,
 		handleImportLedger,

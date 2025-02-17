@@ -161,12 +161,12 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 				<div
 					className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
 					onClick={() => {
-						history.push(
-							generatePath(ProfilePaths.WalletDetails, {
-								profileId: activeProfile.id(),
-								walletId: wallet.id(),
-							}),
-						);
+						// history.push(
+						// 	generatePath(ProfilePaths.WalletDetails, {
+						// 		profileId: activeProfile.id(),
+						// 		walletId: wallet.id(),
+						// 	}),
+						// );
 					}}
 				>
 					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">

@@ -179,12 +179,12 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 			<TableCell
 				data-testid="AddressRow__wallet"
 				onClick={() => {
-					history.push(
-						generatePath(ProfilePaths.WalletDetails, {
-							profileId: activeProfile.id(),
-							walletId: wallet.id(),
-						}),
-					);
+					// history.push(
+					// 	generatePath(ProfilePaths.WalletDetails, {
+					// 		profileId: activeProfile.id(),
+					// 		walletId: wallet.id(),
+					// 	}),
+					// );
 				}}
 				variant="start"
 				innerClassName="cursor-pointer group space-x-3"
