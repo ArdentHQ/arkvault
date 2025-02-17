@@ -3,8 +3,6 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { Column } from "react-table";
-
-import { AvailableNetwork } from "./Contacts.contracts";
 import { useFilteredContacts } from "./Contacts.helpers";
 import { ContactsHeader } from "./Contacts.blocks";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
@@ -28,20 +26,6 @@ export const Contacts: FC = () => {
 
 	const [query, setQuery] = useState("");
 
-	const availableNetworks = useMemo<AvailableNetwork[]>(() => {
-		const group: Record<string, number> = {};
-
-		for (const wallet of activeProfile.wallets().values()) {
-			group[wallet.networkId()] ??= 0;
-			group[wallet.networkId()] += wallet.balance();
-		}
-
-		return Object.entries(group).map(([networkId, balance]) => ({
-			hasBalance: balance > 0,
-			id: networkId,
-		}));
-	}, [activeProfile]);
-
 	const contacts: Contracts.IContact[] = useMemo(() => activeProfile.contacts().values(), [activeProfile, state]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const { filteredContacts } = useFilteredContacts({ contacts, profile: activeProfile, query });
@@ -64,12 +48,6 @@ export const Contacts: FC = () => {
 			{
 				Header: t("COMMON.NAME"),
 				accessor: "name",
-				headerClassName: "no-border",
-				minimumWidth: true,
-			},
-			{
-				Header: t("COMMON.CRYPTOASSET"),
-				className: "justify-start",
 				headerClassName: "no-border",
 				minimumWidth: true,
 			},
@@ -102,7 +80,7 @@ export const Contacts: FC = () => {
 
 	const handleSend = useCallback(
 		(address: Contracts.IContactAddress) => {
-			const schema = { coin: address.coin(), network: address.network(), recipient: address.address() };
+			const schema = { coin: address.coin(), recipient: address.address() };
 			const queryParameters = new URLSearchParams(schema).toString();
 			const url = `/profiles/${activeProfile.id()}/send-transfer?${queryParameters}`;
 
@@ -123,18 +101,23 @@ export const Contacts: FC = () => {
 		[t],
 	);
 
+	const hasBalance = useMemo(
+		() => Object.values(activeProfile.wallets().all()).reduce((acc, wallet) => acc + wallet.balance(), 0) > 0,
+		[activeProfile],
+	);
+
 	const renderTableRow = useCallback(
 		(contact: Contracts.IContact) => (
 			<ContactListItem
 				profile={activeProfile}
 				item={contact}
 				options={menuOptions}
-				availableNetworks={availableNetworks}
 				onSend={handleSend}
+				hasBalance={hasBalance}
 				onAction={(action) => handleContactAction(action, contact)}
 			/>
 		),
-		[menuOptions, availableNetworks, handleSend, handleContactAction],
+		[menuOptions, handleSend, handleContactAction],
 	);
 
 	const renderContacts = () => {
@@ -170,7 +153,7 @@ export const Contacts: FC = () => {
 					onSend={handleSend}
 					options={menuOptions}
 					onAction={handleContactAction}
-					availableNetworks={availableNetworks}
+					hasBalance={hasBalance}
 				/>
 			);
 		}

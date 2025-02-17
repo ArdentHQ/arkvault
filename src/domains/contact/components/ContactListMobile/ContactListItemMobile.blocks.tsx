@@ -4,35 +4,26 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import { Address } from "@/app/components/Address";
 import { Icon } from "@/app/components/Icon";
-import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useNetworkOptions, useNetworks } from "@/app/hooks";
-import { networkDisplayName } from "@/utils/network-utils";
+import { useNetworks } from "@/app/hooks";
 interface ContactListItemMobileAddressProperties {
 	profile: Contracts.IProfile;
 	address: Contracts.IContactAddress;
 	onSend: () => void;
-	availableNetworks: AvailableNetwork[];
+	hasBalance: boolean;
 }
 
 export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddressProperties> = ({
 	address,
 	onSend,
-	availableNetworks,
+	hasBalance,
 	profile,
 }) => {
 	const { t } = useTranslation();
 
-	const { networkById } = useNetworkOptions({ profile });
-
 	let sendButtonTooltip = "";
 
-	const availableNetwork = availableNetworks.find((network) => network.id === address.network());
-	const hasBalance = availableNetwork?.hasBalance ?? false;
-
-	if (!availableNetwork) {
-		sendButtonTooltip = t("CONTACTS.VALIDATION.NO_WALLETS");
-	} else if (!hasBalance) {
+	if (!hasBalance) {
 		sendButtonTooltip = t("CONTACTS.VALIDATION.NO_BALANCE");
 	}
 
@@ -43,10 +34,8 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 			return true;
 		}
 
-		return !profileAvailableNetworks.some((network) => network.id() === address.network());
+		return false;
 	}, [hasBalance, profileAvailableNetworks]);
-
-	const network = networkById(address.network());
 
 	return (
 		<div className="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800">
@@ -59,9 +48,6 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 					},
 				)}
 			>
-				<div className="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700">
-					{network && networkDisplayName(network)}
-				</div>
 				<div className="flex items-center overflow-hidden">
 					<Address address={address.address()} showCopyButton />
 				</div>

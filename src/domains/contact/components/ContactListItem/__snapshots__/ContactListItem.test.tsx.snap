@@ -27,19 +27,6 @@ exports[`ContactListItem > should render 1`] = `
         </td>
         <td
           class=""
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-          >
-            <span
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-            >
-              ARK Devnet
-            </span>
-          </div>
-        </td>
-        <td
-          class=""
           data-testid="ContactListItem__address"
         >
           <div
@@ -230,19 +217,6 @@ exports[`ContactListItem > should render as delegate 1`] = `
               >
                 Caio
               </span>
-            </span>
-          </div>
-        </td>
-        <td
-          class=""
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-          >
-            <span
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-            >
-              ARK Devnet
             </span>
           </div>
         </td>
@@ -443,19 +417,6 @@ exports[`ContactListItem > should render options 1`] = `
         </td>
         <td
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-          >
-            <span
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-            >
-              ARK Devnet
-            </span>
-          </div>
-        </td>
-        <td
-          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
           data-testid="ContactListItem__address"
         >
           <div
@@ -630,19 +591,6 @@ exports[`ContactListItem > should render options 1`] = `
         </td>
         <td
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-          >
-            <span
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-            >
-              ARK Devnet
-            </span>
-          </div>
-        </td>
-        <td
-          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
           data-testid="ContactListItem__address"
         >
           <div
@@ -811,19 +759,6 @@ exports[`ContactListItem > should render options 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
           />
-        </td>
-        <td
-          class=""
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-          >
-            <span
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-            >
-              ARK Devnet
-            </span>
-          </div>
         </td>
         <td
           class=""
@@ -1019,19 +954,6 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
         </td>
         <td
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-          >
-            <span
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-            >
-              ARK Devnet
-            </span>
-          </div>
-        </td>
-        <td
-          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
           data-testid="ContactListItem__address"
         >
           <div
@@ -1206,19 +1128,6 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
         </td>
         <td
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-          >
-            <span
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-            >
-              ARK Devnet
-            </span>
-          </div>
-        </td>
-        <td
-          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
           data-testid="ContactListItem__address"
         >
           <div
@@ -1387,19 +1296,6 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
           />
-        </td>
-        <td
-          class=""
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-          >
-            <span
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-            >
-              ARK Devnet
-            </span>
-          </div>
         </td>
         <td
           class=""

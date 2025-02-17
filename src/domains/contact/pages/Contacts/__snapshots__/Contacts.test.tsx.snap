@@ -902,25 +902,9 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
-                      colspan="1"
-                      data-testid="table__th--1"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-start"
-                      >
-                        <div
-                          class=""
-                        >
-                          Cryptoasset
-                        </div>
-                      </div>
-                    </th>
-                    <th
                       class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                       colspan="1"
-                      data-testid="table__th--2"
+                      data-testid="table__th--1"
                       role="columnheader"
                     >
                       <div
@@ -936,7 +920,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                       colspan="1"
-                      data-testid="table__th--3"
+                      data-testid="table__th--2"
                       role="columnheader"
                     >
                       <div
@@ -952,7 +936,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                       colspan="1"
-                      data-testid="table__th--4"
+                      data-testid="table__th--3"
                       role="columnheader"
                     >
                       <div
@@ -988,19 +972,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           >
                             Brian
                           </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-                      >
-                        <span
-                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-                        >
-                          ARK Devnet
                         </span>
                       </div>
                     </td>
@@ -1192,19 +1163,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-                    >
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-                      >
-                        <span
-                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-                        >
-                          ARK Devnet
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="ContactListItem__address"
                     >
                       <div
@@ -1379,19 +1337,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-                    >
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-                      >
-                        <span
-                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-                        >
-                          ARK Devnet
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="ContactListItem__address"
                     >
                       <div
@@ -1560,19 +1505,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       <div
                         class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
                       />
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-                      >
-                        <span
-                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-                        >
-                          ARK Devnet
-                        </span>
-                      </div>
                     </td>
                     <td
                       class=""
@@ -2702,11 +2634,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
                 >
                   <div
-                    class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
-                  >
-                    ARK Devnet
-                  </div>
-                  <div
                     class="flex items-center overflow-hidden"
                   >
                     <div
@@ -2921,11 +2848,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
                 >
                   <div
-                    class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
-                  >
-                    ARK Devnet
-                  </div>
-                  <div
                     class="flex items-center overflow-hidden"
                   >
                     <div
@@ -3021,11 +2943,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
                 >
                   <div
-                    class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
-                  >
-                    ARK Devnet
-                  </div>
-                  <div
                     class="flex items-center overflow-hidden"
                   >
                     <div
@@ -3120,11 +3037,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 <div
                   class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
                 >
-                  <div
-                    class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
-                  >
-                    ARK Devnet
-                  </div>
                   <div
                     class="flex items-center overflow-hidden"
                   >
@@ -4125,25 +4037,9 @@ exports[`Contacts > should render with contacts 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
-                      colspan="1"
-                      data-testid="table__th--1"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-start"
-                      >
-                        <div
-                          class=""
-                        >
-                          Cryptoasset
-                        </div>
-                      </div>
-                    </th>
-                    <th
                       class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                       colspan="1"
-                      data-testid="table__th--2"
+                      data-testid="table__th--1"
                       role="columnheader"
                     >
                       <div
@@ -4159,7 +4055,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                       colspan="1"
-                      data-testid="table__th--3"
+                      data-testid="table__th--2"
                       role="columnheader"
                     >
                       <div
@@ -4175,7 +4071,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                       colspan="1"
-                      data-testid="table__th--4"
+                      data-testid="table__th--3"
                       role="columnheader"
                     >
                       <div
@@ -4211,19 +4107,6 @@ exports[`Contacts > should render with contacts 1`] = `
                           >
                             Brian
                           </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-                      >
-                        <span
-                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-                        >
-                          ARK Devnet
                         </span>
                       </div>
                     </td>
@@ -4415,19 +4298,6 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-                    >
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-                      >
-                        <span
-                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-                        >
-                          ARK Devnet
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="ContactListItem__address"
                     >
                       <div
@@ -4602,19 +4472,6 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-                    >
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-                      >
-                        <span
-                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-                        >
-                          ARK Devnet
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="ContactListItem__address"
                     >
                       <div
@@ -4783,19 +4640,6 @@ exports[`Contacts > should render with contacts 1`] = `
                       <div
                         class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
                       />
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
-                      >
-                        <span
-                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
-                        >
-                          ARK Devnet
-                        </span>
-                      </div>
                     </td>
                     <td
                       class=""

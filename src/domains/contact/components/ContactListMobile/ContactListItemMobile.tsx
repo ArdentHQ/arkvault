@@ -4,7 +4,6 @@ import { ContactListItemMobileAddress } from "./ContactListItemMobile.blocks";
 import { Icon } from "@/app/components/Icon";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { Dropdown } from "@/app/components/Dropdown";
-import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
 import { useAccordion } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
@@ -16,7 +15,7 @@ interface Properties {
 	onSend: (address: Contracts.IContactAddress) => void;
 	options: ContactListItemOption[];
 	onAction: (action: ContactListItemOption) => void;
-	availableNetworks: AvailableNetwork[];
+	hasBalance: boolean;
 }
 
 export const ContactListItemMobile: React.VFC<Properties> = ({
@@ -24,20 +23,20 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 	onSend,
 	options,
 	onAction,
-	availableNetworks,
+	hasBalance,
 	profile,
 }) => {
 	const renderAddress = useCallback(
 		(address: Contracts.IContactAddress) => (
 			<ContactListItemMobileAddress
 				profile={profile}
-				availableNetworks={availableNetworks}
+				hasBalance={hasBalance}
 				onSend={() => onSend(address)}
 				key={address.address()}
 				address={address}
 			/>
 		),
-		[availableNetworks, onSend],
+		[hasBalance, onSend],
 	);
 
 	const { isExpanded, handleHeaderClick } = useAccordion(`${profile.id()}_contact_list_mobile_${contact.id()}`);

@@ -30,7 +30,6 @@ const saveButton = () => screen.getByTestId("contact-form__save-btn");
 
 const addressListID = "contact-form__address-list-item";
 const addAddressID = "contact-form__add-address-btn";
-const ARKDevnet = "ARK Devnet";
 
 describe("ContactForm", () => {
 	beforeAll(() => {
@@ -39,6 +38,7 @@ describe("ContactForm", () => {
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
 		await env.profiles().restore(profile);
 
 		const [wallet] = profile.wallets().values();
@@ -81,59 +81,6 @@ describe("ContactForm", () => {
 		});
 	});
 
-	it("should clear errors when changing network", async () => {
-		render(
-			<ContactForm
-				profile={profile}
-				onCancel={onCancel}
-				onSave={onSave}
-				onChange={onChange}
-				errors={{ address: "Contact address error" }}
-			/>,
-		);
-
-		await waitFor(() => {
-			expect(saveButton()).toBeDisabled();
-		});
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Input__error")).toBeInTheDocument();
-		});
-
-		await userEvent.type(nameInput(), "name");
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
-
-		await userEvent.type(addressInput(), validArkDevnetAddress);
-
-		await waitFor(() => {
-			expect(addressInput()).toHaveValue(validArkDevnetAddress);
-		});
-
-		await waitFor(() => {
-			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
-		});
-
-		await userEvent.click(screen.getByTestId(addAddressID));
-
-		await waitFor(() => {
-			expect(screen.getByTestId(addressListID)).toBeVisible();
-		});
-
-		await waitFor(() => {
-			expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument();
-		});
-
-		await waitFor(() => {
-			expect(saveButton()).not.toBeDisabled();
-		});
-	});
-
 	it("should handle onChange event", async () => {
 		const name = "Sample name";
 
@@ -160,18 +107,14 @@ describe("ContactForm", () => {
 		});
 	});
 
-	it("should select cryptoasset", async () => {
-		render(<ContactForm profile={profile} onCancel={onCancel} onChange={onChange} errors={{}} onSave={onSave} />);
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
-	});
-
 	it("should add a valid address successfully", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
+
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
@@ -181,13 +124,6 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue("name");
 		});
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
 		await userEvent.type(addressInput(), validArkDevnetAddress);
 
@@ -204,6 +140,8 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId(addressListID)).toBeVisible();
 		});
+
+		validateMock.mockRestore();
 	});
 
 	it("should not add invalid address and should display error message", async () => {
@@ -216,13 +154,6 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue("name");
 		});
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
 		await userEvent.type(addressInput(), "invalid address");
 
@@ -254,13 +185,6 @@ describe("ContactForm", () => {
 			expect(nameInput()).toHaveValue("name");
 		});
 
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
-
 		const contactAddress = contact.addresses().first().address();
 
 		await userEvent.type(addressInput(), contactAddress);
@@ -284,6 +208,12 @@ describe("ContactForm", () => {
 
 	it("should handle save", async () => {
 		const onSave = vi.fn();
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
 
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
@@ -292,13 +222,6 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue("name");
 		});
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
 		await userEvent.type(addressInput(), validArkDevnetAddress);
 
@@ -327,14 +250,15 @@ describe("ContactForm", () => {
 				addresses: [
 					{
 						address: validArkDevnetAddress,
-						coin: "ARK",
+						coin: "Mainsail",
 						name: validArkDevnetAddress,
-						network: "ark.devnet",
 					},
 				],
 				name: expect.any(String),
 			});
 		});
+
+		validateMock.mockRestore();
 	});
 
 	it("should select the network if only one is available", async () => {
@@ -345,10 +269,6 @@ describe("ContactForm", () => {
 
 		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK"));
-
 		await userEvent.type(addressInput(), "AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
 
 		await waitFor(() => {
@@ -357,6 +277,12 @@ describe("ContactForm", () => {
 	});
 
 	it("should remove network from options", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
@@ -366,13 +292,6 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue("name");
 		});
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.type(selectNetworkInput, "ARK");
-		await userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK"));
 
 		await userEvent.type(addressInput(), "AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
 
@@ -390,12 +309,7 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId(addressListID)).toBeVisible();
 		});
 
-		// Second addition
-
-		await userEvent.type(selectNetworkInput, "ARK");
-		await userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
+		validateMock.mockRestore();
 	});
 
 	it("should remove an address", async () => {

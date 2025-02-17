@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 
 import { useProfileAddresses } from "./use-profile-addresses";
-import { env, getDefaultProfileId, MNEMONICS } from "@/utils/testing-library";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -31,20 +31,6 @@ describe("useProfileAddresses", () => {
 		expect(result.current.allAddresses).toHaveLength(6);
 		expect(result.current.contactAddresses).toHaveLength(4);
 		expect(result.current.profileAddresses).toHaveLength(2);
-	});
-
-	it("should filter address by selected network", async () => {
-		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.mainnet",
-		});
-		await profile.sync();
-		const { result } = renderHook(() => useProfileAddresses({ network: wallet.network(), profile }));
-
-		expect(result.current.allAddresses).toHaveLength(0);
-		expect(result.current.contactAddresses).toHaveLength(0);
-		expect(result.current.profileAddresses).toHaveLength(0);
 	});
 
 	it("should return all available addresses except MultiSignature", () => {
