@@ -32,6 +32,7 @@ export const translations = {
 	},
 
 	VALIDATION: {
+		NETWORK_NOT_AVAILABLE: "Network not available",
 		ADDRESS_IS_INVALID: "The address is not valid",
 		CONTACT_ADDRESS_EXISTS: "Contact with this address already exists",
 		CONTACT_NAME_EXISTS: "Contact with name {{name}} already exists",
