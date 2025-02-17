@@ -122,13 +122,8 @@ exports[`ContactListItemMobile > should render 1`] = `
           class="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800"
         >
           <div
-            class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-secondary-100"
+            class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
           >
-            <div
-              class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
-            >
-              ARK Devnet
-            </div>
             <div
               class="flex items-center overflow-hidden"
             >
@@ -187,9 +182,8 @@ exports[`ContactListItemMobile > should render 1`] = `
             class="flex h-full"
           >
             <button
-              class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-secondary-500 dark:text-theme-secondary-800"
+              class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-navy-600 hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200"
               data-testid="ContactListItemMobileAddress__send-button"
-              disabled=""
               type="button"
             >
               <div>
@@ -347,13 +341,8 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
           class="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800"
         >
           <div
-            class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-secondary-100"
+            class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
           >
-            <div
-              class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
-            >
-              ARK Devnet
-            </div>
             <div
               class="flex items-center overflow-hidden"
             >
@@ -412,9 +401,8 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
             class="flex h-full"
           >
             <button
-              class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-secondary-500 dark:text-theme-secondary-800"
+              class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-navy-600 hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200"
               data-testid="ContactListItemMobileAddress__send-button"
-              disabled=""
               type="button"
             >
               <div>

@@ -1,12 +1,11 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { ContactListItemMobile } from "./ContactListItemMobile";
-import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 
 interface Properties {
 	profile: Contracts.IProfile;
-	availableNetworks: AvailableNetwork[];
+	hasBalance: boolean;
 	options: ContactListItemOption[];
 	contacts: Contracts.IContact[];
 	onAction: (action: ContactListItemOption, contact: Contracts.IContact) => void;
@@ -15,7 +14,7 @@ interface Properties {
 
 export const ContactListMobile: React.VFC<Properties> = ({
 	profile,
-	availableNetworks,
+	hasBalance,
 	contacts,
 	options,
 	onAction,
@@ -30,7 +29,7 @@ export const ContactListMobile: React.VFC<Properties> = ({
 				onSend={onSend}
 				options={options}
 				onAction={(action) => onAction(action, contact)}
-				availableNetworks={availableNetworks}
+				hasBalance={hasBalance}
 			/>
 		))}
 	</div>
