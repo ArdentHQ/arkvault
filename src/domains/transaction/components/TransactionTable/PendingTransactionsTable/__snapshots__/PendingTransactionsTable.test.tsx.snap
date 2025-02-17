@@ -322,11 +322,11 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -550,7 +550,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -652,11 +652,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex flex-row gap-2"
+                          class="flex w-full flex-row gap-2"
                           data-testid="TransactionRowAddressing__vote"
                         >
                           <div
-                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
@@ -1076,11 +1076,11 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -1294,7 +1294,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -1396,11 +1396,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex flex-row gap-2"
+                          class="flex w-full flex-row gap-2"
                           data-testid="TransactionRowAddressing__vote"
                         >
                           <div
-                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
@@ -1820,11 +1820,11 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -2019,7 +2019,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -2552,11 +2552,11 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -2645,7 +2645,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -3178,11 +3178,11 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -3271,7 +3271,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -3373,11 +3373,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex flex-row gap-2"
+                          class="flex w-full flex-row gap-2"
                           data-testid="TransactionRowAddressing__vote"
                         >
                           <div
-                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
@@ -3797,11 +3797,11 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -4315,11 +4315,11 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -4804,11 +4804,11 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -5370,27 +5370,38 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
                     <div
-                      class="w-50 sm:w-30"
+                      class="grow"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
+                        <span
+                          class="font-semibold text-sm text-theme-text"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            ARK Wallet 1
+                          </span>
+                        </span>
                         <div
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5472,7 +5483,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
             >
               <td>
                 <div
-                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
@@ -5943,11 +5954,11 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
@@ -6461,11 +6472,11 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="flex flex-row gap-2"
+                    class="flex w-full flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
