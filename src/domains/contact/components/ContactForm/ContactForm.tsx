@@ -42,8 +42,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 
 	const network = env.availableNetworks()[0];
 
-	console.log(network.coin(), network.id());
-
 	const form = useForm<ContactFormState>({
 		defaultValues: {
 			address: "",
