@@ -24,7 +24,6 @@ import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
 import { Logo } from "@/app/components/Logo";
-import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
