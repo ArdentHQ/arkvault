@@ -17,6 +17,10 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		wallet: () => ({
 			...TransactionFixture.wallet(),
 			currency: () => "DARK",
+			network: () => ({
+				coin: () => "DARK",
+				id: () => "ark.devnet",
+			}),
 			username: () => "test_username",
 		}),
 	};
@@ -85,13 +89,16 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 								...fixture,
 								wallet: () => ({
 									...fixture.wallet(),
-									currency: () => "BTC",
+									currency: () => "DARK",
 									isLedger: () => false,
-									network: () => ({ isTest: () => false }),
+									network: () => ({
+										coin: () => "DARK",
+										id: () => "ark.devnet",
+									}),
 								}),
 							} as any
 						}
-						exchangeCurrency="BTC"
+						exchangeCurrency="DARK"
 						profile={profile}
 					/>
 				</tbody>
@@ -153,23 +160,11 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeInTheDocument();
 	});
 
-	it("should render value when hideSender is true", () => {
+	it("should render amount with the currency in parenthesis", () => {
 		render(
 			<table>
 				<tbody>
 					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={true} />
-				</tbody>
-			</table>,
-		);
-
-		expect(screen.getByText("Value (DARK)")).toBeInTheDocument();
-	});
-
-	it("should render amount when hideSender is false", () => {
-		render(
-			<table>
-				<tbody>
-					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={false} />
 				</tbody>
 			</table>,
 		);
