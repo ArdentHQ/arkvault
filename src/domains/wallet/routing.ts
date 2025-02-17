@@ -9,7 +9,6 @@ const WalletGroupPage = preloadLazy(
 );
 
 export const WalletRoutes: RouteItem[] = [
-
 	{
 		component: ImportWallet,
 		exact: true,

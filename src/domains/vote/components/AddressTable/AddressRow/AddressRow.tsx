@@ -172,11 +172,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	return (
 		<TableRow className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
-			<TableCell
-				data-testid="AddressRow__wallet"
-				variant="start"
-				innerClassName="cursor-pointer group space-x-3"
-			>
+			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="cursor-pointer group space-x-3">
 				<div className="w-40 flex-1">
 					<Address
 						address={wallet.address()}

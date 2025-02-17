@@ -154,9 +154,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	return (
 		<tr data-testid="AddressRowMobile">
 			<td className="pt-3">
-				<div
-					className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
-				>
+				<div className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<div className="flex w-0 flex-1 overflow-hidden">
