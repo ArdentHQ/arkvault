@@ -81,9 +81,6 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			stopEventBubbling(event);
 
-			const profileId = profile.id();
-			const walletId = wallet.id();
-
 			for (const profileWallet of profile.wallets().values()) {
 				if (profileWallet.address() === wallet.address()) {
 					removeSelectedAddresses([wallet.address()], wallet.network());
