@@ -8,7 +8,6 @@ export enum ProfilePaths {
 	// Wallet
 	ImportWallet = "/profiles/:profileId/wallets/import",
 	ImportWalletLedger = "/profiles/:profileId/wallets/import/ledger",
-	WalletGroupPage = "/profiles/:profileId/network/:networkId",
 	// Messages
 	SignMessage = "/profiles/:profileId/sign-message",
 	SignMessageWallet = "/profiles/:profileId/wallets/:walletId/sign-message",

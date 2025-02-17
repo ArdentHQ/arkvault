@@ -7,7 +7,6 @@ describe("routing", () => {
 		expect(WalletRoutes).toStrictEqual([
 			expect.objectContaining({ path: ProfilePaths.ImportWalletLedger }),
 			expect.objectContaining({ path: ProfilePaths.ImportWallet }),
-			expect.objectContaining({ path: ProfilePaths.WalletGroupPage }),
 		]);
 	});
 
