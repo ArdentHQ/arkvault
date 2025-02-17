@@ -236,7 +236,12 @@ export const CreateAddressesSidePanel = ({
 	}, [useEncryption, t]);
 
 	return (
-		<SidePanel header={<StepHeader step={activeTab}/>} open={open} onOpenChange={onOpenChange} dataTestId="CreateAddressSidePanel">
+		<SidePanel
+			header={<StepHeader step={activeTab} />}
+			open={open}
+			onOpenChange={onOpenChange}
+			dataTestId="CreateAddressSidePanel"
+		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0">
 				<Tabs activeId={activeTab} className="pb-20">
 					<div className="mb-4 sm:hidden">
@@ -324,7 +329,7 @@ export const CreateAddressesSidePanel = ({
 	);
 };
 
-const StepHeader= ({step}: {step: Step}): JSX.Element => {
+const StepHeader = ({ step }: { step: Step }): JSX.Element => {
 	const { t } = useTranslation();
 
 	const headers: Record<Step, JSX.Element> = {

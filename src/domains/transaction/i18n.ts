@@ -361,6 +361,7 @@ export const translations = {
 		VOTE_COMBINATION: "Vote Swap",
 	},
 
+	TRANSACTION_TYPE_NOT_AVAILABLE: "Transaction type not available for this address",
 	TYPE: "Type",
 
 	UNVOTES: "Unvotes",

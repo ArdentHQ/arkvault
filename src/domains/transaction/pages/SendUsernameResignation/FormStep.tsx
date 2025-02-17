@@ -10,6 +10,7 @@ import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
@@ -62,6 +63,7 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 						profile={profile}
 						disabled={profile.wallets().count() === 0}
 						onChange={handleSelectSender}
+						disableAction={(wallet) => !WalletCapabilities(wallet).canSendUsernameResignation()}
 					/>
 				</FormField>
 
