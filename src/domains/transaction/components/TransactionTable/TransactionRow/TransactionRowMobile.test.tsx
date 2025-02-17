@@ -19,7 +19,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			currency: () => "DARK",
 			network: () => ({
 				coin: () => "DARK",
-				id: () => "ark.mainnet",
+				id: () => "ark.devnet",
 			}),
 			username: () => "test_username",
 		}),
@@ -89,16 +89,16 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 								...fixture,
 								wallet: () => ({
 									...fixture.wallet(),
-									currency: () => "BTC",
+									currency: () => "DARK",
 									isLedger: () => false,
 									network: () => ({
-										coin: () => "BTC",
-										id: () => "ark.mainnet",
+										coin: () => "DARK",
+										id: () => "ark.devnet",
 									}),
 								}),
 							} as any
 						}
-						exchangeCurrency="BTC"
+						exchangeCurrency="DARK"
 						profile={profile}
 					/>
 				</tbody>

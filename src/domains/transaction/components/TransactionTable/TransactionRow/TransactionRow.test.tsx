@@ -131,7 +131,7 @@ describe("TransactionRow", () => {
 									isLedger: () => false,
 									network: () => ({
 										coin: () => "DARK",
-										id: () => "ark.mainnet",
+										id: () => "ark.devnet",
 									}),
 								}),
 							} as any
