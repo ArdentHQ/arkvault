@@ -250,7 +250,7 @@ describe("ContactForm", () => {
 				addresses: [
 					{
 						address: validArkDevnetAddress,
-						coin: "ARK",
+						coin: "Mainsail",
 						name: validArkDevnetAddress,
 					},
 				],
