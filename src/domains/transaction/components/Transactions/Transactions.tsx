@@ -242,6 +242,16 @@ export const Transactions = memo(function Transactions({
 					/>
 				</div>
 
+				<TransactionTable
+					transactions={transactions}
+					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
+					isLoading={isLoadingTransactions}
+					skeletonRowsLimit={8}
+					onRowClick={setTransactionModalItem}
+					profile={profile}
+					hideSender={selectedWallets === 1}
+				/>
+
 				{hasEmptyResults && (
 					<>
 						{selectedTransactionTypes?.length ? (
@@ -260,19 +270,6 @@ export const Transactions = memo(function Transactions({
 							</div>
 						)}
 					</>
-				)}
-
-				{!hasEmptyResults && (
-					<TransactionTable
-						transactions={transactions}
-						exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
-						hideHeader={hasEmptyResults}
-						isLoading={isLoadingTransactions}
-						skeletonRowsLimit={8}
-						onRowClick={setTransactionModalItem}
-						profile={profile}
-						hideSender={selectedWallets === 1}
-					/>
 				)}
 
 				{transactionModalItem && (
