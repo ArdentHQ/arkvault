@@ -65,7 +65,9 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	}, [errors, setError]);
 
 	const handleAddAddress = async () => {
-		if (!network) return setError("address", { message: t("CONTACTS.VALIDATION.NETWORK_NOT_AVAILABLE"), type: "manual" });
+		if (!network) {
+			return setError("address", { message: t("CONTACTS.VALIDATION.NETWORK_NOT_AVAILABLE"), type: "manual" });
+		}
 
 		const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
 		await instance.__construct();
