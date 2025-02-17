@@ -28,7 +28,7 @@ import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetwork } from "./components/SelectNetwork";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 const NavWrapper = ({
 	variant = "default",
@@ -200,7 +200,8 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
 	const { showSupportChat } = useZendesk();
-	const { allWallets: wallets } = usePortfolio({ profile });
+	const { activeNetwork } = useActiveNetwork({ profile })
+
 
 	const modalSize = useMemo<Size>(() => {
 		if (isLg) {
@@ -221,6 +222,17 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const [selectedWallet, setSelectedWallet] = useState<SelectedWallet | undefined>();
 
 	const isProfileRestored = profile.status().isRestored();
+
+	const wallets = useMemo<Contracts.IReadWriteWallet[]>(() => {
+		if (!isProfileRestored) {
+			return [];
+		}
+
+		return profile
+			.wallets()
+			.values()
+			.filter((wallet) => wallet.network().id() === activeNetwork.id());
+	}, [profile, isProfileRestored, activeNetwork]);
 
 	const navigationMenu = useMemo(() => getNavigationMenu(t), [t]);
 	const handleSelectMenuItem = useCallback(
