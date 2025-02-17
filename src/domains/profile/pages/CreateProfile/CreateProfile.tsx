@@ -52,7 +52,7 @@ export const CreateProfile = () => {
 			title={<Trans i18nKey="COMMON.APP_NAME" />}
 		>
 			<div className="flex h-page sm:items-center" data-testid="CreateProfile">
-				<div className="mx-auto max-w-lg px-6 lg:container md:px-10">
+				<div className="mx-auto max-w-lg px-6">
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 						titleClassName="text-lg leading-[21px] sm:text-2xl sm:leading-[29px]"
