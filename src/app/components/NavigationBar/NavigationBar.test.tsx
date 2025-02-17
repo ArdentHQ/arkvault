@@ -444,7 +444,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should disable send transfer button when no Live wallets in test network", () => {
-		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+		const walletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([])
 		const mockProfile = environmentHooks.useActiveProfile();
 		const profileSettingsMock = vi.spyOn(mockProfile.settings(), "get").mockImplementation((key: string) => {
 			if (key === Contracts.ProfileSetting.Name) {
@@ -463,7 +463,7 @@ describe("NavigationBar", () => {
 		expect(screen.getByTestId("NavigationBar__buttons--send")).toHaveAttribute("disabled");
 
 		profileSettingsMock.mockRestore();
-		resetProfileNetworksMock();
+		walletsSpy.mockRestore();
 	});
 
 	it("should hide the mobile menu if an input is focused", async () => {
