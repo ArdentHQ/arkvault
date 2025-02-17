@@ -29,6 +29,7 @@ import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetwork } from "./components/SelectNetwork";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 const NavWrapper = ({
 	variant = "default",
@@ -200,8 +201,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
 	const { showSupportChat } = useZendesk();
-
-	const enabledNetworkIds = profileAllEnabledNetworkIds(profile);
+	const { allWallets: wallets } = usePortfolio({ profile })
 
 	const modalSize = useMemo<Size>(() => {
 		if (isLg) {
@@ -284,17 +284,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		assertString(name);
 		return name.slice(0, 2).toUpperCase();
 	}, [profile, isProfileRestored]);
-
-	const wallets = useMemo<Contracts.IReadWriteWallet[]>(() => {
-		if (!isProfileRestored) {
-			return [];
-		}
-
-		return profile
-			.wallets()
-			.values()
-			.filter((wallet) => enabledNetworkIds.includes(wallet.network().id()));
-	}, [profile, isProfileRestored, enabledNetworkIds]);
 
 	const handleSelectWallet = (wallet: SelectedWallet) => {
 		setSearchWalletIsOpen(false);
