@@ -1,11 +1,9 @@
-import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 interface AddressItem {
 	address: string;
 	coin: string;
 	name: string;
-	network: string;
 }
 
 interface AddressListItemProperties {
@@ -40,7 +38,6 @@ interface ContactFormData {
 }
 
 interface ContactFormState {
-	network: Networks.Network;
 	name: string;
 	address: string;
 }

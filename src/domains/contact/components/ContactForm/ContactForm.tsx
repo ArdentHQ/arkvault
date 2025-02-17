@@ -1,6 +1,6 @@
 import { Coins } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -10,11 +10,10 @@ import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel, SubForm } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { InputAddress, InputDefault } from "@/app/components/Input";
-import { useBreakpoint, useNetworkOptions } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
-import { assertNetwork } from "@/utils/assertions";
-import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
-import { enabledNetworksCount } from "@/utils/network-utils";
+import { useEnvironmentContext } from "@/app/contexts";
+import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
@@ -34,36 +33,30 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 						address: address.address(),
 						coin: address.coin(),
 						name: contact.name(),
-						network: address.network(),
 					}))
 			: [],
 	);
 
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
+	const { env } = useEnvironmentContext();
 
-	const { networks } = useNetworkOptions({ profile });
-	const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
+	const network = env.availableNetworks().find((network) => network.id() === NetworkOption.Mainnet);
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
 			address: "",
 			name: contact?.name() ?? "",
-			network: onlyHasOneNetwork ? networks[0] : undefined,
 		},
 		mode: "onChange",
 	});
 
-	const { formState, register, setError, setValue, watch, trigger } = form;
+	const { formState, register, setError, setValue, watch } = form;
 	const { isValid } = formState;
 
-	const { name, network, address } = watch();
+	const { name, address } = watch();
 
 	const contactFormValidation = contactForm(t, profile);
-
-	useEffect(() => {
-		register("network");
-	}, [register]);
 
 	useEffect(() => {
 		for (const [field, message] of Object.entries(errors) as [keyof ContactFormState, string][]) {
@@ -71,13 +64,11 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 		}
 	}, [errors, setError]);
 
-	const filteredNetworks = useMemo(() => {
-		const usedNetworks = new Set(addresses.map((address) => address.network));
-		return networks.filter((network) => !usedNetworks.has(network.id()));
-	}, [addresses, networks]);
-
 	const handleAddAddress = async () => {
-		assertNetwork(network);
+		if (!network) {
+			return setError("address", { message: t("CONTACTS.VALIDATION.NETWORK_NOT_AVAILABLE"), type: "manual" });
+		}
+
 		const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
 		await instance.__construct();
 		const isValidAddress: boolean = await instance.address().validate(address);
@@ -98,18 +89,14 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 				address,
 				coin: network.coin(),
 				name: address,
-				network: network.id(),
 			},
 		]);
 
-		setValue("network", undefined);
 		setValue("address", "");
 	};
 
 	const handleRemoveAddress = (item: AddressItem) => {
-		setAddresses(
-			addresses.filter((current) => !(current.address === item.address && current.network === item.network)),
-		);
+		setAddresses(addresses.filter((current) => !(current.address === item.address)));
 	};
 
 	return (
@@ -135,20 +122,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 			</FormField>
 
 			<SubForm className="!-mx-4 !mt-4 !p-4">
-				<FormField name="network">
-					<FormLabel>{t("CONTACTS.CONTACT_FORM.CRYPTOASSET")}</FormLabel>
-					<SelectNetworkDropdown
-						profile={profile}
-						networks={filteredNetworks}
-						placeholder={t("COMMON.INPUT_NETWORK.PLACEHOLDER")}
-						selectedNetwork={network}
-						onChange={(selectedNetwork) => {
-							setValue("network", selectedNetwork, { shouldDirty: true, shouldValidate: true });
-							trigger("address");
-						}}
-					/>
-				</FormField>
-
 				<FormField name="address" data-testid="ContactForm__address">
 					<FormLabel>{t("CONTACTS.CONTACT_FORM.ADDRESS")}</FormLabel>
 
@@ -166,7 +139,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 						data-testid="contact-form__add-address-btn"
 						variant="secondary"
 						className="w-full"
-						disabled={!network || !address}
+						disabled={!address}
 						onClick={handleAddAddress}
 					>
 						{t("CONTACTS.CONTACT_FORM.ADD_ADDRESS")}

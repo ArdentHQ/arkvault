@@ -6,18 +6,28 @@ import React from "react";
 import { CreateContact } from "./CreateContact";
 import { translations } from "@/domains/contact/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
 
 const onSave = vi.fn();
 const onCancel = vi.fn();
 const onClose = vi.fn();
 
 let profile: Contracts.IProfile;
-// let contact: Contracts.IContact;
+
+const nameInput = () => screen.getByTestId("contact-form__name-input");
+const addressInput = () => screen.getByTestId("contact-form__address-input");
+const addAddressButton = () => screen.getByTestId("contact-form__add-address-btn");
+const saveButton = () => screen.getByTestId("contact-form__save-btn");
+const modalInner = () => screen.getByTestId("Modal__inner");
+
+const newContact = {
+	address: "0x6F0182a0cc707b055322CcF6d4CB6a5Aff1aEb22",
+	name: "Test Contact",
+};
 
 describe("CreateContact", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		// contact = profile.contacts().values()[0];
 	});
 
 	it("should render", async () => {
@@ -26,45 +36,64 @@ describe("CreateContact", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
+			expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
 		});
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_CREATE_CONTACT.DESCRIPTION);
+		expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.DESCRIPTION);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	// it("should not create new contact if contact name exists", async () => {
-	// 	render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
-	//
-	// 	userEvent.paste(screen.getByTestId("contact-form__name-input"), contact.name());
-	//
-	// 	await waitFor(() => {
-	// 		expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
-	// 	});
-	//
-	// 	expect(screen.getByTestId("Input__error")).toBeVisible();
-	//
-	// 	const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-	//
-	// 	userEvent.paste(selectNetworkInput, "ARK D");
-	// 	userEvent.keyboard("{enter}");
-	//
-	// 	await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
-	//
-	// 	userEvent.type(screen.getByTestId("contact-form__address-input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
-	//
-	// 	await waitFor(() => {
-	// 		expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
-	// 	});
-	//
-	// 	userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
-	//
-	// 	await waitFor(() => {
-	// 		expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
-	// 	});
-	//
-	// 	userEvent.click(screen.getByTestId("contact-form__save-btn"));
-	//
-	// 	expect(onSave).not.toHaveBeenCalled();
-	// });
+	it("should call onSave when form is submitted", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
+		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
+
+		await waitFor(() => {
+			expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
+		});
+
+		await userEvent.type(nameInput(), newContact.name);
+		await userEvent.tab();
+		await userEvent.type(addressInput(), newContact.address);
+		await userEvent.tab();
+
+		await waitFor(() => {
+			expect(addAddressButton()).not.toBeDisabled();
+		});
+
+		await userEvent.click(addAddressButton());
+
+		await waitFor(() => {
+			expect(saveButton()).not.toBeDisabled();
+		});
+
+		await userEvent.click(saveButton());
+
+		await waitFor(() => {
+			expect(onSave).toHaveBeenCalled();
+		});
+		validateMock.mockRestore();
+	});
+
+	it("should update errors when handleChange is called", async () => {
+		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
+		});
+
+		await userEvent.type(nameInput(), newContact.name);
+		await userEvent.tab();
+
+		await userEvent.clear(nameInput());
+		await userEvent.tab();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__name-input")).toHaveAttribute("aria-invalid", "true");
+		});
+	});
 });

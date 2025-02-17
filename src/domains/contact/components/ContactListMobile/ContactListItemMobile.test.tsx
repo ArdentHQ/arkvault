@@ -38,7 +38,7 @@ describe("ContactListItemMobile", () => {
 		const { asFragment } = render(
 			<ContactListItemMobile
 				profile={profile}
-				availableNetworks={[]}
+				hasBalance={true}
 				contact={contact}
 				onSend={vi.fn()}
 				options={options}
@@ -53,7 +53,7 @@ describe("ContactListItemMobile", () => {
 		const { asFragment } = render(
 			<ContactListItemMobile
 				profile={profile}
-				availableNetworks={[]}
+				hasBalance={true}
 				contact={contact}
 				onSend={vi.fn()}
 				options={options}
@@ -74,7 +74,7 @@ describe("ContactListItemMobile", () => {
 		render(
 			<ContactListItemMobile
 				profile={profile}
-				availableNetworks={[{ hasBalance: true, id: "ark.devnet" }]}
+				hasBalance={true}
 				contact={contact}
 				onSend={onSend}
 				options={options}
@@ -101,7 +101,7 @@ describe("ContactListItemMobile", () => {
 		render(
 			<ContactListItemMobile
 				profile={profile}
-				availableNetworks={[{ hasBalance: false, id: "ark.devnet" }]}
+				hasBalance={false}
 				contact={contact}
 				onSend={onSend}
 				options={options}
@@ -128,7 +128,7 @@ describe("ContactListItemMobile", () => {
 		render(
 			<ContactListItemMobile
 				profile={profile}
-				availableNetworks={[{ hasBalance: true, id: "ark.devnet" }]}
+				hasBalance={true}
 				contact={contact}
 				onSend={vi.fn()}
 				options={options}
