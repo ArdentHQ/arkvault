@@ -17,7 +17,6 @@ import {
 	waitFor,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
