@@ -191,83 +191,106 @@ export const ImportWallet = () => {
 	}, [useEncryption, activeTab]);
 
 	return (
-		<Page pageTitle={t("WALLETS.PAGE_IMPORT_WALLET.TITLE")}>
-			<Section className="flex-1">
-				<Form
-					className="mx-auto max-w-xl"
-					context={form}
-					onSubmit={handleFinish}
-					data-testid="ImportWallet__form"
-				>
-					{isLedgerImport ? (
-						<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
-					) : (
-						<Tabs activeId={activeTab}>
-							<StepIndicator steps={allSteps} activeIndex={activeTab} />
+		<div
+			style={{
+				position: "fixed",
+				top: 0,
+				left: 0,
+				right: 0,
+				bottom: 0,
+				background: "rgba(0, 0, 0, 0.5)",
+				display: "flex",
+				alignItems: "center",
+				justifyContent: "center",
+				zIndex: 1000,
+			}}
+		>
+			<div
+				style={{
+					background: "#fff",
+					padding: "2rem",
+					borderRadius: "8px",
+					boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
+					textAlign: "center",
+				}}
+			>
+				<Section className="flex-1">
+					<Form
+						className="mx-auto max-w-xl"
+						context={form}
+						onSubmit={handleFinish}
+						data-testid="ImportWallet__form"
+					>
+						{isLedgerImport ? (
+							<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
+						) : (
+							<Tabs activeId={activeTab}>
+								<StepIndicator steps={allSteps} activeIndex={activeTab} />
 
-							<div className="mt-8">
-								<TabPanel tabId={Step.MethodStep}>
-									<MethodStep profile={activeProfile} network={activeNetwork} />
-								</TabPanel>
+								<div className="mt-8">
+									<TabPanel tabId={Step.MethodStep}>
+										<MethodStep profile={activeProfile} network={activeNetwork} />
+									</TabPanel>
 
-								<TabPanel tabId={Step.EncryptPasswordStep}>
-									<EncryptPasswordStep importedWallet={importedWallet} />
-								</TabPanel>
+									<TabPanel tabId={Step.EncryptPasswordStep}>
+										<EncryptPasswordStep importedWallet={importedWallet} />
+									</TabPanel>
 
-								<TabPanel tabId={Step.SummaryStep}>
-									<SuccessStep
-										importedWallet={importedWallet}
-										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
-									/>
-								</TabPanel>
+									<TabPanel tabId={Step.SummaryStep}>
+										<SuccessStep
+											importedWallet={importedWallet}
+											onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+										/>
+									</TabPanel>
 
-								{activeTab <= Step.EncryptPasswordStep && (
-									<FormButtons>
-										<Button
-											disabled={isImporting}
-											variant="secondary"
-											onClick={handleBack}
-											data-testid="ImportWallet__back-button"
-										>
-											{t("COMMON.BACK")}
-										</Button>
+									{activeTab <= Step.EncryptPasswordStep && (
+										<FormButtons>
+											<Button
+												disabled={isImporting}
+												variant="secondary"
+												onClick={handleBack}
+												data-testid="ImportWallet__back-button"
+											>
+												{t("COMMON.BACK")}
+											</Button>
 
-										<Button
-											disabled={isNextDisabled}
-											isLoading={isEncrypting || isImporting}
-											onClick={handleNext}
-											data-testid="ImportWallet__continue-button"
-										>
-											{t("COMMON.CONTINUE")}
-										</Button>
-									</FormButtons>
-								)}
+											<Button
+												disabled={isNextDisabled}
+												isLoading={isEncrypting || isImporting}
+												onClick={handleNext}
+												data-testid="ImportWallet__continue-button"
+											>
+												{t("COMMON.CONTINUE")}
+											</Button>
+										</FormButtons>
+									)}
 
-								{activeTab === Step.SummaryStep && (
-									<FormButtons>
-										<Button
-											disabled={isSubmitting}
-											type="submit"
-											data-testid="ImportWallet__finish-button"
-										>
-											{t("COMMON.GO_TO_WALLET")}
-										</Button>
-									</FormButtons>
-								)}
-							</div>
-						</Tabs>
+									{activeTab === Step.SummaryStep && (
+										<FormButtons>
+											<Button
+												disabled={isSubmitting}
+												type="submit"
+												data-testid="ImportWallet__finish-button"
+											>
+												{t("COMMON.GO_TO_WALLET")}
+											</Button>
+										</FormButtons>
+									)}
+								</div>
+							</Tabs>
+						)}
+					</Form>
+
+					{!!importedWallet && isEditAliasModalOpen && (
+						<UpdateWalletName
+							wallet={importedWallet}
+							profile={activeProfile}
+							onCancel={() => setIsEditAliasModalOpen(false)}
+							onAfterSave={() => setIsEditAliasModalOpen(false)}
+						/>
 					)}
-				</Form>
-
-				{!!importedWallet && isEditAliasModalOpen && (
-					<UpdateWalletName
-						wallet={importedWallet}
-						profile={activeProfile}
-						onCancel={() => setIsEditAliasModalOpen(false)}
-						onAfterSave={() => setIsEditAliasModalOpen(false)}
-					/>
-				)}
-			</Section>
-		</Page>
+				</Section>
+			</div>
+		</div>
 	);
 };

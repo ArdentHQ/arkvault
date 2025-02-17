@@ -17,6 +17,8 @@ export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) 
 	const { env } = useEnvironmentContext();
 	const [redirectUrl, setRedirectUrl] = React.useState<string | undefined>(undefined);
 
+	const background = location.state && (location.state as any).background;
+
 	const previousPath = useRef("");
 
 	useEffect(() => {
@@ -38,20 +40,44 @@ export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) 
 	);
 
 	return (
-		<Switch>
-			{routes.map((route, index) => (
-				<Route key={index} path={route.path} exact={route.exact}>
-					<RouteSuspense skeleton={route.skeleton} path={route.path}>
-						{canActivate ? (
-							<div data-testid="RouterView__wrapper">
-								{createElement(route.component as PreloadableComponent<FC<unknown>>)}
-							</div>
-						) : (
-							<Redirect to={redirectUrl ?? "/"} />
-						)}
-					</RouteSuspense>
-				</Route>
-			))}
-		</Switch>
+		<>
+			{/* Main routes */}
+			<Switch location={background || location}>
+				{routes.map((route, index) => (
+					<Route key={index} path={route.path} exact={route.exact}>
+						<RouteSuspense skeleton={route.skeleton} path={route.path}>
+							{canActivate ? (
+								<div data-testid="RouterView__wrapper">
+									{createElement(route.component as PreloadableComponent<FC<unknown>>)}
+								</div>
+							) : (
+								<Redirect to={redirectUrl ?? "/"} />
+							)}
+						</RouteSuspense>
+					</Route>
+				))}
+			</Switch>
+
+			{/* Render background routes */}
+			{background && (
+				<Switch>
+					{routes
+						.filter((route) => route.path === "/profiles/:profileId/wallets/import")
+						.map((route, index) => (
+							<Route key={index} path={route.path} exact={route.exact}>
+								<RouteSuspense skeleton={route.skeleton} path={route.path}>
+									{canActivate ? (
+										<div data-testid="RouterView__wrapper">
+											{createElement(route.component as PreloadableComponent<FC<unknown>>)}
+										</div>
+									) : (
+										<Redirect to={redirectUrl ?? "/"} />
+									)}
+								</RouteSuspense>
+							</Route>
+						))}
+				</Switch>
+			)}
+		</>
 	);
 };

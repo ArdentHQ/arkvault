@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { generatePath } from "react-router";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -15,6 +15,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const history = useHistory();
+	const location = useLocation();
 	const { openExternal } = useLink();
 
 	const { removeSelectedAddresses } = usePortfolio({ profile });
@@ -219,9 +220,12 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 	const handleImport = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
 			stopEventBubbling(event);
-			history.push(generatePath(ProfilePaths.ImportWallet, { profileId: profile.id() }));
+			console.log("Background is ", history.location, location);
+			history.push(generatePath(ProfilePaths.ImportWallet, { profileId: profile.id() }), {
+				background: location,
+			});
 		},
-		[history, profile, stopEventBubbling],
+		[history, profile, stopEventBubbling, location],
 	);
 
 	const handleImportLedger = useCallback(

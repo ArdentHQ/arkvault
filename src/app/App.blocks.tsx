@@ -1,5 +1,5 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
-import { HashRouter, useHistory } from "react-router-dom";
+import { BrowserRouter, HashRouter, useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
@@ -38,10 +38,10 @@ const AppRouter = ({ children }: { children: React.ReactNode }) => {
 
 	return (
 		<React.Suspense fallback={<PageSkeleton />}>
-			<HashRouter getUserConfirmation={getUserConfirmation}>
+			<BrowserRouter getUserConfirmation={getUserConfirmation}>
 				{children}
 				<ConfirmationModal isOpen={isOpen} onCancel={onCancel} onConfirm={onConfirm} />
-			</HashRouter>
+			</BrowserRouter>
 		</React.Suspense>
 	);
 };
