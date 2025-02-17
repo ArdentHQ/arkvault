@@ -13,6 +13,7 @@ import { InputAddress, InputDefault } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { useEnvironmentContext } from "@/app/contexts";
+import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
@@ -40,7 +41,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { isXs } = useBreakpoint();
 	const { env } = useEnvironmentContext();
 
-	const network = env.availableNetworks()[0];
+	const network = env.availableNetworks().find((network) => network.id() === NetworkOption.Mainnet);
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
@@ -64,6 +65,8 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	}, [errors, setError]);
 
 	const handleAddAddress = async () => {
+		if (!network) return setError("address", { message: t("CONTACTS.VALIDATION.ADDRESS_IS_INVALID"), type: "manual" });
+
 		const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
 		await instance.__construct();
 		const isValidAddress: boolean = await instance.address().validate(address);
