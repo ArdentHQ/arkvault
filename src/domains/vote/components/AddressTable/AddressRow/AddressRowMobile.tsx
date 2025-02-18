@@ -1,6 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { generatePath } from "react-router";
-import { useHistory } from "react-router-dom";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -15,7 +13,6 @@ import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
-import { ProfilePaths } from "@/router/paths";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
 interface AddressRowMobileProperties {
@@ -51,7 +48,6 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
-	const history = useHistory();
 
 	const { getWalletAlias } = useWalletAlias();
 
@@ -158,17 +154,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	return (
 		<tr data-testid="AddressRowMobile">
 			<td className="pt-3">
-				<div
-					className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
-					onClick={() => {
-						history.push(
-							generatePath(ProfilePaths.WalletDetails, {
-								profileId: activeProfile.id(),
-								walletId: wallet.id(),
-							}),
-						);
-					}}
-				>
+				<div className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<div className="flex w-0 flex-1 overflow-hidden">

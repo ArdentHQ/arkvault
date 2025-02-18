@@ -3,7 +3,6 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
-import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
@@ -27,20 +26,6 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 
 	return (
 		<section data-testid="CreateWallet__SuccessStep">
-			<Header
-				title={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE")}
-				titleIcon={
-					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[24, 24]}
-						name="Completed"
-						data-testid="icon-Completed"
-					/>
-				}
-				subtitle={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.SUBTITLE")}
-				className="hidden sm:block"
-			/>
-
 			<div className="mt-4 space-y-4">
 				<DetailWrapper label={t("COMMON.ADDRESSING")}>
 					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
