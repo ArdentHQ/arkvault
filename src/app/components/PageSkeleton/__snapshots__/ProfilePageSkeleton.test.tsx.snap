@@ -80,7 +80,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 hidden sm:flex sm:h-12"
+                class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -96,7 +96,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 hidden sm:flex sm:h-12"
+                class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -112,7 +112,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 hidden sm:flex sm:h-12"
+                class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -128,7 +128,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 hidden sm:flex sm:h-12"
+                class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 sm:flex sm:h-12"
               />
             </div>
             <div
