@@ -18,7 +18,6 @@ const profileName = "test profile";
 const baseSettings = {
 	AUTOMATIC_SIGN_OUT_PERIOD: 15,
 	BIP39_LOCALE: "english",
-	DASHBOARD_TRANSACTION_HISTORY: false,
 	DO_NOT_SHOW_FEE_WARNING: false,
 	EXCHANGE_CURRENCY: "BTC",
 	FALLBACK_TO_DEFAULT_NODES: true,

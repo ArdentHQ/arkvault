@@ -153,7 +153,6 @@
 				"THEME": "light",
 				"TIME_FORMAT": "h:mm A",
 				"USE_TEST_NETWORKS": true,
-				"DASHBOARD_TRANSACTION_HISTORY": true,
 				"DO_NOT_SHOW_FEE_WARNING": false
 			}
 		},
@@ -179,7 +178,6 @@
 				"NAME": "Jane Doe",
 				"THEME": "dark",
 				"TIME_FORMAT": "h:mm A",
-				"DASHBOARD_TRANSACTION_HISTORY": true,
 				"DO_NOT_SHOW_FEE_WARNING": false,
 				"PASSWORD": "$2a$10$Qy/Mcjg2AAZ.Wqj7MUba4eQtNTC5c4Vh6SCWKezmolrp/58TlCA8u",
 				"DASHBOARD_CONFIGURATION": {
@@ -265,7 +263,6 @@
 				"THEME": "light",
 				"TIME_FORMAT": "h:mm A",
 				"USE_TEST_NETWORKS": true,
-				"DASHBOARD_TRANSACTION_HISTORY": true,
 				"DO_NOT_SHOW_FEE_WARNING": false,
 				"DASHBOARD_CONFIGURATION": {
 					"hideBalance": false
