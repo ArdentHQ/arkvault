@@ -513,28 +513,4 @@ describe("NavigationBar", () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(button.querySelector("svg")).toHaveAttribute("height", "32");
 	});
-
-	it("should redirect to send transfer when there is only one wallet", async () => {
-		const wallets = profile.wallets().values();
-		profile.wallets().forget(wallets[0].id());
-		await mockedTestEnvironment.persist();
-
-		expect(profile.wallets().values().length).toBe(1);
-
-		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
-
-		history.push(dashboardUrl);
-
-		renderResponsiveWithRoute(<NavigationBar />, "lg", {
-			history,
-			route: dashboardUrl,
-		});
-
-		const sendButton = screen.getByTestId("NavigationBar__buttons--send");
-		await userEvent.click(sendButton);
-
-		expect(history.location.pathname).toBe(
-			`/profiles/${profile.id()}/wallets/${profile.wallets().values()[0].id()}/send-transfer`,
-		);
-	});
 });

@@ -84,11 +84,7 @@ export const Contacts: FC = () => {
 		(address: Contracts.IContactAddress) => {
 			const schema = { coin: address.coin(), recipient: address.address() };
 			const queryParameters = new URLSearchParams(schema).toString();
-			let url = `/profiles/${activeProfile.id()}/send-transfer?${queryParameters}`;
-
-			if (allWallets.length === 1) {
-				url = `/profiles/${activeProfile.id()}/wallets/${allWallets[0].id()}/send-transfer?${queryParameters}`;
-			}
+			const url = `/profiles/${activeProfile.id()}/send-transfer?${queryParameters}`;
 
 			history.push(url);
 		},
