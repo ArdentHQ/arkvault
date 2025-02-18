@@ -26,13 +26,13 @@ export const ProfilePageSkeleton: React.FC = () => (
 
 						<div className="my-auto ml-4 hidden items-center space-x-4 sm:flex">
 							<Skeleton height={28} width={28} className="hidden sm:flex" />
-							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 hidden sm:flex sm:h-12" />
+							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 sm:flex sm:h-12" />
 							<Skeleton height={28} width={28} className="hidden sm:flex" />
-							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 hidden sm:flex sm:h-12" />
+							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 sm:flex sm:h-12" />
 							<Skeleton height={28} width={28} className="hidden sm:flex" />
-							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 hidden sm:flex sm:h-12" />
+							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 sm:flex sm:h-12" />
 							<Skeleton height={28} width={28} className="hidden sm:flex" />
-							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 hidden sm:flex sm:h-12" />
+							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-secondary-800 sm:flex sm:h-12" />
 						</div>
 
 						<div className="my-auto ml-4 flex items-center">
