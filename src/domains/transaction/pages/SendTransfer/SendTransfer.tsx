@@ -36,6 +36,7 @@ import {
 } from "@/domains/transaction/pages/SendTransfer/TransferOverwriteModal";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 const MAX_TABS = 5;
 
@@ -57,6 +58,7 @@ export const SendTransfer = () => {
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
+	const { allWallets } = usePortfolio({ profile: activeProfile });
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
 
@@ -100,6 +102,13 @@ export const SendTransfer = () => {
 			void handleSubmit(() => submit(true))();
 		}
 	}, [wallet, activeProfile, connect]);
+
+	useEffect(() => {
+		if (allWallets.length === 1 && !wallet) {
+			const wallet = activeProfile.wallets().values()[0];
+			setWallet(wallet);
+		}
+	}, [activeProfile, wallet]);
 
 	useEffect(() => {
 		if (!shouldResetForm) {
