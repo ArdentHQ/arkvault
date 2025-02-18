@@ -81,6 +81,12 @@ describe("UpdateContact", () => {
 	});
 
 	it("should update contact name and address", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
 		const onSaveFunction = vi.fn();
 
 		const newName = "Updated name";
@@ -121,16 +127,6 @@ describe("UpdateContact", () => {
 			expect(nameInput()).toHaveValue(newName);
 		});
 
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.clear(selectNetworkInput);
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.tab();
-
-		await waitFor(() => {
-			expect(selectNetworkInput).toHaveValue("ARK Devnet");
-		});
-
 		const addressInput = screen.getByTestId("contact-form__address-input");
 		await waitFor(() => expect(addressInput).toHaveValue(""));
 		await userEvent.clear(addressInput);
@@ -156,5 +152,6 @@ describe("UpdateContact", () => {
 		const savedContact = profile.contacts().findById(contact.id());
 		expect(savedContact.name()).toBe(newName);
 		expect(savedContact.addresses().findByAddress(newAddress.address)).toHaveLength(1);
+		validateMock.mockRestore();
 	});
 });

@@ -59,15 +59,11 @@ const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const sendButton = (index = 0) => screen.getAllByTestId("ContactListItem__send-button")[index];
 const searchInput = () => within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 
-const devnet = "ark.devnet";
-const mainnet = "ark.mainnet";
-
-const createContact = (targetProfile: Contracts.IProfile, name: string, address: string, useMainnet = false) =>
+const createContact = (targetProfile: Contracts.IProfile, name: string, address: string) =>
 	targetProfile.contacts().create(name, [
 		{
 			address,
 			coin: "ARK",
-			network: useMainnet ? mainnet : devnet,
 		},
 	]);
 
@@ -176,6 +172,12 @@ describe("Contacts", () => {
 	});
 
 	it("should successfully add contact", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
 		renderComponent();
 
 		await waitFor(() => {
@@ -196,13 +198,6 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("Test Contact");
 		});
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.type(selectNetworkInput, "ARK D");
-		await userEvent.tab();
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
 		await userEvent.type(screen.getByTestId("contact-form__address-input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
@@ -225,6 +220,7 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(profile.contacts().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).toHaveLength(1);
 		});
+		validateMock.mockRestore();
 	});
 
 	it("should successfully delete contact", async () => {
@@ -305,7 +301,6 @@ describe("Contacts", () => {
 		const address = contact.addresses().create({
 			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
 			coin: "ARK",
-			network: mainnet,
 		});
 
 		renderComponent();
@@ -417,9 +412,7 @@ describe("Contacts", () => {
 		await userEvent.click(sendButton());
 
 		expect(history.location.pathname).toBe("/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer");
-		expect(history.location.search).toBe(
-			"?coin=ARK&network=ark.devnet&recipient=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		);
+		expect(history.location.search).toBe("?coin=ARK&recipient=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
 		contactsSpy.mockRestore();
 	});
@@ -488,47 +481,6 @@ describe("Contacts", () => {
 
 		env.profiles().forget(blankProfile.id());
 
-		resetBlankProfileNetworksMock();
-	});
-
-	it("should disable send button when there are no wallets with the same network", async () => {
-		const blankProfile = await env.profiles().create("empty");
-
-		const resetBlankProfileNetworksMock = mockProfileWithPublicAndTestNetworks(blankProfile);
-
-		expect(blankProfile.wallets().count()).toBe(0);
-
-		const contactMainnet = createContact(
-			blankProfile,
-			"contact mainnet",
-			"AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			true,
-		);
-		const contactDevnet = createContact(
-			blankProfile,
-			"contact devnet",
-			"D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			false,
-		);
-
-		const contactsSpy = vi
-			.spyOn(blankProfile.contacts(), "values")
-			.mockReturnValue([contactMainnet, contactDevnet]);
-
-		renderComponent(blankProfile.id());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
-		});
-
-		// Assert that every "send" button is disabled due to lack of wallets of the same network.
-		expect(sendButton(0)).toBeDisabled();
-		expect(sendButton(1)).toBeDisabled();
-
-		await userEvent.hover(screen.getAllByTestId("ContactListItem__send-button-wrapper")[0]);
-
-		expect(screen.getByText(translations.VALIDATION.NO_WALLETS)).toBeInTheDocument();
-		contactsSpy.mockRestore();
 		resetBlankProfileNetworksMock();
 	});
 });

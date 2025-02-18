@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/app/components/Button";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useTranslation } from "react-i18next";
 import { Image } from "@/app/components/Image";
 import cn from "classnames";
+import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
 
 export const Header = () => {
 	const { t } = useTranslation();
@@ -38,19 +39,23 @@ export const HeaderMobile = () => {
 
 export const AddressActionsMenuMobile = () => {
 	const { t } = useTranslation();
-	const { handleImport, handleCreate } = useWalletActions();
+	const { handleImport } = useWalletActions();
+	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 
 	return (
-		<div className="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:hidden">
-			<div className="flex items-center justify-center space-x-3 px-6 py-3">
-				<Button variant="secondary" className="w-full" onClick={handleImport}>
-					{t("COMMON.IMPORT")}
-				</Button>
-				<Button variant="primary" className="w-full" onClick={handleCreate}>
-					{t("COMMON.CREATE")}
-				</Button>
+		<>
+			<div className="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:hidden">
+				<div className="flex items-center justify-center space-x-3 px-6 py-3">
+					<Button variant="secondary" className="w-full" onClick={handleImport}>
+						{t("COMMON.IMPORT")}
+					</Button>
+					<Button variant="primary" className="w-full" onClick={() => setShowCreateAddressPanel(true)}>
+						{t("COMMON.CREATE")}
+					</Button>
+				</div>
 			</div>
-		</div>
+			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+		</>
 	);
 };
 
@@ -95,30 +100,34 @@ export const DashboardSetupAddressCard = ({
 
 export const DashboardSetupAddressCards = () => {
 	const { t } = useTranslation();
-	const { handleImport, handleCreate } = useWalletActions();
+	const { handleImport } = useWalletActions();
+	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 
 	return (
-		<div className="flex-col">
-			<div className="mb-4 space-y-1 px-8 md:mb-8">
-				<Header />
-			</div>
+		<>
+			<div className="flex-col">
+				<div className="mb-4 space-y-1 px-8 md:mb-8">
+					<Header />
+				</div>
 
-			<div className="flex items-center space-x-3">
-				<DashboardSetupAddressCard
-					image="CreateAddress"
-					title={t("COMMON.CREATE_ADDRESS")}
-					description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
-					buttonText={t("COMMON.CREATE")}
-					onClick={handleCreate}
-				/>
-				<DashboardSetupAddressCard
-					image="ImportAddress"
-					title={t("COMMON.IMPORT_ADDRESS")}
-					description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
-					buttonText={t("COMMON.IMPORT")}
-					onClick={handleImport}
-				/>
+				<div className="flex items-center space-x-3">
+					<DashboardSetupAddressCard
+						image="CreateAddress"
+						title={t("COMMON.CREATE_ADDRESS")}
+						description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
+						buttonText={t("COMMON.CREATE")}
+						onClick={() => setShowCreateAddressPanel(true)}
+					/>
+					<DashboardSetupAddressCard
+						image="ImportAddress"
+						title={t("COMMON.IMPORT_ADDRESS")}
+						description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
+						buttonText={t("COMMON.IMPORT")}
+						onClick={handleImport}
+					/>
+				</div>
 			</div>
-		</div>
+			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+		</>
 	);
 };

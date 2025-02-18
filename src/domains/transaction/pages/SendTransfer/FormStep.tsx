@@ -17,6 +17,7 @@ import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { twMerge } from "tailwind-merge";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button
@@ -49,10 +50,10 @@ export const FormStep = ({
 
 	const { isXs } = useBreakpoint();
 
-	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
-
 	const { getValues, setValue } = useFormContext();
 	const { recipients } = getValues();
+
+	const { allWallets } = usePortfolio({ profile });
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
@@ -71,10 +72,6 @@ export const FormStep = ({
 
 		updateFeeTransactionData();
 	}, [network, recipients, profile, isMounted]);
-
-	useEffect(() => {
-		setWallets(profile.wallets().findByCoinWithNetwork(network.coin(), network.id()));
-	}, [network, profile]);
 
 	useEffect(
 		/* istanbul ignore next -- @preserve */
@@ -170,9 +167,9 @@ export const FormStep = ({
 										}
 									: undefined
 							}
-							wallets={wallets}
+							wallets={allWallets}
 							profile={profile}
-							disabled={wallets.length === 0}
+							disabled={allWallets.length === 0}
 							onChange={handleSelectSender}
 							disableAction={(wallet) => !WalletCapabilities(wallet).canSendTransfer()}
 						/>

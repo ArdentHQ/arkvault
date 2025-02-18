@@ -32,7 +32,10 @@ export const UpdateContact: React.VFC<UpdateContactProperties> = ({
 	const { persist } = useEnvironmentContext();
 
 	const handleSave = async ({ name, addresses }: ContactFormData) => {
-		profile.contacts().update(contact.id(), { addresses, name });
+		profile.contacts().update(contact.id(), {
+			addresses,
+			name,
+		});
 		await persist();
 		onSave(contact.id());
 	};

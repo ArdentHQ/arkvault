@@ -1,5 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 
 export interface ContactListItemOption {
 	label: string;
@@ -12,7 +11,7 @@ export interface ContactListItemProperties {
 	options: ContactListItemOption[];
 	onAction: (action: ContactListItemOption) => void;
 	onSend: (address: Contracts.IContactAddress) => void;
-	availableNetworks: AvailableNetwork[];
+	hasBalance: boolean;
 }
 
 export interface ContactListItemAddressProperties extends ContactListItemProperties {

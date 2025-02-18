@@ -76,10 +76,6 @@ export const useProfileAddresses = (
 
 			for (const contact of contacts) {
 				for (const contactAddress of contact.addresses().values()) {
-					if (!isNetworkSelected(contactAddress.network())) {
-						continue;
-					}
-
 					if (exceptMultiSignature) {
 						continue;
 					}
@@ -96,7 +92,6 @@ export const useProfileAddresses = (
 						alias: contact.name(),
 						avatar: contactAddress.avatar(),
 						id: contactAddress.id(),
-						network: contactAddress.network(),
 						type: "contact",
 					};
 
