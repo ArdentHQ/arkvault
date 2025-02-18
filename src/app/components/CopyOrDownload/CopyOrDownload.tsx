@@ -24,7 +24,7 @@ export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copy
 
 			<p className="mb-3 mt-2 text-sm text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>
 
-			<div className="flex items-center justify-center space-x-3 sm:justify-start">
+			<div className="flex items-center justify-center space-x-1 sm:justify-start">
 				<Clipboard data={copyData} data-testid="CopyOrDownload__copy" variant="icon">
 					<div
 						className={cn("flex items-center space-x-2 rounded px-2 py-1 font-semibold leading-5", {
