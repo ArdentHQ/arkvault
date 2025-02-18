@@ -15,11 +15,15 @@ export const AddressRow = ({
 	isSelected,
 	usesDeleteMode,
 	onDelete,
+	isError = false,
+	errorMessage,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	toggleAddress: (address: string) => void;
 	isSelected: boolean;
+	isError?: boolean;
 	usesDeleteMode: boolean;
+	errorMessage?: string,
 	onDelete: (address: string) => void;
 }): JSX.Element => {
 	const { isXs } = useBreakpoint();
@@ -43,67 +47,79 @@ export const AddressRow = ({
 			onKeyPress={() => toggleAddress(wallet.address())}
 			tabIndex={0}
 			className={cn(
-				"group flex cursor-pointer items-center rounded-lg border border-theme-primary-200 px-4 py-3 transition-all dark:border-theme-dark-700",
+				"group cursor-pointer items-center rounded-lg border border-theme-primary-200 transition-all",
 				{
 					"bg-theme-secondary-200 dark:bg-theme-dark-950": isSelected && !usesDeleteMode,
-					"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected,
+					"border-theme-danger-400 dark:border-theme-danger-400 hover:dark:border-theme-dark-700 hover:border-theme-navy-100 hover:dark:bg-theme-dark-700": isError,
+					"dark:border-theme-dark-700": !isError,
+					"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected
 				},
 			)}
 		>
-			{usesDeleteMode && (
-				<Button
-					onClick={() => onDelete(wallet.address())}
-					data-testid={`AddressRow--delete-${wallet.address()}`}
-					size="icon"
-					className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 hover:dark:text-white"
-					variant="transparent"
-				>
-					<Icon name="Trash" dimensions={[16, 16]} />
-				</Button>
-			)}
-
-			{!usesDeleteMode && (
-				<Checkbox
-					name="all"
-					data-testid="AddressRow--checkbox"
-					className="m-0.5"
-					checked={isSelected}
-					onChange={() => toggleAddress(wallet.address())}
-				/>
-			)}
-
-			<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200">
-				<div className="flex w-1/2 min-w-0 flex-col space-y-2">
-					<div
-						className={cn("leading-5", {
-							"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
-							"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
-						})}
+			<div className="flex px-4 py-3">
+				{usesDeleteMode && (
+					<Button
+						onClick={() => onDelete(wallet.address())}
+						data-testid={`AddressRow--delete-${wallet.address()}`}
+						size="icon"
+						className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 hover:dark:text-white"
+						variant="transparent"
 					>
-						{wallet.displayName()}
+						<Icon name="Trash" dimensions={[16, 16]} />
+					</Button>
+				)}
+
+				{!usesDeleteMode && (
+					<Checkbox
+						name="all"
+						data-testid="AddressRow--checkbox"
+						className="m-0.5"
+						checked={isSelected}
+						onChange={() => toggleAddress(wallet.address())}
+					/>
+				)}
+
+				<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200">
+					<div className="flex w-1/2 min-w-0 flex-col space-y-2">
+						<div
+							className={cn("leading-5", {
+								"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
+								"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
+							})}
+						>
+							{wallet.displayName()}
+						</div>
+						<Address
+							address={wallet.address()}
+							showCopyButton
+							addressClass="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px]"
+						/>
 					</div>
-					<Address
-						address={wallet.address()}
-						showCopyButton
-						addressClass="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px]"
-					/>
-				</div>
-				<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2">
-					<Amount
-						ticker={wallet.network().ticker()}
-						value={+wallet.balance().toFixed(2)}
-						className={cn("leading-5", {
-							"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
-							"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
-						})}
-					/>
-					<Amount
-						ticker={wallet.exchangeCurrency()}
-						value={wallet.convertedBalance()}
-						className="text-sm leading-[17px]"
-					/>
+					<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2">
+						<Amount
+							ticker={wallet.network().ticker()}
+							value={+wallet.balance().toFixed(2)}
+							className={cn("leading-5", {
+								"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
+								"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
+							})}
+						/>
+						<Amount
+							ticker={wallet.exchangeCurrency()}
+							value={wallet.convertedBalance()}
+							className="text-sm leading-[17px]"
+						/>
+					</div>
 				</div>
 			</div>
+			{!!errorMessage && (
+				<div className="px-4 py-3 flex space-x-4 bg-theme-danger-50 dark:bg-theme-dark-800 rounded-b-lg items-center">
+					<div className="w-5 flex items-center justify-center mx-[2px]">
+						<Icon name="CircleCross" className="text-theme-danger-700 dark:text-theme-danger-400" size="md" />
+					</div>
+					<p className="text-sm text-theme-secondary-700 dark:text-theme-dark-50">{errorMessage}</p>
+				</div>
+			)}
 		</div>
 	);
 };

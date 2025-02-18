@@ -67,12 +67,6 @@ export const AddressesSidePanel = ({
 
 		if (selectedAddresses.includes(address)) {
 			const remainingAddresses = selectedAddresses.filter((a) => a !== address);
-
-			// Cancel deselect. One address needs to always be selected.
-			if (remainingAddresses.length === 0) {
-				return;
-			}
-
 			onSetSelectedAddresses(remainingAddresses);
 			return;
 		}
@@ -110,19 +104,18 @@ export const AddressesSidePanel = ({
 		resetDeleteState();
 	};
 
-	const isSelected = (wallet: Contracts.IReadWriteWallet) => {
-		if (selectedAddresses.length === 0) {
-			return true;
-		}
-
-		return selectedAddresses.includes(wallet.address());
-	};
+	const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
+	const hasSelectedAddresses = () => selectedAddresses.length > 0;
 
 	return (
 		<SidePanel
 			header={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
 			open={open}
 			onOpenChange={(open) => {
+				if (selectedAddresses.length === 0) {
+					return
+				}
+
 				resetDeleteState();
 				onOpenChange(open);
 				setSearchQuery("");
@@ -265,8 +258,10 @@ export const AddressesSidePanel = ({
 			)}
 
 			<div className="space-y-1">
-				{addressesToShow.map((wallet) => (
+				{addressesToShow.map((wallet, index) => (
 					<AddressRow
+						errorMessage={(!hasSelectedAddresses() && index === 0) ? "You need to have at least one address selected." : undefined}
+						isError={!hasSelectedAddresses()}
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
