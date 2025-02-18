@@ -23,7 +23,7 @@ export const AddressRow = ({
 	isSelected: boolean;
 	isError?: boolean;
 	usesDeleteMode: boolean;
-	errorMessage?: string,
+	errorMessage?: string;
 	onDelete: (address: string) => void;
 }): JSX.Element => {
 	const { isXs } = useBreakpoint();
@@ -50,9 +50,10 @@ export const AddressRow = ({
 				"group cursor-pointer items-center rounded-lg border border-theme-primary-200 transition-all",
 				{
 					"bg-theme-secondary-200 dark:bg-theme-dark-950": isSelected && !usesDeleteMode,
-					"border-theme-danger-400 dark:border-theme-danger-400 hover:dark:border-theme-dark-700 hover:border-theme-navy-100 hover:dark:bg-theme-dark-700": isError,
+					"border-theme-danger-400 hover:border-theme-navy-100 dark:border-theme-danger-400 hover:dark:border-theme-dark-700 hover:dark:bg-theme-dark-700":
+						isError,
 					"dark:border-theme-dark-700": !isError,
-					"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected
+					"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected,
 				},
 			)}
 		>
@@ -113,9 +114,13 @@ export const AddressRow = ({
 				</div>
 			</div>
 			{!!errorMessage && (
-				<div className="px-4 py-3 flex space-x-4 bg-theme-danger-50 dark:bg-theme-dark-800 rounded-b-lg items-center">
-					<div className="w-5 flex items-center justify-center mx-[2px]">
-						<Icon name="CircleCross" className="text-theme-danger-700 dark:text-theme-danger-400" size="md" />
+				<div className="flex items-center space-x-4 rounded-b-lg bg-theme-danger-50 px-4 py-3 dark:bg-theme-dark-800">
+					<div className="mx-[2px] flex w-5 items-center justify-center">
+						<Icon
+							name="CircleCross"
+							className="text-theme-danger-700 dark:text-theme-danger-400"
+							size="md"
+						/>
 					</div>
 					<p className="text-sm text-theme-secondary-700 dark:text-theme-dark-50">{errorMessage}</p>
 				</div>

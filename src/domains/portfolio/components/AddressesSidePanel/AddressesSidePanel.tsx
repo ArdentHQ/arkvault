@@ -113,7 +113,7 @@ export const AddressesSidePanel = ({
 			open={open}
 			onOpenChange={(open) => {
 				if (selectedAddresses.length === 0) {
-					return
+					return;
 				}
 
 				resetDeleteState();
@@ -260,7 +260,11 @@ export const AddressesSidePanel = ({
 			<div className="space-y-1">
 				{addressesToShow.map((wallet, index) => (
 					<AddressRow
-						errorMessage={(!hasSelectedAddresses() && index === 0) ? "You need to have at least one address selected." : undefined}
+						errorMessage={
+							!hasSelectedAddresses() && index === 0
+								? "You need to have at least one address selected."
+								: undefined
+						}
 						isError={!hasSelectedAddresses()}
 						key={wallet.address()}
 						wallet={wallet}
