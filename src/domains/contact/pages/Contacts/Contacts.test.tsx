@@ -496,13 +496,21 @@ describe("Contacts", () => {
 
 		history.push(contactsUrl);
 
-		renderResponsiveWithRoute(<Route path="/profiles/:profileId/contacts"><Contacts /></Route>, "lg", {
-			history,
-			route: contactsUrl,
-		});
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/contacts">
+				<Contacts />
+			</Route>,
+			"lg",
+			{
+				history,
+				route: contactsUrl,
+			},
+		);
 
 		await userEvent.click(sendButton());
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${profile.wallets().values()[0].id()}/send-transfer`);
+		expect(history.location.pathname).toBe(
+			`/profiles/${profile.id()}/wallets/${profile.wallets().values()[0].id()}/send-transfer`,
+		);
 	});
 });
