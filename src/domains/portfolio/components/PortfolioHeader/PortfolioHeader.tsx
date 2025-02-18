@@ -13,14 +13,15 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
-import { WalletActions } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader/WalletHeader.blocks";
+import { WalletActions } from "@/domains/portfolio/components/WalletHeader/WalletHeader.blocks";
 import { Skeleton } from "@/app/components/Skeleton";
-import { AddressesSidePanel } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel";
 import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
+import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 
 export const PortfolioHeader = ({
 	profile,
@@ -38,6 +39,7 @@ export const PortfolioHeader = ({
 	onUpdate?: (status: boolean) => void;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
+	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 
 	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets, allWallets, removeSelectedAddresses } =
 		usePortfolio({ profile });
@@ -47,8 +49,9 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
-	const { activeModal, setActiveModal, handleImport, handleCreate, handleSelectOption, handleSend } =
-		useWalletActions(...selectedWallets);
+	const { activeModal, setActiveModal, handleImport, handleSelectOption, handleSend } = useWalletActions(
+		...selectedWallets,
+	);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 
@@ -107,7 +110,7 @@ export const PortfolioHeader = ({
 						<Button
 							variant="secondary"
 							className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
-							onClick={handleCreate}
+							onClick={() => setShowCreateAddressPanel(true)}
 						>
 							<Icon name="Plus" size="md" />
 							<p className="hidden text-base font-semibold leading-5 sm:block">{t("COMMON.CREATE")}</p>
@@ -324,6 +327,8 @@ export const PortfolioHeader = ({
 					void onDeleteAddresses(addresses);
 				}}
 			/>
+
+			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 
 			<WalletActionsModals
 				wallets={selectedWallets}

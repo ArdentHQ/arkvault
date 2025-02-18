@@ -5,11 +5,9 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { InputPassword } from "@/app/components/Input";
 import { assertWallet } from "@/utils/assertions";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
-import { ThemeIcon } from "@/app/components/Icon";
 
 interface EncryptPasswordStepProperties {
 	importedWallet?: Contracts.IReadWriteWallet;
@@ -80,18 +78,6 @@ export const EncryptPasswordStep = ({ importedWallet }: EncryptPasswordStepPrope
 
 	return (
 		<section data-testid="EncryptPassword">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
-				className="hidden sm:block"
-				titleIcon={
-					<ThemeIcon
-						lightIcon="WalletEncryptionLight"
-						darkIcon="WalletEncryptionDark"
-						dimensions={[24, 24]}
-					/>
-				}
-			/>
-
 			<Alert className="mt-4" variant="warning">
 				<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.WARNING" />
 			</Alert>

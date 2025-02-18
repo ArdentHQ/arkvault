@@ -4,7 +4,6 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { CreateWallet } from "./CreateWallet";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
@@ -16,8 +15,9 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { act } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
+import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
@@ -28,7 +28,7 @@ const encryptionPassword = "S3cUrePa$sword";
 
 const continueButton = () => screen.getByTestId("CreateWallet__continue-button");
 
-describe("CreateWallet", () => {
+describe("CreateAddressSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(() => {
@@ -75,12 +75,12 @@ describe("CreateWallet", () => {
 
 	it("should create a wallet", async () => {
 		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 		history.push(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -88,7 +88,6 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		const backButton = await screen.findByTestId("CreateWallet__back-button");
 		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
@@ -99,6 +98,8 @@ describe("CreateWallet", () => {
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		const backButton = await screen.findByTestId("CreateWallet__back-button");
 
 		await userEvent.click(backButton);
 
@@ -142,23 +143,23 @@ describe("CreateWallet", () => {
 
 		await userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
+		expect(profile.wallets().count()).toBe(1);
+
 		const wallet = profile.wallets().first();
 
 		expect(wallet.alias()).toBe("test alias");
-
-		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`));
 
 		historySpy.mockRestore();
 	});
 
 	it("should create a wallet with encryption", async () => {
 		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 		history.push(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -166,7 +167,6 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		const backButton = await screen.findByTestId("CreateWallet__back-button");
 		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
@@ -184,6 +184,8 @@ describe("CreateWallet", () => {
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		const backButton = await screen.findByTestId("CreateWallet__back-button");
 
 		await userEvent.click(backButton);
 
@@ -232,23 +234,23 @@ describe("CreateWallet", () => {
 
 		await userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
+		expect(profile.wallets().count()).toBe(1);
+
 		const wallet = profile.wallets().first();
 
 		expect(wallet.alias()).toBe("Address #1");
-
-		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`));
 
 		historySpy.mockRestore();
 	});
 
 	it("should not have a pending wallet if leaving on step 1", async () => {
 		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 		history.push(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -256,21 +258,19 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		act(() => {
-			history.push("/");
-		});
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 	});
 
 	it("should remove pending wallet if not submitted", async () => {
 		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 		history.push(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -280,9 +280,7 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		act(() => {
-			history.push("/");
-		});
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 	});
@@ -294,13 +292,13 @@ describe("CreateWallet", () => {
 		});
 
 		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
 		history.push(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -326,12 +324,12 @@ describe("CreateWallet", () => {
 		wallet.settings().set(Contracts.WalletSetting.Alias, "Test");
 
 		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 		history.push(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
