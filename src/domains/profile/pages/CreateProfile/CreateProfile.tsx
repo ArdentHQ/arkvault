@@ -4,7 +4,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import { Header } from "@/app/components/Header";
-import { Page, Section } from "@/app/components/Layout";
+import { Page } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useLocaleCurrency, useTheme } from "@/app/hooks";
 
@@ -51,8 +51,8 @@ export const CreateProfile = () => {
 			navbarVariant="logo-only"
 			title={<Trans i18nKey="COMMON.APP_NAME" />}
 		>
-			<Section className="flex flex-1 flex-col sm:justify-center">
-				<div className="mx-auto max-w-lg" data-testid="CreateProfile">
+			<div className="flex h-page sm:items-center" data-testid="CreateProfile">
+				<div className="mx-auto max-w-lg px-6">
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 						titleClassName="text-lg leading-[21px] sm:text-2xl sm:leading-[29px]"
@@ -74,7 +74,7 @@ export const CreateProfile = () => {
 						/>
 					</div>
 				</div>
-			</Section>
+			</div>
 		</Page>
 	);
 };

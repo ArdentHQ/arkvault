@@ -13,6 +13,7 @@ import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { ThemeIcon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -23,8 +24,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const username = getValues("username");
 
 	const userExistsController = useRef<AbortController | undefined>(undefined);
-
 	const { activeNetwork: network } = useActiveNetwork({ profile });
+	const { allWallets } = usePortfolio({ profile });
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
 	useEffect(() => {
@@ -79,9 +80,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 									}
 								: undefined
 						}
-						wallets={profile.wallets().values()}
+						wallets={allWallets}
 						profile={profile}
-						disabled={profile.wallets().count() === 0}
+						disabled={allWallets.length === 0}
 						onChange={handleSelectSender}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendUsernameRegistration()}
 					/>
