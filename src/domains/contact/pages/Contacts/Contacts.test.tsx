@@ -483,4 +483,26 @@ describe("Contacts", () => {
 
 		resetBlankProfileNetworksMock();
 	});
+
+	it("should redirect to send transfer when there is only one wallet", async () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const wallets = profile.wallets().values();
+		profile.wallets().forget(wallets[0].id());
+		await env.persist();
+
+		expect(profile.wallets().values().length).toBe(1);
+
+		const contactsUrl = `/profiles/${profile.id()}/contacts`;
+
+		history.push(contactsUrl);
+
+		renderResponsiveWithRoute(<Route path="/profiles/:profileId/contacts"><Contacts /></Route>, "lg", {
+			history,
+			route: contactsUrl,
+		});
+
+		await userEvent.click(sendButton());
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${profile.wallets().values()[0].id()}/send-transfer`);
+	});
 });
