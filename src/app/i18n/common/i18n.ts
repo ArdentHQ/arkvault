@@ -7,7 +7,6 @@ export const translations = {
 	ADDRESSING: "Addressing",
 	ADDRESS_NAME: "Address Name",
 	ADD_NEW: "Add New",
-	ADVANCED_MODE: "Advanced Mode",
 	AGE: "Age",
 	AGREE_DO_NOT_SHOW_AGAIN: "I agree, do not show this message again",
 	ALERT: {
@@ -119,7 +118,6 @@ export const translations = {
 		TITLE: "No Results",
 	},
 	ENABLE: "Enable",
-	ENABLE_ADVANCED_MODE: "Enable Advanced Mode to use this feature",
 	ENCRYPTED_WIF: "Encrypted WIF",
 	EPOCH: "Epoch",
 	ERROR: "Error",
