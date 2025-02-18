@@ -12,17 +12,14 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 	mnemonicWords = /\u3000/.test(mnemonic) ? mnemonic.split("\u3000") : mnemonic.split(" ");
 
 	return (
-		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4 sm:pt-1.5">
+		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4">
 			{mnemonicWords.map((word, index) => (
 				<li
 					data-testid="MnemonicList__item"
 					key={index}
-					className="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+					className="relative flex items-center rounded border border-theme-secondary-400 dark:border-theme-dark-00 p-[3px]"
 				>
-					<span className="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block">
-						{index + 1}
-					</span>
-					<div className="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden">
+					<div className="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm leading-[17px] font-semibold text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{index + 1}
 					</div>
 					<div className="sm:text-md text-sm">{word}</div>
@@ -36,7 +33,7 @@ export const MnemonicListSkeleton: React.VFC = () => {
 	const skeletons = useMemo(
 		() =>
 			Array.from({ length: 24 }).map(() => {
-				const [min, max] = [50, 70];
+				const [min, max] = [40, 60];
 
 				return Math.floor(Math.random() * (max - min + 1) + min);
 			}),
@@ -44,17 +41,17 @@ export const MnemonicListSkeleton: React.VFC = () => {
 	);
 
 	return (
-		<ul className="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4">
+		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4">
 			{skeletons.map((width, index) => (
 				<li
 					data-testid="MnemonicList__item_skeleton"
 					key={index}
-					className="relative flex items-center rounded border border-theme-secondary-300 p-2 dark:border-theme-secondary-700 sm:p-4"
+					className="relative flex items-center rounded border border-theme-secondary-400 dark:border-theme-dark-00 p-[3px]"
 				>
-					<span className="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block">
+					<div
+						className="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm leading-[17px] font-semibold text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{index + 1}
-					</span>
-					<div className="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden">{index + 1}</div>
+					</div>
 					<div>
 						<Skeleton width={width} height={20} />
 					</div>

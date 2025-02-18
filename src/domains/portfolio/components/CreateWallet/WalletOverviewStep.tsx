@@ -9,11 +9,15 @@ import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 import { Divider } from "@/app/components/Divider";
+import { Icon } from "@/app/components/Icon";
+import cn from "classnames";
 
 export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {
 	const { getValues, setValue, unregister, watch } = useFormContext();
 
 	const { wallet, mnemonic } = watch();
+
+	const [encryptionTextVisible, setEncryptionTextVisible] = React.useState(false);
 
 	const { isLegacy, showSaveDialog } = useFiles();
 
@@ -46,37 +50,51 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 			<div className="space-y-4">
 				<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
-				{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
+				<div className="p-4 sm:p-6 pb-0 sm:pb-0 border space-y-4 sm:space-y-6 rounded-lg border-theme-secondary-300 dark:border-theme-dark-700">
 
-				<CopyOrDownload
-					title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.TITLE")}
-					description={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.DESCRIPTION")}
-					copyData={mnemonic}
-					onClickDownload={() => handleDownload()}
-					disabled={isGeneratingWallet}
-				/>
+					{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 
-				<Divider />
+					<CopyOrDownload
+						title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.TITLE")}
+						description={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.DESCRIPTION")}
+						copyData={mnemonic}
+						onClickDownload={() => handleDownload()}
+						disabled={isGeneratingWallet}
+					/>
 
-				<div className="flex w-full flex-col space-y-2">
-					<div className="flex items-center justify-between space-x-5">
-						<span className="font-bold text-theme-secondary-text">
-							{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.TITLE")}
-						</span>
+				</div>
 
-						<span data-testid="CreateWallet__encryption">
-							<Toggle
-								data-testid="CreateWallet__encryption-toggle"
-								defaultChecked={getValues("useEncryption")}
-								onChange={handleToggleEncryption}
-								disabled={isGeneratingWallet}
+				<div className="transition-all border border-theme-secondary-300 dark:border-theme-dark-700 rounded-lg">
+					<div tabIndex={0} onClick={() => setEncryptionTextVisible(!encryptionTextVisible)} className="px-6 py-4 flex items-center space-x-4">
+						<div className="flex flex-1 items-center justify-between space-x-5">
+							<span className="font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.TITLE")}
+							</span>
+
+							<span data-testid="CreateWallet__encryption">
+								<Toggle
+									data-testid="CreateWallet__encryption-toggle"
+									defaultChecked={getValues("useEncryption")}
+									onChange={handleToggleEncryption}
+									disabled={isGeneratingWallet}
+								/>
+							</span>
+						</div>
+						<Divider type="vertical" />
+						<div className="text-theme-secondary-700 dark:text-theme-dark-200 rounded p-2 hover:bg-theme-navy-200 dark:hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white">
+							<Icon
+								name="ChevronDownSmall"
+								className={cn("transition-transform", { "rotate-180": encryptionTextVisible})}
+								size="sm"
 							/>
-						</span>
+						</div>
 					</div>
 
-					<span className="mr-12 text-sm text-theme-secondary-500">
-						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.DESCRIPTION")}
-					</span>
+					{encryptionTextVisible && <div className="px-6 pt-3 pb-4 bg-theme-secondary-100 dark:bg-theme-dark-950 rounded-b-lg">
+						<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.DESCRIPTION")}
+						</span>
+					</div> }
 				</div>
 			</div>
 		</section>

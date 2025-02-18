@@ -33,9 +33,9 @@ export const ConfirmPassphraseStep = () => {
 		<section data-testid="CreateWallet__ConfirmPassphraseStep">
 			<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />
 
-			<Divider />
+			<Divider className="h-1 border-theme-secondary-300 dark:border-theme-secondary-800" />
 
-			<label className="inline-flex cursor-pointer space-x-3 text-theme-secondary-text">
+			<label className="text-sm leading-[17px] items-center inline-flex cursor-pointer space-x-3 text-theme-secondary-text">
 				<Checkbox
 					data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
 					checked={passphraseDisclaimer}
