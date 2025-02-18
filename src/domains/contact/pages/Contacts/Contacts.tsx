@@ -14,6 +14,7 @@ import { CreateContact, DeleteContact, UpdateContact } from "@/domains/contact/c
 import { ContactListItem } from "@/domains/contact/components/ContactListItem";
 import { ContactListMobile } from "@/domains/contact/components/ContactListMobile";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();
@@ -23,6 +24,7 @@ export const Contacts: FC = () => {
 	const { isMdAndAbove } = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
+	const { allWallets } = usePortfolio({ profile: activeProfile });
 
 	const [query, setQuery] = useState("");
 
@@ -82,7 +84,11 @@ export const Contacts: FC = () => {
 		(address: Contracts.IContactAddress) => {
 			const schema = { coin: address.coin(), recipient: address.address() };
 			const queryParameters = new URLSearchParams(schema).toString();
-			const url = `/profiles/${activeProfile.id()}/send-transfer?${queryParameters}`;
+			let url = `/profiles/${activeProfile.id()}/send-transfer?${queryParameters}`;
+
+			if (allWallets.length === 1) {
+				url = `/profiles/${activeProfile.id()}/wallets/${allWallets[0].id()}/send-transfer?${queryParameters}`;
+			}
 
 			history.push(url);
 		},
