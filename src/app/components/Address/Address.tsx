@@ -74,7 +74,7 @@ export const Address = ({
 	truncateOnTable,
 	orientation = "horizontal",
 	showCopyButton,
-	showTooltip = true
+	showTooltip = true,
 }: Properties) => {
 	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
@@ -139,9 +139,9 @@ export const Address = ({
 							availableWidth={availableWidth}
 							className={cn(
 								addressClass ||
-								(walletName
-									? "text-theme-secondary-500 dark:text-theme-secondary-700"
-									: "text-theme-text"),
+									(walletName
+										? "text-theme-secondary-500 dark:text-theme-secondary-700"
+										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
 								{ "absolute w-full": truncateOnTable },
