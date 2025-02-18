@@ -3,19 +3,14 @@
 exports[`MnemonicList > should render 1`] = `
 <DocumentFragment>
   <ul
-    class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4 sm:pt-1.5"
+    class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4"
   >
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        1
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         1
       </div>
@@ -26,16 +21,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        2
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         2
       </div>
@@ -46,16 +36,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        3
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         3
       </div>
@@ -66,16 +51,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        4
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         4
       </div>
@@ -86,16 +66,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        5
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         5
       </div>
@@ -106,16 +81,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        6
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         6
       </div>
@@ -126,16 +96,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        7
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         7
       </div>
@@ -146,16 +111,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        8
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         8
       </div>
@@ -166,16 +126,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        9
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         9
       </div>
@@ -186,16 +141,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        10
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         10
       </div>
@@ -206,16 +156,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        11
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         11
       </div>
@@ -226,16 +171,11 @@ exports[`MnemonicList > should render 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        12
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         12
       </div>
@@ -252,19 +192,14 @@ exports[`MnemonicList > should render 1`] = `
 exports[`MnemonicList > should render with special delimiter 1`] = `
 <DocumentFragment>
   <ul
-    class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4 sm:pt-1.5"
+    class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4"
   >
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        1
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         1
       </div>
@@ -275,16 +210,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        2
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         2
       </div>
@@ -295,16 +225,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        3
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         3
       </div>
@@ -315,16 +240,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        4
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         4
       </div>
@@ -335,16 +255,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        5
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         5
       </div>
@@ -355,16 +270,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        6
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         6
       </div>
@@ -375,16 +285,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        7
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         7
       </div>
@@ -395,16 +300,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        8
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         8
       </div>
@@ -415,16 +315,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        9
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         9
       </div>
@@ -435,16 +330,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        10
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         10
       </div>
@@ -455,16 +345,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        11
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         11
       </div>
@@ -475,16 +360,11 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
       </div>
     </li>
     <li
-      class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
+      class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
       data-testid="MnemonicList__item"
     >
-      <span
-        class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
-      >
-        12
-      </span>
       <div
-        class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
+        class="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200"
       >
         12
       </div>
