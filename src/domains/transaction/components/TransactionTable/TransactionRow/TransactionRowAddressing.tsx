@@ -52,6 +52,7 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 			<Tooltip content={address}>
 				<div className="grow" data-testid="TransactionRowAddressing__address-container">
 					<Address
+						showTooltip={false}
 						walletName={alias}
 						address={alias ? "" : address}
 						truncateOnTable
@@ -84,7 +85,6 @@ const ContractAddressing = ({
 	t: any;
 }) => {
 	const { isDarkMode } = useTheme();
-	console.log("lala");
 
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">

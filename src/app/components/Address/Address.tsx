@@ -23,6 +23,7 @@ interface Properties {
 	truncateOnTable?: boolean;
 	orientation?: "horizontal" | "vertical";
 	showCopyButton?: boolean;
+	showTooltip?: boolean;
 }
 
 const AddressWrapper = ({
@@ -73,6 +74,7 @@ export const Address = ({
 	truncateOnTable,
 	orientation = "horizontal",
 	showCopyButton,
+	showTooltip = true
 }: Properties) => {
 	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
@@ -124,7 +126,7 @@ export const Address = ({
 					<TruncateEnd
 						text={walletName}
 						maxChars={maxNameChars}
-						showTooltip={!!maxNameChars && walletName.length > maxNameChars}
+						showTooltip={showTooltip ? !!maxNameChars && walletName.length > maxNameChars : false}
 					/>
 				</span>
 			)}
@@ -137,9 +139,9 @@ export const Address = ({
 							availableWidth={availableWidth}
 							className={cn(
 								addressClass ||
-									(walletName
-										? "text-theme-secondary-500 dark:text-theme-secondary-700"
-										: "text-theme-text"),
+								(walletName
+									? "text-theme-secondary-500 dark:text-theme-secondary-700"
+									: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
 								{ "absolute w-full": truncateOnTable },
