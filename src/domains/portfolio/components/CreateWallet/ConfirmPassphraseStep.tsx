@@ -41,7 +41,7 @@ export const ConfirmPassphraseStep = () => {
 				</div>
 
 				<div className="rounded-b-lg bg-theme-secondary-100 sm:p-6 p-4 dark:bg-theme-dark-950">
-					<label className="inline-flex cursor-pointer items-start space-x-3 text-sm leading-[17px] text-theme-secondary-900">
+					<label className="inline-flex cursor-pointer items-start space-x-3 text-sm leading-[17px] text-theme-secondary-900 dark:text-theme-dark-100">
 						<Checkbox
 							data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
 							checked={passphraseDisclaimer}

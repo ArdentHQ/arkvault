@@ -3,7 +3,7 @@
 exports[`MnemonicList > should render 1`] = `
 <DocumentFragment>
   <ul
-    class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4"
+    class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-3 sm:gap-y-4"
   >
     <li
       class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
@@ -192,7 +192,7 @@ exports[`MnemonicList > should render 1`] = `
 exports[`MnemonicList > should render with special delimiter 1`] = `
 <DocumentFragment>
   <ul
-    class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4"
+    class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-3 sm:gap-y-4"
   >
     <li
       class="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"

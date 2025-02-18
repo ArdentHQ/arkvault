@@ -12,7 +12,7 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 	mnemonicWords = /\u3000/.test(mnemonic) ? mnemonic.split("\u3000") : mnemonic.split(" ");
 
 	return (
-		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4">
+		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-3 sm:gap-y-4">
 			{mnemonicWords.map((word, index) => (
 				<li
 					data-testid="MnemonicList__item"
@@ -41,7 +41,7 @@ export const MnemonicListSkeleton: React.VFC = () => {
 	);
 
 	return (
-		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4">
+		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-3 sm:gap-y-4">
 			{skeletons.map((width, index) => (
 				<li
 					data-testid="MnemonicList__item_skeleton"
