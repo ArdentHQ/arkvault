@@ -35,7 +35,7 @@ export const ConfirmPassphraseStep = () => {
 
 			<Divider className="h-1 border-theme-secondary-300 dark:border-theme-secondary-800" />
 
-			<label className="text-sm leading-[17px] items-center inline-flex cursor-pointer space-x-3 text-theme-secondary-text">
+			<label className="inline-flex cursor-pointer items-center space-x-3 text-sm leading-[17px] text-theme-secondary-text">
 				<Checkbox
 					data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
 					checked={passphraseDisclaimer}

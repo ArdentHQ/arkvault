@@ -50,8 +50,7 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 			<div className="space-y-4">
 				<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
-				<div className="p-4 sm:p-6 pb-0 sm:pb-0 border space-y-4 sm:space-y-6 rounded-lg border-theme-secondary-300 dark:border-theme-dark-700">
-
+				<div className="space-y-4 rounded-lg border border-theme-secondary-300 p-4 pb-0 dark:border-theme-dark-700 sm:space-y-6 sm:p-6 sm:pb-0">
 					{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 
 					<CopyOrDownload
@@ -61,11 +60,14 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 						onClickDownload={() => handleDownload()}
 						disabled={isGeneratingWallet}
 					/>
-
 				</div>
 
-				<div className="transition-all border border-theme-secondary-300 dark:border-theme-dark-700 rounded-lg">
-					<div tabIndex={0} onClick={() => setEncryptionTextVisible(!encryptionTextVisible)} className="px-6 py-4 flex items-center space-x-4">
+				<div className="rounded-lg border border-theme-secondary-300 transition-all dark:border-theme-dark-700">
+					<div
+						tabIndex={0}
+						onClick={() => setEncryptionTextVisible(!encryptionTextVisible)}
+						className="flex items-center space-x-4 px-6 py-4"
+					>
 						<div className="flex flex-1 items-center justify-between space-x-5">
 							<span className="font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
 								{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.TITLE")}
@@ -81,20 +83,22 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 							</span>
 						</div>
 						<Divider type="vertical" />
-						<div className="text-theme-secondary-700 dark:text-theme-dark-200 rounded p-2 hover:bg-theme-navy-200 dark:hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white">
+						<div className="rounded p-2 text-theme-secondary-700 hover:bg-theme-navy-200 dark:text-theme-dark-200 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-700 dark:hover:text-white">
 							<Icon
 								name="ChevronDownSmall"
-								className={cn("transition-transform", { "rotate-180": encryptionTextVisible})}
+								className={cn("transition-transform", { "rotate-180": encryptionTextVisible })}
 								size="sm"
 							/>
 						</div>
 					</div>
 
-					{encryptionTextVisible && <div className="px-6 pt-3 pb-4 bg-theme-secondary-100 dark:bg-theme-dark-950 rounded-b-lg">
-						<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
-							{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.DESCRIPTION")}
-						</span>
-					</div> }
+					{encryptionTextVisible && (
+						<div className="rounded-b-lg bg-theme-secondary-100 px-6 pb-4 pt-3 dark:bg-theme-dark-950">
+							<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
+								{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.DESCRIPTION")}
+							</span>
+						</div>
+					)}
 				</div>
 			</div>
 		</section>
