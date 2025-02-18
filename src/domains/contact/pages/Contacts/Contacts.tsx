@@ -14,7 +14,6 @@ import { CreateContact, DeleteContact, UpdateContact } from "@/domains/contact/c
 import { ContactListItem } from "@/domains/contact/components/ContactListItem";
 import { ContactListMobile } from "@/domains/contact/components/ContactListMobile";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();
@@ -24,7 +23,6 @@ export const Contacts: FC = () => {
 	const { isMdAndAbove } = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
-	const { allWallets } = usePortfolio({ profile: activeProfile });
 
 	const [query, setQuery] = useState("");
 
