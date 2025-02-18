@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useMemo, useRef } from "react";
+import React, { useMemo, useRef, useState, useLayoutEffect } from "react";
 
 import { useResizeDetector } from "react-resize-detector";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
@@ -23,6 +23,7 @@ interface Properties {
 	truncateOnTable?: boolean;
 	orientation?: "horizontal" | "vertical";
 	showCopyButton?: boolean;
+	showTooltip?: boolean;
 }
 
 const AddressWrapper = ({
@@ -54,7 +55,6 @@ const getFontSize = (size?: Size) => {
 		sm: "text-sm",
 		xl: "text-xl",
 	};
-
 	return fontSizes[size as keyof typeof fontSizes] || fontSizes.default;
 };
 
@@ -73,32 +73,31 @@ export const Address = ({
 	truncateOnTable,
 	orientation = "horizontal",
 	showCopyButton,
+	showTooltip = true,
 }: Properties) => {
 	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
-
+	const [aliasWidth, setAliasWidth] = useState(0);
 	const { isDarkMode } = useTheme();
 
 	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
 
+	useLayoutEffect(() => {
+		if (aliasReference.current) {
+			setAliasWidth(aliasReference.current.getBoundingClientRect().width);
+		}
+	}, [walletName, width]);
+
 	const availableWidth = useMemo(() => {
 		if (width) {
 			if (orientation === "horizontal") {
-				/* istanbul ignore next -- @preserve */
-				return (
-					width -
-					(walletName && aliasReference.current
-						? aliasReference.current.getBoundingClientRect().width + 8
-						: 0) -
-					(showCopyButton ? 22 : 0)
-				);
+				return width - (walletName ? aliasWidth + 8 : 0) - (showCopyButton ? 22 : 0);
 			} else {
 				return width;
 			}
 		}
-
 		return 0;
-	}, [width, orientation, showCopyButton, walletName]);
+	}, [width, orientation, showCopyButton, walletName, aliasWidth]);
 
 	return (
 		<div
@@ -124,7 +123,7 @@ export const Address = ({
 					<TruncateEnd
 						text={walletName}
 						maxChars={maxNameChars}
-						showTooltip={!!maxNameChars && walletName.length > maxNameChars}
+						showTooltip={showTooltip ? !!maxNameChars && walletName.length > maxNameChars : false}
 					/>
 				</span>
 			)}

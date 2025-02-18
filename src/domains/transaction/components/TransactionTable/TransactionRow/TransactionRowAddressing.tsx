@@ -1,6 +1,6 @@
 import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
-import { useWalletAlias } from "@/app/hooks";
+import { useTheme, useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
 import React, { useMemo } from "react";
@@ -10,6 +10,9 @@ import { ColorType } from "@/app/components/Label/Label.styles";
 import { Link } from "@/app/components/Link";
 import { isContractDeployment, isContractTransaction } from "@/domains/transaction/utils";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Icon } from "@/app/components/Icon";
+import { Clipboard } from "@/app/components/Clipboard";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction, style }: { direction: Direction; style?: Direction }) => {
@@ -40,20 +43,37 @@ export const TransactionRowLabel = ({ direction, style }: { direction: Direction
 	);
 };
 
-const FormattedAddress = ({ alias, address }: { alias?: string; address: string }): JSX.Element => (
-	<div className="grow" data-testid="TransactionRowAddressing__address-container">
-		<Address
-			walletName={alias}
-			address={address}
-			truncateOnTable
-			addressClass={cn({
-				"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
-				"text-theme-text": !alias,
-			})}
-			size="sm"
-		/>
-	</div>
-);
+const FormattedAddress = ({ alias, address }: { alias?: string; address: string }): JSX.Element => {
+	const { isDarkMode } = useTheme();
+	const { t } = useTranslation();
+
+	return (
+		<div className="flex min-w-36 grow items-center justify-between space-x-4">
+			<Tooltip content={address}>
+				<div className="grow" data-testid="TransactionRowAddressing__address-container">
+					<Address
+						showTooltip={false}
+						walletName={alias}
+						address={alias ? "" : address}
+						truncateOnTable
+						addressClass={cn({
+							"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
+							"text-theme-text": !alias,
+						})}
+						size="sm"
+					/>
+				</div>
+			</Tooltip>
+
+			<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")} tooltipDarkTheme={isDarkMode}>
+				<Icon
+					name="Copy"
+					className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+				/>
+			</Clipboard>
+		</div>
+	);
+};
 
 const ContractAddressing = ({
 	transaction,
@@ -63,19 +83,38 @@ const ContractAddressing = ({
 	transaction: DTO.RawTransactionData;
 	direction: Direction;
 	t: any;
-}) => (
-	<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">
-		<TransactionRowLabel direction={direction} />
-		<Link
-			to={transaction.wallet().coin().link().wallet(transaction.recipient())}
-			isExternal
-			showExternalIcon={false}
-			className="text-sm font-semibold"
-		>
-			{t("COMMON.CONTRACT")}
-		</Link>
-	</div>
-);
+}) => {
+	const { isDarkMode } = useTheme();
+
+	return (
+		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">
+			<TransactionRowLabel direction={direction} />
+
+			<div className="flex w-full items-center justify-between space-x-4">
+				<Link
+					to={transaction.wallet().coin().link().wallet(transaction.recipient())}
+					isExternal
+					showExternalIcon={false}
+					className="text-sm font-semibold"
+				>
+					{t("COMMON.CONTRACT")}
+				</Link>
+
+				<Clipboard
+					variant="icon"
+					data={transaction.sender()}
+					tooltip={t("COMMON.COPY_ADDRESS")}
+					tooltipDarkTheme={isDarkMode}
+				>
+					<Icon
+						name="Copy"
+						className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+					/>
+				</Clipboard>
+			</div>
+		</div>
+	);
+};
 
 const MultiPaymentAddressing = ({
 	direction,
@@ -126,6 +165,7 @@ export const TransactionRowAddressing = ({
 }): JSX.Element => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
+	const { isDarkMode } = useTheme();
 
 	const isMusigTransfer = [
 		!!transaction.usesMultiSignature?.(),
@@ -184,6 +224,7 @@ export const TransactionRowAddressing = ({
 				data-testid="TransactionRowAddressing__container_advanced_sender"
 			>
 				<TransactionRowLabel direction="received" style="return" />
+
 				<FormattedAddress address={senderAddress} alias={senderAlias} />
 			</div>
 		);
@@ -197,14 +238,28 @@ export const TransactionRowAddressing = ({
 					data-testid="TransactionRowAddressing__vote_advanced_recipient"
 				>
 					<TransactionRowLabel direction="sent" style="return" />
-					<Link
-						to={transaction.wallet().coin().link().wallet(recipientAddress)}
-						isExternal
-						showExternalIcon={false}
-						className="text-sm font-semibold"
-					>
-						{t("COMMON.CONTRACT")}
-					</Link>
+					<div className="flex w-full items-center justify-between space-x-4">
+						<Link
+							to={transaction.wallet().coin().link().wallet(recipientAddress)}
+							isExternal
+							showExternalIcon={false}
+							className="text-sm font-semibold"
+						>
+							{t("COMMON.CONTRACT")}
+						</Link>
+
+						<Clipboard
+							variant="icon"
+							data={recipientAddress}
+							tooltip={t("COMMON.COPY_ADDRESS")}
+							tooltipDarkTheme={isDarkMode}
+						>
+							<Icon
+								name="Copy"
+								className="text-theme-secondary-700 hover:text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+							/>
+						</Clipboard>
+					</div>
 				</div>
 			);
 		}
@@ -236,10 +291,11 @@ export const TransactionRowAddressing = ({
 		return <ContractAddressing transaction={transaction} direction={direction} t={t} />;
 	}
 
+	const address = isNegative ? recipientAddress : senderAddress;
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__container">
 			<TransactionRowLabel direction={direction} />
-			<FormattedAddress address={isNegative ? recipientAddress : senderAddress} alias={alias} />
+			<FormattedAddress address={address} alias={alias} />
 		</div>
 	);
 };

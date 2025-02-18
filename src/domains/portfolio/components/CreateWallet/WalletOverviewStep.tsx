@@ -3,13 +3,11 @@ import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
-import { Header } from "@/app/components/Header";
 import { Toggle } from "@/app/components/Toggle";
 import { toasts } from "@/app/services";
 import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/MnemonicList";
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
-import { ThemeIcon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 
 export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {
@@ -45,16 +43,8 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 
 	return (
 		<section data-testid="CreateWallet__WalletOverviewStep">
-			<Header
-				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
-				titleIcon={
-					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
-				}
-				className="hidden sm:block"
-			/>
-
-			<div className="mt-4 space-y-4">
-				<Alert className="mt-6">{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
+			<div className="space-y-4">
+				<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
 				{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 

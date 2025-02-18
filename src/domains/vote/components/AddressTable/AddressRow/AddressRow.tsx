@@ -2,8 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { generatePath } from "react-router";
-import { useHistory } from "react-router-dom";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
@@ -17,7 +15,6 @@ import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
-import { ProfilePaths } from "@/router/paths";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
@@ -54,7 +51,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	const { t } = useTranslation();
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
 	const activeProfile = useActiveProfile();
-	const history = useHistory();
 
 	const { getWalletAlias } = useWalletAlias();
 	const { alias } = useMemo(
@@ -176,19 +172,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	return (
 		<TableRow className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
-			<TableCell
-				data-testid="AddressRow__wallet"
-				onClick={() => {
-					history.push(
-						generatePath(ProfilePaths.WalletDetails, {
-							profileId: activeProfile.id(),
-							walletId: wallet.id(),
-						}),
-					);
-				}}
-				variant="start"
-				innerClassName="cursor-pointer group space-x-3"
-			>
+			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="cursor-pointer group space-x-3">
 				<div className="w-40 flex-1">
 					<Address
 						address={wallet.address()}

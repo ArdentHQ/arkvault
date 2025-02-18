@@ -7,7 +7,7 @@ import React from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useBreakpoint } from "@/app/hooks";
-import { MobileAddressRow } from "@/domains/wallet/pages/WalletDetails/components/AddressesSidePanel/MobileAddressRow";
+import { MobileAddressRow } from "@/domains/portfolio/components/AddressesSidePanel/MobileAddressRow";
 
 export const AddressRow = ({
 	wallet,

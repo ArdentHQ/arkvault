@@ -297,7 +297,7 @@ export const translations = {
 	RECIPIENT: "Recipient",
 	RECIPIENTS: "Recipients",
 	RECIPIENTS_COUNT: "Recipients ({{count}})",
-	RECIPIENTS_HELPTEXT: "A multiple recipient transaction allows up to {{count}} recipients in one transaction",
+	RECIPIENTS_HELPTEXT: "Selecting Multiple allows you to add multiple recipients in one transaction",
 	REGISTRATION: "Registration",
 	REGISTRATION_TYPE: "Registration Type",
 	REPOSITORIES: {
