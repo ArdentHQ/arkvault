@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 
@@ -51,6 +51,19 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 			transitionTimingFunction: "ease-out",
 		},
 	});
+
+	useEffect(() => {
+		const handler = (e: MouseEvent) => {
+			if ((e.target as HTMLElement).closest(".Toastify")) {
+				e.stopPropagation();
+			}
+		};
+
+		document.addEventListener("mousedown", handler, true);
+		return () => {
+			document.removeEventListener("mousedown", handler, true);
+		};
+	}, []);
 
 	return (
 		<>
