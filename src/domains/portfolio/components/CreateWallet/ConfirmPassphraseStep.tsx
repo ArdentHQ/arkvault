@@ -36,11 +36,11 @@ export const ConfirmPassphraseStep = () => {
 	return (
 		<section data-testid="CreateWallet__ConfirmPassphraseStep" className="space-y-4">
 			<div className="rounded-lg border border-theme-secondary-300 transition-all dark:border-theme-dark-700">
-				<div className="flex flex-1 items-center justify-between space-x-5 sm:px-6 px-4 py-4">
+				<div className="flex flex-1 items-center justify-between space-x-5 px-4 py-4 sm:px-6">
 					<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />
 				</div>
 
-				<div className="rounded-b-lg bg-theme-secondary-100 sm:p-6 p-4 dark:bg-theme-dark-950">
+				<div className="rounded-b-lg bg-theme-secondary-100 p-4 dark:bg-theme-dark-950 sm:p-6">
 					<label className="inline-flex cursor-pointer items-start space-x-3 text-sm leading-[17px] text-theme-secondary-900 dark:text-theme-dark-100">
 						<Checkbox
 							data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
@@ -57,7 +57,7 @@ export const ConfirmPassphraseStep = () => {
 			</div>
 
 			<div className="rounded-lg border border-theme-secondary-300 transition-all dark:border-theme-dark-700">
-				<div className="flex flex-1 items-center justify-between space-x-5 sm:px-6 px-4 py-4">
+				<div className="flex flex-1 items-center justify-between space-x-5 px-4 py-4 sm:px-6">
 					<span className="font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
 						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.TITLE")}
 					</span>
@@ -71,7 +71,7 @@ export const ConfirmPassphraseStep = () => {
 					</span>
 				</div>
 
-				<div className="rounded-b-lg bg-theme-secondary-100 sm:px-6 px-4 pb-4 pt-3 dark:bg-theme-dark-950">
+				<div className="rounded-b-lg bg-theme-secondary-100 px-4 pb-4 pt-3 dark:bg-theme-dark-950 sm:px-6">
 					<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
 						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.DESCRIPTION")}
 					</span>
