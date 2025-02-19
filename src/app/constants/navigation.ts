@@ -1,7 +1,7 @@
 import { generatePath } from "react-router";
 
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
-import { DropdownOption } from "@/app/components/Dropdown";
+import { DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem } from "@/app/components/NavigationBar";
 import { ProfilePaths } from "@/router/paths";
 
@@ -24,32 +24,45 @@ export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 	},
 ];
 
-export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBarMenuItem)[] => [
+export const getUserMenuActions = (t: TFunction): DropdownOptionGroup[] => [
 	{
-		label: t("COMMON.SETTINGS"),
-		mountPath: (profileId) => generatePath(ProfilePaths.Settings, { profileId }),
-		title: "settings",
-		value: "settings",
+		key: "main",
+		options: [
+			{
+				label: t("COMMON.SETTINGS"),
+				mountPath: (profileId) => generatePath(ProfilePaths.Settings, { profileId }),
+				title: "settings",
+				value: "settings",
+			},
+			{
+				label: t("COMMON.CONTACT_US"),
+				mountPath: () => "/",
+				title: "contact",
+				value: "contact",
+			},
+		],
 	},
 	{
-		icon: "ArrowExternal",
-		iconClassName: "text-theme-primary-600",
-		isExternal: true,
-		label: t("COMMON.DOCUMENTATION"),
-		mountPath: () => "https://arkvault.io/docs",
-		title: "support",
-		value: "support",
-	},
-	{
-		label: t("COMMON.CONTACT_US"),
-		mountPath: () => "/",
-		title: "contact",
-		value: "contact",
-	},
-	{
-		label: t("COMMON.SIGN_OUT"),
-		mountPath: () => "/",
-		title: "sign-out",
-		value: "sign-out",
+		hasDivider: true,
+		key: "other",
+		options: [
+			{
+				icon: "ArrowExternal",
+				iconClassName: "text-theme-primary-600",
+				isExternal: true,
+				label: t("COMMON.DOCS"),
+				mountPath: () => "https://arkvault.io/docs",
+				title: "support",
+				value: "support",
+			},
+			{
+				icon: "SignOut",
+				iconClassName: "text-theme-primary-600",
+				label: t("COMMON.SIGN_OUT"),
+				mountPath: () => "/",
+				title: "sign-out",
+				value: "sign-out",
+			},
+		],
 	},
 ];
