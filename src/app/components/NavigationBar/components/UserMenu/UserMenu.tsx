@@ -64,7 +64,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	return (
 		<Dropdown
-			wrapperClass="rounded-none"
+			variant="navbar"
 			placement="bottom-end"
 			onSelect={onUserAction}
 			options={userMenuActions}

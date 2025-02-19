@@ -33,7 +33,7 @@ export interface OptionsProperties {
 	key?: string;
 }
 
-export type DropdownVariantType = "options" | "custom" | "votesFilter";
+export type DropdownVariantType = "options" | "custom" | "votesFilter" | "navbar";
 
 export interface DropdownProperties extends JSX.IntrinsicAttributes {
 	as?: React.ElementType;

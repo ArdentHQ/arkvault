@@ -17,13 +17,15 @@ import {
 	FloatingPortal,
 } from "@floating-ui/react";
 import { twMerge } from "tailwind-merge";
+import classNames from "classnames";
 
-export const Wrapper = ({ variant, ...props }: { variant: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => (
+export const Wrapper = ({ variant, ...props }: { variant?: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => (
 	<div
 		{...props}
 		className={twMerge(
 			cn({
-				"py-3 dark:bg-theme-secondary-800": variant === "options" || variant === "votesFilter",
+				"py-3 dark:bg-theme-secondary-800": variant === undefined,
+				"rounded-xl": variant !== "navbar",
 			}),
 			props.className,
 		)}
@@ -121,14 +123,21 @@ export const Dropdown: FC<DropdownProperties> = ({
 				<FloatingPortal>
 					<div
 						ref={refs.setFloating}
-						className={twMerge("z-40 w-full px-5 sm:w-auto sm:px-0", wrapperClass)}
+						className={twMerge(
+							"z-40 w-full sm:w-auto",
+							classNames({
+								"px-5 sm:px-0": variant !== "navbar",
+								"rounded-none": variant === "navbar",
+							}),
+							wrapperClass,
+						)}
 						style={floatingStyles}
 						{...getFloatingProps()}
 						data-testid={"dropdown__content" + testIdSuffix}
 					>
 						<Wrapper
-							variant={variant || options ? "options" : "custom"}
-							className="dropdown-body overflow-hidden rounded-xl bg-theme-background py-0 shadow-xl sm:px-1"
+							variant={options && variant === undefined ? "options" : variant}
+							className="dropdown-body overflow-hidden bg-theme-background py-0 shadow-xl sm:px-1"
 						>
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
