@@ -21,6 +21,8 @@ import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/u
 import { assertString, assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import { Header } from "@/app/components/Header";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 
 enum Step {
 	MethodStep = 1,
@@ -285,60 +287,49 @@ export const ImportAddressesSidePanel = ({
 const StepHeader = ({ step }: { step: Step }): JSX.Element => {
 	const { t } = useTranslation();
 
-	return <div className="mx-auto max-w-xl">salam</div>
-	// const headers: Record<Step, JSX.Element> = {
-	// 	[Step.WalletOverviewStep]: (
-	// 		<Header
-	// 			title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
-	// 			titleClassName="text-lg md:text-2xl md:leading-[29px]"
-	// 			titleIcon={
-	// 				<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
-	// 			}
-	// 			className="mt-px"
-	// 		/>
-	// 	),
-	// 	[Step.ConfirmPassphraseStep]: (
-	// 		<Header
-	// 			titleClassName="text-lg md:text-2xl md:leading-[29px]"
-	// 			title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
-	// 			titleIcon={
-	// 				<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />
-	// 			}
-	// 			subtitle={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
-	// 			className="mt-px"
-	// 		/>
-	// 	),
-	// 	[Step.EncryptPasswordStep]: (
-	// 		<Header
-	// 			titleClassName="text-lg md:text-2xl md:leading-[29px]"
-	// 			title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
-	// 			className="mt-px"
-	// 			titleIcon={
-	// 				<ThemeIcon
-	// 					lightIcon="WalletEncryptionLight"
-	// 					darkIcon="WalletEncryptionDark"
-	// 					dimensions={[24, 24]}
-	// 				/>
-	// 			}
-	// 		/>
-	// 	),
-	// 	[Step.SuccessStep]: (
-	// 		<Header
-	// 			titleClassName="text-lg md:text-2xl md:leading-[29px]"
-	// 			title={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE")}
-	// 			titleIcon={
-	// 				<Icon
-	// 					className="text-theme-success-100 dark:text-theme-success-900"
-	// 					dimensions={[24, 24]}
-	// 					name="Completed"
-	// 					data-testid="icon-Completed"
-	// 				/>
-	// 			}
-	// 			subtitle={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.SUBTITLE")}
-	// 			className="mt-px"
-	// 		/>
-	// 	),
-	// };
-	//
-	// return headers[step];
+	const headers: Record<Step, JSX.Element> = {
+		[Step.MethodStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="ImportWalletLight" darkIcon="ImportWalletDark" />
+				}
+				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
+				className="mt-px"
+			/>
+		),
+		[Step.EncryptPasswordStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
+				className="mt-px"
+				titleIcon={
+					<ThemeIcon
+						lightIcon="WalletEncryptionLight"
+						darkIcon="WalletEncryptionDark"
+						dimensions={[24, 24]}
+					/>
+				}
+			/>
+		),
+		[Step.SummaryStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				className="mt-px"
+				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
+				titleIcon={
+					<Icon
+						className="text-theme-success-100 dark:text-theme-success-900"
+						dimensions={[24, 24]}
+						name="Completed"
+						data-testid="icon-Completed"
+					/>
+				}
+				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE")}
+			/>
+		),
+	};
+
+	return headers[step];
 };
