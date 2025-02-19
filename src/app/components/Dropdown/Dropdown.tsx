@@ -128,7 +128,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 							"z-40 w-full sm:w-auto",
 							classNames({
 								"px-5 sm:px-0": variant !== "navbar",
-								"rounded-none": variant === "navbar",
+								"rounded-none sm:mt-2": variant === "navbar",
 							}),
 							wrapperClass,
 						)}
