@@ -2,7 +2,7 @@ import { ProfilePaths } from "@/router/paths";
 import { RouteItem } from "@/router/router.types";
 import preloadLazy from "@/utils/preload-lazy";
 
-const ImportWallet = preloadLazy(() => import("./pages/ImportWallet"));
+const ImportWallet = preloadLazy(() => import("../portfolio/components/ImportWallet"));
 
 export const WalletRoutes: RouteItem[] = [
 	{

@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
+import { Contracts, Wallet } from "../../../../../../platform-sdk/packages/profiles/source/helpers";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { ImportWallet } from "./ImportWallet";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { translations as commonTranslations } from "../../../../app/i18n/common/i18n";
 import {
 	env,
 	getDefaultProfileId,
@@ -14,8 +14,8 @@ import {
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
-} from "@/utils/testing-library";
-import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
+} from "../../../../utils/testing-library";
+import * as usePortfolio from "../../hooks/use-portfolio";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();

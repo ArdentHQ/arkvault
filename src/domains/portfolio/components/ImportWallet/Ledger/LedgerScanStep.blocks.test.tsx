@@ -1,6 +1,6 @@
 import React from "react";
 import { LedgerMobileItem } from "./LedgerScanStep.blocks";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen } from "../../../../../utils/testing-library";
 import { vi } from "vitest";
 import userEvent from "@testing-library/user-event";
 

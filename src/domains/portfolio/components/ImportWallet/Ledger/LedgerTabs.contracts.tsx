@@ -1,5 +1,5 @@
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "../../../../../../../platform-sdk/packages/sdk";
+import { Contracts } from "../../../../../../../platform-sdk/packages/profiles/source/helpers";
 
 import { useLedgerScanner } from "@/app/contexts";
 

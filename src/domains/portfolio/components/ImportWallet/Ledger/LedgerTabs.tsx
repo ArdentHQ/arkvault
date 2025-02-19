@@ -1,5 +1,5 @@
-import { Enums } from "@ardenthq/sdk";
-import { uniq } from "@ardenthq/sdk-helpers";
+import { Enums } from "../../../../../../../platform-sdk/packages/sdk";
+import { uniq } from "../../../../../../../platform-sdk/packages/helpers/source/immutable";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";

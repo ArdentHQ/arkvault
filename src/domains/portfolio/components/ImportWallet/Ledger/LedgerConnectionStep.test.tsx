@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "../../../../../../../platform-sdk/packages/profiles/source/helpers";
 import { renderHook } from "@testing-library/react";
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
-import { minVersionList } from "@/app/contexts";
-import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
+import { minVersionList } from "../../../../../app/contexts";
+import { useLedgerContext } from "../../../../../app/contexts/Ledger/Ledger";
+import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "../../../../../utils/testing-library";
 
 const history = createHashHistory();
 

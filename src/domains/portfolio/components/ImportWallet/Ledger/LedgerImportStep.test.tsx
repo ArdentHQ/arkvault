@@ -1,14 +1,14 @@
 import Transport from "@ledgerhq/hw-transport";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "../../../../../../../platform-sdk/packages/profiles/source/helpers";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
 import { LedgerImportStep } from "./LedgerImportStep";
-import { LedgerData } from "@/app/contexts";
-import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
-import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
-import { env, getDefaultProfileId, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+import { LedgerData } from "../../../../../app/contexts";
+import { LedgerProvider } from "../../../../../app/contexts/Ledger/Ledger";
+import { getDefaultAlias } from "../../../../wallet/utils/get-default-alias";
+import { env, getDefaultProfileId, renderResponsive, screen, waitFor } from "../../../../../utils/testing-library";
 
 describe("LedgerImportStep", () => {
 	let profile: Contracts.IProfile;

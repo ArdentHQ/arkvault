@@ -1,6 +1,6 @@
 import React from "react";
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "../../../../../../../platform-sdk/packages/sdk";
+import { Contracts } from "../../../../../../../platform-sdk/packages/profiles/source/helpers";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";

@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "../../../../../../../platform-sdk/packages/profiles/source/helpers";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 
 import * as reactHookForm from "react-hook-form";
 import { LedgerTabs } from "./LedgerTabs";
-import { minVersionList } from "@/app/contexts";
+import { minVersionList } from "../../../../../app/contexts";
 import {
 	env,
 	getDefaultProfileId,
@@ -15,10 +15,10 @@ import {
 	waitFor,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
-} from "@/utils/testing-library";
-import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
-import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+} from "../../../../../utils/testing-library";
+import { useLedgerContext } from "../../../../../app/contexts/Ledger/Ledger";
+import { server, requestMock, requestMockOnce } from "../../../../../tests/mocks/server";
+import { getDefaultAlias } from "../../../../wallet/utils/get-default-alias";
 
 vi.mock("react-hook-form", async () => ({
 	...(await vi.importActual("react-hook-form")),
