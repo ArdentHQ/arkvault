@@ -29,7 +29,10 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 
 	const click = useClick(context);
 	const role = useRole(context);
-	const dismiss = useDismiss(context, { outsidePressEvent: "mousedown" });
+	const dismiss = useDismiss(context, {
+		outsidePress: (event) => !(event.target as HTMLElement).closest(".Toastify"),
+		outsidePressEvent: "mousedown",
+	});
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
