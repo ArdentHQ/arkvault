@@ -1,14 +1,14 @@
-import { Contracts } from "../../../../../../../platform-sdk/packages/profiles/source/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
-import { Networks } from "../../../../../../../platform-sdk/packages/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { LedgerScanStep, showLoadedLedgerWalletsMessage, LedgerTable } from "./LedgerScanStep";
-import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "../../../../../utils/testing-library";
-import { toasts } from "../../../../../app/services";
-import { server, requestMockOnce, requestMock } from "../../../../../tests/mocks/server";
-import { LedgerData } from "../../../../../app/contexts/Ledger/Ledger.contracts";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+import { toasts } from "@/app/services";
+import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
+import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
 import { vi } from "vitest";
 
 let formReference: UseFormMethods<{ network: Networks.Network }>;

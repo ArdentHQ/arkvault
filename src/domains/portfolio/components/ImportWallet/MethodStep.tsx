@@ -1,6 +1,6 @@
-import { Coins, Networks } from "../../../../../../platform-sdk/packages/sdk";
-import { truncate } from "../../../../../../platform-sdk/packages/helpers/source/immutable";
-import { Contracts } from "../../../../../../platform-sdk/packages/profiles/source/helpers";
+import { Coins, Networks } from "@ardenthq/sdk";
+import { truncate } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";

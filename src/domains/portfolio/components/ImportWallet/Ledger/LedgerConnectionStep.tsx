@@ -1,4 +1,4 @@
-import { Networks } from "../../../../../../../platform-sdk/packages/sdk";
+import { Networks } from "@ardenthq/sdk";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";

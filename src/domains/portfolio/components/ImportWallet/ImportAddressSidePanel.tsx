@@ -1,4 +1,4 @@
-import { Contracts } from "../../../../../../platform-sdk/packages/profiles/source/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -9,7 +9,6 @@ import { MethodStep } from "./MethodStep";
 import { SuccessStep } from "./SuccessStep";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
-import { Page, Section } from "@/app/components/Layout";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -21,6 +20,7 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/use-wallet-import";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 
 enum Step {
 	MethodStep = 1,
@@ -28,7 +28,13 @@ enum Step {
 	SummaryStep,
 }
 
-export const ImportWallet = () => {
+export const ImportAddressesSidePanel = ({
+	open,
+	onOpenChange,
+}: {
+	open: boolean;
+	onOpenChange: (open: boolean) => void;
+}): JSX.Element => {
 	const history = useHistory();
 	const isLedgerImport = history.location.pathname.includes("/import/ledger");
 	const activeProfile = useActiveProfile();
@@ -190,84 +196,149 @@ export const ImportWallet = () => {
 		return steps;
 	}, [useEncryption, activeTab]);
 
+
 	return (
-		<Page pageTitle={t("WALLETS.PAGE_IMPORT_WALLET.TITLE")}>
-			<Section className="flex-1">
-				<Form
-					className="mx-auto max-w-xl"
-					context={form}
-					onSubmit={handleFinish}
-					data-testid="ImportWallet__form"
-				>
-					{isLedgerImport ? (
-						<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
-					) : (
-						<Tabs activeId={activeTab}>
-							<StepIndicator steps={allSteps} activeIndex={activeTab} />
+		<SidePanel
+			header={<StepHeader step={activeTab} />}
+			open={open}
+			onOpenChange={onOpenChange}
+			dataTestId="CreateAddressSidePanel"
+		>
+			<Form
+				className="mx-auto max-w-xl"
+				context={form}
+				onSubmit={handleFinish}
+				data-testid="ImportWallet__form"
+			>
+				{isLedgerImport ? (
+					<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
+				) : (
+					<Tabs activeId={activeTab}>
+						<StepIndicator steps={allSteps} activeIndex={activeTab} />
 
-							<div className="mt-8">
-								<TabPanel tabId={Step.MethodStep}>
-									<MethodStep profile={activeProfile} network={activeNetwork} />
-								</TabPanel>
+						<div className="mt-8">
+							<TabPanel tabId={Step.MethodStep}>
+								<MethodStep profile={activeProfile} network={activeNetwork} />
+							</TabPanel>
 
-								<TabPanel tabId={Step.EncryptPasswordStep}>
-									<EncryptPasswordStep importedWallet={importedWallet} />
-								</TabPanel>
+							<TabPanel tabId={Step.EncryptPasswordStep}>
+								<EncryptPasswordStep importedWallet={importedWallet} />
+							</TabPanel>
 
-								<TabPanel tabId={Step.SummaryStep}>
-									<SuccessStep
-										importedWallet={importedWallet}
-										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
-									/>
-								</TabPanel>
+							<TabPanel tabId={Step.SummaryStep}>
+								<SuccessStep
+									importedWallet={importedWallet}
+									onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+								/>
+							</TabPanel>
 
-								{activeTab <= Step.EncryptPasswordStep && (
-									<FormButtons>
-										<Button
-											disabled={isImporting}
-											variant="secondary"
-											onClick={handleBack}
-											data-testid="ImportWallet__back-button"
-										>
-											{t("COMMON.BACK")}
-										</Button>
+							{activeTab <= Step.EncryptPasswordStep && (
+								<FormButtons>
+									<Button
+										disabled={isImporting}
+										variant="secondary"
+										onClick={handleBack}
+										data-testid="ImportWallet__back-button"
+									>
+										{t("COMMON.BACK")}
+									</Button>
 
-										<Button
-											disabled={isNextDisabled}
-											isLoading={isEncrypting || isImporting}
-											onClick={handleNext}
-											data-testid="ImportWallet__continue-button"
-										>
-											{t("COMMON.CONTINUE")}
-										</Button>
-									</FormButtons>
-								)}
+									<Button
+										disabled={isNextDisabled}
+										isLoading={isEncrypting || isImporting}
+										onClick={handleNext}
+										data-testid="ImportWallet__continue-button"
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								</FormButtons>
+							)}
 
-								{activeTab === Step.SummaryStep && (
-									<FormButtons>
-										<Button
-											disabled={isSubmitting}
-											type="submit"
-											data-testid="ImportWallet__finish-button"
-										>
-											{t("COMMON.GO_TO_WALLET")}
-										</Button>
-									</FormButtons>
-								)}
-							</div>
-						</Tabs>
-					)}
-				</Form>
-
-				{!!importedWallet && isEditAliasModalOpen && (
-					<UpdateWalletName
-						wallet={importedWallet}
-						profile={activeProfile}
-						onCancel={() => setIsEditAliasModalOpen(false)}
-						onAfterSave={() => setIsEditAliasModalOpen(false)}
-					/>
+							{activeTab === Step.SummaryStep && (
+								<FormButtons>
+									<Button
+										disabled={isSubmitting}
+										type="submit"
+										data-testid="ImportWallet__finish-button"
+									>
+										{t("COMMON.GO_TO_WALLET")}
+									</Button>
+								</FormButtons>
+							)}
+						</div>
+					</Tabs>
 				)}
-			</Section>
-		</Page>
+			</Form>
+
+			{!!importedWallet && isEditAliasModalOpen && (
+				<UpdateWalletName
+					wallet={importedWallet}
+					profile={activeProfile}
+					onCancel={() => setIsEditAliasModalOpen(false)}
+					onAfterSave={() => setIsEditAliasModalOpen(false)}
+				/>
+			)}
+		</SidePanel>
 	);
+};
+
+const StepHeader = ({ step }: { step: Step }): JSX.Element => {
+	const { t } = useTranslation();
+
+	return <div className="mx-auto max-w-xl">salam</div>
+	// const headers: Record<Step, JSX.Element> = {
+	// 	[Step.WalletOverviewStep]: (
+	// 		<Header
+	// 			title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
+	// 			titleClassName="text-lg md:text-2xl md:leading-[29px]"
+	// 			titleIcon={
+	// 				<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
+	// 			}
+	// 			className="mt-px"
+	// 		/>
+	// 	),
+	// 	[Step.ConfirmPassphraseStep]: (
+	// 		<Header
+	// 			titleClassName="text-lg md:text-2xl md:leading-[29px]"
+	// 			title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
+	// 			titleIcon={
+	// 				<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />
+	// 			}
+	// 			subtitle={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
+	// 			className="mt-px"
+	// 		/>
+	// 	),
+	// 	[Step.EncryptPasswordStep]: (
+	// 		<Header
+	// 			titleClassName="text-lg md:text-2xl md:leading-[29px]"
+	// 			title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
+	// 			className="mt-px"
+	// 			titleIcon={
+	// 				<ThemeIcon
+	// 					lightIcon="WalletEncryptionLight"
+	// 					darkIcon="WalletEncryptionDark"
+	// 					dimensions={[24, 24]}
+	// 				/>
+	// 			}
+	// 		/>
+	// 	),
+	// 	[Step.SuccessStep]: (
+	// 		<Header
+	// 			titleClassName="text-lg md:text-2xl md:leading-[29px]"
+	// 			title={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE")}
+	// 			titleIcon={
+	// 				<Icon
+	// 					className="text-theme-success-100 dark:text-theme-success-900"
+	// 					dimensions={[24, 24]}
+	// 					name="Completed"
+	// 					data-testid="icon-Completed"
+	// 				/>
+	// 			}
+	// 			subtitle={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.SUBTITLE")}
+	// 			className="mt-px"
+	// 		/>
+	// 	),
+	// };
+	//
+	// return headers[step];
 };

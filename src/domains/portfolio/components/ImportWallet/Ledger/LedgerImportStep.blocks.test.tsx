@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionBodyItem, SectionHeaderMobile } from "./LedgerImportStep.blocks";
-import { render, screen } from "../../../../../utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 describe("SectionHeaderMobile", () => {
 	it("should render", () => {

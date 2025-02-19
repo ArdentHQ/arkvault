@@ -1,4 +1,3 @@
-import { Contracts } from "../../../../../../platform-sdk/packages/profiles/source/helpers";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React, { act } from "react";
@@ -10,7 +9,6 @@ import { MethodStep } from "./MethodStep";
 import { SuccessStep } from "./SuccessStep";
 import { EnvironmentProvider } from "../../../../app/contexts";
 import { translations as commonTranslations } from "../../../../app/i18n/common/i18n";
-import { OptionsValue } from "../../../wallet/hooks/use-import-options";
 import {
 	env,
 	getDefaultProfileId,
@@ -23,6 +21,7 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "../../../../utils/testing-library";
 import * as usePortfolio from "../../hooks/use-portfolio";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();

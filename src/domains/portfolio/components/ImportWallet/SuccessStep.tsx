@@ -1,4 +1,4 @@
-import { Contracts } from "../../../../../../platform-sdk/packages/profiles/source/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

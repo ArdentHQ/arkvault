@@ -22,6 +22,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
+import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 
 export const PortfolioHeader = ({
 	profile,
@@ -40,6 +41,7 @@ export const PortfolioHeader = ({
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
+	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
 
 	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets, allWallets, removeSelectedAddresses } =
 		usePortfolio({ profile });
@@ -49,7 +51,7 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
-	const { activeModal, setActiveModal, handleImport, handleSelectOption, handleSend } = useWalletActions(
+	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions(
 		...selectedWallets,
 	);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
@@ -101,7 +103,7 @@ export const PortfolioHeader = ({
 						<Button
 							variant="secondary"
 							className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
-							onClick={handleImport}
+							onClick={() => setShowImportAddressPanel(true)}
 						>
 							<Icon name="ArrowTurnDownBracket" size="md" />
 							<p className="hidden text-base font-semibold leading-5 sm:block">{t("COMMON.IMPORT")}</p>
@@ -329,6 +331,7 @@ export const PortfolioHeader = ({
 			/>
 
 			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+			<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
 
 			<WalletActionsModals
 				wallets={selectedWallets}

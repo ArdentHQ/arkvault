@@ -1,12 +1,12 @@
-import { Contracts } from "../../../../../../../platform-sdk/packages/profiles/source/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
 import { LedgerTabs } from "./LedgerTabs";
-import { minVersionList } from "../../../../../app/contexts";
-import * as scanner from "../../../../../app/contexts/Ledger/hooks/scanner.state";
+import { minVersionList } from "@/app/contexts";
+import * as scanner from "@/app/contexts/Ledger/hooks/scanner.state";
 import {
 	env,
 	getDefaultProfileId,
@@ -17,10 +17,10 @@ import {
 	mockLedgerTransportError,
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
-} from "../../../../../utils/testing-library";
-import { useLedgerContext } from "../../../../../app/contexts/Ledger/Ledger";
-import { server, requestMock, requestMockOnce } from "../../../../../tests/mocks/server";
-import { getDefaultAlias } from "../../../../wallet/utils/get-default-alias";
+} from "@/utils/testing-library";
+import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
+import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
+import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 
 vi.mock("react-hook-form", async () => ({
 	...(await vi.importActual("react-hook-form")),
