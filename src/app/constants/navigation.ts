@@ -48,7 +48,7 @@ export const getUserMenuActions = (t: TFunction): DropdownOptionGroup[] => [
 		options: [
 			{
 				icon: "ArrowExternal",
-				iconClassName: "text-theme-primary-600",
+				iconPosition: "start",
 				isExternal: true,
 				label: t("COMMON.DOCS"),
 				mountPath: () => "https://arkvault.io/docs",
@@ -57,7 +57,7 @@ export const getUserMenuActions = (t: TFunction): DropdownOptionGroup[] => [
 			},
 			{
 				icon: "SignOut",
-				iconClassName: "text-theme-primary-600",
+				iconPosition: "start",
 				label: t("COMMON.SIGN_OUT"),
 				mountPath: () => "/",
 				title: "sign-out",
