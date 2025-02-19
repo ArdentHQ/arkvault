@@ -27,7 +27,7 @@ const renderIcon = (option: DropdownOption) => {
 const isOptionGroup = (options: DropdownOption[] | DropdownOptionGroup[]) =>
 	options.length > 0 && options[0].key !== undefined;
 
-const renderOptionGroup = ({ key, hasDivider, title, options, onSelect, variant }: DropdownOptionGroup) => {
+const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: DropdownOptionGroup) => {
 	if (options.length === 0 || !onSelect) {
 		return;
 	}
@@ -36,12 +36,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect, variant 
 		<div key={key}>
 			{hasDivider && (
 				<div>
-					<div
-						className={cn("h-px bg-theme-secondary-300 dark:bg-theme-dark-700", {
-							"sm:-mx-1": variant === "navbar",
-							"w-full": variant !== "navbar",
-						})}
-					/>
+					<div className="h-px w-full bg-theme-secondary-300 dark:bg-theme-dark-700" />
 				</div>
 			)}
 			<ul>
@@ -75,7 +70,7 @@ export const renderOptions = ({ options, key, onSelect, variant }: OptionsProper
 		return (
 			<div>
 				{(options as DropdownOptionGroup[]).map((optionGroup: DropdownOptionGroup) =>
-					renderOptionGroup({ ...optionGroup, onSelect, variant }),
+					renderOptionGroup({ ...optionGroup, onSelect }),
 				)}
 			</div>
 		);

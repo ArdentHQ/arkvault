@@ -25,7 +25,6 @@ export interface DropdownOptionGroup {
 	hasDivider?: boolean;
 	options: DropdownOption[];
 	onSelect?: OnSelectProperties;
-	variant?: DropdownVariantType;
 }
 
 export interface OptionsProperties {
