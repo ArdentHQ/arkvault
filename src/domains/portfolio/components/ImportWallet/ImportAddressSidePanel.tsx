@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import { LedgerTabs } from "./Ledger/LedgerTabs";
-import { MethodStep } from "./MethodStep";
+import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
@@ -23,9 +23,12 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { Header } from "@/app/components/Header";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { MethodStep } from "@/domains/portfolio/components/ImportWallet/MethodStep";
+import { ImportOption } from "@/domains/wallet/hooks";
 
 enum Step {
 	MethodStep = 1,
+	ImportDetailStep = 2,
 	EncryptPasswordStep,
 	SummaryStep,
 }
@@ -58,7 +61,7 @@ export const ImportAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, watch } = form;
+	const { getValues, formState, register, watch, } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
 
@@ -66,6 +69,13 @@ export const ImportAddressesSidePanel = ({
 		register({ name: "importOption", type: "custom" });
 		register("useEncryption");
 	}, [register]);
+
+	useEffect(() => {
+		if (open) {
+			setActiveTab(Step.MethodStep);
+			setWalletGenerationInput(undefined);
+		}
+	}, [open]);
 
 	useEffect(() => {
 		if (value !== undefined) {
@@ -84,6 +94,9 @@ export const ImportAddressesSidePanel = ({
 	const handleNext = () =>
 		({
 			[Step.MethodStep]: async () => {
+				setActiveTab(Step.ImportDetailStep);
+			},
+			[Step.ImportDetailStep]: async () => {
 				setIsImporting(true);
 
 				try {
@@ -198,16 +211,16 @@ export const ImportAddressesSidePanel = ({
 		return steps;
 	}, [useEncryption, activeTab]);
 
+	const isMethodStep = activeTab === Step.MethodStep;
 
 	return (
 		<SidePanel
-			header={<StepHeader step={activeTab} />}
+			header={<StepHeader step={activeTab} importOption={importOption} />}
 			open={open}
 			onOpenChange={onOpenChange}
-			dataTestId="CreateAddressSidePanel"
+			dataTestId="ImportAddressSidePanel"
 		>
 			<Form
-				className="mx-auto max-w-xl"
 				context={form}
 				onSubmit={handleFinish}
 				data-testid="ImportWallet__form"
@@ -216,11 +229,15 @@ export const ImportAddressesSidePanel = ({
 					<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
 				) : (
 					<Tabs activeId={activeTab}>
-						<StepIndicator steps={allSteps} activeIndex={activeTab} />
+						{!isMethodStep && <StepIndicator steps={allSteps} activeIndex={activeTab} />}
 
-						<div className="mt-8">
+						<div>
 							<TabPanel tabId={Step.MethodStep}>
-								<MethodStep profile={activeProfile} network={activeNetwork} />
+								<MethodStep network={activeNetwork} onSelect={handleNext} />
+							</TabPanel>
+
+							<TabPanel tabId={Step.ImportDetailStep}>
+								<ImportDetailStep profile={activeProfile} network={activeNetwork} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.EncryptPasswordStep}>
@@ -234,7 +251,7 @@ export const ImportAddressesSidePanel = ({
 								/>
 							</TabPanel>
 
-							{activeTab <= Step.EncryptPasswordStep && (
+							{!isMethodStep && activeTab <= Step.EncryptPasswordStep && (
 								<FormButtons>
 									<Button
 										disabled={isImporting}
@@ -284,7 +301,13 @@ export const ImportAddressesSidePanel = ({
 	);
 };
 
-const StepHeader = ({ step }: { step: Step }): JSX.Element => {
+const StepHeader = ({
+	step,
+	importOption,
+}: {
+	step: Step;
+	importOption: ImportOption | undefined;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const headers: Record<Step, JSX.Element> = {
@@ -292,10 +315,16 @@ const StepHeader = ({ step }: { step: Step }): JSX.Element => {
 			<Header
 				titleClassName="text-lg md:text-2xl md:leading-[29px]"
 				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
-				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="ImportWalletLight" darkIcon="ImportWalletDark" />
-				}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
+				className="mt-px"
+			/>
+		),
+		[Step.ImportDetailStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				title={importOption?.label ?? ""}
+				subtitle={importOption?.description ?? ""}
+				titleIcon={importOption?.icon ?? null}
 				className="mt-px"
 			/>
 		),

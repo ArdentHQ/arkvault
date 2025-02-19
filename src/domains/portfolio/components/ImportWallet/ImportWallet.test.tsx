@@ -5,7 +5,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
 import { ImportWallet } from "./ImportWallet";
-import { MethodStep } from "./MethodStep";
+import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
 import { EnvironmentProvider } from "../../../../app/contexts";
 import { translations as commonTranslations } from "../../../../app/i18n/common/i18n";
@@ -90,7 +90,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} network={network} />
+						<ImportDetailStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -152,7 +152,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} network={network} />
+						<ImportDetailStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -368,7 +368,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} network={network} />
+						<ImportDetailStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -484,7 +484,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} network={network} />
+						<ImportDetailStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -606,7 +606,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<MethodStep profile={profile} network={network} />
+						<ImportDetailStep profile={profile} network={network} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
