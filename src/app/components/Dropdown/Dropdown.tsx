@@ -26,6 +26,7 @@ export const Wrapper = ({ variant, ...props }: { variant?: DropdownVariantType }
 			cn({
 				"py-3 dark:bg-theme-secondary-800": variant === undefined,
 				"rounded-xl": variant !== "navbar",
+				"sm:rounded-xl": variant === "navbar",
 			}),
 			props.className,
 		)}
@@ -140,7 +141,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 							className="dropdown-body overflow-hidden bg-theme-background py-0 shadow-xl sm:px-1"
 						>
 							{top}
-							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
+							{options?.length && renderOptions({ onSelect: onSelectOption, options, variant })}
 							{clonedElement && <div>{clonedElement}</div>}
 							{bottom}
 						</Wrapper>

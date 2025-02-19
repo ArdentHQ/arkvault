@@ -59,7 +59,7 @@ const renderSecondaryLabel = (value: string | Function, isActive: boolean) => {
 	return value;
 };
 
-export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => {
+export const renderOptions = ({ options, key, onSelect, variant }: OptionsProperties) => {
 	const onSelectItem = (event: React.MouseEvent | React.KeyboardEvent, option: DropdownOption) => {
 		event.preventDefault();
 		event.stopPropagation();
@@ -80,6 +80,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 		<ul data-testid="dropdown__options">
 			{(options as DropdownOption[]).map((option: DropdownOption, index: number) => (
 				<DropdownItem
+					variant={variant}
 					isActive={!!option.active}
 					key={index}
 					data-testid={`dropdown__option--${key ? `${key}-` : ""}${index}`}

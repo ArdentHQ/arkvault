@@ -31,6 +31,7 @@ export interface OptionsProperties {
 	options: DropdownOption[] | DropdownOptionGroup[];
 	onSelect: OnSelectProperties;
 	key?: string;
+	variant?: DropdownVariantType;
 }
 
 export type DropdownVariantType = "options" | "custom" | "votesFilter" | "navbar";
