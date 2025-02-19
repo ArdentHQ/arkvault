@@ -17,7 +17,7 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 				<li
 					data-testid="MnemonicList__item"
 					key={index}
-					className="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
+					className="dark:border-theme-dark-500 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
 				>
 					<div className="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{index + 1}
