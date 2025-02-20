@@ -69,7 +69,7 @@ describe("ImportAddress Methods", () => {
 	it("should import by address", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -106,7 +106,7 @@ describe("ImportAddress Methods", () => {
 	it("should import by public key", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -145,7 +145,7 @@ describe("ImportAddress Methods", () => {
 	it("should validate public key doesnt exist", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -177,7 +177,7 @@ describe("ImportAddress Methods", () => {
 	it("should not allow importing from an invalid public key", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -205,7 +205,7 @@ describe("ImportAddress Methods", () => {
 	it("should import by secret", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -244,7 +244,7 @@ describe("ImportAddress Methods", () => {
 	it("should import by secret with encryption", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -309,7 +309,7 @@ describe("ImportAddress Methods", () => {
 	it("should import by secret with second signature and use password to encrypt both", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -369,7 +369,7 @@ describe("ImportAddress Methods", () => {
 	it("forgets the imported wallet if back from encrypted password step", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,

@@ -322,7 +322,7 @@ export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IPro
 
 				<div className="rounded-lg border border-theme-secondary-300 transition-all dark:border-theme-dark-700">
 					<div className="flex flex-1 items-center justify-between space-x-5 px-4 py-4 sm:px-6">
-						<span className="font-semibold text-theme-secondary-900 leading-[17px] sm:leading-5 dark:text-theme-dark-50">
+						<span className="font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-dark-50 sm:leading-5">
 							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.TITLE")}
 						</span>
 

@@ -255,9 +255,11 @@ export const ImportAddressesSidePanel = ({
 							</div>
 						</Tabs>
 						<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
-							{!isMethodStep && <div className="hidden w-[136px] sm:block">
-								<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-							</div>}
+							{!isMethodStep && (
+								<div className="hidden w-[136px] sm:block">
+									<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
+								</div>
+							)}
 
 							<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
 								{!isMethodStep && activeTab <= Step.EncryptPasswordStep && (

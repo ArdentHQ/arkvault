@@ -31,28 +31,26 @@ export const MethodStep = ({ network, onSelect }: { network: Networks.Network; o
 	);
 };
 
-const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option: ImportOption) => void }) => {
-	return (
-		<div
-			onClick={() => onSelect(option)}
-			tabIndex={0}
-			className="group cursor-pointer space-y-2 rounded-lg border border-theme-primary-200 p-4 hover:bg-theme-primary-200 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 sm:p-6"
-		>
-			<div className="flex items-center space-x-2">
-				{option.icon && (
-					<div className="text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-theme-dark-200 dark:group-hover:text-white">
-						{option.icon}
-					</div>
-				)}
-				<div className="font-semibold leading-5 text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-theme-dark-50 dark:group-hover:text-white">
-					{option.label}
-				</div>
-			</div>
-			{option.description && (
-				<div className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-primary-500 dark:text-theme-dark-200 dark:group-hover:text-white sm:block">
-					{option.description}
+const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option: ImportOption) => void }) => (
+	<div
+		onClick={() => onSelect(option)}
+		tabIndex={0}
+		className="group cursor-pointer space-y-2 rounded-lg border border-theme-primary-200 p-4 hover:bg-theme-primary-200 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 sm:p-6"
+	>
+		<div className="flex items-center space-x-2">
+			{option.icon && (
+				<div className="text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-theme-dark-200 dark:group-hover:text-white">
+					{option.icon}
 				</div>
 			)}
+			<div className="font-semibold leading-5 text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-theme-dark-50 dark:group-hover:text-white">
+				{option.label}
+			</div>
 		</div>
-	);
-};
+		{option.description && (
+			<div className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-primary-500 dark:text-theme-dark-200 dark:group-hover:text-white sm:block">
+				{option.description}
+			</div>
+		)}
+	</div>
+);

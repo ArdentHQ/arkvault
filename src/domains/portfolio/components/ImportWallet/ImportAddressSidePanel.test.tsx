@@ -79,7 +79,7 @@ describe("ImportSidePanel", () => {
 			});
 			return (
 				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 				</EnvironmentProvider>
 			);
 		};
@@ -137,7 +137,7 @@ describe("ImportSidePanel", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+						<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -216,7 +216,7 @@ describe("ImportSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/import/ledger">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: {
@@ -242,7 +242,7 @@ describe("ImportSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -294,7 +294,7 @@ describe("ImportSidePanel", () => {
 
 			return (
 				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 				</EnvironmentProvider>
 			);
 		};
@@ -359,10 +359,7 @@ describe("ImportSidePanel", () => {
 			await waitFor(() => expect(continueButton()).not.toBeEnabled());
 
 			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					'data-errortext',
-					'Invalid Private Key',
-				);
+				expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Invalid Private Key");
 			});
 
 			coinMock.mockRestore();
@@ -385,7 +382,7 @@ describe("ImportSidePanel", () => {
 
 			return (
 				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 				</EnvironmentProvider>
 			);
 		};
@@ -473,7 +470,7 @@ describe("ImportSidePanel", () => {
 
 			return (
 				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 				</EnvironmentProvider>
 			);
 		};

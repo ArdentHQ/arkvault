@@ -70,7 +70,7 @@ describe("ImportAddress", () => {
 	it("should import by mnemonic", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -121,7 +121,7 @@ describe("ImportAddress", () => {
 	it("should import by mnemonic and use encryption password", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -170,7 +170,7 @@ describe("ImportAddress", () => {
 	it("should disable the encryption option when selecting a methods without encryption", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -214,7 +214,7 @@ describe("ImportAddress", () => {
 	it("should import by mnemonic with second signature and use password to encrypt both", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -271,7 +271,7 @@ describe("ImportAddress", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
