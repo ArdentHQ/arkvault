@@ -31,46 +31,46 @@ const useWalletAlias = (): HookResult => {
 				assertProfile(profile);
 				assertString(address);
 
-				let wallet: Contracts.IReadWriteWallet | undefined;
+				const useNetworkWalletNames = profile.appearance().get("useNetworkWalletNames");
 
+				let wallet: Contracts.IReadWriteWallet | undefined;
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 				}
 
-				if (wallet) {
-					return {
-						address,
-						alias: wallet.displayName(),
-						isContact: false,
-					};
-				}
+				const localName = wallet ? wallet.displayName() : undefined;
+				const onChainName = wallet ? wallet.knownName() : username;
 
 				const contact = profile.contacts().findByAddress(address)[0];
+				const contactName = contact ? contact.name() : undefined;
 
-				if (contact) {
-					return {
-						address,
-						alias: contact.name(),
-						isContact: true,
-					};
+				let alias: string | undefined;
+				let isContact = false;
+
+				if (useNetworkWalletNames) {
+					if (onChainName) {
+						alias = onChainName;
+					} else if (localName) {
+						alias = localName;
+					} else if (contactName) {
+						alias = contactName;
+						isContact = true;
+					}
+				} else {
+					if (localName) {
+						alias = localName;
+					} else if (contactName) {
+						alias = contactName;
+						isContact = true;
+					} else if (onChainName) {
+						alias = onChainName;
+					}
 				}
 
-				if (username) {
-					return {
-						address,
-						alias: username,
-						isContact: false,
-					};
-				}
+				return { address, alias, isContact };
 			} catch {
-				//
+				return { address, alias: undefined, isContact: false };
 			}
-
-			return {
-				address,
-				alias: undefined,
-				isContact: false,
-			};
 		},
 		[env],
 	);
@@ -79,5 +79,4 @@ const useWalletAlias = (): HookResult => {
 };
 
 export { useWalletAlias };
-
 export type { WalletAliasResult };
