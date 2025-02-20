@@ -17,13 +17,9 @@ import { createHashHistory } from "history";
 const profileName = "test profile";
 
 const baseSettings = {
-	ACCENT_COLOR: "navy",
-	ADVANCED_MODE: false,
 	AUTOMATIC_SIGN_OUT_PERIOD: 15,
 	BIP39_LOCALE: "english",
-	DASHBOARD_TRANSACTION_HISTORY: false,
 	DO_NOT_SHOW_FEE_WARNING: false,
-	ERROR_REPORTING: false,
 	EXCHANGE_CURRENCY: "BTC",
 	FALLBACK_TO_DEFAULT_NODES: true,
 	LOCALE: "en-US",
@@ -31,7 +27,6 @@ const baseSettings = {
 	NAME: profileName,
 	THEME: "light",
 	TIME_FORMAT: "h:mm A",
-	USE_EXPANDED_TABLES: false,
 	USE_NETWORK_WALLET_NAMES: false,
 	USE_TEST_NETWORKS: false,
 };

@@ -328,7 +328,7 @@ export const useProfileTransactions = ({
 		isLoadingMore,
 		isLoadingTransactions,
 		selectedTransactionTypes,
-		transactions,
+		transactions: selectedTransactionTypes?.length ? transactions : [],
 		updateFilters,
 	};
 };
