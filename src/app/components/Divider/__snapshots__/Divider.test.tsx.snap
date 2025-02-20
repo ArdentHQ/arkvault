@@ -67,7 +67,7 @@ exports[`Divider > should render horizontal with size xl 1`] = `
 exports[`Divider > should render vertical type 1`] = `
 <div>
   <div
-    class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
   />
 </div>
 `;
