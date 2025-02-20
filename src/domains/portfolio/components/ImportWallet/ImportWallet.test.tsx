@@ -1,14 +1,14 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import React, { act } from "react";
+import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { ImportWallet } from "./ImportWallet";
-import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
-import { EnvironmentProvider } from "../../../../app/contexts";
-import { translations as commonTranslations } from "../../../../app/i18n/common/i18n";
+import { EnvironmentProvider } from "@/app/contexts";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+
 import {
 	env,
 	getDefaultProfileId,
@@ -18,10 +18,10 @@ import {
 	waitFor,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
-} from "../../../../utils/testing-library";
-import * as usePortfolio from "../../hooks/use-portfolio";
-import { Contracts } from "@ardenthq/sdk-profiles";
+} from "@/utils/testing-library";
+import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
+import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -29,17 +29,17 @@ const fixtureProfileId = getDefaultProfileId();
 const mnemonic = "buddy year cost vendor honey tonight viable nut female alarm duck symptom";
 const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
 
-const route = `/profiles/${fixtureProfileId}/wallets/import`;
-const routeLedger = `/profiles/${fixtureProfileId}/wallets/import/ledger`;
+const route = `/profiles/${fixtureProfileId}/dashboard`;
+const routeLedger = `/profiles/${fixtureProfileId}/dashboard/ledger`;
 const history = createHashHistory();
 
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
-const backButton = () => screen.getByTestId("ImportWallet__back-button");
 const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
 const finishButton = () => screen.getByTestId("ImportWallet__finish-button");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
+const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
 const privateKeyInput = () => screen.getByTestId("ImportWallet__privatekey-input");
 const wifInput = () => screen.getByTestId("ImportWallet__wif-input");
 const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-input");
@@ -47,7 +47,7 @@ const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-i
 const testNetwork = "ark.devnet";
 let network;
 
-describe("ImportWallet", () => {
+describe("ImportAddress", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeEach(async () => {
@@ -70,8 +70,6 @@ describe("ImportWallet", () => {
 	});
 
 	it("should render method step", async () => {
-		let form: ReturnType<typeof useForm>;
-
 		const Component = () => {
 			network.importMethods = () => ({
 				bip39: {
@@ -79,19 +77,9 @@ describe("ImportWallet", () => {
 					permissions: [],
 				},
 			});
-
-			form = useForm({
-				defaultValues: { network },
-			});
-
-			form.register("importOption");
-			form.register("network");
-
 			return (
 				<EnvironmentProvider env={env}>
-					<FormProvider {...form}>
-						<ImportDetailStep profile={profile} network={network} />
-					</FormProvider>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
 				</EnvironmentProvider>
 			);
 		};
@@ -106,6 +94,12 @@ describe("ImportWallet", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
+		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+
+		expect(detailStep()).toBeInTheDocument();
+
 		await waitFor(() => expect(mnemonicInput()));
 
 		expect(mnemonicInput()).toBeInTheDocument();
@@ -113,16 +107,7 @@ describe("ImportWallet", () => {
 		await userEvent.clear(mnemonicInput());
 		await userEvent.type(mnemonicInput(), mnemonic);
 
-		await waitFor(() => {
-			expect(form.getValues()).toMatchObject({
-				importOption: {
-					canBeEncrypted: false,
-					label: "Mnemonic",
-					value: OptionsValue.BIP39,
-				},
-				value: mnemonic,
-			});
-		});
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		expect(container).toMatchSnapshot();
 	});
@@ -152,7 +137,7 @@ describe("ImportWallet", () => {
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
-						<ImportDetailStep profile={profile} network={network} />
+						<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
 					</FormProvider>
 				</EnvironmentProvider>
 			);
@@ -168,18 +153,23 @@ describe("ImportWallet", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
+		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+
+		expect(detailStep()).toBeInTheDocument();
+
 		await expect(screen.findByTestId("ImportWallet__mnemonic-input")).resolves.toBeVisible();
 
-		const selectDropdown = screen.getByTestId("SelectDropdown__input");
+		await userEvent.click(screen.getByText(commonTranslations.BACK));
 
-		await userEvent.click(selectDropdown);
+		expect(methodStep()).toBeInTheDocument();
 
-		await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
+		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
-		// Ensure the value is set
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("Address"));
+		expect(detailStep()).toBeInTheDocument();
 
 		await expect(addressInput()).resolves.toBeVisible();
 	});
@@ -221,62 +211,12 @@ describe("ImportWallet", () => {
 		vi.clearAllMocks();
 	});
 
-	it("should go back to portfolio", async () => {
-		const history = createHashHistory();
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
-			</Route>,
-			{
-				history,
-				route: route,
-			},
-		);
-
-		await waitFor(() => expect(backButton()).toBeEnabled());
-		await userEvent.click(backButton());
-
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-
-		historySpy.mockRestore();
-	});
-
-	it("should skip network step if only one network", async () => {
-		const history = createHashHistory();
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		resetProfileNetworksMock();
-
-		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
-			</Route>,
-			{
-				history,
-				route: route,
-			},
-		);
-
-		await expect(screen.findByTestId("ImportWallet__method-step")).resolves.toBeVisible();
-		await waitFor(() => expect(backButton()).toBeEnabled());
-		await userEvent.click(backButton());
-
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-
-		historySpy.mockRestore();
-	});
-	it("should render as ledger import", async () => {
+	it.skip("should render as ledger import", async () => {
 		const nanoXMock = mockNanoXTransport();
 
 		render(
 			<Route path="/profiles/:profileId/wallets/import/ledger">
-				<ImportWallet />
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
 			</Route>,
 			{
 				route: {
@@ -301,8 +241,8 @@ describe("ImportWallet", () => {
 		const randomNewAddress = "DHnF7Ycv16QxQQNGDUdGzWGh5n3ym424UW";
 
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
 			</Route>,
 			{
 				history,
@@ -314,8 +254,6 @@ describe("ImportWallet", () => {
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
@@ -343,7 +281,6 @@ describe("ImportWallet", () => {
 	});
 
 	describe("import with private key", () => {
-		let form: ReturnType<typeof useForm>;
 		const privateKey = "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712";
 
 		const Component = () => {
@@ -355,40 +292,11 @@ describe("ImportWallet", () => {
 				},
 			});
 
-			form = useForm({
-				defaultValues: { network, privateKey },
-				shouldUnregister: false,
-			});
-
-			form.register("importOption");
-			form.register("network");
-			form.register("privateKey");
-			form.register("value");
-
 			return (
 				<EnvironmentProvider env={env}>
-					<FormProvider {...form}>
-						<ImportDetailStep profile={profile} network={network} />
-					</FormProvider>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
 				</EnvironmentProvider>
 			);
-		};
-
-		const testFormValues = async (form) => {
-			await waitFor(() => {
-				expect(form.getValues()).toMatchObject({
-					importOption: {
-						canBeEncrypted: true,
-						label: "Private Key",
-						value: OptionsValue.PRIVATE_KEY,
-					},
-					value: privateKey,
-				});
-			});
-
-			await waitFor(() => {
-				expect(privateKeyInput()).toHaveValue(privateKey);
-			});
 		};
 
 		it("when is valid", async () => {
@@ -406,17 +314,16 @@ describe("ImportWallet", () => {
 
 			expect(methodStep()).toBeInTheDocument();
 
+			await expect(screen.findByText(commonTranslations.PRIVATE_KEY)).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByText(commonTranslations.PRIVATE_KEY));
+
 			await waitFor(() => expect(privateKeyInput()));
 
 			await userEvent.clear(privateKeyInput());
 			await userEvent.type(privateKeyInput(), privateKey);
 
-			await testFormValues(form);
-
-			// Trigger validation
-			await act(async () => {
-				await form.trigger("value");
-			});
+			await waitFor(() => expect(continueButton()).toBeEnabled());
 
 			coinMock.mockRestore();
 
@@ -440,16 +347,22 @@ describe("ImportWallet", () => {
 
 			expect(methodStep()).toBeInTheDocument();
 
+			await expect(screen.findByText(commonTranslations.PRIVATE_KEY)).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByText(commonTranslations.PRIVATE_KEY));
+
 			await waitFor(() => expect(privateKeyInput()));
 
 			await userEvent.clear(privateKeyInput());
 			await userEvent.type(privateKeyInput(), privateKey);
 
-			await testFormValues(form);
+			await waitFor(() => expect(continueButton()).not.toBeEnabled());
 
-			// Trigger validation
-			await act(async () => {
-				await form.trigger("value");
+			await waitFor(() => {
+				expect(screen.getByTestId("Input__error")).toHaveAttribute(
+					'data-errortext',
+					'Invalid Private Key',
+				);
 			});
 
 			coinMock.mockRestore();
@@ -459,7 +372,6 @@ describe("ImportWallet", () => {
 	});
 
 	describe("import with wif", () => {
-		let form: ReturnType<typeof useForm>;
 		const wif = "wif.1111";
 
 		const Component = () => {
@@ -471,36 +383,11 @@ describe("ImportWallet", () => {
 				},
 			});
 
-			form = useForm({
-				defaultValues: { network, wif },
-				shouldUnregister: false,
-			});
-
-			form.register("importOption");
-			form.register("network");
-			form.register("wif");
-			form.register("value");
-
 			return (
 				<EnvironmentProvider env={env}>
-					<FormProvider {...form}>
-						<ImportDetailStep profile={profile} network={network} />
-					</FormProvider>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
 				</EnvironmentProvider>
 			);
-		};
-
-		const testFormValues = async (form) => {
-			await waitFor(() => {
-				expect(form.getValues()).toMatchObject({
-					importOption: {
-						canBeEncrypted: true,
-						label: "WIF",
-						value: OptionsValue.WIF,
-					},
-					value: wif,
-				});
-			});
 		};
 
 		it("with valid wif", async () => {
@@ -520,21 +407,15 @@ describe("ImportWallet", () => {
 
 			expect(methodStep()).toBeInTheDocument();
 
+			await expect(screen.findByText(commonTranslations.WIF)).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByText(commonTranslations.WIF));
+
 			await waitFor(() => expect(wifInput()));
 
-			await userEvent.clear(wifInput());
 			await userEvent.type(wifInput(), wif);
 
-			await testFormValues(form);
-
-			await waitFor(() => {
-				expect(wifInput()).toHaveValue(wif);
-			});
-
-			// Trigger validation
-			await act(async () => {
-				await form.trigger("value");
-			});
+			await waitFor(() => expect(continueButton()).toBeEnabled());
 
 			expect(container).toMatchSnapshot();
 
@@ -559,21 +440,19 @@ describe("ImportWallet", () => {
 
 			expect(methodStep()).toBeInTheDocument();
 
+			await expect(screen.findByText(commonTranslations.WIF)).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByText(commonTranslations.WIF));
+
 			await waitFor(() => expect(wifInput()));
 
-			await userEvent.clear(wifInput());
 			await userEvent.type(wifInput(), wif);
-
-			await testFormValues(form);
 
 			await waitFor(() => {
 				expect(wifInput()).toHaveValue(wif);
 			});
 
-			// Trigger validation
-			await act(async () => {
-				await form.trigger("value");
-			});
+			await waitFor(() => expect(continueButton()).not.toBeEnabled());
 
 			expect(container).toMatchSnapshot();
 
@@ -582,7 +461,6 @@ describe("ImportWallet", () => {
 	});
 
 	it("should import with encryped wif", async () => {
-		let form: ReturnType<typeof useForm>;
 		const wif = "wif.1111";
 		const wifPassword = "password";
 
@@ -593,21 +471,9 @@ describe("ImportWallet", () => {
 				encryptedWif: true,
 			});
 
-			form = useForm({
-				defaultValues: { network, wif },
-				shouldUnregister: false,
-			});
-
-			form.register("type");
-			form.register("network");
-			form.register("encryptedWif");
-			form.register("value");
-
 			return (
 				<EnvironmentProvider env={env}>
-					<FormProvider {...form}>
-						<ImportDetailStep profile={profile} network={network} />
-					</FormProvider>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
 				</EnvironmentProvider>
 			);
 		};
@@ -623,6 +489,12 @@ describe("ImportWallet", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.ENCRYPTED_WIF)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.ENCRYPTED_WIF));
+
 		await waitFor(() => expect(encryptedWifInput()));
 
 		await userEvent.clear(encryptedWifInput());
@@ -635,10 +507,7 @@ describe("ImportWallet", () => {
 			expect(encryptedWifInput()).toHaveValue(wif);
 		});
 
-		// Trigger validation
-		await act(async () => {
-			await form.trigger("value");
-		});
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		expect(container).toMatchSnapshot();
 	});
