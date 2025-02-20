@@ -12,6 +12,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
 import { useBreakpoint } from "@/app/hooks";
+import { setTime } from "react-datepicker/dist/date_utils";
 
 export const AddressesSidePanel = ({
 	wallets,
@@ -30,6 +31,7 @@ export const AddressesSidePanel = ({
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses);
+	const [isAnimating, setIsAnimating] = useState(false)
 
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
 
@@ -107,12 +109,21 @@ export const AddressesSidePanel = ({
 	const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
 	const hasSelectedAddresses = () => selectedAddresses.length > 0;
 
+	const runErrorAnimation = () => {
+		setIsAnimating(true)
+		setTimeout(() => setIsAnimating(false), 900)
+	}
+
 	return (
 		<SidePanel
+			className={
+				cn({ "animate-shake": isAnimating })
+			}
 			header={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
 			open={open}
 			onOpenChange={(open) => {
 				if (selectedAddresses.length === 0) {
+					runErrorAnimation();
 					return;
 				}
 
@@ -243,19 +254,21 @@ export const AddressesSidePanel = ({
 				</div>
 			</div>
 
-			{isDeleteMode && (
-				<div className="my-2 flex flex-col overflow-hidden rounded bg-theme-info-50 dark:bg-theme-dark-800 sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
-					<div className="flex w-full items-center space-x-2 bg-theme-info-100 px-4 py-2 dark:bg-theme-info-600 sm:w-auto sm:space-x-0 sm:py-4.5">
-						<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
-						<span className="text-sm font-semibold leading-[17px] text-theme-info-700 dark:text-white sm:hidden">
-							{t("COMMON.INFORMATION")}
-						</span>
+			{
+				isDeleteMode && (
+					<div className="my-2 flex flex-col overflow-hidden rounded bg-theme-info-50 dark:bg-theme-dark-800 sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
+						<div className="flex w-full items-center space-x-2 bg-theme-info-100 px-4 py-2 dark:bg-theme-info-600 sm:w-auto sm:space-x-0 sm:py-4.5">
+							<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
+							<span className="text-sm font-semibold leading-[17px] text-theme-info-700 dark:text-white sm:hidden">
+								{t("COMMON.INFORMATION")}
+							</span>
+						</div>
+						<div className="p-4 text-sm text-theme-secondary-900 dark:text-theme-dark-50">
+							{t("WALLETS.ADDRESSES_SIDE_PANEL.DELETE_INFO")}
+						</div>
 					</div>
-					<div className="p-4 text-sm text-theme-secondary-900 dark:text-theme-dark-50">
-						{t("WALLETS.ADDRESSES_SIDE_PANEL.DELETE_INFO")}
-					</div>
-				</div>
-			)}
+				)
+			}
 
 			<div className="space-y-1">
 				{addressesToShow.map((wallet, index) => (
@@ -275,6 +288,6 @@ export const AddressesSidePanel = ({
 					/>
 				))}
 			</div>
-		</SidePanel>
+		</SidePanel >
 	);
 };

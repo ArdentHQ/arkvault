@@ -56,7 +56,7 @@ export const AddressRow = ({
 				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected,
 			})}
 		>
-			<div className="flex items-center px-4 py-3">
+			<div className="flex items-center px-4 py-3 duration-150">
 				{usesDeleteMode && (
 					<Button
 						onClick={() => onDelete(wallet.address())}
