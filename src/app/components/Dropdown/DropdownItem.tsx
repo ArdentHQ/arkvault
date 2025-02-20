@@ -15,10 +15,10 @@ export const DropdownItem = ({
 			cn({
 				"border-l-4": variant !== "navbar",
 				"border-theme-primary-600 bg-theme-primary-50 text-theme-primary-600 dark:bg-black": isActive,
-				"cursor-pointer border-transparent text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 hover:dark:bg-theme-secondary-900":
+				"cursor-pointer border-transparent text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 hover:dark:bg-theme-secondary-900":
 					!isActive,
-				"dark:text-theme-dark-200 sm:rounded-lg": !isActive && variant === "navbar",
-				"rounded-lg dark:text-theme-secondary-200": !isActive && variant !== "navbar",
+				"rounded-lg": !isActive && variant !== "navbar",
+				"sm:rounded-lg": !isActive && variant === "navbar",
 			}),
 			props.className,
 		)}
