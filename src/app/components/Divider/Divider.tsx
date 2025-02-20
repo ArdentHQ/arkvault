@@ -23,7 +23,7 @@ export const Divider = ({
 	<div
 		{...props}
 		className={twMerge(
-			"h-4 border-t border-solid",
+			"border-t border-solid",
 			cn({
 				"border-dashed [background:none]": dashed,
 				"clear-both my-4 flex w-full min-w-full": type === "horizontal",

@@ -313,11 +313,16 @@ export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IPro
 	return (
 		<section data-testid="ImportWallet__method-step">
 			<div className="mt-4 space-y-4">
-				<ImportInputField type={importOption.value} coin={coin} profile={profile} network={network} />
+				<ImportInputField
+					type={importOption.value as OptionsValue}
+					coin={coin}
+					profile={profile}
+					network={network}
+				/>
 
-				<div className="flex w-full flex-col space-y-2">
-					<div className="flex items-center justify-between space-x-5">
-						<span className="font-bold text-theme-secondary-text">
+				<div className="rounded-lg border border-theme-secondary-300 transition-all dark:border-theme-dark-700">
+					<div className="flex flex-1 items-center justify-between space-x-5 px-4 py-4 sm:px-6">
+						<span className="font-semibold text-theme-secondary-900 leading-[17px] sm:leading-5 dark:text-theme-dark-50">
 							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.TITLE")}
 						</span>
 
@@ -337,9 +342,11 @@ export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IPro
 						</Tooltip>
 					</div>
 
-					<span className="mr-12 text-sm text-theme-secondary-500">
-						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.DESCRIPTION")}
-					</span>
+					<div className="rounded-b-lg bg-theme-secondary-100 px-4 pb-4 pt-3 dark:bg-theme-dark-950 sm:px-6">
+						<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.DESCRIPTION")}
+						</span>
+					</div>
 				</div>
 			</div>
 		</section>

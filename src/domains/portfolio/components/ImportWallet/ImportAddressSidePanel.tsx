@@ -224,53 +224,64 @@ export const ImportAddressesSidePanel = ({
 				{isLedgerImport ? (
 					<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
 				) : (
-					<Tabs activeId={activeTab}>
-						{!isMethodStep && <StepIndicator steps={allSteps} activeIndex={activeTab} />}
-
-						<div>
-							<TabPanel tabId={Step.MethodStep}>
-								<MethodStep network={activeNetwork} onSelect={handleNext} />
-							</TabPanel>
-
-							<TabPanel tabId={Step.ImportDetailStep}>
-								<ImportDetailStep profile={activeProfile} network={activeNetwork} />
-							</TabPanel>
-
-							<TabPanel tabId={Step.EncryptPasswordStep}>
-								<EncryptPasswordStep importedWallet={importedWallet} />
-							</TabPanel>
-
-							<TabPanel tabId={Step.SummaryStep}>
-								<SuccessStep
-									importedWallet={importedWallet}
-									onClickEditAlias={() => setIsEditAliasModalOpen(true)}
-								/>
-							</TabPanel>
-
-							{!isMethodStep && activeTab <= Step.EncryptPasswordStep && (
-								<FormButtons>
-									<Button
-										disabled={isImporting}
-										variant="secondary"
-										onClick={handleBack}
-										data-testid="ImportWallet__back-button"
-									>
-										{t("COMMON.BACK")}
-									</Button>
-
-									<Button
-										disabled={isNextDisabled}
-										isLoading={isEncrypting || isImporting}
-										onClick={handleNext}
-										data-testid="ImportWallet__continue-button"
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								</FormButtons>
+					<>
+						<Tabs activeId={activeTab}>
+							{!isMethodStep && (
+								<div className="mb-4 sm:hidden">
+									<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
+								</div>
 							)}
 
-							{activeTab === Step.SummaryStep && (
-								<FormButtons>
+							<div>
+								<TabPanel tabId={Step.MethodStep}>
+									<MethodStep network={activeNetwork} onSelect={handleNext} />
+								</TabPanel>
+
+								<TabPanel tabId={Step.ImportDetailStep}>
+									<ImportDetailStep profile={activeProfile} network={activeNetwork} />
+								</TabPanel>
+
+								<TabPanel tabId={Step.EncryptPasswordStep}>
+									<EncryptPasswordStep importedWallet={importedWallet} />
+								</TabPanel>
+
+								<TabPanel tabId={Step.SummaryStep}>
+									<SuccessStep
+										importedWallet={importedWallet}
+										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+									/>
+								</TabPanel>
+							</div>
+						</Tabs>
+						<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
+							{!isMethodStep && <div className="hidden w-[136px] sm:block">
+								<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
+							</div>}
+
+							<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
+								{!isMethodStep && activeTab <= Step.EncryptPasswordStep && (
+									<>
+										<Button
+											disabled={isImporting}
+											variant="secondary"
+											onClick={handleBack}
+											data-testid="ImportWallet__back-button"
+										>
+											{t("COMMON.BACK")}
+										</Button>
+
+										<Button
+											disabled={isNextDisabled}
+											isLoading={isEncrypting || isImporting}
+											onClick={handleNext}
+											data-testid="ImportWallet__continue-button"
+										>
+											{t("COMMON.CONTINUE")}
+										</Button>
+									</>
+								)}
+
+								{activeTab === Step.SummaryStep && (
 									<Button
 										disabled={isSubmitting}
 										type="submit"
@@ -278,10 +289,10 @@ export const ImportAddressesSidePanel = ({
 									>
 										{t("COMMON.GO_TO_WALLET")}
 									</Button>
-								</FormButtons>
-							)}
+								)}
+							</div>
 						</div>
-					</Tabs>
+					</>
 				)}
 			</Form>
 
@@ -312,9 +323,9 @@ const StepHeader = ({ step, importOption }: { step: Step; importOption: ImportOp
 		[Step.ImportDetailStep]: (
 			<Header
 				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={importOption?.label ?? ""}
+				title={importOption?.header ?? ""}
 				subtitle={importOption?.description ?? ""}
-				titleIcon={importOption?.icon ?? null}
+				titleIcon={importOption?.icon ?? undefined}
 				className="mt-px"
 			/>
 		),

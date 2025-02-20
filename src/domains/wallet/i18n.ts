@@ -132,15 +132,12 @@ export const translations = {
 		},
 
 		IMPORT_DETAIL_STEP: {
-			ADDRESS_DESCRIPTION: "Enter the public address to add it",
 			ENCRYPTION: {
 				DESCRIPTION:
 					"Set an encryption password to use in place of your mnemonic passphrase. Note that you must still record and keep your mnemonic passphrase safe as losing this will result in you losing all access to your funds.",
 				NOT_AVAILABLE: "Encryption not available for this import type",
 				TITLE: "Use Wallet Encryption",
 			},
-			LEDGER_DESCRIPTION: "Import via your Ledger hardware wallet",
-			MNEMONIC_DESCRIPTION: "Import using 12 or 24 mnemonic passphrase",
 			MNEMONIC_TIP: {
 				GUIDELINES_1: "Ensure all words are in lowercase.",
 				GUIDELINES_2: "Insert a space between each word.",
@@ -150,10 +147,6 @@ export const translations = {
 				GUIDELINES_TITLE: "Please follow these guidelines when inputting your mnemonic into ARK Vault:",
 				TITLE: "Need help with importing?",
 			},
-			SECRET_DESCRIPTION: "Import using a custom password",
-			SUBTITLE: "Select the import method by which you want to import the address to your Profile.",
-			TITLE: "Import Wallet",
-			TYPE: "Import Type",
 		},
 
 		LEDGER_CONNECTION_STEP: {
@@ -182,7 +175,9 @@ export const translations = {
 			ADDRESS_DESCRIPTION: "Enter the public address to add it",
 			LEDGER_DESCRIPTION: "Import via your Ledger hardware wallet",
 			MNEMONIC_DESCRIPTION: "Import using 12 or 24 mnemonic passphrase",
+			MNEMONIC_TITLE: "Import Mnemonic",
 			SECRET_DESCRIPTION: "Import using a custom password",
+			SECRET_TITLE: "Import Secret",
 			SUBTITLE: "Select the method you want to use to import your address.",
 			TITLE: "Import",
 		},
