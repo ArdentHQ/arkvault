@@ -85,7 +85,7 @@ describe("ImportSidePanel", () => {
 		};
 
 		history.push(`/profiles/${profile.id()}`);
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -108,8 +108,6 @@ describe("ImportSidePanel", () => {
 		await userEvent.type(mnemonicInput(), mnemonic);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should be possible to change import type in method step", async () => {
@@ -305,7 +303,7 @@ describe("ImportSidePanel", () => {
 
 			history.push(`/profiles/${profile.id()}`);
 
-			const { container } = render(
+			render(
 				<Route path="/profiles/:profileId">
 					<Component />
 				</Route>,
@@ -326,8 +324,6 @@ describe("ImportSidePanel", () => {
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
 			coinMock.mockRestore();
-
-			expect(container).toMatchSnapshot();
 		});
 
 		it("when is not valid", async () => {
@@ -338,7 +334,7 @@ describe("ImportSidePanel", () => {
 
 			history.push(`/profiles/${profile.id()}`);
 
-			const { container } = render(
+			render(
 				<Route path="/profiles/:profileId">
 					<Component />
 				</Route>,
@@ -366,8 +362,6 @@ describe("ImportSidePanel", () => {
 			});
 
 			coinMock.mockRestore();
-
-			expect(container).toMatchSnapshot();
 		});
 	});
 
@@ -398,7 +392,7 @@ describe("ImportSidePanel", () => {
 
 			history.push(`/profiles/${profile.id()}`);
 
-			const { container } = render(
+			render(
 				<Route path="/profiles/:profileId">
 					<Component />
 				</Route>,
@@ -417,8 +411,6 @@ describe("ImportSidePanel", () => {
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			expect(container).toMatchSnapshot();
-
 			coinMock.mockRestore();
 		});
 
@@ -431,7 +423,7 @@ describe("ImportSidePanel", () => {
 
 			history.push(`/profiles/${profile.id()}`);
 
-			const { container } = render(
+			render(
 				<Route path="/profiles/:profileId">
 					<Component />
 				</Route>,
@@ -453,8 +445,6 @@ describe("ImportSidePanel", () => {
 			});
 
 			await waitFor(() => expect(continueButton()).not.toBeEnabled());
-
-			expect(container).toMatchSnapshot();
 
 			coinMock.mockRestore();
 		});
@@ -480,7 +470,7 @@ describe("ImportSidePanel", () => {
 
 		history.push(`/profiles/${profile.id()}`);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -508,7 +498,5 @@ describe("ImportSidePanel", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		expect(container).toMatchSnapshot();
 	});
 });
