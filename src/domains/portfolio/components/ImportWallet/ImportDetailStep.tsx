@@ -297,7 +297,7 @@ const ImportInputField = ({
 
 export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) => {
 	const { t } = useTranslation();
-	const { watch, setValue, getValues} = useFormContext();
+	const { watch, setValue, getValues } = useFormContext();
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
@@ -313,7 +313,6 @@ export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IPro
 	return (
 		<section data-testid="ImportWallet__method-step">
 			<div className="mt-4 space-y-4">
-
 				<ImportInputField type={importOption.value} coin={coin} profile={profile} network={network} />
 
 				<div className="flex w-full flex-col space-y-2">

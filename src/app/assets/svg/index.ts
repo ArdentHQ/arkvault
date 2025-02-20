@@ -112,7 +112,6 @@ import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
 import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
 
-
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
 	...Currencies,

@@ -61,7 +61,7 @@ export const ImportAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, watch, } = form;
+	const { getValues, formState, register, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
 
@@ -220,11 +220,7 @@ export const ImportAddressesSidePanel = ({
 			onOpenChange={onOpenChange}
 			dataTestId="ImportAddressSidePanel"
 		>
-			<Form
-				context={form}
-				onSubmit={handleFinish}
-				data-testid="ImportWallet__form"
-			>
+			<Form context={form} onSubmit={handleFinish} data-testid="ImportWallet__form">
 				{isLedgerImport ? (
 					<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
 				) : (
@@ -301,13 +297,7 @@ export const ImportAddressesSidePanel = ({
 	);
 };
 
-const StepHeader = ({
-	step,
-	importOption,
-}: {
-	step: Step;
-	importOption: ImportOption | undefined;
-}): JSX.Element => {
+const StepHeader = ({ step, importOption }: { step: Step; importOption: ImportOption | undefined }): JSX.Element => {
 	const { t } = useTranslation();
 
 	const headers: Record<Step, JSX.Element> = {

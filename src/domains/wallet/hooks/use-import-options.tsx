@@ -45,7 +45,7 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 		const allOptions: ImportOption[] = [
 			{
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_DESCRIPTION"),
-				icon: <Icon name="MnemonicImportMethod" size="lg"/>,
+				icon: <Icon name="MnemonicImportMethod" size="lg" />,
 				label: t("COMMON.MNEMONIC_TYPE.BIP39"),
 				value: OptionsValue.BIP39,
 			},
