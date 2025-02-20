@@ -331,19 +331,62 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -661,19 +704,62 @@ exports[`Signed Transaction Table > should render different status > should show
                           >
                             To
                           </div>
-                          <a
-                            class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                            data-ring-focus-margin="-m-1"
-                            data-testid="Link"
-                            href="https://test.arkscan.io/wallets/undefined"
-                            rel="noopener noreferrer"
+                          <div
+                            class="flex w-full items-center justify-between space-x-4"
                           >
-                            <span
-                              class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                            <a
+                              class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="Link"
+                              href="https://test.arkscan.io/wallets/undefined"
+                              rel="noopener noreferrer"
                             >
-                              Contract
-                            </span>
-                          </a>
+                              <span
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                              >
+                                Contract
+                              </span>
+                            </a>
+                            <button
+                              class="ring-focus relative focus:outline-none"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1085,19 +1171,62 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -1405,19 +1534,62 @@ exports[`Signed Transaction Table > should render different status > should show
                           >
                             To
                           </div>
-                          <a
-                            class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                            data-ring-focus-margin="-m-1"
-                            data-testid="Link"
-                            href="https://test.arkscan.io/wallets/undefined"
-                            rel="noopener noreferrer"
+                          <div
+                            class="flex w-full items-center justify-between space-x-4"
                           >
-                            <span
-                              class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                            <a
+                              class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="Link"
+                              href="https://test.arkscan.io/wallets/undefined"
+                              rel="noopener noreferrer"
                             >
-                              Contract
-                            </span>
-                          </a>
+                              <span
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                              >
+                                Contract
+                              </span>
+                            </a>
+                            <button
+                              class="ring-focus relative focus:outline-none"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1829,19 +2001,62 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -2561,19 +2776,62 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -3187,19 +3445,62 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -3382,19 +3683,62 @@ exports[`Signed Transaction Table > should render different status > should show
                           >
                             To
                           </div>
-                          <a
-                            class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                            data-ring-focus-margin="-m-1"
-                            data-testid="Link"
-                            href="https://test.arkscan.io/wallets/undefined"
-                            rel="noopener noreferrer"
+                          <div
+                            class="flex w-full items-center justify-between space-x-4"
                           >
-                            <span
-                              class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                            <a
+                              class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="Link"
+                              href="https://test.arkscan.io/wallets/undefined"
+                              rel="noopener noreferrer"
                             >
-                              Contract
-                            </span>
-                          </a>
+                              <span
+                                class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                              >
+                                Contract
+                              </span>
+                            </a>
+                            <button
+                              class="ring-focus relative focus:outline-none"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -3806,19 +4150,62 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -4324,19 +4711,62 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -4813,19 +5243,62 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -5380,37 +5853,67 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                       To
                     </div>
                     <div
-                      class="grow"
-                      data-testid="TransactionRowAddressing__address-container"
+                      class="flex min-w-36 grow items-center justify-between space-x-4"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="grow"
+                        data-testid="TransactionRowAddressing__address-container"
                       >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures transition-colors duration-200"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
                         <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
+                            <span
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
+                            >
+                              ARK Wallet 1
+                            </span>
                           </span>
                         </div>
                       </div>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -5963,19 +6466,62 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -6481,19 +7027,62 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     >
                       To
                     </div>
-                    <a
-                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/undefined"
-                      rel="noopener noreferrer"
+                    <div
+                      class="flex w-full items-center justify-between space-x-4"
                     >
-                      <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                      <a
+                        class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/undefined"
+                        rel="noopener noreferrer"
                       >
-                        Contract
-                      </span>
-                    </a>
+                        <span
+                          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        >
+                          Contract
+                        </span>
+                      </a>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        >
+                          <div
+                            style="height: 16px; width: 16px;"
+                          >
+                            <svg
+                              id="copy"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </td>
