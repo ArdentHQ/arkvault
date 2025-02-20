@@ -8,7 +8,7 @@ import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
 import { Button } from "@/app/components/Button";
-import { Form, FormButtons } from "@/app/components/Form";
+import { Form } from "@/app/components/Form";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -93,6 +93,7 @@ export const ImportAddressesSidePanel = ({
 
 	const handleNext = () =>
 		({
+			// eslint-disable-next-line @typescript-eslint/require-await
 			[Step.MethodStep]: async () => {
 				setActiveTab(Step.ImportDetailStep);
 			},

@@ -311,7 +311,7 @@ export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IPro
 	};
 
 	return (
-		<section data-testid="ImportWallet__method-step">
+		<section data-testid="ImportWallet__detail-step">
 			<div className="mt-4 space-y-4">
 				<ImportInputField
 					type={importOption.value as OptionsValue}
