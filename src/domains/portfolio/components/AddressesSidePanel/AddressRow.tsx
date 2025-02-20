@@ -36,6 +36,8 @@ export const AddressRow = ({
 				isSelected={isSelected}
 				usesDeleteMode={usesDeleteMode}
 				onDelete={onDelete}
+				isError={isError}
+				errorMessage={errorMessage}
 			/>
 		);
 	}
