@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ImportAddress > import with private key > when is not valid 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportAddress > import with private key > when is valid 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportAddress > import with wif > with invalid wif 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportAddress > import with wif > with valid wif 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportAddress > should import with encryped wif 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportAddress > should render method step 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportSidePanel > import with private key > when is not valid 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportSidePanel > import with private key > when is valid 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportSidePanel > import with wif > with invalid wif 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportSidePanel > import with wif > with valid wif 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportSidePanel > should import with encryped wif 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
+
+exports[`ImportSidePanel > should render method step 1`] = `
+<div
+  aria-hidden="true"
+  data-floating-ui-inert=""
+/>
+`;
