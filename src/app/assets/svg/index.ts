@@ -69,6 +69,7 @@ import MoneyCoinSwap from "./money-coin-swap.svg?react";
 import NoteCheck from "./note-check.svg?react";
 import Pencil from "./pencil.svg?react";
 import PencilRuler from "./pencil-ruler.svg?react";
+import PublicKeyImportMethod from "./public-key-import-method.svg?react";
 import Server from "./server.svg?react";
 import ServerMultisign from "./server-multisign.svg?react";
 import ServerPeer from "./server-peer.svg?react";
@@ -197,6 +198,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	PersonDark,
 	PersonLight,
 	Plus,
+	PublicKeyImportMethod,
 	QRCode,
 	QuestionMarkSmall,
 	SecretImportMethod,

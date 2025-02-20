@@ -176,6 +176,8 @@ export const translations = {
 			LEDGER_DESCRIPTION: "Import via your Ledger hardware wallet",
 			MNEMONIC_DESCRIPTION: "Import using 12 or 24 mnemonic passphrase",
 			MNEMONIC_TITLE: "Import Mnemonic",
+			PUBLIC_KEY_DESCRIPTION: "Enter the public key of the address to add it",
+			PUBLIC_KEY_TITLE: "Import Public Key",
 			SECRET_DESCRIPTION: "Import using a custom password",
 			SECRET_TITLE: "Import Secret",
 			SUBTITLE: "Select the method you want to use to import your address.",

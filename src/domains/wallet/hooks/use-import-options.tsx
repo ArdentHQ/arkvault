@@ -80,6 +80,9 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				value: OptionsValue.ADDRESS,
 			},
 			{
+				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.PUBLIC_KEY_DESCRIPTION"),
+				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.PUBLIC_KEY_TITLE"),
+				icon: <Icon name="PublicKeyImportMethod" size="lg" />,
 				label: t("COMMON.PUBLIC_KEY"),
 				value: OptionsValue.PUBLIC_KEY,
 			},
