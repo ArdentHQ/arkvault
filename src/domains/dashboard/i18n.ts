@@ -18,7 +18,8 @@ export const translations = {
 	LATEST_TRANSACTIONS: {
 		EMPTY_MESSAGE:
 			"You don't have any transactions yet. Once transactions have been made they will show up in your history.",
-		NO_RESULTS: "No <bold>{{type}}</bold> transactions could be found.",
+		NO_RESULTS:
+			"You don’t have any <bold>{{type}}</bold> transactions yet. Once transactions have been made they will show up in your history",
 		TITLE: "Latest Transactions",
 	},
 
