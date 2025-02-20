@@ -739,7 +739,7 @@ describe("SendTransfer", () => {
 		const pushSpy = vi.spyOn(history, "push");
 		await userEvent.click(backToWalletButton());
 
-		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
@@ -948,7 +948,7 @@ describe("SendTransfer", () => {
 		const pushSpy = vi.spyOn(history, "push");
 		await userEvent.click(backToWalletButton());
 
-		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
@@ -1482,7 +1482,7 @@ describe("SendTransfer", () => {
 		const pushSpy = vi.spyOn(history, "push");
 		await userEvent.click(backToWalletButton());
 
-		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
@@ -1698,7 +1698,7 @@ describe("SendTransfer", () => {
 		const pushSpy = vi.spyOn(history, "push");
 		await userEvent.click(backToWalletButton());
 
-		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
