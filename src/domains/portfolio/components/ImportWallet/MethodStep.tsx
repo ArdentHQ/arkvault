@@ -14,6 +14,7 @@ export const MethodStep = ({ network, onSelect }: { network: Networks.Network; o
 	const onOptionSelect = (option: ImportOption) => {
 		setValue("importOption", option, { shouldDirty: true, shouldValidate: true });
 		setValue("value", undefined);
+		setValue("useEncryption", undefined);
 		clearErrors("value");
 
 		void onSelect();
