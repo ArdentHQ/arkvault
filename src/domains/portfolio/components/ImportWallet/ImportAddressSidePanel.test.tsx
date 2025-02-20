@@ -242,7 +242,7 @@ describe("ImportSidePanel", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={onOpenChange} />
+				<ImportAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />
 			</Route>,
 			{
 				history,
