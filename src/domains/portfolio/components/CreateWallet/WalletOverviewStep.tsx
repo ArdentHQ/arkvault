@@ -3,15 +3,13 @@ import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
-import { Toggle } from "@/app/components/Toggle";
 import { toasts } from "@/app/services";
 import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/MnemonicList";
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
-import { Divider } from "@/app/components/Divider";
 
 export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {
-	const { getValues, setValue, unregister, watch } = useFormContext();
+	const { unregister, watch } = useFormContext();
 
 	const { wallet, mnemonic } = watch();
 
@@ -37,15 +35,11 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 		}
 	};
 
-	const handleToggleEncryption = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setValue("useEncryption", event.target.checked);
-	};
-
 	return (
 		<section data-testid="CreateWallet__WalletOverviewStep">
-			<div className="space-y-4">
-				<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
+			<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
+			<div className="mt-4 space-y-4 rounded-lg border border-theme-secondary-300 p-4 pb-0 dark:border-theme-dark-700 sm:space-y-6 sm:p-6 sm:pb-0">
 				{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 
 				<CopyOrDownload
@@ -55,29 +49,6 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 					onClickDownload={() => handleDownload()}
 					disabled={isGeneratingWallet}
 				/>
-
-				<Divider />
-
-				<div className="flex w-full flex-col space-y-2">
-					<div className="flex items-center justify-between space-x-5">
-						<span className="font-bold text-theme-secondary-text">
-							{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.TITLE")}
-						</span>
-
-						<span data-testid="CreateWallet__encryption">
-							<Toggle
-								data-testid="CreateWallet__encryption-toggle"
-								defaultChecked={getValues("useEncryption")}
-								onChange={handleToggleEncryption}
-								disabled={isGeneratingWallet}
-							/>
-						</span>
-					</div>
-
-					<span className="mr-12 text-sm text-theme-secondary-500">
-						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.DESCRIPTION")}
-					</span>
-				</div>
 			</div>
 		</section>
 	);
