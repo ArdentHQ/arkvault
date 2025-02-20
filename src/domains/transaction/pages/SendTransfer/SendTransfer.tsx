@@ -346,7 +346,7 @@ export const SendTransfer = () => {
 				<ErrorStep
 					onClose={() => {
 						assertWallet(wallet);
-						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+						history.push(`/profiles/${activeProfile.id()}/dashboard`);
 					}}
 					isBackDisabled={isSubmitting}
 					onBack={() => {
@@ -361,7 +361,7 @@ export const SendTransfer = () => {
 					onBackClick={handleBack}
 					onBackToWalletClick={() => {
 						assertWallet(wallet);
-						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+						history.push(`/profiles/${activeProfile.id()}/dashboard`);
 					}}
 					onContinueClick={async () => await handleNext()}
 					onSend={() => {
