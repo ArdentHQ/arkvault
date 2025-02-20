@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
-import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { assertWallet } from "@/utils/assertions";
 import { Address } from "@/app/components/Address";
