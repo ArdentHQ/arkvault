@@ -497,9 +497,7 @@ export const SendVote = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/dashboard`)
-									}
+									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
 										setActiveTab(Step.FormStep);
