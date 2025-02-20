@@ -12,7 +12,6 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
 import { useBreakpoint } from "@/app/hooks";
-import { setTime } from "react-datepicker/dist/date_utils";
 
 export const AddressesSidePanel = ({
 	wallets,
