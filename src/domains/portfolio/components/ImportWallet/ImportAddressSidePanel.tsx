@@ -183,9 +183,7 @@ export const ImportAddressesSidePanel = ({
 	};
 
 	const handleFinish = () => {
-		assertWallet(importedWallet);
-
-		history.push(`/profiles/${activeProfile.id()}/dashboard`);
+		onOpenChange(false);
 	};
 
 	const isNextDisabled = useMemo(() => {
