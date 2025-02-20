@@ -177,11 +177,11 @@ describe("CreateAddressSidePanel", () => {
 
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(3);
 
+		await userEvent.click(continueButton());
+
 		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
 
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
-
-		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 

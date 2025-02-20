@@ -39,7 +39,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 					</div>
 				</DetailWrapper>
 
-				<DetailWrapper label={t("WALLETS.WALLET_NAME")}>
+				<DetailWrapper label={t("COMMON.ADDRESS_NAME")}>
 					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
 						<div className="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5">
