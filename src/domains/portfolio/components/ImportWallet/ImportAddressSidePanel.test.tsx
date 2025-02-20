@@ -238,9 +238,11 @@ describe("ImportSidePanel", () => {
 		history.push(route);
 		const randomNewAddress = "DHnF7Ycv16QxQQNGDUdGzWGh5n3ym424UW";
 
+		const onOpenChangeMock = vi.fn();
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+				<ImportAddressesSidePanel open={true} onOpenChange={onOpenChange} />
 			</Route>,
 			{
 				history,
@@ -271,9 +273,7 @@ describe("ImportSidePanel", () => {
 
 		await userEvent.click(finishButton());
 
-		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(expect.stringContaining(`/profiles/${profile.id()}/dashboard`));
-		});
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 
 		historySpy.mockRestore();
 	});
