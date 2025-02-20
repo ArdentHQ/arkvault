@@ -70,7 +70,7 @@ describe("ImportAddress Validations", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -100,7 +100,7 @@ describe("ImportAddress Validations", () => {
 	it("should prompt for mnemonic if user enters bip39 compliant secret", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -144,7 +144,7 @@ describe("ImportAddress Validations", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -205,7 +205,7 @@ describe("ImportAddress Validations", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -241,7 +241,7 @@ describe("ImportAddress Validations", () => {
 	it("should show an error message for duplicate address when importing by address", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -277,7 +277,7 @@ describe("ImportAddress Validations", () => {
 	it("should show an error message for invalid address", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -327,7 +327,7 @@ describe("ImportAddress Validations", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()}/>
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
