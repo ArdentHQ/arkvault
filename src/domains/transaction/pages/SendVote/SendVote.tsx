@@ -497,9 +497,7 @@ export const SendVote = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
-									}
+									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
 										setActiveTab(Step.FormStep);
@@ -512,7 +510,7 @@ export const SendVote = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
+										history.push(`/profiles/${activeProfile.id()}/dashboard`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}

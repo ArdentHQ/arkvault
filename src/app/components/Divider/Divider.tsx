@@ -23,13 +23,13 @@ export const Divider = ({
 	<div
 		{...props}
 		className={twMerge(
-			"h-4 border-t border-solid",
+			"border-t border-solid",
 			cn({
 				"border-dashed [background:none]": dashed,
 				"clear-both my-4 flex w-full min-w-full": type === "horizontal",
 				"h-10": type !== "horizontal" && size === "xl",
 				"h-2": type !== "horizontal" && size === "sm",
-				"h-4": type !== "horizontal" && size && !["sm", "md", "lg", "xl"].includes(size),
+				"h-4": type !== "horizontal" && (!size || !["sm", "md", "lg", "xl"].includes(size)),
 				"h-5": type !== "horizontal" && size === "md",
 				"h-8": type !== "horizontal" && size === "lg",
 				"relative mx-2 inline-block border-l border-t-0 border-solid align-middle": type !== "horizontal",
