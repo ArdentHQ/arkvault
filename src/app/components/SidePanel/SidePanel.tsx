@@ -23,7 +23,14 @@ interface SidePanelProps {
 	className?: string;
 }
 
-export const SidePanel = ({ children, open, onOpenChange, header, dataTestId, className }: SidePanelProps): JSX.Element => {
+export const SidePanel = ({
+	children,
+	open,
+	onOpenChange,
+	header,
+	dataTestId,
+	className,
+}: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
 		open,
