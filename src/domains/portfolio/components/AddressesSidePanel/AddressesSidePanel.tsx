@@ -43,10 +43,6 @@ export const AddressesSidePanel = ({
 	const { isXs } = useBreakpoint();
 
 	useEffect(() => {
-		onSetSelectedAddresses(defaultSelectedAddresses);
-	}, [defaultSelectedAddresses]);
-
-	useEffect(() => {
 		if (!open || manageHintHasShown) {
 			setShowManageHint(false);
 			return;
