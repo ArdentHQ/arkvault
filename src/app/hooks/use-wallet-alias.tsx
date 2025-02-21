@@ -1,7 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useCallback } from "react";
-
 import { useEnvironmentContext } from "@/app/contexts";
 import { assertProfile, assertString } from "@/utils/assertions";
 
@@ -41,39 +40,20 @@ const useWalletAlias = (): HookResult => {
 				const localName = wallet ? wallet.displayName() : undefined;
 
 				let onChainName: string | undefined;
-
 				try {
 					onChainName = wallet ? wallet.username() : username;
 				} catch {
-					// Wallet is not synced exception
 					onChainName = undefined;
 				}
 
 				const contact = profile.contacts().findByAddress(address)[0];
 				const contactName = contact ? contact.name() : undefined;
 
-				let alias: string | undefined;
-				let isContact = false;
+				const alias = useNetworkWalletNames
+					? onChainName || localName || contactName
+					: localName || contactName || onChainName;
 
-				if (useNetworkWalletNames) {
-					if (onChainName) {
-						alias = onChainName;
-					} else if (localName) {
-						alias = localName;
-					} else if (contactName) {
-						alias = contactName;
-						isContact = true;
-					}
-				} else {
-					if (localName) {
-						alias = localName;
-					} else if (contactName) {
-						alias = contactName;
-						isContact = true;
-					} else if (onChainName) {
-						alias = onChainName;
-					}
-				}
+				const isContact = alias === contactName && contactName !== undefined;
 
 				return { address, alias, isContact };
 			} catch {
