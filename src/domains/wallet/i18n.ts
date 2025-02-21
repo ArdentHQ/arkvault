@@ -190,8 +190,8 @@ export const translations = {
 		},
 
 		SUCCESS_STEP: {
-			SUBTITLE: "Wallet import is complete. Now you can use it.",
-			TITLE: "Completed",
+			SUBTITLE: "The address has been successfully imported",
+			TITLE: "Import Completed",
 		},
 
 		TITLE: "Import Wallet",

@@ -224,7 +224,7 @@ export const ImportAddressesSidePanel = ({
 					<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
 				) : (
 					<>
-						<Tabs activeId={activeTab}>
+						<Tabs activeId={activeTab} className="pb-20">
 							{!isMethodStep && (
 								<div className="mb-4 sm:hidden">
 									<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
@@ -288,7 +288,7 @@ export const ImportAddressesSidePanel = ({
 										type="submit"
 										data-testid="ImportWallet__finish-button"
 									>
-										{t("COMMON.GO_TO_WALLET")}
+										{t("COMMON.GO_TO_PORTFOLIO")}
 									</Button>
 								)}
 							</div>
