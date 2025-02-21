@@ -39,7 +39,15 @@ const useWalletAlias = (): HookResult => {
 				}
 
 				const localName = wallet ? wallet.displayName() : undefined;
-				const onChainName = wallet ? wallet.knownName() : username;
+
+				let onChainName: string | undefined;
+
+				try {
+					onChainName = wallet ? wallet.username() : username;
+				} catch {
+					// Wallet is not synced exception
+					onChainName = undefined;
+				}
 
 				const contact = profile.contacts().findByAddress(address)[0];
 				const contactName = contact ? contact.name() : undefined;

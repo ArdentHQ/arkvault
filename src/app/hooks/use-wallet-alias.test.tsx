@@ -119,9 +119,9 @@ describe("useWalletAlias", () => {
 		});
 	});
 
-	it("should return knownName when useNetworkWalletNames is true and wallet has knownName", () => {
+	it("should return username when useNetworkWalletNames is true and wallet has username", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
-		const knownNameSpy = vi.spyOn(wallet, "knownName").mockReturnValue("known_name");
+		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue("username");
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
@@ -133,16 +133,16 @@ describe("useWalletAlias", () => {
 			}),
 		).toStrictEqual({
 			address: wallet.address(),
-			alias: "known_name",
+			alias: "username",
 			isContact: false,
 		});
 
-		knownNameSpy.mockRestore();
+		usernameSpy.mockRestore();
 	});
 
-	it("should return displayName when useNetworkWalletNames is true but wallet has no knownName", () => {
+	it("should return displayName when useNetworkWalletNames is true but wallet has no username", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
-		const knownNameSpy = vi.spyOn(wallet, "knownName").mockReturnValue(undefined);
+		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue(undefined);
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
@@ -158,7 +158,7 @@ describe("useWalletAlias", () => {
 			isContact: false,
 		});
 
-		knownNameSpy.mockRestore();
+		usernameSpy.mockRestore();
 	});
 
 	it("should return username when useNetworkWalletNames is true and wallet doesn't exist", () => {
