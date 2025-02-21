@@ -265,11 +265,11 @@ export const AddressesSidePanel = ({
 				{addressesToShow.map((wallet, index) => (
 					<AddressRow
 						errorMessage={
-							!hasSelectedAddresses() && index === 0
+							!hasSelectedAddresses() && !isDeleteMode && index === 0
 								? "You need to have at least one address selected."
 								: undefined
 						}
-						isError={!hasSelectedAddresses()}
+						isError={!hasSelectedAddresses() && !isDeleteMode}
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
