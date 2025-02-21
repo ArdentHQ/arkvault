@@ -326,7 +326,7 @@ const StepHeader = ({ step, importOption }: { step: Step; importOption: ImportOp
 				titleClassName="text-lg md:text-2xl md:leading-[29px]"
 				title={importOption?.header ?? ""}
 				subtitle={importOption?.description ?? ""}
-				titleIcon={importOption?.icon ?? undefined}
+				titleIcon={importOption?.icon ? <div className="text-theme-primary-600 dark:text-theme-navy-500"> {importOption.icon} </div> : undefined}
 				className="mt-px"
 			/>
 		),
