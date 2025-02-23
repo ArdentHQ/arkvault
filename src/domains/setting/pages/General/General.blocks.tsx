@@ -42,6 +42,11 @@ export const ViewingMode = ({
 			name: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.DARK"),
 			value: "dark",
 		},
+		{
+			icon: "Dim",
+			name: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.DIM"),
+			value: "dim",
+		},
 	];
 
 	return (
