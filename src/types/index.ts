@@ -46,7 +46,7 @@ export type ResponsiveButtonVariant = {
 
 export type NavbarVariant = "full" | "logo-only";
 
-export type Theme = "system" | "dark" | "light";
+export type Theme = "system" | "dark" | "light" | "dim";
 
 export interface TransactionFees {
 	static: number;
