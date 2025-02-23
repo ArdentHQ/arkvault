@@ -93,7 +93,8 @@ export const TransactionRow = memo(
 				<TableCell
 					innerClassName={cn("items-start xl:min-h-11 xl:pt-3", {
 						"min-h-14 my-1 pt-2": hideSender,
-						"min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto": !hideSender,
+						"min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto":
+							!hideSender,
 					})}
 				>
 					<Label
