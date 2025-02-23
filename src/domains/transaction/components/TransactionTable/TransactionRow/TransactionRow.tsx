@@ -77,8 +77,8 @@ export const TransactionRow = memo(
 					innerClassName={cn(
 						"text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3",
 						{
-							"xl:min-w-32": !hideSender,
 							"lg:min-w-40": hideSender,
+							"xl:min-w-32": !hideSender,
 						},
 					)}
 					data-testid="TransactionRow__timestamp"
