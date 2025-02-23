@@ -88,6 +88,30 @@ module.exports = {
 			"theme-dark-900": "var(--theme-color-dark-900)",
 			"theme-dark-950": "var(--theme-color-dark-950)",
 
+			"theme-dim-50": "var(--theme-color-dim-50)",
+			"theme-dim-100": "var(--theme-color-dim-100)",
+			"theme-dim-200": "var(--theme-color-dim-200)",
+			"theme-dim-300": "var(--theme-color-dim-300)",
+			"theme-dim-400": "var(--theme-color-dim-400)",
+			"theme-dim-500": "var(--theme-color-dim-500)",
+			"theme-dim-600": "var(--theme-color-dim-600)",
+			"theme-dim-700": "var(--theme-color-dim-700)",
+			"theme-dim-800": "var(--theme-color-dim-800)",
+			"theme-dim-900": "var(--theme-color-dim-900)",
+			"theme-dim-950": "var(--theme-color-dim-950)",
+
+			"theme-dim-navy-50": "var(--theme-color-dim-reverse-50)",
+			"theme-dim-navy-100": "var(--theme-color-dim-reverse-100)",
+			"theme-dim-navy-200": "var(--theme-color-dim-reverse-200)",
+			"theme-dim-navy-300": "var(--theme-color-dim-reverse-300)",
+			"theme-dim-navy-400": "var(--theme-color-dim-reverse-400)",
+			"theme-dim-navy-500": "var(--theme-color-dim-reverse-500)",
+			"theme-dim-navy-600": "var(--theme-color-dim-reverse-600)",
+			"theme-dim-navy-700": "var(--theme-color-dim-reverse-700)",
+			"theme-dim-navy-800": "var(--theme-color-dim-reverse-800)",
+			"theme-dim-navy-900": "var(--theme-color-dim-reverse-900)",
+			"theme-dim-navy-950": "var(--theme-color-dim-reverse-950)",
+
 			"theme-success-50": "var(--theme-color-success-50)",
 			"theme-success-100": "var(--theme-color-success-100)",
 			"theme-success-200": "var(--theme-color-success-200)",
@@ -336,5 +360,11 @@ module.exports = {
 			borderColor: ["navy", "green"],
 		},
 	},
-	plugins: [require("@tailwindcss/forms")],
+	plugins: [
+		require("@tailwindcss/forms"),
+		plugin(function ({ addVariant }) {
+			addVariant("dim", ":is(.dark.dim &)");
+			addVariant("dim-hover", ":is(.dark.dim &:hover)");
+		}),
+	],
 };
