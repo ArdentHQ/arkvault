@@ -12,7 +12,9 @@ const setTheme = (theme: Theme) => {
 	const htmlElement = document.querySelector("html")!;
 
 	if (theme === "system") {
-		const systemTheme: ViewingModeType = window.matchMedia("(prefers-color-scheme: dark)")?.matches ? "dark" : "light";
+		const systemTheme: ViewingModeType = window.matchMedia("(prefers-color-scheme: dark)")?.matches
+			? "dark"
+			: "light";
 		// Remove all theme classes
 		htmlElement.classList.remove("dark", "light", "dim");
 		htmlElement.classList.add(systemTheme);
@@ -30,15 +32,26 @@ const setTheme = (theme: Theme) => {
 		return;
 	}
 
-	if (theme === "dim") {
-		htmlElement.classList.remove("light");
-		htmlElement.classList.add("dark", "dim");
-	} else if (theme === "dark") {
-		htmlElement.classList.remove("light", "dim");
-		htmlElement.classList.add("dark");
-	} else if (theme === "light") {
-		htmlElement.classList.remove("dark", "dim");
-		htmlElement.classList.add("light");
+	switch (theme) {
+		case "dim": {
+			htmlElement.classList.remove("light");
+			htmlElement.classList.add("dark", "dim");
+
+			break;
+		}
+		case "dark": {
+			htmlElement.classList.remove("light", "dim");
+			htmlElement.classList.add("dark");
+
+			break;
+		}
+		case "light": {
+			htmlElement.classList.remove("dark", "dim");
+			htmlElement.classList.add("light");
+
+			break;
+		}
+		// No default
 	}
 
 	htmlElement.dispatchEvent(new CustomEvent("themeChanged", { detail: theme }));

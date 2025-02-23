@@ -76,7 +76,6 @@ describe("useTheme", () => {
 			}
 		});
 
-
 		it("should set system theme", () => {
 			const overflowOverlayMock = vi.spyOn(browser, "supportsOverflowOverlay").mockReturnValue(false);
 
