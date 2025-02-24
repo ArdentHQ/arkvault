@@ -108,23 +108,20 @@ const Paginator = ({
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
 	onClickEditWalletName,
-	onBack
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-
-	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 
 	const history = useHistory();
 	const {
 		importLedgerWallets,
 		isBusy,
-		listenDevice,
 		disconnect,
 		isAwaitingConnection,
 		isAwaitingDeviceConfirmation,
 		isConnected,
 	} = useLedgerContext();
+
 	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
 
 	const { t } = useTranslation();
@@ -190,12 +187,6 @@ export const LedgerTabs = ({
 	useEffect(() => {
 		const cancel = async () => {
 			await disconnect();
-
-			if (onlyHasOneNetwork) {
-				return returnToDashboard();
-			}
-
-			setActiveTab(LedgerTabStep.ListenLedgerStep);
 		};
 
 		if (cancelling && !isBusy) {
@@ -231,34 +222,12 @@ export const LedgerTabs = ({
 		history.replace(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }));
 	}, [history, activeProfile]);
 
-	const handleDeviceAvailable = useCallback(() => {
-		setActiveTab(onlyHasOneNetwork ? LedgerTabStep.LedgerConnectionStep : LedgerTabStep.NetworkStep);
-	}, [setActiveTab]);
-
-	const steps = [
-		t("WALLETS.CONNECT_LEDGER.HEADER"),
-		t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ACCOUNTS"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE"),
-	];
-
-	const activeTabIndex = useMemo(() => {
-		if (onlyHasOneNetwork) {
-			return activeTab - 1;
-		}
-
-		return activeTab;
-	}, [activeTab]);
-
-	console.log({ activeTab })
-
 	return (
 		<Tabs id="ledgerTabs" activeId={activeTab}>
 			<div data-testid="LedgerTabs" className="mt-8">
 				<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
 					<ListenLedger
-						onDeviceAvailable={handleDeviceAvailable}
+						onDeviceAvailable={() => setActiveTab(LedgerTabStep.LedgerConnectionStep)}
 						onDeviceNotAvailable={handleDeviceNotAvailable}
 					/>
 				</TabPanel>

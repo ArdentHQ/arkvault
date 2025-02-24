@@ -240,7 +240,7 @@ export const ImportAddressesSidePanel = ({
 
 							<TabPanel tabId={Step.ImportDetailStep}>
 								{isLedgerImport && <LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />}
-								{!isLedgerImport && <ImportDetailStep profile={activeProfile} network={activeNetwork} importOption={importOption} />}
+								{!isLedgerImport && importOption && <ImportDetailStep profile={activeProfile} network={activeNetwork} importOption={importOption} />}
 							</TabPanel>
 
 							<TabPanel tabId={Step.EncryptPasswordStep}>
