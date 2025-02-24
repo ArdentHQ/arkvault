@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -45,7 +45,9 @@ export const LedgerConnectionStep = ({
 	onConnect,
 	onFailed,
 	cancelling,
+	network,
 }: {
+	network: Networks.Network;
 	cancelling: boolean;
 	onConnect?: () => void;
 	onFailed?: (error: Error) => void;
@@ -53,10 +55,8 @@ export const LedgerConnectionStep = ({
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 
-	const { watch, register, setValue, unregister } = useFormContext();
+	const { register, setValue, unregister } = useFormContext();
 	const { connect, abortConnectionRetry, error, isConnected } = useLedgerContext();
-
-	const [network] = useState<Networks.Network>(() => watch("network"));
 
 	useEffect(() => {
 		register("connected", { required: true });
@@ -109,6 +109,7 @@ export const LedgerConnectionStep = ({
 				className="hidden md:block"
 			/>
 
+			<>WIP</>
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
 		</section>
 	);

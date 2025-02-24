@@ -44,7 +44,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			network: network.id(),
 		};
 
-		const importOptions: ImportOptionsType = {
+		const importOptions: Omit<ImportOptionsType, OptionsValue.LEDGER> = {
 			[OptionsValue.BIP39]: async () =>
 				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP39({

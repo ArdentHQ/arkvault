@@ -2,21 +2,16 @@ import { Coins, Networks } from "@ardenthq/sdk";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { Divider } from "@/app/components/Divider";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { Input, InputAddress, InputPassword } from "@/app/components/Input";
-import { Select } from "@/app/components/SelectDropdown";
 import { Toggle } from "@/app/components/Toggle";
 import { Tooltip } from "@/app/components/Tooltip";
-import { OptionsValue, useImportOptions } from "@/domains/wallet/hooks/use-import-options";
-import { assertString } from "@/utils/assertions";
+import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-options";
 import { Alert } from "@/app/components/Alert";
-import { ThemeIcon } from "@/app/components/Icon";
 
 const validateAddress = async ({
 	findAddress,
@@ -183,16 +178,16 @@ const ImportInputField = ({
 					network={network}
 				/>
 				<Alert
-					title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.TITLE")}
+					title={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.TITLE")}
 					variant="info"
 					collapsible
 				>
-					<p>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_TITLE")}</p>
+					<p>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_TITLE")}</p>
 					<ol className="list-disc pl-5">
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_1")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_2")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_3")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_4")}</li>
+						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_1")}</li>
+						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_2")}</li>
+						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_3")}</li>
+						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_4")}</li>
 					</ol>
 				</Alert>
 			</>
@@ -299,88 +294,63 @@ const ImportInputField = ({
 	);
 };
 
-export const MethodStep = ({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) => {
+export const ImportDetailStep = ({
+	profile,
+	network,
+	importOption,
+}: {
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	importOption: ImportOption;
+}) => {
 	const { t } = useTranslation();
-	const { watch, setValue, clearErrors } = useFormContext();
+	const { watch, setValue } = useFormContext();
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
-	const { options, defaultOption } = useImportOptions(network.importMethods());
-
-	const useEncryption = watch("useEncryption");
-	const importOption = watch("importOption") || defaultOption;
-
-	assertString(importOption.value);
+	const useEncryption = watch("useEncryption") as boolean;
 
 	const handleToggleEncryption = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setValue("useEncryption", event.target.checked);
 	};
 
-	const isUseEncryptionChecked = useEncryption ?? false;
-
-	useEffect(() => {
-		if (useEncryption && !importOption.canBeEncrypted) {
-			setValue("useEncryption", false);
-		}
-	}, [importOption.canBeEncrypted, useEncryption, setValue]);
-
 	return (
-		<section data-testid="ImportWallet__method-step">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
-				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="ImportWalletLight" darkIcon="ImportWalletDark" />
-				}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
-				className="hidden sm:block"
-			/>
-
+		<section data-testid="ImportWallet__detail-step">
 			<div className="mt-4 space-y-4">
-				<FormField name="">
-					<FormLabel>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TYPE")}</FormLabel>
-					<Select
-						id="ImportWallet__select"
-						data-testid="ImportWallet__type"
-						defaultValue={importOption.value}
-						options={options}
-						onChange={(option: any) => {
-							setValue("importOption", option, { shouldDirty: true, shouldValidate: true });
-							setValue("value", undefined);
-							clearErrors("value");
-						}}
-						readOnly
-					/>
-				</FormField>
+				<ImportInputField
+					type={importOption.value as OptionsValue}
+					coin={coin}
+					profile={profile}
+					network={network}
+				/>
 
-				<ImportInputField type={importOption.value} coin={coin} profile={profile} network={network} />
-
-				<Divider dashed />
-
-				<div className="flex w-full flex-col space-y-2">
-					<div className="flex items-center justify-between space-x-5">
-						<span className="font-bold text-theme-secondary-text">
-							{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ENCRYPTION.TITLE")}
+				<div className="rounded-lg border border-theme-secondary-300 transition-all dark:border-theme-dark-700">
+					<div className="flex flex-1 items-center justify-between space-x-5 px-4 py-4 sm:px-6">
+						<span className="font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-dark-50 sm:leading-5">
+							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.TITLE")}
 						</span>
 
 						<Tooltip
 							className="-ml-3 mb-1"
-							content={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ENCRYPTION.NOT_AVAILABLE")}
+							content={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.NOT_AVAILABLE")}
 							disabled={importOption.canBeEncrypted}
 						>
 							<span data-testid="ImportWallet__encryption">
 								<Toggle
 									data-testid="ImportWallet__encryption-toggle"
 									disabled={!importOption.canBeEncrypted}
-									checked={isUseEncryptionChecked}
+									checked={useEncryption ?? false}
 									onChange={handleToggleEncryption}
 								/>
 							</span>
 						</Tooltip>
 					</div>
 
-					<span className="mr-12 text-sm text-theme-secondary-500">
-						{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ENCRYPTION.DESCRIPTION")}
-					</span>
+					<div className="rounded-b-lg bg-theme-secondary-100 px-4 pb-4 pt-3 dark:bg-theme-dark-950 sm:px-6">
+						<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.DESCRIPTION")}
+						</span>
+					</div>
 				</div>
 			</div>
 		</section>

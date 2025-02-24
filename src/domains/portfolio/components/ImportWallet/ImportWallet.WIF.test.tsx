@@ -1,11 +1,10 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { MethodStep } from "./MethodStep";
+import { ImportDetailStep } from "./ImportDetailStep";
 import { EnvironmentProvider } from "@/app/contexts";
 import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
 import {
@@ -18,6 +17,7 @@ import {
 	act,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -83,7 +83,7 @@ describe("ImportWallet WIF", () => {
 		return (
 			<EnvironmentProvider env={env}>
 				<FormProvider {...form}>
-					<MethodStep profile={profile} network={network} />
+					<ImportDetailStep profile={profile} network={network} />
 				</FormProvider>
 			</EnvironmentProvider>
 		);

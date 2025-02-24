@@ -6,7 +6,6 @@ import { MessageRoutes } from "@/domains/message/routing";
 import { SettingRoutes } from "@/domains/setting/routing";
 import { TransactionRoutes } from "@/domains/transaction/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
-import { WalletRoutes } from "@/domains/wallet/routing";
 import { ProfileRoutes } from "@/domains/profile/routing";
 import { isUnit } from "@/utils/test-helpers";
 
@@ -23,7 +22,7 @@ const getPreloadableRoutes = (path: string): RouteItem[] => {
 	}
 
 	if (path.startsWith("/profiles")) {
-		return [...ExchangeRoutes, ...MessageRoutes, ...WalletRoutes, ...TransactionRoutes, ...VoteRoutes];
+		return [...ExchangeRoutes, ...MessageRoutes, ...TransactionRoutes, ...VoteRoutes];
 	}
 
 	return [];
