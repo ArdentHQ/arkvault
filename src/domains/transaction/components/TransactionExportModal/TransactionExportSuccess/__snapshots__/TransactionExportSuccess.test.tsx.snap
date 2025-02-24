@@ -5,13 +5,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
-      id="success-light-green"
+      id="success-light-navy"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.21 43.21 0 0 1-8.285-6.838"
         fill="none"
         stroke="#DBDEE5"
         stroke-linecap="round"
@@ -22,19 +22,19 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         cy="53.926"
         fill="none"
         r="31.5"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-width="2"
       />
       <circle
         cx="103"
         cy="53.867"
-        fill="#E2F0E6"
+        fill="#EDF7F0"
         r="27.5"
       />
       <path
         d="M111.516 47.035l3.687-3.61 5.313 5.205-16.5 16.147-4.75 4.649-2.044-2m9.485-15.684l-7.442 7.285-7.437-7.285-5.312 5.202 5.089 4.982m3.41 3.34l-1.368-1.34"
         fill="none"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
@@ -97,7 +97,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -108,9 +108,9 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__download-button"
-        type="submit"
+        type="button"
       >
         <div
           class="flex items-center space-x-2"
@@ -128,13 +128,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
-      id="success-light-green"
+      id="success-light-navy"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.21 43.21 0 0 1-8.285-6.838"
         fill="none"
         stroke="#DBDEE5"
         stroke-linecap="round"
@@ -145,19 +145,19 @@ exports[`TransactionExportForm > should render in md 1`] = `
         cy="53.926"
         fill="none"
         r="31.5"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-width="2"
       />
       <circle
         cx="103"
         cy="53.867"
-        fill="#E2F0E6"
+        fill="#EDF7F0"
         r="27.5"
       />
       <path
         d="M111.516 47.035l3.687-3.61 5.313 5.205-16.5 16.147-4.75 4.649-2.044-2m9.485-15.684l-7.442 7.285-7.437-7.285-5.312 5.202 5.089 4.982m3.41 3.34l-1.368-1.34"
         fill="none"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
@@ -220,7 +220,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -231,9 +231,9 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__download-button"
-        type="submit"
+        type="button"
       >
         <div
           class="flex items-center space-x-2"
@@ -251,13 +251,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
-      id="success-light-green"
+      id="success-light-navy"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.21 43.21 0 0 1-8.285-6.838"
         fill="none"
         stroke="#DBDEE5"
         stroke-linecap="round"
@@ -268,19 +268,19 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         cy="53.926"
         fill="none"
         r="31.5"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-width="2"
       />
       <circle
         cx="103"
         cy="53.867"
-        fill="#E2F0E6"
+        fill="#EDF7F0"
         r="27.5"
       />
       <path
         d="M111.516 47.035l3.687-3.61 5.313 5.205-16.5 16.147-4.75 4.649-2.044-2m9.485-15.684l-7.442 7.285-7.437-7.285-5.312 5.202 5.089 4.982m3.41 3.34l-1.368-1.34"
         fill="none"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
@@ -343,7 +343,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -354,9 +354,9 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__download-button"
-        type="submit"
+        type="button"
       >
         <div
           class="flex items-center space-x-2"
@@ -374,13 +374,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
-      id="success-light-green"
+      id="success-light-navy"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.21 43.21 0 0 1-8.285-6.838"
         fill="none"
         stroke="#DBDEE5"
         stroke-linecap="round"
@@ -391,19 +391,19 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         cy="53.926"
         fill="none"
         r="31.5"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-width="2"
       />
       <circle
         cx="103"
         cy="53.867"
-        fill="#E2F0E6"
+        fill="#EDF7F0"
         r="27.5"
       />
       <path
         d="M111.516 47.035l3.687-3.61 5.313 5.205-16.5 16.147-4.75 4.649-2.044-2m9.485-15.684l-7.442 7.285-7.437-7.285-5.312 5.202 5.089 4.982m3.41 3.34l-1.368-1.34"
         fill="none"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
@@ -466,7 +466,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -477,9 +477,9 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__download-button"
-        type="submit"
+        type="button"
       >
         <div
           class="flex items-center space-x-2"
@@ -497,13 +497,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
-      id="success-light-green"
+      id="success-light-navy"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.21 43.21 0 0 1-8.285-6.838"
         fill="none"
         stroke="#DBDEE5"
         stroke-linecap="round"
@@ -514,19 +514,19 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         cy="53.926"
         fill="none"
         r="31.5"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-width="2"
       />
       <circle
         cx="103"
         cy="53.867"
-        fill="#E2F0E6"
+        fill="#EDF7F0"
         r="27.5"
       />
       <path
         d="M111.516 47.035l3.687-3.61 5.313 5.205-16.5 16.147-4.75 4.649-2.044-2m9.485-15.684l-7.442 7.285-7.437-7.285-5.312 5.202 5.089 4.982m3.41 3.34l-1.368-1.34"
         fill="none"
-        stroke="#289548"
+        stroke="#235B95"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
@@ -589,7 +589,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -600,9 +600,9 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__download-button"
-        type="submit"
+        type="button"
       >
         <div
           class="flex items-center space-x-2"
@@ -713,7 +713,7 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
       class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -727,7 +727,7 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
         data-testid="TransactionExportSuccess__download-button"
         disabled=""
-        type="submit"
+        type="button"
       >
         <div
           class="flex items-center space-x-2"

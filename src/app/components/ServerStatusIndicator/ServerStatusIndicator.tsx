@@ -38,6 +38,7 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 	return (
 		<div>
 			<Dropdown
+				wrapperClass="mt-2"
 				placement="bottom"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
