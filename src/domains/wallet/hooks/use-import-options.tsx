@@ -117,7 +117,7 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				icon: <Icon name="LedgerImport" size="lg" />,
 				label: t("COMMON.LEDGER"),
 				value: OptionsValue.LEDGER,
-			}
+			},
 		];
 
 		for (const [methodName, method] of Object.entries(methods)) {

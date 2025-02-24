@@ -294,7 +294,15 @@ const ImportInputField = ({
 	);
 };
 
-export const ImportDetailStep = ({ profile, network, importOption }: { profile: Contracts.IProfile; network: Networks.Network, importOption: ImportOption }) => {
+export const ImportDetailStep = ({
+	profile,
+	network,
+	importOption,
+}: {
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	importOption: ImportOption;
+}) => {
 	const { t } = useTranslation();
 	const { watch, setValue } = useFormContext();
 

@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -55,7 +55,7 @@ export const LedgerConnectionStep = ({
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 
-	const { watch, register, setValue, unregister } = useFormContext();
+	const { register, setValue, unregister } = useFormContext();
 	const { connect, abortConnectionRetry, error, isConnected } = useLedgerContext();
 
 	useEffect(() => {

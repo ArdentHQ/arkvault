@@ -47,7 +47,6 @@ export const ImportAddressesSidePanel = ({
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
 
-
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
@@ -64,7 +63,7 @@ export const ImportAddressesSidePanel = ({
 	const { getValues, formState, register, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
-	const isLedgerImport = !!importOption && importOption.value === OptionsValue.LEDGER
+	const isLedgerImport = !!importOption && importOption.value === OptionsValue.LEDGER;
 
 	useEffect(() => {
 		register({ name: "importOption", type: "custom" });
@@ -75,7 +74,7 @@ export const ImportAddressesSidePanel = ({
 		if (open) {
 			setActiveTab(Step.MethodStep);
 			setWalletGenerationInput(undefined);
-			return
+			return;
 		}
 
 		setActiveTab(Step.MethodStep);
@@ -240,7 +239,13 @@ export const ImportAddressesSidePanel = ({
 
 							<TabPanel tabId={Step.ImportDetailStep}>
 								{isLedgerImport && <LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />}
-								{!isLedgerImport && importOption && <ImportDetailStep profile={activeProfile} network={activeNetwork} importOption={importOption} />}
+								{!isLedgerImport && importOption && (
+									<ImportDetailStep
+										profile={activeProfile}
+										network={activeNetwork}
+										importOption={importOption}
+									/>
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.EncryptPasswordStep}>
@@ -286,11 +291,7 @@ export const ImportAddressesSidePanel = ({
 							)}
 
 							{activeTab === Step.SummaryStep && (
-								<Button
-									disabled={isSubmitting}
-									type="submit"
-									data-testid="ImportWallet__finish-button"
-								>
+								<Button disabled={isSubmitting} type="submit" data-testid="ImportWallet__finish-button">
 									{t("COMMON.GO_TO_PORTFOLIO")}
 								</Button>
 							)}
