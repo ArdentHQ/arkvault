@@ -45,7 +45,8 @@ export const useTransactionRecipients = ({
 					network,
 				});
 
-				await wallet.synchroniser().identity();
+				// @TODO: Adjust hardcoded 10000 value after testing.
+				await wallet.synchroniser().identity({ ttl: 10_000 });
 				await wallet.synchroniser().coin();
 
 				return {

@@ -27,6 +27,7 @@ export class HttpClient extends Http.AbstractRequest {
 		data?: {
 			query?: object;
 			data?: any;
+			ttl?: boolean
 		},
 	): Promise<Http.HttpResponse> {
 		if (data?.query && Object.keys(data.query).length > 0) {
@@ -68,7 +69,7 @@ export class HttpClient extends Http.AbstractRequest {
 				headers: response.headers as unknown as Record<string, Primitive>,
 				statusCode: response.status,
 			});
-		});
+		}, data?.ttl);
 	}
 
 	public clearCache() {
