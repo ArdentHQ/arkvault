@@ -11,7 +11,6 @@ import { Input, InputAddress, InputPassword } from "@/app/components/Input";
 import { Toggle } from "@/app/components/Toggle";
 import { Tooltip } from "@/app/components/Tooltip";
 import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-options";
-import { assertString } from "@/utils/assertions";
 import { Alert } from "@/app/components/Alert";
 
 const validateAddress = async ({
@@ -295,9 +294,9 @@ const ImportInputField = ({
 	);
 };
 
-export const ImportDetailStep = ({ profile, network, importOption }: { profile: Contracts.IProfile; network: Networks.Network, importOption?: ImportOption }) => {
+export const ImportDetailStep = ({ profile, network, importOption }: { profile: Contracts.IProfile; network: Networks.Network, importOption: ImportOption }) => {
 	const { t } = useTranslation();
-	const { watch, setValue, getValues } = useFormContext();
+	const { watch, setValue } = useFormContext();
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
