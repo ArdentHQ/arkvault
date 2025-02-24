@@ -49,6 +49,13 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_DESCRIPTION"),
 				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE"),
 				icon: <Icon name="MnemonicImportMethod" size="lg" />,
+				label: t("COMMON.MNEMONIC_TYPE.BIP39"),
+				value: OptionsValue.BIP39,
+			},
+			{
+				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_DESCRIPTION"),
+				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE"),
+				icon: <Icon name="MnemonicImportMethod" size="lg" />,
 				label: t("COMMON.MNEMONIC_TYPE.BIP44"),
 				value: OptionsValue.BIP44,
 			},
@@ -133,7 +140,6 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				value: matchingOption.value,
 			});
 		}
-
 
 		if (!defaultOption) {
 			defaultOption = options[0];
