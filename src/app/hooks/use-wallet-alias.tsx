@@ -1,7 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useCallback } from "react";
-
 import { useEnvironmentContext } from "@/app/contexts";
 import { assertProfile, assertString } from "@/utils/assertions";
 
@@ -31,46 +30,35 @@ const useWalletAlias = (): HookResult => {
 				assertProfile(profile);
 				assertString(address);
 
-				let wallet: Contracts.IReadWriteWallet | undefined;
+				const useNetworkWalletNames = profile.appearance().get("useNetworkWalletNames");
 
+				let wallet: Contracts.IReadWriteWallet | undefined;
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 				}
 
-				if (wallet) {
-					return {
-						address,
-						alias: wallet.displayName(),
-						isContact: false,
-					};
+				const localName = wallet ? wallet.displayName() : undefined;
+
+				let onChainName: string | undefined;
+				try {
+					onChainName = wallet ? wallet.username() : username;
+				} catch {
+					onChainName = undefined;
 				}
 
 				const contact = profile.contacts().findByAddress(address)[0];
+				const contactName = contact ? contact.name() : undefined;
 
-				if (contact) {
-					return {
-						address,
-						alias: contact.name(),
-						isContact: true,
-					};
-				}
+				const alias = useNetworkWalletNames
+					? onChainName || localName || contactName
+					: localName || contactName || onChainName;
 
-				if (username) {
-					return {
-						address,
-						alias: username,
-						isContact: false,
-					};
-				}
+				const isContact = alias === contactName && contactName !== undefined;
+
+				return { address, alias, isContact };
 			} catch {
-				//
+				return { address, alias: undefined, isContact: false };
 			}
-
-			return {
-				address,
-				alias: undefined,
-				isContact: false,
-			};
 		},
 		[env],
 	);
@@ -79,5 +67,4 @@ const useWalletAlias = (): HookResult => {
 };
 
 export { useWalletAlias };
-
 export type { WalletAliasResult };

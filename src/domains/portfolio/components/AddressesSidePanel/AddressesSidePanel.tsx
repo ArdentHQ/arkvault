@@ -30,6 +30,7 @@ export const AddressesSidePanel = ({
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses);
+	const [isAnimating, setIsAnimating] = useState(false);
 
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
 
@@ -40,10 +41,6 @@ export const AddressesSidePanel = ({
 
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
-
-	useEffect(() => {
-		onSetSelectedAddresses(defaultSelectedAddresses);
-	}, [defaultSelectedAddresses]);
 
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
@@ -67,12 +64,6 @@ export const AddressesSidePanel = ({
 
 		if (selectedAddresses.includes(address)) {
 			const remainingAddresses = selectedAddresses.filter((a) => a !== address);
-
-			// Cancel deselect. One address needs to always be selected.
-			if (remainingAddresses.length === 0) {
-				return;
-			}
-
 			onSetSelectedAddresses(remainingAddresses);
 			return;
 		}
@@ -110,19 +101,25 @@ export const AddressesSidePanel = ({
 		resetDeleteState();
 	};
 
-	const isSelected = (wallet: Contracts.IReadWriteWallet) => {
-		if (selectedAddresses.length === 0) {
-			return true;
-		}
+	const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
+	const hasSelectedAddresses = () => selectedAddresses.length > 0;
 
-		return selectedAddresses.includes(wallet.address());
+	const runErrorAnimation = () => {
+		setIsAnimating(true);
+		setTimeout(() => setIsAnimating(false), 900);
 	};
 
 	return (
 		<SidePanel
+			className={cn({ "animate-shake": isAnimating })}
 			header={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
 			open={open}
 			onOpenChange={(open) => {
+				if (selectedAddresses.length === 0) {
+					runErrorAnimation();
+					return;
+				}
+
 				resetDeleteState();
 				onOpenChange(open);
 				setSearchQuery("");
@@ -265,8 +262,14 @@ export const AddressesSidePanel = ({
 			)}
 
 			<div className="space-y-1">
-				{addressesToShow.map((wallet) => (
+				{addressesToShow.map((wallet, index) => (
 					<AddressRow
+						errorMessage={
+							!hasSelectedAddresses() && !isDeleteMode && index === 0
+								? "You need to have at least one address selected."
+								: undefined
+						}
+						isError={!hasSelectedAddresses() && !isDeleteMode}
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}

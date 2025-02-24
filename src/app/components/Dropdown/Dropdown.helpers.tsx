@@ -41,7 +41,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 			)}
 			<ul>
 				{title && (
-					<li className="my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-8 py-1 text-left text-xs font-semibold text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
+					<li className="mx-1 my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-5 py-1 text-left text-xs font-semibold text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{title}
 					</li>
 				)}
@@ -59,7 +59,7 @@ const renderSecondaryLabel = (value: string | Function, isActive: boolean) => {
 	return value;
 };
 
-export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => {
+export const renderOptions = ({ options, key, onSelect, variant }: OptionsProperties) => {
 	const onSelectItem = (event: React.MouseEvent | React.KeyboardEvent, option: DropdownOption) => {
 		event.preventDefault();
 		event.stopPropagation();
@@ -80,6 +80,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 		<ul data-testid="dropdown__options">
 			{(options as DropdownOption[]).map((option: DropdownOption, index: number) => (
 				<DropdownItem
+					variant={variant}
 					isActive={!!option.active}
 					key={index}
 					data-testid={`dropdown__option--${key ? `${key}-` : ""}${index}`}
