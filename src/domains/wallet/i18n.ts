@@ -131,6 +131,24 @@ export const translations = {
 				"This password does not replace your mnemonic passphrase. You must ensure that your passphrase is properly recorded and backed up so that you do not lose access to your funds. You cannot use your encryption password to restore your profile, so it is vital that you have your mnemonic passphrase readily available should you run into any issues (such as losing access to your local profile or clearing your browser's cache).",
 		},
 
+		IMPORT_DETAIL_STEP: {
+			ENCRYPTION: {
+				DESCRIPTION:
+					"Set an encryption password to use in place of your mnemonic passphrase. Note that you must still record and keep your mnemonic passphrase safe as losing this will result in you losing all access to your funds.",
+				NOT_AVAILABLE: "Encryption not available for this import type",
+				TITLE: "Use Wallet Encryption",
+			},
+			MNEMONIC_TIP: {
+				GUIDELINES_1: "Ensure all words are in lowercase.",
+				GUIDELINES_2: "Insert a space between each word.",
+				GUIDELINES_3: "Verify that all words are spelled correctly.",
+				GUIDELINES_4:
+					"If copying and pasting, ensure no extra whitespace is added at the end of the copied text.",
+				GUIDELINES_TITLE: "Please follow these guidelines when inputting your mnemonic into ARK Vault:",
+				TITLE: "Need help with importing?",
+			},
+		},
+
 		LEDGER_CONNECTION_STEP: {
 			SUBTITLE: "Open the app on your Ledger and check for details.",
 			TITLE: "Open App on Ledger",
@@ -154,29 +172,16 @@ export const translations = {
 		},
 
 		METHOD_STEP: {
-			ENCRYPTION: {
-				DESCRIPTION:
-					"Set an encryption password to use in place of your mnemonic passphrase. Note that you must still record and keep your mnemonic passphrase safe as losing this will result in you losing all access to your funds.",
-				NOT_AVAILABLE: "Encryption not available for this import type",
-				TITLE: "Use Wallet Encryption",
-			},
-			MNEMONIC_TIP: {
-				GUIDELINES_1: "Ensure all words are in lowercase.",
-				GUIDELINES_2: "Insert a space between each word.",
-				GUIDELINES_3: "Verify that all words are spelled correctly.",
-				GUIDELINES_4:
-					"If copying and pasting, ensure no extra whitespace is added at the end of the copied text.",
-				GUIDELINES_TITLE: "Please follow these guidelines when inputting your mnemonic into ARK Vault:",
-				TITLE: "Need help with importing?",
-			},
-			SUBTITLE: "Select the import method by which you want to import the address to your Profile.",
-			TITLE: "Import Wallet",
-			TYPE: "Import Type",
-		},
-
-		NETWORK_STEP: {
-			SUBTITLE: "Select a cryptoasset to import your existing wallet address.",
-			TITLE: "Select a Cryptoasset",
+			ADDRESS_DESCRIPTION: "Enter the public address to add it",
+			LEDGER_DESCRIPTION: "Import via your Ledger hardware wallet",
+			MNEMONIC_DESCRIPTION: "Import using 12 or 24 mnemonic passphrase",
+			MNEMONIC_TITLE: "Import Mnemonic",
+			PUBLIC_KEY_DESCRIPTION: "Enter the public key of the address to add it",
+			PUBLIC_KEY_TITLE: "Import Public Key",
+			SECRET_DESCRIPTION: "Import using a custom password",
+			SECRET_TITLE: "Import Secret",
+			SUBTITLE: "Select the method you want to use to import your address.",
+			TITLE: "Import",
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {
@@ -185,8 +190,8 @@ export const translations = {
 		},
 
 		SUCCESS_STEP: {
-			SUBTITLE: "Wallet import is complete. Now you can use it.",
-			TITLE: "Completed",
+			SUBTITLE: "The address has been successfully imported",
+			TITLE: "Import Completed",
 		},
 
 		TITLE: "Import Wallet",
