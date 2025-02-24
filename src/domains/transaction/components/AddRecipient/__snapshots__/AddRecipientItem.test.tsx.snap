@@ -3,7 +3,7 @@
 exports[`Add Recipient item > should render with exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-dark-700 dark:bg-theme-dark-900 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem"
   >
     <div
@@ -13,7 +13,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
         class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-x-0 sm:space-y-1"
       >
         <div
-          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-dark-950 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
         >
           <div
             class="flex w-full items-center justify-between"
@@ -217,7 +217,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
 exports[`Add Recipient item > should render without exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-dark-700 dark:bg-theme-dark-900 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem"
   >
     <div
@@ -227,7 +227,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
         class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-x-0 sm:space-y-1"
       >
         <div
-          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-dark-950 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
         >
           <div
             class="flex w-full items-center justify-between"
