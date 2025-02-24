@@ -5,13 +5,13 @@ import { useLedgerScanner } from "@/app/contexts";
 
 export enum LedgerTabStep {
 	ListenLedgerStep = 1,
-	NetworkStep,
 	LedgerConnectionStep,
 	LedgerScanStep,
 	LedgerImportStep,
 }
 
 export interface LedgerTabsProperties {
+	onBack?: () => void;
 	activeIndex?: LedgerTabStep;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 }

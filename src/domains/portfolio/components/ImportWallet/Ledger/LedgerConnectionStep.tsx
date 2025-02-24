@@ -45,7 +45,9 @@ export const LedgerConnectionStep = ({
 	onConnect,
 	onFailed,
 	cancelling,
+	network,
 }: {
+	network: Networks.Network;
 	cancelling: boolean;
 	onConnect?: () => void;
 	onFailed?: (error: Error) => void;
@@ -55,8 +57,6 @@ export const LedgerConnectionStep = ({
 
 	const { watch, register, setValue, unregister } = useFormContext();
 	const { connect, abortConnectionRetry, error, isConnected } = useLedgerContext();
-
-	const [network] = useState<Networks.Network>(() => watch("network"));
 
 	useEffect(() => {
 		register("connected", { required: true });
@@ -109,6 +109,7 @@ export const LedgerConnectionStep = ({
 				className="hidden md:block"
 			/>
 
+			<>WIP</>
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
 		</section>
 	);

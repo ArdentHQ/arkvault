@@ -295,16 +295,13 @@ const ImportInputField = ({
 	);
 };
 
-export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) => {
+export const ImportDetailStep = ({ profile, network, importOption }: { profile: Contracts.IProfile; network: Networks.Network, importOption?: ImportOption }) => {
 	const { t } = useTranslation();
 	const { watch, setValue, getValues } = useFormContext();
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
 	const useEncryption = watch("useEncryption") as boolean;
-	const importOption = getValues("importOption") as ImportOption;
-
-	assertString(importOption.value);
 
 	const handleToggleEncryption = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setValue("useEncryption", event.target.checked);

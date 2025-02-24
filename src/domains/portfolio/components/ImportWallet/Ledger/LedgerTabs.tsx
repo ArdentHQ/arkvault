@@ -24,6 +24,7 @@ import { assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { enabledNetworksCount, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { FormButtons } from "@/app/components/Form";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 const Paginator = ({
 	activeIndex,
@@ -107,8 +108,10 @@ const Paginator = ({
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
 	onClickEditWalletName,
+	onBack
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 
@@ -172,6 +175,7 @@ export const LedgerTabs = ({
 	});
 
 	const handleNext = useCallback(async () => {
+		console.log("activeTab")
 		if (activeTab === LedgerTabStep.LedgerScanStep) {
 			await handleSubmit((data: any) => importWallets(data))();
 		}
@@ -182,21 +186,6 @@ export const LedgerTabs = ({
 	const returnToDashboard = useCallback(() => {
 		history.push(`/profiles/${activeProfile.id()}/dashboard`);
 	}, [activeProfile, history]);
-
-	const handleBack = useCallback(() => {
-		if (activeTab === LedgerTabStep.NetworkStep || onlyHasOneNetwork) {
-			return returnToDashboard();
-		}
-
-		listenDevice();
-
-		// The only possible active tab where the user can go back is the LedgerScanStep
-		return setActiveTab(LedgerTabStep.NetworkStep);
-	}, [activeTab, history, listenDevice]);
-
-	const handleCancel = () => {
-		setCancelling(true);
-	};
 
 	useEffect(() => {
 		const cancel = async () => {
@@ -262,10 +251,10 @@ export const LedgerTabs = ({
 		return activeTab;
 	}, [activeTab]);
 
+	console.log({ activeTab })
+
 	return (
 		<Tabs id="ledgerTabs" activeId={activeTab}>
-			<StepIndicator steps={steps} activeIndex={activeTabIndex} />
-
 			<div data-testid="LedgerTabs" className="mt-8">
 				<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
 					<ListenLedger
@@ -274,32 +263,11 @@ export const LedgerTabs = ({
 					/>
 				</TabPanel>
 
-				<TabPanel tabId={LedgerTabStep.NetworkStep}>
-					<NetworkStep
-						profile={activeProfile}
-						filter={(network) => {
-							if (!network.allows("Ledger")) {
-								return false;
-							}
-
-							if (!profileAllEnabledNetworkIds(activeProfile).includes(network.id())) {
-								return false;
-							}
-
-							return (
-								network.allows(Enums.FeatureFlag.TransactionTransferLedgerS) ||
-								network.allows(Enums.FeatureFlag.TransactionTransferLedgerX)
-							);
-						}}
-						title={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE")}
-						subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}
-					/>
-				</TabPanel>
-
 				<TabPanel tabId={LedgerTabStep.LedgerConnectionStep}>
 					<LedgerConnectionStep
 						cancelling={cancelling}
 						onConnect={() => setActiveTab(LedgerTabStep.LedgerScanStep)}
+						network={activeNetwork}
 					/>
 				</TabPanel>
 
@@ -315,22 +283,6 @@ export const LedgerTabs = ({
 					/>
 				</TabPanel>
 			</div>
-
-			<Paginator
-				activeIndex={activeTab}
-				isMultiple={isMultiple}
-				isNextDisabled={isNextDisabled}
-				isNextLoading={isSubmitting}
-				showCancelButton={showCancelButton}
-				isCancelDisabled={isCancelDisabled}
-				onBack={handleBack}
-				onFinish={handleFinish}
-				onCancel={handleCancel}
-				onNext={handleNext}
-				onRetry={retryFunctionReference.current}
-				showRetry={showRetry}
-				size={5}
-			/>
 		</Tabs>
 	);
 };
