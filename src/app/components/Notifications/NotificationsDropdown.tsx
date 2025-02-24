@@ -19,6 +19,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 	return (
 		<div>
 			<Dropdown
+				wrapperClass="mt-2"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
 						<Button

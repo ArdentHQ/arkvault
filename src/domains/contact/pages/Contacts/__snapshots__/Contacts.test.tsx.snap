@@ -174,7 +174,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-16 items-center sm:h-21"
+              class="my-auto flex h-12 items-center"
             >
               <button
                 class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
@@ -262,7 +262,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="cursor-pointer rounded py-2 text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
                   type="button"
                 >
                   <div>
@@ -1853,7 +1853,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-16 items-center sm:h-21"
+              class="my-auto flex h-12 items-center"
             >
               <button
                 class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
@@ -1941,7 +1941,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="cursor-pointer rounded py-2 text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
                   type="button"
                 >
                   <div>
@@ -3309,7 +3309,7 @@ exports[`Contacts > should render with contacts 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-16 items-center sm:h-21"
+              class="my-auto flex h-12 items-center"
             >
               <button
                 class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
@@ -3397,7 +3397,7 @@ exports[`Contacts > should render with contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="cursor-pointer rounded py-2 text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
                   type="button"
                 >
                   <div>
@@ -4988,7 +4988,7 @@ exports[`Contacts > should render without contacts 1`] = `
             class="flex flex-row items-center gap-6"
           >
             <div
-              class="my-auto flex h-16 items-center sm:h-21"
+              class="my-auto flex h-12 items-center"
             >
               <button
                 class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
@@ -5076,7 +5076,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="cursor-pointer rounded py-2 text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
                   type="button"
                 >
                   <div>

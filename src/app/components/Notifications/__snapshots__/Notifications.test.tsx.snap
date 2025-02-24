@@ -7,10 +7,10 @@ exports[`Notifications > should emit transactionClick event 1`] = `
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
+      class="flex items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+        class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
       >
         Notification
       </div>
@@ -297,10 +297,10 @@ exports[`Notifications > should render with empty notifications 1`] = `
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
+      class="flex items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+        class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
       >
         Notification
       </div>
@@ -393,10 +393,10 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
+      class="flex items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+        class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
       >
         Notification
       </div>

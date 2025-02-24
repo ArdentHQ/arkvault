@@ -2,8 +2,8 @@ import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Avatar } from "@/app/components/Avatar";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
-import { NavigationBarMenuItem, UserMenuProperties } from "@/app/components/NavigationBar";
+import { Dropdown, DropdownOptionGroup } from "@/app/components/Dropdown";
+import { UserMenuProperties } from "@/app/components/NavigationBar";
 import { getUserMenuActions } from "@/app/constants/navigation";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
@@ -17,7 +17,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();
 
-	const userMenuActions = useMemo<(DropdownOption & NavigationBarMenuItem)[]>(() => getUserMenuActions(t), [t]);
+	const userMenuActions = useMemo<DropdownOptionGroup[]>(() => getUserMenuActions(t), [t]);
 	const { isXs } = useBreakpoint();
 
 	const profile = useActiveProfile();
@@ -64,7 +64,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	return (
 		<Dropdown
-			wrapperClass="rounded-none"
+			variant="navbar"
 			placement="bottom-end"
 			onSelect={onUserAction}
 			options={userMenuActions}

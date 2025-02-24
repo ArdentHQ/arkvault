@@ -74,7 +74,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	};
 
 	return (
-		<div className="my-auto flex h-16 items-center sm:h-21">
+		<div className="my-auto flex h-12 items-center">
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
@@ -266,10 +266,11 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 				className="mr-auto flex content-center items-center xl:hidden"
 			>
 				<Dropdown
+					variant="navbar"
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
-							className="cursor-pointer rounded py-2 text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+							className="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
 						>
 							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
 						</button>

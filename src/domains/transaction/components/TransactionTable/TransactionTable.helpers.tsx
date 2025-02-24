@@ -27,7 +27,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 			},
 			{
 				Header: t("COMMON.METHOD"),
-				cellWidth: "w-40 lg:w-24",
+				cellWidth: "w-40 lg:w-24 lg:min-w-24 xl:min-w-32",
 				headerClassName: "no-border",
 			},
 			{
@@ -46,6 +46,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 			{
 				Header: `${t("COMMON.AMOUNT")} ${coinLabel}`,
 				accessor: (transaction) => transaction.total?.(),
+				cellWidth: "lg:min-w-24 xl:min-w-32",
 				className: "justify-end",
 				headerClassName: "no-border whitespace-nowrap",
 				id: "amount",
@@ -53,7 +54,6 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 			{
 				Header: t("COMMON.FIAT_VALUE"),
 				accessor: () => "fiatValue",
-				cellWidth: "w-36",
 				className: "justify-end",
 				headerClassName: `no-border whitespace-nowrap hidden lg:table-cell ${hideSender ? "" : "!pl-0 xl:min-w-28"}`,
 				noRoundedBorders: true,
