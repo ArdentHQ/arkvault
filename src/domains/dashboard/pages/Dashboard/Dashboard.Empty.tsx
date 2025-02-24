@@ -2,11 +2,17 @@ import React from "react";
 import { DashboardSetupAddressSlider } from "./Dashboard.Empty.Slider";
 import { AddressActionsMenuMobile, DashboardSetupAddressCards, HeaderMobile } from "./Dashboard.Empty.blocks";
 
-export const DashboardEmpty = () => (
+export const DashboardEmpty = ({
+	onCreateAddress,
+	onImportAddress,
+}: {
+	onCreateAddress?: (open: boolean) => void;
+	onImportAddress?: (open: boolean) => void;
+}) => (
 	<>
 		<div className="hidden items-center justify-center sm:flex">
 			<div className="mt-6 flex h-page max-w-[45.25rem] px-4 md:mt-0 md:items-center md:px-0">
-				<DashboardSetupAddressCards />
+				<DashboardSetupAddressCards onCreateAddress={onCreateAddress} onImportAddress={onImportAddress} />
 			</div>
 		</div>
 

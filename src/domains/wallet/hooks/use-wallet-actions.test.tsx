@@ -86,22 +86,4 @@ describe("useWalletActions", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-username-resignation`);
 	});
-
-	it("should push right urls to history", () => {
-		const {
-			result: { current },
-		} = renderHook(() => useWalletActions(wallet), { wrapper });
-
-		act(() => {
-			current.handleImport();
-		});
-
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/import`);
-
-		act(() => {
-			current.handleImportLedger();
-		});
-
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/import/ledger`);
-	});
 });

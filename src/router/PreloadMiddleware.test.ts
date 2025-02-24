@@ -6,7 +6,6 @@ import { ContactRoutes } from "@/domains/contact/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
 import { MessageRoutes } from "@/domains/message/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
-import { WalletRoutes } from "@/domains/wallet/routing";
 import { TransactionRoutes } from "@/domains/transaction/routing";
 
 describe("PreloadMiddleware", () => {
@@ -33,7 +32,7 @@ describe("PreloadMiddleware", () => {
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const profileSpies = [...ExchangeRoutes, ...WalletRoutes, ...VoteRoutes].map((route) =>
+		const profileSpies = [...ExchangeRoutes, ...VoteRoutes].map((route) =>
 			vi.spyOn(route.component as any, "preload"),
 		);
 
@@ -58,12 +57,12 @@ describe("PreloadMiddleware", () => {
 		}
 	});
 
-	it("preloads exchange, wallet, transaction, and vote routes when path starts with /profile", () => {
+	it("preloads exchange, transaction, and vote routes when path starts with /profile", () => {
 		const rootSpies = [...DashboardRoutes, ...ProfileRoutes, ...SettingRoutes, ...ContactRoutes].map((route) =>
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const profileSpies = [...ExchangeRoutes, ...WalletRoutes, ...VoteRoutes].map((route) =>
+		const profileSpies = [...ExchangeRoutes, ...VoteRoutes].map((route) =>
 			vi.spyOn(route.component as any, "preload"),
 		);
 

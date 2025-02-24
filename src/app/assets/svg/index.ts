@@ -69,6 +69,7 @@ import MoneyCoinSwap from "./money-coin-swap.svg?react";
 import NoteCheck from "./note-check.svg?react";
 import Pencil from "./pencil.svg?react";
 import PencilRuler from "./pencil-ruler.svg?react";
+import PublicKeyImportMethod from "./public-key-import-method.svg?react";
 import Server from "./server.svg?react";
 import ServerMultisign from "./server-multisign.svg?react";
 import ServerPeer from "./server-peer.svg?react";
@@ -107,11 +108,16 @@ import ConfirmYourPassphrase from "./confirm-your-passphrase.svg?react";
 import PersonLight from "./person-light.svg?react";
 import PersonDark from "./person-dark.svg?react";
 import CircleMinus from "./circle-minus.svg?react";
+import LedgerImportMethod from "./ledger-import-method.svg?react";
+import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
+import SecretImportMethod from "./secret-import-method.svg?react";
+import AddressImportMethod from "./address-import-method.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
 	...Currencies,
 	...TransactionIcons,
+	AddressImportMethod,
 	Bell,
 	Calendar,
 	Categories,
@@ -174,6 +180,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ImportWalletLight,
 	Ledger,
 	LedgerAlt,
+	LedgerImportMethod,
 	List,
 	LoaderLogo,
 	Lock,
@@ -183,6 +190,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Mainnet,
 	Menu,
 	MenuOpen,
+	MnemonicImportMethod,
 	MoneyCoinSwap,
 	NoteCheck,
 	Pencil,
@@ -190,8 +198,10 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	PersonDark,
 	PersonLight,
 	Plus,
+	PublicKeyImportMethod,
 	QRCode,
 	QuestionMarkSmall,
+	SecretImportMethod,
 	SelectNetworkDark,
 	SelectNetworkLight,
 	Server,
