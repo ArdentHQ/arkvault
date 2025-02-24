@@ -105,7 +105,7 @@ export const translations = {
 	DEVELOPMENT_NETWORKS: "Development Networks",
 	DISABLE: "Disable",
 	DISCLAIMER: "Disclaimer",
-	DOCUMENTATION: "Documentation",
+	DOCS: "Docs",
 	DONE: "Done",
 	DOWNLOAD: "Download",
 	DOWNLOADED: "Downloaded",

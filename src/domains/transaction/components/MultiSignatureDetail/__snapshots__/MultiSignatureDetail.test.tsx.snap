@@ -15,7 +15,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -116,7 +116,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                             class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                           >
                             <button
-                              class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                              class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
@@ -317,22 +317,11 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       <div
                                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                                       >
-                                        <span
-                                          class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-                                          data-testid="Address__alias"
-                                        >
-                                          <span
-                                            class="no-ligatures transition-colors duration-200"
-                                            data-testid="TruncateEnd"
-                                          >
-                                            ARK Wallet 1
-                                          </span>
-                                        </span>
                                         <div
                                           class="relative grow leading-[17px] sm:leading-5 text-left"
                                         >
                                           <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                                            class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                             data-testid="Address__address"
                                           >
                                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -531,7 +520,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         class="h-full w-full [.condensed_&]:hidden"
                                       >
                                         <div
-                                          class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                                          class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                         />
                                       </div>
                                     </div>
@@ -558,7 +547,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         class="h-full w-full [.condensed_&]:hidden"
                                       >
                                         <div
-                                          class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                                          class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                         />
                                       </div>
                                     </div>
@@ -649,7 +638,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         class="h-full w-full [.condensed_&]:hidden"
                                       >
                                         <div
-                                          class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                                          class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                         />
                                       </div>
                                     </div>
@@ -675,7 +664,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         class="h-full w-full [.condensed_&]:hidden"
                                       >
                                         <div
-                                          class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                                          class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
                                         />
                                       </div>
                                     </div>
@@ -856,100 +845,52 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                               class="flex w-full space-x-2"
                                             >
                                               <div
-                                                class="w-full sm:w-auto"
+                                                class="w-full sm:w-2/3"
                                               >
-                                                <div
-                                                  class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
+                                                <span
+                                                  aria-busy="true"
+                                                  aria-live="polite"
+                                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                                                 >
-                                                  D8rr7...6YUYD
-                                                </div>
-                                              </div>
-                                              <button
-                                                class="ring-focus relative focus:outline-none"
-                                                data-ring-focus-margin="-m-1"
-                                                data-testid="clipboard-icon__wrapper"
-                                                type="button"
-                                              >
-                                                <div
-                                                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
-                                                >
-                                                  <div
-                                                    style="height: 16px; width: 16px;"
+                                                  <span
+                                                    class="react-loading-skeleton w-full"
+                                                    style="height: 20px;"
                                                   >
-                                                    <svg
-                                                      id="copy"
-                                                      style="height: 100%; width: 100%;"
-                                                      viewBox="0 0 20 20"
-                                                      x="0"
-                                                      xml:space="preserve"
-                                                      xmlns="http://www.w3.org/2000/svg"
-                                                      y="0"
-                                                    >
-                                                      <g
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                      >
-                                                        <path
-                                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                                        />
-                                                        <path
-                                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                                        />
-                                                      </g>
-                                                    </svg>
-                                                  </div>
-                                                </div>
-                                              </button>
+                                                    ‌
+                                                  </span>
+                                                  <br />
+                                                </span>
+                                              </div>
+                                              <span
+                                                aria-busy="true"
+                                                aria-live="polite"
+                                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                              >
+                                                <span
+                                                  class="react-loading-skeleton"
+                                                  style="width: 20px; height: 20px;"
+                                                >
+                                                  ‌
+                                                </span>
+                                                <br />
+                                              </span>
                                             </div>
                                             <div
                                               class="ml-2 border-l border-theme-secondary-300 pl-2 dark:border-theme-secondary-800 sm:hidden"
                                             >
-                                              <div
-                                                class="relative"
-                                                data-testid="Signatures__participant-status"
+                                              <span
+                                                aria-busy="true"
+                                                aria-live="polite"
+                                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                                               >
-                                                <div>
-                                                  <div
-                                                    class="text-theme-primary-500"
-                                                    data-testid="ParticipantStatus__signed"
-                                                  >
-                                                    <div
-                                                      style="height: 20px; width: 20px;"
-                                                    >
-                                                      <svg
-                                                        id="circle-check-mark"
-                                                        style="height: 100%; width: 100%;"
-                                                        viewBox="0 0 20 20"
-                                                        x="0"
-                                                        xml:space="preserve"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        y="0"
-                                                      >
-                                                        <g
-                                                          fill="none"
-                                                          stroke="currentColor"
-                                                          stroke-width="2"
-                                                        >
-                                                          <circle
-                                                            cx="10"
-                                                            cy="10"
-                                                            r="9"
-                                                            stroke-miterlimit="10"
-                                                          />
-                                                          <path
-                                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                          />
-                                                        </g>
-                                                      </svg>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
+                                                <span
+                                                  class="react-loading-skeleton"
+                                                  style="width: 20px; height: 20px;"
+                                                >
+                                                  ‌
+                                                </span>
+                                                <br />
+                                              </span>
                                             </div>
                                           </div>
                                         </td>
@@ -957,49 +898,19 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                           <div
                                             class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
                                           >
-                                            <div
-                                              class="relative"
-                                              data-testid="Signatures__participant-status"
+                                            <span
+                                              aria-busy="true"
+                                              aria-live="polite"
+                                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                                             >
-                                              <div>
-                                                <div
-                                                  class="text-theme-primary-500"
-                                                  data-testid="ParticipantStatus__signed"
-                                                >
-                                                  <div
-                                                    style="height: 20px; width: 20px;"
-                                                  >
-                                                    <svg
-                                                      id="circle-check-mark"
-                                                      style="height: 100%; width: 100%;"
-                                                      viewBox="0 0 20 20"
-                                                      x="0"
-                                                      xml:space="preserve"
-                                                      xmlns="http://www.w3.org/2000/svg"
-                                                      y="0"
-                                                    >
-                                                      <g
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-width="2"
-                                                      >
-                                                        <circle
-                                                          cx="10"
-                                                          cy="10"
-                                                          r="9"
-                                                          stroke-miterlimit="10"
-                                                        />
-                                                        <path
-                                                          d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                                          stroke-linecap="round"
-                                                          stroke-linejoin="round"
-                                                        />
-                                                      </g>
-                                                    </svg>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
+                                              <span
+                                                class="react-loading-skeleton"
+                                                style="width: 20px; height: 20px;"
+                                              >
+                                                ‌
+                                              </span>
+                                              <br />
+                                            </span>
                                           </div>
                                         </td>
                                       </tr>
@@ -1015,100 +926,52 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                               class="flex w-full space-x-2"
                                             >
                                               <div
-                                                class="w-full sm:w-auto"
+                                                class="w-full sm:w-2/3"
                                               >
-                                                <div
-                                                  class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
+                                                <span
+                                                  aria-busy="true"
+                                                  aria-live="polite"
+                                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                                                 >
-                                                  D5sRK...vJtwb
-                                                </div>
-                                              </div>
-                                              <button
-                                                class="ring-focus relative focus:outline-none"
-                                                data-ring-focus-margin="-m-1"
-                                                data-testid="clipboard-icon__wrapper"
-                                                type="button"
-                                              >
-                                                <div
-                                                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
-                                                >
-                                                  <div
-                                                    style="height: 16px; width: 16px;"
+                                                  <span
+                                                    class="react-loading-skeleton w-full"
+                                                    style="height: 20px;"
                                                   >
-                                                    <svg
-                                                      id="copy"
-                                                      style="height: 100%; width: 100%;"
-                                                      viewBox="0 0 20 20"
-                                                      x="0"
-                                                      xml:space="preserve"
-                                                      xmlns="http://www.w3.org/2000/svg"
-                                                      y="0"
-                                                    >
-                                                      <g
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                      >
-                                                        <path
-                                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                                        />
-                                                        <path
-                                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                                        />
-                                                      </g>
-                                                    </svg>
-                                                  </div>
-                                                </div>
-                                              </button>
+                                                    ‌
+                                                  </span>
+                                                  <br />
+                                                </span>
+                                              </div>
+                                              <span
+                                                aria-busy="true"
+                                                aria-live="polite"
+                                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                              >
+                                                <span
+                                                  class="react-loading-skeleton"
+                                                  style="width: 20px; height: 20px;"
+                                                >
+                                                  ‌
+                                                </span>
+                                                <br />
+                                              </span>
                                             </div>
                                             <div
                                               class="ml-2 border-l border-theme-secondary-300 pl-2 dark:border-theme-secondary-800 sm:hidden"
                                             >
-                                              <div
-                                                class="relative"
-                                                data-testid="Signatures__participant-status"
+                                              <span
+                                                aria-busy="true"
+                                                aria-live="polite"
+                                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                                               >
-                                                <div>
-                                                  <div
-                                                    class="text-theme-primary-500"
-                                                    data-testid="ParticipantStatus__signed"
-                                                  >
-                                                    <div
-                                                      style="height: 20px; width: 20px;"
-                                                    >
-                                                      <svg
-                                                        id="circle-check-mark"
-                                                        style="height: 100%; width: 100%;"
-                                                        viewBox="0 0 20 20"
-                                                        x="0"
-                                                        xml:space="preserve"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        y="0"
-                                                      >
-                                                        <g
-                                                          fill="none"
-                                                          stroke="currentColor"
-                                                          stroke-width="2"
-                                                        >
-                                                          <circle
-                                                            cx="10"
-                                                            cy="10"
-                                                            r="9"
-                                                            stroke-miterlimit="10"
-                                                          />
-                                                          <path
-                                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                          />
-                                                        </g>
-                                                      </svg>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
+                                                <span
+                                                  class="react-loading-skeleton"
+                                                  style="width: 20px; height: 20px;"
+                                                >
+                                                  ‌
+                                                </span>
+                                                <br />
+                                              </span>
                                             </div>
                                           </div>
                                         </td>
@@ -1116,49 +979,19 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                           <div
                                             class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
                                           >
-                                            <div
-                                              class="relative"
-                                              data-testid="Signatures__participant-status"
+                                            <span
+                                              aria-busy="true"
+                                              aria-live="polite"
+                                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                                             >
-                                              <div>
-                                                <div
-                                                  class="text-theme-primary-500"
-                                                  data-testid="ParticipantStatus__signed"
-                                                >
-                                                  <div
-                                                    style="height: 20px; width: 20px;"
-                                                  >
-                                                    <svg
-                                                      id="circle-check-mark"
-                                                      style="height: 100%; width: 100%;"
-                                                      viewBox="0 0 20 20"
-                                                      x="0"
-                                                      xml:space="preserve"
-                                                      xmlns="http://www.w3.org/2000/svg"
-                                                      y="0"
-                                                    >
-                                                      <g
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-width="2"
-                                                      >
-                                                        <circle
-                                                          cx="10"
-                                                          cy="10"
-                                                          r="9"
-                                                          stroke-miterlimit="10"
-                                                        />
-                                                        <path
-                                                          d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                                          stroke-linecap="round"
-                                                          stroke-linejoin="round"
-                                                        />
-                                                      </g>
-                                                    </svg>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
+                                              <span
+                                                class="react-loading-skeleton"
+                                                style="width: 20px; height: 20px;"
+                                              >
+                                                ‌
+                                              </span>
+                                              <br />
+                                            </span>
                                           </div>
                                         </td>
                                       </tr>
@@ -1177,7 +1010,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                   class="mt-8 flex justify-end space-x-3"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -1188,7 +1021,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                     </div>
                   </button>
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -1224,7 +1057,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1484,7 +1317,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                   class="mt-8 flex justify-end space-x-3"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                     data-testid="Paginator__back"
                     type="button"
                   >
@@ -1547,7 +1380,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -2046,7 +1879,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"

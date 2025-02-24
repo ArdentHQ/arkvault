@@ -5,7 +5,6 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { FilterTransactions } from "@/domains/transaction/components/FilterTransactions";
 import { Icon } from "@/app/components/Icon";
 import { TabId } from "@/app/components/Tabs/useTab";
@@ -242,10 +241,20 @@ export const Transactions = memo(function Transactions({
 					/>
 				</div>
 
+				<TransactionTable
+					transactions={transactions}
+					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
+					isLoading={isLoadingTransactions}
+					skeletonRowsLimit={8}
+					onRowClick={setTransactionModalItem}
+					profile={profile}
+					hideSender={selectedWallets === 1}
+				/>
+
 				{hasEmptyResults && (
 					<>
 						{selectedTransactionTypes?.length ? (
-							<EmptyBlock className="border-none sm:text-left">
+							<div className="mb-1 mt-3 px-6 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 md:px-6">
 								<Trans
 									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
 									values={{
@@ -253,26 +262,13 @@ export const Transactions = memo(function Transactions({
 									}}
 									components={{ bold: <strong /> }}
 								/>
-							</EmptyBlock>
+							</div>
 						) : (
-							<EmptyBlock className="border-none sm:text-left">
+							<div className="mb-1 mt-3 px-6 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 md:px-6">
 								{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
-							</EmptyBlock>
+							</div>
 						)}
 					</>
-				)}
-
-				{!hasEmptyResults && (
-					<TransactionTable
-						transactions={transactions}
-						exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
-						hideHeader={hasEmptyResults}
-						isLoading={isLoadingTransactions}
-						skeletonRowsLimit={8}
-						onRowClick={setTransactionModalItem}
-						profile={profile}
-						hideSender={selectedWallets === 1}
-					/>
 				)}
 
 				{transactionModalItem && (

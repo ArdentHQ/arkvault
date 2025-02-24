@@ -358,7 +358,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -715,7 +715,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -1118,7 +1118,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -1475,7 +1475,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -1863,7 +1863,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -2301,7 +2301,7 @@ exports[`ImportWallet > should render method step 1`] = `
         </div>
       </div>
       <div
-        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
