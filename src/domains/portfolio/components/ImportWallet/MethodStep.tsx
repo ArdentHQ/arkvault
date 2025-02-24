@@ -6,6 +6,7 @@ import { useFormContext } from "react-hook-form";
 
 export const MethodStep = ({ network, onSelect }: { network: Networks.Network; onSelect: () => Promise<void> }) => {
 	const { options } = useImportOptions(network.importMethods());
+	console.log({ options })
 
 	const form = useFormContext();
 

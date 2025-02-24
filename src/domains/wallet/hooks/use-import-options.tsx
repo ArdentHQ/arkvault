@@ -6,6 +6,7 @@ import { Icon } from "@/app/components/Icon";
 
 export enum OptionsValue {
 	ADDRESS = "address",
+	LEDGER = "ledger",
 	BIP39 = "bip39",
 	BIP44 = "bip44",
 	BIP49 = "bip49",
@@ -44,6 +45,13 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 
 	return useMemo(() => {
 		const allOptions: ImportOption[] = [
+			{
+				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.LEDGER_DESCRIPTION"),
+				header: t("COMMON.LEDGER"),
+				icon: <Icon name="LedgerImport" size="lg" />,
+				label: t("COMMON.MNEMONIC_TYPE.BIP39"),
+				value: OptionsValue.LEDGER,
+			},
 			{
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_DESCRIPTION"),
 				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE"),
