@@ -46,20 +46,6 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 	return useMemo(() => {
 		const allOptions: ImportOption[] = [
 			{
-				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.LEDGER_DESCRIPTION"),
-				header: t("COMMON.LEDGER"),
-				icon: <Icon name="LedgerImport" size="lg" />,
-				label: t("COMMON.MNEMONIC_TYPE.BIP39"),
-				value: OptionsValue.LEDGER,
-			},
-			{
-				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_DESCRIPTION"),
-				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE"),
-				icon: <Icon name="MnemonicImportMethod" size="lg" />,
-				label: t("COMMON.MNEMONIC_TYPE.BIP39"),
-				value: OptionsValue.BIP39,
-			},
-			{
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_DESCRIPTION"),
 				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE"),
 				icon: <Icon name="MnemonicImportMethod" size="lg" />,
@@ -117,7 +103,15 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 
 		let defaultOption: ImportOption | undefined;
 
-		const options: ImportOption[] = [];
+		const options: ImportOption[] = [
+			{
+				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.LEDGER_DESCRIPTION"),
+				header: t("COMMON.LEDGER"),
+				icon: <Icon name="LedgerImport" size="lg" />,
+				label: t("COMMON.LEDGER"),
+				value: OptionsValue.LEDGER,
+			}
+		];
 
 		for (const [methodName, method] of Object.entries(methods)) {
 			const matchingOption = allOptions.find((option) => option.value === convertMethodName(methodName));
@@ -139,6 +133,7 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				value: matchingOption.value,
 			});
 		}
+
 
 		if (!defaultOption) {
 			defaultOption = options[0];
