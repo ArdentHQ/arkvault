@@ -12,6 +12,7 @@ import {
 import React from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
+import cn from "classnames";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -19,9 +20,17 @@ interface SidePanelProps {
 	onOpenChange: (open: boolean) => void;
 	header?: React.ReactNode | string;
 	dataTestId?: string;
+	className?: string;
 }
 
-export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: SidePanelProps): JSX.Element => {
+export const SidePanel = ({
+	children,
+	open,
+	onOpenChange,
+	header,
+	dataTestId,
+	className,
+}: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
 		open,
@@ -70,7 +79,7 @@ export const SidePanel = ({ children, open, onOpenChange, header, dataTestId }: 
 								ref={refs.setFloating}
 								{...getFloatingProps()}
 							>
-								<div style={{ ...styles }} className="fixed right-0 top-0">
+								<div style={{ ...styles }} className={cn("fixed right-0 top-0", className)}>
 									<div className="custom-scroll h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:w-[608px] md:p-8">
 										<div className="relative mb-4 flex items-start justify-between">
 											{typeof header === "string" ? (

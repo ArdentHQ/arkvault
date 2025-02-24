@@ -55,7 +55,7 @@ export const TransactionRow = memo(
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
 				<TableCell
 					variant="start"
-					innerClassName={cn("items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5", {
+					innerClassName={cn("items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36", {
 						"min-h-14 my-1 pt-1": hideSender,
 						"min-h-[66px] py-1 my-0 md-lg:min-h-14": !hideSender,
 					})}
@@ -77,6 +77,7 @@ export const TransactionRow = memo(
 					innerClassName={cn(
 						"text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3",
 						{
+							"lg:min-w-40": hideSender,
 							"xl:min-w-32": !hideSender,
 						},
 					)}
@@ -92,7 +93,8 @@ export const TransactionRow = memo(
 				<TableCell
 					innerClassName={cn("items-start xl:min-h-11 xl:pt-3", {
 						"min-h-14 my-1 pt-2": hideSender,
-						"min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 xl:w-auto": !hideSender,
+						"min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto":
+							!hideSender,
 					})}
 				>
 					<Label
@@ -138,7 +140,7 @@ export const TransactionRow = memo(
 						"hidden md-lg:table-cell": !hideSender,
 					})}
 					innerClassName={cn("space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11", {
-						"min-h-16 my-1 py-2": !hideSender,
+						"min-h-16 my-1 py-2 lg:min-w-36": !hideSender,
 					})}
 				>
 					<TransactionRowAddressing
@@ -161,7 +163,7 @@ export const TransactionRow = memo(
 				<TableCell
 					className="hidden lg:table-cell"
 					innerClassName={cn("justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3", {
-						"lg:w-44 xl:w-auto": !hideSender,
+						"lg:w-34 xl:w-auto": !hideSender,
 					})}
 				>
 					<div className="flex flex-col items-end gap-1">

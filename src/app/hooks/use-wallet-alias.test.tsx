@@ -27,7 +27,8 @@ describe("useWalletAlias", () => {
 		});
 	});
 
-	it("should return contact name", () => {
+	it("should return contact name when useNetworkWalletNames is false", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const contact = profile.contacts().first();
 		const contactAddress = contact.addresses().first();
 
@@ -40,7 +41,8 @@ describe("useWalletAlias", () => {
 		});
 	});
 
-	it("should return displayName", () => {
+	it("should return displayName when useNetworkWalletNames is false", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
 		expect(
@@ -56,7 +58,8 @@ describe("useWalletAlias", () => {
 		});
 	});
 
-	it("should choose displayName over contact name", () => {
+	it("should choose displayName over contact name when useNetworkWalletNames is false", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(profile.contacts().values()).toHaveLength(2);
 
@@ -83,7 +86,8 @@ describe("useWalletAlias", () => {
 		expect(profile.contacts().values()).toHaveLength(2);
 	});
 
-	it("should choose contact name over username", () => {
+	it("should choose contact name over username when useNetworkWalletNames is false", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const contact = profile.contacts().first();
 		const contactAddress = contact.addresses().first();
 
@@ -102,14 +106,77 @@ describe("useWalletAlias", () => {
 		});
 	});
 
-	it("should choose username over address", () => {
+	it("should choose username over address when no wallet or contact exists", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
 		expect(
-			result.current.getWalletAlias({ address: wallet.address(), profile, username: "xyz_username" }),
+			result.current.getWalletAlias({ address: "unknown-address", profile, username: "xyz_username" }),
+		).toStrictEqual({
+			address: "unknown-address",
+			alias: "xyz_username",
+			isContact: false,
+		});
+	});
+
+	it("should return username when useNetworkWalletNames is true and wallet has username", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
+		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue("username");
+
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		expect(
+			result.current.getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
 		).toStrictEqual({
 			address: wallet.address(),
-			alias: "xyz_username",
+			alias: "username",
+			isContact: false,
+		});
+
+		usernameSpy.mockRestore();
+	});
+
+	it("should return displayName when useNetworkWalletNames is true but wallet has no username", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
+		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue(undefined);
+
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		expect(
+			result.current.getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toStrictEqual({
+			address: wallet.address(),
+			alias: wallet.displayName(),
+			isContact: false,
+		});
+
+		usernameSpy.mockRestore();
+	});
+
+	it("should return username when useNetworkWalletNames is true and wallet doesn't exist", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
+		const contact = profile.contacts().first();
+		const contactAddress = contact.addresses().first();
+
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		expect(
+			result.current.getWalletAlias({
+				address: contactAddress.address(),
+				profile,
+				username: "contact_username",
+			}),
+		).toStrictEqual({
+			address: contactAddress.address(),
+			alias: "contact_username",
 			isContact: false,
 		});
 	});

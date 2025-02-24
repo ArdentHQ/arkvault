@@ -40,7 +40,7 @@ exports[`TransactionRecipients > should render a single recipient 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -107,7 +107,7 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
       class="flex items-center -space-x-1"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -163,7 +163,7 @@ exports[`TransactionRecipients > should render in lg 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -219,7 +219,7 @@ exports[`TransactionRecipients > should render in md 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -277,7 +277,7 @@ exports[`TransactionRecipients > should render in sm 1`] = `
           class="flex items-center space-x-2"
         >
           <div
-            class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+            class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -512,7 +512,7 @@ exports[`TransactionRecipients > should render in xl 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -570,7 +570,7 @@ exports[`TransactionRecipients > should render in xs 1`] = `
           class="flex items-center space-x-2"
         >
           <div
-            class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+            class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -870,7 +870,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -902,7 +902,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -953,7 +953,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -985,7 +985,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1127,7 +1127,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1159,7 +1159,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1210,7 +1210,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1242,7 +1242,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1523,7 +1523,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1555,7 +1555,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1606,7 +1606,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1638,7 +1638,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1919,7 +1919,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1951,7 +1951,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2002,7 +2002,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2034,7 +2034,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2176,7 +2176,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2208,7 +2208,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2259,7 +2259,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2291,7 +2291,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2378,15 +2378,6 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </span>
                   </div>
                 </div>
-                <span
-                  class="text-theme-text dark:text-theme-secondary-600"
-                >
-                  <div>
-                    <div
-                      style="height: 16px; width: 16px;"
-                    />
-                  </div>
-                </span>
                 <div
                   class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm shrink-0"
                   data-testid="Avatar"
@@ -2581,7 +2572,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2613,7 +2604,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2664,7 +2655,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2696,7 +2687,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2783,15 +2774,6 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </span>
                   </div>
                 </div>
-                <span
-                  class="text-theme-text dark:text-theme-secondary-600"
-                >
-                  <div>
-                    <div
-                      style="height: 16px; width: 16px;"
-                    />
-                  </div>
-                </span>
                 <div
                   class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm shrink-0"
                   data-testid="Avatar"
