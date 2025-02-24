@@ -27,7 +27,7 @@ export class HttpClient extends Http.AbstractRequest {
 		data?: {
 			query?: object;
 			data?: any;
-			ttl?: boolean
+			ttl?: boolean;
 		},
 	): Promise<Http.HttpResponse> {
 		if (data?.query && Object.keys(data.query).length > 0) {
@@ -36,40 +36,44 @@ export class HttpClient extends Http.AbstractRequest {
 
 		const cacheKey: string = hash(`${method}.${url}.${JSON.stringify(data)}`).toString();
 
-		return this.cache.remember(cacheKey, async () => {
-			if (!["GET", "POST"].includes(method)) {
-				throw new Error("Received no response. This looks like a bug.");
-			}
+		return this.cache.remember(
+			cacheKey,
+			async () => {
+				if (!["GET", "POST"].includes(method)) {
+					throw new Error("Received no response. This looks like a bug.");
+				}
 
-			let options = this._options;
+				let options = this._options;
 
-			if (method === "GET" && url.includes("github")) {
-				this.withHeaders({
-					"Content-Type": "text/plain",
+				if (method === "GET" && url.includes("github")) {
+					this.withHeaders({
+						"Content-Type": "text/plain",
+					});
+				} else {
+					this.withHeaders({
+						Accept: "application/json",
+						"Content-Type": "application/json",
+					});
+				}
+
+				if (method === "POST") {
+					options = {
+						...options,
+						body: JSON.stringify(data?.data),
+						method: "POST",
+					};
+				}
+
+				const response = await fetch(url, options);
+
+				return new Http.Response({
+					body: await response.text(),
+					headers: response.headers as unknown as Record<string, Primitive>,
+					statusCode: response.status,
 				});
-			} else {
-				this.withHeaders({
-					Accept: "application/json",
-					"Content-Type": "application/json",
-				});
-			}
-
-			if (method === "POST") {
-				options = {
-					...options,
-					body: JSON.stringify(data?.data),
-					method: "POST",
-				};
-			}
-
-			const response = await fetch(url, options);
-
-			return new Http.Response({
-				body: await response.text(),
-				headers: response.headers as unknown as Record<string, Primitive>,
-				statusCode: response.status,
-			});
-		}, data?.ttl);
+			},
+			data?.ttl,
+		);
 	}
 
 	public clearCache() {
