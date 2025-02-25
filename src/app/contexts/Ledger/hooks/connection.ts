@@ -22,7 +22,6 @@ export const useLedgerConnection = () => {
 	const { device, isBusy, isConnected, isWaiting, error } = state;
 
 	const { importLedgerWallets } = useLedgerImport({ device, env });
-
 	useEffect(() => {
 		if (deviceName) {
 			if (isConnected) {
