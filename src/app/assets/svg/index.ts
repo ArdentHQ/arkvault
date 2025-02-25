@@ -3,6 +3,7 @@
 import { FC, SVGProps } from "react";
 
 import { ArrowIcons } from "./arrows";
+import Back from "./back.svg?react";
 import Bell from "./bell.svg?react";
 import Categories from "./categories.svg?react";
 import Calendar from "./calendar.svg?react";
@@ -119,6 +120,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...Currencies,
 	...TransactionIcons,
 	AddressImportMethod,
+	Back,
 	Bell,
 	Calendar,
 	Categories,

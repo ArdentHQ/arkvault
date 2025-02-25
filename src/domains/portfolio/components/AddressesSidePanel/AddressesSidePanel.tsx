@@ -191,7 +191,7 @@ export const AddressesSidePanel = ({
 								variant="transparent"
 								onClick={() => setDeleteMode(true)}
 								className={cn(
-									"p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5",
+									"p-2 py-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5",
 									{
 										"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
 											showManageHint,
@@ -205,15 +205,16 @@ export const AddressesSidePanel = ({
 					)}
 
 					{isDeleteMode && (
-						<div className="leading-[18px] sm:leading-5">
+						<div className="flex space-x-2 px-2 items-center leading-[18px] sm:leading-5">
+							<Icon name="Back" dimensions={[16, 16]} className="text-theme-primary-600 dark:text-theme-primary-400" />
 							<Button
 								data-testid="CancelDelete"
 								size="icon"
 								variant="transparent"
 								onClick={resetDeleteState}
-								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
+								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5"
 							>
-								{t("COMMON.CANCEL")}
+								{t("COMMON.BACK")}
 							</Button>
 						</div>
 					)}
