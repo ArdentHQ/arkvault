@@ -58,12 +58,12 @@ export const PortfolioHeader = ({
 	const { persist } = useEnvironmentContext();
 
 	const onDeleteAddresses = async (addresses: string[]) => {
-		setSelectedAddresses(selectedAddresses.filter((existingAddress) => addresses.includes(existingAddress)));
+		await setSelectedAddresses(selectedAddresses.filter((existingAddress) => addresses.includes(existingAddress)));
 
 		for (const wallet of profile.wallets().values()) {
 			if (addresses.includes(wallet.address())) {
 				profile.wallets().forget(wallet.id());
-				removeSelectedAddresses([wallet.address()], wallet.network());
+				await removeSelectedAddresses([wallet.address()], wallet.network());
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
 			}
 		}

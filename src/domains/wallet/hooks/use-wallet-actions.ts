@@ -83,9 +83,9 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 
 			for (const profileWallet of profile.wallets().values()) {
 				if (profileWallet.address() === wallet.address()) {
-					removeSelectedAddresses([wallet.address()], wallet.network());
 					profile.wallets().forget(profileWallet.id());
 					profile.notifications().transactions().forgetByRecipient(wallet.address());
+					await removeSelectedAddresses([wallet.address()], wallet.network());
 				}
 			}
 
