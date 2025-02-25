@@ -271,19 +271,19 @@ export const showLoadedLedgerWalletsMessage = (wallets: Contracts.WalletData[]) 
 };
 
 export const LedgerScanStep = ({
+	network,
 	setRetryFn,
 	profile,
 	cancelling,
 }: {
+	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
 	cancelling: boolean;
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
 	const { t } = useTranslation();
 
-	const { watch, register, unregister, setValue } = useFormContext();
-	const [network] = useState<Networks.Network>(() => watch("network"));
-
+	const { register, unregister, setValue } = useFormContext();
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;

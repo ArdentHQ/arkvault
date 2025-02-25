@@ -24,11 +24,22 @@ export const accessLedgerApp = async ({ coin }: { coin: Coins.Coin }) => {
 	}
 
 	// Ensure that the app is accessible.
-	await coin.ledger().getPublicKey(
-		formatLedgerDerivationPath({
-			coinType: coin.config().get<number>("network.constants.slip44"),
-		}),
-	);
+	const path = formatLedgerDerivationPath({
+		coinType: coin.config().get<number>("network.constants.slip44"),
+	})
+
+	const mainsailEvmPath = "44'/111'/0'/0/0"
+	const ethPath = "44'/60'/0'/0/0"
+
+
+	try {
+		console.log("Generating path ___________", ethPath)
+		await coin.ledger().getPublicKey(ethPath)
+		console.log("")
+		console.log("")
+	} catch (error) {
+		console.log("Generating path [error]", error)
+	}
 };
 
 export const persistLedgerConnection = async ({
@@ -57,5 +68,9 @@ export const persistLedgerConnection = async ({
 		}
 	};
 
-	await retry(retryAccess, options);
+	setTimeout(() => {
+		retryAccess()
+	}, 3000)
+
+	// await retry(retryAccess, options);
 };

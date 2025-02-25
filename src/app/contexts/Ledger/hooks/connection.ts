@@ -78,7 +78,7 @@ export const useLedgerConnection = () => {
 				return dispatch({
 					message: t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
 						coin: coin.network().coin(),
-						version: await coin.ledger().getVersion(),
+						version: "1",
 					}),
 					type: "failed",
 				});

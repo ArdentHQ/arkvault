@@ -109,7 +109,6 @@ export const LedgerConnectionStep = ({
 				className="hidden md:block"
 			/>
 
-			<>WIP</>
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
 		</section>
 	);
