@@ -16,6 +16,7 @@ export const MobileAddressRow = ({
 	onDelete,
 	isError,
 	errorMessage,
+	deleteContent,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	toggleAddress: (address: string) => void;
@@ -24,6 +25,7 @@ export const MobileAddressRow = ({
 	onDelete: (address: string) => void;
 	isError?: boolean;
 	errorMessage?: string;
+	deleteContent?: React.ReactNode;
 }): JSX.Element => (
 	<div className="space-y-2">
 		<MultiEntryItem
@@ -105,6 +107,15 @@ export const MobileAddressRow = ({
 						</p>
 					</div>
 				)}
+
+				<div
+					className={cn("transition-all duration-300", {
+						"max-h-0 opacity-0": !deleteContent,
+						"max-h-52 opacity-100": deleteContent,
+					})}
+				>
+					{deleteContent}
+				</div>
 			</div>
 		</MultiEntryItem>
 	</div>
