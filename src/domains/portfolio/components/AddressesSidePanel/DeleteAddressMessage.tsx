@@ -17,7 +17,7 @@ export const DeleteAddressMessage = ({
 				The address will be permanently removed, and a passphrase will be needed for re-import.
 			</p>
 
-			<div className="w-full justify-center flex items-center sm:justify-end leading-[18px] sm:leading-5 mt-4">
+			<div className="mt-4 flex w-full items-center justify-center leading-[18px] sm:justify-end sm:leading-5">
 				<Button
 					data-testid="CancelDelete"
 					size="icon"
