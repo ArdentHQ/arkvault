@@ -30,6 +30,14 @@ const useWalletAlias = (): HookResult => {
 				assertProfile(profile);
 				assertString(address);
 
+				if (network && env.knownWallets().is(network.id(), address)) {
+					return {
+						address,
+						alias: env.knownWallets().name(network.id(), address),
+						isContact: false,
+					}
+				}
+
 				const useNetworkWalletNames = profile.appearance().get("useNetworkWalletNames");
 
 				let wallet: Contracts.IReadWriteWallet | undefined;
