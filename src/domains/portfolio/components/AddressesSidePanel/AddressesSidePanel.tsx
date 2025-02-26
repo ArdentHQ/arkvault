@@ -205,8 +205,12 @@ export const AddressesSidePanel = ({
 					)}
 
 					{isDeleteMode && (
-						<div className="flex space-x-2 px-2 items-center leading-[18px] sm:leading-5">
-							<Icon name="Back" dimensions={[16, 16]} className="text-theme-primary-600 dark:text-theme-primary-400" />
+						<div className="flex items-center space-x-2 px-2 leading-[18px] sm:leading-5">
+							<Icon
+								name="Back"
+								dimensions={[16, 16]}
+								className="text-theme-primary-600 dark:text-theme-primary-400"
+							/>
 							<Button
 								data-testid="CancelDelete"
 								size="icon"

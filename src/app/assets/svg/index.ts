@@ -111,7 +111,8 @@ import PersonDark from "./person-dark.svg?react";
 import CircleMinus from "./circle-minus.svg?react";
 import LedgerImportMethod from "./ledger-import-method.svg?react";
 import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
-import MarkedTrash from "./marked-trash.svg?react";
+import MarkedTrashDark from "./marked-trash-dark.svg?react";
+import MarkedTrashLight from "./marked-trash-dark.svg?react";
 import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
 
@@ -191,7 +192,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MagnifyingGlassAlt,
 	MagnifyingGlassId,
 	Mainnet,
-	MarkedTrash,
+	MarkedTrashDark,
+	MarkedTrashLight,
 	Menu,
 	MenuOpen,
 	MnemonicImportMethod,

@@ -5,7 +5,7 @@ import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import React from "react";
 import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { useBreakpoint } from "@/app/hooks";
 import { MobileAddressRow } from "@/domains/portfolio/components/AddressesSidePanel/MobileAddressRow";
 
@@ -73,8 +73,9 @@ export const AddressRow = ({
 				)}
 
 				{usesDeleteMode && deleteContent && (
-					<Icon
-						name="MarkedTrash"
+					<ThemeIcon
+						darkIcon="MarkedTrashDark"
+						lightIcon="MarkedTrashLight"
 						dimensions={[16, 16]}
 						className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
 					/>

@@ -5,7 +5,7 @@ import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import React from "react";
 import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
 
 export const MobileAddressRow = ({
@@ -36,20 +36,8 @@ export const MobileAddressRow = ({
 					data-testid="MobileAddressRowHeader"
 					onClick={() => toggleAddress(wallet.address())}
 					tabIndex={0}
-					className="flex items-center space-x-3"
+					className={cn("flex w-full items-center space-x-3", { "justify-between": usesDeleteMode })}
 				>
-					{usesDeleteMode && (
-						<Button
-							onClick={() => onDelete(wallet.address())}
-							data-testid={`AddressRow--delete-${wallet.address()}`}
-							size="icon"
-							className="p-0 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 hover:dark:text-white"
-							variant="transparent"
-						>
-							<Icon name="Trash" dimensions={[16, 16]} />
-						</Button>
-					)}
-
 					{!usesDeleteMode && (
 						<Checkbox
 							name="all"
@@ -68,6 +56,27 @@ export const MobileAddressRow = ({
 					>
 						{wallet.displayName()}
 					</div>
+
+					{usesDeleteMode && !deleteContent && (
+						<Button
+							onClick={() => onDelete(wallet.address())}
+							data-testid={`AddressRow--delete-${wallet.address()}`}
+							size="icon"
+							className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 hover:dark:text-white"
+							variant="transparent"
+						>
+							<Icon name="Trash" dimensions={[16, 16]} />
+						</Button>
+					)}
+
+					{usesDeleteMode && deleteContent && (
+						<ThemeIcon
+							darkIcon="MarkedTrashDark"
+							lightIcon="MarkedTrashLight"
+							dimensions={[16, 16]}
+							className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
+						/>
+					)}
 				</div>
 			}
 		>
