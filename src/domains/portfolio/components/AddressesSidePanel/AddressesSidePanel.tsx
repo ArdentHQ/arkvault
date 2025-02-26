@@ -212,7 +212,7 @@ export const AddressesSidePanel = ({
 								className="text-theme-primary-600 dark:text-theme-primary-400"
 							/>
 							<Button
-								data-testid="CancelDelete"
+								data-testid="BackManage"
 								size="icon"
 								variant="transparent"
 								onClick={resetDeleteState}

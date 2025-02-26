@@ -48,7 +48,7 @@ describe("MobileAddressRow", () => {
 		expect(screen.queryByTestId("AddressRow--checkbox")).not.toBeInTheDocument();
 	});
 
-	it("should trigger `onDelete` when deleted", async () => {
+	it("should trigger `onDelete` when delete button clicked", async () => {
 		const onDelete = vi.fn();
 		render(
 			<MobileAddressRow
@@ -110,5 +110,22 @@ describe("MobileAddressRow", () => {
 
 		await userEvent.click(screen.getByTestId("MobileAddressRowHeader"));
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
+	});
+
+	it("should should render deleteContent", async () => {
+		const onDelete = vi.fn();
+		render(
+			<MobileAddressRow
+				wallet={wallet}
+				onDelete={onDelete}
+				usesDeleteMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				deleteContent={<div>Delete content</div>}
+			/>,
+		);
+
+		expect(screen.getByText('Delete content')).toBeInTheDocument();
+		expect(screen.getByTestId('icon-MarkedTrashLight')).toBeInTheDocument();
 	});
 });

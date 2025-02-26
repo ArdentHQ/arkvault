@@ -12,7 +12,9 @@ export const DeleteAddressMessage = ({
 }): JSX.Element => {
 	const { t } = useTranslation();
 	return (
-		<div className="flex flex-col items-center rounded-b-lg bg-theme-danger-50 px-4 py-3 dark:bg-theme-dark-800">
+		<div
+			data-testid="DeleteAddressMessage"
+			className="flex flex-col items-center rounded-b-lg bg-theme-danger-50 px-4 py-3 dark:bg-theme-dark-800">
 			<p className="text-sm text-theme-secondary-900 dark:text-theme-dark-50">
 				The address will be permanently removed, and a passphrase will be needed for re-import.
 			</p>
