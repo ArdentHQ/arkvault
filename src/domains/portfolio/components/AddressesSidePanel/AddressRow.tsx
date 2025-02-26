@@ -17,6 +17,7 @@ export const AddressRow = ({
 	onDelete,
 	isError = false,
 	errorMessage,
+	deleteContent,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	toggleAddress: (address: string) => void;
@@ -25,6 +26,7 @@ export const AddressRow = ({
 	usesDeleteMode: boolean;
 	errorMessage?: string;
 	onDelete: (address: string) => void;
+	deleteContent?: React.ReactNode;
 }): JSX.Element => {
 	const { isXs } = useBreakpoint();
 
@@ -38,6 +40,7 @@ export const AddressRow = ({
 				onDelete={onDelete}
 				isError={isError}
 				errorMessage={errorMessage}
+				deleteContent={deleteContent}
 			/>
 		);
 	}
@@ -57,7 +60,7 @@ export const AddressRow = ({
 			})}
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
-				{usesDeleteMode && (
+				{usesDeleteMode && !deleteContent && (
 					<Button
 						onClick={() => onDelete(wallet.address())}
 						data-testid={`AddressRow--delete-${wallet.address()}`}
@@ -67,6 +70,14 @@ export const AddressRow = ({
 					>
 						<Icon name="Trash" dimensions={[16, 16]} />
 					</Button>
+				)}
+
+				{usesDeleteMode && deleteContent && (
+					<Icon
+						name="MarkedTrash"
+						dimensions={[16, 16]}
+						className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
+					/>
 				)}
 
 				{!usesDeleteMode && (
@@ -124,6 +135,14 @@ export const AddressRow = ({
 					<p className="text-sm text-theme-secondary-700 dark:text-theme-dark-50">{errorMessage}</p>
 				</div>
 			)}
+			<div
+				className={cn("transition-all duration-300", {
+					"max-h-0 opacity-0": !deleteContent,
+					"max-h-52 opacity-100": deleteContent,
+				})}
+			>
+				{deleteContent}
+			</div>
 		</div>
 	);
 };
