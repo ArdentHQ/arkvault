@@ -59,7 +59,7 @@ export const PortfolioHeader = ({
 
 	const onDeleteAddresses = async (addresses: string[]) => {
 		for (const wallet of profile.wallets().values()) {
-			if (addresses.includes(wallet.address())) {
+			if (address === wallet.address()) {
 				profile.wallets().forget(wallet.id());
 				await removeSelectedAddresses([wallet.address()], wallet.network());
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
@@ -321,8 +321,8 @@ export const PortfolioHeader = ({
 				}}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				onDelete={(addresses) => {
-					void onDeleteAddresses(addresses);
+				onDelete={(address) => {
+					void onDeleteAddress(address);
 				}}
 			/>
 
