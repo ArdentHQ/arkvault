@@ -5,7 +5,7 @@ import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import React from "react";
 import { Button } from "@/app/components/Button";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Icon } from "@/app/components/Icon";
 import { useBreakpoint } from "@/app/hooks";
 import { MobileAddressRow } from "@/domains/portfolio/components/AddressesSidePanel/MobileAddressRow";
 
