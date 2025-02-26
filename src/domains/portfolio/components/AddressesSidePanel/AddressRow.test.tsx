@@ -157,7 +157,7 @@ describe("AddressRow", () => {
 			/>,
 		);
 
-		expect(screen.getByText('Delete content')).toBeInTheDocument();
-		expect(screen.getByTestId('icon-MarkedTrashLight')).toBeInTheDocument();
+		expect(screen.getByText("Delete content")).toBeInTheDocument();
+		expect(screen.getByTestId("icon-MarkedTrashLight")).toBeInTheDocument();
 	});
 });
