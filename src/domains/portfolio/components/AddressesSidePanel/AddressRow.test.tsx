@@ -144,7 +144,7 @@ describe("AddressRow", () => {
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
 	});
 
-	it("should should render deleteContent", async () => {
+	it("should should render deleteContent", () => {
 		const onDelete = vi.fn();
 		render(
 			<AddressRow
