@@ -25,7 +25,7 @@ const useWalletAlias = (): HookResult => {
 	const { env } = useEnvironmentContext();
 
 	const getWalletAlias = useCallback(
-		({ address, profile, network, username }: Properties) => {
+		({ address, profile, network }: Properties) => {
 			try {
 				assertProfile(profile);
 				assertString(address);
@@ -47,12 +47,7 @@ const useWalletAlias = (): HookResult => {
 
 				const localName = wallet ? wallet.displayName() : undefined;
 
-				let onChainName: string | undefined;
-				try {
-					onChainName = wallet ? wallet.username() : username;
-				} catch {
-					onChainName = undefined;
-				}
+				const onChainName = wallet ? wallet.username() : undefined;
 
 				const contact = profile.contacts().findByAddress(address)[0];
 				const contactName = contact ? contact.name() : undefined;

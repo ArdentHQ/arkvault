@@ -54,7 +54,6 @@ export const useTransactionRecipients = ({
 						address,
 						network: transaction.wallet().network(),
 						profile,
-						username: wallet.username(),
 					}),
 				};
 			} catch {
