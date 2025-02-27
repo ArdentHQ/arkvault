@@ -100,6 +100,8 @@ export const translations = {
 	DEFAULT_CHOSEN_FEE: "Default fee type",
 	DELEGATE_STATUS: "Delegate Status",
 	DELETE: "Delete",
+	DELETE_ADDRESS: "Delete Address",
+	DELETE_DESCRIPTION: "The address will be permanently removed, and a passphrase will be needed for re-import.",
 	DESCRIPTION: "Description",
 	DETAILS: "Details",
 	DEVELOPMENT_NETWORKS: "Development Networks",

@@ -34,13 +34,15 @@ describe("useWalletAlias", () => {
 	it("should return known wallet name", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({
+		expect(
+			result.current.getWalletAlias({
+				address: "known-wallet-address",
+				network: wallet.network(),
+				profile,
+			}),
+		).toStrictEqual({
 			address: "known-wallet-address",
-			network: wallet.network(),
-			profile
-		})).toStrictEqual({
-			address: "known-wallet-address",
-			"alias": "test known wallet",
+			alias: "test known wallet",
 			isContact: false,
 		});
 	});
