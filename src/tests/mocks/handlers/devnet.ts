@@ -43,7 +43,15 @@ export const devnetHandlers = [
 		return HttpResponse.json({ data: "Hello World!" });
 	}),
 	http.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json", () => {
-		return HttpResponse.json([]);
+		return HttpResponse.json(
+			[
+				{
+					"type": "team",
+					"name": "test known wallet",
+					"address": "known-wallet-address"
+				}
+			]
+		);
 	}),
 	http.get("https://ark-test.arkvault.io/api/wallets/:identifier", (request, response, context) => {
 		const identifier = request.params.identifier as string;
