@@ -7,8 +7,10 @@ import React from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
+import { useWalletAlias } from "@/app/hooks";
 
 export const MobileAddressRow = ({
+	profile,
 	wallet,
 	toggleAddress,
 	isSelected,
@@ -18,6 +20,7 @@ export const MobileAddressRow = ({
 	errorMessage,
 	deleteContent,
 }: {
+	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
 	toggleAddress: (address: string) => void;
 	isSelected: boolean;
@@ -26,7 +29,12 @@ export const MobileAddressRow = ({
 	isError?: boolean;
 	errorMessage?: string;
 	deleteContent?: React.ReactNode;
-}): JSX.Element => (
+}): JSX.Element => {
+
+	const { getWalletAlias } = useWalletAlias();
+	const { alias } = getWalletAlias({address: wallet.address(), network: wallet.network(), profile })
+
+	return (
 	<div className="space-y-2">
 		<MultiEntryItem
 			className={cn({ "border-theme-danger-400 dark:border-theme-danger-400": isError })}
@@ -49,12 +57,12 @@ export const MobileAddressRow = ({
 					)}
 
 					<div
-						className={cn("text-sm font-semibold leading-[17px]", {
+						className={cn("truncate text-sm font-semibold leading-[17px]", {
 							"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
 							"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
 						})}
 					>
-						{wallet.displayName()}
+						{alias}
 					</div>
 
 					{usesDeleteMode && !deleteContent && (
@@ -127,4 +135,4 @@ export const MobileAddressRow = ({
 			</div>
 		</MultiEntryItem>
 	</div>
-);
+)};

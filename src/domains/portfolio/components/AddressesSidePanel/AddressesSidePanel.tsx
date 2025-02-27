@@ -14,6 +14,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
 
 export const AddressesSidePanel = ({
+	profile,
 	wallets,
 	defaultSelectedAddresses = [],
 	open,
@@ -21,6 +22,7 @@ export const AddressesSidePanel = ({
 	onClose,
 	onDelete,
 }: {
+	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
 	defaultSelectedAddresses: string[];
 	open: boolean;
@@ -242,6 +244,7 @@ export const AddressesSidePanel = ({
 			<div className="space-y-1">
 				{addressesToShow.map((wallet, index) => (
 					<AddressRow
+						profile={profile}
 						errorMessage={
 							!hasSelectedAddresses() && !isDeleteMode && index === 0
 								? "You need to have at least one address selected."
