@@ -69,7 +69,7 @@ const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
 	});
 
 const syncWallets = async (wallets: Contracts.IReadWriteWallet[]) => {
-	const ttl = 5000
+	const ttl = 5000;
 	await Promise.allSettled(
 		wallets.map((wallet) => {
 			if (wallet.hasSyncedWithNetwork()) {

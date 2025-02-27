@@ -30,8 +30,8 @@ export class HttpClient extends Http.AbstractRequest {
 			ttl?: boolean;
 		},
 		options?: {
-			ttl?: number
-		}
+			ttl?: number;
+		},
 	): Promise<Http.HttpResponse> {
 		if (data?.query && Object.keys(data.query).length > 0) {
 			url = `${url}?${new URLSearchParams(data.query as any)}`;
