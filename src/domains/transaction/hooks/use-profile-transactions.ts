@@ -15,7 +15,6 @@ interface TransactionsState {
 	selectedTransactionTypes?: string[];
 	hasMore?: boolean;
 	timestamp?: number;
-	uniqueAddresses?: string[];
 }
 
 interface TransactionFilters {
@@ -105,7 +104,6 @@ export const useProfileTransactions = ({
 			hasMore,
 			timestamp,
 			selectedTransactionTypes,
-			uniqueAddresses = [],
 		},
 		setState,
 		// @ts-ignore
@@ -118,7 +116,6 @@ export const useProfileTransactions = ({
 		selectedTransactionTypes: allTransactionTypes,
 		timestamp: undefined,
 		transactions: [],
-		uniqueAddresses: [],
 	});
 
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
@@ -163,6 +160,10 @@ export const useProfileTransactions = ({
 
 			const uniqueAddresses = [...new Set(addresses)] as string[];
 
+			const networks = wallets.map((wallet) => wallet.network());
+
+			await syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
+
 			const items = filterTransactions({ transactions: response });
 
 			setState((state) => ({
@@ -170,7 +171,6 @@ export const useProfileTransactions = ({
 				hasMore: hasMorePages(items.length, response.hasMorePages()),
 				isLoadingTransactions: false,
 				transactions: items,
-				uniqueAddresses,
 			}));
 		};
 
@@ -332,12 +332,6 @@ export const useProfileTransactions = ({
 		start();
 		return () => stop();
 	}, [start, stop]);
-
-	useEffect(() => {
-		const networks = wallets.map((wallet) => wallet.network());
-
-		syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
-	}, [profile, uniqueAddresses]);
 
 	return {
 		activeMode,

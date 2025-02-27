@@ -46,20 +46,27 @@ const useWalletAlias = (): HookResult => {
 				const useNetworkWalletNames = profile.appearance().get("useNetworkWalletNames");
 
 				let wallet: Contracts.IReadWriteWallet | undefined;
+
+				let onChainUsername: string | undefined;
+
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+
+					onChainUsername = env.usernames().username(network.id(), address);
+
+					console.log({ address, onChainUsername });
 				}
 
 				const localName = wallet ? wallet.displayName() : undefined;
 
-				const onChainName = wallet ? wallet.username() : undefined;
+				const username = wallet ? wallet.username() : undefined;
 
 				const contact = profile.contacts().findByAddress(address)[0];
 				const contactName = contact ? contact.name() : undefined;
 
 				const alias = useNetworkWalletNames
-					? onChainName || localName || contactName
-					: localName || contactName || onChainName;
+					? username || localName || contactName || onChainUsername
+					: localName || contactName || username || onChainUsername;
 
 				const isContact = alias === contactName && contactName !== undefined;
 
