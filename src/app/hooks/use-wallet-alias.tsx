@@ -19,6 +19,11 @@ interface WalletAliasResult {
 
 interface HookResult {
 	getWalletAlias: (input: Properties) => WalletAliasResult;
+	syncOnChainUsernames: (input: {
+		profile: Contracts.IProfile;
+		networks: Networks.Network[];
+		addresses: string[];
+	}) => Promise<void>;
 }
 
 const useWalletAlias = (): HookResult => {
@@ -66,7 +71,26 @@ const useWalletAlias = (): HookResult => {
 		[env],
 	);
 
-	return { getWalletAlias };
+	const syncOnChainUsernames = useCallback(
+		async ({
+			profile,
+			networks,
+			addresses,
+		}: {
+			profile: Contracts.IProfile;
+			networks: Networks.Network[];
+			addresses: string[];
+		}) => {
+			for (const network of networks) {
+				const coin = profile.coins().get(network.coin(), network.id());
+				await coin.__construct();
+				await env.usernames().syncUsernames(profile, network.coin(), network.id(), addresses);
+			}
+		},
+		[env],
+	);
+
+	return { getWalletAlias, syncOnChainUsernames };
 };
 
 export { useWalletAlias };

@@ -1,7 +1,7 @@
 import { Contracts, Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import { useSynchronizer } from "@/app/hooks";
+import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 import { isUnit } from "@/utils/test-helpers";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
@@ -15,6 +15,7 @@ interface TransactionsState {
 	selectedTransactionTypes?: string[];
 	hasMore?: boolean;
 	timestamp?: number;
+	uniqueAddresses?: string[];
 }
 
 interface TransactionFilters {
@@ -91,6 +92,7 @@ export const useProfileTransactions = ({
 	const cursor = useRef(1);
 	const LIMIT = useMemo(() => (isUnit() ? 0 : limit), [limit]);
 	const { types } = useTransactionTypes({ wallets });
+	const { syncOnChainUsernames } = useWalletAlias();
 	const allTransactionTypes = [...types.core];
 
 	const [
@@ -103,6 +105,7 @@ export const useProfileTransactions = ({
 			hasMore,
 			timestamp,
 			selectedTransactionTypes,
+			uniqueAddresses = [],
 		},
 		setState,
 		// @ts-ignore
@@ -115,6 +118,7 @@ export const useProfileTransactions = ({
 		selectedTransactionTypes: allTransactionTypes,
 		timestamp: undefined,
 		transactions: [],
+		uniqueAddresses: [],
 	});
 
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
@@ -149,6 +153,16 @@ export const useProfileTransactions = ({
 				return;
 			}
 
+			const addresses = response
+				.items()
+				.flatMap((transaction) => [
+					transaction.sender(),
+					transaction.recipient(),
+					...transaction.recipients().map(({ address }) => address),
+				]);
+
+			const uniqueAddresses = [...new Set(addresses)] as string[];
+
 			const items = filterTransactions({ transactions: response });
 
 			setState((state) => ({
@@ -156,6 +170,7 @@ export const useProfileTransactions = ({
 				hasMore: hasMorePages(items.length, response.hasMorePages()),
 				isLoadingTransactions: false,
 				transactions: items,
+				uniqueAddresses,
 			}));
 		};
 
@@ -317,6 +332,12 @@ export const useProfileTransactions = ({
 		start();
 		return () => stop();
 	}, [start, stop]);
+
+	useEffect(() => {
+		const networks = wallets.map((wallet) => wallet.network());
+
+		syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
+	}, [profile, uniqueAddresses]);
 
 	return {
 		activeMode,
