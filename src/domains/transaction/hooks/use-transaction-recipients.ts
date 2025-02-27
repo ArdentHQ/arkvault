@@ -45,10 +45,6 @@ export const useTransactionRecipients = ({
 					network,
 				});
 
-				// As this is to ensure the username is fetched, cache wallet data (including username)
-				// to avoid multiple unecessary network requests (e.g transactions table or transaction detail overview modal).
-				await wallet.synchroniser().identity({ ttl: 10_000 });
-
 				return {
 					wallet,
 					...getWalletAlias({
