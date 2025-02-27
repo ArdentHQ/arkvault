@@ -30,109 +30,109 @@ export const MobileAddressRow = ({
 	errorMessage?: string;
 	deleteContent?: React.ReactNode;
 }): JSX.Element => {
-
 	const { getWalletAlias } = useWalletAlias();
-	const { alias } = getWalletAlias({address: wallet.address(), network: wallet.network(), profile })
+	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
 
 	return (
-	<div className="space-y-2">
-		<MultiEntryItem
-			className={cn({ "border-theme-danger-400 dark:border-theme-danger-400": isError })}
-			dataTestId="MobileAddressRow"
-			titleSlot={
-				<div
-					data-testid="MobileAddressRowHeader"
-					onClick={() => toggleAddress(wallet.address())}
-					tabIndex={0}
-					className={cn("flex w-full items-center space-x-3", { "justify-between": usesDeleteMode })}
-				>
-					{!usesDeleteMode && (
-						<Checkbox
-							name="all"
-							data-testid="AddressRow--checkbox"
-							className="m-0.5"
-							checked={isSelected}
-							onChange={() => toggleAddress(wallet.address())}
+		<div className="space-y-2">
+			<MultiEntryItem
+				className={cn({ "border-theme-danger-400 dark:border-theme-danger-400": isError })}
+				dataTestId="MobileAddressRow"
+				titleSlot={
+					<div
+						data-testid="MobileAddressRowHeader"
+						onClick={() => toggleAddress(wallet.address())}
+						tabIndex={0}
+						className={cn("flex w-full items-center space-x-3", { "justify-between": usesDeleteMode })}
+					>
+						{!usesDeleteMode && (
+							<Checkbox
+								name="all"
+								data-testid="AddressRow--checkbox"
+								className="m-0.5"
+								checked={isSelected}
+								onChange={() => toggleAddress(wallet.address())}
+							/>
+						)}
+
+						<div
+							className={cn("truncate text-sm font-semibold leading-[17px]", {
+								"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
+								"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
+							})}
+						>
+							{alias}
+						</div>
+
+						{usesDeleteMode && !deleteContent && (
+							<Button
+								onClick={() => onDelete(wallet.address())}
+								data-testid={`AddressRow--delete-${wallet.address()}`}
+								size="icon"
+								className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 hover:dark:text-white"
+								variant="transparent"
+							>
+								<Icon name="Trash" dimensions={[16, 16]} />
+							</Button>
+						)}
+
+						{usesDeleteMode && deleteContent && (
+							<Icon
+								name="MarkedTrash"
+								dimensions={[16, 16]}
+								className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
+							/>
+						)}
+					</div>
+				}
+			>
+				<div className={cn("sm:w-full sm:p-0")}>
+					<div className="space-y-4 px-4 pb-4 pt-3 sm:hidden">
+						<InfoDetail
+							label="Address"
+							body={
+								<Address
+									address={wallet.address()}
+									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50"
+								/>
+							}
 						/>
+						<InfoDetail
+							label="Value"
+							body={
+								<Amount
+									ticker={wallet.network().ticker()}
+									value={wallet.balance()}
+									className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
+								/>
+							}
+						/>
+					</div>
+					{!!errorMessage && (
+						<div className="flex space-x-4 rounded-b-sm bg-theme-danger-50 px-4 py-3 dark:bg-theme-dark-800">
+							<div className="mx-[2px] mt-1 flex w-5 justify-center">
+								<Icon
+									name="CircleCross"
+									className="text-theme-danger-700 dark:text-theme-danger-400"
+									size="md"
+								/>
+							</div>
+							<p className="max-w-60 text-sm text-theme-secondary-700 dark:text-theme-dark-50">
+								{errorMessage}
+							</p>
+						</div>
 					)}
 
 					<div
-						className={cn("truncate text-sm font-semibold leading-[17px]", {
-							"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
-							"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
+						className={cn("transition-all duration-300", {
+							"max-h-0 opacity-0": !deleteContent,
+							"max-h-52 opacity-100": deleteContent,
 						})}
 					>
-						{alias}
+						{deleteContent}
 					</div>
-
-					{usesDeleteMode && !deleteContent && (
-						<Button
-							onClick={() => onDelete(wallet.address())}
-							data-testid={`AddressRow--delete-${wallet.address()}`}
-							size="icon"
-							className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 hover:dark:text-white"
-							variant="transparent"
-						>
-							<Icon name="Trash" dimensions={[16, 16]} />
-						</Button>
-					)}
-
-					{usesDeleteMode && deleteContent && (
-						<Icon
-							name="MarkedTrash"
-							dimensions={[16, 16]}
-							className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
-						/>
-					)}
 				</div>
-			}
-		>
-			<div className={cn("sm:w-full sm:p-0")}>
-				<div className="space-y-4 px-4 pb-4 pt-3 sm:hidden">
-					<InfoDetail
-						label="Address"
-						body={
-							<Address
-								address={wallet.address()}
-								addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50"
-							/>
-						}
-					/>
-					<InfoDetail
-						label="Value"
-						body={
-							<Amount
-								ticker={wallet.network().ticker()}
-								value={wallet.balance()}
-								className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
-							/>
-						}
-					/>
-				</div>
-				{!!errorMessage && (
-					<div className="flex space-x-4 rounded-b-sm bg-theme-danger-50 px-4 py-3 dark:bg-theme-dark-800">
-						<div className="mx-[2px] mt-1 flex w-5 justify-center">
-							<Icon
-								name="CircleCross"
-								className="text-theme-danger-700 dark:text-theme-danger-400"
-								size="md"
-							/>
-						</div>
-						<p className="max-w-60 text-sm text-theme-secondary-700 dark:text-theme-dark-50">
-							{errorMessage}
-						</p>
-					</div>
-				)}
-
-				<div
-					className={cn("transition-all duration-300", {
-						"max-h-0 opacity-0": !deleteContent,
-						"max-h-52 opacity-100": deleteContent,
-					})}
-				>
-					{deleteContent}
-				</div>
-			</div>
-		</MultiEntryItem>
-	</div>
-)};
+			</MultiEntryItem>
+		</div>
+	);
+};

@@ -50,7 +50,7 @@ export const AddressRow = ({
 		);
 	}
 
-	const { alias } = getWalletAlias({address: wallet.address(), network: wallet.network(), profile })
+	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
 
 	return (
 		<div
@@ -98,7 +98,7 @@ export const AddressRow = ({
 				)}
 
 				<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200">
-					<div className="truncate flex w-1/2 min-w-0 flex-col space-y-2">
+					<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
 						<div
 							className={cn("leading-5", {
 								"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
