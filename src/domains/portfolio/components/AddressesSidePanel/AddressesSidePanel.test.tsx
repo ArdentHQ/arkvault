@@ -30,7 +30,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -48,7 +48,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -68,7 +68,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -88,7 +88,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -98,27 +98,7 @@ describe("AddressesSidePanel", () => {
 		expect(onClose).toHaveBeenCalledWith(wallets.values().map((w) => w.address()));
 	});
 
-	it("should deselect displayed addresses if all already selected when `select all` clicked", async () => {
-		const onClose = vi.fn();
-
-		render(
-			<AddressesSidePanel
-				wallets={wallets.values()}
-				defaultSelectedAddresses={wallets.values().map((w) => w.address())}
-				open={true}
-				onClose={onClose}
-				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
-			/>,
-		);
-
-		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
-		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
-
-		expect(onClose).toHaveBeenCalledWith([]);
-	});
-
-	it("should show delete buttons when `manage` clicked", async () => {
+	it("should switch to delete mode when `manage` clicked", async () => {
 		render(
 			<AddressesSidePanel
 				wallets={wallets.values()}
@@ -126,14 +106,13 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getByTestId("ManageAddresses"));
 
-		expect(screen.getByTestId("CancelDelete")).toBeInTheDocument();
-		expect(screen.getByTestId("ConfirmDelete")).toBeInTheDocument();
+		expect(screen.getByTestId("BackManage")).toBeInTheDocument();
 	});
 
 	it("should disable `select all` when delete mode enabled", async () => {
@@ -144,7 +123,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -153,7 +132,7 @@ describe("AddressesSidePanel", () => {
 		expect(screen.getByTestId("SelectAllAddresses_Checkbox")).toBeDisabled();
 	});
 
-	it("should delete an address when `done` clicked", async () => {
+	it("should mark an address for deletion", async () => {
 		const onDelete = vi.fn();
 		const onClose = vi.fn();
 
@@ -177,11 +156,13 @@ describe("AddressesSidePanel", () => {
 		// confirm address deletion
 		await userEvent.click(screen.getByTestId("ConfirmDelete"));
 
-		expect(onDelete).toHaveBeenCalledWith([wallets.first().address()]);
+		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
 
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
+
 		expect(onClose).toHaveBeenCalledWith([wallets.first().address(), wallets.last().address()]);
-		// // should reset back to select mode
+
+		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
 	});
 
@@ -195,7 +176,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={onDelete}
+				onDelete={onDelete}
 			/>,
 		);
 
@@ -221,7 +202,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -238,7 +219,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -257,7 +238,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -276,7 +257,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -297,7 +278,7 @@ describe("AddressesSidePanel", () => {
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
