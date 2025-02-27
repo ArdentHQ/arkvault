@@ -35,7 +35,7 @@ const useWalletAlias = (): HookResult => {
 						address,
 						alias: env.knownWallets().name(network.id(), address),
 						isContact: false,
-					}
+					};
 				}
 
 				const useNetworkWalletNames = profile.appearance().get("useNetworkWalletNames");
