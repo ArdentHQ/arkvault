@@ -45,9 +45,9 @@ export const useTransactionRecipients = ({
 					network,
 				});
 
-				// @TODO: Adjust hardcoded 10000 value after testing.
+				// As this is to ensure the username is fetched, cache wallet data (including username)
+				// to avoid multiple unecessary network requests (e.g transactions table or transaction detail overview modal).
 				await wallet.synchroniser().identity({ ttl: 10_000 });
-				await wallet.synchroniser().coin();
 
 				return {
 					wallet,
