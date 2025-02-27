@@ -887,7 +887,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                 value="Opt"
               />
               <span
-                class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -1072,7 +1072,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                 value="Opt"
               />
               <span
-                class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -1320,7 +1320,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
                 value="Option 3"
               />
               <span
-                class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -1805,7 +1805,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                 value="Opt"
               />
               <span
-                class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -1989,7 +1989,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                 value="Opt"
               />
               <span
-                class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -2237,7 +2237,7 @@ exports[`SelectDropdown > should render option group with initial default value 
                 value="Item 1"
               />
               <span
-                class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                 data-testid="Input__suggestion"
               >
                 <span

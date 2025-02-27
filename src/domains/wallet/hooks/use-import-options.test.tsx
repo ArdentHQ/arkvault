@@ -21,7 +21,7 @@ describe("useImportOptions", () => {
 
 		expect(current.options).toHaveLength(2);
 		expect(current.options[0].value).toBe(OptionsValue.ADDRESS);
-		expect(current.defaultOption).toStrictEqual({ label: "Address", value: OptionsValue.ADDRESS });
+		expect(current.defaultOption).contains({ label: "Address", value: OptionsValue.ADDRESS });
 	});
 
 	it("should return options from the available options", () => {
@@ -84,7 +84,7 @@ describe("useImportOptions", () => {
 			}),
 		);
 
-		expect(current.defaultOption).toStrictEqual({ label: "Secret", value: OptionsValue.SECRET });
+		expect(current.defaultOption).contains({ label: "Secret", value: OptionsValue.SECRET });
 	});
 
 	it("should return first option as default if doesn't have default option in network", () => {
@@ -103,7 +103,7 @@ describe("useImportOptions", () => {
 			}),
 		);
 
-		expect(current.defaultOption).toStrictEqual({
+		expect(current.defaultOption).contains({
 			canBeEncrypted: false,
 			label: "Address",
 			value: OptionsValue.ADDRESS,

@@ -964,7 +964,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                       value="10"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                      class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -2004,7 +2004,7 @@ exports[`WalletsList > should render 1`] = `
                       value="10"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                      class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -3023,7 +3023,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                       value="10"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                      class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -3578,7 +3578,7 @@ exports[`WalletsList > should render responsive 1`] = `
                       value="10"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                      class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                       data-testid="Input__suggestion"
                     >
                       <span

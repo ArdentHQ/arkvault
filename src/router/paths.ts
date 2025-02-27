@@ -5,9 +5,6 @@ export enum ProfilePaths {
 	Exchange = "/profiles/:profileId/exchange",
 	// Contacts
 	Contacts = "/profiles/:profileId/contacts",
-	// Wallet
-	ImportWallet = "/profiles/:profileId/wallets/import",
-	ImportWalletLedger = "/profiles/:profileId/wallets/import/ledger",
 	// Messages
 	SignMessage = "/profiles/:profileId/sign-message",
 	SignMessageWallet = "/profiles/:profileId/wallets/:walletId/sign-message",
