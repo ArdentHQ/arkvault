@@ -417,10 +417,9 @@ export const useProfileSynchronizer = ({
 				if (onlyHasOneNetwork) {
 					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());
 
-
 					await Promise.all([coin.__construct(), profile.sync({ networkId: activeNetworkId, ttl: 14_000 })]);
 				} else {
-					await profile.sync({ networkId: activeNetworkId, ttl: 14_000 })
+					await profile.sync({ networkId: activeNetworkId, ttl: 14_000 });
 				}
 
 				await persist();
