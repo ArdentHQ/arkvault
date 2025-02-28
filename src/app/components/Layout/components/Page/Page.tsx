@@ -54,7 +54,9 @@ export const Page: FC<PageProperties> = ({
 		<PageWrapper showMobileNavigation={showMobileNavigation} hasFixedFormButtons={hasFixedFormButtons}>
 			<NavigationBar variant={navbarVariant} title={title} isBackDisabled={isBackDisabled} />
 
-			<div className={cn("flex flex-1 flex-col", wrapperClassName)}>{sidebar ? renderWithSidebar() : children}</div>
+			<div className={cn("flex flex-1 flex-col", wrapperClassName)}>
+				{sidebar ? renderWithSidebar() : children}
+			</div>
 		</PageWrapper>
 	);
 };
