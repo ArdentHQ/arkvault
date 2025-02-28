@@ -232,4 +232,56 @@ describe("useWalletAlias", () => {
 			isContact: true,
 		});
 	});
+
+	it("should prioritize walletUsername over localName, onChainUsername and contactName when useNetworkWalletNames is true", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
+		const contact = profile
+			.contacts()
+			.create("contactName", [{ address: wallet.address(), coin: "ARK", network: "ark.devnet" }]);
+		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue("walletUsername");
+		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue("localName");
+		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockReturnValue("onChainUsername");
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+		expect(
+			result.current.getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toStrictEqual({
+			address: wallet.address(),
+			alias: "walletUsername",
+			isContact: false,
+		});
+		profile.contacts().forget(contact.id());
+		usernameSpy.mockRestore();
+		displayNameSpy.mockRestore();
+		usernamesSpy.mockRestore();
+	});
+
+	it("should prioritize localName over contactName, walletUsername and onChainUsername when useNetworkWalletNames is false", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
+		const contact = profile
+			.contacts()
+			.create("contactName", [{ address: wallet.address(), coin: "ARK", network: "ark.devnet" }]);
+		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue("walletUsername");
+		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue("localName");
+		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockReturnValue("onChainUsername");
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+		expect(
+			result.current.getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toStrictEqual({
+			address: wallet.address(),
+			alias: "localName",
+			isContact: false,
+		});
+		profile.contacts().forget(contact.id());
+		usernameSpy.mockRestore();
+		displayNameSpy.mockRestore();
+		usernamesSpy.mockRestore();
+	});
 });
