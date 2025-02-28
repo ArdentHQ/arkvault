@@ -5,6 +5,10 @@ import { useWalletAlias } from "./use-wallet-alias";
 import { EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, getDefaultWalletId } from "@/utils/testing-library";
 
+const UNKNOWN_ADDRESS = "unknown-address";
+const ONCHAIN_USERNAME = "onchain_username";
+const WALLET_NAME = "ARK Wallet 1";
+
 describe("useWalletAlias", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -56,7 +60,7 @@ describe("useWalletAlias", () => {
 	it("should return displayName when useNetworkWalletNames is false", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue(undefined);
-		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue("ARK Wallet 1");
+		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue(WALLET_NAME);
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
 			result.current.getWalletAlias({
@@ -66,7 +70,7 @@ describe("useWalletAlias", () => {
 			}),
 		).toStrictEqual({
 			address: wallet.address(),
-			alias: "ARK Wallet 1",
+			alias: WALLET_NAME,
 			isContact: false,
 		});
 		usernameSpy.mockRestore();
@@ -80,7 +84,7 @@ describe("useWalletAlias", () => {
 			.create("testing contact", [{ address: wallet.address(), coin: "ARK", network: "ark.devnet" }]);
 		const contactAddress = contact.addresses().findByAddress(wallet.address())[0];
 		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue(undefined);
-		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue("ARK Wallet 1");
+		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue(WALLET_NAME);
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
 			result.current.getWalletAlias({
@@ -90,7 +94,7 @@ describe("useWalletAlias", () => {
 			}),
 		).toStrictEqual({
 			address: contactAddress.address(),
-			alias: "ARK Wallet 1",
+			alias: WALLET_NAME,
 			isContact: false,
 		});
 		profile.contacts().forget(contact.id());
@@ -102,21 +106,21 @@ describe("useWalletAlias", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
 		const testNetwork = wallet.network();
 		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockImplementation((networkId, address) => {
-			if (address === "unknown-address") {
-				return "onchain_username";
+			if (address === UNKNOWN_ADDRESS) {
+				return ONCHAIN_USERNAME;
 			}
-			return undefined;
 		});
+
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
 			result.current.getWalletAlias({
-				address: "unknown-address",
+				address: UNKNOWN_ADDRESS,
 				network: testNetwork,
 				profile,
 			}),
 		).toStrictEqual({
-			address: "unknown-address",
-			alias: "onchain_username",
+			address: UNKNOWN_ADDRESS,
+			alias: ONCHAIN_USERNAME,
 			isContact: false,
 		});
 		usernamesSpy.mockRestore();
@@ -126,21 +130,20 @@ describe("useWalletAlias", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const testNetwork = wallet.network();
 		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockImplementation((networkId, address) => {
-			if (address === "unknown-address") {
-				return "onchain_username";
+			if (address === UNKNOWN_ADDRESS) {
+				return ONCHAIN_USERNAME;
 			}
-			return undefined;
 		});
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
 			result.current.getWalletAlias({
-				address: "unknown-address",
+				address: UNKNOWN_ADDRESS,
 				network: testNetwork,
 				profile,
 			}),
 		).toStrictEqual({
-			address: "unknown-address",
-			alias: "onchain_username",
+			address: UNKNOWN_ADDRESS,
+			alias: ONCHAIN_USERNAME,
 			isContact: false,
 		});
 		usernamesSpy.mockRestore();
@@ -156,9 +159,8 @@ describe("useWalletAlias", () => {
 		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue(undefined);
 		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockImplementation((networkId, address) => {
 			if (address === wallet.address()) {
-				return "onchain_username";
+				return ONCHAIN_USERNAME;
 			}
-			return undefined;
 		});
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
@@ -169,7 +171,7 @@ describe("useWalletAlias", () => {
 			}),
 		).toStrictEqual({
 			address: wallet.address(),
-			alias: "onchain_username",
+			alias: ONCHAIN_USERNAME,
 			isContact: false,
 		});
 		usernameSpy.mockRestore();
@@ -198,7 +200,7 @@ describe("useWalletAlias", () => {
 	it("should return displayName when useNetworkWalletNames is true but wallet has no username", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
 		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue(undefined);
-		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue("ARK Wallet 1");
+		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue(WALLET_NAME);
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
 			result.current.getWalletAlias({
@@ -208,7 +210,7 @@ describe("useWalletAlias", () => {
 			}),
 		).toStrictEqual({
 			address: wallet.address(),
-			alias: "ARK Wallet 1",
+			alias: WALLET_NAME,
 			isContact: false,
 		});
 		usernameSpy.mockRestore();
