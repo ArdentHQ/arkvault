@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Icon } from "@/app/components//Icon";
+import { Icon, ThemeIcon } from "@/app/components//Icon";
 import { ControlButton } from "@/app/components/ControlButton";
 import { Dropdown } from "@/app/components/Dropdown";
 import { PageHeader } from "@/app/components/Header";
@@ -111,6 +111,7 @@ export const VotesHeader = ({
 			subtitle={isSelectDelegateStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
 			extra={headerExtra()}
 			border
+			titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" />}
 		/>
 	);
 };
