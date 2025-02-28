@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
-import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { assertWallet } from "@/utils/assertions";
 import { Address } from "@/app/components/Address";
@@ -26,20 +25,6 @@ export const SuccessStep = ({
 
 	return (
 		<section data-testid="ImportWallet__success-step">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
-				titleIcon={
-					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[24, 24]}
-						name="Completed"
-						data-testid="icon-Completed"
-					/>
-				}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE")}
-				className="hidden sm:block"
-			/>
-
 			<div className="mt-4 space-y-4">
 				<DetailWrapper label={t("COMMON.IMPORTED")}>
 					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">

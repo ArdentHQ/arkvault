@@ -22,6 +22,7 @@ describe("MobileAddressRow", () => {
 	it("should render", () => {
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -36,6 +37,7 @@ describe("MobileAddressRow", () => {
 	it("should render in delete mode", () => {
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={true}
@@ -48,10 +50,11 @@ describe("MobileAddressRow", () => {
 		expect(screen.queryByTestId("AddressRow--checkbox")).not.toBeInTheDocument();
 	});
 
-	it("should trigger `onDelete` when deleted", async () => {
+	it("should trigger `onDelete` when delete button clicked", async () => {
 		const onDelete = vi.fn();
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
 				usesDeleteMode={true}
@@ -67,6 +70,7 @@ describe("MobileAddressRow", () => {
 	it("should be checked", () => {
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -83,6 +87,7 @@ describe("MobileAddressRow", () => {
 
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -100,6 +105,7 @@ describe("MobileAddressRow", () => {
 
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -110,5 +116,23 @@ describe("MobileAddressRow", () => {
 
 		await userEvent.click(screen.getByTestId("MobileAddressRowHeader"));
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
+	});
+
+	it("should should render deleteContent", () => {
+		const onDelete = vi.fn();
+		render(
+			<MobileAddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={onDelete}
+				usesDeleteMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				deleteContent={<div>Delete content</div>}
+			/>,
+		);
+
+		expect(screen.getByText("Delete content")).toBeInTheDocument();
+		expect(screen.getByTestId("icon-MarkedTrash")).toBeInTheDocument();
 	});
 });

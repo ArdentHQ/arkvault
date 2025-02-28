@@ -20,7 +20,6 @@ import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
-import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 
 export const PortfolioHeader = ({
@@ -30,6 +29,8 @@ export const PortfolioHeader = ({
 	isUpdatingTransactions,
 	handleVotesButtonClick,
 	onUpdate,
+	onCreateAddress,
+	onImportAddress,
 }: {
 	profile: Contracts.IProfile;
 	votes: Contracts.VoteRegistryItem[];
@@ -37,9 +38,10 @@ export const PortfolioHeader = ({
 	isUpdatingTransactions: boolean;
 	handleVotesButtonClick: (address?: string) => void;
 	onUpdate?: (status: boolean) => void;
+	onCreateAddress?: (open: boolean) => void;
+	onImportAddress?: (open: boolean) => void;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
-	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 
 	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets, allWallets, removeSelectedAddresses } =
 		usePortfolio({ profile });
@@ -49,21 +51,17 @@ export const PortfolioHeader = ({
 
 	const isRestored = wallet.hasBeenFullyRestored();
 	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
-	const { activeModal, setActiveModal, handleImport, handleSelectOption, handleSend } = useWalletActions(
-		...selectedWallets,
-	);
+	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions(...selectedWallets);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 
 	const { persist } = useEnvironmentContext();
 
-	const onDeleteAddresses = async (addresses: string[]) => {
-		setSelectedAddresses(selectedAddresses.filter((existingAddress) => addresses.includes(existingAddress)));
-
+	const onDeleteAddress = async (address: string) => {
 		for (const wallet of profile.wallets().values()) {
-			if (addresses.includes(wallet.address())) {
+			if (address === wallet.address()) {
 				profile.wallets().forget(wallet.id());
-				removeSelectedAddresses([wallet.address()], wallet.network());
+				await removeSelectedAddresses([wallet.address()], wallet.network());
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
 			}
 		}
@@ -101,7 +99,7 @@ export const PortfolioHeader = ({
 						<Button
 							variant="secondary"
 							className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
-							onClick={handleImport}
+							onClick={() => onImportAddress?.(true)}
 						>
 							<Icon name="ArrowTurnDownBracket" size="md" />
 							<p className="hidden text-base font-semibold leading-5 sm:block">{t("COMMON.IMPORT")}</p>
@@ -110,7 +108,7 @@ export const PortfolioHeader = ({
 						<Button
 							variant="secondary"
 							className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
-							onClick={() => setShowCreateAddressPanel(true)}
+							onClick={() => onCreateAddress?.(true)}
 						>
 							<Icon name="Plus" size="md" />
 							<p className="hidden text-base font-semibold leading-5 sm:block">{t("COMMON.CREATE")}</p>
@@ -165,7 +163,7 @@ export const PortfolioHeader = ({
 										<div className="flex items-center gap-2">
 											<Copy
 												copyData={wallet.address()}
-												tooltip={t("COMMON.COPY_ID")}
+												tooltip={t("COMMON.COPY_ADDRESS")}
 												icon={(isCopied) =>
 													isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />
 												}
@@ -316,6 +314,7 @@ export const PortfolioHeader = ({
 			</div>
 
 			<AddressesSidePanel
+				profile={profile}
 				wallets={allWallets}
 				defaultSelectedAddresses={selectedAddresses}
 				onClose={(addresses) => {
@@ -323,12 +322,10 @@ export const PortfolioHeader = ({
 				}}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
-				onDelete={(addresses) => {
-					void onDeleteAddresses(addresses);
+				onDelete={(address) => {
+					void onDeleteAddress(address);
 				}}
 			/>
-
-			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 
 			<WalletActionsModals
 				wallets={selectedWallets}

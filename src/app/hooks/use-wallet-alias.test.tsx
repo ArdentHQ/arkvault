@@ -12,8 +12,12 @@ describe("useWalletAlias", () => {
 
 	const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		await env.profiles().restore(profile);
+		await env.knownWallets().syncAll(profile);
+
 		wallet = profile.wallets().findById(getDefaultWalletId());
 	});
 
@@ -23,6 +27,22 @@ describe("useWalletAlias", () => {
 		expect(result.current.getWalletAlias({ address: "wrong-address", profile })).toStrictEqual({
 			address: "wrong-address",
 			alias: undefined,
+			isContact: false,
+		});
+	});
+
+	it("should return known wallet name", () => {
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		expect(
+			result.current.getWalletAlias({
+				address: "known-wallet-address",
+				network: wallet.network(),
+				profile,
+			}),
+		).toStrictEqual({
+			address: "known-wallet-address",
+			alias: "test known wallet",
 			isContact: false,
 		});
 	});

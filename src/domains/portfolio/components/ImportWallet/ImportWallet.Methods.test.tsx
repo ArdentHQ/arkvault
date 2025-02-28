@@ -5,7 +5,6 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { ImportWallet } from "./ImportWallet";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
 	env,
@@ -16,6 +15,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
+import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -24,7 +24,7 @@ const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
 const randomPublicKey = "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192";
 const randomPublicKeyInvalid = "a34151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192";
 
-const route = `/profiles/${fixtureProfileId}/wallets/import`;
+const route = `/profiles/${fixtureProfileId}/dashboard`;
 
 const enableEncryptionToggle = async () => await userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
@@ -33,13 +33,14 @@ const addressInput = () => screen.findByTestId("ImportWallet__address-input");
 const finishButton = () => screen.getByTestId("ImportWallet__finish-button");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
+const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
 const publicKeyInput = () => screen.getByTestId("ImportWallet__publicKey-input");
 
 const secretInputID = "ImportWallet__secret-input";
 const password = "S3cUrePa$sword";
 const testNetwork = "ark.devnet";
 
-describe("ImportWallet Methods", () => {
+describe("ImportAddress Methods", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeEach(async () => {
@@ -67,8 +68,8 @@ describe("ImportWallet Methods", () => {
 
 	it("should import by address", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -77,11 +78,11 @@ describe("ImportWallet Methods", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		await expect(addressInput()).resolves.toBeVisible();
 
@@ -104,8 +105,8 @@ describe("ImportWallet Methods", () => {
 
 	it("should import by public key", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -116,11 +117,11 @@ describe("ImportWallet Methods", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
 		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
@@ -143,8 +144,8 @@ describe("ImportWallet Methods", () => {
 
 	it("should validate public key doesnt exist", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -155,11 +156,11 @@ describe("ImportWallet Methods", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
 		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
@@ -175,8 +176,8 @@ describe("ImportWallet Methods", () => {
 
 	it("should not allow importing from an invalid public key", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -187,11 +188,11 @@ describe("ImportWallet Methods", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
 		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
@@ -203,8 +204,8 @@ describe("ImportWallet Methods", () => {
 
 	it("should import by secret", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -217,11 +218,11 @@ describe("ImportWallet Methods", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.SECRET));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
@@ -242,8 +243,8 @@ describe("ImportWallet Methods", () => {
 
 	it("should import by secret with encryption", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -254,11 +255,11 @@ describe("ImportWallet Methods", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.SECRET));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
@@ -307,8 +308,8 @@ describe("ImportWallet Methods", () => {
 
 	it("should import by secret with second signature and use password to encrypt both", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -317,13 +318,13 @@ describe("ImportWallet Methods", () => {
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		expect(methodStep()).toBeInTheDocument();
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
-		expect(methodStep()).toBeInTheDocument();
+		expect(detailStep()).toBeInTheDocument();
 
 		const passphraseInput = screen.getByTestId(secretInputID);
 
@@ -367,8 +368,8 @@ describe("ImportWallet Methods", () => {
 
 	it("forgets the imported wallet if back from encrypted password step", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -377,13 +378,13 @@ describe("ImportWallet Methods", () => {
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		expect(methodStep()).toBeInTheDocument();
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
-		expect(methodStep()).toBeInTheDocument();
+		expect(detailStep()).toBeInTheDocument();
 
 		const passphraseInput = screen.getByTestId(secretInputID);
 

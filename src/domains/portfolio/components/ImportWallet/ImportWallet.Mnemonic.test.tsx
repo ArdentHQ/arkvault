@@ -5,7 +5,6 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { ImportWallet } from "./ImportWallet";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
@@ -18,6 +17,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
+import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -26,7 +26,7 @@ const identityAddress = "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P";
 const mnemonic = "buddy year cost vendor honey tonight viable nut female alarm duck symptom";
 const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
 
-const route = `/profiles/${fixtureProfileId}/wallets/import`;
+const route = `/profiles/${fixtureProfileId}/dashboard`;
 
 const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
@@ -35,12 +35,13 @@ const addressInput = () => screen.findByTestId("ImportWallet__address-input");
 const finishButton = () => screen.getByTestId("ImportWallet__finish-button");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
+const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
 
 const errorText = "data-errortext";
 const password = "S3cUrePa$sword";
 const testNetwork = "ark.devnet";
 
-describe("ImportWallet", () => {
+describe("ImportAddress", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeEach(async () => {
@@ -68,15 +69,21 @@ describe("ImportWallet", () => {
 
 	it("should import by mnemonic", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
 			},
 		);
 
-		await waitFor(() => expect(() => mnemonicInput()).not.toThrow());
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
@@ -113,17 +120,21 @@ describe("ImportWallet", () => {
 
 	it("should import by mnemonic and use encryption password", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
 			},
 		);
 
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
-
 		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
@@ -158,17 +169,21 @@ describe("ImportWallet", () => {
 
 	it("should disable the encryption option when selecting a methods without encryption", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
 			},
 		);
 
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
-
 		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
@@ -182,7 +197,10 @@ describe("ImportWallet", () => {
 		enableEncryptionToggle();
 
 		await waitFor(() => expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeChecked());
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await userEvent.click(screen.getByText(commonTranslations.BACK));
+
+		expect(methodStep()).toBeInTheDocument();
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
@@ -195,17 +213,21 @@ describe("ImportWallet", () => {
 
 	it("should import by mnemonic with second signature and use password to encrypt both", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
 			},
 		);
 
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
-
 		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
@@ -248,8 +270,8 @@ describe("ImportWallet", () => {
 		}
 
 		render(
-			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				route: route,
@@ -257,7 +279,13 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+
+		expect(detailStep()).toBeInTheDocument();
 
 		await userEvent.clear(mnemonicInput());
 		await userEvent.type(mnemonicInput(), MNEMONICS[0]);

@@ -15,7 +15,13 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
-export const Dashboard = () => {
+export const Dashboard = ({
+	onCreateAddress,
+	onImportAddress,
+}: {
+	onCreateAddress?: (open: boolean) => void;
+	onImportAddress?: (open: boolean) => void;
+}) => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData>();
 
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
@@ -103,6 +109,8 @@ export const Dashboard = () => {
 							isLoadingVotes={isLoadingVotes}
 							isUpdatingTransactions={isUpdatingTransactions}
 							onUpdate={setIsUpdatingWallet}
+							onCreateAddress={onCreateAddress}
+							onImportAddress={onImportAddress}
 						/>
 					)}
 				</Section>
