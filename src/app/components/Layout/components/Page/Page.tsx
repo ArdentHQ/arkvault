@@ -32,6 +32,7 @@ export const Page: FC<PageProperties> = ({
 	isBackDisabled,
 	sidebar,
 	children,
+	wrapperClassName,
 }) => {
 	useDocumentTitle(pageTitle);
 
@@ -53,7 +54,7 @@ export const Page: FC<PageProperties> = ({
 		<PageWrapper showMobileNavigation={showMobileNavigation} hasFixedFormButtons={hasFixedFormButtons}>
 			<NavigationBar variant={navbarVariant} title={title} isBackDisabled={isBackDisabled} />
 
-			<div className="flex flex-1 flex-col">{sidebar ? renderWithSidebar() : children}</div>
+			<div className={cn("flex flex-1 flex-col", wrapperClassName)}>{sidebar ? renderWithSidebar() : children}</div>
 		</PageWrapper>
 	);
 };
