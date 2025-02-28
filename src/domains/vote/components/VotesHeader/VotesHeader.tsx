@@ -17,9 +17,7 @@ interface VotesHeaderProperties {
 	profile: Contracts.IProfile;
 	setSearchQuery: (query: string) => void;
 	selectedAddress?: string;
-	isFilterChanged: boolean;
 	isSelectDelegateStep: boolean;
-	filterProperties: any;
 	totalCurrentVotes: number;
 	selectedFilter?: FilterOption;
 	setSelectedFilter?: (selected: FilterOption) => void;
@@ -29,8 +27,6 @@ export const VotesHeader = ({
 	profile,
 	setSearchQuery,
 	selectedAddress,
-	isFilterChanged,
-	filterProperties,
 	totalCurrentVotes,
 	selectedFilter,
 	setSelectedFilter,
@@ -60,37 +56,17 @@ export const VotesHeader = ({
 						noToggleBorder
 					/>
 
-					<span className="mx-0.5 flex md:mx-3.5">
-						<Divider type="vertical" size="md" />
-					</span>
-
 					{selectedAddress && (
-						<VotesFilter
-							totalCurrentVotes={totalCurrentVotes}
-							selectedOption={selectedFilter}
-							onChange={setSelectedFilter}
-						/>
-					)}
-
-					{!selectedAddress && (
-						<div data-testid="Votes__FilterWallets">
-							<Dropdown
-								placement="bottom-end"
-								toggleContent={
-									<ControlButton
-										className={cn({ "-mr-2.5 px-2.5": !isMdAndAbove })}
-										isChanged={isFilterChanged}
-										noBorder
-									>
-										<Icon name="Funnel" size="lg" />
-									</ControlButton>
-								}
-							>
-								<div className="w-full px-8 py-5 sm:w-96 md:w-128">
-									<FilterWallets {...filterProperties} />
-								</div>
-							</Dropdown>
-						</div>
+						<>
+							<span className="mx-0.5 flex md:mx-3.5">
+								<Divider type="vertical" size="md" />
+							</span>
+							<VotesFilter
+								totalCurrentVotes={totalCurrentVotes}
+								selectedOption={selectedFilter}
+								onChange={setSelectedFilter}
+							/>
+						</>
 					)}
 				</div>
 			);
@@ -110,7 +86,6 @@ export const VotesHeader = ({
 			title={headerTitle}
 			subtitle={isSelectDelegateStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
 			extra={headerExtra()}
-			border
 			titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" />}
 		/>
 	);
