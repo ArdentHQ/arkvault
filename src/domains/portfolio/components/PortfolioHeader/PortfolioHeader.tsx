@@ -314,6 +314,7 @@ export const PortfolioHeader = ({
 			</div>
 
 			<AddressesSidePanel
+				profile={profile}
 				wallets={allWallets}
 				defaultSelectedAddresses={selectedAddresses}
 				onClose={(addresses) => {

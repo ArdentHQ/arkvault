@@ -22,6 +22,7 @@ describe("MobileAddressRow", () => {
 	it("should render", () => {
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -36,6 +37,7 @@ describe("MobileAddressRow", () => {
 	it("should render in delete mode", () => {
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={true}
@@ -52,6 +54,7 @@ describe("MobileAddressRow", () => {
 		const onDelete = vi.fn();
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
 				usesDeleteMode={true}
@@ -67,6 +70,7 @@ describe("MobileAddressRow", () => {
 	it("should be checked", () => {
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -83,6 +87,7 @@ describe("MobileAddressRow", () => {
 
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -100,6 +105,7 @@ describe("MobileAddressRow", () => {
 
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -116,6 +122,7 @@ describe("MobileAddressRow", () => {
 		const onDelete = vi.fn();
 		render(
 			<MobileAddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
 				usesDeleteMode={true}
@@ -126,6 +133,6 @@ describe("MobileAddressRow", () => {
 		);
 
 		expect(screen.getByText("Delete content")).toBeInTheDocument();
-		expect(screen.getByTestId("icon-MarkedTrashLight")).toBeInTheDocument();
+		expect(screen.getByTestId("icon-MarkedTrash")).toBeInTheDocument();
 	});
 });
