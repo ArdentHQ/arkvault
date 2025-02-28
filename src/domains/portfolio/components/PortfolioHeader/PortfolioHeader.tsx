@@ -217,7 +217,7 @@ export const PortfolioHeader = ({
 										<div className="flex items-center gap-2">
 											<Copy
 												copyData={wallet.address()}
-												tooltip={t("COMMON.COPY_ID")}
+												tooltip={t("COMMON.COPY_ADDRESS")}
 												icon={(isCopied) =>
 													isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />
 												}
