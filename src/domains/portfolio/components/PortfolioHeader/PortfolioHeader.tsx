@@ -95,9 +95,7 @@ export const PortfolioHeader = ({
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
-				<div
-					className="flex w-full flex-row items-center justify-between px-4"
-				>
+				<div className="flex w-full flex-row items-center justify-between px-4">
 					<Tooltip
 						visible={showHint}
 						interactive={true}
@@ -113,7 +111,7 @@ export const PortfolioHeader = ({
 									size="xs"
 									variant="transparent"
 									data-testid="HideManageHint"
-									className="w-full h-8 bg-theme-primary-500 px-4 py-1.5 sm:w-auto"
+									className="h-8 w-full bg-theme-primary-500 px-4 py-1.5 sm:w-auto"
 									onClick={(e) => {
 										e.stopPropagation();
 
@@ -127,11 +125,13 @@ export const PortfolioHeader = ({
 						}
 						placement="bottom-end"
 					>
-						<div className={cn("flex h-fit flex-row items-center gap-1 ", {
-							"rounded ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-theme-primary-100 dark:sm:ring-offset-transparent":
-							showHint,
-						})}>
-							<p className="rounded-l hidden text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50 sm:block">
+						<div
+							className={cn("flex h-fit flex-row items-center gap-1", {
+								"rounded ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-theme-primary-100 dark:sm:ring-offset-transparent":
+									showHint,
+							})}
+						>
+							<p className="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50 sm:block">
 								{t("COMMON.VIEWING")}:
 							</p>
 							<div

@@ -80,7 +80,8 @@ export const translations = {
 		TITLE: "Wallet Update {{version}}",
 	},
 
-	MULTIPLE_ADDRESSES_HINT: "Your wallet has been automatically added to <br/> the overview.  You can select it here to make changes.",
+	MULTIPLE_ADDRESSES_HINT:
+		"Your wallet has been automatically added to <br/> the overview.  You can select it here to make changes.",
 
 	PAGE_CREATE_WALLET: {
 		NETWORK_STEP: {
