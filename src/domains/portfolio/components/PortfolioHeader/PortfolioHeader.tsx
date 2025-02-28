@@ -35,7 +35,7 @@ export const PortfolioHeader = ({
 	onUpdate,
 	onCreateAddress,
 	onImportAddress,
-	hasFocus
+	hasFocus,
 }: {
 	profile: Contracts.IProfile;
 	votes: Contracts.VoteRegistryItem[];
@@ -72,7 +72,7 @@ export const PortfolioHeader = ({
 		if (hasFocus && hintHasShown === undefined && selectedWallets.length > 1) {
 			id = setTimeout(() => {
 				setShowHint(true);
-			}, 1000)
+			}, 1000);
 		}
 
 		return () => {
