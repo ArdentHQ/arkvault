@@ -64,7 +64,7 @@ export const PortfolioHeader = ({
 	const { persist } = useEnvironmentContext();
 
 	const [showHint, setShowHint] = useState<boolean>(false);
-	const [hintHasShown, persistHintShown] = useLocalStorage("multiple-addresses-hint", undefined);
+	const [hintHasShown, persistHintShown] = useLocalStorage<boolean|undefined>("multiple-addresses-hint", undefined);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
@@ -114,7 +114,6 @@ export const PortfolioHeader = ({
 									className="h-8 w-full bg-theme-primary-500 px-4 py-1.5 sm:w-auto"
 									onClick={(e) => {
 										e.stopPropagation();
-
 										persistHintShown(true);
 										setShowHint(false);
 									}}
