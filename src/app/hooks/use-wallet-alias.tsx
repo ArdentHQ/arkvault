@@ -8,7 +8,6 @@ interface Properties {
 	address: string;
 	network?: Networks.Network;
 	profile?: Contracts.IProfile;
-	username?: string;
 }
 
 interface WalletAliasResult {
@@ -60,6 +59,7 @@ const useWalletAlias = (): HookResult => {
 				const username = wallet ? wallet.username() : undefined;
 
 				const contact = profile.contacts().findByAddress(address)[0];
+
 				const contactName = contact ? contact.name() : undefined;
 
 				const alias = useNetworkWalletNames
