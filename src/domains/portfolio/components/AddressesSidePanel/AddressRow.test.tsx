@@ -22,6 +22,7 @@ describe("AddressRow", () => {
 	it("should render", () => {
 		render(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -36,6 +37,7 @@ describe("AddressRow", () => {
 	it("should render mobile row for `xs` screen", () => {
 		renderResponsive(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -51,6 +53,7 @@ describe("AddressRow", () => {
 	it("should render in delete mode", () => {
 		render(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={true}
@@ -67,6 +70,7 @@ describe("AddressRow", () => {
 		const onDelete = vi.fn();
 		render(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
 				usesDeleteMode={true}
@@ -82,6 +86,7 @@ describe("AddressRow", () => {
 	it("should be checked", () => {
 		render(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -98,6 +103,7 @@ describe("AddressRow", () => {
 
 		render(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -115,6 +121,7 @@ describe("AddressRow", () => {
 
 		render(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -132,6 +139,7 @@ describe("AddressRow", () => {
 
 		render(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
 				usesDeleteMode={false}
@@ -148,6 +156,7 @@ describe("AddressRow", () => {
 		const onDelete = vi.fn();
 		render(
 			<AddressRow
+				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
 				usesDeleteMode={true}
@@ -158,6 +167,6 @@ describe("AddressRow", () => {
 		);
 
 		expect(screen.getByText("Delete content")).toBeInTheDocument();
-		expect(screen.getByTestId("icon-MarkedTrashLight")).toBeInTheDocument();
+		expect(screen.getByTestId("icon-MarkedTrash")).toBeInTheDocument();
 	});
 });
