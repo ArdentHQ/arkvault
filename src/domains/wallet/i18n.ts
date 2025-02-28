@@ -80,6 +80,8 @@ export const translations = {
 		TITLE: "Wallet Update {{version}}",
 	},
 
+	MULTIPLE_ADDRESSES_HINT: "Your wallet has been automatically added to <br/> the overview.  You can select it here to make changes.",
+
 	PAGE_CREATE_WALLET: {
 		NETWORK_STEP: {
 			GENERATION_ERROR:
@@ -278,6 +280,5 @@ export const translations = {
 	VALIDATION: {
 		ALIAS_ASSIGNED: "The name '{{alias}}' is already assigned to another wallet",
 	},
-
 	WALLET_NAME: "Wallet Name",
 };
