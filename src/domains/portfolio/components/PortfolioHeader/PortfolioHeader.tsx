@@ -64,7 +64,7 @@ export const PortfolioHeader = ({
 	const { persist } = useEnvironmentContext();
 
 	const [showHint, setShowHint] = useState<boolean>(false);
-	const [hintHasShown, persistHintShown] = useLocalStorage<boolean|undefined>("multiple-addresses-hint", undefined);
+	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("multiple-addresses-hint", undefined);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
@@ -99,11 +99,8 @@ export const PortfolioHeader = ({
 					<Tooltip
 						visible={showHint}
 						interactive={true}
-						/* istanbul ignore next -- @preserve */
-						// maxWidth={isXs ? 264 : "none"}
-						maxWidth={"none"}
 						content={
-							<div className="flex items-center px-[3px] pb-1.5 text-sm leading-5 sm:space-x-4 sm:pb-px sm:pt-px">
+							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pb-px sm:pt-px">
 								<div className="mb-2 block sm:mb-0 sm:inline">
 									<Trans i18nKey="WALLETS.MULTIPLE_ADDRESSES_HINT" />
 								</div>
@@ -126,7 +123,7 @@ export const PortfolioHeader = ({
 					>
 						<div
 							className={cn("flex h-fit flex-row items-center gap-1", {
-								"rounded ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-theme-primary-100 dark:sm:ring-offset-transparent":
+								"rounded ring ring-theme-primary-400 ring-offset-4 ring-offset-transparent dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 dark:sm:ring-offset-transparent":
 									showHint,
 							})}
 						>
