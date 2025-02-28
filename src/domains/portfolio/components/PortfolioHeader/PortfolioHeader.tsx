@@ -35,6 +35,7 @@ export const PortfolioHeader = ({
 	onUpdate,
 	onCreateAddress,
 	onImportAddress,
+	hasFocus
 }: {
 	profile: Contracts.IProfile;
 	votes: Contracts.VoteRegistryItem[];
@@ -44,6 +45,7 @@ export const PortfolioHeader = ({
 	onUpdate?: (status: boolean) => void;
 	onCreateAddress?: (open: boolean) => void;
 	onImportAddress?: (open: boolean) => void;
+	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
@@ -65,10 +67,18 @@ export const PortfolioHeader = ({
 	const [hintHasShown, persistHintShown] = useLocalStorage("multiple-addresses-hint", undefined);
 
 	useEffect(() => {
-		if (hintHasShown === undefined && selectedWallets.length > 1) {
-			setShowHint(true);
+		let id: NodeJS.Timeout;
+
+		if (hasFocus && hintHasShown === undefined && selectedWallets.length > 1) {
+			id = setTimeout(() => {
+				setShowHint(true);
+			}, 1000)
 		}
-	}, [hintHasShown, selectedWallets.length]);
+
+		return () => {
+			clearTimeout(id);
+		};
+	}, [hasFocus, hintHasShown, selectedWallets.length]);
 
 	const onDeleteAddress = async (address: string) => {
 		for (const wallet of profile.wallets().values()) {
