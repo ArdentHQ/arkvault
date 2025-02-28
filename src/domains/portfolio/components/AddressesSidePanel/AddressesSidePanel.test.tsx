@@ -25,6 +25,7 @@ describe("AddressesSidePanel", () => {
 	it("should render", () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -43,6 +44,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -63,6 +65,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[wallets.first().address(), wallets.last().address()]}
 				open={true}
@@ -83,6 +86,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -101,6 +105,7 @@ describe("AddressesSidePanel", () => {
 	it("should switch to delete mode when `manage` clicked", async () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -118,6 +123,7 @@ describe("AddressesSidePanel", () => {
 	it("should disable `select all` when delete mode enabled", async () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -138,6 +144,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={wallets.values().map((wallet) => wallet.address())}
 				open={true}
@@ -171,6 +178,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -197,6 +205,7 @@ describe("AddressesSidePanel", () => {
 	it("should filter wallets by address", async () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -214,6 +223,7 @@ describe("AddressesSidePanel", () => {
 	it("should filter wallets by displayName", async () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -233,6 +243,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -252,6 +263,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
@@ -273,6 +285,7 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
