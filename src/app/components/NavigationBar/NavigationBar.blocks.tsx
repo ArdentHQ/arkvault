@@ -99,7 +99,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> = ({ title }) => (
 	<NavWrapper aria-labelledby="main menu" variant="logo-only">
 		<div className="relative flex">
-			<div className="flex flex-1 px-6 md:px-10 mt-6">
+			<div className="mt-6 flex flex-1 px-6 md:px-10">
 				<NavigationBarLogo title={title} variant="logo-only" />
 			</div>
 		</div>
