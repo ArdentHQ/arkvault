@@ -19,7 +19,11 @@ export const Portfolio = () => {
 	return (
 		<>
 			{selectedWallets.length > 0 && (
-				<Dashboard onImportAddress={setShowImportAddressPanel} onCreateAddress={setShowCreateAddressPanel} />
+				<Dashboard
+					hasFocus={!showCreateAddressPanel && !showImportAddressPanel}
+					onImportAddress={setShowImportAddressPanel}
+					onCreateAddress={setShowCreateAddressPanel}
+				/>
 			)}
 
 			{selectedWallets.length === 0 && profile.status().isRestored() && (
