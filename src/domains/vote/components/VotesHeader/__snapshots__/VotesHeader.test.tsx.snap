@@ -10,144 +10,6 @@ exports[`VotesHeader > should render a different title if on select validator st
     >
       Select Validator
     </h1>
-    <div
-      class="flex items-center text-theme-primary-200"
-    >
-      <div
-        class="relative -my-2"
-        data-testid="HeaderSearchBar"
-      >
-        <div
-          class="group"
-        >
-          <button
-            class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
-            type="button"
-          >
-            <div
-              class="flex h-5 items-center gap-2"
-            >
-              <span
-                class="hidden md:block"
-              >
-                Search
-              </span>
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      clip-path="url(#clip0_13375_36442)"
-                      id="Vertical container"
-                    >
-                      <g
-                        id="Vertical container_2"
-                      >
-                        <path
-                          d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                          id="Vector"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.6"
-                        />
-                        <path
-                          d="M12.8281 12.7832L14.4281 14.3832"
-                          id="Vector_2"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.6"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <clippath
-                        id="clip0_13375_36442"
-                      >
-                        <rect
-                          fill="transparent"
-                          height="16"
-                          width="16"
-                        />
-                      </clippath>
-                    </defs>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
-      <span
-        class="mx-0.5 flex md:mx-3.5"
-      >
-        <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-        />
-      </span>
-      <div
-        data-testid="Votes__FilterWallets"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <div
-            class="group"
-          >
-            <button
-              class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded py-1.5 ring-focus -mr-2.5 px-2.5"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    fill="none"
-                    height="16"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 16 16"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      clip-path="url(#clip0_13768_41214)"
-                    >
-                      <path
-                        d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.6"
-                      />
-                    </g>
-                    <defs>
-                      <clippath
-                        id="clip0_13768_41214"
-                      >
-                        <rect
-                          fill="white"
-                          height="16"
-                          width="16"
-                        />
-                      </clippath>
-                    </defs>
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 </DocumentFragment>
 `;
@@ -155,7 +17,7 @@ exports[`VotesHeader > should render a different title if on select validator st
 exports[`VotesHeader > should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
-    class="!pb-8 !pt-8 border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+    class="w-full py-4 first:pt-8 last:pb-8"
   >
     <div
       class="mx-auto px-6 lg:container md:px-10"
@@ -169,156 +31,75 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
           <div
             class="flex items-center gap-3"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
-            >
-              My Votes
-            </h1>
-          </div>
-          <div
-            class="flex items-center leading-5 text-theme-secondary-text"
-            data-testid="header__subtitle"
-          >
-            Manage your cryptoasset staking.
-          </div>
-        </div>
-        <div>
-          <div
-            class="flex items-center text-theme-primary-200"
-          >
             <div
-              class="relative -my-2"
-              data-testid="HeaderSearchBar"
+              data-testid="icon-VotesLight"
             >
               <div
-                class="group"
+                style="height: 55px; width: 54px;"
               >
-                <button
-                  class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
-                  type="button"
+                <svg
+                  fill="none"
+                  height="55"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 54 55"
+                  width="54"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <div
-                    class="flex h-5 items-center gap-2"
-                  >
-                    <span
-                      class="hidden md:block"
-                    >
-                      Search
-                    </span>
-                    <div>
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          fill="none"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 16 16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g
-                            clip-path="url(#clip0_13375_36442)"
-                            id="Vertical container"
-                          >
-                            <g
-                              id="Vertical container_2"
-                            >
-                              <path
-                                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                                id="Vector"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.6"
-                              />
-                              <path
-                                d="M12.8281 12.7832L14.4281 14.3832"
-                                id="Vector_2"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.6"
-                              />
-                            </g>
-                          </g>
-                          <defs>
-                            <clippath
-                              id="clip0_13375_36442"
-                            >
-                              <rect
-                                fill="transparent"
-                                height="16"
-                                width="16"
-                              />
-                            </clippath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </button>
+                  <path
+                    d="M35 47.5H4.2C2.98497 47.5 2 46.515 2 45.3V45.3C2 40.4399 5.93989 36.5 10.8 36.5H11"
+                    stroke="#5CA4EC"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M47.4929 15.5078L30.164 5.50297C28.2541 4.4003 25.8121 5.05147 24.7048 6.95868L23.0933 9.73437C25.1813 9.73438 29.5933 9.72656 33.5933 9.72656C38.5933 9.72656 40.0933 11.2356 40.0933 14.7266L40.0933 36.3244L48.957 20.9719C50.0616 19.0588 49.4061 16.6124 47.4929 15.5078Z"
+                    fill="#5CA4EC"
+                    stroke="#5CA4EC"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M20 10.0937L36 10.0937C38.2091 10.0937 40 11.8846 40 14.0938L40 36.5M20 10.0937L12 18.0937M20 10.0937L20 16.0937C20 17.1983 19.1046 18.0937 18 18.0937L12 18.0937M12 40.0937L12 18.0937M12 40.0937L8.00001 40.0937M12 40.0937L36.5 40.0937"
+                    stroke="#235B95"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M27.8281 34.267L25.051 29.6386C24.7917 29.2065 24.7439 28.6796 24.921 28.2078L29.0941 17.0938C29.2406 16.7037 29.6136 16.4453 30.0303 16.4453H33.5482C34.2494 16.4453 34.7329 17.1483 34.482 17.8031L28.1863 34.2357C28.1267 34.3914 27.9139 34.41 27.8281 34.267Z"
+                    fill="#235B95"
+                  />
+                  <path
+                    d="M21.0984 24H17.817C17.0289 24 16.5505 24.8692 16.9722 25.5351L22.4322 34.1562C22.6156 34.4457 22.9344 34.6211 23.2771 34.6211H26.2711C27.0484 34.6211 27.5285 33.7731 27.1286 33.1066L21.9559 24.4855C21.7752 24.1843 21.4497 24 21.0984 24Z"
+                    stroke="#235B95"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M35 47.5V45.5C35 40.5294 39.0294 36.5 44 36.5V36.5C48.9706 36.5 53 40.5294 53 45.5V45.6667C53 46.6792 52.1792 47.5 51.1667 47.5H47.5"
+                    stroke="#5CA4EC"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
               </div>
             </div>
-            <span
-              class="mx-0.5 flex md:mx-3.5"
-            >
-              <div
-                class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-              />
-            </span>
             <div
-              data-testid="Votes__FilterWallets"
+              class="flex flex-col gap-2"
             >
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
               >
-                <div
-                  class="group"
-                >
-                  <button
-                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
-                  >
-                    <div>
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          fill="none"
-                          height="16"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 16 16"
-                          width="16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g
-                            clip-path="url(#clip0_13768_41214)"
-                          >
-                            <path
-                              d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="1.6"
-                            />
-                          </g>
-                          <defs>
-                            <clippath
-                              id="clip0_13768_41214"
-                            >
-                              <rect
-                                fill="white"
-                                height="16"
-                                width="16"
-                              />
-                            </clippath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                  </button>
-                </div>
+                My Votes
+              </h1>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
+                data-testid="header__subtitle"
+              >
+                Manage your cryptoasset staking.
               </div>
             </div>
           </div>
@@ -339,144 +120,6 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
     >
       My Votes
     </h1>
-    <div
-      class="flex items-center text-theme-primary-200"
-    >
-      <div
-        class="relative -my-2"
-        data-testid="HeaderSearchBar"
-      >
-        <div
-          class="group"
-        >
-          <button
-            class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
-            type="button"
-          >
-            <div
-              class="flex h-5 items-center gap-2"
-            >
-              <span
-                class="hidden md:block"
-              >
-                Search
-              </span>
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    fill="none"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      clip-path="url(#clip0_13375_36442)"
-                      id="Vertical container"
-                    >
-                      <g
-                        id="Vertical container_2"
-                      >
-                        <path
-                          d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                          id="Vector"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.6"
-                        />
-                        <path
-                          d="M12.8281 12.7832L14.4281 14.3832"
-                          id="Vector_2"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.6"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <clippath
-                        id="clip0_13375_36442"
-                      >
-                        <rect
-                          fill="transparent"
-                          height="16"
-                          width="16"
-                        />
-                      </clippath>
-                    </defs>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
-      <span
-        class="mx-0.5 flex md:mx-3.5"
-      >
-        <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-        />
-      </span>
-      <div
-        data-testid="Votes__FilterWallets"
-      >
-        <div
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          data-testid="dropdown__toggle"
-        >
-          <div
-            class="group"
-          >
-            <button
-              class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded py-1.5 ring-focus -mr-2.5 px-2.5"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    fill="none"
-                    height="16"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 16 16"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      clip-path="url(#clip0_13768_41214)"
-                    >
-                      <path
-                        d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.6"
-                      />
-                    </g>
-                    <defs>
-                      <clippath
-                        id="clip0_13768_41214"
-                      >
-                        <rect
-                          fill="white"
-                          height="16"
-                          width="16"
-                        />
-                      </clippath>
-                    </defs>
-                  </svg>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 </DocumentFragment>
 `;
