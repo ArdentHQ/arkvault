@@ -22,6 +22,7 @@ export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTabl
 				accessor: "rank",
 				headerClassName: "no-border",
 				minimumWidth: true,
+				noRoundedBorders: true,
 			},
 			{
 				Header: t("VOTE.VALIDATOR_TABLE.NAME"),
@@ -77,6 +78,7 @@ export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTabl
 			disableSortBy: true,
 			headerClassName: "no-border",
 			id: "onSelect",
+			noRoundedBorders: true,
 		});
 
 		return templateColumns;
