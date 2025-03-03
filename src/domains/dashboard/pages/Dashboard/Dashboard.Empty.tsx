@@ -24,7 +24,7 @@ export const DashboardEmpty = ({
 
 				<DashboardSetupAddressSlider />
 
-				<AddressActionsMenuMobile />
+				<AddressActionsMenuMobile onImportAddress={onImportAddress} onCreateAddress={onCreateAddress} />
 			</div>
 		</div>
 	</>
