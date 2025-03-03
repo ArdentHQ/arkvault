@@ -1,50 +1,132 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { VotesSection } from "./VotesSection";
+import { renderResponsive } from "@/utils/testing-library";
 
-import { VotesHeader } from "./VotesHeader";
-import { translations } from "@/domains/vote/i18n";
-import { env, getDefaultProfileId, renderResponsive, screen } from "@/utils/testing-library";
+vi.mock("react-i18next", () => ({
+	useTranslation: () => ({
+		t: (key) => key,
+	}),
+}));
 
-let profile: Contracts.IProfile;
+vi.mock("../VotesFilter", () => ({
+	VotesFilter: ({ onChange }) => (
+		<select data-testid="VotesFilter" onChange={(e) => onChange(e.target.value)}>
+			<option value="all">All</option>
+			<option value="current">Current</option>
+		</select>
+	),
+}));
 
-describe("VotesHeader", () => {
-	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+describe("VotesSection", () => {
+	const setSearchQuery = vi.fn();
+	const setSelectedFilter = vi.fn();
+
+	beforeEach(() => {
+		setSearchQuery.mockClear();
+		setSelectedFilter.mockClear();
 	});
 
-	it.each(["xs", "md"])("should render responsive (%s)", async (breakpoint) => {
-		const { asFragment } = renderResponsive(
-			<VotesHeader
-				profile={profile}
-				setSearchQuery={vi.fn()}
-				isFilterChanged={false}
-				isSelectDelegateStep={false}
-				filterProperties={undefined}
+	it("should render with wallet search placeholder when selectedAddress is not provided", () => {
+		render(
+			<VotesSection searchQuery="" setSearchQuery={setSearchQuery} totalCurrentVotes={0}>
+				<div>Children</div>
+			</VotesSection>,
+		);
+		expect(screen.getByPlaceholderText("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")).toBeInTheDocument();
+	});
+
+	it("should render with validator search placeholder when selectedAddress is provided", () => {
+		render(
+			<VotesSection
+				searchQuery=""
+				setSearchQuery={setSearchQuery}
+				selectedAddress="someAddress"
 				totalCurrentVotes={0}
-			/>,
+			>
+				<div>Children</div>
+			</VotesSection>,
+		);
+		expect(screen.getByPlaceholderText("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER")).toBeInTheDocument();
+	});
+
+	it("should not render VotesFilter when selectedAddress is not provided", () => {
+		render(
+			<VotesSection searchQuery="" setSearchQuery={setSearchQuery} totalCurrentVotes={0}>
+				<div>Children</div>
+			</VotesSection>,
+		);
+		expect(screen.queryByTestId("VotesFilter")).not.toBeInTheDocument();
+	});
+
+	it("should render VotesFilter when selectedAddress is provided", () => {
+		render(
+			<VotesSection
+				searchQuery=""
+				setSearchQuery={setSearchQuery}
+				selectedAddress="someAddress"
+				totalCurrentVotes={0}
+				selectedFilter="all"
+				setSelectedFilter={setSelectedFilter}
+			>
+				<div>Children</div>
+			</VotesSection>,
+		);
+		expect(screen.getByTestId("VotesFilter")).toBeInTheDocument();
+	});
+
+	it("should call setSelectedFilter when changing the filter", async () => {
+		render(
+			<VotesSection
+				searchQuery=""
+				setSearchQuery={setSearchQuery}
+				selectedAddress="someAddress"
+				totalCurrentVotes={0}
+				selectedFilter="all"
+				setSelectedFilter={setSelectedFilter}
+			>
+				<div>Children</div>
+			</VotesSection>,
+		);
+		const select = screen.getByTestId("VotesFilter");
+		await userEvent.selectOptions(select, "current");
+		expect(setSelectedFilter).toHaveBeenCalledWith("current");
+	});
+
+	it("should render children correctly", () => {
+		render(
+			<VotesSection searchQuery="" setSearchQuery={setSearchQuery} totalCurrentVotes={0}>
+				<div data-testid="children">Children</div>
+			</VotesSection>,
+		);
+		expect(screen.getByTestId("children")).toBeInTheDocument();
+	});
+
+	it.each(["xs", "md"])("should render correctly at breakpoint %s without selectedAddress", (breakpoint) => {
+		const { asFragment } = renderResponsive(
+			<VotesSection searchQuery="" setSearchQuery={setSearchQuery} totalCurrentVotes={0}>
+				<div>Children</div>
+			</VotesSection>,
 			breakpoint,
 		);
-
-		await expect(screen.findByText(translations.VOTES_PAGE.TITLE)).resolves.toBeVisible();
-
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render a different title if on select validator step", async () => {
+	it.each(["xs", "md"])("should render correctly at breakpoint %s with selectedAddress", (breakpoint) => {
 		const { asFragment } = renderResponsive(
-			<VotesHeader
-				profile={profile}
-				setSearchQuery={vi.fn()}
-				isFilterChanged={false}
-				isSelectDelegateStep={true}
-				filterProperties={undefined}
+			<VotesSection
+				searchQuery=""
+				setSearchQuery={setSearchQuery}
+				selectedAddress="someAddress"
 				totalCurrentVotes={0}
-			/>,
-			"xs",
+				selectedFilter="all"
+				setSelectedFilter={setSelectedFilter}
+			>
+				<div>Children</div>
+			</VotesSection>,
+			breakpoint,
 		);
-
-		await expect(screen.findByText(translations.VALIDATOR_TABLE.TITLE)).resolves.toBeVisible();
-
 		expect(asFragment()).toMatchSnapshot();
 	});
 });
