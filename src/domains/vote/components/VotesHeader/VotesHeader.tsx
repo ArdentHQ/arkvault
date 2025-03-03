@@ -14,22 +14,10 @@ import { Divider } from "@/app/components/Divider";
 import { useBreakpoint } from "@/app/hooks";
 
 interface VotesHeaderProperties {
-	profile: Contracts.IProfile;
-	selectedAddress?: string;
 	isSelectDelegateStep: boolean;
-	totalCurrentVotes: number;
-	selectedFilter?: FilterOption;
-	setSelectedFilter?: (selected: FilterOption) => void;
 }
 
-export const VotesHeader = ({
-	profile,
-	selectedAddress,
-	totalCurrentVotes,
-	selectedFilter,
-	setSelectedFilter,
-	isSelectDelegateStep,
-}: VotesHeaderProperties) => {
+export const VotesHeader = ({ isSelectDelegateStep }: VotesHeaderProperties) => {
 	const { t } = useTranslation();
 
 	const { isMdAndAbove } = useBreakpoint();

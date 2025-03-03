@@ -3,14 +3,36 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components//Icon";
 import { Section, SectionProperties } from "@/app/components/Layout";
 import { Input } from "@/app/components/Input";
+import { FilterOption, VotesFilter } from "../VotesFilter";
 
 interface VotesSectionProperties extends SectionProperties {
 	searchQuery: string;
 	setSearchQuery: (query: string) => void;
+	selectedAddress?: string;
+	totalCurrentVotes?: number;
+	selectedFilter?: FilterOption;
+	setSelectedFilter?: (selected: FilterOption) => void;
 }
 
-export const VotesSection = ({ children, searchQuery, setSearchQuery, ...props }: VotesSectionProperties) => {
+export const VotesSection = ({
+	children,
+	selectedAddress,
+	searchQuery,
+	setSearchQuery,
+	totalCurrentVotes = 0,
+	selectedFilter,
+	setSelectedFilter,
+	...props
+}: VotesSectionProperties) => {
 	const { t } = useTranslation();
+
+	const renderPlaceholder = () => {
+		if (selectedAddress) {
+			return t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER");
+		}
+
+		return t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER");
+	};
 
 	return (
 		<Section {...props} className="mt-4 py-0 pt-0 first:pt-1 md:mt-0">
@@ -23,12 +45,20 @@ export const VotesSection = ({ children, searchQuery, setSearchQuery, ...props }
 
 						<Input
 							className="pl-12"
-							placeholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
+							placeholder={renderPlaceholder()}
 							value={searchQuery}
 							onChange={(event) => setSearchQuery((event.target as HTMLInputElement).value)}
 							noBorder
 							noShadow
 						/>
+
+						{selectedAddress != null && (
+							<VotesFilter
+								totalCurrentVotes={totalCurrentVotes}
+								selectedOption={selectedFilter}
+								onChange={setSelectedFilter}
+							/>
+						)}
 					</div>
 
 					<div>{children}</div>

@@ -133,14 +133,7 @@ export const Votes: FC = () => {
 
 	return (
 		<Page pageTitle={isSelectValidatorStep ? t("VOTE.VALIDATOR_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
-			<VotesHeader
-				profile={activeProfile}
-				selectedAddress={selectedAddress}
-				isSelectDelegateStep={isSelectValidatorStep}
-				totalCurrentVotes={currentVotes.length}
-				selectedFilter={voteFilter}
-				setSelectedFilter={setVoteFilter}
-			/>
+			<VotesHeader isSelectDelegateStep={!!selectedAddress} />
 
 			{!hasWallets && (
 				<Section>
@@ -173,6 +166,10 @@ export const Votes: FC = () => {
 					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
 					searchQuery={searchQuery}
 					setSearchQuery={setSearchQuery}
+					totalCurrentVotes={currentVotes.length}
+					selectedFilter={voteFilter}
+					setSelectedFilter={setVoteFilter}
+					selectedAddress={selectedAddress}
 				>
 					<ValidatorsTable
 						searchQuery={searchQuery}
