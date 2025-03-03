@@ -14,7 +14,7 @@ interface Properties {
 interface WalletAliasResult {
 	alias?: string;
 	isContact?: boolean;
-	address?: string;
+	address: string;
 }
 
 interface HookResult {
