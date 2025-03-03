@@ -18,6 +18,7 @@ import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-para
 import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
 import { Input } from "@/app/components/Input";
+import { Icon } from "@/app/components/Icon";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -155,7 +156,7 @@ export const Votes: FC = () => {
 				<Section className="py-0 pt-0 first:pt-1">
 					<div className="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border">
 						<div className="flex flex-col">
-							<div className="border-b border-theme-secondary-300 dark:border-theme-secondary-800">
+							<div className="relative flex items-center border-b border-theme-secondary-300 dark:border-theme-secondary-800">
 								{/* <HeaderSearchBar
 							offsetClassName="top-0 -mr-20 sm:-mx-10 md:top-1/2 md:-translate-y-1/2"
 							placeholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
@@ -163,8 +164,12 @@ export const Votes: FC = () => {
 							onReset={() => setSearchQuery("")}
 							noToggleBorder
 						/> */}
+								<div className="pointer-events-none absolute left-0 items-center pl-6">
+									<Icon name="MagnifyingGlassAlt" className="text-theme-secondary-500" />
+								</div>
 
 								<Input
+									className="pl-12"
 									placeholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
 									value={searchQuery}
 									onChange={(event) => setSearchQuery((event.target as HTMLInputElement).value)}
