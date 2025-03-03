@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Section, SectionProperties } from "@/app/components/Layout";
 import { Input } from "@/app/components/Input";
-import { FilterOption, VotesFilter } from "../VotesFilter";
+import { FilterOption, VotesFilter } from "@/domains/vote/components/VotesFilter";
 
 interface VotesSectionProperties extends SectionProperties {
 	searchQuery: string;
