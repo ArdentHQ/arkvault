@@ -7,7 +7,7 @@ export class AbstractLedgerService implements LedgerService {
 
 	// protected readonly ledgerTransportFactory: LedgerTransportFactory;
 
-	public constructor(container: IContainer) {
+	public constructor() {
 		//
 	}
 
