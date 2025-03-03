@@ -35,6 +35,8 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+const arkDevnet = "ark.devnet";
+
 describe("useProfileSyncStatus", () => {
 	it("should restore", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
@@ -445,8 +447,8 @@ describe("useProfileSynchronizer", () => {
 		await waitFor(() =>
 			expect(profileNotificationsSyncSpy).toHaveBeenCalledWith({
 				identifiers: [
-					{ networkId: "ark.devnet", type: "address", value: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
-					{ networkId: "ark.devnet", type: "address", value: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb" },
+					{ networkId: arkDevnet, type: "address", value: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+					{ networkId: arkDevnet, type: "address", value: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb" },
 				],
 			}),
 		);
@@ -700,7 +702,7 @@ describe("useProfileRestore", () => {
 			await profile.walletFactory().fromMnemonicWithBIP39({
 				coin: "ARK",
 				mnemonic: MNEMONICS[0],
-				network: "ark.devnet",
+				network: arkDevnet,
 			}),
 		);
 
@@ -727,10 +729,12 @@ describe("useProfileRestore", () => {
 			},
 		);
 
-		await waitFor(() => expect(profileSyncMock).toHaveBeenCalledWith({
-			"networkId": "ark.devnet",
-			"ttl": 10_000,
-		}));
+		await waitFor(() =>
+			expect(profileSyncMock).toHaveBeenCalledWith({
+				networkId: arkDevnet,
+				ttl: 10_000,
+			}),
+		);
 
 		profileSyncMock.mockRestore();
 		dismissToastSpy.mockRestore();
@@ -869,7 +873,6 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider
@@ -931,7 +934,7 @@ describe("useProfileStatusWatcher", () => {
 		const ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
 			address: "FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
 			coin: "ARK",
-			network: "ark.devnet",
+			network: arkDevnet,
 			path: "m/44'/1'/0'/0/3",
 		});
 
