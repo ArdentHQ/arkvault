@@ -50,7 +50,6 @@ export default defineConfig(() => {
 						"sdk-cryptography": ["@ardenthq/sdk-cryptography"],
 						"sdk-helpers": ["@ardenthq/sdk-helpers"],
 						"sdk-intl": ["@ardenthq/sdk-intl"],
-						"sdk-ledger": ["@ardenthq/sdk-ledger"],
 						"sdk-profiles": ["@ardenthq/sdk-profiles"],
 						"sdk-mainsail": ["@ardenthq/sdk-mainsail"],
 					},
