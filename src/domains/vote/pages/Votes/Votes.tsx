@@ -20,6 +20,7 @@ import { getErroredNetworks } from "@/utils/profile-utils";
 import { Input } from "@/app/components/Input";
 import { Icon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { VotesSection } from "@/domains/vote/components/VotesSection";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -134,7 +135,6 @@ export const Votes: FC = () => {
 		<Page pageTitle={isSelectValidatorStep ? t("VOTE.VALIDATOR_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
 			<VotesHeader
 				profile={activeProfile}
-				setSearchQuery={setSearchQuery}
 				selectedAddress={selectedAddress}
 				isSelectDelegateStep={isSelectValidatorStep}
 				totalCurrentVotes={currentVotes.length}
@@ -152,41 +152,28 @@ export const Votes: FC = () => {
 			)}
 
 			{hasWallets && !isSelectValidatorStep && (
-				<Section className="mt-4 py-0 pt-0 first:pt-1 md:mt-0">
-					<div className="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border">
-						<div className="flex flex-col">
-							<div className="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0">
-								<div className="pointer-events-none absolute left-0 items-center pl-6">
-									<Icon name="MagnifyingGlassAlt" className="text-theme-secondary-500" />
-								</div>
-
-								<Input
-									className="pl-12"
-									placeholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
-									value={searchQuery}
-									onChange={(event) => setSearchQuery((event.target as HTMLInputElement).value)}
-									noBorder
-									noShadow
-								/>
-							</div>
-
-							<div>
-								<VotingWallets
-									showEmptyResults={hasEmptyResults}
-									wallets={filteredWallets}
-									onSelectAddress={handleSelectAddress}
-									network={activeNetwork}
-									searchQuery={searchQuery}
-									setSearchQuery={setSearchQuery}
-								/>
-							</div>
-						</div>
-					</div>
-				</Section>
+				<VotesSection
+					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+					searchQuery={searchQuery}
+					setSearchQuery={setSearchQuery}
+				>
+					<VotingWallets
+						showEmptyResults={hasEmptyResults}
+						wallets={filteredWallets}
+						onSelectAddress={handleSelectAddress}
+						network={activeNetwork}
+						searchQuery={searchQuery}
+						setSearchQuery={setSearchQuery}
+					/>
+				</VotesSection>
 			)}
 
 			{isSelectValidatorStep && (
-				<Section innerClassName="lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18">
+				<VotesSection
+					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+					searchQuery={searchQuery}
+					setSearchQuery={setSearchQuery}
+				>
 					<ValidatorsTable
 						searchQuery={searchQuery}
 						validators={filteredValidators}
@@ -216,7 +203,7 @@ export const Votes: FC = () => {
 							) : undefined
 						}
 					/>
-				</Section>
+				</VotesSection>
 			)}
 		</Page>
 	);

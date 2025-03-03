@@ -15,7 +15,6 @@ import { useBreakpoint } from "@/app/hooks";
 
 interface VotesHeaderProperties {
 	profile: Contracts.IProfile;
-	setSearchQuery: (query: string) => void;
 	selectedAddress?: string;
 	isSelectDelegateStep: boolean;
 	totalCurrentVotes: number;
@@ -25,7 +24,6 @@ interface VotesHeaderProperties {
 
 export const VotesHeader = ({
 	profile,
-	setSearchQuery,
 	selectedAddress,
 	totalCurrentVotes,
 	selectedFilter,
@@ -36,31 +34,31 @@ export const VotesHeader = ({
 
 	const { isMdAndAbove } = useBreakpoint();
 
-	const renderPlaceholder = () => {
-		if (selectedAddress) {
-			return t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER");
-		}
+	// const renderPlaceholder = () => {
+	// 	if (selectedAddress) {
+	// 		return t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER");
+	// 	}
 
-		return t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER");
-	};
+	// 	return t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER");
+	// };
 
-	const headerExtra = () => {
-		if (profile.wallets().count()) {
-			return (
-				<div className="flex items-center text-theme-primary-200">
-					{selectedAddress && (
-						<>
-							<VotesFilter
-								totalCurrentVotes={totalCurrentVotes}
-								selectedOption={selectedFilter}
-								onChange={setSelectedFilter}
-							/>
-						</>
-					)}
-				</div>
-			);
-		}
-	};
+	// const headerExtra = () => {
+	// 	if (profile.wallets().count()) {
+	// 		return (
+	// 			<div className="flex items-center text-theme-primary-200">
+	// 				{selectedAddress && (
+	// 					<>
+	// 						<VotesFilter
+	// 							totalCurrentVotes={totalCurrentVotes}
+	// 							selectedOption={selectedFilter}
+	// 							onChange={setSelectedFilter}
+	// 						/>
+	// 					</>
+	// 				)}
+	// 			</div>
+	// 		);
+	// 	}
+	// };
 
 	const headerTitle = useMemo(() => {
 		if (isSelectDelegateStep) {
@@ -74,8 +72,11 @@ export const VotesHeader = ({
 		<PageHeader
 			title={headerTitle}
 			subtitle={isSelectDelegateStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
-			extra={headerExtra()}
-			titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" />}
+			titleIcon={
+				isSelectDelegateStep ? undefined : (
+					<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" />
+				)
+			}
 		/>
 	);
 };
