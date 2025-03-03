@@ -17,6 +17,7 @@ import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
+import { Input } from "@/app/components/Input";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -134,7 +135,6 @@ export const Votes: FC = () => {
 				profile={activeProfile}
 				setSearchQuery={setSearchQuery}
 				selectedAddress={selectedAddress}
-				isFilterChanged={isFilterChanged}
 				isSelectDelegateStep={isSelectValidatorStep}
 				filterProperties={filterProperties}
 				totalCurrentVotes={currentVotes.length}
@@ -152,12 +152,39 @@ export const Votes: FC = () => {
 			)}
 
 			{hasWallets && !isSelectValidatorStep && (
-				<VotingWallets
-					showEmptyResults={hasEmptyResults}
-					walletsByCoin={filteredWalletsByCoin}
-					onSelectAddress={handleSelectAddress}
-					profile={activeProfile}
-				/>
+				<Section className="py-0 pt-0 first:pt-1">
+					<div className="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border">
+						<div className="flex flex-col">
+							<div className="border-b border-theme-secondary-300 dark:border-theme-secondary-800">
+								{/* <HeaderSearchBar
+							offsetClassName="top-0 -mr-20 sm:-mx-10 md:top-1/2 md:-translate-y-1/2"
+							placeholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
+							onSearch={setSearchQuery}
+							onReset={() => setSearchQuery("")}
+							noToggleBorder
+						/> */}
+
+								<Input
+									placeholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
+									value={searchQuery}
+									onChange={(event) => setSearchQuery((event.target as HTMLInputElement).value)}
+									noBorder
+									noShadow
+								/>
+							</div>
+							<div>
+								<VotingWallets
+									showEmptyResults={hasEmptyResults}
+									walletsByCoin={filteredWalletsByCoin}
+									onSelectAddress={handleSelectAddress}
+									profile={activeProfile}
+									searchQuery={searchQuery}
+									setSearchQuery={setSearchQuery}
+								/>
+							</div>
+						</div>
+					</div>
+				</Section>
 			)}
 
 			{isSelectValidatorStep && (

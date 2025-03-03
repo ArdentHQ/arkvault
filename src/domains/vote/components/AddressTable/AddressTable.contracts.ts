@@ -5,4 +5,6 @@ export interface AddressTableProperties {
 	onSelect?: (address: string, network: string) => void;
 	isCompact?: boolean;
 	profile: Contracts.IProfile;
+	searchQuery: string;
+	setSearchQuery: (query: string) => void;
 }

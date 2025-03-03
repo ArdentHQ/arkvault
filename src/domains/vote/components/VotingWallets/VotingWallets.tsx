@@ -10,6 +10,8 @@ interface VotingWalletsProperties {
 	walletsByCoin: Record<string, Contracts.IReadWriteWallet[]>;
 	onSelectAddress: (address: string, network: string) => void;
 	profile: Contracts.IProfile;
+	searchQuery: string;
+	setSearchQuery: (query: string) => void;
 }
 
 export const VotingWallets = ({
@@ -17,6 +19,8 @@ export const VotingWallets = ({
 	walletsByCoin,
 	onSelectAddress,
 	profile,
+	searchQuery,
+	setSearchQuery,
 }: VotingWalletsProperties) => {
 	const { t } = useTranslation();
 
@@ -42,6 +46,8 @@ export const VotingWallets = ({
 							wallets={walletsByCoin[coin]}
 							onSelect={onSelectAddress}
 							profile={profile}
+							searchQuery={searchQuery}
+							setSearchQuery={setSearchQuery}
 						/>
 					),
 			)}

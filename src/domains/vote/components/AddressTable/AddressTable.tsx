@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { FC, useCallback, useMemo } from "react";
+import React, { FC, useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import { AddressTableProperties } from "./AddressTable.contracts";
@@ -11,6 +11,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { assertNetwork } from "@/utils/assertions";
 import { networkDisplayName } from "@/utils/network-utils";
 import { Icon } from "@/app/components/Icon";
+import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, profile }) => {
 	const { t } = useTranslation();
@@ -132,9 +133,8 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, pr
 	);
 
 	return (
-		<Section className="py-0 pt-0 first:pt-1 sm:first:pt-0">
-			<div data-testid="AddressTable">
-				<div className="hidden items-center space-x-3 pb-3 pt-6 sm:flex">
+		<div data-testid="AddressTable">
+			{/* <div className="hidden items-center space-x-3 pb-3 pt-6 sm:flex">
 					<Icon
 						className="rounded-xl bg-theme-navy-100 p-2.5 text-theme-navy-600 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
 						data-testid="NetworkIcon__icon"
@@ -147,17 +147,11 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, pr
 						dimensions={[24, 24]}
 					/>
 					<h2 className="mb-0 text-lg font-semibold leading-[21px]">{networkDisplayName(network)}</h2>
-				</div>
+				</div> */}
 
-				<Table
-					className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
-					columns={columns}
-					data={memoizedWallets}
-					hideHeader={isSm || isXs}
-				>
-					{renderTableRow}
-				</Table>
-			</div>
-		</Section>
+			<Table className="with-x-padding" columns={columns} data={memoizedWallets} hideHeader={isSm || isXs}>
+				{renderTableRow}
+			</Table>
+		</div>
 	);
 };

@@ -48,19 +48,8 @@ export const VotesHeader = ({
 		if (profile.wallets().count()) {
 			return (
 				<div className="flex items-center text-theme-primary-200">
-					<HeaderSearchBar
-						offsetClassName="top-0 -mr-20 sm:-mx-10 md:top-1/2 md:-translate-y-1/2"
-						placeholder={renderPlaceholder()}
-						onSearch={setSearchQuery}
-						onReset={() => setSearchQuery("")}
-						noToggleBorder
-					/>
-
 					{selectedAddress && (
 						<>
-							<span className="mx-0.5 flex md:mx-3.5">
-								<Divider type="vertical" size="md" />
-							</span>
 							<VotesFilter
 								totalCurrentVotes={totalCurrentVotes}
 								selectedOption={selectedFilter}
