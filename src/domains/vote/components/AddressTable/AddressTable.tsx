@@ -5,13 +5,8 @@ import { Column } from "react-table";
 import { AddressTableProperties } from "./AddressTable.contracts";
 import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
-import { Section } from "@/app/components/Layout";
-import { Table, TableRow } from "@/app/components/Table";
+import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
-import { assertNetwork } from "@/utils/assertions";
-import { networkDisplayName } from "@/utils/network-utils";
-import { Icon } from "@/app/components/Icon";
-import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, showEmptyResults = false, network }) => {
 	const { t } = useTranslation();
@@ -134,7 +129,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 		}
 
 		return (
-			<tr className="border-b-4 border-solid border-theme-secondary-200 dark:border-theme-secondary-800">
+			<tr className="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4">
 				<td colSpan={columns.length} className="pb-4 pt-[11px]">
 					<div className="flex flex-col items-center justify-center">
 						<h3 className="mb-2 text-base font-semibold text-theme-secondary-900">
