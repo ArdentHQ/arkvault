@@ -14,13 +14,13 @@ exports[`Welcome > should change route to create profile 1`] = `
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -844,13 +844,13 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -1769,13 +1769,13 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -2694,13 +2694,13 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -3619,13 +3619,13 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -4544,13 +4544,13 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -5469,13 +5469,13 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -6299,13 +6299,13 @@ exports[`Welcome > should render with profiles 1`] = `
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -7224,13 +7224,13 @@ exports[`Welcome > should render without profiles 1`] = `
         class="relative flex"
       >
         <div
-          class="flex flex-1 px-4 sm:px-6 md:px-10"
+          class="mt-6 flex flex-1 px-6 md:px-10"
         >
           <div
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
