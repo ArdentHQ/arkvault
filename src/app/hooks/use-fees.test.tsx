@@ -1,4 +1,4 @@
-import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react";
 import React from "react";
@@ -9,7 +9,7 @@ import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import { env, getDefaultProfileId, triggerMessageSignOnce } from "@/utils/testing-library";
 
-const ARKDevnet = "ark.devnet";
+const MainsailDevnet = "mainsail.devnet";
 
 describe("useFees", () => {
 	it.skip("should find fees by type if already synced", async () => {
@@ -23,10 +23,10 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", ARKDevnet);
+		await env.fees().sync(profile, "ARK", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "ARK", network: MainsailDevnet, type: "delegateRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
@@ -38,7 +38,7 @@ describe("useFees", () => {
 
 	it.skip("should ensure fees are synced before find", async () => {
 		env.reset({
-			coins: { ARK },
+			coins: { Mainsail },
 			httpClient,
 			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
@@ -47,8 +47,8 @@ describe("useFees", () => {
 		const profile = await env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
 		await profile.walletFactory().generate({
-			coin: "ARK",
-			network: ARKDevnet,
+			coin: "Mainsail",
+			network: MainsailDevnet,
 		});
 		await env.wallets().syncByProfile(profile);
 
@@ -57,10 +57,10 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", ARKDevnet);
+		await env.fees().sync(profile, "ARK", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "ARK", network: MainsailDevnet, type: "delegateRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
@@ -72,7 +72,7 @@ describe("useFees", () => {
 
 	it.skip("should retry find fees by type", async () => {
 		env.reset({
-			coins: { ARK },
+			coins: { Mainsail },
 			httpClient,
 			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
@@ -86,7 +86,7 @@ describe("useFees", () => {
 		await env.profiles().restore(profile);
 		await profile.walletFactory().generate({
 			coin: "ARK",
-			network: ARKDevnet,
+			network: MainsailDevnet,
 		});
 		await env.wallets().syncByProfile(profile);
 
@@ -95,10 +95,10 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", ARKDevnet);
+		await env.fees().sync(profile, "ARK", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "ARK", network: MainsailDevnet, type: "delegateRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
@@ -112,7 +112,7 @@ describe("useFees", () => {
 
 	it.skip("should calculate and return multisignature fees with one participant", async () => {
 		env.reset({
-			coins: { ARK },
+			coins: { Mainsail },
 			httpClient,
 			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
@@ -123,7 +123,7 @@ describe("useFees", () => {
 
 		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: ARKDevnet,
+			network: MainsailDevnet,
 		});
 
 		await triggerMessageSignOnce(wallet);
@@ -139,7 +139,7 @@ describe("useFees", () => {
 			current.calculate({
 				coin: "ARK",
 				data: {},
-				network: ARKDevnet,
+				network: MainsailDevnet,
 				type: "multiSignature",
 			}),
 		).resolves.toStrictEqual({
@@ -150,13 +150,13 @@ describe("useFees", () => {
 			static: 0,
 		});
 
-		await env.fees().sync(profile, "ARK", ARKDevnet);
+		await env.fees().sync(profile, "ARK", MainsailDevnet);
 
 		await expect(
 			current.calculate({
 				coin: "ARK",
 				data: {},
-				network: ARKDevnet,
+				network: MainsailDevnet,
 				type: "multiSignature",
 			}),
 		).resolves.toStrictEqual({
@@ -170,7 +170,7 @@ describe("useFees", () => {
 
 	it.skip("should calculate and return multisignature fees with two participants", async () => {
 		env.reset({
-			coins: { ARK },
+			coins: { Mainsail },
 			httpClient,
 			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
@@ -181,7 +181,7 @@ describe("useFees", () => {
 
 		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: ARKDevnet,
+			network: MainsailDevnet,
 		});
 
 		await triggerMessageSignOnce(wallet);
@@ -193,7 +193,7 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", ARKDevnet);
+		await env.fees().sync(profile, "ARK", MainsailDevnet);
 
 		await expect(
 			current.calculate({
@@ -227,7 +227,7 @@ describe("useFees", () => {
 
 	it.skip("should calculate and return fees when feeType is size", async () => {
 		env.reset({
-			coins: { ARK },
+			coins: { Mainsail },
 			httpClient,
 			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
@@ -237,7 +237,7 @@ describe("useFees", () => {
 		await env.profiles().restore(profile);
 		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: ARKDevnet,
+			network: MainsailDevnet,
 		});
 		await env.wallets().syncByProfile(profile);
 
@@ -248,7 +248,7 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", ARKDevnet);
+		await env.fees().sync(profile, "ARK", MainsailDevnet);
 
 		const transferMock = vi.spyOn(wallet.coin().transaction(), "transfer").mockResolvedValue({} as any);
 		const calculateMock = vi.spyOn(wallet.coin().fee(), "calculate").mockResolvedValue(BigNumber.make(1));
@@ -282,7 +282,7 @@ describe("useFees", () => {
 
 	it.skip("should return a default value when error is thrown in the calculation", async () => {
 		env.reset({
-			coins: { ARK },
+			coins: { Mainsail },
 			httpClient,
 			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
@@ -292,7 +292,7 @@ describe("useFees", () => {
 		await env.profiles().restore(profile);
 		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: ARKDevnet,
+			network: MainsailDevnet,
 		});
 		await env.wallets().syncByProfile(profile);
 
@@ -301,7 +301,7 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", ARKDevnet);
+		await env.fees().sync(profile, "ARK", MainsailDevnet);
 
 		const feeTypeSpy = vi.spyOn(wallet.network(), "feeType").mockReturnValue("size");
 		const transferMock = vi.spyOn(wallet.coin().transaction(), "transfer").mockImplementation(() => {

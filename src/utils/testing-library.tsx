@@ -1,5 +1,4 @@
 /* eslint-disable testing-library/no-node-access */
-import { ARK } from "@ardenthq/sdk-ark";
 import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
@@ -16,7 +15,7 @@ import { httpClient } from "@/app/services";
 import { LayoutBreakpoint } from "@/types";
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import DefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import { BigNumber } from "@ardenthq/sdk-helpers";
@@ -176,7 +175,7 @@ export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordPro
 
 const environmentWithMocks = () =>
 	new Environment({
-		coins: { ARK, Mainsail },
+		coins: { Mainsail },
 		httpClient,
 		ledgerTransportFactory,
 		storage: new StubStorage(),
@@ -242,14 +241,14 @@ export const renderResponsiveWithRoute = (
 };
 
 const publicNetworksStub: any = {
-	ark: {
+	mainsail: {
 		mainnet: {
 			...DefaultManifest,
 			coin: "ARK",
 			currency: {
 				ticker: "ARK",
 			},
-			id: "ark.mainnet",
+			id: "mainsail.mainnet",
 			name: "Mainnet",
 			type: "live",
 		},
@@ -257,14 +256,14 @@ const publicNetworksStub: any = {
 };
 
 const testNetworksStub: any = {
-	ark: {
+	mainsail: {
 		devnet: {
 			...DefaultManifest,
 			coin: "ARK",
 			currency: {
 				ticker: "DARK",
 			},
-			id: "ark.devnet",
+			id: "mainsail.devnet",
 			meta: {
 				...DefaultManifest.meta,
 				nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",

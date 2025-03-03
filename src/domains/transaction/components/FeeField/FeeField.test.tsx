@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
@@ -15,7 +15,7 @@ import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testi
 describe("FeeField", () => {
 	let profile: Contracts.IProfile;
 
-	const networks = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
+	const networks = new Networks.Network(Mainsail.manifest, Mainsail.manifest.networks["mainsail.devnet"]);
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());

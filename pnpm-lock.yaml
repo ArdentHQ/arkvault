@@ -14,9 +14,6 @@ importers:
       '@ardenthq/sdk':
         specifier: 2.0.0-alpha.56
         version: 2.0.0-alpha.56
-      '@ardenthq/sdk-ark':
-        specifier: 2.0.0-alpha.56
-        version: 2.0.0-alpha.56
       '@ardenthq/sdk-cryptography':
         specifier: 2.0.0-alpha.56
         version: 2.0.0-alpha.56
@@ -399,10 +396,6 @@ packages:
   '@ardenthq/arkvault-url@1.2.0':
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
-
-  '@ardenthq/sdk-ark@2.0.0-alpha.56':
-    resolution: {integrity: sha512-urNuTk+kM4QwsMtiV/lMb/fi2L8rP1vXZwX4z6HLINADtb5DRpZe+velYmnYhoJTLoG7UcR/rl2QDq2iNU3uPg==}
-    engines: {node: '>=16.0.0'}
 
   '@ardenthq/sdk-cryptography@2.0.0-alpha.56':
     resolution: {integrity: sha512-l7lZcm+oiRNFWnL0x7lx9rWKfpLWXNlVR+2b8HiewFnivYqZJSiGGahSBxzzoWavUvY/1VTFvq2Tc+dl2F8DlQ==}
@@ -8478,25 +8471,6 @@ snapshots:
       leven: 3.1.0
 
   '@ardenthq/arkvault-url@1.2.0': {}
-
-  '@ardenthq/sdk-ark@2.0.0-alpha.56':
-    dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.56
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.56
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.56
-      '@ardenthq/sdk-intl': 2.0.0-alpha.56
-      '@arkecosystem/ledger-transport': 2.0.0
-      ajv: 8.12.0
-      ajv-formats: 2.1.1(ajv@8.12.0)
-      ajv-keywords: 5.1.0(ajv@8.12.0)
-      bip39: 3.0.4
-      dayjs: 1.10.7
-      deepmerge: 4.2.2
-      get-random-values: 1.2.2
-      is-url-superb: 6.1.0
-      lodash.get: 4.4.2
-      lodash.set: 4.3.2
-      node-dotify: 1.1.0
 
   '@ardenthq/sdk-cryptography@2.0.0-alpha.56':
     dependencies:
