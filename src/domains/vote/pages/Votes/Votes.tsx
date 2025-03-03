@@ -153,17 +153,10 @@ export const Votes: FC = () => {
 			)}
 
 			{hasWallets && !isSelectValidatorStep && (
-				<Section className="py-0 pt-0 first:pt-1">
+				<Section className="mt-4 py-0 pt-0 first:pt-1 md:mt-0">
 					<div className="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border">
 						<div className="flex flex-col">
-							<div className="relative flex items-center border-b border-theme-secondary-300 dark:border-theme-secondary-800">
-								{/* <HeaderSearchBar
-							offsetClassName="top-0 -mr-20 sm:-mx-10 md:top-1/2 md:-translate-y-1/2"
-							placeholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
-							onSearch={setSearchQuery}
-							onReset={() => setSearchQuery("")}
-							noToggleBorder
-						/> */}
+							<div className="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-y-0 md:border-t-0">
 								<div className="pointer-events-none absolute left-0 items-center pl-6">
 									<Icon name="MagnifyingGlassAlt" className="text-theme-secondary-500" />
 								</div>
