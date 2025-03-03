@@ -10,6 +10,7 @@ export interface TableProperties<RowDataType extends Record<never, unknown>> {
 	initialState?: Partial<TableState<RowDataType>>;
 	rowsPerPage?: number;
 	currentPage?: number;
+	footer?: React.ReactNode;
 }
 
 export interface TableColumn {

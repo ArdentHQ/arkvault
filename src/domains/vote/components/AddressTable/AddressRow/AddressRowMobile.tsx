@@ -19,7 +19,7 @@ interface AddressRowMobileProperties {
 	index: number;
 	maxVotes: number;
 	wallet: Contracts.IReadWriteWallet;
-	onSelect?: (walletAddress: string, walletNetwork: string) => void;
+	onSelect?: (walletAddress: string) => void;
 }
 
 const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color: string }) => (
@@ -182,7 +182,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							className="space-x-0 rounded-none px-5 py-6"
 							onClick={(e) => {
 								e.stopPropagation();
-								onSelect?.(wallet.address(), wallet.networkId());
+								onSelect?.(wallet.address());
 							}}
 							data-testid={`AddressRowMobile__select-${index}`}
 						>

@@ -22,7 +22,7 @@ interface AddressRowProperties {
 	index: number;
 	maxVotes: number;
 	wallet: Contracts.IReadWriteWallet;
-	onSelect?: (walletAddress: string, walletNetwork: string) => void;
+	onSelect?: (walletAddress: string) => void;
 }
 
 const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color: string }) => (
@@ -227,7 +227,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 							disabled={isButtonDisabled}
 							variant="transparent"
 							className="-mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
-							onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
+							onClick={() => onSelect?.(wallet.address())}
 							data-testid={`AddressRow__select-${index}`}
 						>
 							{t("COMMON.VOTE")}

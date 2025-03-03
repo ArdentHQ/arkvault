@@ -1,12 +1,10 @@
 import { isEmptyObject } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo, useState } from "react";
-
-import { useNetworks, useWalletAlias } from "@/app/hooks";
+import { useWalletAlias } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets/hooks";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
 import { sortWallets } from "@/utils/wallet-utils";
-import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const useVoteFilters = ({
@@ -23,7 +21,6 @@ export const useVoteFilters = ({
 	const { defaultConfiguration } = useWalletFilters({ profile });
 	const { getWalletAlias } = useWalletAlias();
 	const walletAddress = useMemo(() => (hasWalletId ? wallet.address() : ""), [hasWalletId, wallet]);
-	const walletNetwork = useMemo(() => (hasWalletId ? wallet.network().id() : ""), [hasWalletId, wallet]);
 	const walletMaxVotes = useMemo(
 		() => (hasWalletId ? wallet.network().maximumVotesPerWallet() : undefined),
 		[hasWalletId, wallet],
@@ -31,133 +28,70 @@ export const useVoteFilters = ({
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const [walletsDisplayType, setWalletsDisplayType] = useState(defaultConfiguration.walletsDisplayType);
-	const [selectedNetworkIds, setSelectedNetworkIds] = useState([activeNetwork.id()]);
 	const [voteFilter, setVoteFilter] = useState<FilterOption>(filter);
 	const [selectedAddress, setSelectedAddress] = useState(walletAddress);
-	const [selectedNetwork, setSelectedNetwork] = useState(walletNetwork);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
-	const availableNetworks = useNetworks({
-		filter: (network) => profileEnabledNetworkIds(profile).includes(network.id()),
-		profile,
-	});
 
-	const networks = useMemo(
-		() =>
-			availableNetworks.map((network) => ({
-				isSelected: selectedNetworkIds.includes(network.id()),
-				network,
-			})),
-		[availableNetworks, selectedNetworkIds],
+	const isFilterChanged = useMemo(
+		() => walletsDisplayType !== defaultConfiguration.walletsDisplayType,
+		[walletsDisplayType, defaultConfiguration],
 	);
 
-	const isFilterChanged = useMemo(() => {
-		if (walletsDisplayType !== defaultConfiguration.walletsDisplayType) {
-			return true;
-		}
-
-		return false;
-	}, [walletsDisplayType, selectedNetworkIds, defaultConfiguration]);
-
-	const filterProperties = {
-		networks,
+	const filterFilters = {
 		onChange: (key: string, value: any) => {
-			if (key === "walletsDisplayType") {
-				setWalletsDisplayType(value);
-			}
-			if (key === "selectedNetworkIds") {
-				setSelectedNetworkIds(value);
-			}
+			if (key === "walletsDisplayType") setWalletsDisplayType(value);
 		},
-		selectedNetworkIds,
 		walletsDisplayType,
 	};
 
-	const walletsByCoin = useMemo(() => {
+	const wallets = useMemo(() => {
 		const usedWallets = sortWallets(
 			profile
 				.wallets()
 				.values()
-				.filter((wallet) => availableNetworks.some((network) => wallet.network().id() === network.id())),
+				.filter((wallet) => wallet.network().id() === activeNetwork.id()),
 		);
 
-		const mappedWallets: Record<string, Contracts.IReadWriteWallet[]> = {};
+		return usedWallets.filter((wallet) => {
+			if (walletsDisplayType === "starred" && !wallet.isStarred()) return false;
+			if (walletsDisplayType === "ledger" && !wallet.isLedger()) return false;
+			return true;
+		});
+	}, [profile, walletsDisplayType, activeNetwork]);
 
-		for (const wallet of usedWallets) {
-			const networkId = wallet.network().id();
-
-			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-			if (!mappedWallets[networkId]) {
-				mappedWallets[networkId] = [];
-			}
-
-			if (!selectedNetworkIds.includes(networkId)) {
-				continue;
-			}
-
-			if (walletsDisplayType === "starred" && !wallet.isStarred()) {
-				continue;
-			}
-
-			if (walletsDisplayType === "ledger" && !wallet.isLedger()) {
-				continue;
-			}
-
-			mappedWallets[networkId].push(wallet);
-		}
-
-		return mappedWallets;
-	}, [profile, selectedNetworkIds, walletsDisplayType]);
-
-	const filteredWalletsByCoin = useMemo(() => {
-		if (searchQuery.length === 0) {
-			return walletsByCoin;
-		}
+	const filteredWallets = useMemo(() => {
+		if (searchQuery.length === 0) return wallets;
 
 		const query = searchQuery.toLowerCase();
-
-		const mappedWallets: Record<string, Contracts.IReadWriteWallet[]> = {};
-
-		for (const coin of Object.keys(walletsByCoin)) {
-			mappedWallets[coin] = Object.values(walletsByCoin[coin]).filter((wallet: Contracts.IReadWriteWallet) => {
-				const { alias } = getWalletAlias({
-					address: wallet.address(),
-					network: wallet.network(),
-					profile,
-				});
-
-				return wallet.address().toLowerCase().includes(query) || alias?.toLowerCase().includes(query);
+		return wallets.filter((wallet: Contracts.IReadWriteWallet) => {
+			const { alias } = getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
 			});
-		}
+			return wallet.address().toLowerCase().includes(query) || alias?.toLowerCase().includes(query);
+		});
+	}, [getWalletAlias, profile, searchQuery, wallets]);
 
-		return mappedWallets;
-	}, [getWalletAlias, profile, searchQuery, walletsByCoin]);
-
-	const hasEmptyResults = Object.keys(filteredWalletsByCoin).every(
-		(coin: string) => filteredWalletsByCoin[coin].length === 0,
-	);
-
-	const hasWallets = !isEmptyObject(walletsByCoin);
+	const hasEmptyResults = filteredWallets.length === 0;
+	const hasWallets = wallets.length > 0;
 
 	return {
-		filterProperties,
-		filteredWalletsByCoin,
+		filterFilters,
+		filteredWallets,
 		hasEmptyResults,
 		hasWallets,
 		isFilterChanged,
 		maxVotes,
-		networks,
 		searchQuery,
 		selectedAddress,
-		selectedNetwork,
-		selectedNetworkIds,
 		setMaxVotes,
 		setSearchQuery,
 		setSelectedAddress,
-		setSelectedNetwork,
 		setVoteFilter,
 		voteFilter,
-		walletsByCoin,
+		wallets,
 		walletsDisplayType,
 	};
 };

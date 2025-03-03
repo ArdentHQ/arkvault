@@ -19,6 +19,7 @@ import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
 import { Input } from "@/app/components/Input";
 import { Icon } from "@/app/components/Icon";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -38,18 +39,17 @@ export const Votes: FC = () => {
 
 	const { filter, voteValidators, unvoteValidators } = useVoteQueryParameters();
 
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+
 	const {
-		filterProperties,
 		isFilterChanged,
-		filteredWalletsByCoin,
+		filteredWallets,
 		hasEmptyResults,
 		hasWallets,
 		voteFilter,
 		setVoteFilter,
 		selectedAddress,
 		setSelectedAddress,
-		selectedNetwork,
-		setSelectedNetwork,
 		searchQuery,
 		setSearchQuery,
 		maxVotes,
@@ -80,15 +80,14 @@ export const Votes: FC = () => {
 		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
 		selectedAddress,
-		selectedNetwork,
-		wallet: activeWallet!, // @TODO
+		wallet: activeWallet, // @TODO
 	});
 
 	useEffect(() => {
-		if (selectedAddress && selectedNetwork) {
-			fetchVotes(selectedAddress, selectedNetwork);
+		if (selectedAddress) {
+			fetchVotes(selectedAddress, activeNetwork);
 		}
-	}, [fetchVotes, selectedAddress, selectedNetwork]);
+	}, [fetchVotes, selectedAddress, activeNetwork]);
 
 	useEffect(() => {
 		if (hasWalletId) {
@@ -112,20 +111,20 @@ export const Votes: FC = () => {
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const handleSelectAddress = useCallback(
-		async (address: string, network: string) => {
-			const wallet = activeProfile.wallets().findByAddressWithNetwork(address, network);
+		async (address: string) => {
+			const wallet = activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id());
 
 			assertWallet(wallet);
 
 			setSearchQuery("");
 			setSelectedAddress(address);
-			setSelectedNetwork(network);
+			// setSelectedNetwork(network);
 			setSelectedWallet(wallet);
 			setMaxVotes(wallet.network().maximumVotesPerWallet());
 
 			await fetchValidators(wallet);
 		},
-		[activeProfile, fetchValidators, setMaxVotes, setSearchQuery, setSelectedAddress, setSelectedNetwork],
+		[activeProfile, fetchValidators, setMaxVotes, setSearchQuery, setSelectedAddress, activeNetwork],
 	);
 
 	const isSelectValidatorStep = !!selectedAddress;
@@ -137,7 +136,6 @@ export const Votes: FC = () => {
 				setSearchQuery={setSearchQuery}
 				selectedAddress={selectedAddress}
 				isSelectDelegateStep={isSelectValidatorStep}
-				filterProperties={filterProperties}
 				totalCurrentVotes={currentVotes.length}
 				selectedFilter={voteFilter}
 				setSelectedFilter={setVoteFilter}
@@ -156,7 +154,7 @@ export const Votes: FC = () => {
 				<Section className="mt-4 py-0 pt-0 first:pt-1 md:mt-0">
 					<div className="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border">
 						<div className="flex flex-col">
-							<div className="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-y-0 md:border-t-0">
+							<div className="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0">
 								<div className="pointer-events-none absolute left-0 items-center pl-6">
 									<Icon name="MagnifyingGlassAlt" className="text-theme-secondary-500" />
 								</div>
@@ -170,12 +168,13 @@ export const Votes: FC = () => {
 									noShadow
 								/>
 							</div>
+
 							<div>
 								<VotingWallets
 									showEmptyResults={hasEmptyResults}
-									walletsByCoin={filteredWalletsByCoin}
+									wallets={filteredWallets}
 									onSelectAddress={handleSelectAddress}
-									profile={activeProfile}
+									network={activeNetwork}
 									searchQuery={searchQuery}
 									setSearchQuery={setSearchQuery}
 								/>
