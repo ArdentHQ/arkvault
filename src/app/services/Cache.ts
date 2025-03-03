@@ -13,7 +13,7 @@ export class Cache {
 		this.ttl = ttl;
 	}
 
-	public async remember(key: string, value: unknown): Promise<any> {
+	public async remember(key: string, value: unknown, ttl?: number): Promise<any> {
 		// 1. Check if we still have a matching item for the key.
 		const cacheItem = this.store[key];
 
@@ -28,7 +28,7 @@ export class Cache {
 			result = await value();
 		}
 
-		this.store[key] = { expires_at: DateTime.make().addSeconds(this.ttl), value: result };
+		this.store[key] = { expires_at: DateTime.make().addSeconds(ttl ?? this.ttl), value: result };
 
 		return result;
 	}
