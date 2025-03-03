@@ -355,22 +355,11 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 <div
                                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                                 >
-                                  <span
-                                    class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-                                    data-testid="Address__alias"
-                                  >
-                                    <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
-                                    >
-                                      ARK Wallet 2
-                                    </span>
-                                  </span>
                                   <div
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
