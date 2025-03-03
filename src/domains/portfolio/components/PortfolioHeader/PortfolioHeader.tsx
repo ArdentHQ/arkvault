@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
@@ -21,6 +21,10 @@ import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
+import { useLocalStorage } from "usehooks-ts";
+import { Tooltip } from "@/app/components/Tooltip";
+import cn from "classnames";
+import { Trans } from "react-i18next";
 
 export const PortfolioHeader = ({
 	profile,
@@ -31,6 +35,7 @@ export const PortfolioHeader = ({
 	onUpdate,
 	onCreateAddress,
 	onImportAddress,
+	hasFocus,
 }: {
 	profile: Contracts.IProfile;
 	votes: Contracts.VoteRegistryItem[];
@@ -40,6 +45,7 @@ export const PortfolioHeader = ({
 	onUpdate?: (status: boolean) => void;
 	onCreateAddress?: (open: boolean) => void;
 	onImportAddress?: (open: boolean) => void;
+	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
@@ -57,6 +63,23 @@ export const PortfolioHeader = ({
 
 	const { persist } = useEnvironmentContext();
 
+	const [showHint, setShowHint] = useState<boolean>(false);
+	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("multiple-addresses-hint", undefined);
+
+	useEffect(() => {
+		let id: NodeJS.Timeout;
+
+		if (hasFocus && hintHasShown === undefined && selectedWallets.length > 1) {
+			id = setTimeout(() => {
+				setShowHint(true);
+			}, 1000);
+		}
+
+		return () => {
+			clearTimeout(id);
+		};
+	}, [hasFocus, hintHasShown, selectedWallets.length]);
+
 	const onDeleteAddress = async (address: string) => {
 		for (const wallet of profile.wallets().values()) {
 			if (address === wallet.address()) {
@@ -73,28 +96,59 @@ export const PortfolioHeader = ({
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
 				<div className="flex w-full flex-row items-center justify-between px-4">
-					<div className="flex h-fit flex-row items-center gap-1">
-						<p className="hidden text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50 sm:block">
-							{t("COMMON.VIEWING")}:
-						</p>
+					<Tooltip
+						visible={showHint}
+						interactive={true}
+						content={
+							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pb-px sm:pt-px">
+								<div className="mb-2 block sm:mb-0 sm:inline">
+									<Trans i18nKey="WALLETS.MULTIPLE_ADDRESSES_HINT" />
+								</div>
+								<Button
+									size="xs"
+									variant="transparent"
+									data-testid="HideManageHint"
+									className="h-8 w-full bg-theme-primary-500 px-4 py-1.5 sm:w-auto"
+									onClick={(e) => {
+										e.stopPropagation();
+										persistHintShown(true);
+										setShowHint(false);
+									}}
+								>
+									{t("COMMON.GOT_IT")}
+								</Button>
+							</div>
+						}
+						placement="bottom-end"
+					>
 						<div
-							onClick={() => setShowAddressesPanel(true)}
-							tabIndex={0}
-							onKeyPress={() => setShowAddressesPanel(true)}
-							className="cursor-pointer"
-							data-testid="ShowAddressesPanel"
+							className={cn("flex h-fit flex-row items-center gap-1", {
+								"rounded ring ring-theme-primary-400 ring-offset-4 ring-offset-transparent dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 dark:sm:ring-offset-transparent":
+									showHint,
+							})}
 						>
-							<div className="flex items-center gap-1">
-								<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
-								<Icon
-									name="DoubleChevron"
-									width={26}
-									height={26}
-									className="text-theme-dark-200 text-theme-secondary-700"
-								/>
+							<p className="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50 sm:block">
+								{t("COMMON.VIEWING")}:
+							</p>
+							<div
+								onClick={() => setShowAddressesPanel(true)}
+								tabIndex={0}
+								onKeyPress={() => setShowAddressesPanel(true)}
+								className="cursor-pointer rounded-r"
+								data-testid="ShowAddressesPanel"
+							>
+								<div className="flex items-center gap-1">
+									<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
+									<Icon
+										name="DoubleChevron"
+										width={26}
+										height={26}
+										className="text-theme-dark-200 text-theme-secondary-700"
+									/>
+								</div>
 							</div>
 						</div>
-					</div>
+					</Tooltip>
 					<div className="flex flex-row items-center gap-1">
 						<Button
 							variant="secondary"
