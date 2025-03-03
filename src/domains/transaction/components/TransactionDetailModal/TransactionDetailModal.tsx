@@ -23,7 +23,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
 import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
 import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
-import { isContractTransaction } from "@/domains/transaction/utils";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -70,11 +69,7 @@ export const TransactionDetailContent = ({
 						profile={profile}
 						senderAddress={transaction.sender()}
 						network={transaction.wallet().network()}
-						recipients={recipients.map(({ address, alias }) => ({
-							address,
-							alias,
-							isContract: isContractTransaction(transaction),
-						}))}
+						recipients={recipients}
 						labelClassName={labelClassName}
 					/>
 				</DetailPadded>
