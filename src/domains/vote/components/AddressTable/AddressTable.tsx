@@ -21,6 +21,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 				accessor: (wallet) => wallet.alias() || wallet.address(),
 				cellWidth: "w-80",
 				headerClassName: "no-border",
+				noRoundedBorders: true,
 			},
 			{
 				Header: t("COMMON.BALANCE"),
@@ -82,6 +83,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 					accessor: "onSelect",
 					disableSortBy: true,
 					headerClassName: "no-border",
+					noRoundedBorders: true,
 				},
 			] as Column<Contracts.IReadWriteWallet>[];
 		}
@@ -108,6 +110,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 				accessor: "onSelect",
 				disableSortBy: true,
 				headerClassName: "no-border",
+				noRoundedBorders: true,
 			},
 		] as Column<Contracts.IReadWriteWallet>[];
 	}, [maxVotes, t]);
