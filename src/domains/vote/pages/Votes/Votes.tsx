@@ -17,8 +17,6 @@ import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
-import { Input } from "@/app/components/Input";
-import { Icon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { VotesSection } from "@/domains/vote/components/VotesSection";
 
@@ -43,7 +41,6 @@ export const Votes: FC = () => {
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const {
-		isFilterChanged,
 		filteredWallets,
 		hasEmptyResults,
 		hasWallets,

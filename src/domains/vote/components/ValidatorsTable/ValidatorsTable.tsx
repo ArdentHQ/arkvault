@@ -8,10 +8,8 @@ import { ValidatorsTableProperties, VoteValidatorProperties } from "./Validators
 import { validatorExistsInVotes, useValidatorsTableColumns } from "./ValidatorsTable.helpers";
 import { Table } from "@/app/components/Table";
 import { Pagination } from "@/app/components/Pagination";
-import { EmptyResults } from "@/app/components/EmptyResults";
 import { useBreakpoint } from "@/app/hooks";
 import { ValidatorRowMobile } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobile";
-import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
 
 export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	validators,

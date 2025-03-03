@@ -1,4 +1,3 @@
-import { isEmptyObject } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo, useState } from "react";
 import { useWalletAlias } from "@/app/hooks";
@@ -32,11 +31,6 @@ export const useVoteFilters = ({
 	const [selectedAddress, setSelectedAddress] = useState(walletAddress);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
-
-	const isFilterChanged = useMemo(
-		() => walletsDisplayType !== defaultConfiguration.walletsDisplayType,
-		[walletsDisplayType, defaultConfiguration],
-	);
 
 	const filterFilters = {
 		onChange: (key: string, value: any) => {
@@ -90,7 +84,6 @@ export const useVoteFilters = ({
 		filteredWallets,
 		hasEmptyResults,
 		hasWallets,
-		isFilterChanged,
 		maxVotes,
 		searchQuery,
 		selectedAddress,
