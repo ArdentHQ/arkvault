@@ -205,7 +205,6 @@ export const TransactionRowAddressing = ({
 			address: senderAddress,
 			network,
 			profile,
-			username: transaction.wallet().username(),
 		});
 		return result.alias;
 	}, [senderAddress, network, profile, getWalletAlias]);
