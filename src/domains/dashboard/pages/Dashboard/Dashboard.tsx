@@ -18,9 +18,11 @@ import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 export const Dashboard = ({
 	onCreateAddress,
 	onImportAddress,
+	hasFocus,
 }: {
 	onCreateAddress?: (open: boolean) => void;
 	onImportAddress?: (open: boolean) => void;
+	hasFocus?: boolean;
 }) => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData>();
 
@@ -105,6 +107,7 @@ export const Dashboard = ({
 						<PortfolioHeader
 							profile={activeProfile}
 							votes={votes}
+							hasFocus={hasFocus}
 							handleVotesButtonClick={handleVoteButton}
 							isLoadingVotes={isLoadingVotes}
 							isUpdatingTransactions={isUpdatingTransactions}
