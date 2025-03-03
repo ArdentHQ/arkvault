@@ -727,7 +727,10 @@ describe("useProfileRestore", () => {
 			},
 		);
 
-		await waitFor(() => expect(profileSyncMock).toHaveBeenCalledWith());
+		await waitFor(() => expect(profileSyncMock).toHaveBeenCalledWith({
+			"networkId": "ark.devnet",
+			"ttl": 10_000,
+		}));
 
 		profileSyncMock.mockRestore();
 		dismissToastSpy.mockRestore();
@@ -866,7 +869,7 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		// eslint-disable-next-line sonarjs/no-identical-functions
+
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider
