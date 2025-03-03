@@ -40,7 +40,9 @@ export const useVoteFilters = ({
 
 	const filterFilters = {
 		onChange: (key: string, value: any) => {
-			if (key === "walletsDisplayType") setWalletsDisplayType(value);
+			if (key === "walletsDisplayType") {
+				setWalletsDisplayType(value);
+			}
 		},
 		walletsDisplayType,
 	};
@@ -54,14 +56,20 @@ export const useVoteFilters = ({
 		);
 
 		return usedWallets.filter((wallet) => {
-			if (walletsDisplayType === "starred" && !wallet.isStarred()) return false;
-			if (walletsDisplayType === "ledger" && !wallet.isLedger()) return false;
+			if (walletsDisplayType === "starred" && !wallet.isStarred()) {
+				return false;
+			}
+			if (walletsDisplayType === "ledger" && !wallet.isLedger()) {
+				return false;
+			}
 			return true;
 		});
 	}, [profile, walletsDisplayType, activeNetwork]);
 
 	const filteredWallets = useMemo(() => {
-		if (searchQuery.length === 0) return wallets;
+		if (searchQuery.length === 0) {
+			return wallets;
+		}
 
 		const query = searchQuery.toLowerCase();
 		return wallets.filter((wallet: Contracts.IReadWriteWallet) => {

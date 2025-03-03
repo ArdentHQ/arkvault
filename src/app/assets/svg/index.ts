@@ -227,10 +227,10 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UnderlineSun,
 	User,
 	UserCheckMark,
+	VotesDark,
+	VotesLight,
 	WalletEncryptionDark,
 	WalletEncryptionLight,
 	YourPassphraseDark,
 	YourPassphraseLight,
-	VotesDark,
-	VotesLight,
 };

@@ -23,15 +23,13 @@ export const VotingWallets = ({
 	searchQuery,
 	setSearchQuery,
 	network,
-}: VotingWalletsProperties) => {
-	return (
-		<AddressTable
-			network={network}
-			wallets={wallets}
-			onSelect={onSelectAddress}
-			searchQuery={searchQuery}
-			setSearchQuery={setSearchQuery}
-			showEmptyResults={showEmptyResults}
-		/>
-	);
-};
+}: VotingWalletsProperties) => (
+	<AddressTable
+		network={network}
+		wallets={wallets}
+		onSelect={onSelectAddress}
+		searchQuery={searchQuery}
+		setSearchQuery={setSearchQuery}
+		showEmptyResults={showEmptyResults}
+	/>
+);

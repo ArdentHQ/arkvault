@@ -51,13 +51,13 @@ export const Header = ({ title, titleIcon, titleSuffix, className, subtitle, ext
 	</div>
 );
 
-export const PageHeader = ({ title, titleSuffix, subtitle, extra, border = false, ...params }: Properties) => {
+export const PageHeader = ({ title, titleSuffix, subtitle, extra, border = false, ...parameters }: Properties) => {
 	const { isMdAndAbove } = useBreakpoint();
 
 	if (isMdAndAbove) {
 		return (
 			<Section border={border}>
-				<Header title={title} titleSuffix={titleSuffix} subtitle={subtitle} extra={extra} {...params} />
+				<Header title={title} titleSuffix={titleSuffix} subtitle={subtitle} extra={extra} {...parameters} />
 			</Section>
 		);
 	}
