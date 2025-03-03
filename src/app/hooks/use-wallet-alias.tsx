@@ -12,8 +12,8 @@ interface Properties {
 }
 
 interface WalletAliasResult {
-	alias: string | undefined;
-	isContact: boolean;
+	alias?: string;
+	isContact?: boolean;
 	address: string;
 }
 
