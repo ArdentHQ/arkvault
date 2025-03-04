@@ -23,14 +23,15 @@ export class LedgerTransportFactory {
 	}
 
 	async #supportsUSB(): Promise<boolean> {
-		try {
-			if (await LedgerUSB.isSupported()) {
-				return platform.os?.family !== "Windows" && platform.name !== "Opera";
-			}
-
-			return false;
-		} catch {
-			return false;
-		}
+		throw new NotImplemented(this.constructor.name, this.#supportsUSB.name);
+		// try {
+		// 	if (await LedgerUSB.isSupported()) {
+		// 		return platform.os?.family !== "Windows" && platform.name !== "Opera";
+		// 	}
+		//
+		// 	return false;
+		// } catch {
+		// 	return false;
+		// }
 	}
 }
