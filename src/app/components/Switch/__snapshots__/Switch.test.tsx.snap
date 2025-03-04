@@ -7,6 +7,7 @@ exports[`Switch > should render 1`] = `
   >
     <button
       class="font-semibold select-none text-base first:mr-3 last:ml-3 text-theme-secondary-700 dark:text-theme-secondary-200"
+      type="button"
     >
       Option A
     </button>
@@ -27,6 +28,7 @@ exports[`Switch > should render 1`] = `
     </label>
     <button
       class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-base first:mr-3 last:ml-3"
+      type="button"
     >
       Option B
     </button>
@@ -41,6 +43,7 @@ exports[`Switch > should render disabled 1`] = `
   >
     <button
       class="font-semibold select-none text-base first:mr-3 last:ml-3 text-theme-secondary-700 dark:text-theme-secondary-200 cursor-default"
+      type="button"
     >
       Option A
     </button>
@@ -62,6 +65,7 @@ exports[`Switch > should render disabled 1`] = `
     </label>
     <button
       class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-base first:mr-3 last:ml-3 cursor-default"
+      type="button"
     >
       Option B
     </button>
@@ -76,6 +80,7 @@ exports[`Switch > should render large labels 1`] = `
   >
     <button
       class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
+      type="button"
     >
       Option A
     </button>
@@ -96,6 +101,7 @@ exports[`Switch > should render large labels 1`] = `
     </label>
     <button
       class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
+      type="button"
     >
       Option B
     </button>
@@ -110,6 +116,7 @@ exports[`Switch > should render small labels 1`] = `
   >
     <button
       class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+      type="button"
     >
       Option A
     </button>
@@ -130,6 +137,7 @@ exports[`Switch > should render small labels 1`] = `
     </label>
     <button
       class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+      type="button"
     >
       Option B
     </button>

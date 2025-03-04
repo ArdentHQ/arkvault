@@ -58,7 +58,7 @@ export class ToastService {
 		closeButton: false,
 		hideProgressBar: true,
 		pauseOnFocusLoss: true,
-		position: "bottom-right",
+		position: "bottom-left",
 	};
 
 	public options() {
