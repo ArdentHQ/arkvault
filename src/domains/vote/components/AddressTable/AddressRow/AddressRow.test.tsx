@@ -72,7 +72,9 @@ describe("AddressRow", () => {
 			mnemonic: MNEMONICS[0],
 			network: "ark.devnet",
 		});
+
 		profile.wallets().push(unvotedWallet);
+
 
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
@@ -83,10 +85,13 @@ describe("AddressRow", () => {
 		});
 		profile.wallets().push(wallet2);
 
+		await profile.sync();
 		await syncDelegates(profile);
+
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
 		await wallet.synchroniser().coin();
+
 	});
 
 	beforeEach(() => {

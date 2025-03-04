@@ -19,6 +19,8 @@ describe("SelectAddress", () => {
 			network: "ark.devnet",
 		});
 
+		await wallet.synchroniser().identity()
+
 		profile.wallets().push(wallet);
 		wallets = profile.wallets().values();
 	});
