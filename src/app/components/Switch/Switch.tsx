@@ -10,7 +10,7 @@ const SwitchText = ({
 	selected,
 	disabled,
 	...props
-}: SwitchTextType & React.HTMLAttributes<HTMLButtonElement>) => (
+}: SwitchTextType & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button {...props} className={twMerge(getSwitchTextStyles({ disabled, selected, size }))} />
 );
 
