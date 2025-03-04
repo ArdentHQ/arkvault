@@ -5,16 +5,16 @@ import platform from "platform";
 
 export class LedgerTransportFactory {
 	public async supportedTransport(): Promise<typeof LedgerHID | typeof LedgerUSB> {
-		const [supportsHID, supportsUSB] = await Promise.all([this.#supportsHID(), this.#supportsUSB()]);
+		// const [supportsHID, supportsUSB] = await Promise.all([this.#supportsHID(), this.#supportsUSB()]);
 
-		if (supportsHID) {
-			return LedgerHID;
-		}
-
-		if (supportsUSB) {
-			return LedgerUSB;
-		}
-
+		// if (supportsHID) {
+		// 	return LedgerHID;
+		// }
+		//
+		// if (supportsUSB) {
+		// 	return LedgerUSB;
+		// }
+		//
 		throw new Error("No transports appear to be supported.");
 	}
 
