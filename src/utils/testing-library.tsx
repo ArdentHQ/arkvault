@@ -202,7 +202,8 @@ export const MNEMONICS = [
 ];
 
 export const MAINSAIL_MNEMONICS = [
-	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring"
+	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
+	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe"
 ]
 
 export const breakpoints: {
