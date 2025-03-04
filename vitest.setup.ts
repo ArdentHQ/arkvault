@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import MockDate from "mockdate";
 import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getMainsailProfileId } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
@@ -123,7 +123,9 @@ beforeEach(() => {
 
 	if (process.env.MOCK_AVAILABLE_NETWORKS !== "false") {
 		try {
-			const profile = env.profiles().findById(getDefaultProfileId());
+			const profileId = process.env.USE_MAINSAIL_NETWORK ? getMainsailProfileId() : getDefaultProfileId();
+
+			const profile = env.profiles().findById(profileId);
 			const networks = profile
 				.wallets()
 				.values()

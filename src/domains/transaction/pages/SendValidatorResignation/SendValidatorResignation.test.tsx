@@ -6,11 +6,9 @@ import { Route } from "react-router-dom";
 
 import { SendValidatorResignation } from "./SendValidatorResignation";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import {
 	env,
-	getDefaultProfileId,
-	MNEMONICS,
 	render,
 	screen,
 	syncDelegates,
@@ -18,18 +16,20 @@ import {
 	waitFor,
 	within,
 	act,
+	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
+import { expect } from "vitest";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
 
 let resignationUrl: string;
 
-const passphrase = MNEMONICS[0];
+const passphrase = MAINSAIL_MNEMONICS[0];
 const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
@@ -51,33 +51,39 @@ const renderPage = () => {
 };
 
 const transactionResponse = {
-	amount: () => +transactionFixture.data.amount / 1e8,
+	amount: () => +transactionFixture.data.amount / 1e18,
 	blockId: () => "1",
+	confirmations: () => 154_178,
 	convertedAmount: () => BigNumber.make(10),
 	data: () => ({ data: () => transactionFixture.data }),
-	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
-	explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
-	fee: () => +transactionFixture.data.fee / 1e8,
+	explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${transactionFixture.data.id}`,
+	explorerLinkForBlock: () => `https://mainsail-explorer.ihost.org/block/${transactionFixture.data.blockId}`,
+	fee: () => BigNumber.make(0.000_106_4),
 	id: () => transactionFixture.data.id,
 	isConfirmed: () => true,
 	isDelegateRegistration: () => false,
-	isDelegateResignation: () => false,
+	isDelegateResignation: () => true,
 	isIpfs: () => false,
 	isMultiPayment: () => false,
 	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
 	isSent: () => true,
+	isSuccess: () => true,
 	isTransfer: () => false,
 	isUnvote: () => false,
+	isUsernameRegistration: () => false,
+	isUsernameResignation: () => false,
+	isValidatorRegistration: () => false,
+	isValidatorResignation: () => true,
 	isVote: () => false,
 	isVoteCombination: () => false,
 	memo: () => null,
 	nonce: () => BigNumber.make(1),
 	recipient: () => transactionFixture.data.recipient,
-	sender: () => transactionFixture.data.sender,
+	sender: () => transactionFixture.data.senderAddress,
 	timestamp: () => DateTime.make(),
 	total: () => +transactionFixture.data.amount / 1e8,
-	type: () => "delegateResignation",
+	type: () => "validatorResignation",
 	usesMultiSignature: () => false,
 	wallet: () => wallet,
 };
@@ -94,24 +100,35 @@ let mnemonicMock;
 
 describe("SendValidatorResignation", () => {
 	beforeAll(async () => {
+		process.env.USE_MAINSAIL_NETWORK = "true";
 		vi.useFakeTimers({
 			shouldAdvanceTime: true,
 			toFake: ["setInterval", "clearInterval", "Date"],
 		});
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		// wallet = profile.wallets().findById("d044a552-7a49-411c-ae16-8ff407acc430");
 		wallet = profile.wallets().push(
 			await profile.walletFactory().fromMnemonicWithBIP39({
-				coin: "ARK",
+				coin: "Mainsail",
 				mnemonic: passphrase,
-				network: "ark.devnet",
+				network: "mainsail.devnet",
 			}),
 		);
+
+		vi.spyOn(wallet, "balance").mockReturnValue(1200);
+		vi.spyOn(wallet, "validatorPublicKey").mockReturnValue("validator-public-key");
+		vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => false);
+
+		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
+		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
+			...config,
+			activeNetworkId: wallet.networkId(),
+		});
+
 		await wallet.synchroniser().identity();
 
 		await syncDelegates(profile);
@@ -124,7 +141,7 @@ describe("SendValidatorResignation", () => {
 
 	describe("Validator Resignation", () => {
 		beforeEach(() => {
-			resignationUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-validator-resignation`;
+			resignationUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-validator-resignation`;
 			history.push(resignationUrl);
 
 			mnemonicMock = vi
@@ -133,8 +150,8 @@ describe("SendValidatorResignation", () => {
 
 			server.use(
 				requestMock(
-					"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
-					transactionsFixture,
+					"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
+					transactionFixture,
 				),
 			);
 		});
@@ -189,13 +206,17 @@ describe("SendValidatorResignation", () => {
 			// Fee (advanced)
 			await userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
-			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+			const gasPriceInput: HTMLInputElement = screen.getByTestId("Input_GasPrice");
+			await userEvent.clear(gasPriceInput);
+			await userEvent.type(gasPriceInput, "10");
 
-			inputElement.select();
-			await userEvent.clear(inputElement);
-			await userEvent.type(inputElement, "1");
+			await waitFor(() => expect(gasPriceInput).toHaveValue("10"));
 
-			await waitFor(() => expect(inputElement).toHaveValue("1"));
+			const gasLimitInput: HTMLInputElement = screen.getByTestId("Input_GasLimit");
+			await userEvent.clear(gasLimitInput);
+			await userEvent.type(gasLimitInput, "210000");
+
+			await waitFor(() => expect(gasLimitInput).toHaveValue("210000"));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -205,6 +226,8 @@ describe("SendValidatorResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+
 			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
@@ -212,7 +235,7 @@ describe("SendValidatorResignation", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should go back to wallet details", async () => {
+		it("should go back to dashboard", async () => {
 			const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 			renderPage();
@@ -221,7 +244,7 @@ describe("SendValidatorResignation", () => {
 
 			await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 			historySpy.mockRestore();
 		});
@@ -256,88 +279,14 @@ describe("SendValidatorResignation", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should return to form step by cancelling fee warning", async () => {
-			renderPage();
-
-			await expect(formStep()).resolves.toBeVisible();
-
-			// Fee
-			await userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-			inputElement.select();
-			await userEvent.clear(inputElement);
-			await userEvent.type(inputElement, "30");
-
-			await waitFor(() => expect(inputElement).toHaveValue("30"));
-
-			await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-			await userEvent.click(continueButton());
-
-			await expect(reviewStep()).resolves.toBeVisible();
-
-			await userEvent.click(continueButton());
-
-			await expect(screen.findByTestId("FeeWarning__cancel-button")).resolves.toBeVisible();
-
-			await userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
-
-			await expect(formStep()).resolves.toBeVisible();
-		});
-
-		it("should proceed to authentication step by confirming fee warning", async () => {
-			renderPage();
-
-			await expect(formStep()).resolves.toBeVisible();
-
-			// Fee
-			await userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-			inputElement.select();
-			await userEvent.clear(inputElement);
-			await userEvent.type(inputElement, "30");
-
-			await waitFor(() => expect(inputElement).toHaveValue("30"));
-
-			await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-			await userEvent.click(continueButton());
-
-			await expect(reviewStep()).resolves.toBeVisible();
-
-			await userEvent.click(continueButton());
-
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
-
-			await userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
-
-			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-		});
-
 		it("should show error step and go back", async () => {
-			// Run signDelegate once to prevent assertion error (sdk).
-			try {
-				await wallet.transaction().signValidatorResignation({
-					fee: 4,
-					signatory: await wallet.signatoryFactory().make({
-						mnemonic: MNEMONICS[1],
-					}),
-				});
-			} catch {
-				//
-			}
+			const signMock = vi
+				.spyOn(wallet.transaction(), "signValidatorResignation")
+				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
 				throw new Error("broadcast error");
 			});
-
-			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
 			const { asFragment } = renderPage();
 
@@ -372,39 +321,37 @@ describe("SendValidatorResignation", () => {
 
 			await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-			const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
-			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+			const dashboardPage = `/profiles/${profile.id()}/dashboard`;
+			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(dashboardPage));
 
 			historyMock.mockRestore();
 
-			secondPublicKeyMock.mockRestore();
+			signMock.mockRestore();
 			broadcastMock.mockRestore();
 		});
 
 		it("should successfully sign and submit resignation transaction", async () => {
-			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			});
+
 			const transactionMock = createTransactionMock(wallet);
 
 			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -416,7 +363,7 @@ describe("SendValidatorResignation", () => {
 				expect(sendButton()).toBeEnabled();
 			});
 
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -424,45 +371,43 @@ describe("SendValidatorResignation", () => {
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-			secondPublicKeyMock.mockRestore();
 			signMock.mockRestore();
 			broadcastMock.mockRestore();
 			transactionMock.mockRestore();
 		});
 
 		it("should successfully sign and submit resignation transaction with keyboard", async () => {
-			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			});
+
 			const transactionMock = createTransactionMock(wallet);
 
 			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.keyboard("{enter}");
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+
+			await userEvent.keyboard("{enter}");
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
 			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			userEvent.keyboard("{enter}");
-			userEvent.click(sendButton());
+			await waitFor(() => expect(sendButton()).toBeEnabled());
+			await userEvent.keyboard("{enter}");
 
 			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -470,36 +415,33 @@ describe("SendValidatorResignation", () => {
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-			secondPublicKeyMock.mockRestore();
 			signMock.mockRestore();
 			broadcastMock.mockRestore();
 			transactionMock.mockRestore();
 		});
 
 		it("should click back button after successful submission", async () => {
-			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			});
+
 			const transactionMock = createTransactionMock(wallet);
 
 			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -514,7 +456,7 @@ describe("SendValidatorResignation", () => {
 				expect(sendButton()).toBeEnabled();
 			});
 
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -524,14 +466,13 @@ describe("SendValidatorResignation", () => {
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
-			userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+			await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-			const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
-			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+			const dashboardPage = `/profiles/${profile.id()}/dashboard`;
+			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(dashboardPage));
 
 			historyMock.mockRestore();
 
-			secondPublicKeyMock.mockRestore();
 			signMock.mockRestore();
 			broadcastMock.mockRestore();
 			transactionMock.mockRestore();
@@ -546,14 +487,16 @@ describe("SendValidatorResignation", () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			});
+
 			const transactionMock = createTransactionMock(wallet);
 
-			const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-validator-resignation`;
+			const resignationEncryptedUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-validator-resignation`;
 			history.push(resignationEncryptedUrl);
 
 			render(
