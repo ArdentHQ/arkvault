@@ -68,8 +68,10 @@ export const SidePanel = ({
 		<>
 			<FloatingPortal>
 				{isMounted && (
+					<>
+					<div className="fixed inset-0 z-40 backdrop-blur-xl bg-[#212225] bg-opacity-10 dark:bg-[#101627] dark:bg-opacity-10" />
 					<FloatingOverlay
-						className="z-50 bg-theme-secondary-900-rgba/40 transition-opacity duration-300 dark:bg-black-rgba/40 dark:bg-opacity-80"
+						className="z-50 transition-opacity duration-300"
 						lockScroll
 					>
 						<FloatingFocusManager context={context}>
@@ -107,6 +109,7 @@ export const SidePanel = ({
 							</div>
 						</FloatingFocusManager>
 					</FloatingOverlay>
+					</>
 				)}
 			</FloatingPortal>
 		</>
