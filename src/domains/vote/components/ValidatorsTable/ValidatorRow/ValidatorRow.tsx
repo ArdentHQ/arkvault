@@ -13,6 +13,7 @@ import cn from "classnames";
 import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.helpers";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
+import { Badge } from "@/app/components/Badge";
 
 export interface ValidatorRowProperties {
 	index: number;
@@ -288,8 +289,9 @@ export const ValidatorRow = ({
 			>
 				{isActive ? (
 					<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION")}>
-						<div>
-							<Icon name="StatusOk" className="text-theme-navy-600" size="md" />
+						<div className="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200">
+							{t("WALLETS.STATUS.ACTIVE")}
+							{/* <Icon name="StatusOk" className="text-theme-navy-600" size="md" /> */}
 						</div>
 					</Tooltip>
 				) : (
