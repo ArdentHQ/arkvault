@@ -88,6 +88,7 @@ describe("AddressRowMobile", () => {
 		});
 		profile.wallets().push(wallet2);
 
+		await profile.sync();
 		await syncDelegates(profile);
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();

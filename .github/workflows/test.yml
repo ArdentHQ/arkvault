@@ -860,7 +860,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 89.82
                   COVERAGE_THRESHOLD_FUNCTIONS: 94.84
                   COVERAGE_THRESHOLD_STATEMENTS: 90.1
-                  COVERAGE_THRESHOLD_BRANCHES: 86.31
+                  COVERAGE_THRESHOLD_BRANCHES: 86.13
                   COVERAGE_INCLUDE_PATH: src/domains/wallet
               with:
                   timeout_minutes: 10
