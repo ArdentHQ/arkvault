@@ -154,7 +154,7 @@ export const ValidatorFooter = ({
 								value={selectedVotes.length}
 							/>
 
-							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800"></span>
+							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800" />
 
 							<FooterContent
 								disabled={selectedUnvotes.length === 0}
@@ -162,7 +162,7 @@ export const ValidatorFooter = ({
 								value={selectedUnvotes.length}
 							/>
 
-							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 md:hidden lg:block"></span>
+							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 md:hidden lg:block" />
 
 							<FooterContent
 								className="flex md:hidden lg:flex"
@@ -172,7 +172,7 @@ export const ValidatorFooter = ({
 						</div>
 
 						<div className="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0">
-							<span className="hidden h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 md:block"></span>
+							<span className="hidden h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 md:block" />
 
 							<Tooltip content={tooltipContent} disabled={!isContinueDisabled}>
 								<span data-testid="DelegateTable__continue--wrapper" className="sm:ml-auto sm:pl-6">

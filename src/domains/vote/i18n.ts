@@ -9,7 +9,6 @@ export const translations = {
 		COMMISSION_BY_PERIOD: "Commission ({{period}})",
 		MIN: "Min.",
 		NAME: "Validator",
-		VOTING_ADDRESS: "Voting Address",
 		PAYOUT_INTERVAL: "Payout",
 		TITLE: "Select Validator",
 		TOOLTIP: {
@@ -33,6 +32,7 @@ export const translations = {
 				MINIMUM_AMOUNT: "Minimum voting amount must be at least {{minimumAmount}} {{ coinId }}",
 			},
 		},
+		VOTING_ADDRESS: "Voting Address",
 	},
 
 	VOTES_PAGE: {
