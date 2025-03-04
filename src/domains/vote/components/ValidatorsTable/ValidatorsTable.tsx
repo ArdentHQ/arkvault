@@ -10,6 +10,7 @@ import { Table } from "@/app/components/Table";
 import { Pagination } from "@/app/components/Pagination";
 import { useBreakpoint } from "@/app/hooks";
 import { ValidatorRowMobile } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobile";
+import { VotesSection } from "@/domains/vote/components/VotesSection";
 
 export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	validators,
@@ -23,6 +24,8 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	onContinue,
 	subtitle,
 	searchQuery,
+	setSearchQuery,
+	...properties
 }) => {
 	const { t } = useTranslation();
 	const [currentPage, setCurrentPage] = useState(1);
@@ -245,20 +248,22 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	}, [t, isLoading, totalValidators]);
 
 	return (
-		<div data-testid="ValidatorsTable">
+		<div data-testid="ValidatorsTable" className="pb-18 sm:pb-16 md:pb-18 lg:pb-28">
 			{!!subtitle && subtitle}
 
-			<Table
-				className="with-x-padding"
-				columns={columns}
-				data={tableData}
-				rowsPerPage={validatorsPerPage}
-				currentPage={currentPage}
-				hideHeader={isXs}
-				footer={footer}
-			>
-				{renderTableRow}
-			</Table>
+			<VotesSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} {...properties}>
+				<Table
+					className="with-x-padding"
+					columns={columns}
+					data={tableData}
+					rowsPerPage={validatorsPerPage}
+					currentPage={currentPage}
+					hideHeader={isXs}
+					footer={footer}
+				>
+					{renderTableRow}
+				</Table>
+			</VotesSection>
 
 			{hasMoreValidators && (
 				<div className="mt-8 flex w-full justify-center">

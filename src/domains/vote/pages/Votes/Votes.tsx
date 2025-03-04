@@ -159,45 +159,40 @@ export const Votes: FC = () => {
 			)}
 
 			{isSelectValidatorStep && (
-				<VotesSection
-					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+				<ValidatorsTable
 					searchQuery={searchQuery}
+					validators={filteredValidators}
+					isLoading={isLoadingValidators}
+					maxVotes={maxVotes!}
+					votes={votes}
+					resignedValidatorVotes={resignedValidatorVotes}
+					unvoteValidators={unvoteValidators}
+					voteValidators={voteValidators}
+					selectedWallet={selectedWallet!}
+					onContinue={navigateToSendVote}
 					setSearchQuery={setSearchQuery}
 					totalCurrentVotes={currentVotes.length}
 					selectedFilter={voteFilter}
 					setSelectedFilter={setVoteFilter}
 					selectedAddress={selectedAddress}
-				>
-					<ValidatorsTable
-						searchQuery={searchQuery}
-						validators={filteredValidators}
-						isLoading={isLoadingValidators}
-						maxVotes={maxVotes!}
-						votes={votes}
-						resignedValidatorVotes={resignedValidatorVotes}
-						unvoteValidators={unvoteValidators}
-						voteValidators={voteValidators}
-						selectedWallet={selectedWallet!}
-						onContinue={navigateToSendVote}
-						subtitle={
-							resignedValidatorVotes.length > 0 ? (
-								<Alert className="mb-4">
-									<div data-testid="Votes__resigned-vote">
-										<Trans
-											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
-											values={{
-												name: currentVotes
-													.find(({ wallet }) => wallet!.isResignedDelegate())
-													?.wallet!.username(),
-											}}
-											components={{ bold: <strong /> }}
-										/>
-									</div>
-								</Alert>
-							) : undefined
-						}
-					/>
-				</VotesSection>
+					subtitle={
+						resignedValidatorVotes.length > 0 ? (
+							<Alert className="mb-4">
+								<div data-testid="Votes__resigned-vote">
+									<Trans
+										i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
+										values={{
+											name: currentVotes
+												.find(({ wallet }) => wallet!.isResignedDelegate())
+												?.wallet!.username(),
+										}}
+										components={{ bold: <strong /> }}
+									/>
+								</div>
+							</Alert>
+						) : undefined
+					}
+				/>
 			)}
 		</Page>
 	);

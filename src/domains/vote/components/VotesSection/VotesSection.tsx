@@ -5,7 +5,7 @@ import { Section, SectionProperties } from "@/app/components/Layout";
 import { Input } from "@/app/components/Input";
 import { FilterOption, VotesFilter } from "@/domains/vote/components/VotesFilter";
 
-interface VotesSectionProperties extends SectionProperties {
+export interface VotesSectionProperties extends SectionProperties {
 	searchQuery: string;
 	setSearchQuery: (query: string) => void;
 	selectedAddress?: string;

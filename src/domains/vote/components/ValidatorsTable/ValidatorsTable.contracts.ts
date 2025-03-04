@@ -1,8 +1,9 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
+import { VotesSectionProperties } from "../VotesSection";
 
-export interface ValidatorsTableProperties {
+export interface ValidatorsTableProperties extends VotesSectionProperties {
 	validators: Contracts.IReadOnlyWallet[];
 	isLoading?: boolean;
 	maxVotes: number;
@@ -13,7 +14,6 @@ export interface ValidatorsTableProperties {
 	resignedValidatorVotes?: Contracts.VoteRegistryItem[];
 	onContinue?: (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => void;
 	subtitle?: React.ReactNode;
-	searchQuery?: string;
 }
 
 export interface VoteValidatorProperties {
