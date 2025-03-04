@@ -4,7 +4,7 @@
 import platform from "platform";
 
 export class LedgerTransportFactory {
-	public async supportedTransport(): Promise<typeof LedgerHID | typeof LedgerUSB> {
+	public async supportedTransport(): Promise<uknown> {
 		// const [supportsHID, supportsUSB] = await Promise.all([this.#supportsHID(), this.#supportsUSB()]);
 
 		// if (supportsHID) {
