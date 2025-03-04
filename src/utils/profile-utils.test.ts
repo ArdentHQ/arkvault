@@ -58,6 +58,10 @@ describe("Profile utils", () => {
 
 		await profile.wallets().restore();
 
+		for (const wallet of profile.wallets().values()) {
+			await wallet.synchroniser().identity();
+		}
+
 		expect(getErroredNetworks(profile).hasErroredNetworks).toBe(false);
 		expect(getErroredNetworks(profile).erroredNetworks).toHaveLength(0);
 
