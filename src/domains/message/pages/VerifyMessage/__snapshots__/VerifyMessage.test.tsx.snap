@@ -843,6 +843,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   >
                     <button
                       class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
+                      type="button"
                     >
                       JSON
                     </button>
@@ -864,6 +865,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     </label>
                     <button
                       class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      type="button"
                     >
                       Manual
                     </button>
@@ -1835,6 +1837,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   >
                     <button
                       class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
+                      type="button"
                     >
                       JSON
                     </button>
@@ -1856,6 +1859,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     </label>
                     <button
                       class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      type="button"
                     >
                       Manual
                     </button>
