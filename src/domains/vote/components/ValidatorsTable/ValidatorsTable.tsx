@@ -232,10 +232,12 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 			<tr className="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4">
 				<td colSpan={columns.length} className="pb-4 pt-[11px]">
 					<div className="flex flex-col items-center justify-center">
-						<h3 className="mb-2 text-base font-semibold text-theme-secondary-900">
+						<h3 className="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 							{t("COMMON.EMPTY_RESULTS.TITLE")}
 						</h3>
-						<p className="text-sm text-theme-secondary-700">{t("COMMON.EMPTY_RESULTS.SUBTITLE")}</p>
+						<p className="text-sm text-theme-secondary-700 dark:text-theme-secondary-600">
+							{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+						</p>
 					</div>
 				</td>
 			</tr>
