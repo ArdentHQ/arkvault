@@ -19,13 +19,13 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 h-[34px] overflow-hidden"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
-                      aria-invalid="true"
+                      aria-invalid="false"
                       autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12"
                       data-testid="InputCurrency"
@@ -34,56 +34,6 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
                       type="text"
                       value="0"
                     />
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
-                    data-testid="Input__addon-end"
-                  >
-                    <span
-                      data-errortext="Minimum voting amount must be at least 10 ARK"
-                      data-testid="Input__error"
-                    >
-                      <div
-                        class="text-theme-danger-500"
-                      >
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="circle-exclamation-mark"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </span>
                   </div>
                 </div>
               </div>
@@ -128,13 +78,13 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 h-[34px] overflow-hidden"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
-                      aria-invalid="true"
+                      aria-invalid="false"
                       autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12"
                       data-testid="InputCurrency"
@@ -143,56 +93,6 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
                       type="text"
                       value="0"
                     />
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
-                    data-testid="Input__addon-end"
-                  >
-                    <span
-                      data-errortext="Minimum voting amount must be at least 10 ARK"
-                      data-testid="Input__error"
-                    >
-                      <div
-                        class="text-theme-danger-500"
-                      >
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="circle-exclamation-mark"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </span>
                   </div>
                 </div>
               </div>

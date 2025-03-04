@@ -1,5 +1,5 @@
 import { Currency } from "@ardenthq/sdk-intl";
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Input } from "./Input";
 import { Networks } from "@ardenthq/sdk";
