@@ -291,13 +291,12 @@ export const ValidatorRow = ({
 					<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION")}>
 						<div className="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200">
 							{t("WALLETS.STATUS.ACTIVE")}
-							{/* <Icon name="StatusOk" className="text-theme-navy-600" size="md" /> */}
 						</div>
 					</Tooltip>
 				) : (
 					<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION")}>
-						<div>
-							<Icon name="StatusStandby" className="text-theme-warning-500" size="md" />
+						<div className="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200">
+							{t("WALLETS.STATUS.STANDBY")}
 						</div>
 					</Tooltip>
 				)}

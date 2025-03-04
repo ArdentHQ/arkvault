@@ -17,6 +17,7 @@ import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { Label } from "@/app/components/Label";
 
 interface AddressRowProperties {
 	index: number;
@@ -126,19 +127,25 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		assertReadOnlyWallet(wallet);
 
 		if (wallet.isResignedDelegate()) {
-			return <StatusIcon label={t("WALLETS.STATUS.RESIGNED")} icon="CircleCross" color="text-theme-danger-400" />;
+			return (
+				<div className="min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
+					{t("WALLETS.STATUS.RESIGNED")}
+				</div>
+			);
 		}
 
 		if (Number(wallet.rank()) > activeDelegates) {
-			return <StatusIcon label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />;
+			return (
+				<div className="min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
+					{t("WALLETS.STATUS.STANDBY")}
+				</div>
+			);
 		}
 
 		return (
-			<StatusIcon
-				label={t("WALLETS.STATUS.ACTIVE")}
-				icon="CircleCheckMark"
-				color="text-theme-navy-600 dark:text-theme-primary-600"
-			/>
+			<div className="min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500">
+				{t("WALLETS.STATUS.ACTIVE")}
+			</div>
 		);
 	};
 
