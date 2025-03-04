@@ -11,6 +11,7 @@ import { Button } from "@/app/components/Button";
 import { Tooltip } from "@/app/components/Tooltip";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
+import { twMerge } from "tailwind-merge";
 
 interface FooterContentProperties {
 	label: string;
@@ -20,8 +21,8 @@ interface FooterContentProperties {
 }
 
 const FooterContent = ({ label, value, disabled, className }: FooterContentProperties) => (
-	<div className={cn("flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6", className)}>
-		<div className="flex flex-col justify-between sm:text-right">
+	<div className={twMerge("flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6", className)}>
+		<div className="flex flex-row items-center space-x-2">
 			<LabelWrapper>{label}</LabelWrapper>
 			<TextWrapper disabled={disabled} data-testid={`DelegateTable__footer--${label.toLocaleLowerCase()}`}>
 				<div className="flex items-center justify-start md:justify-end">
@@ -99,25 +100,28 @@ export const ValidatorFooter = ({
 
 	return (
 		<div
-			className="fixed inset-x-0 bottom-0 mb-14 h-auto w-screen bg-theme-background py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:mb-0 md:py-4"
+			className="dark:bg-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t border-theme-secondary-300 bg-theme-background py-3 dark:border-theme-dark-700 sm:mb-0"
 			data-testid="DelegateTable__footer"
 		>
 			<div className="mx-auto px-8 lg:container md:px-10">
-				<div className="flex flex-col space-y-3 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0">
-					<div className="flex flex-grow divide-theme-secondary-300 overflow-x-auto dark:divide-theme-secondary-800 sm:mr-auto sm:divide-x">
+				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
+					<div className="hidden flex-grow divide-theme-secondary-300 overflow-x-auto dark:divide-theme-secondary-800 sm:mr-auto sm:divide-x md:flex">
 						<div className={cn("flex flex-grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>
 							<div
-								className={cn("flex h-full flex-grow flex-col justify-between overflow-x-auto", {
+								className={cn("flex h-full flex-1 flex-grow flex-row items-center overflow-x-auto", {
 									"w-36": requiresStakeAmount,
 								})}
 							>
-								<LabelWrapper className="hidden sm:block">{t("COMMON.ADDRESS")}</LabelWrapper>
-								<div className="flex h-5 items-center overflow-hidden lg:h-auto lg:space-y-2">
+								<div className="flex items-center space-x-2 overflow-hidden">
+									<LabelWrapper className="hidden whitespace-nowrap sm:block">
+										{t("VOTE.VALIDATOR_TABLE.VOTING_ADDRESS")}:
+									</LabelWrapper>
+
 									<div className="lg:text flex w-full overflow-x-auto xl:-mt-px">
 										<Address
 											address={selectedWallet.address()}
 											walletName={selectedWallet.alias()}
-											addressClass="text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
+											addressClass="text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
 											walletNameClass="text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
 										/>
 									</div>
@@ -127,7 +131,7 @@ export const ValidatorFooter = ({
 
 						{requiresStakeAmount && (
 							<div
-								className="flex flex-col space-y-2 px-6"
+								className="flex flex-row space-x-2 px-6"
 								data-testid="DelegateTable__available-balance"
 							>
 								<LabelWrapper>
@@ -141,13 +145,16 @@ export const ValidatorFooter = ({
 							</div>
 						)}
 					</div>
-					<div className="flex h-full border-t border-theme-secondary-300 pt-3 dark:border-theme-secondary-800 sm:border-l sm:border-t-0 sm:pt-0 md:border-l-0">
-						<div className="-ml-6 flex divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:ml-0">
+					<div className="flex flex-1 flex-col items-center justify-center sm:flex-row">
+						<div className="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none">
 							<FooterContent
+								className="pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
 								disabled={selectedVotes.length === 0}
 								label={t("VOTE.VALIDATOR_TABLE.VOTES")}
 								value={selectedVotes.length}
 							/>
+
+							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800"></span>
 
 							<FooterContent
 								disabled={selectedUnvotes.length === 0}
@@ -155,24 +162,32 @@ export const ValidatorFooter = ({
 								value={selectedUnvotes.length}
 							/>
 
+							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 md:hidden lg:block"></span>
+
 							<FooterContent
-								className="hidden md:flex"
+								className="flex md:hidden lg:flex"
 								label={t("VOTE.VALIDATOR_TABLE.TOTAL")}
 								value={`${totalVotes}/${maxVotes}`}
 							/>
 						</div>
 
-						<Tooltip content={tooltipContent} disabled={!isContinueDisabled}>
-							<span data-testid="DelegateTable__continue--wrapper" className="ml-auto">
-								<Button
-									disabled={isContinueDisabled}
-									onClick={() => onContinue?.(selectedUnvotes, selectedVotes)}
-									data-testid="DelegateTable__continue-button"
-								>
-									{t("COMMON.CONTINUE")}
-								</Button>
-							</span>
-						</Tooltip>
+						<div className="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0">
+							<span className="hidden h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 md:block"></span>
+
+							<Tooltip content={tooltipContent} disabled={!isContinueDisabled}>
+								<span data-testid="DelegateTable__continue--wrapper" className="sm:ml-auto sm:pl-6">
+									<Button
+										disabled={isContinueDisabled}
+										onClick={() => onContinue?.(selectedUnvotes, selectedVotes)}
+										data-testid="DelegateTable__continue-button"
+										size="sm"
+										className="w-full sm:w-auto"
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								</span>
+							</Tooltip>
+						</div>
 					</div>
 				</div>
 			</div>

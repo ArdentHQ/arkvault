@@ -248,7 +248,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	}, [t, isLoading, totalValidators]);
 
 	return (
-		<div data-testid="ValidatorsTable" className="pb-18 sm:pb-16 md:pb-18 lg:pb-28">
+		<div data-testid="ValidatorsTable" className="pb-10 sm:pb-16 md:pb-24 lg:pb-24">
 			{!!subtitle && subtitle}
 
 			<VotesSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} {...properties}>
@@ -266,7 +266,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 			</VotesSection>
 
 			{hasMoreValidators && (
-				<div className="mt-8 flex w-full justify-center">
+				<div className="mt-8 flex w-full justify-center px-6 md:px-10">
 					<Pagination
 						totalCount={totalValidators}
 						itemsPerPage={validatorsPerPage}
