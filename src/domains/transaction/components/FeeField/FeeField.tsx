@@ -1,6 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo, useRef, useCallback } from "react";
 import { useFormContext } from "react-hook-form";
 
 import { useDebounce, useFees } from "@/app/hooks";
@@ -36,16 +36,16 @@ export const MIN_GAS_PRICE = 5;
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
 	const { calculate } = useFees(profile);
+	const { setValue, getValues, watch } = useFormContext();
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
+	const [fees, setFees] = useState<Record<string, any> | undefined>(undefined);
 
-	const { watch, setValue, getValues } = useFormContext();
-	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
-
-	const gasPrice = getValues("gasPrice") as number;
-	const gasLimit = getValues("gasLimit") as number;
+	const gasPriceRef = useRef<number | undefined>(getValues("gasPrice"));
+	const gasLimitRef = useRef<number | undefined>(getValues("gasLimit"));
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
+	const inputFeeSettings = watch("inputFeeSettings") || {};
 
 	useEffect(() => {
 		const recalculateFee = async () => {
@@ -59,57 +59,100 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			});
 
 			/* istanbul ignore else -- @preserve */
-			if (getValues("gasPrice") === undefined) {
+			if (gasPriceRef.current === undefined) {
+				gasPriceRef.current = transactionFees.avg;
 				setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
 			}
 
-			if (getValues("gasLimit") === undefined) {
+			if (gasLimitRef.current === undefined) {
+				gasLimitRef.current = GasLimit[type];
 				setValue("gasLimit", GasLimit[type], { shouldDirty: true, shouldValidate: true });
 			}
 
-			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
-
+			setFees(transactionFees);
 			setIsLoadingFee(false);
 		};
 
 		void recalculateFee();
-	}, [calculate, data, getValues, network.id(), setValue, type]);
+	}, [calculate, data, network.id(), setValue, type]);
 
-	return (
-		<InputFee
-			min={fees?.min}
-			avg={fees?.avg}
-			max={fees?.max}
-			loading={!fees || isLoadingFee}
-			gasPrice={gasPrice}
-			gasLimit={gasLimit}
-			defaultGasLimit={GasLimit[type]}
-			minGasPrice={MIN_GAS_PRICE}
-			gasPriceStep={1}
-			network={network}
-			profile={profile}
-			onChangeGasPrice={(value) => {
+	const handleGasPriceChange = useCallback(
+		(value: number) => {
+			if (gasPriceRef.current !== value) {
+				gasPriceRef.current = value;
 				setValue("gasPrice", value, { shouldDirty: true, shouldValidate: true });
-			}}
-			onChangeGasLimit={(value) => {
-				setValue("gasLimit", value, { shouldDirty: true, shouldValidate: true });
-			}}
-			viewType={inputFeeSettings.viewType}
-			onChangeViewType={(viewType) => {
-				setValue(
-					"inputFeeSettings",
-					{ ...inputFeeSettings, viewType },
-					{ shouldDirty: true, shouldValidate: true },
-				);
-			}}
-			selectedFeeOption={inputFeeSettings.selectedFeeOption}
-			onChangeFeeOption={(option) => {
-				setValue(
-					"inputFeeSettings",
-					{ ...inputFeeSettings, selectedFeeOption: option },
-					{ shouldDirty: true, shouldValidate: true },
-				);
-			}}
-		/>
+			}
+		},
+		[setValue],
 	);
+
+	const handleGasLimitChange = useCallback(
+		(value: number) => {
+			if (gasLimitRef.current !== value) {
+				gasLimitRef.current = value;
+				setValue("gasLimit", value, { shouldDirty: true, shouldValidate: true });
+			}
+		},
+		[setValue],
+	);
+
+	const handleViewTypeChange = useCallback(
+		(viewType) => {
+			setValue(
+				"inputFeeSettings",
+				{ ...inputFeeSettings, viewType },
+				{ shouldDirty: true, shouldValidate: true },
+			);
+		},
+		[setValue, inputFeeSettings],
+	);
+
+	const handleFeeOptionChange = useCallback(
+		(option) => {
+			setValue(
+				"inputFeeSettings",
+				{ ...inputFeeSettings, selectedFeeOption: option },
+				{ shouldDirty: true, shouldValidate: true },
+			);
+		},
+		[setValue, inputFeeSettings],
+	);
+
+	const memoizedInputFee = useMemo(() => {
+		return (
+			<InputFee
+				min={fees?.min}
+				avg={fees?.avg}
+				max={fees?.max}
+				loading={!fees || isLoadingFee}
+				gasPrice={gasPriceRef.current || 0}
+				gasLimit={gasLimitRef.current || 0}
+				defaultGasLimit={GasLimit[type]}
+				minGasPrice={MIN_GAS_PRICE}
+				gasPriceStep={1}
+				network={network}
+				profile={profile}
+				onChangeGasPrice={handleGasPriceChange}
+				onChangeGasLimit={handleGasLimitChange}
+				viewType={inputFeeSettings.viewType}
+				onChangeViewType={handleViewTypeChange}
+				selectedFeeOption={inputFeeSettings.selectedFeeOption}
+				onChangeFeeOption={handleFeeOptionChange}
+			/>
+		);
+	}, [
+		fees,
+		isLoadingFee,
+		network,
+		profile,
+		handleGasPriceChange,
+		handleGasLimitChange,
+		inputFeeSettings.viewType,
+		inputFeeSettings.selectedFeeOption,
+		handleViewTypeChange,
+		handleFeeOptionChange,
+		type,
+	]);
+
+	return memoizedInputFee;
 };
