@@ -66,13 +66,15 @@ const transactionResponse = {
 	isReturn: () => false,
 	isSent: () => true,
 	isTransfer: () => false,
-	isUsernameRegistration: () => false,
 	isUnvote: () => false,
+	isUsernameRegistration: () => false,
 	isUsernameResignation: () => false,
 	isValidatorRegistration: () => false,
 	isValidatorResignation: () => true,
 	isVote: () => false,
+	isSuccess: () => true,
 	isVoteCombination: () => false,
+	confirmations: () => 154_178,
 	memo: () => null,
 	nonce: () => BigNumber.make(1),
 	recipient: () => transactionFixture.data.recipient,
@@ -82,8 +84,6 @@ const transactionResponse = {
 	type: () => "validatorResignation",
 	usesMultiSignature: () => false,
 	wallet: () => wallet,
-	isSuccess: () => true,
-	confirmations: () => 154178,
 };
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -328,51 +328,51 @@ describe("SendValidatorResignation", () => {
 			broadcastMock.mockRestore();
 		});
 
-		// it("should successfully sign and submit resignation transaction", async () => {
-		// 	const signMock = vi
-		// 		.spyOn(wallet.transaction(), "signValidatorResignation")
-		// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-		//
-		// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-		// 		accepted: [transactionFixture.data.id],
-		// 		errors: {},
-		// 		rejected: [],
-		// 	});
-		//
-		// 	const transactionMock = createTransactionMock(wallet);
-		//
-		// 	renderPage();
-		//
-		// 	await expect(formStep()).resolves.toBeVisible();
-		//
-		// 	await userEvent.click(continueButton());
-		//
-		// 	await expect(reviewStep()).resolves.toBeVisible();
-		//
-		// 	await userEvent.click(continueButton());
-		//
-		// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-		//
-		// 	await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
-		// 	await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-		// 	await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-		//
-		// 	await waitFor(() => {
-		// 		expect(sendButton()).toBeEnabled();
-		// 	});
-		//
-		// 	await userEvent.click(sendButton());
-		//
-		// 	await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
-		//
-		// 	await act(() => vi.runOnlyPendingTimers());
-		//
-		// 	await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-		//
-		// 	signMock.mockRestore();
-		// 	broadcastMock.mockRestore();
-		// 	transactionMock.mockRestore();
-		// });
+		it("should successfully sign and submit resignation transaction", async () => {
+			const signMock = vi
+				.spyOn(wallet.transaction(), "signValidatorResignation")
+				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+				accepted: [transactionFixture.data.id],
+				errors: {},
+				rejected: [],
+			});
+
+			const transactionMock = createTransactionMock(wallet);
+
+			renderPage();
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			await userEvent.click(continueButton());
+
+			await expect(reviewStep()).resolves.toBeVisible();
+
+			await userEvent.click(continueButton());
+
+			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+			await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+			await waitFor(() => {
+				expect(sendButton()).toBeEnabled();
+			});
+
+			await userEvent.click(sendButton());
+
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+			await act(() => vi.runOnlyPendingTimers());
+
+			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
+			signMock.mockRestore();
+			broadcastMock.mockRestore();
+			transactionMock.mockRestore();
+		});
 
 
 		it("should successfully sign and submit resignation transaction with keyboard", async () => {
