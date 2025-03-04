@@ -15,7 +15,9 @@ import {
 	syncFees,
 	waitFor,
 	within,
-	act, getMainsailProfileId, MAINSAIL_MNEMONICS,
+	act,
+	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import { BigNumber } from "@ardenthq/sdk-helpers";
@@ -373,7 +375,6 @@ describe("SendValidatorResignation", () => {
 			broadcastMock.mockRestore();
 			transactionMock.mockRestore();
 		});
-
 
 		it("should successfully sign and submit resignation transaction with keyboard", async () => {
 			const signMock = vi
