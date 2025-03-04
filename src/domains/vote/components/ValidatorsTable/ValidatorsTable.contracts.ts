@@ -1,7 +1,7 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-import { VotesSectionProperties } from "../VotesSection";
+import { VotesSectionProperties } from "@/domains/vote/components/VotesSection";
 
 export interface ValidatorsTableProperties extends Omit<VotesSectionProperties, "children"> {
 	validators: Contracts.IReadOnlyWallet[];

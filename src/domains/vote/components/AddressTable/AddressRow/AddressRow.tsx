@@ -7,7 +7,6 @@ import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Circle } from "@/app/components/Circle";
-import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { WalletIcons } from "@/app/components/WalletIcons";
@@ -17,7 +16,6 @@ import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import { Label } from "@/app/components/Label";
 
 interface AddressRowProperties {
 	index: number;
@@ -25,14 +23,6 @@ interface AddressRowProperties {
 	wallet: Contracts.IReadWriteWallet;
 	onSelect?: (walletAddress: string) => void;
 }
-
-const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color: string }) => (
-	<Tooltip content={label}>
-		<span>
-			<Icon name={icon} className={color} size="lg" data-testid="StatusIcon__icon" />
-		</span>
-	</Tooltip>
-);
 
 export const WalletAvatar = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
 	if (!wallet) {
