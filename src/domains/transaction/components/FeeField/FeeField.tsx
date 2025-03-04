@@ -118,8 +118,8 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		[setValue, inputFeeSettings],
 	);
 
-	const memoizedInputFee = useMemo(() => {
-		return (
+	return useMemo(
+		() => (
 			<InputFee
 				min={fees?.min}
 				avg={fees?.avg}
@@ -139,20 +139,19 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				selectedFeeOption={inputFeeSettings.selectedFeeOption}
 				onChangeFeeOption={handleFeeOptionChange}
 			/>
-		);
-	}, [
-		fees,
-		isLoadingFee,
-		network,
-		profile,
-		handleGasPriceChange,
-		handleGasLimitChange,
-		inputFeeSettings.viewType,
-		inputFeeSettings.selectedFeeOption,
-		handleViewTypeChange,
-		handleFeeOptionChange,
-		type,
-	]);
-
-	return memoizedInputFee;
+		),
+		[
+			fees,
+			isLoadingFee,
+			network,
+			profile,
+			handleGasPriceChange,
+			handleGasLimitChange,
+			inputFeeSettings.viewType,
+			inputFeeSettings.selectedFeeOption,
+			handleViewTypeChange,
+			handleFeeOptionChange,
+			type,
+		],
+	);
 };
