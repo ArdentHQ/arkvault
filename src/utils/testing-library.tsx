@@ -201,6 +201,10 @@ export const MNEMONICS = [
 	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
 ];
 
+export const MAINSAIL_MNEMONICS = [
+	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring"
+]
+
 export const breakpoints: {
 	[key in LayoutBreakpoint | "xs"]: number;
 } = {

@@ -43,6 +43,7 @@ export function Switch<TOptionValue = string>({
 			disabled={disabled}
 			size={size}
 			selected={option.value === value}
+			type="button"
 			onClick={() => !disabled && onChange(option.value)}
 		>
 			{option.label}
