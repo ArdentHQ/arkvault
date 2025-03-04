@@ -1,6 +1,7 @@
 // Based on https://github.com/near/near-ledger-js/blob/master/supportedTransports.js
 // import LedgerHID from "@ledgerhq/hw-transport-webhid";
 // import LedgerUSB from "@ledgerhq/hw-transport-webusb";
+import { NotImplemented } from "@/app/lib";
 import platform from "platform";
 
 export class LedgerTransportFactory {
