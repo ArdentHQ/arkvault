@@ -75,7 +75,6 @@ describe("AddressRow", () => {
 
 		profile.wallets().push(unvotedWallet);
 
-
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
 		wallet2 = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
@@ -91,7 +90,6 @@ describe("AddressRow", () => {
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
 		await wallet.synchroniser().coin();
-
 	});
 
 	beforeEach(() => {
