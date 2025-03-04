@@ -25,7 +25,7 @@ export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyPro
 		useEffect(() => {
 			// when value is changed outside, update amount as well
 			const newValue = sanitize(value?.toString(), 999);
-			setAmount((prev) => (prev !== newValue ? newValue : prev));
+			setAmount((prev) => (prev === newValue ? prev : newValue));
 		}, [value]);
 
 		const handleInput = useCallback(
