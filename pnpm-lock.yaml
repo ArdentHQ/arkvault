@@ -26,9 +26,6 @@ importers:
       '@ardenthq/sdk-intl':
         specifier: 2.0.0-alpha.57
         version: 2.0.0-alpha.57
-      '@ardenthq/sdk-ledger':
-        specifier: 2.0.0-alpha.57
-        version: 2.0.0-alpha.57
       '@ardenthq/sdk-mainsail':
         specifier: 2.0.0-alpha.57
         version: 2.0.0-alpha.57(encoding@0.1.13)(typescript@5.5.4)
@@ -44,6 +41,12 @@ importers:
       '@konforti/react-truncate':
         specifier: ^1.1.0
         version: 1.1.0
+      '@ledgerhq/hw-transport-webhid':
+        specifier: ^6.30.0
+        version: 6.30.0
+      '@ledgerhq/hw-transport-webusb':
+        specifier: ^6.29.4
+        version: 6.29.4
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.4)
@@ -80,6 +83,9 @@ importers:
       p-retry:
         specifier: ^6.2.0
         version: 6.2.0
+      platform:
+        specifier: ^1.3.6
+        version: 1.3.6
       qr-scanner:
         specifier: ^1.4.2
         version: 1.4.2
@@ -414,10 +420,6 @@ packages:
 
   '@ardenthq/sdk-intl@2.0.0-alpha.57':
     resolution: {integrity: sha512-N8QTK1NQsGtuCZEK7poLlfKn1CCaokfqxrAL3XbaN4RqjfVeg9Wp/a2D+PtBI6yEKVMZ1ZnJ2MeU2Mroxj7p2w==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-ledger@2.0.0-alpha.57':
-    resolution: {integrity: sha512-MZbudDj/zXfgA1hFBuc0Ex5BmQX68I8E26IRL8l/PuKowjDiPyzgYDrBzpiNPftFC7JEy1kdV5T5qy7Jl2QRbw==}
     engines: {node: '>=16.0.0'}
 
   '@ardenthq/sdk-mainsail@2.0.0-alpha.57':
@@ -8517,13 +8519,6 @@ snapshots:
     dependencies:
       dayjs: 1.11.13
       dinero.js: 1.9.1
-
-  '@ardenthq/sdk-ledger@2.0.0-alpha.57':
-    dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.57
-      '@ledgerhq/hw-transport-webhid': 6.30.0
-      '@ledgerhq/hw-transport-webusb': 6.29.4
-      platform: 1.3.6
 
   '@ardenthq/sdk-mainsail@2.0.0-alpha.57(encoding@0.1.13)(typescript@5.5.4)':
     dependencies:
