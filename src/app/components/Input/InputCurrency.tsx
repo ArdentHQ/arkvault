@@ -24,33 +24,28 @@ export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyPro
 
 		useEffect(() => {
 			// when value is changed outside, update amount as well
-			const newValue = sanitize(value?.toString(), 999);
-			setAmount((prev) => (prev === newValue ? prev : newValue));
+			setAmount(sanitize(value?.toString(), 999));
 		}, [value]);
 
-		const handleInput = useCallback(
-			(event: React.ChangeEvent<HTMLInputElement>) => {
-				const sanitizedValue = sanitize(event.target.value, 999);
-				if (amount !== sanitizedValue) {
-					setAmount(sanitizedValue);
-					onChange?.(sanitizedValue);
-				}
-			},
-			[amount, onChange],
-		);
+		const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+			const sanitizedValue = sanitize(event.target.value, 999);
 
-		const handleBlur = useCallback(
-			(event: React.FocusEvent<HTMLInputElement>) => {
-				const decimals = network?.toObject().currency.decimals ?? 18;
-				const sanitizedValue = sanitize(event.target.value, decimals);
-				if (amount !== sanitizedValue) {
-					setAmount(sanitizedValue);
-					onChange?.(sanitizedValue);
-				}
-				onBlur?.(event);
-			},
-			[amount, network, onChange, onBlur],
-		);
+			setAmount(sanitizedValue);
+
+			onChange?.(sanitizedValue);
+		};
+
+		const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+			const sanitizedValue = sanitize(event.target.value, network?.toObject().currency.decimals ?? 18);
+
+			setAmount(sanitizedValue);
+
+			if (value !== sanitizedValue) {
+				onChange?.(sanitizedValue);
+			}
+
+			onBlur?.(event);
+		};
 
 		return (
 			<div className="relative">
