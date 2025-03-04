@@ -171,28 +171,22 @@ describe("App Main", () => {
 		profileSyncMock.mockRestore();
 	});
 
-	it("should redirect to login page if profile changes", async () => {
-		let onProfileUpdated: () => void;
-		const { useProfileSynchronizer } = useProfileSynchronizerHook;
-
-		vi.spyOn(useProfileSynchronizerHook, "useProfileSynchronizer").mockImplementation((parameters: any) => {
-			onProfileUpdated = parameters.onProfileUpdated as () => void;
-			return useProfileSynchronizer(useProfileSynchronizer);
-		});
+	it("should enter profile and sync", async () => {
+		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
+		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
-
 		history.push(profileUrl);
 
-		renderComponent(profileUrl, { route: profileUrl });
+		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
+		await waitFor(() => expect(successToastSpy).toHaveBeenCalled());
 
-		act(() => {
-			onProfileUpdated();
-		});
-
-		await waitFor(() => expect(history.location.pathname).toBe("/"));
+		successToastSpy.mockRestore();
+		warningToastSpy.mockRestore();
+		dismissToastSpy.mockRestore();
 	});
 
 	it("should show warning toast when profile has ledger wallets in an incompatible browser", async () => {
@@ -226,18 +220,27 @@ describe("App Main", () => {
 		warningToastSpy.mockRestore();
 	});
 
-	it("should enter profile and sync", async () => {
-		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
+	it("should redirect to login page if profile changes", async () => {
+		let onProfileUpdated: () => void;
+		const { useProfileSynchronizer } = useProfileSynchronizerHook;
+
+		vi.spyOn(useProfileSynchronizerHook, "useProfileSynchronizer").mockImplementation((parameters: any) => {
+			onProfileUpdated = parameters.onProfileUpdated as () => void;
+			return useProfileSynchronizer(useProfileSynchronizer);
+		});
 
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
+
 		history.push(profileUrl);
 
-		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
+		renderComponent(profileUrl, { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 
-		warningToastSpy.mockRestore();
-		dismissToastSpy.mockRestore();
+		act(() => {
+			onProfileUpdated();
+		});
+
+		await waitFor(() => expect(history.location.pathname).toBe("/"));
 	});
 });
