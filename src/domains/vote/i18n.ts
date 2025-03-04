@@ -44,6 +44,6 @@ export const translations = {
 		SEARCH_WALLET_PLACEHOLDER: "Enter the wallet’s name or address",
 		SELECT_CRYPTOASSET_MESSAGE: "Select one of the proposed cryptoassets above to vote for a validator.",
 		SUBTITLE: "Manage your cryptoasset staking.",
-		TITLE: "My Votes",
+		TITLE: "Votes",
 	},
 };
