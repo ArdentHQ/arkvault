@@ -1,8 +1,8 @@
-import { LedgerTransportFactory } from "@ardenthq/sdk-ledger";
 import { Contracts } from "@ardenthq/sdk";
 import { isUnit } from "@/utils/test-helpers";
+import { LedgerTransportFactory } from "@/app/contexts/Ledger";
 
-export const supportedTransport = async () => new LedgerTransportFactory().supportedTransport();
+export const supportedTransport = async () => await new LedgerTransportFactory().supportedTransport();
 
 export const closeDevices = async () => {
 	const transport = await supportedTransport();
