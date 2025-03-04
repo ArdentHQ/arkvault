@@ -28,7 +28,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	const { env, persist } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile });
-	const { activeNetwork } = useActiveNetwork({ profile })
+	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const importWalletByType = async ({
 		network,
