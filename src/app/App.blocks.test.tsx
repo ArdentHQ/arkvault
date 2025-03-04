@@ -226,7 +226,6 @@ describe("App Main", () => {
 		warningToastSpy.mockRestore();
 	});
 
-
 	it("should enter profile and sync", async () => {
 		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
@@ -241,5 +240,4 @@ describe("App Main", () => {
 		warningToastSpy.mockRestore();
 		dismissToastSpy.mockRestore();
 	});
-
 });
