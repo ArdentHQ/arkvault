@@ -1,6 +1,6 @@
 // Based on https://github.com/near/near-ledger-js/blob/master/supportedTransports.js
-import LedgerHID from "@ledgerhq/hw-transport-webhid";
-import LedgerUSB from "@ledgerhq/hw-transport-webusb";
+// import LedgerHID from "@ledgerhq/hw-transport-webhid";
+// import LedgerUSB from "@ledgerhq/hw-transport-webusb";
 import platform from "platform";
 
 export class LedgerTransportFactory {
@@ -19,11 +19,7 @@ export class LedgerTransportFactory {
 	}
 
 	async #supportsHID(): Promise<boolean> {
-		try {
-			return await LedgerHID.isSupported();
-		} catch {
-			return false;
-		}
+		throw new NotImplemented(this.constructor.name, this.#supportsHID.name);
 	}
 
 	async #supportsUSB(): Promise<boolean> {
