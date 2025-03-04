@@ -220,7 +220,11 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							{debouncedInvalid && (
 								<Tooltip content={debouncedError} size="sm">
 									<span data-errortext={debouncedError} data-testid="Input__error">
-										<Icon name="CircleExclamationMark" className="text-theme-danger-500" size="lg" />
+										<Icon
+											name="CircleExclamationMark"
+											className="text-theme-danger-500"
+											size="lg"
+										/>
 									</span>
 								</Tooltip>
 							)}
