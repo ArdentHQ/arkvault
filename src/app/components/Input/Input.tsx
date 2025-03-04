@@ -1,6 +1,5 @@
 import cn from "classnames";
-import React, { forwardRef, useEffect, useRef } from "react";
-
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 import { InputSuggestion } from "./InputSuggestion";
 import { useFormField } from "@/app/components/Form/useFormField";
 import { Icon } from "@/app/components/Icon";
@@ -123,7 +122,6 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 		reference,
 	) => {
 		let fieldContext = useFormField();
-
 		if (ignoreContext) {
 			fieldContext = undefined;
 		}
@@ -131,8 +129,24 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 		const isInvalidValue = fieldContext?.isInvalid || isInvalid;
 		const errorMessageValue = fieldContext?.errorMessage || errorMessage;
 
-		const focusReference = useRef<InputElement>(null);
+		const [debouncedError, setDebouncedError] = useState(errorMessageValue);
+		const [debouncedInvalid, setDebouncedInvalid] = useState(isInvalidValue);
 
+		useEffect(() => {
+			const timer = setTimeout(() => {
+				setDebouncedError(errorMessageValue);
+			}, 300);
+			return () => clearTimeout(timer);
+		}, [errorMessageValue]);
+
+		useEffect(() => {
+			const timer = setTimeout(() => {
+				setDebouncedInvalid(isInvalidValue);
+			}, 300);
+			return () => clearTimeout(timer);
+		}, [isInvalidValue]);
+
+		const focusReference = useRef<InputElement>(null);
 		const inputReference = isFocused ? focusReference : reference;
 
 		useEffect(() => {
@@ -155,7 +169,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 					style={style}
 					className={className}
 					disabled={disabled}
-					invalid={isInvalidValue}
+					invalid={debouncedInvalid}
 					valid={isValid}
 					noBorder={noBorder}
 					noShadow={noShadow}
@@ -169,12 +183,10 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							className={cn(
 								"no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base",
 								innerClassName,
-								{
-									"text-theme-secondary-text": disabled,
-								},
+								{ "text-theme-secondary-text": disabled },
 							)}
 							name={fieldContext?.name}
-							aria-invalid={isInvalidValue}
+							aria-invalid={debouncedInvalid}
 							disabled={disabled}
 							value={value}
 							type="text"
@@ -192,27 +204,23 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						/>
 					</div>
 
-					{(isInvalidValue || isValid || addons?.end) && (
+					{(debouncedInvalid || isValid || addons?.end) && (
 						<div
 							data-testid="Input__addon-end"
 							className={cn(
 								"flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800",
 								{
 									"absolute bottom-full right-0 mb-2": isTextArea,
-									"text-theme-danger-500": isInvalidValue,
-									"text-theme-primary-300 dark:text-theme-secondary-600": !isInvalidValue,
+									"text-theme-danger-500": debouncedInvalid,
+									"text-theme-primary-300 dark:text-theme-secondary-600": !debouncedInvalid,
 								},
 								addons?.end?.wrapperClassName,
 							)}
 						>
-							{isInvalidValue && (
-								<Tooltip content={errorMessageValue} size="sm">
-									<span data-errortext={errorMessageValue} data-testid="Input__error">
-										<Icon
-											name="CircleExclamationMark"
-											className="text-theme-danger-500"
-											size="lg"
-										/>
+							{debouncedInvalid && (
+								<Tooltip content={debouncedError} size="sm">
+									<span data-errortext={debouncedError} data-testid="Input__error">
+										<Icon name="CircleExclamationMark" className="text-theme-danger-500" size="lg" />
 									</span>
 								</Tooltip>
 							)}
@@ -227,7 +235,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							)}
 
 							{addons?.end && (
-								<div className={cn({ "pl-3": isInvalidValue && !addons.end.wrapperClassName })}>
+								<div className={cn({ "pl-3": debouncedInvalid && !addons.end.wrapperClassName })}>
 									{addons.end.content}
 								</div>
 							)}
