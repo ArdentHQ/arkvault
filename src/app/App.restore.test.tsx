@@ -63,6 +63,5 @@ describe("App", () => {
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
 
 		memoryPasswordMock.mockRestore();
-		verifyPasswordMock.mockRestore();
 	});
 });
