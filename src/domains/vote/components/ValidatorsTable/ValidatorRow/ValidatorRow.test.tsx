@@ -110,7 +110,7 @@ describe("ValidatorRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each([true, false])("should render the selected vote", (isCompact: boolean) => {
+	it("should render the selected vote", () => {
 		const secondDelegate = new ReadOnlyWallet({
 			address: data[1].address,
 			explorerLink: "",
