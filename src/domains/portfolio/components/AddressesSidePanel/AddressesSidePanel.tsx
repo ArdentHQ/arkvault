@@ -10,7 +10,7 @@ import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
-import { useBreakpoint, useWalletAlias } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
 
 export const AddressesSidePanel = ({
@@ -43,7 +43,6 @@ export const AddressesSidePanel = ({
 
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
-	const { syncOnChainUsernames } = useWalletAlias();
 
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
