@@ -3,13 +3,17 @@
 exports[`VotesHeader > should render a different title if on select validator step 1`] = `
 <DocumentFragment>
   <section
-    class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-1.5 dark:bg-black"
+    class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-6 dark:bg-black"
   >
-    <h1
-      class="mb-0 text-lg"
+    <div
+      class="flex flex-col gap-2"
     >
-      Select Validator
-    </h1>
+      <h1
+        class="mb-0 text-lg font-semibold"
+      >
+        Select Validator
+      </h1>
+    </div>
   </section>
 </DocumentFragment>
 `;
@@ -93,7 +97,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
                 class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
-                My Votes
+                Votes
               </h1>
               <div
                 class="flex items-center leading-5 text-theme-secondary-text"
@@ -113,13 +117,22 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
 exports[`VotesHeader > should render responsive (xs) 1`] = `
 <DocumentFragment>
   <section
-    class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-1.5 dark:bg-black"
+    class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-6 dark:bg-black"
   >
-    <h1
-      class="mb-0 text-lg"
+    <div
+      class="flex flex-col gap-2"
     >
-      My Votes
-    </h1>
+      <h1
+        class="mb-0 text-lg font-semibold"
+      >
+        Votes
+      </h1>
+      <div
+        class="flex items-center leading-5 text-theme-secondary-text"
+      >
+        Manage your cryptoasset staking.
+      </div>
+    </div>
   </section>
 </DocumentFragment>
 `;

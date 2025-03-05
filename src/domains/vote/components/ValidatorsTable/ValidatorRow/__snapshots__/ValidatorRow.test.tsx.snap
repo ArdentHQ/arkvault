@@ -44,38 +44,10 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -202,38 +174,10 @@ exports[`ValidatorRow > should render 1`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -360,38 +304,10 @@ exports[`ValidatorRow > should render changed style when network requires vote a
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -563,38 +479,10 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -721,38 +609,10 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -870,38 +730,10 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -1019,38 +851,10 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -1182,38 +986,10 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -1331,38 +1107,10 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -1480,38 +1228,10 @@ exports[`ValidatorRow > should render the selected vote 2`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -1643,38 +1363,10 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>
@@ -1801,38 +1493,10 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
           <div
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
-            <div>
-              <div
-                class="text-theme-warning-500"
-              >
-                <div
-                  style="height: 16px; width: 16px;"
-                >
-                  <svg
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      transform="translate(600 -1329.038)"
-                    >
-                      <circle
-                        cx="-590"
-                        cy="1339.038"
-                        r="9"
-                      />
-                      <path
-                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div
+              class="rounded bg-theme-secondary-200 px-1 py-[3px] text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+            >
+              Standby
             </div>
           </div>
         </td>

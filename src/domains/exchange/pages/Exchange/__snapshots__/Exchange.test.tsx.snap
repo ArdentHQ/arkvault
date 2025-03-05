@@ -713,18 +713,22 @@ exports[`Exchange > should render empty 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
+                <div
+                  class="flex flex-col gap-2"
                 >
-                  Exchange
-                </h1>
-              </div>
-              <div
-                class="flex items-center leading-5 text-theme-secondary-text"
-                data-testid="header__subtitle"
-              >
-                Choose one of the exchange providers below to swap directly from within the wallet.
+                  <h1
+                    class="mb-0 text-2xl leading-[29px]"
+                    data-testid="header__title"
+                  >
+                    Exchange
+                  </h1>
+                  <div
+                    class="flex items-center leading-5 text-theme-secondary-text"
+                    data-testid="header__subtitle"
+                  >
+                    Choose one of the exchange providers below to swap directly from within the wallet.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1512,18 +1516,22 @@ exports[`Exchange > should render with exchanges 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
+                <div
+                  class="flex flex-col gap-2"
                 >
-                  Exchange
-                </h1>
-              </div>
-              <div
-                class="flex items-center leading-5 text-theme-secondary-text"
-                data-testid="header__subtitle"
-              >
-                Choose one of the exchange providers below to swap directly from within the wallet.
+                  <h1
+                    class="mb-0 text-2xl leading-[29px]"
+                    data-testid="header__title"
+                  >
+                    Exchange
+                  </h1>
+                  <div
+                    class="flex items-center leading-5 text-theme-secondary-text"
+                    data-testid="header__subtitle"
+                  >
+                    Choose one of the exchange providers below to swap directly from within the wallet.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
