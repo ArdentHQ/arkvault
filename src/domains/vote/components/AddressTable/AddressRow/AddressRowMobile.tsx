@@ -3,8 +3,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useMediaQuery } from "react-responsive";
-import { Icon } from "@/app/components/Icon";
-import { Tooltip } from "@/app/components/Tooltip";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { Address } from "@/app/components/Address";
@@ -19,14 +17,6 @@ interface AddressRowMobileProperties {
 	wallet: Contracts.IReadWriteWallet;
 	onSelect?: (walletAddress: string) => void;
 }
-
-const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color: string }) => (
-	<Tooltip content={label}>
-		<span>
-			<Icon name={icon} className={color} size="md" data-testid="StatusIcon__icon" />
-		</span>
-	</Tooltip>
-);
 
 export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
 	const is2Xs = useMediaQuery({ maxWidth: 410 });

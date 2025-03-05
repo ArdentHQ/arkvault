@@ -8,7 +8,6 @@ import {
 } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRow";
 import { ValidatorRowMobileSkeleton } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobileSkeleton";
 import { Address } from "@/app/components/Address";
-import { Tooltip } from "@/app/components/Tooltip";
 
 export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 	const { t } = useTranslation();
