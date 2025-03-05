@@ -1,4 +1,3 @@
-import { Bcrypt } from "@ardenthq/sdk-cryptography";
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
@@ -54,7 +53,6 @@ describe("App", () => {
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
-		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
 		const memoryPasswordMock = vi.spyOn(profile.password(), "get").mockImplementation(() => {
 			throw new Error("password not found");
 		});

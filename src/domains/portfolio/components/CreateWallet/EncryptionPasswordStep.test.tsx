@@ -1,4 +1,4 @@
-import { BIP39 } from "@ardenthq/sdk-cryptography";
+import * as bip39 from '@scure/bip39';
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -38,7 +38,7 @@ describe("EncryptionPasswordStep", () => {
 			profile.wallets().forget(wallet.id());
 		}
 
-		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 

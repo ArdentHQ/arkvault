@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { BIP39 } from "@ardenthq/sdk-cryptography";
+import * as bip39 from '@scure/bip39';
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { authentication } from "./Authentication";
@@ -104,7 +104,7 @@ describe("Authentication", () => {
 	});
 
 	it("should validate encryption password with secret", async () => {
-		const BIP39Mock = vi.spyOn(BIP39, "validate").mockReturnValue(false);
+		const BIP39Mock = vi.spyOn(bip39, "validateMnemonic").mockReturnValue(false);
 
 		const fromWifMock = vi
 			.spyOn(walletWithPassword.coin().address(), "fromWIF")

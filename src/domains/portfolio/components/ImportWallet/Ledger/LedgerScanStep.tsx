@@ -5,7 +5,6 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import { BIP44 } from "@ardenthq/sdk-cryptography";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";
@@ -22,6 +21,7 @@ import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
 import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
+import { BIP44 } from "@/app/lib";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -305,6 +305,7 @@ export const LedgerScanStep = ({
 		return [...profileWalletsPaths, ...ledgerPaths]
 			.filter(Boolean)
 			.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
+
 	}, [profile, wallets]);
 
 	const scanMore = useCallback(() => {

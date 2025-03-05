@@ -1,4 +1,4 @@
-import { BIP39 } from "@ardenthq/sdk-cryptography";
+import * as bip39 from '@scure/bip39';
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -33,7 +33,7 @@ describe("CreateAddressSidePanel", () => {
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
 	});
@@ -62,7 +62,7 @@ describe("CreateAddressSidePanel", () => {
 
 		vi.spyOn(profile, "availableNetworks").mockReturnValue([networkWallet.network()]);
 
-		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
