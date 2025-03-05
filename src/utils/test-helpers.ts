@@ -1,6 +1,6 @@
 import { Environment, StorageData } from "@ardenthq/sdk-profiles";
-import { base64 } from "@scure/base"
-import { utf8ToBytes } from "@noble/hashes/utils"
+import { base64 } from "@scure/base";
+import { utf8ToBytes } from "@noble/hashes/utils";
 
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";

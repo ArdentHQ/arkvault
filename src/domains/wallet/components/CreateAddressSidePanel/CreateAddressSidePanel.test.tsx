@@ -1,4 +1,4 @@
-import * as bip39 from '@scure/bip39';
+import * as bip39 from "@scure/bip39";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
