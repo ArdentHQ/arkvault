@@ -128,7 +128,7 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
         Votes
       </h1>
       <div
-        class="flex items-center leading-5 text-theme-secondary-text"
+        class="flex items-center text-sm leading-5 text-theme-secondary-text"
       >
         Manage your cryptoasset staking.
       </div>

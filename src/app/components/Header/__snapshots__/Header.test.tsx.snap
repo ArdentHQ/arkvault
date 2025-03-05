@@ -218,7 +218,7 @@ exports[`PageHeader > should render responsive (xs) 1`] = `
         Header test
       </h1>
       <div
-        class="flex items-center leading-5 text-theme-secondary-text"
+        class="flex items-center text-sm leading-5 text-theme-secondary-text"
       >
         Subtitle test
       </div>

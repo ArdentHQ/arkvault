@@ -2393,7 +2393,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
             My Contacts
           </h1>
           <div
-            class="flex items-center leading-5 text-theme-secondary-text"
+            class="flex items-center text-sm leading-5 text-theme-secondary-text"
           >
             Manage your frequent Contacts
           </div>

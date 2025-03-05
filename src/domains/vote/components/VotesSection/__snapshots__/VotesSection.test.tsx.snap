@@ -9,7 +9,7 @@ exports[`VotesSection > should render correctly at breakpoint md with selectedAd
       class="mx-auto px-6 lg:container md:px-10"
     >
       <div
-        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
       >
         <div
           class="flex flex-col"
@@ -124,7 +124,7 @@ exports[`VotesSection > should render correctly at breakpoint md without selecte
       class="mx-auto px-6 lg:container md:px-10"
     >
       <div
-        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
       >
         <div
           class="flex flex-col"
@@ -225,7 +225,7 @@ exports[`VotesSection > should render correctly at breakpoint xs with selectedAd
       class="mx-auto px-6 lg:container md:px-10"
     >
       <div
-        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
       >
         <div
           class="flex flex-col"
@@ -340,7 +340,7 @@ exports[`VotesSection > should render correctly at breakpoint xs without selecte
       class="mx-auto px-6 lg:container md:px-10"
     >
       <div
-        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
       >
         <div
           class="flex flex-col"
