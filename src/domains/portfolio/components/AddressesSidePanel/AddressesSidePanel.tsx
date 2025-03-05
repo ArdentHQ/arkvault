@@ -99,14 +99,6 @@ export const AddressesSidePanel = ({
 		setTimeout(() => setIsAnimating(false), 900);
 	};
 
-	useEffect(() => {
-		syncOnChainUsernames({
-			addresses: addressesToShow.map((w) => w.address()),
-			networks: addressesToShow.map((w) => w.network()),
-			profile,
-		});
-	}, [addressesToShow, profile, syncOnChainUsernames]);
-
 	return (
 		<SidePanel
 			className={cn({ "animate-shake": isAnimating })}
