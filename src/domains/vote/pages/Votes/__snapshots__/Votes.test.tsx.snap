@@ -2,6 +2,8 @@
 
 exports[`Votes > should emit action on continue button 1`] = `<DocumentFragment />`;
 
+exports[`Votes > should emit action on continue button to unvote/vote 1`] = `<DocumentFragment />`;
+
 exports[`Votes > should filter current delegates 1`] = `
 <DocumentFragment>
   <div
@@ -751,6 +753,7 @@ exports[`Votes > should filter current delegates 1`] = `
               >
                 <div
                   class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                  data-testid="VotesSection__search-input"
                 >
                   <div
                     class="pointer-events-none absolute left-0 items-center pl-6"
@@ -827,7 +830,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     class="mr-6 hidden md:block"
                   >
                     <div
-                      aria-controls=":r1u:"
+                      aria-controls=":r1a:"
                       aria-expanded="true"
                       aria-haspopup="dialog"
                       data-testid="dropdown__toggle-VotesFilter"
@@ -2121,6 +2124,7 @@ exports[`Votes > should render 1`] = `
               >
                 <div
                   class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                  data-testid="VotesSection__search-input"
                 >
                   <div
                     class="pointer-events-none absolute left-0 items-center pl-6"
@@ -3732,6 +3736,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               >
                 <div
                   class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                  data-testid="VotesSection__search-input"
                 >
                   <div
                     class="pointer-events-none absolute left-0 items-center pl-6"
@@ -6168,6 +6173,7 @@ exports[`Votes > should select a validator 1`] = `
               >
                 <div
                   class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                  data-testid="VotesSection__search-input"
                 >
                   <div
                     class="pointer-events-none absolute left-0 items-center pl-6"
@@ -7029,6 +7035,8 @@ exports[`Votes > should select a validator 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Votes > should select an address and validator 1`] = `<DocumentFragment />`;
+
 exports[`Votes > should trigger network connection warning 1`] = `
 <DocumentFragment>
   <div
@@ -7840,6 +7848,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               >
                 <div
                   class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                  data-testid="VotesSection__search-input"
                 >
                   <div
                     class="pointer-events-none absolute left-0 items-center pl-6"

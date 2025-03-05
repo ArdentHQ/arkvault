@@ -227,7 +227,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -256,7 +256,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -418,7 +418,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -455,11 +455,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId("VotesSection__search-input")).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId("VotesSection__search-input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
@@ -474,43 +472,15 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId("VotesSection__search-input")).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId("VotesSection__search-input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
 		await userEvent.type(searchInput, "ARK Wallet 2");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-	});
-
-	it("should reset wallet search", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
-
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
-
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
-		await waitFor(() => expect(searchInput).toBeInTheDocument());
-
-		// Search by wallet alias
-		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "non existent wallet name");
-
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
-
-		// Reset search
-		await userEvent.click(screen.getByTestId("header-search-bar__reset"));
-
-		await waitFor(() => expect(searchInput).not.toHaveValue());
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 	});
 
 	it("should show resigned validator notice", async () => {
@@ -548,11 +518,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId("VotesSection__search-input")).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId("VotesSection__search-input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
@@ -569,11 +537,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId("VotesSection__search-input")).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId("VotesSection__search-input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);

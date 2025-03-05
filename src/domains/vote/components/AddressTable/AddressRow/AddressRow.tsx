@@ -47,6 +47,7 @@ export const WalletStatus = ({
 	if (wallet.isResignedDelegate()) {
 		return (
 			<div
+				data-testid="AddressRow__wallet-status"
 				className={twMerge(
 					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
 					className,
@@ -60,6 +61,7 @@ export const WalletStatus = ({
 	if (Number(wallet.rank()) > activeDelegates) {
 		return (
 			<div
+				data-testid="AddressRow__wallet-status"
 				className={twMerge(
 					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
 					className,
@@ -72,6 +74,7 @@ export const WalletStatus = ({
 
 	return (
 		<div
+			data-testid="AddressRow__wallet-status"
 			className={twMerge(
 				"inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500",
 				className,
