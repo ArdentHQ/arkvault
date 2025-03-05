@@ -100,7 +100,11 @@ export const AddressesSidePanel = ({
 	};
 
 	useEffect(() => {
-		syncOnChainUsernames({ addresses: addressesToShow.map((w) => w.address()), networks: addressesToShow.map((w) => w.network()), profile });
+		syncOnChainUsernames({
+			addresses: addressesToShow.map((w) => w.address()),
+			networks: addressesToShow.map((w) => w.network()),
+			profile,
+		});
 	}, [addressesToShow, profile, syncOnChainUsernames]);
 
 	return (
