@@ -16,6 +16,7 @@ exports[`VotesSection > should render correctly at breakpoint md with selectedAd
         >
           <div
             class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+            data-testid="VotesSection__search-input"
           >
             <div
               class="pointer-events-none absolute left-0 items-center pl-6"
@@ -131,6 +132,7 @@ exports[`VotesSection > should render correctly at breakpoint md without selecte
         >
           <div
             class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+            data-testid="VotesSection__search-input"
           >
             <div
               class="pointer-events-none absolute left-0 items-center pl-6"
@@ -232,6 +234,7 @@ exports[`VotesSection > should render correctly at breakpoint xs with selectedAd
         >
           <div
             class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+            data-testid="VotesSection__search-input"
           >
             <div
               class="pointer-events-none absolute left-0 items-center pl-6"
@@ -347,6 +350,7 @@ exports[`VotesSection > should render correctly at breakpoint xs without selecte
         >
           <div
             class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+            data-testid="VotesSection__search-input"
           >
             <div
               class="pointer-events-none absolute left-0 items-center pl-6"
