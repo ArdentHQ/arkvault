@@ -148,7 +148,6 @@ describe("ValidatorRow", () => {
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
-						isCompact={isCompact}
 					/>
 					<ValidatorRow
 						index={1}
@@ -160,7 +159,6 @@ describe("ValidatorRow", () => {
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
-						isCompact={isCompact}
 					/>
 					<ValidatorRow
 						index={2}
@@ -173,7 +171,6 @@ describe("ValidatorRow", () => {
 						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
-						isCompact={isCompact}
 					/>
 				</tbody>
 			</table>,
