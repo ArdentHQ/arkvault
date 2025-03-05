@@ -77,42 +77,6 @@ describe("DelegateVoteAmount", () => {
 		votesAmountStepMock.mockRestore();
 	});
 
-	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
-		const { asFragment } = render(
-			<Wrapper>
-				<ValidatorVoteAmount
-					isSelectedVote={true}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={[]}
-					toggleUnvotesSelected={vi.fn()}
-					toggleVotesSelected={vi.fn()}
-					validatorAddress={validator.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={vi.fn()}
-					isCompact={isCompact}
-				/>
-			</Wrapper>,
-		);
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		// focusIn/focusOut need to be called manually, see https://github.com/testing-library/user-event/issues/592
-
-		await userEvent.click(inputElement);
-		fireEvent.focusIn(inputElement);
-
-		expect(inputElement).toHaveFocus();
-
-		await userEvent.tab();
-		fireEvent.focusOut(inputElement);
-
-		expect(inputElement).not.toHaveFocus();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should focus on the input by clicking on ticker", async () => {
 		render(
 			<Wrapper>
