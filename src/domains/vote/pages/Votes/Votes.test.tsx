@@ -58,6 +58,8 @@ const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:wa
 
 const firstVoteButtonID = "DelegateRow__toggle-0";
 
+const searchInputID = "VotesSection__search-input";
+
 describe("Votes", () => {
 	beforeAll(async () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
@@ -455,9 +457,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await expect(screen.findByTestId("VotesSection__search-input")).resolves.toBeVisible();
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		const searchInput = within(screen.getByTestId("VotesSection__search-input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
@@ -472,9 +474,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await expect(screen.findByTestId("VotesSection__search-input")).resolves.toBeVisible();
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		const searchInput = within(screen.getByTestId("VotesSection__search-input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
@@ -518,9 +520,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await expect(screen.findByTestId("VotesSection__search-input")).resolves.toBeVisible();
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		const searchInput = within(screen.getByTestId("VotesSection__search-input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
@@ -537,9 +539,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await expect(screen.findByTestId("VotesSection__search-input")).resolves.toBeVisible();
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		const searchInput = within(screen.getByTestId("VotesSection__search-input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);

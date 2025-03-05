@@ -23,6 +23,8 @@ let wallet2: Contracts.IReadWriteWallet;
 
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
+const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
+
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
 
@@ -124,7 +126,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -206,7 +208,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -224,7 +226,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRow__select-1")).resolves.toBeVisible();
 
@@ -242,7 +244,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		expect(screen.getByTestId("AddressRow__wallet-status")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRow__select-1")).resolves.toBeVisible();
@@ -276,9 +278,9 @@ describe("AddressRow", () => {
 			},
 		);
 
-		expect(screen.getByTestId("AddressRow__wallet-status")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("AddressRow__wallet-status").textContent).toBe("Active");
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Active");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -311,9 +313,9 @@ describe("AddressRow", () => {
 			},
 		);
 
-		expect(screen.getByTestId("AddressRow__wallet-status")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("AddressRow__wallet-status").textContent).toBe("Standby");
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Standby");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -346,9 +348,9 @@ describe("AddressRow", () => {
 			},
 		);
 
-		expect(screen.getByTestId("AddressRow__wallet-status")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("AddressRow__wallet-status").textContent).toBe("Resigned");
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Resigned");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -371,7 +373,7 @@ describe("AddressRow", () => {
 		);
 		const selectButton = screen.getByTestId("AddressRow__select-0");
 
-		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		await userEvent.click(selectButton);
 

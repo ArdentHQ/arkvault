@@ -14,6 +14,9 @@ const wrapper = ({ children }: any) => (
 	</EnvironmentProvider>
 );
 
+const ARK_MAINNET_NETWORK_ID = "ark.mainnet";
+const ARK_DEVNET_NETWORK_ID = "ark.devnet";
+
 describe("Use Vote Filters", () => {
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
@@ -31,20 +34,20 @@ describe("Use Vote Filters", () => {
 
 		const { wallet: arkMainWallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.mainnet",
+			network: ARK_MAINNET_NETWORK_ID,
 		});
 		profile.wallets().push(arkMainWallet);
 
 		const { wallet: arkDevWallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARK_DEVNET_NETWORK_ID,
 		});
 		profile.wallets().push(arkDevWallet);
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: "ark.mainnet",
+			activeNetworkId: ARK_MAINNET_NETWORK_ID,
 		});
 
 		const { result } = renderHook(
@@ -53,11 +56,11 @@ describe("Use Vote Filters", () => {
 		);
 
 		expect(result.current.filteredWallets).toHaveLength(1);
-		expect(result.current.filteredWallets[0].network().id()).toBe("ark.mainnet");
+		expect(result.current.filteredWallets[0].network().id()).toBe(ARK_MAINNET_NETWORK_ID);
 
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: "ark.devnet",
+			activeNetworkId: ARK_DEVNET_NETWORK_ID,
 		});
 
 		const { result: updatedResult } = renderHook(
@@ -66,7 +69,7 @@ describe("Use Vote Filters", () => {
 		);
 
 		expect(updatedResult.current.filteredWallets).toHaveLength(1);
-		expect(updatedResult.current.filteredWallets[0].network().id()).toBe("ark.devnet");
+		expect(updatedResult.current.filteredWallets[0].network().id()).toBe(ARK_DEVNET_NETWORK_ID);
 
 		resetProfileNetworksMock();
 	});
@@ -76,21 +79,21 @@ describe("Use Vote Filters", () => {
 
 		const { wallet: starredWallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.mainnet",
+			network: ARK_MAINNET_NETWORK_ID,
 		});
 		starredWallet.toggleStarred();
 		profile.wallets().push(starredWallet);
 
 		const { wallet: normalWallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.mainnet",
+			network: ARK_MAINNET_NETWORK_ID,
 		});
 		profile.wallets().push(normalWallet);
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: "ark.mainnet",
+			activeNetworkId: ARK_MAINNET_NETWORK_ID,
 		});
 
 		const { result } = renderHook(
@@ -119,14 +122,14 @@ describe("Use Vote Filters", () => {
 
 		const { wallet: wallet1 } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.mainnet",
+			network: ARK_MAINNET_NETWORK_ID,
 		});
 		wallet1.mutator().alias("Wallet 1");
 		profile.wallets().push(wallet1);
 
 		const { wallet: wallet2 } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.mainnet",
+			network: ARK_MAINNET_NETWORK_ID,
 		});
 		wallet2.mutator().alias("Wallet 2");
 		profile.wallets().push(wallet2);
@@ -134,7 +137,7 @@ describe("Use Vote Filters", () => {
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: "ark.mainnet",
+			activeNetworkId: ARK_MAINNET_NETWORK_ID,
 		});
 
 		const { result } = renderHook(
@@ -159,7 +162,7 @@ describe("Use Vote Filters", () => {
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: "ark.mainnet",
+			activeNetworkId: ARK_MAINNET_NETWORK_ID,
 		});
 
 		const { result, rerender } = renderHook(
@@ -172,7 +175,7 @@ describe("Use Vote Filters", () => {
 
 		const { wallet: wallet1 } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.mainnet",
+			network: ARK_MAINNET_NETWORK_ID,
 		});
 		profile.wallets().push(wallet1);
 		rerender();
