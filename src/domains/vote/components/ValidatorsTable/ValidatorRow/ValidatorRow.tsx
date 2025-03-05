@@ -31,6 +31,15 @@ export interface ValidatorRowProperties {
 
 type UseValidatorRowProperties = Omit<ValidatorRowProperties, "isLoading" | "availableBalance" | "setAvailableBalance">;
 
+export enum ValidatorStatusEnum {
+	Changed = "changed",
+	Voted = "voted",
+	Unvoted = "unvoted",
+	Selected = "selected",
+	Disabled = "disabled",
+	Active = "active",
+}
+
 export const useValidatorRow = ({
 	index,
 	voted,
@@ -81,24 +90,46 @@ export const useValidatorRow = ({
 		return !!voted && (alreadyExistsInVotes || alreadyExistsInUnvotes);
 	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, validator]);
 
-	const rowColor = useMemo(() => {
+	const status = useMemo<ValidatorStatusEnum>(() => {
 		if (isChanged) {
-			return "bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600";
+			return ValidatorStatusEnum.Changed;
 		}
 
 		if (voted) {
-			return isSelectedUnvote
-				? "bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
-				: "bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600";
+			return isSelectedUnvote ? ValidatorStatusEnum.Unvoted : ValidatorStatusEnum.Voted;
 		}
 
 		if (isSelectedVote) {
+			return ValidatorStatusEnum.Selected;
+		}
+
+		if (isVoteDisabled && !isSelectedVote) {
+			return ValidatorStatusEnum.Disabled;
+		}
+
+		return ValidatorStatusEnum.Active;
+	}, [isChanged, voted, isSelectedVote, isSelectedUnvote, isVoteDisabled]);
+
+	const rowColor = useMemo(() => {
+		if (status === ValidatorStatusEnum.Changed) {
+			return "bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600";
+		}
+
+		if (status === ValidatorStatusEnum.Selected) {
 			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600";
 		}
-	}, [isChanged, voted, isSelectedVote, isSelectedUnvote]);
+
+		if (status === ValidatorStatusEnum.Unvoted) {
+			return "bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400";
+		}
+
+		if (status === ValidatorStatusEnum.Voted) {
+			return "bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600";
+		}
+	}, [status]);
 
 	const renderButton = () => {
-		if (isChanged) {
+		if (status === ValidatorStatusEnum.Changed) {
 			return (
 				<ValidatorVoteButton
 					index={index}
@@ -117,25 +148,43 @@ export const useValidatorRow = ({
 			);
 		}
 
-		if (voted) {
-			if (isSelectedUnvote) {
-				return (
-					<ValidatorVoteButton
-						index={index}
-						variant="danger"
-						compactClassName={`
+		if (status === ValidatorStatusEnum.Selected) {
+			return (
+				<ValidatorVoteButton
+					index={index}
+					variant="reverse"
+					compactClassName={`
+						bg-transparent
+						dark:bg-theme-success-600 dark:bg-transparent
+						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
+						dark:text-white dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700
+					`}
+					onClick={() => toggleVotesSelected?.(validator.address())}
+				>
+					{t("COMMON.SELECTED")}
+				</ValidatorVoteButton>
+			);
+		}
+
+		if (status === ValidatorStatusEnum.Unvoted) {
+			return (
+				<ValidatorVoteButton
+					index={index}
+					variant="danger"
+					compactClassName={`
 							bg-transparent
 							dark:bg-theme-danger-400 dark:bg-transparent
 							text-theme-danger-400 hover:text-theme-danger-500
 							dark:text-white dark:text-theme-danger-400 dark:hover:text-theme-danger-500
 					`}
-						onClick={() => toggleUnvotesSelected?.(validator.address())}
-					>
-						{t("COMMON.UNSELECTED")}
-					</ValidatorVoteButton>
-				);
-			}
+					onClick={() => toggleUnvotesSelected?.(validator.address())}
+				>
+					{t("COMMON.UNSELECTED")}
+				</ValidatorVoteButton>
+			);
+		}
 
+		if (status === ValidatorStatusEnum.Voted) {
 			return (
 				<ValidatorVoteButton
 					index={index}
@@ -153,7 +202,7 @@ export const useValidatorRow = ({
 			);
 		}
 
-		if (isVoteDisabled && !isSelectedVote) {
+		if (status === ValidatorStatusEnum.Disabled) {
 			return (
 				<ValidatorVoteButton
 					index={index}
@@ -166,24 +215,6 @@ export const useValidatorRow = ({
 					`}
 				>
 					{t("COMMON.SELECT")}
-				</ValidatorVoteButton>
-			);
-		}
-
-		if (isSelectedVote) {
-			return (
-				<ValidatorVoteButton
-					index={index}
-					variant="reverse"
-					compactClassName={`
-						bg-transparent
-						dark:bg-theme-success-600 dark:bg-transparent
-						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
-						dark:text-white dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700
-					`}
-					onClick={() => toggleVotesSelected?.(validator.address())}
-				>
-					{t("COMMON.SELECTED")}
 				</ValidatorVoteButton>
 			);
 		}
@@ -213,6 +244,7 @@ export const useValidatorRow = ({
 		renderButton,
 		requiresStakeAmount,
 		rowColor,
+		status,
 	};
 };
 

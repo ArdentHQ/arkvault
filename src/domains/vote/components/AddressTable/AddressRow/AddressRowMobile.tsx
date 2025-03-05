@@ -10,6 +10,7 @@ import { Button } from "@/app/components/Button";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { WalletStatus } from "./AddressRow";
+import classNames from "classnames";
 
 interface AddressRowMobileProperties {
 	index: number;
@@ -118,7 +119,12 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	return (
 		<tr data-testid="AddressRowMobile">
 			<td className="pt-3">
-				<div className="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800">
+				<div
+					className={classNames(
+						"flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800",
+						{},
+					)}
+				>
 					<div className="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black">
 						<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">
 							{alias}
