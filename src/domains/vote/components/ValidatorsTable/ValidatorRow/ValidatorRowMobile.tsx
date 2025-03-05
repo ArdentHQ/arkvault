@@ -30,8 +30,10 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 						"border-theme-danger-400": status === ValidatorStatusEnum.Unvoted,
 						"border-theme-primary-300 dark:border-theme-dark-navy-400":
 							status === ValidatorStatusEnum.Voted,
-						"border-theme-secondary-300 dark:border-theme-secondary-800":
-							status === (ValidatorStatusEnum.Active || ValidatorStatusEnum.Disabled),
+						"border-theme-secondary-300 dark:border-theme-secondary-800": [
+							ValidatorStatusEnum.Active,
+							ValidatorStatusEnum.Disabled,
+						].includes(status),
 						"border-theme-success-300 dark:border-theme-success-700":
 							status === ValidatorStatusEnum.Selected,
 						"border-theme-warning-400": status === ValidatorStatusEnum.Changed,
@@ -41,8 +43,10 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 						className={classNames("flex justify-between overflow-hidden px-4 py-3 dark:bg-theme-dark-950", {
 							"bg-theme-danger-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Unvoted,
 							"bg-theme-primary-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Voted,
-							"bg-theme-secondary-100 dark:bg-black":
-								status === (ValidatorStatusEnum.Active || ValidatorStatusEnum.Disabled),
+							"bg-theme-secondary-100 dark:bg-black": [
+								ValidatorStatusEnum.Active,
+								ValidatorStatusEnum.Disabled,
+							].includes(status),
 							"bg-theme-success-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Selected,
 							"bg-theme-warning-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Changed,
 						})}
