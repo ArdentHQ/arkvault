@@ -27,24 +27,24 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 			<td className="pt-3">
 				<div
 					className={classNames("flex flex-col overflow-hidden rounded border", {
-						"border-theme-secondary-300 dark:border-theme-secondary-800":
-							status === (ValidatorStatusEnum.Active || ValidatorStatusEnum.Disabled),
+						"border-theme-danger-400": status === ValidatorStatusEnum.Unvoted,
 						"border-theme-primary-300 dark:border-theme-dark-navy-400":
 							status === ValidatorStatusEnum.Voted,
-						"border-theme-danger-400": status === ValidatorStatusEnum.Unvoted,
-						"border-theme-warning-400": status === ValidatorStatusEnum.Changed,
+						"border-theme-secondary-300 dark:border-theme-secondary-800":
+							status === (ValidatorStatusEnum.Active || ValidatorStatusEnum.Disabled),
 						"border-theme-success-300 dark:border-theme-success-700":
 							status === ValidatorStatusEnum.Selected,
+						"border-theme-warning-400": status === ValidatorStatusEnum.Changed,
 					})}
 				>
 					<div
 						className={classNames("flex justify-between overflow-hidden px-4 py-3 dark:bg-theme-dark-950", {
+							"bg-theme-danger-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Unvoted,
+							"bg-theme-primary-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Voted,
 							"bg-theme-secondary-100 dark:bg-black":
 								status === (ValidatorStatusEnum.Active || ValidatorStatusEnum.Disabled),
-							"bg-theme-primary-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Voted,
-							"bg-theme-danger-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Unvoted,
-							"bg-theme-warning-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Changed,
 							"bg-theme-success-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Selected,
+							"bg-theme-warning-100 dark:bg-theme-dark-950": status === ValidatorStatusEnum.Changed,
 						})}
 					>
 						<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">
