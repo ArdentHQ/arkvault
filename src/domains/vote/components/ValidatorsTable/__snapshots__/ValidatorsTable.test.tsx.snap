@@ -20,6 +20,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -5876,6 +5877,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -11732,6 +11734,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -18732,6 +18735,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -25732,6 +25736,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -26544,6 +26549,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -27356,6 +27362,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -28168,6 +28175,7 @@ exports[`ValidatorsTable > should render 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -28981,6 +28989,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -30005,6 +30014,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -30817,6 +30827,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -31634,6 +31645,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -32446,6 +32458,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -32695,6 +32708,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                   <tfoot>
                     <tr
                       class="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4"
+                      data-testid="EmptyResults"
                     >
                       <td
                         class="pb-4 pt-[11px]"
@@ -32923,6 +32937,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -33736,6 +33751,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -34759,6 +34775,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -35572,6 +35589,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -36389,6 +36407,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -37202,6 +37221,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -38225,6 +38245,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -39037,6 +39058,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -39850,6 +39872,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
           >
             <div
               class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="VotesSection__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
