@@ -8,7 +8,7 @@ import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
@@ -758,5 +758,78 @@ describe("DelegateVoteAmount", () => {
 
 			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 		});
+	});
+
+	it("should calculate net amount when hasAmount condition is true", async () => {
+		const voted: Contracts.VoteRegistryItem = {
+			amount: 30,
+			wallet: validator,
+		};
+
+		const toggleVotesSelected = vi.fn();
+
+		render(
+			<Wrapper>
+				<ValidatorVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={[]}
+					voted={voted}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={toggleVotesSelected}
+					validatorAddress={validator.address()}
+					availableBalance={wallet.balance()}
+					setAvailableBalance={vi.fn()}
+				/>
+			</Wrapper>,
+		);
+
+		const amountField: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		await userEvent.clear(amountField);
+		await userEvent.type(amountField, "50");
+
+		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20));
+	});
+
+	it("should calculate net amount when isGreaterThanAmountVoted condition is true", async () => {
+		const voted: Contracts.VoteRegistryItem = {
+			amount: 30,
+			wallet: validator,
+		};
+
+		const selectedVotes: VoteValidatorProperties[] = [
+			{
+				amount: 20,
+				validatorAddress: validator.address(),
+			},
+		];
+
+		render(
+			<Wrapper>
+				<ValidatorVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={selectedVotes}
+					voted={voted}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={vi.fn()}
+					validatorAddress={validator.address()}
+					availableBalance={wallet.balance()}
+					setAvailableBalance={vi.fn()}
+				/>
+			</Wrapper>,
+		);
+
+		const amountField: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		await userEvent.clear(amountField);
+		await userEvent.type(amountField, "60");
+
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("60"));
 	});
 });
