@@ -24,6 +24,46 @@ interface AddressRowProperties {
 	onSelect?: (walletAddress: string) => void;
 }
 
+export const WalletStatus = ({
+	wallet,
+	activeDelegates,
+	fallback = <></>,
+}: {
+	wallet?: Contracts.IReadOnlyWallet;
+	activeDelegates: number;
+	fallback?: React.ReactNode;
+}) => {
+	const { t } = useTranslation();
+
+	if (!wallet) {
+		return fallback;
+	}
+
+	assertReadOnlyWallet(wallet);
+
+	if (wallet.isResignedDelegate()) {
+		return (
+			<div className="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
+				{t("WALLETS.STATUS.RESIGNED")}
+			</div>
+		);
+	}
+
+	if (Number(wallet.rank()) > activeDelegates) {
+		return (
+			<div className="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
+				{t("WALLETS.STATUS.STANDBY")}
+			</div>
+		);
+	}
+
+	return (
+		<div className="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500">
+			{t("WALLETS.STATUS.ACTIVE")}
+		</div>
+	);
+};
+
 export const WalletAvatar = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
 	if (!wallet) {
 		return null;
@@ -109,36 +149,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		return <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>;
 	};
 
-	const renderDelegateStatus = (wallet: Contracts.IReadOnlyWallet | undefined, activeDelegates: number) => {
-		if (!wallet) {
-			return <></>;
-		}
-
-		assertReadOnlyWallet(wallet);
-
-		if (wallet.isResignedDelegate()) {
-			return (
-				<div className="min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
-					{t("WALLETS.STATUS.RESIGNED")}
-				</div>
-			);
-		}
-
-		if (Number(wallet.rank()) > activeDelegates) {
-			return (
-				<div className="min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
-					{t("WALLETS.STATUS.STANDBY")}
-				</div>
-			);
-		}
-
-		return (
-			<div className="min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500">
-				{t("WALLETS.STATUS.ACTIVE")}
-			</div>
-		);
-	};
-
 	const renderWalletVotes = () => {
 		if (!hasVotes) {
 			return <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>;
@@ -200,7 +210,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 					</TableCell>
 
 					<TableCell innerClassName="text-sm justify-center">
-						{renderDelegateStatus(votes[0]?.wallet, wallet.network().delegateCount())}
+						<WalletStatus wallet={votes[0]?.wallet} activeDelegates={wallet.network().delegateCount()} />
 					</TableCell>
 				</>
 			) : (

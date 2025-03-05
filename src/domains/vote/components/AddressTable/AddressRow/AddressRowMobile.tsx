@@ -14,6 +14,7 @@ import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { WalletStatus } from "./AddressRow";
 
 interface AddressRowMobileProperties {
 	index: number;
@@ -85,34 +86,12 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 		loadVotes();
 	}, [profileHasSyncedOnce, profileIsSyncingWallets, wallet]);
 
-	const renderDelegateStatus = (wallet: Contracts.IReadOnlyWallet | undefined, activeDelegates: number) => {
-		if (!wallet) {
-			return (
-				<Circle
-					size="xs"
-					className="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800"
-					noShadow
-				/>
-			);
-		}
-
-		assertReadOnlyWallet(wallet);
-
-		if (wallet.isResignedDelegate()) {
-			return <StatusIcon label={t("WALLETS.STATUS.RESIGNED")} icon="CircleCross" color="text-theme-danger-400" />;
-		}
-
-		if (Number(wallet.rank()) > activeDelegates) {
-			return <StatusIcon label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />;
-		}
-
-		return <StatusIcon label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-primary-600" />;
-	};
-
 	const renderWalletVotes = () => {
 		if (!hasVotes) {
 			return (
-				<span className="text-theme-secondary-500 dark:text-theme-dark-500">{t("COMMON.NOT_AVAILABLE")}</span>
+				<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
+					{t("COMMON.NOT_AVAILABLE")}
+				</span>
 			);
 		}
 
@@ -120,7 +99,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 			return (
 				<span
 					data-testid="AddressRowMobile--nowallet"
-					className="text-theme-secondary-500 dark:text-theme-dark-500"
+					className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
 				>
 					{t("COMMON.NOT_AVAILABLE")}
 				</span>
@@ -190,12 +169,22 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 
 							<div>{renderWalletVotes()}</div>
 						</div>
-						<div className="grid grid-cols-1 gap-2">
+						<div className="hidden grid-cols-1 gap-2 sm:grid">
 							<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200">
 								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VALIDATOR_STATUS")}
 							</div>
 
-							<div>{renderDelegateStatus(votes[0]?.wallet, wallet.network().delegateCount())}</div>
+							<div>
+								<WalletStatus
+									wallet={votes[0]?.wallet}
+									activeDelegates={wallet.network().delegateCount()}
+									fallback={
+										<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
+											{t("COMMON.NOT_AVAILABLE")}
+										</span>
+									}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>

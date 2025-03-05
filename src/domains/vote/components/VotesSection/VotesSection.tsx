@@ -36,7 +36,7 @@ export const VotesSection = ({
 
 	return (
 		<Section {...props} className="mt-4 py-0 pt-0 first:pt-1 md:mt-0">
-			<div className="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border">
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border">
 				<div className="flex flex-col">
 					<div className="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0">
 						<div className="pointer-events-none absolute left-0 items-center pl-6">
@@ -52,7 +52,7 @@ export const VotesSection = ({
 							noShadow
 						/>
 
-						{selectedAddress != null && (
+						{selectedAddress != undefined && (
 							<VotesFilter
 								totalCurrentVotes={totalCurrentVotes}
 								selectedOption={selectedFilter}

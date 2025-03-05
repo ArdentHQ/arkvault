@@ -66,7 +66,9 @@ export const PageHeader = ({ title, titleSuffix, subtitle, extra, border = false
 		<section className="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-6 dark:bg-black">
 			<div className="flex flex-col gap-2">
 				<h1 className="mb-0 text-lg font-semibold">{title}</h1>
-				{subtitle && <div className="flex items-center leading-5 text-theme-secondary-text">{subtitle}</div>}
+				{subtitle && (
+					<div className="flex items-center text-sm leading-5 text-theme-secondary-text">{subtitle}</div>
+				)}
 			</div>
 			{extra}
 		</section>
