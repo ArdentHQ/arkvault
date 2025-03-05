@@ -151,7 +151,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				<Link
 					to={votes[0].wallet?.explorerLink() as string}
 					isExternal
-					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
 				>
 					{votes[0].wallet?.username() ?? (
 						<TruncateMiddle text={votes[0].wallet?.address() ?? ""} maxChars={14} />
