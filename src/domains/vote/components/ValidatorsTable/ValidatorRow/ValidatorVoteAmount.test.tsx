@@ -8,7 +8,7 @@ import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, act, getDefaultProfileId, render, screen, waitFor, fireEvent } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, fireEvent } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
@@ -760,15 +760,12 @@ describe("DelegateVoteAmount", () => {
 		});
 	});
 
-	it("should calculate net amount when isGreaterThanAmountVoted is true for a voted validator", async () => {
-		let availableBalance = wallet.balance();
+	it("should calculate net amount when isGreaterThanAmountVoted is true", async () => {
+		let availableBalance = 90;
 		const toggleVotesSelected = vi.fn();
-		const setAvailableBalance = vi.fn((balance: number) => (availableBalance = balance));
+		const setAvailableBalance = vi.fn((balance) => (availableBalance = balance));
 
-		const voted: Contracts.VoteRegistryItem = {
-			amount: 30,
-			wallet: validator,
-		};
+		const voted = { amount: 30, wallet: validator };
 
 		const VoteAmount = () => (
 			<Wrapper>
@@ -790,28 +787,22 @@ describe("DelegateVoteAmount", () => {
 
 		const { rerender } = render(<VoteAmount />);
 
-		const amountField: HTMLInputElement = screen.getByTestId("InputCurrency");
+		const amountField = screen.getByTestId("InputCurrency");
 
-		await act(async () => {
-			await userEvent.clear(amountField);
-			fireEvent.change(amountField, { target: { value: "40" } });
-		});
+		fireEvent.change(amountField, { target: { value: "40" } });
 
 		await waitFor(() => {
 			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 10);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
+			expect(setAvailableBalance).toHaveBeenLastCalledWith(80); // 90 - 10
 		});
 
 		rerender(<VoteAmount />);
 
-		await act(async () => {
-			await userEvent.clear(amountField);
-			fireEvent.change(amountField, { target: { value: "50" } });
-		});
+		fireEvent.change(amountField, { target: { value: "50" } });
 
 		await waitFor(() => {
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(70);
+			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20); // 50 - 30
+			expect(setAvailableBalance).toHaveBeenLastCalledWith(70); // 80 - 10
 		});
 	});
 });
