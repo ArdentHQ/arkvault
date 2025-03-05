@@ -74,49 +74,6 @@ describe("Use Vote Filters", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should filter wallets based on walletsDisplayType", async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		const { wallet: starredWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: ARK_MAINNET_NETWORK_ID,
-		});
-		starredWallet.toggleStarred();
-		profile.wallets().push(starredWallet);
-
-		const { wallet: normalWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: ARK_MAINNET_NETWORK_ID,
-		});
-		profile.wallets().push(normalWallet);
-
-		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
-		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
-			...config,
-			activeNetworkId: ARK_MAINNET_NETWORK_ID,
-		});
-
-		const { result } = renderHook(
-			() => useVoteFilters({ filter: "all", hasWalletId: false, profile, wallet: starredWallet }),
-			{ wrapper },
-		);
-
-		expect(result.current.filteredWallets).toHaveLength(2);
-
-		act(() => {
-			result.current.filterFilters.onChange("walletsDisplayType", "starred");
-		});
-		expect(result.current.filteredWallets).toHaveLength(1);
-		expect(result.current.filteredWallets[0].isStarred()).toBe(true);
-
-		act(() => {
-			result.current.filterFilters.onChange("walletsDisplayType", "ledger");
-		});
-		expect(result.current.filteredWallets).toHaveLength(0);
-
-		resetProfileNetworksMock();
-	});
-
 	it("should filter wallets based on search query", async () => {
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 

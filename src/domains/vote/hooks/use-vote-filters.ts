@@ -1,7 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo, useState } from "react";
 import { useWalletAlias } from "@/app/hooks";
-import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets/hooks";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
 import { sortWallets } from "@/utils/wallet-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -17,7 +16,6 @@ export const useVoteFilters = ({
 	wallet: Contracts.IReadWriteWallet;
 	hasWalletId: boolean;
 }) => {
-	const { defaultConfiguration } = useWalletFilters({ profile });
 	const { getWalletAlias } = useWalletAlias();
 	const walletAddress = useMemo(() => (hasWalletId ? wallet.address() : ""), [hasWalletId, wallet]);
 	const walletMaxVotes = useMemo(
@@ -26,39 +24,19 @@ export const useVoteFilters = ({
 	);
 	const { activeNetwork } = useActiveNetwork({ profile });
 
-	const [walletsDisplayType, setWalletsDisplayType] = useState(defaultConfiguration.walletsDisplayType);
 	const [voteFilter, setVoteFilter] = useState<FilterOption>(filter);
 	const [selectedAddress, setSelectedAddress] = useState(walletAddress);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
 
-	const filterFilters = {
-		onChange: (key: string, value: any) => {
-			if (key === "walletsDisplayType") {
-				setWalletsDisplayType(value);
-			}
-		},
-		walletsDisplayType,
-	};
-
 	const wallets = useMemo(() => {
-		const usedWallets = sortWallets(
+		return sortWallets(
 			profile
 				.wallets()
 				.values()
 				.filter((wallet) => wallet.network().id() === activeNetwork.id()),
 		);
-
-		return usedWallets.filter((wallet) => {
-			if (walletsDisplayType === "starred" && !wallet.isStarred()) {
-				return false;
-			}
-			if (walletsDisplayType === "ledger" && !wallet.isLedger()) {
-				return false;
-			}
-			return true;
-		});
-	}, [profile, walletsDisplayType, activeNetwork]);
+	}, [profile, activeNetwork]);
 
 	const filteredWallets = useMemo(() => {
 		if (searchQuery.length === 0) {
@@ -80,7 +58,6 @@ export const useVoteFilters = ({
 	const hasWallets = wallets.length > 0;
 
 	return {
-		filterFilters,
 		filteredWallets,
 		hasEmptyResults,
 		hasWallets,
@@ -93,6 +70,5 @@ export const useVoteFilters = ({
 		setVoteFilter,
 		voteFilter,
 		wallets,
-		walletsDisplayType,
 	};
 };
