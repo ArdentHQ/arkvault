@@ -29,14 +29,16 @@ export const useVoteFilters = ({
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
 
-	const wallets = useMemo(() => {
-		return sortWallets(
-			profile
-				.wallets()
-				.values()
-				.filter((wallet) => wallet.network().id() === activeNetwork.id()),
-		);
-	}, [profile, activeNetwork]);
+	const wallets = useMemo(
+		() =>
+			sortWallets(
+				profile
+					.wallets()
+					.values()
+					.filter((wallet) => wallet.network().id() === activeNetwork.id()),
+			),
+		[profile, activeNetwork],
+	);
 
 	const filteredWallets = useMemo(() => {
 		if (searchQuery.length === 0) {
