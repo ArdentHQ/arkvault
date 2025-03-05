@@ -827,7 +827,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     class="mr-6 hidden md:block"
                   >
                     <div
-                      aria-controls=":r2g:"
+                      aria-controls=":r1u:"
                       aria-expanded="true"
                       aria-haspopup="dialog"
                       data-testid="dropdown__toggle-VotesFilter"
