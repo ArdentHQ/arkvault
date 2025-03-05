@@ -48,7 +48,7 @@ export const useValidatorRow = ({
 	const isSelectedUnvote = useMemo(
 		() =>
 			!!selectedUnvotes.some((unvote) => {
-				const isEqualToDelegate = unvote.validatorAddress === validator.address();
+				const isEqualToDelegate = unvote.validatorAddress === validator?.address?.();
 
 				if (isEqualToDelegate && requiresStakeAmount) {
 					return unvote.amount === voted?.amount;
@@ -60,7 +60,7 @@ export const useValidatorRow = ({
 	);
 
 	const isSelectedVote = useMemo(
-		() => !!voted || !!validatorExistsInVotes(selectedVotes, validator.address()),
+		() => !!voted || !!validatorExistsInVotes(selectedVotes, validator?.address?.()),
 		[validator, voted, selectedVotes],
 	);
 
@@ -73,9 +73,9 @@ export const useValidatorRow = ({
 	}, [validator, selectedWallet]);
 
 	const isChanged = useMemo(() => {
-		const alreadyExistsInVotes = !!validatorExistsInVotes(selectedVotes, validator.address());
+		const alreadyExistsInVotes = !!validatorExistsInVotes(selectedVotes, validator?.address?.());
 		const alreadyExistsInUnvotes =
-			!!validatorExistsInVotes(selectedUnvotes, validator.address()) && !isSelectedUnvote;
+			!!validatorExistsInVotes(selectedUnvotes, validator?.address?.()) && !isSelectedUnvote;
 
 		return !!voted && (alreadyExistsInVotes || alreadyExistsInUnvotes);
 	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, validator]);
@@ -104,11 +104,11 @@ export const useValidatorRow = ({
 					variant="warning"
 					compactClassName="text-theme-warning-700 hover:text-theme-warning-800"
 					onClick={() => {
-						if (validatorExistsInVotes(selectedVotes, validator.address())) {
-							toggleVotesSelected(validator.address());
+						if (validatorExistsInVotes(selectedVotes, validator?.address?.())) {
+							toggleVotesSelected(validator?.address?.());
 						}
 
-						toggleUnvotesSelected(validator.address(), voted!.amount);
+						toggleUnvotesSelected(validator?.address?.(), voted!.amount);
 					}}
 				>
 					{t("COMMON.CHANGED")}
@@ -128,7 +128,7 @@ export const useValidatorRow = ({
 							text-theme-danger-400 hover:text-theme-danger-500
 							dark:text-white dark:sm:text-theme-danger-400 dark:sm:hover:text-theme-danger-500
 					`}
-						onClick={() => toggleUnvotesSelected(validator.address())}
+						onClick={() => toggleUnvotesSelected(validator?.address?.())}
 					>
 						{t("COMMON.UNSELECTED")}
 					</ValidatorVoteButton>
@@ -145,7 +145,7 @@ export const useValidatorRow = ({
 						text-theme-primary-600 hover:text-theme-primary-700
 						dark:text-white dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
 					`}
-					onClick={() => toggleUnvotesSelected(validator.address())}
+					onClick={() => toggleUnvotesSelected(validator?.address?.())}
 				>
 					{t("COMMON.CURRENT")}
 				</ValidatorVoteButton>
@@ -180,7 +180,7 @@ export const useValidatorRow = ({
 						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
 						dark:text-white dark:sm:text-theme-primary-reverse-600 dark:sm:hover:text-theme-primary-reverse-700
 					`}
-					onClick={() => toggleVotesSelected(validator.address())}
+					onClick={() => toggleVotesSelected(validator?.address?.())}
 				>
 					{t("COMMON.SELECTED")}
 				</ValidatorVoteButton>
@@ -197,7 +197,7 @@ export const useValidatorRow = ({
 					text-theme-primary-600 hover:text-theme-primary-700
 					dark:text-theme-secondary-200 dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
 				`}
-				onClick={() => toggleVotesSelected(validator.address())}
+				onClick={() => toggleVotesSelected(validator?.address?.())}
 			>
 				{t("COMMON.SELECT")}
 			</ValidatorVoteButton>
@@ -251,7 +251,7 @@ export const ValidatorRow = ({
 
 	return (
 		<TableRow
-			key={validator.address()}
+			key={validator?.address?.()}
 			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
 		>
 			<TableCell
@@ -272,7 +272,7 @@ export const ValidatorRow = ({
 			>
 				<Address
 					truncateOnTable
-					address={validator.address()}
+					address={validator?.address?.()}
 					wrapperClass="justify-start"
 					addressClass="leading-[17px] text-sm w-full"
 				/>
@@ -325,7 +325,7 @@ export const ValidatorRow = ({
 					isSelectedUnvote={isSelectedUnvote}
 					selectedVotes={selectedVotes}
 					selectedUnvotes={selectedUnvotes}
-					validatorAddress={validator.address()}
+					validatorAddress={validator?.address?.()}
 					availableBalance={availableBalance}
 					setAvailableBalance={setAvailableBalance}
 					toggleUnvotesSelected={toggleUnvotesSelected}
