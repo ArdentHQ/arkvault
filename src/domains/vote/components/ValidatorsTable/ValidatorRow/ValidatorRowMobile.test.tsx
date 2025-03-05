@@ -102,19 +102,61 @@ describe("DelegateRowMobile", () => {
 	});
 
 	it("should render the selected vote", () => {
-		const voted: Contracts.VoteRegistryItem = {
-			amount: 10,
-			wallet: validator,
-		};
-		render(
+		const secondDelegate = new ReadOnlyWallet({
+			address: data[1].address,
+			explorerLink: "",
+			governanceIdentifier: "address",
+			isDelegate: true,
+			isResignedDelegate: false,
+			publicKey: data[1].publicKey,
+			username: data[1].username,
+		});
+
+		const thirdDelegate = new ReadOnlyWallet({
+			address: data[2].address,
+			explorerLink: "",
+			governanceIdentifier: "address",
+			isDelegate: true,
+			isResignedDelegate: false,
+			publicKey: data[2].publicKey,
+			username: data[2].username,
+		});
+
+		const { container, asFragment } = render(
 			<table>
 				<tbody>
 					<ValidatorRowMobile
 						index={0}
 						validator={validator}
-						voted={voted}
+						voted={{
+							amount: 10,
+							wallet: validator,
+						}}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
+						selectedWallet={wallet}
+					/>
+					<ValidatorRowMobile
+						index={1}
+						validator={secondDelegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
+						selectedWallet={wallet}
+					/>
+					<ValidatorRowMobile
+						index={2}
+						validator={thirdDelegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
+						isVoteDisabled={true}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 						toggleUnvotesSelected={vi.fn()}
@@ -124,7 +166,13 @@ describe("DelegateRowMobile", () => {
 				</tbody>
 			</table>,
 		);
+
+		expect(container).toBeInTheDocument();
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CURRENT);
+		expect(screen.getByTestId("DelegateRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
+		expect(screen.getByTestId("DelegateRow__toggle-2")).toBeDisabled();
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the selected validator", () => {
