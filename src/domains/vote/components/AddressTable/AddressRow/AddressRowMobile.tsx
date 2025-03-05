@@ -105,9 +105,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 								to={votes[0].wallet.explorerLink()}
 								className="flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
 							>
-								<AddressRowMobileDelegateName
-									name={votes[0].wallet.username() ?? votes[0].wallet.address()}
-								/>
+								<AddressRowMobileDelegateName name={votes[0].wallet.username()} />
 							</Link>
 						</div>
 					</div>

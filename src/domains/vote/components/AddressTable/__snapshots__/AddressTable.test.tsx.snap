@@ -820,6 +820,255 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
 </DocumentFragment>
 `;
 
+exports[`AddressTable > should render with empty results 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="AddressTable"
+  >
+    <div
+      class="table-wrapper with-x-padding"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="w-full table-auto"
+      >
+        <thead>
+          <tr
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-80 min-w-80"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Name
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180"
+                    role="img"
+                  >
+                    <div
+                      style="height: 10px; width: 10px;"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-60 min-w-60"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top justify-end flex-row-reverse"
+              >
+                <div
+                  class=""
+                >
+                  Balance
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                >
+                  <div
+                    class="transition-transform rotate-180"
+                    role="img"
+                  >
+                    <div
+                      style="height: 10px; width: 10px;"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-60 min-w-60"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Validator
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180"
+                    role="img"
+                  >
+                    <div
+                      style="height: 10px; width: 10px;"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Votes
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-30 min-w-30"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Info
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                   
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        />
+        <tfoot>
+          <tr
+            class="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4"
+            data-testid="EmptyResults"
+          >
+            <td
+              class="pb-4 pt-[11px]"
+              colspan="6"
+            >
+              <div
+                class="flex flex-col items-center justify-center"
+              >
+                <h3
+                  class="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                >
+                  No Results
+                </h3>
+                <p
+                  class="text-sm text-theme-secondary-700 dark:text-theme-secondary-600"
+                >
+                  No results found. Refine your search and try again.
+                </p>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`AddressTable > should render with voting delegates and handle exception 1`] = `
 <DocumentFragment>
   <div

@@ -64,6 +64,23 @@ describe("AddressTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with empty results", async () => {
+		const { asFragment, container } = render(
+			<Wrapper>
+				<AddressTable wallets={[]} profile={profile} showEmptyResults />
+			</Wrapper>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render in xs screen", async () => {
 		renderResponsiveWithRoute(
 			<Wrapper>
