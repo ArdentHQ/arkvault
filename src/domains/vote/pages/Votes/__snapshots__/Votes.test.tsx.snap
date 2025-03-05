@@ -1106,6 +1106,7 @@ exports[`Votes > should filter current delegates 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__standby"
                               >
                                 Standby
                               </div>
@@ -2476,6 +2477,7 @@ exports[`Votes > should render 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -2599,6 +2601,7 @@ exports[`Votes > should render 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -2722,6 +2725,7 @@ exports[`Votes > should render 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -4088,6 +4092,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -4211,6 +4216,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -4334,6 +4340,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -6525,6 +6532,7 @@ exports[`Votes > should select a validator 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -6648,6 +6656,7 @@ exports[`Votes > should select a validator 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -6771,6 +6780,7 @@ exports[`Votes > should select a validator 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -8200,6 +8210,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -8323,6 +8334,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>
@@ -8446,6 +8458,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             >
                               <div
                                 class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                                data-testid="ValidatorStatus__active"
                               >
                                 Active
                               </div>

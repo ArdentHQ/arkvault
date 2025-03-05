@@ -26025,6 +26025,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -26146,6 +26147,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -26267,6 +26269,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -26838,6 +26841,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -26959,6 +26963,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -27080,6 +27085,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -27651,6 +27657,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -27772,6 +27779,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -27893,6 +27901,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -28464,6 +28473,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -28585,6 +28595,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -28706,6 +28717,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -29331,6 +29343,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -29498,6 +29511,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -29665,6 +29679,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -30303,6 +30318,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -30424,6 +30440,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -30545,6 +30562,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -31116,6 +31134,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -31237,6 +31256,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -31358,6 +31378,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -31934,6 +31955,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -32055,6 +32077,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -32176,6 +32199,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -33226,6 +33250,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -33347,6 +33372,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -33468,6 +33494,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -34093,6 +34120,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -34259,6 +34287,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -34426,6 +34455,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -35064,6 +35094,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -35185,6 +35216,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -35306,6 +35338,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -35878,6 +35911,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -35999,6 +36033,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -36120,6 +36155,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -36696,6 +36732,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -36817,6 +36854,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -36938,6 +36976,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -37563,6 +37602,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -37729,6 +37769,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -37896,6 +37937,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -38534,6 +38576,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -38655,6 +38698,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -38776,6 +38820,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -39347,6 +39392,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -39468,6 +39514,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -39589,6 +39636,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -40161,6 +40209,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -40282,6 +40331,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
@@ -40403,6 +40453,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         >
                           <div
                             class="inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200"
+                            data-testid="ValidatorStatus__standby"
                           >
                             Standby
                           </div>
