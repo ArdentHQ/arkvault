@@ -44,6 +44,9 @@ importers:
       '@ledgerhq/hw-transport-webusb':
         specifier: ^6.29.4
         version: 6.29.4
+      '@noble/hashes':
+        specifier: ^1.7.1
+        version: 1.7.1
       '@scure/base':
         specifier: ^1.2.4
         version: 1.2.4

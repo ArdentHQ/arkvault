@@ -1,5 +1,6 @@
 import { Environment, StorageData } from "@ardenthq/sdk-profiles";
 import { base64 } from "@scure/base"
+import { utf8ToBytes } from "@noble/hashes/utils"
 
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
@@ -20,7 +21,7 @@ export const bootEnvironmentWithProfileFixtures = async ({
 		const password: string = TestingPasswords.profiles[id]?.password;
 
 		const profileData = { id, ...fixtureProfiles[id] };
-		let data = base64.encode(JSON.stringify(profileData));
+		let data = base64.encode(utf8ToBytes(JSON.stringify(profileData)));
 
 		if (password) {
 			// Re-import profile as passwordless, reset password and dump encrypted data.
