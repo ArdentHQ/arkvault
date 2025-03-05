@@ -50,7 +50,7 @@ const useWalletAlias = (): HookResult => {
 
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-					env.usernames().syncUsernames(profile, network.coin(), network.id(), [address])
+					env.usernames().syncUsernames(profile, network.coin(), network.id(), [address]);
 					onChainUsername = env.usernames().username(network.id(), address);
 				}
 
