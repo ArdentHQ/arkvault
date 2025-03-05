@@ -33,7 +33,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	const [selectedVotes, setSelectedVotes] = useState<VoteValidatorProperties[]>(voteValidators);
 	const [isVoteDisabled, setIsVoteDisabled] = useState(false);
 	const [availableBalance, setAvailableBalance] = useState(selectedWallet.balance());
-	const { isXs } = useBreakpoint();
+	const { isMdAndAbove } = useBreakpoint();
 
 	const columns = useValidatorsTableColumns({ isLoading, network: selectedWallet.network() });
 
@@ -191,7 +191,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 				voted = votes.find(({ wallet }) => wallet?.address() === validator?.address?.());
 			}
 
-			const View = isXs ? ValidatorRowMobile : ValidatorRow;
+			const View = isMdAndAbove ? ValidatorRow : ValidatorRowMobile;
 
 			return (
 				<View
@@ -222,7 +222,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 			toggleUnvotesSelected,
 			toggleVotesSelected,
 			hasVotes,
-			isXs,
+			isMdAndAbove,
 		],
 	);
 
@@ -258,7 +258,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 					data={tableData}
 					rowsPerPage={validatorsPerPage}
 					currentPage={currentPage}
-					hideHeader={isXs}
+					hideHeader={!isMdAndAbove}
 					footer={footer}
 				>
 					{renderTableRow}
