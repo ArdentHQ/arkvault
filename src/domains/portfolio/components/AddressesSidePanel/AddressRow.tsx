@@ -3,7 +3,7 @@ import cn from "classnames";
 import { Checkbox } from "@/app/components/Checkbox";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
@@ -32,7 +32,7 @@ export const AddressRow = ({
 }): JSX.Element => {
 	const { isXs } = useBreakpoint();
 
-	const { getWalletAlias } = useWalletAlias();
+	const { getWalletAlias, syncOnChainUsernames } = useWalletAlias();
 
 	if (isXs) {
 		return (
@@ -51,6 +51,10 @@ export const AddressRow = ({
 	}
 
 	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
+
+	useEffect(() => {
+		syncOnChainUsernames({ addresses: [wallet.address()], networks: [wallet.network()], profile });
+	}, [wallet.address(), wallet.network(), profile, syncOnChainUsernames]);
 
 	return (
 		<div
