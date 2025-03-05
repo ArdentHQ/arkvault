@@ -32,7 +32,7 @@ export const AddressRow = ({
 }): JSX.Element => {
 	const { isXs } = useBreakpoint();
 
-	const { getWalletAlias, syncOnChainUsernames } = useWalletAlias();
+	const { getWalletAlias } = useWalletAlias();
 
 	if (isXs) {
 		return (
@@ -51,10 +51,6 @@ export const AddressRow = ({
 	}
 
 	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
-
-	useEffect(() => {
-		syncOnChainUsernames({ addresses: [wallet.address()], networks: [wallet.network()], profile });
-	}, [wallet.address(), wallet.network(), profile, syncOnChainUsernames]);
 
 	return (
 		<div
