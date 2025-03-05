@@ -56,7 +56,15 @@ const useWalletAlias = (): HookResult => {
 
 				const localName = wallet ? wallet.displayName() : undefined;
 
-				const username = wallet ? wallet.username() : undefined;
+				let username: string | undefined;
+
+				try {
+					username = wallet ? wallet.username() : undefined;
+				} catch (error) {
+					if (!error.message.includes("has not been synchronized")) {
+						throw error;
+					}
+				}
 
 				const contact = profile.contacts().findByAddress(address)[0];
 
