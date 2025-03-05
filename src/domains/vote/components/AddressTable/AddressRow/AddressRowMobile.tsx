@@ -3,15 +3,12 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useMediaQuery } from "react-responsive";
-import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useConfiguration } from "@/app/contexts";
-import { useActiveProfile, useActiveWallet, useWalletAlias } from "@/app/hooks";
-import { assertReadOnlyWallet } from "@/utils/assertions";
+import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
-import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { WalletStatus } from "./AddressRow";
