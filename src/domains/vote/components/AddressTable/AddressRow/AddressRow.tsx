@@ -16,6 +16,7 @@ import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { twMerge } from "tailwind-merge";
 
 interface AddressRowProperties {
 	index: number;
@@ -28,10 +29,12 @@ export const WalletStatus = ({
 	wallet,
 	activeDelegates,
 	fallback = <></>,
+	className = "",
 }: {
 	wallet?: Contracts.IReadOnlyWallet;
 	activeDelegates: number;
 	fallback?: React.ReactNode;
+	className?: string;
 }) => {
 	const { t } = useTranslation();
 
@@ -43,7 +46,12 @@ export const WalletStatus = ({
 
 	if (wallet.isResignedDelegate()) {
 		return (
-			<div className="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
+			<div
+				className={twMerge(
+					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
+					className,
+				)}
+			>
 				{t("WALLETS.STATUS.RESIGNED")}
 			</div>
 		);
@@ -51,14 +59,24 @@ export const WalletStatus = ({
 
 	if (Number(wallet.rank()) > activeDelegates) {
 		return (
-			<div className="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
+			<div
+				className={twMerge(
+					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
+					className,
+				)}
+			>
 				{t("WALLETS.STATUS.STANDBY")}
 			</div>
 		);
 	}
 
 	return (
-		<div className="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500">
+		<div
+			className={twMerge(
+				"inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500",
+				className,
+			)}
+		>
 			{t("WALLETS.STATUS.ACTIVE")}
 		</div>
 	);

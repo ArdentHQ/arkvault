@@ -137,18 +137,30 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							{alias}
 						</span>
 
-						<Button
-							disabled={!wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()}
-							variant="transparent"
-							onClick={(e) => {
-								e.stopPropagation();
-								onSelect?.(wallet.address());
-							}}
-							data-testid={`AddressRowMobile__select-${index}`}
-							className="p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
-						>
-							{t("COMMON.VOTE")}
-						</Button>
+						<div className="flex items-center gap-3">
+							<WalletStatus
+								className="sm:hidden"
+								wallet={votes[0]?.wallet}
+								activeDelegates={wallet.network().delegateCount()}
+							/>
+
+							{votes[0]?.wallet && (
+								<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden" />
+							)}
+
+							<Button
+								disabled={!wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()}
+								variant="transparent"
+								onClick={(e) => {
+									e.stopPropagation();
+									onSelect?.(wallet.address());
+								}}
+								data-testid={`AddressRowMobile__select-${index}`}
+								className="p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+							>
+								{t("COMMON.VOTE")}
+							</Button>
+						</div>
 					</div>
 
 					<div className="grid gap-4 px-4 py-3 sm:grid-cols-3">
