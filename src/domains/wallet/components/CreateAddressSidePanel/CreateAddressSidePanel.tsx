@@ -56,7 +56,7 @@ export const CreateAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, setValue, watch, errors } = form;
+	const { getValues, formState, register, setValue, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
