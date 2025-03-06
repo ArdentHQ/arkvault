@@ -31,9 +31,21 @@ const continueButton = () => screen.getByTestId("CreateWallet__continue-button")
 describe("CreateAddressSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
 
-	beforeAll(() => {
+	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
+
+		const profile = env.profiles().findById(fixtureProfileId);
+		const walletMock = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: passphrase,
+			network: "ark.devnet",
+		});
+
+		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(async () => ({
+			mnemonic: passphrase,
+			wallet: walletMock
+		}))
+
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
 	});
