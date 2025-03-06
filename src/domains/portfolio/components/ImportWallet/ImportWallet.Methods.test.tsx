@@ -17,7 +17,6 @@ import {
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
-import { aw } from "vitest/dist/chunks/reporters.D7Jzd9GS";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
