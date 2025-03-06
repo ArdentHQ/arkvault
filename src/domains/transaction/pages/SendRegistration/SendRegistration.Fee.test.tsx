@@ -82,7 +82,9 @@ describe("Registration Fee", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		wallet = profile.wallets().findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
+		wallet = profile
+			.wallets()
+			.findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
 
 		secondWallet = profile.wallets().push(
 			await profile.walletFactory().fromAddress({
