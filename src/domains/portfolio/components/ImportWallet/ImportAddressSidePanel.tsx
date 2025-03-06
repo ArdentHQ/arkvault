@@ -109,7 +109,7 @@ export const ImportAddressesSidePanel = ({
 		}
 
 		return wallet;
-	}
+	};
 
 	const handleNext = () =>
 		({
