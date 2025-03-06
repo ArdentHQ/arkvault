@@ -56,8 +56,10 @@ export const CreateAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, unregister, setValue, watch } = form;
+	const { getValues, formState, register, setValue, watch, errors } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
+
+	console.log(getValues(), errors, isSubmitting, isValid);
 
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
@@ -139,12 +141,6 @@ export const CreateAddressesSidePanel = ({
 			void handleGenerateWallet();
 
 			return;
-		}
-
-		if (newIndex === Step.ConfirmPassphraseStep) {
-			register("verification", { required: true });
-		} else if (activeTab === Step.ConfirmPassphraseStep) {
-			unregister("verification");
 		}
 
 		if (newIndex === Step.SuccessStep) {
