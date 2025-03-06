@@ -59,8 +59,6 @@ export const CreateAddressesSidePanel = ({
 	const { getValues, formState, register, setValue, watch, errors } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	console.log(getValues(), errors, isSubmitting, isValid);
-
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
