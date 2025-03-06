@@ -17,6 +17,7 @@ import {
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
+import { aw } from "vitest/dist/chunks/reporters.D7Jzd9GS";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -329,12 +330,15 @@ describe("ImportAddress Methods", () => {
 
 		expect(detailStep()).toBeInTheDocument();
 
-		const passphraseInput = screen.getByTestId(secretInputID);
+		const fillPassphrase = async () => {
+			const passphraseInput = screen.getByTestId(secretInputID);
+			expect(passphraseInput).toBeInTheDocument();
 
-		expect(passphraseInput).toBeInTheDocument();
+			await userEvent.clear(passphraseInput);
+			await userEvent.type(passphraseInput, "abcd");
+		}
 
-		await userEvent.clear(passphraseInput);
-		await userEvent.type(passphraseInput, "abcd");
+		await fillPassphrase();
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -348,16 +352,36 @@ describe("ImportAddress Methods", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		const fillPassword = async (password: string, confirmation: string) => {
+			await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+			await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
 
-		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
+			await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
 
-		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
-		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
-			password,
-		);
+			await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+			await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), confirmation);
+			await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
+				confirmation,
+			);
+		}
+
+		await fillPassword(password, "incorrect password");
+
+		await userEvent.click(backButton());
+
+		expect(detailStep()).toBeInTheDocument();
+
+		await fillPassphrase();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await userEvent.click(continueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+		});
+
+		await fillPassword(password, password);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await userEvent.click(continueButton());
