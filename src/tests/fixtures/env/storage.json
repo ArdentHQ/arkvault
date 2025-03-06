@@ -193,12 +193,12 @@
 					"data": {
 						"COIN": "Mainsail",
 						"NETWORK": "mainsail.devnet",
-						"ADDRESS": "0x8A3117649655714c296cd816691e01C5148922ed",
-						"PUBLIC_KEY": "02326277066ea98884095c41ebb7c74b392f5b95a63382c5c51459673e506881fc",
+						"ADDRESS": "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+						"PUBLIC_KEY": "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 						"BALANCE": {
-							"total": "3375089801",
-							"available": "3375089801",
-							"fees": "3375089801"
+							"total": "970145607232337508980",
+							"available": "970145607232337508980",
+							"fees": "970145607232337508980"
 						},
 						"BROADCASTED_TRANSACTIONS": {},
 						"EXCHANGE_CURRENCY": "BTC",

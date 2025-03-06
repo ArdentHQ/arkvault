@@ -8,14 +8,11 @@ import { Route } from "react-router-dom";
 
 import { SendRegistration } from "./SendRegistration";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
+import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
-import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
 import {
 	act,
 	env,
-	getDefaultProfileId,
-	getDefaultWalletMnemonic,
 	render,
 	screen,
 	syncDelegates,
@@ -23,10 +20,9 @@ import {
 	waitFor,
 	within,
 	mockNanoXTransport,
-	MNEMONICS,
+	getMainsailProfileId, getDefaultMainsailWalletMnemonic, MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 
@@ -34,7 +30,7 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
-const passphrase = getDefaultWalletMnemonic();
+const passphrase = getDefaultMainsailWalletMnemonic();
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -42,7 +38,7 @@ vi.mock("@/utils/delay", () => ({
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
-const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRegistration") => {
+const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
 	history.push(registrationURL);
@@ -66,34 +62,39 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 	};
 };
 
-const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
+const createValidatorRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => +DelegateRegistrationFixture.data.amount / 1e8,
+		amount: () => +ValidatorRegistrationFixture.data.amount / 1e18,
 		blockId: () => "1",
+		confirmations: () => BigNumber.make(154_178),
 		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => DelegateRegistrationFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${DelegateRegistrationFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${DelegateRegistrationFixture.data.id}`,
-		fee: () => +DelegateRegistrationFixture.data.fee / 1e8,
-		id: () => DelegateRegistrationFixture.data.id,
+		data: () => ({ data: () => ValidatorRegistrationFixture.data }),
+		explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.id}`,
+		explorerLinkForBlock: () => `https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.id}`,
+		fee: () => +ValidatorRegistrationFixture.data.fee / 1e18,
+		id: () => ValidatorRegistrationFixture.data.id,
 		isConfirmed: () => true,
 		isDelegateRegistration: () => true,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isSuccess: () => true,
 		isTransfer: () => false,
 		isUnvote: () => false,
+		isUsernameRegistration: () => false,
+		isUsernameResignation: () => false,
+		isValidatorRegistration: () => true,
+		isValidatorResignation: () => false,
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
 		nonce: () => BigNumber.make(1),
-		recipient: () => DelegateRegistrationFixture.data.recipient,
-		sender: () => DelegateRegistrationFixture.data.sender,
+		recipient: () => ValidatorRegistrationFixture.data.recipient,
+		sender: () => ValidatorRegistrationFixture.data.senderAddress,
 		timestamp: () => DateTime.make(),
-		type: () => "delegateRegistration",
-		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
+		type: () => "validatorRegistration",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,
 	});
@@ -126,10 +127,10 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",
-		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
+		username: () => "username",
 		usesMultiSignature: () => false,
 		wallet: () => ({
-			username: () => DelegateRegistrationFixture.data.asset.delegate.username,
+			username: () => "username",
 		}),
 	} as any);
 
@@ -143,36 +144,34 @@ const withKeyboard = "with keyboard";
 
 describe("Registration", () => {
 	beforeAll(async () => {
+		process.env.USE_MAINSAIL_NETWORK = "true";
 		vi.useFakeTimers({
 			shouldAdvanceTime: true,
 			toFake: ["setInterval", "clearInterval", "Date"],
 		});
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		wallet = profile.wallets().findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!;
-		// secondWallet = profile.wallets().findByAddressWithNetwork("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", "ark.devnet")!;
+		wallet = profile.wallets().findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
+
+		vi.spyOn(wallet.coin().publicKey(), "verifyPublicKeyWithBLS").mockResolvedValue(true);
+		vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => false);
+
 		secondWallet = profile.wallets().push(
 			await profile.walletFactory().fromAddress({
-				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-				coin: "ARK",
-				network: "ark.devnet",
+				address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+				coin: "Mainsail",
+				network: "mainsail.devnet",
 			}),
 		);
+
+		vi.spyOn(secondWallet, "balance").mockReturnValue(1200);
 
 		await wallet.synchroniser().identity();
 		await secondWallet.synchroniser().identity();
-
-		profile.wallets().push(
-			await profile.walletFactory().fromAddress({
-				address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
-				coin: "ARK",
-				network: "ark.devnet",
-			}),
-		);
 
 		await syncDelegates(profile);
 		await syncFees(profile);
@@ -184,21 +183,15 @@ describe("Registration", () => {
 
 	beforeEach(() => {
 		server.use(
+			requestMock("https://dwallets-evm.mainsailhq.com/api/wallets*", {
+				meta: {
+					count: 0
+				}
+			}),
 			requestMock(
-				"https://ark-test-musig.arkvault.io/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-				walletFixture,
+				"https://dwallets-evm.mainsailhq.com/api/transactions/a10a238d4ea8076532ba38282be6f35b4dd652066312d2fe7c45ba8c91c9c837",
+				ValidatorRegistrationFixture,
 			),
-			requestMock(
-				"https://ark-test-musig.arkvault.io",
-				{ result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } },
-				{ method: "post" },
-			),
-			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/a73433448863755929beca76c84a80006c6efb14c905c2c53f3c89e33233d4ac",
-				transactionsFixture,
-			),
-			// Emulate public key hasn't used
-			requestMock(`https://dwallets-evm.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }),
 		);
 	});
 
@@ -206,7 +199,7 @@ describe("Registration", () => {
 		["validatorRegistration", "Register Validator"],
 		["multiSignature", multisignatureTitle],
 	])("should handle registrationType param (%s)", async (type, label) => {
-		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
+		const registrationPath = `/profiles/${profile.id()}/wallets/${secondWallet.id()}/send-registration/${type}`;
 		history.push(registrationPath);
 
 		render(
@@ -224,25 +217,19 @@ describe("Registration", () => {
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(label));
 	});
 
-	it.each([withKeyboard, "without keyboard"])("should register delegate %s", async (inputMethod) => {
+	it.each([withKeyboard, "without keyboard"])("should register validator %s", async (inputMethod) => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const { asFragment, history } = await renderPage(wallet);
 
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("Input__username"));
-		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
+		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
+		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"));
 
 		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
 		await userEvent.click(fees[1]);
-
-		await userEvent.click(
-			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
-		);
-
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
 
 		// remove focus from fee button
 		await userEvent.click(document.body);
@@ -288,14 +275,14 @@ describe("Registration", () => {
 		await waitFor(() => expect(sendButton()).toBeEnabled());
 
 		const signMock = vi
-			.spyOn(wallet.transaction(), "signDelegateRegistration")
-			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
+			.spyOn(wallet.transaction(), "signValidatorRegistration")
+			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [DelegateRegistrationFixture.data.id],
+			accepted: [ValidatorRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
-		const transactionMock = createDelegateRegistrationMock(wallet);
+		const transactionMock = createValidatorRegistrationMock(wallet);
 
 		if (inputMethod === withKeyboard) {
 			await userEvent.keyboard("{enter}");
@@ -305,14 +292,15 @@ describe("Registration", () => {
 
 		await waitFor(() => {
 			expect(signMock).toHaveBeenCalledWith({
-				data: { username: "test_delegate" },
-				fee: 25,
+				data: { validatorPublicKey: "validator-public-key" },
+				gasLimit: 500_000,
+				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			});
 		});
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(DelegateRegistrationFixture.data.id));
-		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(DelegateRegistrationFixture.data.id));
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.id));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.id));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -331,7 +319,7 @@ describe("Registration", () => {
 		const historySpy = vi.spyOn(history, "push");
 		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		historySpy.mockRestore();
 
@@ -423,8 +411,9 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.type(screen.getByTestId("Input__username"), "username");
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
+		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
+		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"));
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -465,8 +454,9 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.type(screen.getByTestId("Input__username"), "username");
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
+		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
+		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"));
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -490,27 +480,28 @@ describe("Registration", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const signMock = vi
-			.spyOn(wallet.transaction(), "signDelegateRegistration")
-			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
+			.spyOn(wallet.transaction(), "signValidatorRegistration")
+			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [DelegateRegistrationFixture.data.id],
+			accepted: [ValidatorRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
-		const transactionMock = createDelegateRegistrationMock(wallet);
+		const transactionMock = createValidatorRegistrationMock(wallet);
 
 		await userEvent.keyboard("{enter}");
 
 		await waitFor(() =>
 			expect(signMock).toHaveBeenCalledWith({
-				data: { username: "username" },
-				fee: 25,
+				data: { validatorPublicKey: "validator-public-key" },
+				gasLimit: 500_000,
+				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			}),
 		);
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(DelegateRegistrationFixture.data.id));
-		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(DelegateRegistrationFixture.data.id));
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.id));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.id));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -540,7 +531,7 @@ describe("Registration", () => {
 
 		await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		historySpy.mockRestore();
 		nanoXTransportMock.mockRestore();
@@ -554,8 +545,9 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.type(screen.getByTestId("Input__username"), "delegate");
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("delegate"));
+		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
+		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"));
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -573,14 +565,14 @@ describe("Registration", () => {
 
 		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
 
-		await userEvent.type(mnemonic, MNEMONICS[0]);
-		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
+		await userEvent.type(mnemonic, MAINSAIL_MNEMONICS[0]);
+		await waitFor(() => expect(mnemonic).toHaveValue(MAINSAIL_MNEMONICS[0]));
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		const signMock = vi
-			.spyOn(secondWallet.transaction(), "signDelegateRegistration")
-			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
+			.spyOn(secondWallet.transaction(), "signValidatorRegistration")
+			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.id));
 
 		const broadcastMock = vi.spyOn(secondWallet.transaction(), "broadcast").mockImplementation(() => {
 			throw new Error("broadcast error");
@@ -597,7 +589,7 @@ describe("Registration", () => {
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}`;
+		const walletDetailPage = `/profiles/${profile.id()}/dashboard`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
 
 		historyMock.mockRestore();
