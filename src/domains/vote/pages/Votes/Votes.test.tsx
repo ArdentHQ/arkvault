@@ -480,7 +480,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "ARK Wallet 2");
+		await userEvent.type(searchInput, "ARK Wallet 1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
