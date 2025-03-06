@@ -101,7 +101,6 @@ export const ImportAddressesSidePanel = ({
 		try {
 			wallet = await importWalletsInAllNetworks();
 		} catch (error) {
-			console.log(error);
 			/* istanbul ignore next -- @preserve */
 			toasts.error(error.message);
 		} finally {
