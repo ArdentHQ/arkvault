@@ -1,8 +1,8 @@
 import { Coins, Networks } from "@ardenthq/sdk";
-import { truncate } from "@ardenthq/sdk-helpers";
+import { get, truncate } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -297,7 +297,7 @@ const ImportInputField = ({
 
 export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) => {
 	const { t } = useTranslation();
-	const { watch, setValue, getValues } = useFormContext();
+	const { watch, setValue, getValues, clearErrors } = useFormContext();
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
@@ -305,6 +305,10 @@ export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IPro
 	const importOption = getValues("importOption") as ImportOption;
 
 	assertString(importOption.value);
+
+	useEffect(() => {
+		clearErrors(["validation", "confirmEncryptionPassword"]);
+	}, []);
 
 	const handleToggleEncryption = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setValue("useEncryption", event.target.checked);

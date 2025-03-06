@@ -67,14 +67,8 @@ const SecondInputField = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =>
 	);
 };
 
-export const EncryptPasswordStep = ({ importedWallet }: EncryptPasswordStepProperties) => {
+export const EncryptPasswordStep = () => {
 	const { t } = useTranslation();
-
-	const renderSecondInputField = () => {
-		if (importedWallet?.hasSyncedWithNetwork() && importedWallet?.isSecondSignature()) {
-			return <SecondInputField wallet={importedWallet} />;
-		}
-	};
 
 	return (
 		<section data-testid="EncryptPassword">
@@ -83,8 +77,6 @@ export const EncryptPasswordStep = ({ importedWallet }: EncryptPasswordStepPrope
 			</Alert>
 
 			<div className="space-y-4 pt-4">
-				{renderSecondInputField()}
-
 				<PasswordValidation
 					passwordField="encryptionPassword"
 					passwordFieldLabel={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.PASSWORD_LABEL")}

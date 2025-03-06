@@ -61,13 +61,15 @@ export const ImportAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, watch } = form;
+	const { getValues, formState, register, watch, setValue } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
 
 	useEffect(() => {
 		register({ name: "importOption", type: "custom" });
 		register("useEncryption");
+		register("storedValue");
+		register("storedEncryptedWif");
 	}, [register]);
 
 	useEffect(() => {
@@ -91,6 +93,24 @@ export const ImportAddressesSidePanel = ({
 		}
 	});
 
+	const initImport = async () => {
+		setIsImporting(true);
+
+		let wallet: Contracts.IReadWriteWallet | undefined;
+
+		try {
+			wallet = await importWalletsInAllNetworks();
+		} catch (error) {
+			console.log(error);
+			/* istanbul ignore next -- @preserve */
+			toasts.error(error.message);
+		} finally {
+			setIsImporting(false);
+		}
+
+		return wallet;
+	}
+
 	const handleNext = () =>
 		({
 			// eslint-disable-next-line @typescript-eslint/require-await
@@ -98,27 +118,25 @@ export const ImportAddressesSidePanel = ({
 				setActiveTab(Step.ImportDetailStep);
 			},
 			[Step.ImportDetailStep]: async () => {
-				setIsImporting(true);
+				// store values in state because `value` will be removed due to input unmount
+				const { encryptedWif, value } = getValues();
+				setValue("storedValue", value);
+				setValue("storedEncryptedWif", encryptedWif);
 
-				try {
-					await importWalletsInAllNetworks();
-
-					if (useEncryption && importOption.canBeEncrypted) {
-						setActiveTab(Step.EncryptPasswordStep);
-					} else {
-						setActiveTab(Step.SummaryStep);
-					}
-				} catch (error) {
-					/* istanbul ignore next -- @preserve */
-					toasts.error(error.message);
-				} finally {
-					setIsImporting(false);
+				if (useEncryption && importOption.canBeEncrypted) {
+					setActiveTab(Step.EncryptPasswordStep);
+					return;
 				}
+
+				await initImport();
+				setActiveTab(Step.SummaryStep);
 			},
 			[Step.EncryptPasswordStep]: async () => {
+				const wallet = await initImport();
+
 				setIsEncrypting(true);
 
-				await encryptInputs();
+				await encryptInputs(wallet);
 				setActiveTab(Step.SummaryStep);
 
 				setIsEncrypting(false);
@@ -130,16 +148,11 @@ export const ImportAddressesSidePanel = ({
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		if (activeTab === Step.EncryptPasswordStep) {
-			assertWallet(importedWallet);
-			activeProfile.wallets().forget(importedWallet.id());
-		}
-
 		setActiveTab(activeTab - 1);
 	};
 
-	const importWalletsInAllNetworks = async () => {
-		const { importOption, encryptedWif, value } = getValues();
+	const importWalletsInAllNetworks = async (): Promise<Contracts.IReadWriteWallet | undefined> => {
+		const { importOption, storedEncryptedWif: encryptedWif, storedValue: value } = getValues();
 		const wallets = await importWallets({
 			encryptedWif,
 			networks: activeProfile.availableNetworks(),
@@ -149,16 +162,18 @@ export const ImportAddressesSidePanel = ({
 
 		const currentWallet = wallets.find((wallet) => wallet.network().id() === activeNetwork.id());
 		setImportedWallet(currentWallet);
+
+		return currentWallet;
 	};
 
-	const encryptInputs = async () => {
+	const encryptInputs = async (importedWallet?: Contracts.IReadWriteWallet) => {
 		assertWallet(importedWallet);
 		assertString(walletGenerationInput);
 
-		importedWallet.signingKey().set(walletGenerationInput, encryptionPassword);
+		await importedWallet.signingKey().set(walletGenerationInput, encryptionPassword);
 
 		if (secondInput) {
-			importedWallet.confirmKey().set(secondInput, encryptionPassword);
+			await importedWallet.confirmKey().set(secondInput, encryptionPassword);
 		}
 
 		if (importedWallet.actsWithMnemonic()) {
@@ -241,7 +256,7 @@ export const ImportAddressesSidePanel = ({
 								</TabPanel>
 
 								<TabPanel tabId={Step.EncryptPasswordStep}>
-									<EncryptPasswordStep importedWallet={importedWallet} />
+									<EncryptPasswordStep />
 								</TabPanel>
 
 								<TabPanel tabId={Step.SummaryStep}>
