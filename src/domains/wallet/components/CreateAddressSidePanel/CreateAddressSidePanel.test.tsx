@@ -284,7 +284,7 @@ describe("CreateAddressSidePanel", () => {
 			await userEvent.type(secondInput, "return");
 			await userEvent.clear(thirdInput);
 			await userEvent.type(thirdInput, "attend");
-		}
+		};
 
 		await fillConfirmationInputs();
 		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
@@ -300,7 +300,7 @@ describe("CreateAddressSidePanel", () => {
 			await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
 			await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
 			await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), confirmation);
-		}
+		};
 
 		await fillEncryptionPassword("hello123", "wrong-confirmation");
 
