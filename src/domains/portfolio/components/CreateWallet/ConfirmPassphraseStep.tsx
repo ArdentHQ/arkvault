@@ -7,7 +7,7 @@ import { Checkbox } from "@/app/components/Checkbox";
 import { Toggle } from "@/app/components/Toggle";
 
 export const ConfirmPassphraseStep = () => {
-	const { getValues, setValue, watch } = useFormContext();
+	const { getValues, setValue, watch, clearErrors, register } = useFormContext();
 	const [mnemonicValidated, setMnemonicValidated] = useState(false);
 	const passphraseDisclaimer: boolean = getValues("passphraseDisclaimer");
 	const mnemonic = watch("mnemonic");
@@ -19,15 +19,17 @@ export const ConfirmPassphraseStep = () => {
 	};
 
 	useEffect(() => {
+		register("verification", { required: true });
+		clearErrors(["validation", "confirmEncryptionPassword"]);
+		setValue("passphraseDisclaimer", false);
+	}, []);
+
+	useEffect(() => {
 		setValue("verification", passphraseDisclaimer && mnemonicValidated, {
 			shouldDirty: true,
 			shouldValidate: true,
 		});
 	}, [mnemonicValidated, passphraseDisclaimer]);
-
-	useEffect(() => {
-		setValue("passphraseDisclaimer", false);
-	}, []);
 
 	const handleToggleEncryption = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setValue("useEncryption", event.target.checked);
