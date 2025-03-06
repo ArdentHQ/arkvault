@@ -20,7 +20,9 @@ import {
 	waitFor,
 	within,
 	mockNanoXTransport,
-	getMainsailProfileId, getDefaultMainsailWalletMnemonic, MAINSAIL_MNEMONICS,
+	getMainsailProfileId,
+	getDefaultMainsailWalletMnemonic,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import { BigNumber } from "@ardenthq/sdk-helpers";
@@ -71,7 +73,8 @@ const createValidatorRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => ValidatorRegistrationFixture.data }),
 		explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.id}`,
-		explorerLinkForBlock: () => `https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.id}`,
+		explorerLinkForBlock: () =>
+			`https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.id}`,
 		fee: () => +ValidatorRegistrationFixture.data.fee / 1e18,
 		id: () => ValidatorRegistrationFixture.data.id,
 		isConfirmed: () => true,
@@ -155,7 +158,9 @@ describe("Registration", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		wallet = profile.wallets().findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
+		wallet = profile
+			.wallets()
+			.findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
 
 		vi.spyOn(wallet.coin().publicKey(), "verifyPublicKeyWithBLS").mockResolvedValue(true);
 		vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => false);
@@ -185,8 +190,8 @@ describe("Registration", () => {
 		server.use(
 			requestMock("https://dwallets-evm.mainsailhq.com/api/wallets*", {
 				meta: {
-					count: 0
-				}
+					count: 0,
+				},
 			}),
 			requestMock(
 				"https://dwallets-evm.mainsailhq.com/api/transactions/a10a238d4ea8076532ba38282be6f35b4dd652066312d2fe7c45ba8c91c9c837",
@@ -596,4 +601,4 @@ const inputValidatorPublicKey = async (key: string = "validator-public-key") => 
 	await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
 	await userEvent.type(screen.getByTestId("Input__validator_public_key"), key);
 	await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(key));
-}
+};
