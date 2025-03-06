@@ -41,11 +41,13 @@ describe("CreateAddressSidePanel", () => {
 			network: "ark.devnet",
 		});
 
-		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(async () => ({
-			mnemonic: passphrase,
-			wallet: walletMock
-		}))
-
+		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(
+			async () =>
+				await {
+					mnemonic: passphrase,
+					wallet: walletMock,
+				},
+		);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
 	});
