@@ -71,14 +71,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 					disableSortBy: true,
 					headerClassName: "no-border",
 				},
-				{
-					Header: t("COMMON.INFO"),
-					accessor: () => "wallet-type",
-					cellWidth: "w-30",
-					className: "justify-center",
-					disableSortBy: true,
-					headerClassName: "hidden lg:table-cell no-border",
-				},
+
 				{
 					accessor: "onSelect",
 					disableSortBy: true,
@@ -98,14 +91,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 				disableSortBy: true,
 				headerClassName: "no-border",
 			},
-			{
-				Header: t("COMMON.INFO"),
-				accessor: () => "wallet-type",
-				cellWidth: "w-30",
-				className: "justify-center",
-				disableSortBy: true,
-				headerClassName: "hidden lg:table-cell no-border",
-			},
+
 			{
 				accessor: "onSelect",
 				disableSortBy: true,

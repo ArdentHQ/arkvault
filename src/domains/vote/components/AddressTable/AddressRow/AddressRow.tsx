@@ -245,10 +245,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				</TableCell>
 			)}
 
-			<TableCell className="hidden lg:table-cell" innerClassName="text-sm justify-center space-x-2">
-				<WalletIcons wallet={wallet} exclude={["isKnown", "isSecondSignature", "isTestNetwork"]} />
-			</TableCell>
-
 			<TableCell variant="end" innerClassName="justify-end">
 				<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
 					<div>
