@@ -27,6 +27,7 @@ interface HookResult {
 
 const useWalletAlias = (): HookResult => {
 	const { env } = useEnvironmentContext();
+	let alias: string | undefined;
 
 	const getWalletAlias = useCallback(
 		({ address, profile, network }: Properties) => {
@@ -50,11 +51,14 @@ const useWalletAlias = (): HookResult => {
 
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-
 					onChainUsername = env.usernames().username(network.id(), address);
 				}
 
 				const localName = wallet ? wallet.displayName() : undefined;
+
+				if (localName) {
+					alias = localName;
+				}
 
 				const username = wallet ? wallet.username() : undefined;
 
@@ -62,7 +66,7 @@ const useWalletAlias = (): HookResult => {
 
 				const contactName = contact ? contact.name() : undefined;
 
-				const alias = useNetworkWalletNames
+				alias = useNetworkWalletNames
 					? username || localName || contactName || onChainUsername
 					: localName || contactName || username || onChainUsername;
 
@@ -70,7 +74,7 @@ const useWalletAlias = (): HookResult => {
 
 				return { address, alias, isContact };
 			} catch {
-				return { address, alias: undefined, isContact: false };
+				return { address, alias, isContact: false };
 			}
 		},
 		[env],
