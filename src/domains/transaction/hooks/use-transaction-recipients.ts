@@ -27,11 +27,11 @@ export const useTransactionRecipients = ({
 
 		if (transaction.isTransfer() || isContractTransaction(transaction)) {
 			return [
-				{
+				getWalletAlias({
 					address: transaction.recipient(),
-					coin: transaction.wallet().network().coin(),
-					network: transaction.wallet().network().id(),
-				},
+					network: activeNetwork,
+					profile,
+				}),
 			];
 		}
 
