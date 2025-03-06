@@ -86,7 +86,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -252,7 +252,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -416,7 +416,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -581,7 +581,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -746,7 +746,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -910,7 +910,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -1074,7 +1074,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1330,7 +1330,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1689,7 +1689,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -1853,7 +1853,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -2017,7 +2017,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
