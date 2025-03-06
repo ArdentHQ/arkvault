@@ -181,25 +181,9 @@ exports[`AddressTable > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-30 min-w-30"
-              colspan="1"
-              data-testid="table__th--4"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div
-                  class=""
-                >
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
             >
               <div
@@ -375,13 +359,6 @@ exports[`AddressTable > should render 1`] = `
                   </span>
                 </div>
               </div>
-            </td>
-            <td
-              class="hidden lg:table-cell"
-            >
-              <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-              />
             </td>
             <td>
               <div
@@ -591,25 +568,9 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-30 min-w-30"
-              colspan="1"
-              data-testid="table__th--4"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div
-                  class=""
-                >
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
             >
               <div
@@ -785,13 +746,6 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   </span>
                 </div>
               </div>
-            </td>
-            <td
-              class="hidden lg:table-cell"
-            >
-              <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-              />
             </td>
             <td>
               <div
@@ -1001,25 +955,9 @@ exports[`AddressTable > should render with empty results 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-30 min-w-30"
-              colspan="1"
-              data-testid="table__th--4"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div
-                  class=""
-                >
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
             >
               <div
@@ -1044,7 +982,7 @@ exports[`AddressTable > should render with empty results 1`] = `
           >
             <td
               class="pb-4 pt-[11px]"
-              colspan="6"
+              colspan="5"
             >
               <div
                 class="flex flex-col items-center justify-center"
@@ -1250,25 +1188,9 @@ exports[`AddressTable > should render with voting delegates and handle exception
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-30 min-w-30"
-              colspan="1"
-              data-testid="table__th--4"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div
-                  class=""
-                >
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
             >
               <div
@@ -1404,13 +1326,6 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   </span>
                 </div>
               </div>
-            </td>
-            <td
-              class="hidden lg:table-cell"
-            >
-              <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-              />
             </td>
             <td>
               <div

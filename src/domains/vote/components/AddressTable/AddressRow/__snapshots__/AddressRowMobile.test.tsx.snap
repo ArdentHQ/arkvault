@@ -24,6 +24,12 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Resigned
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -96,7 +102,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -184,6 +190,12 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Resigned
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -256,7 +268,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -342,6 +354,12 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Active
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -414,7 +432,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -501,6 +519,12 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Active
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -573,7 +597,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -660,6 +684,12 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Active
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -732,7 +762,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -818,6 +848,12 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Active
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -890,7 +926,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -976,6 +1012,12 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Resigned
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -1048,7 +1090,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -1226,6 +1268,12 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Resigned
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -1298,7 +1346,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -1579,6 +1627,12 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Active
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -1651,7 +1705,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -1737,6 +1791,12 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Resigned
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -1809,7 +1869,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -1895,6 +1955,12 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
               <div
                 class="flex items-center gap-3"
               >
+                <div
+                  class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
+                >
+                  Standby
+                </div>
                 <span
                   class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
                 />
@@ -1967,7 +2033,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
