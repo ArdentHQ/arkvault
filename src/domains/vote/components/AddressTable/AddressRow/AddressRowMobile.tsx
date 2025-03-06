@@ -129,6 +129,13 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 						</span>
 
 						<div className="flex items-center gap-3">
+							<WalletStatus
+								dataTestId={`AddressRowMobile__wallet-status-${index}`}
+								className="sm:hidden"
+								wallet={votes[0]?.wallet}
+								activeDelegates={wallet.network().delegateCount()}
+							/>
+
 							{votes[0]?.wallet && (
 								<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden" />
 							)}
