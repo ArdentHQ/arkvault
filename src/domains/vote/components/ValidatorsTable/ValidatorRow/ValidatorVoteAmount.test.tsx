@@ -789,20 +789,24 @@ describe("DelegateVoteAmount", () => {
 
 		const amountField = screen.getByTestId("InputCurrency");
 
+		// eslint-disable-next-line testing-library/prefer-user-event
 		fireEvent.change(amountField, { target: { value: "40" } });
 
 		await waitFor(() => {
 			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 10);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(80); // 90 - 10
 		});
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(80); // 90 - 10
 
 		rerender(<VoteAmount />);
 
+		// eslint-disable-next-line testing-library/prefer-user-event
 		fireEvent.change(amountField, { target: { value: "50" } });
 
 		await waitFor(() => {
 			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20); // 50 - 30
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(70); // 80 - 10
 		});
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(70); // 80 - 10
 	});
 });
