@@ -57,10 +57,11 @@ export const FormStep = ({
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
+	const coin = profile.coins().get(network.coin(), network.id());
 	useEffect(() => {
 		const updateFeeTransactionData = async () => {
 			const transferData = await buildTransferData({
-				coin: profile.coins().get(network.coin(), network.id()),
+				coin,
 				recipients,
 			});
 
@@ -71,7 +72,7 @@ export const FormStep = ({
 		};
 
 		updateFeeTransactionData();
-	}, [network, recipients, profile, isMounted]);
+	}, [recipients, coin]);
 
 	useEffect(
 		/* istanbul ignore next -- @preserve */
