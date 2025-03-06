@@ -224,9 +224,7 @@ describe("Registration", () => {
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
-		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"));
+		await inputValidatorPublicKey();
 
 		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
 		await userEvent.click(fees[1]);
@@ -411,9 +409,7 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
-		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"));
+		await inputValidatorPublicKey();
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -454,9 +450,7 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
-		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"));
+		await inputValidatorPublicKey();
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -545,9 +539,7 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
-		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"));
+		await inputValidatorPublicKey();
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
@@ -599,3 +591,9 @@ describe("Registration", () => {
 		nanoXTransportMock.mockRestore();
 	});
 });
+
+const inputValidatorPublicKey = async (key: string = "validator-public-key") => {
+	await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
+	await userEvent.type(screen.getByTestId("Input__validator_public_key"), key);
+	await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(key));
+}
