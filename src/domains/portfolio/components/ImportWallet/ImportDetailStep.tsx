@@ -1,5 +1,5 @@
 import { Coins, Networks } from "@ardenthq/sdk";
-import { get, truncate } from "@ardenthq/sdk-helpers";
+import { truncate } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
 import React, { useEffect, useState } from "react";
