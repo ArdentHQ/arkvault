@@ -1,4 +1,4 @@
-import { PBKDF2 } from "@ardenthq/sdk-cryptography";
+import { PBKDF2 } from "@/app/lib/crypto";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";

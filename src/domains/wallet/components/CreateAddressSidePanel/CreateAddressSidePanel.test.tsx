@@ -1,4 +1,4 @@
-import { BIP39 } from "@ardenthq/sdk-cryptography";
+import * as bip39 from "@scure/bip39";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -31,9 +31,23 @@ const continueButton = () => screen.getByTestId("CreateWallet__continue-button")
 describe("CreateAddressSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
 
-	beforeAll(() => {
+	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+
+		const profile = env.profiles().findById(fixtureProfileId);
+		const walletMock = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: passphrase,
+			network: "ark.devnet",
+		});
+
+		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(
+			async () =>
+				await {
+					mnemonic: passphrase,
+					wallet: walletMock,
+				},
+		);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
 	});
@@ -62,7 +76,7 @@ describe("CreateAddressSidePanel", () => {
 
 		vi.spyOn(profile, "availableNetworks").mockReturnValue([networkWallet.network()]);
 
-		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
