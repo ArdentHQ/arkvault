@@ -1,4 +1,4 @@
-import * as SDKLedger from "@/app/contexts/Ledger";
+import * as SDKLedger from "@/app//contexts/Ledger";
 import { openTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 
 interface LedgerDevice {
