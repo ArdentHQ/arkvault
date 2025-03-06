@@ -16,6 +16,7 @@ import {
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -306,7 +307,7 @@ describe("ImportAddress Methods", () => {
 		);
 	});
 
-	it("should import by secret with second signature and use password to encrypt both", async () => {
+	it("should import wallet after `Encryption Password` step", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
@@ -316,65 +317,7 @@ describe("ImportAddress Methods", () => {
 			},
 		);
 
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(commonTranslations.SECRET));
-
-		expect(detailStep()).toBeInTheDocument();
-
-		const passphraseInput = screen.getByTestId(secretInputID);
-
-		expect(passphraseInput).toBeInTheDocument();
-
-		await userEvent.clear(passphraseInput);
-		await userEvent.type(passphraseInput, "abc");
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await enableEncryptionToggle();
-
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
-		});
-
-		await userEvent.clear(screen.getByTestId("EncryptPassword__second-secret"));
-		await userEvent.type(screen.getByTestId("EncryptPassword__second-secret"), "abc");
-
-		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-
-		await expect(screen.findByTestId("EncryptPassword__second-secret")).resolves.toHaveValue("abc");
-		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
-
-		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
-		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
-			password,
-		);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(successStep()).toBeInTheDocument();
-		});
-	});
-
-	it("forgets the imported wallet if back from encrypted password step", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		const walletsCount = profile.wallets().count();
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -399,16 +342,30 @@ describe("ImportAddress Methods", () => {
 
 		await userEvent.click(continueButton());
 
+		expect(profile.wallets().count()).toBe(walletsCount)
+
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		const profileForgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
+		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
 
-		await userEvent.click(backButton());
+		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
 
-		expect(profileForgetWalletSpy).toHaveBeenCalledWith(expect.any(String));
+		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
+			password,
+		);
 
-		profileForgetWalletSpy.mockRestore();
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await waitFor(() => {
+			expect(successStep()).toBeInTheDocument();
+		});
+
+		expect(profile.wallets().count()).toBe(walletsCount + 1)
 	});
 });
