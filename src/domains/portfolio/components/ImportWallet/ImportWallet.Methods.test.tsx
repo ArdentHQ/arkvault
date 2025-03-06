@@ -335,7 +335,7 @@ describe("ImportAddress Methods", () => {
 
 			await userEvent.clear(passphraseInput);
 			await userEvent.type(passphraseInput, "abcd");
-		}
+		};
 
 		await fillPassphrase();
 
@@ -345,7 +345,7 @@ describe("ImportAddress Methods", () => {
 
 		await userEvent.click(continueButton());
 
-		expect(profile.wallets().count()).toBe(walletsCount)
+		expect(profile.wallets().count()).toBe(walletsCount);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -362,7 +362,7 @@ describe("ImportAddress Methods", () => {
 			await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
 				confirmation,
 			);
-		}
+		};
 
 		await fillPassword(password, "incorrect password");
 
@@ -389,6 +389,6 @@ describe("ImportAddress Methods", () => {
 			expect(successStep()).toBeInTheDocument();
 		});
 
-		expect(profile.wallets().count()).toBe(walletsCount + 1)
+		expect(profile.wallets().count()).toBe(walletsCount + 1);
 	});
 });
