@@ -9,7 +9,6 @@ import { Button } from "@/app/components/Button";
 import { Circle } from "@/app/components/Circle";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
-import { WalletIcons } from "@/app/components/WalletIcons";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { assertReadOnlyWallet } from "@/utils/assertions";
