@@ -6,7 +6,7 @@ import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
 import path from "path";
-import { nodePolyfills } from 'vite-plugin-node-polyfills'
+import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 export default defineConfig(() => {
 	return {
@@ -57,12 +57,12 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-					visualizer({
-						open: true,
-						brotliSize: true,
-						gzipSize: true,
-						template: "treemap",
-					}),
+						visualizer({
+							open: true,
+							brotliSize: true,
+							gzipSize: true,
+							template: "treemap",
+						}),
 				],
 			},
 		},
@@ -147,7 +147,7 @@ export default defineConfig(() => {
 			},
 			nodePolyfills({
 				// To add only specific polyfills, add them here. If no option is passed, adds all polyfills
-				include: ['buffer'],
+				include: ["buffer"],
 				// Whether to polyfill specific globals.
 				globals: {
 					Buffer: true, // can also be 'build', 'dev', or false
