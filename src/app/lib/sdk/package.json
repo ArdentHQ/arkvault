@@ -1,0 +1,50 @@
+{
+	"name": "@ardenthq/sdk",
+	"version": "2.0.0-alpha.59",
+	"description": "Cross-Platform Utilities for Ardent Applications",
+	"license": "MIT",
+	"contributors": [],
+	"type": "module",
+	"exports": {
+		"browser": "./distribution/browser/index.js",
+		"default": "./distribution/esm/index.js"
+	},
+	"types": "./distribution/esm/index.d.ts",
+	"files": [
+		"/distribution"
+	],
+	"scripts": {
+		"build": "pnpm run clean && tsc",
+		"build:analyze": "webpack --config ../../webpack.analyze.cjs",
+		"build:release": "webpack --config ../../webpack.config.cjs",
+		"build:watch": "pnpm run clean && tsc -w",
+		"clean": "rimraf .coverage distribution tmp",
+		"clean:browser": "rimraf distribution/browser",
+		"test": "uvu -r tsm source .test.ts",
+		"test:coverage": "c8 pnpm run test",
+		"test:watch": "watchlist source -- pnpm run test"
+	},
+	"dependencies": {
+		"bad-words": "^3.0.4",
+		"bent": "^7.3",
+		"bip39": "^3.0.4",
+		"censorify-it": "^3.0.2",
+		"dayjs": "^1.10.7",
+		"joi": "^17.5.0",
+		"node-emoji": "^1.11.0",
+		"query-string": "^7.1.0",
+		"type-fest": "^2.9.0",
+		"url-format-lax": "^2.0.0",
+		"url-parse-lax": "^5.0.0",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"@ardenthq/sdk-test": "workspace:*",
+		"@types/node": "^17.0.8",
+		"@types/node-emoji": "1.8.1"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	},
+	"engineStrict": true
+}
