@@ -3,6 +3,7 @@ import { Networks } from "@ardenthq/sdk";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
+import { ImportMethod } from "@ardenthq/sdk/distribution/esm/network.models";
 
 export enum OptionsValue {
 	ADDRESS = "address",
@@ -73,6 +74,13 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				value: OptionsValue.BIP84,
 			},
 			{
+				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SECRET_DESCRIPTION"),
+				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SECRET_TITLE"),
+				icon: <Icon name="SecretImportMethod" size="lg" />,
+				label: t("COMMON.SECRET"),
+				value: OptionsValue.SECRET,
+			},
+			{
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ADDRESS_DESCRIPTION"),
 				header: t("COMMON.ADDRESS"),
 				icon: <Icon name="AddressImportMethod" size="lg" />,
@@ -91,13 +99,6 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				value: OptionsValue.PRIVATE_KEY,
 			},
 			{
-				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SECRET_DESCRIPTION"),
-				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SECRET_TITLE"),
-				icon: <Icon name="SecretImportMethod" size="lg" />,
-				label: t("COMMON.SECRET"),
-				value: OptionsValue.SECRET,
-			},
-			{
 				label: t("COMMON.WIF"),
 				value: OptionsValue.WIF,
 			},
@@ -111,24 +112,26 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 
 		const options: ImportOption[] = [];
 
-		for (const [methodName, method] of Object.entries(methods)) {
-			const matchingOption = allOptions.find((option) => option.value === convertMethodName(methodName));
+		for (const option of allOptions) {
+			const methodName= Object.keys(methods).find((methodName) => convertMethodName(methodName) === option.value);
 
-			if (!matchingOption) {
+			if (!methodName) {
 				continue;
 			}
 
+			const method = methods[methodName] as ImportMethod;
+
 			if (method.default) {
-				defaultOption = matchingOption;
+				defaultOption = option;
 			}
 
 			options.push({
 				canBeEncrypted: !!method.canBeEncrypted,
-				description: matchingOption.description,
-				header: matchingOption.header,
-				icon: matchingOption.icon,
-				label: matchingOption.label,
-				value: matchingOption.value,
+				description: option.description,
+				header: option.header,
+				icon: option.icon,
+				label: option.label,
+				value: option.value,
 			});
 		}
 
