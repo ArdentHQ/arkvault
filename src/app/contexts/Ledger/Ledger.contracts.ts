@@ -21,7 +21,7 @@ export type LedgerTransport = any;
 export type ILedgerTransportFactory = () => Promise<LedgerTransport>;
 export type LedgerWalletList = Record<string, unknown>;
 
-export interface LedgerService {
+export interface ILedgerService {
 	connect(): Promise<void>;
 
 	disconnect(): Promise<void>;

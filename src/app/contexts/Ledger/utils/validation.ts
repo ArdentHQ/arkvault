@@ -2,7 +2,7 @@ import semver from "semver";
 import { Coins } from "@ardenthq/sdk";
 import { minVersionList } from "@/app/contexts/Ledger/Ledger.contracts";
 
-export const hasRequiredAppVersion = async (coin: Coins.Coin) => {
+export const hasRequiredAppVersion = async (coin: Coins.Coin) => 
 	// const coinId = coin.network().coin();
 
 	// if (minVersionList[coinId]) {
@@ -13,5 +13,5 @@ export const hasRequiredAppVersion = async (coin: Coins.Coin) => {
 	// 	}
 	// }
 
-	return true;
-};
+	 true
+;
