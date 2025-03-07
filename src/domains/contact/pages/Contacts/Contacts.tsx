@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { Column } from "react-table";
 import { useFilteredContacts } from "./Contacts.helpers";
 import { ContactsHeader } from "./Contacts.blocks";
-import { Page } from "@/app/components/Layout";
+import { Page, Section } from "@/app/components/Layout";
 import { Table } from "@/app/components/Table";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
@@ -145,17 +145,62 @@ export const Contacts: FC = () => {
 		);
 	}, [t, filteredContacts.length]);
 
-	const renderContacts = () => {
-		if (isMdAndAbove) {
-			return (
-				<SearchableTableWrapper
-					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
-					searchQuery={query}
-					setSearchQuery={setQuery}
-					searchPlaceholder={t("CONTACTS.CONTACTS_PAGE.SEARCH_PLACEHOLDER")}
-					extra={
+	const renderContacts = () => (
+		// if (isMdAndAbove) {
+		<SearchableTableWrapper
+			innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+			searchQuery={query}
+			setSearchQuery={setQuery}
+			searchPlaceholder={t("CONTACTS.CONTACTS_PAGE.SEARCH_PLACEHOLDER")}
+			extra={
+				<Button
+					className="mr-6 hidden h-8 py-0 leading-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 sm:block"
+					data-testid="contacts__add-contact-btn"
+					onClick={() => setCreateIsOpen(true)}
+					variant="primary-transparent"
+					size="sm"
+					icon="Plus"
+				>
+					<span className="whitespace-nowrap text-base font-semibold">
+						{t("CONTACTS.CONTACTS_PAGE.ADD_CONTACT")}
+					</span>
+				</Button>
+			}
+		>
+			<div data-testid="ContactList">
+				<Table
+					columns={listColumns}
+					data={filteredContacts}
+					className="with-x-padding"
+					footer={tableFooter}
+					hideHeader={!isMdAndAbove}
+				>
+					{renderTableRow}
+				</Table>
+			</div>
+		</SearchableTableWrapper>
+	);
+	// }
+
+	// return (
+	// 	<ContactListMobile
+	// 		profile={activeProfile}
+	// 		contacts={filteredContacts}
+	// 		onSend={handleSend}
+	// 		options={menuOptions}
+	// 		onAction={handleContactAction}
+	// 		hasBalance={hasBalance}
+	// 	/>
+	// );
+	return (
+		<>
+			<Page pageTitle={t("CONTACTS.CONTACTS_PAGE.TITLE")}>
+				<ContactsHeader />
+
+				<Section className="-mb-1 pb-0">
+					<div className="flex items-center rounded border border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden">
 						<Button
-							className="mr-6 h-8 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
+							className="h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
 							data-testid="contacts__add-contact-btn"
 							onClick={() => setCreateIsOpen(true)}
 							variant="primary-transparent"
@@ -166,38 +211,8 @@ export const Contacts: FC = () => {
 								{t("CONTACTS.CONTACTS_PAGE.ADD_CONTACT")}
 							</span>
 						</Button>
-					}
-				>
-					<div data-testid="ContactList">
-						<Table
-							columns={listColumns}
-							data={filteredContacts}
-							className="with-x-padding"
-							footer={tableFooter}
-						>
-							{renderTableRow}
-						</Table>
 					</div>
-				</SearchableTableWrapper>
-			);
-		}
-
-		return (
-			<ContactListMobile
-				profile={activeProfile}
-				contacts={filteredContacts}
-				onSend={handleSend}
-				options={menuOptions}
-				onAction={handleContactAction}
-				hasBalance={hasBalance}
-			/>
-		);
-	};
-
-	return (
-		<>
-			<Page pageTitle={t("CONTACTS.CONTACTS_PAGE.TITLE")}>
-				<ContactsHeader />
+				</Section>
 
 				{renderContacts()}
 			</Page>
