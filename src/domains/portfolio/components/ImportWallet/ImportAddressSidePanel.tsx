@@ -94,12 +94,12 @@ export const ImportAddressesSidePanel = ({
 	const forgetImportedWallets = (importedWallet?: Contracts.IReadWriteWallet) => {
 		assertWallet(importedWallet);
 
-		for(const profileWallet of activeProfile.wallets().values()) {
+		for (const profileWallet of activeProfile.wallets().values()) {
 			if (profileWallet.address() === importedWallet.address()) {
 				activeProfile.wallets().forget(profileWallet.id());
 			}
 		}
-	}
+	};
 
 	const handleOpenChange = (open: boolean) => {
 		// remove added wallets if side panel is closed early
@@ -107,7 +107,7 @@ export const ImportAddressesSidePanel = ({
 			forgetImportedWallets(importedWallet);
 		}
 		onOpenChange(open);
-	}
+	};
 
 	const handleNext = () =>
 		({
