@@ -44,7 +44,7 @@ export const MobileTableElement = ({
 }: MobileTableElementProperties) => (
 	<div
 		className={twMerge(
-			classNames("flex flex-col overflow-hidden rounded border", {
+			classNames("flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border", {
 				"border-theme-danger-400": variant === MobileTableElementVariant.danger,
 				"border-theme-primary-300 dark:border-theme-dark-navy-400":
 					variant === MobileTableElementVariant.primary,
@@ -57,7 +57,7 @@ export const MobileTableElement = ({
 		{...properties}
 	>
 		<div
-			className={classNames("flex justify-between overflow-hidden px-4 py-3 dark:bg-theme-dark-950", {
+			className={classNames("flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950", {
 				"bg-theme-danger-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.danger,
 				"bg-theme-primary-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.primary,
 				"bg-theme-secondary-100 dark:bg-black": !variant,
@@ -65,7 +65,9 @@ export const MobileTableElement = ({
 				"bg-theme-warning-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.warning,
 			})}
 		>
-			<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">{title}</span>
+			<span className="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">
+				{title}
+			</span>
 
 			{titleExtra}
 		</div>
