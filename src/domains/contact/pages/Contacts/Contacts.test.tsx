@@ -57,6 +57,7 @@ const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profile
 const addAddress = () => screen.getByTestId("contact-form__add-address-btn");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const sendButton = (index = 0) => screen.getAllByTestId("ContactListItem__send-button")[index];
+const contactFormAddressListItemTestId = "contact-form__address-list-item";
 
 const createContact = (targetProfile: Contracts.IProfile, name: string, address: string) =>
 	targetProfile.contacts().create(name, [
@@ -193,7 +194,7 @@ describe("Contacts", () => {
 		});
 		expect(addAddress()).toBeDisabled();
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(contactFormAddressListItemTestId)).not.toBeInTheDocument();
 
 		await userEvent.type(screen.getByTestId("contact-form__name-input"), "Test Contact");
 
@@ -213,7 +214,7 @@ describe("Contacts", () => {
 
 		await userEvent.click(addAddress());
 
-		await waitFor(() => expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId(contactFormAddressListItemTestId)).toHaveLength(1));
 
 		await waitFor(() => expect(saveButton()).not.toBeDisabled());
 
@@ -246,7 +247,7 @@ describe("Contacts", () => {
 		});
 		expect(addAddress()).toBeDisabled();
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(contactFormAddressListItemTestId)).not.toBeInTheDocument();
 
 		await userEvent.type(screen.getByTestId("contact-form__name-input"), "Test Contact 2");
 
@@ -271,7 +272,7 @@ describe("Contacts", () => {
 
 		await userEvent.click(addAddress());
 
-		await waitFor(() => expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId(contactFormAddressListItemTestId)).toHaveLength(1));
 
 		await waitFor(() => expect(saveButton()).not.toBeDisabled());
 
@@ -398,7 +399,7 @@ describe("Contacts", () => {
 
 		expect(nameInput).toHaveValue(newName);
 
-		expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
+		expect(screen.getAllByTestId(contactFormAddressListItemTestId)).toHaveLength(1);
 
 		await userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[1]);
 
