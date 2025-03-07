@@ -59,6 +59,7 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 							{renderButton()}
 						</div>
 					}
+					bodyClassName="sm:grid-cols-3"
 				>
 					<MobileTableElementRow title={t("COMMON.VALIDATOR")}>
 						<Address address={validator.address()} size="sm" />

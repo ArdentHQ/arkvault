@@ -11,13 +11,13 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -139,7 +139,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -177,13 +177,13 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -305,7 +305,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -341,13 +341,13 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -469,7 +469,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -506,13 +506,13 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -634,7 +634,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -671,13 +671,13 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -799,7 +799,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -835,13 +835,13 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -963,7 +963,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -999,13 +999,13 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -1127,7 +1127,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1154,13 +1154,13 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               />
               <div
                 class="flex items-center gap-3"
@@ -1220,7 +1220,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1255,13 +1255,13 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -1383,7 +1383,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1410,13 +1410,13 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               />
               <div
                 class="flex items-center gap-3"
@@ -1476,7 +1476,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1511,13 +1511,13 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -1579,7 +1579,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1614,13 +1614,13 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -1742,7 +1742,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1778,13 +1778,13 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -1906,7 +1906,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -1942,13 +1942,13 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
           class="pt-3"
         >
           <div
-            class="flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
               >
                 ARK Wallet 1
               </span>
@@ -2070,7 +2070,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 </div>
               </div>
               <div
-                class="hidden grid-cols-1 gap-2 sm:grid"
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"

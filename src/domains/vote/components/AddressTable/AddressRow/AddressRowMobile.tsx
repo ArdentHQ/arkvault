@@ -147,6 +147,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							</Button>
 						</div>
 					}
+					bodyClassName="sm:grid-cols-3"
 				>
 					<MobileTableElementRow title={t("COMMON.ADDRESS")}>
 						<Address address={wallet.address()} size="sm" />
