@@ -54,9 +54,11 @@ export const MobileTableElement = ({
 			}),
 			className,
 		)}
+		data-testid="mobile-table-element"
 		{...properties}
 	>
 		<div
+			data-testid="mobile-table-element-header"
 			className={classNames("flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950", {
 				"bg-theme-danger-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.danger,
 				"bg-theme-primary-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.primary,
@@ -72,6 +74,8 @@ export const MobileTableElement = ({
 			{titleExtra}
 		</div>
 
-		<div className={twMerge("grid gap-4 px-4 py-3", bodyClassName)}>{children}</div>
+		<div className={twMerge("grid gap-4 px-4 py-3", bodyClassName)} data-testid="mobile-table-element-body">
+			{children}
+		</div>
 	</div>
 );
