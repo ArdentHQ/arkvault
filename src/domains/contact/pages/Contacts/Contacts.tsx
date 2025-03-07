@@ -206,7 +206,7 @@ export const Contacts: FC = () => {
 					<div className="flex items-center rounded border border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden">
 						<Button
 							className="h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
-							data-testid="contacts__add-contact-btn"
+							data-testid="contacts__add-contact-btn-mobile"
 							onClick={() => setCreateIsOpen(true)}
 							variant="primary-transparent"
 							size="sm"

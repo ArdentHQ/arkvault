@@ -59,6 +59,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 			key={`${address.address()}-${index}`}
 			border={isLast}
 			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+			data-testid="ContactListItem"
 		>
 			<TableCell variant="start" innerClassName="space-x-4 whitespace-nowrap">
 				{index === 0 && renderName()}
