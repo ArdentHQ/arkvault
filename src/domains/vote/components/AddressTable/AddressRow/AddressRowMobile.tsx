@@ -10,7 +10,6 @@ import { Button } from "@/app/components/Button";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { WalletStatus } from "./AddressRow";
-import classNames from "classnames";
 import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
 
 interface AddressRowMobileProperties {
