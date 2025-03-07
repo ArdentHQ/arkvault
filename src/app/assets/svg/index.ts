@@ -104,6 +104,8 @@ import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import VotesDark from "./votes-dark.svg?react";
 import VotesLight from "./votes-light.svg?react";
+import ContactsDark from "./contacts-dark.svg?react";
+import ContactsLight from "./contacts-light.svg?react";
 import Completed from "./completed.svg?react";
 import YourPassphraseLight from "./your-passphrase-light.svg?react";
 import YourPassphraseDark from "./your-passphrase-dark.svg?react";
