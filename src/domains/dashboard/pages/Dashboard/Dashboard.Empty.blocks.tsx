@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/app/components/Button";
 import { useTranslation } from "react-i18next";
 import { Image } from "@/app/components/Image";
@@ -38,13 +38,7 @@ export const HeaderMobile = () => {
 	);
 };
 
-export const AddressActionsMenuMobile = ({
-	onCreateAddress,
-	onImportAddress,
-}: {
-	onCreateAddress?: (open: boolean) => void;
-	onImportAddress?: (open: boolean) => void;
-}) => {
+export const AddressActionsMenuMobile = () => {
 	const { t } = useTranslation();
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
@@ -56,7 +50,7 @@ export const AddressActionsMenuMobile = ({
 					<Button variant="secondary" className="w-full" onClick={() => setShowImportAddressPanel(true)}>
 						{t("COMMON.IMPORT")}
 					</Button>
-					<Button variant="primary" className="w-full" onClick={() => onCreateAddress?.(true)}>
+					<Button variant="primary" className="w-full" onClick={() => setShowCreateAddressPanel(true)}>
 						{t("COMMON.CREATE")}
 					</Button>
 				</div>
