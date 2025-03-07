@@ -36,7 +36,6 @@ export const PortfolioHeader = ({
 	handleVotesButtonClick,
 	onUpdate,
 	onCreateAddress,
-	onImportAddress,
 	hasFocus,
 }: {
 	profile: Contracts.IProfile;
@@ -46,7 +45,6 @@ export const PortfolioHeader = ({
 	handleVotesButtonClick: (address?: string) => void;
 	onUpdate?: (status: boolean) => void;
 	onCreateAddress?: (open: boolean) => void;
-	onImportAddress?: (open: boolean) => void;
 	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
