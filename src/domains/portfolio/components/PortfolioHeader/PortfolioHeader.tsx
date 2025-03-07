@@ -92,21 +92,6 @@ export const PortfolioHeader = ({
 		await persist();
 	};
 
-	const [addressesSidePanelKey, setAddressesSidePanelKey] = useState(selectedAddresses.join('-'));
-
-	useEffect(() => {
-		let id: NodeJS.Timeout;
-		if (!showAddressesPanel) {
-			id = setTimeout(() => {
-				setAddressesSidePanelKey(selectedAddresses.join('-'));
-			}, 500);
-		}
-
-		return () => {
-			clearTimeout(id);
-		}
-	}, [selectedAddresses, showAddressesPanel]);
-
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
@@ -389,7 +374,6 @@ export const PortfolioHeader = ({
 				onClose={(addresses) => {
 					setSelectedAddresses(addresses);
 				}}
-				key={addressesSidePanelKey}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
 				onDelete={(address) => {
