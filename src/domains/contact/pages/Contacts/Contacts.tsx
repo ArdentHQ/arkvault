@@ -5,8 +5,7 @@ import { useHistory } from "react-router-dom";
 import { Column } from "react-table";
 import { useFilteredContacts } from "./Contacts.helpers";
 import { ContactsHeader } from "./Contacts.blocks";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
-import { Page, Section } from "@/app/components/Layout";
+import { Page } from "@/app/components/Layout";
 import { Table } from "@/app/components/Table";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
@@ -14,6 +13,8 @@ import { CreateContact, DeleteContact, UpdateContact } from "@/domains/contact/c
 import { ContactListItem } from "@/domains/contact/components/ContactListItem";
 import { ContactListMobile } from "@/domains/contact/components/ContactListMobile";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
+import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
+import { Button } from "@/app/components/Button";
 
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();
@@ -120,61 +121,83 @@ export const Contacts: FC = () => {
 		[menuOptions, handleSend, handleContactAction],
 	);
 
-	const renderContacts = () => {
-		if (contacts.length === 0) {
-			return (
-				<Section>
-					<EmptyBlock>{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}</EmptyBlock>
-				</Section>
-			);
+	const tableFooter = useMemo(() => {
+		if (filteredContacts.length > 0) {
+			return null;
 		}
 
-		if (filteredContacts.length > 0) {
-			if (isMdAndAbove) {
-				return (
-					<Section>
-						<div className="mt-2 w-full" data-testid="ContactList">
-							<Table
-								columns={listColumns}
-								data={filteredContacts}
-								className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
-							>
-								{renderTableRow}
-							</Table>
-						</div>
-					</Section>
-				);
-			}
+		return (
+			<tr
+				data-testid="EmptyResults"
+				className="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4"
+			>
+				<td colSpan={listColumns.length} className="pb-4 pt-[11px]">
+					<div className="flex flex-col items-center justify-center">
+						<h3 className="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+							{t("COMMON.EMPTY_RESULTS.TITLE")}
+						</h3>
+						<p className="text-sm text-theme-secondary-700 dark:text-theme-secondary-600">
+							{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+						</p>
+					</div>
+				</td>
+			</tr>
+		);
+	}, [t, filteredContacts.length]);
 
+	const renderContacts = () => {
+		if (isMdAndAbove) {
 			return (
-				<ContactListMobile
-					profile={activeProfile}
-					contacts={filteredContacts}
-					onSend={handleSend}
-					options={menuOptions}
-					onAction={handleContactAction}
-					hasBalance={hasBalance}
-				/>
+				<SearchableTableWrapper
+					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+					searchQuery={query}
+					setSearchQuery={setQuery}
+					searchPlaceholder={t("CONTACTS.CONTACTS_PAGE.SEARCH_PLACEHOLDER")}
+					extra={
+						<Button
+							className="mr-6 h-8 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
+							data-testid="contacts__add-contact-btn"
+							onClick={() => setCreateIsOpen(true)}
+							variant="primary-transparent"
+							size="sm"
+							icon="Plus"
+						>
+							<span className="whitespace-nowrap text-base font-semibold">
+								{t("CONTACTS.CONTACTS_PAGE.ADD_CONTACT")}
+							</span>
+						</Button>
+					}
+				>
+					<div data-testid="ContactList">
+						<Table
+							columns={listColumns}
+							data={filteredContacts}
+							className="with-x-padding"
+							footer={tableFooter}
+						>
+							{renderTableRow}
+						</Table>
+					</div>
+				</SearchableTableWrapper>
 			);
 		}
 
 		return (
-			<Section>
-				<EmptyBlock data-testid="Contacts--empty-results">
-					{t("CONTACTS.CONTACTS_PAGE.NO_CONTACTS_FOUND", { query })}
-				</EmptyBlock>
-			</Section>
+			<ContactListMobile
+				profile={activeProfile}
+				contacts={filteredContacts}
+				onSend={handleSend}
+				options={menuOptions}
+				onAction={handleContactAction}
+				hasBalance={hasBalance}
+			/>
 		);
 	};
 
 	return (
 		<>
 			<Page pageTitle={t("CONTACTS.CONTACTS_PAGE.TITLE")}>
-				<ContactsHeader
-					showSearchBar={contacts.length > 0}
-					onAddContact={() => setCreateIsOpen(true)}
-					onSearch={setQuery}
-				/>
+				<ContactsHeader />
 
 				{renderContacts()}
 			</Page>
