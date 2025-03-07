@@ -58,7 +58,7 @@ const addAddress = () => screen.getByTestId("contact-form__add-address-btn");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const sendButton = (index = 0) => screen.getAllByTestId("ContactListItem__send-button")[index];
 const contactFormAddressListItemTestId = "contact-form__address-list-item";
-
+const contactFormNameInputId = "contact-form__name-input";
 const createContact = (targetProfile: Contracts.IProfile, name: string, address: string) =>
 	targetProfile.contacts().create(name, [
 		{
@@ -196,10 +196,10 @@ describe("Contacts", () => {
 
 		expect(screen.queryByTestId(contactFormAddressListItemTestId)).not.toBeInTheDocument();
 
-		await userEvent.type(screen.getByTestId("contact-form__name-input"), "Test Contact");
+		await userEvent.type(screen.getByTestId(contactFormNameInputId), "Test Contact");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("Test Contact");
+			expect(screen.getByTestId(contactFormNameInputId)).toHaveValue("Test Contact");
 		});
 
 		await userEvent.type(screen.getByTestId("contact-form__address-input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
@@ -249,10 +249,10 @@ describe("Contacts", () => {
 
 		expect(screen.queryByTestId(contactFormAddressListItemTestId)).not.toBeInTheDocument();
 
-		await userEvent.type(screen.getByTestId("contact-form__name-input"), "Test Contact 2");
+		await userEvent.type(screen.getByTestId(contactFormNameInputId), "Test Contact 2");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("Test Contact 2");
+			expect(screen.getByTestId(contactFormNameInputId)).toHaveValue("Test Contact 2");
 		});
 
 		await userEvent.type(
@@ -389,7 +389,7 @@ describe("Contacts", () => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		});
 
-		const nameInput = screen.getByTestId("contact-form__name-input");
+		const nameInput = screen.getByTestId(contactFormNameInputId);
 
 		expect(nameInput).toHaveValue("Mock Contact");
 
