@@ -1,8 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { SearchableTableWrapper } from "./SearchableTableWrapper";
-import { renderResponsive } from "@/utils/testing-library";
 
 vi.mock("react-i18next", () => ({
 	useTranslation: () => ({

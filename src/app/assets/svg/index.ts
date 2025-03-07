@@ -150,6 +150,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Code,
 	Completed,
 	ConfirmYourPassphrase,
+	ContactsDark,
+	ContactsLight,
 	Contract,
 	Copy,
 	CopyKey,
@@ -235,6 +237,4 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	WalletEncryptionLight,
 	YourPassphraseDark,
 	YourPassphraseLight,
-	ContactsDark,
-	ContactsLight,
 };

@@ -2,7 +2,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { SearchableTableWrapperProperties } from "@/app/components/SearchableTableWrapper";
-import { FilterOption } from "../VotesFilter";
+import { FilterOption } from "@/domains/vote/components/VotesFilter";
 
 export interface ValidatorsTableProperties extends Omit<SearchableTableWrapperProperties, "children"> {
 	validators: Contracts.IReadOnlyWallet[];
