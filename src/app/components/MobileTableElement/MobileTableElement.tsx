@@ -1,12 +1,18 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
+
+export enum MobileTableElementVariant {
+	danger = "danger",
+	primary = "primary",
+	success = "success",
+	warning = "warning",
+}
 
 interface MobileTableElementProperties extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
 	title: string | React.ReactNode;
 	titleExtra?: React.ReactNode;
-	variant?: "danger" | "primary" | "success" | "warning";
+	variant?: MobileTableElementVariant;
 	bodyClassName?: string;
 }
 
@@ -35,38 +41,35 @@ export const MobileTableElement = ({
 	titleExtra,
 	children,
 	...properties
-}: MobileTableElementProperties) => {
-	const { t } = useTranslation();
-
-	return (
+}: MobileTableElementProperties) => (
+	<div
+		className={twMerge(
+			classNames("flex flex-col overflow-hidden rounded border", {
+				"border-theme-danger-400": variant === MobileTableElementVariant.danger,
+				"border-theme-primary-300 dark:border-theme-dark-navy-400":
+					variant === MobileTableElementVariant.primary,
+				"border-theme-secondary-300 dark:border-theme-secondary-800": !variant,
+				"border-theme-success-300 dark:border-theme-success-700": variant === MobileTableElementVariant.success,
+				"border-theme-warning-400": variant === MobileTableElementVariant.warning,
+			}),
+			className,
+		)}
+		{...properties}
+	>
 		<div
-			className={twMerge(
-				classNames("flex flex-col overflow-hidden rounded border", {
-					"border-theme-danger-400": variant === "danger",
-					"border-theme-primary-300 dark:border-theme-dark-navy-400": variant === "primary",
-					"border-theme-secondary-300 dark:border-theme-secondary-800": !variant,
-					"border-theme-success-300 dark:border-theme-success-700": variant === "success",
-					"border-theme-warning-400": variant === "warning",
-				}),
-				className,
-			)}
-			{...properties}
+			className={classNames("flex justify-between overflow-hidden px-4 py-3 dark:bg-theme-dark-950", {
+				"bg-theme-danger-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.danger,
+				"bg-theme-primary-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.primary,
+				"bg-theme-secondary-100 dark:bg-black": !variant,
+				"bg-theme-success-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.success,
+				"bg-theme-warning-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.warning,
+			})}
 		>
-			<div
-				className={classNames("flex justify-between overflow-hidden px-4 py-3 dark:bg-theme-dark-950", {
-					"bg-theme-danger-100 dark:bg-theme-dark-950": variant === "danger",
-					"bg-theme-primary-100 dark:bg-theme-dark-950": variant === "primary",
-					"bg-theme-secondary-100 dark:bg-black": !variant,
-					"bg-theme-success-100 dark:bg-theme-dark-950": variant === "success",
-					"bg-theme-warning-100 dark:bg-theme-dark-950": variant === "warning",
-				})}
-			>
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">{title}</span>
+			<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">{title}</span>
 
-				{titleExtra}
-			</div>
-
-			<div className={twMerge("grid gap-4 px-4 py-3", bodyClassName)}>{children}</div>
+			{titleExtra}
 		</div>
-	);
-};
+
+		<div className={twMerge("grid gap-4 px-4 py-3", bodyClassName)}>{children}</div>
+	</div>
+);
