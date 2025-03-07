@@ -26,7 +26,6 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { MethodStep } from "@/domains/portfolio/components/ImportWallet/MethodStep";
 import { ImportOption, OptionsValue } from "@/domains/wallet/hooks";
 
-
 enum Step {
 	MethodStep = 1,
 	ImportDetailStep = 2,
@@ -66,7 +65,6 @@ export const ImportAddressesSidePanel = ({
 	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
 	const isLedgerImport = !!importOption && importOption.value === OptionsValue.LEDGER;
 
-
 	useEffect(() => {
 		register({ name: "importOption", type: "custom" });
 		register("useEncryption");
@@ -81,7 +79,6 @@ export const ImportAddressesSidePanel = ({
 
 		setActiveTab(Step.MethodStep);
 		form.reset();
-
 	}, [open]);
 
 	useEffect(() => {
@@ -227,18 +224,18 @@ export const ImportAddressesSidePanel = ({
 			dataTestId="ImportAddressSidePanel"
 		>
 			<Form context={form} onSubmit={handleFinish} data-testid="ImportWallet__form">
-					<>
-						<Tabs activeId={activeTab} className="pb-20">
-							{!isMethodStep && (
-								<div className="mb-4 sm:hidden">
-									<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-								</div>
-							)}
+				<>
+					<Tabs activeId={activeTab} className="pb-20">
+						{!isMethodStep && (
+							<div className="mb-4 sm:hidden">
+								<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
+							</div>
+						)}
 
-							<div>
-								<TabPanel tabId={Step.MethodStep}>
-									<MethodStep network={activeNetwork} onSelect={handleNext} />
-								</TabPanel>
+						<div>
+							<TabPanel tabId={Step.MethodStep}>
+								<MethodStep network={activeNetwork} onSelect={handleNext} />
+							</TabPanel>
 
 							<TabPanel tabId={Step.ImportDetailStep}>
 								{isLedgerImport && <LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />}
@@ -251,60 +248,56 @@ export const ImportAddressesSidePanel = ({
 								)}
 							</TabPanel>
 
-								<TabPanel tabId={Step.EncryptPasswordStep}>
-									<EncryptPasswordStep importedWallet={importedWallet} />
-								</TabPanel>
+							<TabPanel tabId={Step.EncryptPasswordStep}>
+								<EncryptPasswordStep importedWallet={importedWallet} />
+							</TabPanel>
 
-								<TabPanel tabId={Step.SummaryStep}>
-									<SuccessStep
-										importedWallet={importedWallet}
-										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
-									/>
-								</TabPanel>
+							<TabPanel tabId={Step.SummaryStep}>
+								<SuccessStep
+									importedWallet={importedWallet}
+									onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+								/>
+							</TabPanel>
+						</div>
+					</Tabs>
+					<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
+						{!isMethodStep && (
+							<div className="hidden w-[136px] sm:block">
+								<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
 							</div>
-						</Tabs>
-						<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
-							{!isMethodStep && (
-								<div className="hidden w-[136px] sm:block">
-									<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-								</div>
+						)}
+
+						<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
+							{!isMethodStep && activeTab <= Step.EncryptPasswordStep && (
+								<>
+									<Button
+										disabled={isImporting}
+										variant="secondary"
+										onClick={handleBack}
+										data-testid="ImportWallet__back-button"
+									>
+										{t("COMMON.BACK")}
+									</Button>
+
+									<Button
+										disabled={isNextDisabled}
+										isLoading={isEncrypting || isImporting}
+										onClick={handleNext}
+										data-testid="ImportWallet__continue-button"
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								</>
 							)}
 
-							<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
-								{!isMethodStep && activeTab <= Step.EncryptPasswordStep && (
-									<>
-										<Button
-											disabled={isImporting}
-											variant="secondary"
-											onClick={handleBack}
-											data-testid="ImportWallet__back-button"
-										>
-											{t("COMMON.BACK")}
-										</Button>
-
-										<Button
-											disabled={isNextDisabled}
-											isLoading={isEncrypting || isImporting}
-											onClick={handleNext}
-											data-testid="ImportWallet__continue-button"
-										>
-											{t("COMMON.CONTINUE")}
-										</Button>
-									</>
-								)}
-
-								{activeTab === Step.SummaryStep && (
-									<Button
-										disabled={isSubmitting}
-										type="submit"
-										data-testid="ImportWallet__finish-button"
-									>
-										{t("COMMON.GO_TO_PORTFOLIO")}
-									</Button>
-								)}
-							</div>
+							{activeTab === Step.SummaryStep && (
+								<Button disabled={isSubmitting} type="submit" data-testid="ImportWallet__finish-button">
+									{t("COMMON.GO_TO_PORTFOLIO")}
+								</Button>
+							)}
 						</div>
-					</>
+					</div>
+				</>
 			</Form>
 
 			{!!importedWallet && isEditAliasModalOpen && (
