@@ -235,4 +235,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	WalletEncryptionLight,
 	YourPassphraseDark,
 	YourPassphraseLight,
+	ContactsDark,
+	ContactsLight,
 };

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ContactsHeaderExtraProperties, ContactsHeaderProperties } from "./Contacts.contracts";
 import { Button } from "@/app/components/Button";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
-import { Icon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { useBreakpoint } from "@/app/hooks";
 import { PageHeader } from "@/app/components/Header";
 import { Divider } from "@/app/components/Divider";
@@ -18,7 +18,7 @@ const ContactsHeader: VFC<ContactsHeaderProperties> = ({ showSearchBar, onAddCon
 			extra={
 				<ContactsHeaderExtra showSearchBar={showSearchBar} onAddContact={onAddContact} onSearch={onSearch} />
 			}
-			border
+			titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="ContactsLight" darkIcon="ContactsDark" />}
 		/>
 	);
 };
