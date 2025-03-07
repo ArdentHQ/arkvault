@@ -16,6 +16,7 @@ export default defineConfig(() => {
 				"@": path.resolve(__dirname, "./src/"),
 				'node:fs/promises': path.resolve(__dirname, './src/app/lib/shims.ts'),
 				'node:process': path.resolve(__dirname, './src/app/lib/shims.ts'),
+				perf_hooks: path.resolve(__dirname, './src/app/lib/shims.ts'),
 			},
 		},
 		define: {
@@ -148,7 +149,7 @@ export default defineConfig(() => {
 			},
 			nodePolyfills({
 				// To add only specific polyfills, add them here. If no option is passed, adds all polyfills
-				include: ["buffer", "os", "process", "fs"],
+				include: ["buffer", "os", "process", "fs", "path", "http", "https", "crypto", "module"],
 				// Whether to polyfill specific globals.
 				globals: {
 					Buffer: true, // can also be 'build', 'dev', or false
