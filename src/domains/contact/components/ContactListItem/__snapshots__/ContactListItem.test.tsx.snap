@@ -6,7 +6,7 @@ exports[`ContactListItem > should render 1`] = `
     <tbody>
       <tr
         class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
-        data-testid="TableRow"
+        data-testid="ContactListItem"
       >
         <td>
           <div
@@ -201,7 +201,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
     <tbody>
       <tr
         class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
-        data-testid="TableRow"
+        data-testid="ContactListItem"
       >
         <td>
           <div
@@ -396,7 +396,7 @@ exports[`ContactListItem > should render options 1`] = `
     <tbody>
       <tr
         class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
-        data-testid="TableRow"
+        data-testid="ContactListItem"
       >
         <td>
           <div
@@ -582,7 +582,7 @@ exports[`ContactListItem > should render options 1`] = `
       </tr>
       <tr
         class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
-        data-testid="TableRow"
+        data-testid="ContactListItem"
       >
         <td>
           <div
@@ -753,7 +753,7 @@ exports[`ContactListItem > should render options 1`] = `
       </tr>
       <tr
         class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
-        data-testid="TableRow"
+        data-testid="ContactListItem"
       >
         <td>
           <div
@@ -933,7 +933,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
     <tbody>
       <tr
         class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
-        data-testid="TableRow"
+        data-testid="ContactListItem"
       >
         <td>
           <div
@@ -1119,7 +1119,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
       </tr>
       <tr
         class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
-        data-testid="TableRow"
+        data-testid="ContactListItem"
       >
         <td>
           <div
@@ -1290,7 +1290,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
       </tr>
       <tr
         class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
-        data-testid="TableRow"
+        data-testid="ContactListItem"
       >
         <td>
           <div

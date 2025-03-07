@@ -60,6 +60,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 										onSend(contact.addresses().first());
 									}}
 									className="p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+									data-testid="ContactListItemMobileAddress__send-button"
 								>
 									{t("COMMON.SEND")}
 								</Button>
