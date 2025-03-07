@@ -15,8 +15,11 @@ export default defineConfig(() => {
 			alias: {
 				"@": path.resolve(__dirname, "./src/"),
 				'node:fs/promises': path.resolve(__dirname, './src/app/lib/shims.ts'),
+				'node:url': path.resolve(__dirname, './src/app/lib/shims.ts'),
 				'node:process': path.resolve(__dirname, './src/app/lib/shims.ts'),
 				perf_hooks: path.resolve(__dirname, './src/app/lib/shims.ts'),
+				worker_threads: path.resolve(__dirname, './src/app/lib/shims.ts'),
+				'node:util': 'util',
 			},
 		},
 		define: {
@@ -149,7 +152,7 @@ export default defineConfig(() => {
 			},
 			nodePolyfills({
 				// To add only specific polyfills, add them here. If no option is passed, adds all polyfills
-				include: ["buffer", "os", "process", "fs", "path", "http", "https", "crypto", "module"],
+				include: ["buffer", "os", "process", "fs", "path", "http", "https", "crypto", "module", "util", "events", "string_decoder", "url"],
 				// Whether to polyfill specific globals.
 				globals: {
 					Buffer: true, // can also be 'build', 'dev', or false
