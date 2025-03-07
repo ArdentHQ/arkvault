@@ -1,9 +1,10 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-import { VotesSectionProperties } from "@/domains/vote/components/VotesSection";
+import { SearchableTableWrapperProperties } from "@/app/components/SearchableTableWrapper";
+import { FilterOption } from "../VotesFilter";
 
-export interface ValidatorsTableProperties extends Omit<VotesSectionProperties, "children"> {
+export interface ValidatorsTableProperties extends Omit<SearchableTableWrapperProperties, "children"> {
 	validators: Contracts.IReadOnlyWallet[];
 	isLoading?: boolean;
 	maxVotes: number;
@@ -14,6 +15,10 @@ export interface ValidatorsTableProperties extends Omit<VotesSectionProperties, 
 	resignedValidatorVotes?: Contracts.VoteRegistryItem[];
 	onContinue?: (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => void;
 	subtitle?: React.ReactNode;
+	selectedFilter?: FilterOption;
+	setSelectedFilter?: (selected: FilterOption) => void;
+	selectedAddress?: string;
+	totalCurrentVotes?: number;
 }
 
 export interface VoteValidatorProperties {

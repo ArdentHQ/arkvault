@@ -10,7 +10,8 @@ import { Table } from "@/app/components/Table";
 import { Pagination } from "@/app/components/Pagination";
 import { useBreakpoint } from "@/app/hooks";
 import { ValidatorRowMobile } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobile";
-import { VotesSection } from "@/domains/vote/components/VotesSection";
+import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
+import { VotesFilter } from "@/domains/vote/components/VotesFilter";
 
 export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	validators,
@@ -25,6 +26,10 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	subtitle,
 	searchQuery,
 	setSearchQuery,
+	selectedFilter,
+	setSelectedFilter,
+	totalCurrentVotes = 0,
+	selectedAddress,
 	...properties
 }) => {
 	const { t } = useTranslation();
@@ -250,11 +255,31 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 		);
 	}, [t, isLoading, totalValidators]);
 
+	const extra = useMemo(() => {
+		if (selectedAddress == undefined) {
+			return <></>;
+		}
+
+		return (
+			<VotesFilter
+				totalCurrentVotes={totalCurrentVotes}
+				selectedOption={selectedFilter}
+				onChange={setSelectedFilter}
+			/>
+		);
+	}, [selectedAddress, selectedFilter, setSelectedFilter, totalCurrentVotes]);
+
 	return (
 		<div data-testid="ValidatorsTable" className="pb-10 sm:pb-16 md:pb-24 lg:pb-24">
 			{!!subtitle && subtitle}
 
-			<VotesSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} {...properties}>
+			<SearchableTableWrapper
+				searchQuery={searchQuery}
+				setSearchQuery={setSearchQuery}
+				searchPlaceholder={t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER")}
+				extra={extra}
+				{...properties}
+			>
 				<Table
 					className="with-x-padding"
 					columns={columns}
@@ -266,7 +291,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 				>
 					{renderTableRow}
 				</Table>
-			</VotesSection>
+			</SearchableTableWrapper>
 
 			{hasMoreValidators && (
 				<div className="mt-8 flex w-full justify-center px-6 md:px-10">

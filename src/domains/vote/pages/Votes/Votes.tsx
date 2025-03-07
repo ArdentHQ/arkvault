@@ -18,7 +18,7 @@ import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-para
 import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { VotesSection } from "@/domains/vote/components/VotesSection";
+import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -142,10 +142,11 @@ export const Votes: FC = () => {
 			)}
 
 			{hasWallets && !isSelectValidatorStep && (
-				<VotesSection
+				<SearchableTableWrapper
 					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
 					searchQuery={searchQuery}
 					setSearchQuery={setSearchQuery}
+					searchPlaceholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
 				>
 					<VotingWallets
 						showEmptyResults={hasEmptyResults}
@@ -155,7 +156,7 @@ export const Votes: FC = () => {
 						searchQuery={searchQuery}
 						setSearchQuery={setSearchQuery}
 					/>
-				</VotesSection>
+				</SearchableTableWrapper>
 			)}
 
 			{isSelectValidatorStep && (
