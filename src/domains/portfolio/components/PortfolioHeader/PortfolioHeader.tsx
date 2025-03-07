@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
@@ -91,6 +91,21 @@ export const PortfolioHeader = ({
 
 		await persist();
 	};
+
+	const [addressesSidePanelKey, setAddressesSidePanelKey] = useState(selectedAddresses.join('-'));
+
+	useEffect(() => {
+		let id: NodeJS.Timeout;
+		if (!showAddressesPanel) {
+			id = setTimeout(() => {
+				setAddressesSidePanelKey(selectedAddresses.join('-'));
+			}, 500);
+		}
+
+		return () => {
+			clearTimeout(id);
+		}
+	}, [selectedAddresses, showAddressesPanel]);
 
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
@@ -374,7 +389,7 @@ export const PortfolioHeader = ({
 				onClose={(addresses) => {
 					setSelectedAddresses(addresses);
 				}}
-				key={selectedAddresses.join('-')}
+				key={addressesSidePanelKey}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
 				onDelete={(address) => {
