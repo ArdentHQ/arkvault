@@ -170,6 +170,8 @@ export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
 export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
+export const getDefaultMainsailWalletMnemonic = () =>
+	"embody plug round swamp sick minor notable catch idle discover barely easily audit near essence crater stand arch phone border minimum smile above exercise";
 export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[2];
 
 export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordProtectedProfileId()]?.password;
@@ -199,6 +201,11 @@ export const MNEMONICS = [
 	"tray analyst bulk topple night swing list execute walk bronze invite title silent loud cash apology sibling wheel thumb dragon black soccer mixed curious",
 	"cool path congress harbor position ready embody hunt face field boil brown rubber toss arrange later convince anxiety foam urban monster endless essay melt",
 	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
+];
+
+export const MAINSAIL_MNEMONICS = [
+	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
+	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
 ];
 
 export const breakpoints: {

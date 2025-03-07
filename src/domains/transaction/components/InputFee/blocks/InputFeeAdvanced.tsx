@@ -81,6 +81,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					/>
 
 					<InputCurrency
+						data-testid="Input_GasPrice"
 						network={network}
 						addons={{
 							end: {
@@ -111,6 +112,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					/>
 
 					<InputCurrency
+						data-testid="Input_GasLimit"
 						network={network}
 						addons={{
 							end: {

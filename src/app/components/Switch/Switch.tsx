@@ -10,7 +10,7 @@ const SwitchText = ({
 	selected,
 	disabled,
 	...props
-}: SwitchTextType & React.HTMLAttributes<HTMLButtonElement>) => (
+}: SwitchTextType & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button {...props} className={twMerge(getSwitchTextStyles({ disabled, selected, size }))} />
 );
 
@@ -43,6 +43,7 @@ export function Switch<TOptionValue = string>({
 			disabled={disabled}
 			size={size}
 			selected={option.value === value}
+			type="button"
 			onClick={() => !disabled && onChange(option.value)}
 		>
 			{option.label}

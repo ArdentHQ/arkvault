@@ -6,14 +6,15 @@ import { Checkbox } from "@/app/components/Checkbox";
 import { t } from "i18next";
 import { Button } from "@/app/components/Button";
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
 import { useBreakpoint } from "@/app/hooks";
+import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
 
 export const AddressesSidePanel = ({
+	profile,
 	wallets,
 	defaultSelectedAddresses = [],
 	open,
@@ -21,12 +22,13 @@ export const AddressesSidePanel = ({
 	onClose,
 	onDelete,
 }: {
+	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
 	defaultSelectedAddresses: string[];
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	onClose: (addresses: string[]) => void;
-	onDelete?: (addresses: string[]) => void;
+	onDelete?: (addresses: string) => void;
 }): JSX.Element => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses);
@@ -34,7 +36,7 @@ export const AddressesSidePanel = ({
 
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
 
-	const [addressesToDelete, setAddressesToDelete] = useState<string[]>([]);
+	const [addressToDelete, setAddressToDelete] = useState<string | undefined>(undefined);
 
 	const [showManageHint, setShowManageHint] = useState<boolean>(false);
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
@@ -71,35 +73,22 @@ export const AddressesSidePanel = ({
 		onSetSelectedAddresses([...selectedAddresses, address]);
 	};
 
-	const markForDelete = (address: string) => {
-		setAddressesToDelete([...addressesToDelete, address]);
-	};
-
 	const resetDeleteState = () => {
-		setAddressesToDelete([]);
+		setAddressToDelete(undefined);
 		setDeleteMode(false);
 	};
 
-	const addressesToShow = wallets
-		.filter((wallet) => !addressesToDelete.includes(wallet.address()))
-		.filter((wallet) => {
-			if (!searchQuery) {
-				return true;
-			}
+	const addressesToShow = wallets.filter((wallet) => {
+		if (!searchQuery) {
+			return true;
+		}
 
-			const query = searchQuery.toLowerCase();
+		const query = searchQuery.toLowerCase();
 
-			return (
-				wallet.address().toLowerCase().startsWith(query) || wallet.displayName()?.toLowerCase().includes(query)
-			);
-		});
+		return wallet.address().toLowerCase().startsWith(query) || wallet.displayName()?.toLowerCase().includes(query);
+	});
 
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
-
-	const confirmAddressDeletion = () => {
-		onDelete?.(addressesToDelete);
-		resetDeleteState();
-	};
 
 	const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
 	const hasSelectedAddresses = () => selectedAddresses.length > 0;
@@ -204,7 +193,7 @@ export const AddressesSidePanel = ({
 								variant="transparent"
 								onClick={() => setDeleteMode(true)}
 								className={cn(
-									"p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5",
+									"p-2 py-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5",
 									{
 										"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
 											showManageHint,
@@ -218,29 +207,20 @@ export const AddressesSidePanel = ({
 					)}
 
 					{isDeleteMode && (
-						<div className="leading-[18px] sm:leading-5">
+						<div className="flex items-center space-x-2 px-2 leading-[18px] sm:leading-5">
+							<Icon
+								name="Back"
+								dimensions={[16, 16]}
+								className="text-theme-primary-600 dark:text-theme-primary-400"
+							/>
 							<Button
-								data-testid="CancelDelete"
+								data-testid="BackManage"
 								size="icon"
 								variant="transparent"
 								onClick={resetDeleteState}
-								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
+								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5"
 							>
-								{t("COMMON.CANCEL")}
-							</Button>
-
-							<Divider type="vertical" className="border-theme-primary-300 dark:border-theme-dark-700" />
-
-							<Button
-								data-testid="ConfirmDelete"
-								size="icon"
-								variant="transparent"
-								onClick={() => {
-									void confirmAddressDeletion();
-								}}
-								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-500 sm:text-base sm:leading-5"
-							>
-								{t("COMMON.DONE")}
+								{t("COMMON.BACK")}
 							</Button>
 						</div>
 					)}
@@ -264,18 +244,27 @@ export const AddressesSidePanel = ({
 			<div className="space-y-1">
 				{addressesToShow.map((wallet, index) => (
 					<AddressRow
+						profile={profile}
 						errorMessage={
 							!hasSelectedAddresses() && !isDeleteMode && index === 0
 								? "You need to have at least one address selected."
 								: undefined
 						}
-						isError={!hasSelectedAddresses() && !isDeleteMode}
+						isError={(!hasSelectedAddresses() && !isDeleteMode) || wallet.address() === addressToDelete}
 						key={wallet.address()}
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
 						isSelected={isSelected(wallet)}
 						usesDeleteMode={isDeleteMode}
-						onDelete={markForDelete}
+						onDelete={(address: string) => setAddressToDelete(address)}
+						deleteContent={
+							addressToDelete === wallet.address() ? (
+								<DeleteAddressMessage
+									onCancelDelete={resetDeleteState}
+									onConfirmDelete={() => onDelete?.(wallet.address())}
+								/>
+							) : undefined
+						}
 					/>
 				))}
 			</div>

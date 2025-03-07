@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/app/components/Button";
 import { useTranslation } from "react-i18next";
 import { Image } from "@/app/components/Image";
 import cn from "classnames";
 import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
+
 
 export const Header = () => {
 	const { t } = useTranslation();
@@ -37,7 +38,13 @@ export const HeaderMobile = () => {
 	);
 };
 
-export const AddressActionsMenuMobile = () => {
+export const AddressActionsMenuMobile = ({
+	onCreateAddress,
+	onImportAddress,
+}: {
+	onCreateAddress?: (open: boolean) => void;
+	onImportAddress?: (open: boolean) => void;
+}) => {
 	const { t } = useTranslation();
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
@@ -49,11 +56,12 @@ export const AddressActionsMenuMobile = () => {
 					<Button variant="secondary" className="w-full" onClick={() => setShowImportAddressPanel(true)}>
 						{t("COMMON.IMPORT")}
 					</Button>
-					<Button variant="primary" className="w-full" onClick={() => setShowCreateAddressPanel(true)}>
+					<Button variant="primary" className="w-full" onClick={() => onCreateAddress?.(true)}>
 						{t("COMMON.CREATE")}
 					</Button>
 				</div>
 			</div>
+
 			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 			<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
 		</>
@@ -99,8 +107,15 @@ export const DashboardSetupAddressCard = ({
 	</button>
 );
 
-export const DashboardSetupAddressCards = () => {
+export const DashboardSetupAddressCards = ({
+	onCreateAddress,
+	onImportAddress,
+}: {
+	onCreateAddress?: (open: boolean) => void;
+	onImportAddress?: (open: boolean) => void;
+}) => {
 	const { t } = useTranslation();
+
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
 
@@ -117,13 +132,14 @@ export const DashboardSetupAddressCards = () => {
 						title={t("COMMON.CREATE_ADDRESS")}
 						description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
 						buttonText={t("COMMON.CREATE")}
-						onClick={() => setShowCreateAddressPanel(true)}
+						onClick={() => onCreateAddress?.(true)}
 					/>
 					<DashboardSetupAddressCard
 						image="ImportAddress"
 						title={t("COMMON.IMPORT_ADDRESS")}
 						description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
 						buttonText={t("COMMON.IMPORT")}
+
 						onClick={() => setShowImportAddressPanel(true)}
 					/>
 				</div>

@@ -1,4 +1,4 @@
-import { BIP39 } from "@ardenthq/sdk-cryptography";
+import * as bip39 from "@scure/bip39";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -31,9 +31,23 @@ const continueButton = () => screen.getByTestId("CreateWallet__continue-button")
 describe("CreateAddressSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
 
-	beforeAll(() => {
+	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+
+		const profile = env.profiles().findById(fixtureProfileId);
+		const walletMock = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: passphrase,
+			network: "ark.devnet",
+		});
+
+		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(
+			async () =>
+				await {
+					mnemonic: passphrase,
+					wallet: walletMock,
+				},
+		);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
 	});
@@ -62,7 +76,7 @@ describe("CreateAddressSidePanel", () => {
 
 		vi.spyOn(profile, "availableNetworks").mockReturnValue([networkWallet.network()]);
 
-		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -239,6 +253,97 @@ describe("CreateAddressSidePanel", () => {
 		const wallet = profile.wallets().first();
 
 		expect(wallet.alias()).toBe("Address #1");
+
+		historySpy.mockRestore();
+	});
+
+	it("should handle invalid encryption password", async () => {
+		const history = createHashHistory();
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
+		history.push(createURL);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+			</Route>,
+			{
+				history,
+				route: createURL,
+			},
+		);
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
+
+		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
+		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
+
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(3);
+
+		await userEvent.click(continueButton());
+
+		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
+
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		const fillConfirmationInputs = async () => {
+			const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+			await userEvent.clear(firstInput);
+			await userEvent.type(firstInput, "power");
+			await userEvent.clear(secondInput);
+			await userEvent.type(secondInput, "return");
+			await userEvent.clear(thirdInput);
+			await userEvent.type(thirdInput, "attend");
+		};
+
+		await fillConfirmationInputs();
+		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
+
+		const fillEncryptionPassword = async (password: string, confirmation: string) => {
+			await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+			await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+			await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+			await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), confirmation);
+		};
+
+		await fillEncryptionPassword("hello123", "wrong-confirmation");
+
+		const continueEncryptionButton = () => screen.getByTestId("CreateWallet__continue-encryption-button");
+
+		await waitFor(() => expect(continueEncryptionButton()).toBeDisabled());
+
+		const backButton = await screen.findByTestId("CreateWallet__back-button");
+
+		await userEvent.click(backButton);
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		await fillConfirmationInputs();
+		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
+
+		await fillEncryptionPassword(encryptionPassword, encryptionPassword);
+
+		await waitFor(() => expect(continueEncryptionButton()).toBeEnabled());
+
+		await userEvent.click(continueEncryptionButton());
+
+		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
+
+		expect(profile.wallets().values()).toHaveLength(1);
 
 		historySpy.mockRestore();
 	});

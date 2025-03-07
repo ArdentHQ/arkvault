@@ -1,0 +1,89 @@
+{
+	"meta": {
+		"totalCountIsEstimate": false,
+		"count": 55,
+		"first": "/delegates?limit=100&page=1",
+		"last": "/delegates?limit=100&page=1",
+		"next": null,
+		"pageCount": 1,
+		"previous": null,
+		"self": "/delegates?limit=100&page=1",
+		"totalCount": 55
+	},
+	"data": [
+		{
+			"address": "0x3F8eCbF08078F22038235F9834540A960E99085b",
+			"publicKey": "030cc854a680d4065304bd49928cdf80154e69f3d43fdf28b0c4b2e46d87a9630c",
+			"balance": "2361350566354975849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x3F8eCbF08078F22038235F9834540A960E99085b",
+				"validatorRank": 1,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"id": "e3f7719a22735837d7058fe2ce712e6e17b775b279417fda810d3f9aa489a4df",
+					"height": 151309,
+					"timestamp": 1741101286995
+				},
+				"validatorPublicKey": "b41881c3ad67ab36dabf74ac9271f10fa315c5b281313c14e3143103a3f5f43ca6abf50e3c7bd0271e12631fdb4640dc",
+				"validatorForgedFees": "15000000000",
+				"validatorForgedTotal": "15300000000",
+				"validatorVoteBalance": "2361849565066569457906603",
+				"validatorVotersCount": 2,
+				"validatorForgedRewards": "300000000",
+				"validatorProducedBlocks": 2858
+			},
+			"updated_at": "151309"
+		},
+		{
+			"address": "0xC2402c93F00C67B10a11d78CE5c57B3D8D1FC2da",
+			"publicKey": "02874e789117a42947e442aac6a43a02fdab283973a1aae76ea8ddc31cd299bebe",
+			"balance": "2361354566590280849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xC2402c93F00C67B10a11d78CE5c57B3D8D1FC2da",
+				"validatorRank": 2,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"id": "d683c03b674a942c1405f4bf081568636d3172b1acc58fe30762cbbc9fd70782",
+					"height": 151326,
+					"timestamp": 1741101422995
+				},
+				"validatorPublicKey": "8a2654afc229f199a45611f52ea3e077d387733d7ffed460ba6fcac51a71ac82d33288264749b2724e8ab8ba85ab9968",
+				"validatorForgedFees": "20000000000",
+				"validatorForgedTotal": "100020200000003",
+				"validatorVoteBalance": "2361754554235899474681603",
+				"validatorVotersCount": 2,
+				"validatorForgedRewards": "100000200000003",
+				"validatorProducedBlocks": 2858
+			},
+			"updated_at": "151326"
+		},
+		{
+			"address": "0x7e1372c9B66F434A22c429C600835894cE33641b",
+			"publicKey": "038297916c825d2e09ffe03de2c67a15803472fc92569240fa8fbf457502d7400d",
+			"balance": "2361354566463946758206603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x7e1372c9B66F434A22c429C600835894cE33641b",
+				"validatorRank": 3,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"id": "c0ff30664184c714821bb93733a9094cd2fd235dda34ceb4d854a57ce8be5cf8",
+					"height": 151338,
+					"timestamp": 1741101518995
+				},
+				"validatorPublicKey": "8721636e8eec6651422de9eb6915bd0cdb46b59f4796e473088ed5b33b767ce3461d678df12dd80d16d9f878f3a9bd89",
+				"validatorForgedFees": "5066701250",
+				"validatorForgedTotal": "5066701250",
+				"validatorVoteBalance": "2361354566463946758206603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 2860
+			},
+			"updated_at": "151338"
+		}
+	]
+}

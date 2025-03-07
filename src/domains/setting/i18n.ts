@@ -91,10 +91,6 @@ export const translations = {
 			},
 		},
 		SECURITY: {
-			ADVANCED_MODE: {
-				DESCRIPTION: "Allows installations from direct URLs. Enable at your own risk.",
-				TITLE: "Advanced Mode",
-			},
 			AUTOMATIC_SIGN_OUT_PERIOD: {
 				TITLE: "Auto Log-Off",
 			},

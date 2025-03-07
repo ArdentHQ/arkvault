@@ -9,12 +9,12 @@ const endpoints = [
 		path: "/node/configuration/crypto",
 		data: require("../../fixtures/coins/mainsail/devnet/cryptoConfiguration.json"),
 	},
-	// { path: "/delegates", data: require("../../fixtures/coins/mainsail/devnet/delegates.json") },
+	{ path: "/delegates", data: require("../../fixtures/coins/mainsail/devnet/delegates.json") },
 	{ path: "/node/syncing", data: require("../../fixtures/coins/mainsail/devnet/syncing.json") },
 	// { path: "/transactions/fees", data: require("../../fixtures/coins/mainsail/devnet/transaction-fees.json") },
 ];
 
-const wallets = ["0x8A3117649655714c296cd816691e01C5148922ed"];
+const wallets = ["0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"];
 
 export const mainsailDevnetHandlers = [
 	...endpoints.map((endpoint) =>

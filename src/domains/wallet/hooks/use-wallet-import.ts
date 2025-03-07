@@ -8,6 +8,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { OptionsValue } from "./use-import-options";
 import { assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 type PrivateKey = string;
 type Mnemonic = string;
@@ -27,6 +28,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	const { env, persist } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile });
+	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const importWalletByType = async ({
 		network,
@@ -166,7 +168,9 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 
 		assertWallet(wallet);
 
-		await syncAll(wallet);
+		if (network.id() === activeNetwork.id()) {
+			await syncAll(wallet);
+		}
 
 		wallet.mutator().alias(
 			getDefaultAlias({
