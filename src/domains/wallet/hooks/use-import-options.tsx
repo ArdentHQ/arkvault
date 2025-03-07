@@ -3,7 +3,6 @@ import { Networks } from "@ardenthq/sdk";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
-import { ImportMethod } from "@ardenthq/sdk/distribution/esm/network.models";
 
 export enum OptionsValue {
 	ADDRESS = "address",
@@ -113,13 +112,13 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 		const options: ImportOption[] = [];
 
 		for (const option of allOptions) {
-			const methodName= Object.keys(methods).find((methodName) => convertMethodName(methodName) === option.value);
+			const methodName = Object.keys(methods).find((methodName) => convertMethodName(methodName) === option.value);
 
 			if (!methodName) {
 				continue;
 			}
 
-			const method = methods[methodName] as ImportMethod;
+			const method = methods[methodName] as Networks.ImportMethod;
 
 			if (method.default) {
 				defaultOption = option;
