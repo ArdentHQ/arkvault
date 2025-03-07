@@ -374,6 +374,7 @@ export const PortfolioHeader = ({
 				onClose={(addresses) => {
 					setSelectedAddresses(addresses);
 				}}
+				key={selectedAddresses.join('-')}
 				open={showAddressesPanel}
 				onOpenChange={setShowAddressesPanel}
 				onDelete={(address) => {
