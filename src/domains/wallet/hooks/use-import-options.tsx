@@ -113,7 +113,9 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 		const options: ImportOption[] = [];
 
 		for (const option of allOptions) {
-			const methodName= Object.keys(methods).find((methodName) => convertMethodName(methodName) === option.value);
+			const methodName = Object.keys(methods).find(
+				(methodName) => convertMethodName(methodName) === option.value,
+			);
 
 			if (!methodName) {
 				continue;
