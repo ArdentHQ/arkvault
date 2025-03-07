@@ -1,13 +1,14 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { ContactListItemMobileAddress } from "./ContactListItemMobile.blocks";
 import { Icon } from "@/app/components/Icon";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { Dropdown } from "@/app/components/Dropdown";
-import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
-import { useAccordion } from "@/app/hooks";
-import { Divider } from "@/app/components/Divider";
-import { twMerge } from "tailwind-merge";
+import { useNetworks } from "@/app/hooks";
+import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
+import { useTranslation } from "react-i18next";
+import { Address } from "@/app/components/Address";
+import { Button } from "@/app/components/Button";
+import { Tooltip } from "@/app/components/Tooltip";
 
 interface Properties {
 	profile: Contracts.IProfile;
@@ -26,59 +27,64 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 	hasBalance,
 	profile,
 }) => {
+	const { t } = useTranslation();
+
+	const profileAvailableNetworks = useNetworks({ profile });
+
+	const sendIsDisabled = useMemo(() => {
+		if (!hasBalance) {
+			return true;
+		}
+
+		return false;
+	}, [hasBalance, profileAvailableNetworks]);
+
 	const renderAddress = useCallback(
-		(address: Contracts.IContactAddress) => (
-			<ContactListItemMobileAddress
-				profile={profile}
-				hasBalance={hasBalance}
-				onSend={() => onSend(address)}
-				key={address.address()}
-				address={address}
-			/>
-		),
+		(address: Contracts.IContactAddress) => <Address address={address.address()} size="sm" showCopyButton />,
 		[hasBalance, onSend],
 	);
-
-	const { isExpanded, handleHeaderClick } = useAccordion(`${profile.id()}_contact_list_mobile_${contact.id()}`);
 
 	return (
 		<tr data-testid="ContactListItemMobile">
 			<td className="pt-3">
-				<AccordionWrapper>
-					<AccordionHeader
-						isExpanded={isExpanded}
-						onClick={handleHeaderClick}
-						className={twMerge("px-6", isExpanded ? "pb-3 pt-4" : "py-4")}
-					>
-						<div className="flex w-0 flex-grow items-center justify-between space-x-3">
-							<span className="truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200">
-								{contact.name()}
-							</span>
+				<MobileTableElement
+					title={contact.name()}
+					titleExtra={
+						<div className="flex items-center gap-3">
+							<Tooltip content={hasBalance ? "" : t("CONTACTS.VALIDATION.NO_BALANCE")}>
+								<Button
+									disabled={sendIsDisabled}
+									variant="transparent"
+									onClick={(e) => {
+										e.stopPropagation();
+										onSend(contact.addresses().first());
+									}}
+									className="p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+								>
+									{t("COMMON.SEND")}
+								</Button>
+							</Tooltip>
 
-							<div className="ml-5 flex items-center space-x-3">
-								<Dropdown
-									toggleContent={
-										<button type="button" className="flex text-theme-secondary-700">
-											<Icon name="EllipsisVerticalFilled" size="md" />
-										</button>
-									}
-									options={options}
-									onSelect={(action: ContactListItemOption) => onAction(action)}
-								/>
+							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800" />
 
-								<Divider type="vertical" size="md" />
-							</div>
+							<Dropdown
+								toggleContent={
+									<button type="button" className="flex text-theme-secondary-700">
+										<Icon name="EllipsisVerticalFilled" size="md" />
+									</button>
+								}
+								options={options}
+								onSelect={(action: ContactListItemOption) => onAction(action)}
+							/>
 						</div>
-					</AccordionHeader>
-
-					{isExpanded && (
-						<AccordionContent className="px-6 pb-4">
-							<div data-testid="ContactListItemMobile__addresses" className="w-full space-y-3">
-								{contact.addresses().values().map(renderAddress)}
-							</div>
-						</AccordionContent>
-					)}
-				</AccordionWrapper>
+					}
+				>
+					<MobileTableElementRow title={t("COMMON.ADDRESS")}>
+						<div data-testid="ContactListItemMobile__addresses" className="w-full space-y-3">
+							{contact.addresses().values().map(renderAddress)}
+						</div>
+					</MobileTableElementRow>
+				</MobileTableElement>
 			</td>
 		</tr>
 	);

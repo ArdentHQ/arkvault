@@ -51,6 +51,7 @@ export const Contacts: FC = () => {
 				accessor: "name",
 				headerClassName: "no-border",
 				minimumWidth: true,
+				noRoundedBorders: true,
 			},
 			{
 				Header: t("COMMON.ADDRESS"),
@@ -66,6 +67,7 @@ export const Contacts: FC = () => {
 				cellWidth: "w-40",
 				className: "hidden",
 				headerClassName: "no-border",
+				noRoundedBorders: true,
 			},
 		],
 		[t],
