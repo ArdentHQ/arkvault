@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import { ARK } from "@ardenthq/sdk-ark";
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@/app/lib/mainsail";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { createHashHistory, HashHistory, To } from "history";

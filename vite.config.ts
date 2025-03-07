@@ -54,7 +54,6 @@ export default defineConfig(() => {
 						"sdk-helpers": ["@ardenthq/sdk-helpers"],
 						"sdk-intl": ["@ardenthq/sdk-intl"],
 						"sdk-profiles": ["@ardenthq/sdk-profiles"],
-						"sdk-mainsail": ["@ardenthq/sdk-mainsail"],
 					},
 				},
 				plugins: [
