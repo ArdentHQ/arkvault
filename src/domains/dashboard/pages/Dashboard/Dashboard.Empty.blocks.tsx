@@ -101,13 +101,7 @@ export const DashboardSetupAddressCard = ({
 	</button>
 );
 
-export const DashboardSetupAddressCards = ({
-	onCreateAddress,
-	onImportAddress,
-}: {
-	onCreateAddress?: (open: boolean) => void;
-	onImportAddress?: (open: boolean) => void;
-}) => {
+export const DashboardSetupAddressCards = () => {
 	const { t } = useTranslation();
 
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
@@ -126,7 +120,7 @@ export const DashboardSetupAddressCards = ({
 						title={t("COMMON.CREATE_ADDRESS")}
 						description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
 						buttonText={t("COMMON.CREATE")}
-						onClick={() => onCreateAddress?.(true)}
+						onClick={() => setShowCreateAddressPanel(true)}
 					/>
 					<DashboardSetupAddressCard
 						image="ImportAddress"

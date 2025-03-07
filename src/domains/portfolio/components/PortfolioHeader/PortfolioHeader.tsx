@@ -26,6 +26,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
+import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
 
 export const PortfolioHeader = ({
 	profile,
