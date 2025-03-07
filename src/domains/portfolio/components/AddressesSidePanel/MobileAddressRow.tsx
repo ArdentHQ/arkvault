@@ -92,6 +92,7 @@ export const MobileAddressRow = ({
 							label="Address"
 							body={
 								<Address
+									truncateOnTable
 									address={wallet.address()}
 									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50"
 								/>
