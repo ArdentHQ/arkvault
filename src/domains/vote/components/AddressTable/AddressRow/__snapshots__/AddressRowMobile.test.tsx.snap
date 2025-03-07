@@ -12,9 +12,11 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -48,6 +50,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -178,9 +181,11 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -214,6 +219,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -342,9 +348,11 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -378,6 +386,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -507,9 +516,11 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -543,6 +554,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -672,9 +684,11 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -708,6 +722,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -836,9 +851,11 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -872,6 +889,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -1000,9 +1018,11 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -1036,6 +1056,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -1155,9 +1176,11 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -1181,6 +1204,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -1256,9 +1280,11 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -1292,6 +1318,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -1411,9 +1438,11 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -1437,6 +1466,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -1512,9 +1542,11 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -1539,6 +1571,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -1615,9 +1648,11 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -1651,6 +1686,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -1779,9 +1815,11 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -1815,6 +1853,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
@@ -1943,9 +1982,11 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
         >
           <div
             class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
               class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
               <span
                 class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
@@ -1979,6 +2020,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
             </div>
             <div
               class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
                 class="grid grid-cols-1 gap-2"
