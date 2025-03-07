@@ -11,7 +11,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { CreateContact, DeleteContact, UpdateContact } from "@/domains/contact/components";
 import { ContactListItem } from "@/domains/contact/components/ContactListItem";
-import { ContactListMobile } from "@/domains/contact/components/ContactListMobile";
+import { ContactListItemMobile } from "@/domains/contact/components/ContactListItemMobile";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { Button } from "@/app/components/Button";
@@ -108,17 +108,32 @@ export const Contacts: FC = () => {
 	);
 
 	const renderTableRow = useCallback(
-		(contact: Contracts.IContact) => (
-			<ContactListItem
-				profile={activeProfile}
-				item={contact}
-				options={menuOptions}
-				onSend={handleSend}
-				hasBalance={hasBalance}
-				onAction={(action) => handleContactAction(action, contact)}
-			/>
-		),
-		[menuOptions, handleSend, handleContactAction],
+		(contact: Contracts.IContact) => {
+			if (isMdAndAbove) {
+				return (
+					<ContactListItem
+						profile={activeProfile}
+						item={contact}
+						options={menuOptions}
+						onSend={handleSend}
+						hasBalance={hasBalance}
+						onAction={(action) => handleContactAction(action, contact)}
+					/>
+				);
+			}
+
+			return (
+				<ContactListItemMobile
+					profile={activeProfile}
+					contact={contact}
+					onSend={handleSend}
+					options={menuOptions}
+					onAction={(action) => handleContactAction(action, contact)}
+					hasBalance={hasBalance}
+				/>
+			);
+		},
+		[menuOptions, handleSend, handleContactAction, isMdAndAbove],
 	);
 
 	const tableFooter = useMemo(() => {
@@ -146,7 +161,6 @@ export const Contacts: FC = () => {
 	}, [t, filteredContacts.length]);
 
 	const renderContacts = () => (
-		// if (isMdAndAbove) {
 		<SearchableTableWrapper
 			innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
 			searchQuery={query}
@@ -180,18 +194,7 @@ export const Contacts: FC = () => {
 			</div>
 		</SearchableTableWrapper>
 	);
-	// }
 
-	// return (
-	// 	<ContactListMobile
-	// 		profile={activeProfile}
-	// 		contacts={filteredContacts}
-	// 		onSend={handleSend}
-	// 		options={menuOptions}
-	// 		onAction={handleContactAction}
-	// 		hasBalance={hasBalance}
-	// 	/>
-	// );
 	return (
 		<>
 			<Page pageTitle={t("CONTACTS.CONTACTS_PAGE.TITLE")}>
