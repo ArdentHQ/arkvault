@@ -1,5 +1,4 @@
 /* istanbul ignore file */
-/* eslint-disable import/no-namespace */
 
 import { get } from "@ardenthq/sdk-helpers";
 
@@ -56,7 +55,7 @@ export class AbstractDataTransferObjectService implements DataTransferObjectServ
 	#resolveTransactionClass(klass: string, transaction: unknown): ConfirmedTransactionData {
 		return this.#container
 			.resolve<ConfirmedTransactionData>(
-				(get(this.#dataTransferObjects, klass) || get(DataTransferObjects, klass),
+				(get(this.#dataTransferObjects, klass) || get(DataTransferObjects, klass))!,
 			)
 			.configure(transaction)
 			.withDecimals(this.#configRepository.get(ConfigKey.CurrencyDecimals));

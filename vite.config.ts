@@ -8,11 +8,14 @@ import { VitePWA } from "vite-plugin-pwa";
 import path from "path";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 
+
 export default defineConfig(() => {
 	return {
 		resolve: {
 			alias: {
 				"@": path.resolve(__dirname, "./src/"),
+				'node:fs/promises': path.resolve(__dirname, './src/app/lib/shims.ts'),
+				'node:process': path.resolve(__dirname, './src/app/lib/shims.ts'),
 			},
 		},
 		define: {
@@ -56,12 +59,12 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-						visualizer({
-							open: true,
-							brotliSize: true,
-							gzipSize: true,
-							template: "treemap",
-						}),
+					visualizer({
+						open: true,
+						brotliSize: true,
+						gzipSize: true,
+						template: "treemap",
+					}),
 				],
 			},
 		},
@@ -146,12 +149,12 @@ export default defineConfig(() => {
 			},
 			nodePolyfills({
 				// To add only specific polyfills, add them here. If no option is passed, adds all polyfills
-				include: ["buffer"],
+				include: ["buffer", "os", "process", "fs"],
 				// Whether to polyfill specific globals.
 				globals: {
 					Buffer: true, // can also be 'build', 'dev', or false
 					global: true,
-					process: true,
+					process: false,
 				},
 			}),
 		],

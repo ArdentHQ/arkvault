@@ -17,6 +17,9 @@ importers:
       '@ardenthq/sdk-ark':
         specifier: 2.0.0-alpha.59
         version: 2.0.0-alpha.59
+      '@ardenthq/sdk-cryptography':
+        specifier: ^2.2.1
+        version: 2.2.1
       '@ardenthq/sdk-helpers':
         specifier: 2.0.0-alpha.59
         version: 2.0.0-alpha.59
@@ -44,6 +47,54 @@ importers:
       '@ledgerhq/hw-transport-webusb':
         specifier: ^6.29.4
         version: 6.29.4
+      '@mainsail/container':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/contracts':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-address-keccak256':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-config':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-hash-bcrypto':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-key-pair-ecdsa':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-signature-ecdsa':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-signature-schnorr':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-transaction':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-transaction-evm-call':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-validation':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/crypto-wif':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/evm-contracts':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/kernel':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/serializer':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
+      '@mainsail/validation':
+        specifier: 0.0.1-evm.14
+        version: 0.0.1-evm.14
       '@noble/hashes':
         specifier: ^1.7.1
         version: 1.7.1
@@ -59,6 +110,9 @@ importers:
       '@tippyjs/react':
         specifier: ^4.2.6
         version: 4.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      ajv:
+        specifier: ^8.17.1
+        version: 8.17.1
       assert:
         specifier: ^2.1.0
         version: 2.1.0
@@ -71,6 +125,9 @@ importers:
       crypto-js:
         specifier: ^4.2.0
         version: 4.2.0
+      deepmerge:
+        specifier: ^4.3.1
+        version: 4.3.1
       downshift:
         specifier: 6.1.12
         version: 6.1.12(react@18.3.1)
@@ -80,6 +137,9 @@ importers:
       framer-motion:
         specifier: ^11.2.14
         version: 11.3.9(@emotion/is-prop-valid@1.3.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      get-random-values:
+        specifier: ^3.0.0
+        version: 3.0.0
       i18next:
         specifier: ^23.11.5
         version: 23.12.2
@@ -89,6 +149,9 @@ importers:
       multiformats:
         specifier: ^13.1.3
         version: 13.2.0
+      node-dotify:
+        specifier: ^1.1.0
+        version: 1.1.0
       p-retry:
         specifier: ^6.2.0
         version: 6.2.0
@@ -101,6 +164,9 @@ importers:
       query-string:
         specifier: ^9.1.1
         version: 9.1.1
+      rambda:
+        specifier: ^9.4.2
+        version: 9.4.2
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -164,6 +230,9 @@ importers:
       react-zendesk:
         specifier: ^0.1.13
         version: 0.1.13
+      rollup-plugin-polyfill-node:
+        specifier: ^0.13.0
+        version: 0.13.0(rollup@4.19.0)
       semver:
         specifier: ^7.6.2
         version: 7.6.3
@@ -188,6 +257,9 @@ importers:
       uuid:
         specifier: ^11.1.0
         version: 11.1.0
+      viem:
+        specifier: ^2.23.7
+        version: 2.23.7(typescript@5.5.4)
       yup:
         specifier: ^1.4.0
         version: 1.4.0
@@ -430,6 +502,10 @@ packages:
 
   '@ardenthq/sdk-cryptography@2.0.0-alpha.59':
     resolution: {integrity: sha512-id9fccdO7SnFfbxEkJb3VRB4NDT45v35tHgRR/SWu4gdZLhMOfknraoRs90acWguWdVQwoKlMRE8ZBHRC9uMUw==}
+    engines: {node: '>=16.0.0'}
+
+  '@ardenthq/sdk-cryptography@2.2.1':
+    resolution: {integrity: sha512-nV3q2byfvf0clrpLwzHggwiR9SayoHEontHrAhY0MTG9a+FFkhPFJmY7fE/EHMSUfGvtl2ZFkEORn4wYsPhlrA==}
     engines: {node: '>=16.0.0'}
 
   '@ardenthq/sdk-helpers@2.0.0-alpha.59':
@@ -4596,6 +4672,10 @@ packages:
     resolution: {integrity: sha512-lMyPjQyl0cNNdDf2oR+IQ/fM3itDvpoHy45Ymo2r0L1EjazeSl13SfbKZs7KtZ/3MDCeueiaJiuOEfKqRTsSgA==}
     engines: {node: 10 || 12 || >=14}
 
+  get-random-values@3.0.0:
+    resolution: {integrity: sha512-mNznaBdYcpz7UAdnOtDGcLdNwAa79mXl5htEyyZ51YaeAWNf2g4x/2yCVBdNNTbi35wX0Stc2PJXM7G6rcONOA==}
+    engines: {node: 18 || >=20}
+
   get-stdin@4.0.1:
     resolution: {integrity: sha512-F5aQMywwJ2n85s4hJPTT9RPxGmubonuB10MNYo17/xph174n2MIR33HRguhzVag10O/npM7SPk73LMZNP+FaWw==}
     engines: {node: '>=0.10.0'}
@@ -6799,6 +6879,9 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  rambda@9.4.2:
+    resolution: {integrity: sha512-++euMfxnl7OgaEKwXh9QqThOjMeta2HH001N1v4mYQzBjJBnmXBh2BCK6dZAbICFVXOFUVD3xFG0R3ZPU0mxXw==}
+
   randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
 
@@ -7171,6 +7254,11 @@ packages:
 
   ripemd160@2.0.2:
     resolution: {integrity: sha512-ii4iagi25WusVoiC4B4lq7pbXfAp3D9v5CwfkY33vffw2+pkDjY1D8GaN7spsxvCSx8dkPqOZCEZyfxcmJG2IA==}
+
+  rollup-plugin-polyfill-node@0.13.0:
+    resolution: {integrity: sha512-FYEvpCaD5jGtyBuBFcQImEGmTxDTPbiHjJdrYIp+mFIwgXiXabxvKUK7ZT9P31ozu2Tqm9llYQMRWsfvTMTAOw==}
+    peerDependencies:
+      rollup: ^1.20.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
 
   rollup-plugin-visualizer@5.12.0:
     resolution: {integrity: sha512-8/NU9jXcHRs7Nnj07PF2o4gjxmm9lXIrZ8r175bT9dK8qoLlvKTwRMArRCMgpMGlq8CTLugRvEmyMeMXIU2pNQ==}
@@ -8208,8 +8296,8 @@ packages:
   value-equal@1.0.1:
     resolution: {integrity: sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==}
 
-  viem@2.23.5:
-    resolution: {integrity: sha512-cUfBHdFQHmBlPW0loFXda0uZcoU+uJw3NRYQRwYgkrpH6PgovH8iuVqDn6t1jZk82zny4wQL54c9dCX2W9kLMg==}
+  viem@2.23.7:
+    resolution: {integrity: sha512-Gbyz0uE3biWDPxECrEyzILWPsnIgDREgfRMuLSWHSSnM6ktefSC/lqQNImnxESdDEixa8/6EWXjmf2H6L9VV0A==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
@@ -8700,6 +8788,24 @@ snapshots:
       typeforce: 1.18.0
       uuid: 8.3.2
 
+  '@ardenthq/sdk-cryptography@2.2.1':
+    dependencies:
+      '@noble/hashes': 0.5.9
+      '@noble/secp256k1': 1.7.1
+      bcryptjs: 2.4.3
+      bigi: 1.4.2
+      bn.js: 5.2.1
+      create-hmac: 1.1.7
+      create-xpub: 2.1.0
+      crypto-js: 4.2.0
+      elliptic: 6.6.1
+      hdkey: 2.1.0
+      micro-base: 0.10.2
+      micro-bip39: 0.1.3
+      secp256k1: 4.0.4
+      typeforce: 1.18.0
+      uuid: 8.3.2
+
   '@ardenthq/sdk-helpers@2.0.0-alpha.59':
     dependencies:
       '@hapi/bourne': 2.1.0
@@ -8754,7 +8860,7 @@ snapshots:
       lodash.get: 4.4.2
       lodash.set: 4.3.2
       node-dotify: 1.1.0
-      viem: 2.23.5(typescript@5.5.4)
+      viem: 2.23.7(typescript@5.5.4)
     transitivePeerDependencies:
       - bluebird
       - bufferutil
@@ -13856,6 +13962,10 @@ snapshots:
     dependencies:
       global: 4.4.0
 
+  get-random-values@3.0.0:
+    dependencies:
+      global: 4.4.0
+
   get-stdin@4.0.1: {}
 
   get-stream@5.2.0:
@@ -16217,6 +16327,8 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
+  rambda@9.4.2: {}
+
   randombytes@2.1.0:
     dependencies:
       safe-buffer: 5.2.1
@@ -16619,6 +16731,11 @@ snapshots:
     dependencies:
       hash-base: 3.1.0
       inherits: 2.0.4
+
+  rollup-plugin-polyfill-node@0.13.0(rollup@4.19.0):
+    dependencies:
+      '@rollup/plugin-inject': 5.0.5(rollup@4.19.0)
+      rollup: 4.19.0
 
   rollup-plugin-visualizer@5.12.0(rollup@4.19.0):
     dependencies:
@@ -17952,7 +18069,7 @@ snapshots:
 
   value-equal@1.0.1: {}
 
-  viem@2.23.5(typescript@5.5.4):
+  viem@2.23.7(typescript@5.5.4):
     dependencies:
       '@noble/curves': 1.8.1
       '@noble/hashes': 1.7.1
