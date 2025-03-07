@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ARK } from "@ardenthq/sdk-ark";
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@/app/lib/mainsail";
 
 interface ConfigurationContextType {
 	configuration: Record<string, any>;

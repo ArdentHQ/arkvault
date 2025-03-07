@@ -1,6 +1,6 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { formatUnits } from "@ardenthq/sdk-mainsail";
+import { formatUnits } from "@/app/lib/mainsail";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 
