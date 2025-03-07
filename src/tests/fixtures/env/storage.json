@@ -143,8 +143,6 @@
 				"HAS_COMPLETED_INTRODUCTORY_TUTORIAL": true
 			},
 			"settings": {
-				"ACCENT_COLOR": "green",
-				"ADVANCED_MODE": false,
 				"AUTOMATIC_SIGN_OUT_PERIOD": 15,
 				"BIP39_LOCALE": "english",
 				"EXCHANGE_CURRENCY": "BTC",
@@ -155,9 +153,7 @@
 				"THEME": "light",
 				"TIME_FORMAT": "h:mm A",
 				"USE_TEST_NETWORKS": true,
-				"DASHBOARD_TRANSACTION_HISTORY": true,
-				"DO_NOT_SHOW_FEE_WARNING": false,
-				"ERROR_REPORTING": false
+				"DO_NOT_SHOW_FEE_WARNING": false
 			}
 		},
 		"cba050f1-880f-45f0-9af9-cfe48f406052": {
@@ -173,8 +169,6 @@
 				"HAS_COMPLETED_INTRODUCTORY_TUTORIAL": true
 			},
 			"settings": {
-				"ACCENT_COLOR": "green",
-				"ADVANCED_MODE": false,
 				"AUTOMATIC_SIGN_OUT_PERIOD": 1,
 				"BIP39_LOCALE": "english",
 				"EXCHANGE_CURRENCY": "BTC",
@@ -184,9 +178,7 @@
 				"NAME": "Jane Doe",
 				"THEME": "dark",
 				"TIME_FORMAT": "h:mm A",
-				"DASHBOARD_TRANSACTION_HISTORY": true,
 				"DO_NOT_SHOW_FEE_WARNING": false,
-				"ERROR_REPORTING": false,
 				"PASSWORD": "$2a$10$Qy/Mcjg2AAZ.Wqj7MUba4eQtNTC5c4Vh6SCWKezmolrp/58TlCA8u",
 				"DASHBOARD_CONFIGURATION": {
 					"hideBalance": false
@@ -201,12 +193,12 @@
 					"data": {
 						"COIN": "Mainsail",
 						"NETWORK": "mainsail.devnet",
-						"ADDRESS": "0x8A3117649655714c296cd816691e01C5148922ed",
-						"PUBLIC_KEY": "02326277066ea98884095c41ebb7c74b392f5b95a63382c5c51459673e506881fc",
+						"ADDRESS": "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+						"PUBLIC_KEY": "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 						"BALANCE": {
-							"total": "3375089801",
-							"available": "3375089801",
-							"fees": "3375089801"
+							"total": "970145607232337508980",
+							"available": "970145607232337508980",
+							"fees": "970145607232337508980"
 						},
 						"BROADCASTED_TRANSACTIONS": {},
 						"EXCHANGE_CURRENCY": "BTC",
@@ -261,8 +253,6 @@
 				"HAS_COMPLETED_INTRODUCTORY_TUTORIAL": true
 			},
 			"settings": {
-				"ACCENT_COLOR": "green",
-				"ADVANCED_MODE": false,
 				"AUTOMATIC_SIGN_OUT_PERIOD": 15,
 				"BIP39_LOCALE": "english",
 				"EXCHANGE_CURRENCY": "BTC",
@@ -273,9 +263,7 @@
 				"THEME": "light",
 				"TIME_FORMAT": "h:mm A",
 				"USE_TEST_NETWORKS": true,
-				"DASHBOARD_TRANSACTION_HISTORY": true,
 				"DO_NOT_SHOW_FEE_WARNING": false,
-				"ERROR_REPORTING": false,
 				"DASHBOARD_CONFIGURATION": {
 					"hideBalance": false
 				}

@@ -25,12 +25,13 @@ describe("AddressesSidePanel", () => {
 	it("should render", () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -43,12 +44,13 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -63,12 +65,13 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[wallets.first().address(), wallets.last().address()]}
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -83,12 +86,13 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -98,53 +102,34 @@ describe("AddressesSidePanel", () => {
 		expect(onClose).toHaveBeenCalledWith(wallets.values().map((w) => w.address()));
 	});
 
-	it("should deselect displayed addresses if all already selected when `select all` clicked", async () => {
-		const onClose = vi.fn();
-
+	it("should switch to delete mode when `manage` clicked", async () => {
 		render(
 			<AddressesSidePanel
-				wallets={wallets.values()}
-				defaultSelectedAddresses={wallets.values().map((w) => w.address())}
-				open={true}
-				onClose={onClose}
-				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
-			/>,
-		);
-
-		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
-		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
-
-		expect(onClose).toHaveBeenCalledWith([]);
-	});
-
-	it("should show delete buttons when `manage` clicked", async () => {
-		render(
-			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getByTestId("ManageAddresses"));
 
-		expect(screen.getByTestId("CancelDelete")).toBeInTheDocument();
-		expect(screen.getByTestId("ConfirmDelete")).toBeInTheDocument();
+		expect(screen.getByTestId("BackManage")).toBeInTheDocument();
 	});
 
 	it("should disable `select all` when delete mode enabled", async () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -153,12 +138,13 @@ describe("AddressesSidePanel", () => {
 		expect(screen.getByTestId("SelectAllAddresses_Checkbox")).toBeDisabled();
 	});
 
-	it("should delete an address when `done` clicked", async () => {
+	it("should mark an address for deletion", async () => {
 		const onDelete = vi.fn();
 		const onClose = vi.fn();
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={wallets.values().map((wallet) => wallet.address())}
 				open={true}
@@ -177,11 +163,13 @@ describe("AddressesSidePanel", () => {
 		// confirm address deletion
 		await userEvent.click(screen.getByTestId("ConfirmDelete"));
 
-		expect(onDelete).toHaveBeenCalledWith([wallets.first().address()]);
+		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
 
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
+
 		expect(onClose).toHaveBeenCalledWith([wallets.first().address(), wallets.last().address()]);
-		// // should reset back to select mode
+
+		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
 	});
 
@@ -190,12 +178,13 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={onDelete}
+				onDelete={onDelete}
 			/>,
 		);
 
@@ -216,12 +205,13 @@ describe("AddressesSidePanel", () => {
 	it("should filter wallets by address", async () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -233,12 +223,13 @@ describe("AddressesSidePanel", () => {
 	it("should filter wallets by displayName", async () => {
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -252,12 +243,13 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -271,12 +263,13 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -292,12 +285,13 @@ describe("AddressesSidePanel", () => {
 
 		render(
 			<AddressesSidePanel
+				profile={profile}
 				wallets={wallets.values()}
 				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDeleteAddress={vi.fn()}
+				onDelete={vi.fn()}
 			/>,
 		);
 

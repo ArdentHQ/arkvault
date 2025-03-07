@@ -1,7 +1,7 @@
 import { Contracts, Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import { useSynchronizer } from "@/app/hooks";
+import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 import { isUnit } from "@/utils/test-helpers";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
@@ -69,13 +69,14 @@ const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
 	});
 
 const syncWallets = async (wallets: Contracts.IReadWriteWallet[]) => {
+	const ttl = 5000;
 	await Promise.allSettled(
 		wallets.map((wallet) => {
 			if (wallet.hasSyncedWithNetwork()) {
 				return;
 			}
 
-			return wallet.synchroniser().identity();
+			return wallet.synchroniser().identity({ ttl });
 		}),
 	);
 };
@@ -91,6 +92,7 @@ export const useProfileTransactions = ({
 	const cursor = useRef(1);
 	const LIMIT = useMemo(() => (isUnit() ? 0 : limit), [limit]);
 	const { types } = useTransactionTypes({ wallets });
+	const { syncOnChainUsernames } = useWalletAlias();
 	const allTransactionTypes = [...types.core];
 
 	const [
@@ -148,6 +150,20 @@ export const useProfileTransactions = ({
 			if (!isMounted.current) {
 				return;
 			}
+
+			const addresses = response
+				.items()
+				.flatMap((transaction) => [
+					transaction.sender(),
+					transaction.recipient(),
+					...transaction.recipients().map(({ address }) => address),
+				]);
+
+			const uniqueAddresses = [...new Set(addresses)] as string[];
+
+			const networks = wallets.map((wallet) => wallet.network());
+
+			await syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
 
 			const items = filterTransactions({ transactions: response });
 

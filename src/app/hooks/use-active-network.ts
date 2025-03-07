@@ -12,6 +12,27 @@ export const useProfileNetworks = ({ profile }: { profile: Contracts.IProfile })
 	return [];
 };
 
+export const getActiveNetwork = (profile?: Contracts.IProfile) => {
+	if (!profile) {
+		return;
+	}
+
+	const dashboardConfig = (profile
+		.settings()
+		.get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration) ?? {
+		activeNetworkId: undefined,
+	};
+
+	return profile.availableNetworks().find((network) => {
+		if (dashboardConfig.activeNetworkId === network.id()) {
+			return network;
+		}
+
+		// @TODO: Return mainnet as the default network once it will be available.
+		return network.isTest();
+	});
+};
+
 export const useActiveNetwork = ({
 	profile,
 }: {
@@ -22,21 +43,7 @@ export const useActiveNetwork = ({
 	resetToDefaults: () => Promise<void>;
 } => {
 	const environment = useEnvironmentContext();
-
-	const dashboardConfig = (profile
-		.settings()
-		.get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration) ?? {
-		activeNetworkId: undefined,
-	};
-
-	const activeNetwork = profile.availableNetworks().find((network) => {
-		if (dashboardConfig.activeNetworkId === network.id()) {
-			return network;
-		}
-
-		// @TODO: Return mainnet as the default network once it will be available.
-		return network.isTest();
-	});
+	const activeNetwork = getActiveNetwork(profile);
 
 	assertNetwork(activeNetwork);
 

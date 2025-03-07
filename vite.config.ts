@@ -6,6 +6,7 @@ import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
 import path from "path";
+import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 export default defineConfig(() => {
 	return {
@@ -47,10 +48,8 @@ export default defineConfig(() => {
 						],
 						sdk: ["@ardenthq/sdk"],
 						"sdk-ark": ["@ardenthq/sdk-ark"],
-						"sdk-cryptography": ["@ardenthq/sdk-cryptography"],
 						"sdk-helpers": ["@ardenthq/sdk-helpers"],
 						"sdk-intl": ["@ardenthq/sdk-intl"],
-						"sdk-ledger": ["@ardenthq/sdk-ledger"],
 						"sdk-profiles": ["@ardenthq/sdk-profiles"],
 						"sdk-mainsail": ["@ardenthq/sdk-mainsail"],
 					},
@@ -145,6 +144,16 @@ export default defineConfig(() => {
 					return null;
 				},
 			},
+			nodePolyfills({
+				// To add only specific polyfills, add them here. If no option is passed, adds all polyfills
+				include: ["buffer"],
+				// Whether to polyfill specific globals.
+				globals: {
+					Buffer: true, // can also be 'build', 'dev', or false
+					global: true,
+					process: true,
+				},
+			}),
 		],
 	};
 });

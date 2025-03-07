@@ -1745,17 +1745,6 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures transition-colors duration-200"
-                    data-testid="TruncateEnd"
-                  >
-                    testwallet2
-                  </span>
-                </span>
-                <span
                   class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
@@ -1814,7 +1803,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              57.68 DARK
+              0 DARK
             </span>
           </div>
         </td>
@@ -1854,8 +1843,9 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-1"
+                disabled=""
                 type="button"
               >
                 <div

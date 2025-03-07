@@ -79,11 +79,11 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 				data-testid="NavigationBarLogo--button"
 				type="button"
 				className={cn(
-					"my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500",
+					"my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500",
 					{
-						"h-11 w-11": variant === "logo-only" && !isXs,
-						"h-6 w-6": variant === "default",
-						"h-8 w-8": variant === "logo-only" && isXs,
+						"h-11 w-11 rounded-xl": variant === "logo-only" && !isXs,
+						"h-6 w-6 rounded": variant === "default",
+						"h-8 w-8 rounded": variant === "logo-only" && isXs,
 					},
 				)}
 				onClick={() => (onClick ? onClick() : defaultHandler())}
@@ -99,7 +99,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> = ({ title }) => (
 	<NavWrapper aria-labelledby="main menu" variant="logo-only">
 		<div className="relative flex">
-			<div className="flex flex-1 px-4 sm:px-6 md:px-10">
+			<div className="mt-6 flex flex-1 px-6 md:px-10">
 				<NavigationBarLogo title={title} variant="logo-only" />
 			</div>
 		</div>

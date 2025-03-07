@@ -21,6 +21,7 @@ import { delay } from "@/utils/delay";
 
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { useZendesk } from "@/app/contexts/Zendesk";
+import { getActiveNetwork } from "./use-active-network";
 
 enum Intervals {
 	VeryShort = 15_000,
@@ -62,8 +63,8 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 						...(reset && { isProfileInitialSync: true }),
 					});
 
-					await env.wallets().syncByProfile(profile);
-					await profile.sync();
+					const activeNetwork = getActiveNetwork(profile);
+					await profile.sync({ networkId: activeNetwork?.id(), ttl: 15_000 });
 
 					const walletIdentifiers: Services.WalletIdentifier[] = profile
 						.wallets()
@@ -401,11 +402,17 @@ export const useProfileSynchronizer = ({
 				// are solved by syncing the coin initially.
 				const availableNetworks = profileAllEnabledNetworks(profile);
 				const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
+				const activeNetwork = getActiveNetwork(profile);
+
 				if (onlyHasOneNetwork) {
 					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());
-					await Promise.all([coin.__construct(), profile.sync()]);
+
+					await Promise.all([
+						coin.__construct(),
+						profile.sync({ networkId: activeNetwork?.id(), ttl: 10_000 }),
+					]);
 				} else {
-					await profile.sync();
+					await profile.sync({ networkId: activeNetwork?.id(), ttl: 10_000 });
 				}
 
 				await persist();
