@@ -801,7 +801,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     class="mb-0 text-2xl leading-[29px]"
                     data-testid="header__title"
                   >
-                    My Contacts
+                    Contacts
                   </h1>
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
@@ -2738,7 +2738,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           <h1
             class="mb-0 text-lg font-semibold"
           >
-            My Contacts
+            Contacts
           </h1>
           <div
             class="flex items-center text-sm leading-5 text-theme-secondary-text"
@@ -4327,7 +4327,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     class="mb-0 text-2xl leading-[29px]"
                     data-testid="header__title"
                   >
-                    My Contacts
+                    Contacts
                   </h1>
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
@@ -6358,7 +6358,7 @@ exports[`Contacts > should render without contacts 1`] = `
                     class="mb-0 text-2xl leading-[29px]"
                     data-testid="header__title"
                   >
-                    My Contacts
+                    Contacts
                   </h1>
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
