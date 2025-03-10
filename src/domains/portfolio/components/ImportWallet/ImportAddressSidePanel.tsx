@@ -7,7 +7,6 @@ import { useHistory } from "react-router-dom";
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
-import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -25,6 +24,7 @@ import { Header } from "@/app/components/Header";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { MethodStep } from "@/domains/portfolio/components/ImportWallet/MethodStep";
 import { ImportOption, OptionsValue } from "@/domains/wallet/hooks";
+import { ImportActionToolbar } from "./ImportAddressSidePanel.blocks";
 
 enum Step {
 	MethodStep = 1,
@@ -277,43 +277,21 @@ export const ImportAddressesSidePanel = ({
 							</TabPanel>
 						</div>
 					</Tabs>
-					<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
-						{!isMethodStep && (
-							<div className="hidden w-[136px] sm:block">
-								<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-							</div>
-						)}
 
-						<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
-							{!isMethodStep && activeTab <= Step.EncryptPasswordStep && (
-								<>
-									<Button
-										disabled={isImporting}
-										variant="secondary"
-										onClick={handleBack}
-										data-testid="ImportWallet__back-button"
-									>
-										{t("COMMON.BACK")}
-									</Button>
-
-									<Button
-										disabled={isNextDisabled}
-										isLoading={isEncrypting || isImporting}
-										onClick={handleNext}
-										data-testid="ImportWallet__continue-button"
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								</>
-							)}
-
-							{activeTab === Step.SummaryStep && (
-								<Button disabled={isSubmitting} type="submit" data-testid="ImportWallet__finish-button">
-									{t("COMMON.GO_TO_PORTFOLIO")}
-								</Button>
-							)}
-						</div>
-					</div>
+					{!isLedgerImport && (
+						<ImportActionToolbar
+							showSteps={!isMethodStep}
+							showButtons={!isMethodStep && activeTab <= Step.EncryptPasswordStep}
+							isBackDisabled={isImporting}
+							onBack={handleBack}
+							isContinueDisabled={isNextDisabled}
+							onContinue={handleNext}
+							allSteps={allSteps}
+							activeTab={activeTab}
+							isLoading={isEncrypting || isImporting}
+							isSubmitDisabled={isSubmitting}
+						/>
+					)}
 				</>
 			</Form>
 

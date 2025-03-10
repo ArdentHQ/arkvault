@@ -17,6 +17,7 @@ import { useWalletConfig } from "@/domains/wallet/hooks";
 import { assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { ImportActionToolbar } from "../ImportAddressSidePanel.blocks";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
