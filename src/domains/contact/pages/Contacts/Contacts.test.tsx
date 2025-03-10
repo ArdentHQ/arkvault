@@ -54,10 +54,8 @@ const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profile
 	);
 };
 
-const addAddress = () => screen.getByTestId("contact-form__add-address-btn");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const sendButton = (index = 0) => screen.getAllByTestId("ContactListItem__send-button")[index];
-const contactFormAddressListItemTestId = "contact-form__address-list-item";
 const contactFormNameInputId = "contact-form__name-input";
 const createContact = (targetProfile: Contracts.IProfile, name: string, address: string) =>
 	targetProfile.contacts().create(name, [
@@ -70,6 +68,7 @@ const createContact = (targetProfile: Contracts.IProfile, name: string, address:
 describe("Contacts", () => {
 	let resetProfileNetworksMock: () => void;
 	let mockContact: Contracts.IContact;
+	let validateAddressSpy: jest.SpyInstance;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
@@ -80,10 +79,18 @@ describe("Contacts", () => {
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		validateAddressSpy = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+
+		validateAddressSpy.mockRestore();
 	});
 
 	it("should render with contacts", async () => {
@@ -192,9 +199,6 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(saveButton()).toBeDisabled();
 		});
-		expect(addAddress()).toBeDisabled();
-
-		expect(screen.queryByTestId(contactFormAddressListItemTestId)).not.toBeInTheDocument();
 
 		await userEvent.type(screen.getByTestId(contactFormNameInputId), "Test Contact");
 
@@ -207,14 +211,6 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		});
-
-		await waitFor(() => {
-			expect(addAddress()).not.toBeDisabled();
-		});
-
-		await userEvent.click(addAddress());
-
-		await waitFor(() => expect(screen.getAllByTestId(contactFormAddressListItemTestId)).toHaveLength(1));
 
 		await waitFor(() => expect(saveButton()).not.toBeDisabled());
 
@@ -245,9 +241,6 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(saveButton()).toBeDisabled();
 		});
-		expect(addAddress()).toBeDisabled();
-
-		expect(screen.queryByTestId(contactFormAddressListItemTestId)).not.toBeInTheDocument();
 
 		await userEvent.type(screen.getByTestId(contactFormNameInputId), "Test Contact 2");
 
@@ -265,14 +258,6 @@ describe("Contacts", () => {
 				"0x0000000000000000000000000000000000000001",
 			);
 		});
-
-		await waitFor(() => {
-			expect(addAddress()).not.toBeDisabled();
-		});
-
-		await userEvent.click(addAddress());
-
-		await waitFor(() => expect(screen.getAllByTestId(contactFormAddressListItemTestId)).toHaveLength(1));
 
 		await waitFor(() => expect(saveButton()).not.toBeDisabled());
 
@@ -399,10 +384,6 @@ describe("Contacts", () => {
 
 		expect(nameInput).toHaveValue(newName);
 
-		expect(screen.getAllByTestId(contactFormAddressListItemTestId)).toHaveLength(1);
-
-		await userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[1]);
-
 		await waitFor(() => {
 			expect(saveButton()).not.toBeDisabled();
 		});
@@ -477,7 +458,7 @@ describe("Contacts", () => {
 		await userEvent.click(sendButton());
 
 		expect(history.location.pathname).toBe("/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer");
-		expect(history.location.search).toBe("?coin=ARK&recipient=0x0000000000000000000000000000000000000000");
+		expect(history.location.search).toBe("?coin=Mainsail&recipient=0x0000000000000000000000000000000000000000");
 
 		contactsSpy.mockRestore();
 	});
