@@ -7,8 +7,8 @@ import { Prompt } from "react-router-dom";
 import { GeneralSettingsState, SettingsOption } from "./General.contracts";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
-import { Icon } from "@/app/components/Icon";
+import { Header, PageHeader } from "@/app/components/Header";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
 import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
@@ -298,7 +298,6 @@ export const GeneralSettings: React.FC = () => {
 				subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
 				titleClassName="mb-2 text-2xl"
 			/>
-
 			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
 				<div className="relative mt-8">
 					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.PERSONAL.TITLE")}</h2>
@@ -511,7 +510,6 @@ export const GeneralSettings: React.FC = () => {
 					</Button>
 				</FormButtons>
 			</Form>
-
 			<ResetProfile
 				isOpen={isResetProfileOpen}
 				profile={profile}
@@ -519,7 +517,6 @@ export const GeneralSettings: React.FC = () => {
 				onClose={() => setIsResetProfileOpen(false)}
 				onReset={handleOnReset}
 			/>
-
 			<Prompt message={getPromptMessage} />
 		</SettingsWrapper>
 	);

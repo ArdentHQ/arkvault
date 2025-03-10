@@ -44,7 +44,7 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 
 	return (
 		<>
-			<div className="relative -mx-4 lg:hidden">
+			<div className="relative lg:hidden">
 				<Dropdown
 					placement="bottom-start"
 					wrapperClass="sm:w-full"
@@ -60,7 +60,7 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 				/>
 			</div>
 
-			<div className="hidden h-full w-[210px] lg:block">
+			<div className="hidden h-full w-[200px] lg:block">
 				<ul>
 					{items.map(({ label, route, itemKey, icon }, index) => (
 						<SideBarItem

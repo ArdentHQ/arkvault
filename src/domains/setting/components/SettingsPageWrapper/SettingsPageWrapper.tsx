@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { Page, Section } from "@/app/components/Layout";
 import { SideBar } from "@/app/components/SideBar";
 import { useSettingsMenu } from "@/domains/setting/hooks/use-settings-menu";
+import { PageHeader } from "@/app/components/Header";
+import { ThemeIcon } from "@/app/components/Icon";
 
 type ActiveSettings = "general" | "export" | "password" | "appearance" | "servers" | "networks";
 
@@ -23,19 +25,30 @@ export const SettingsWrapper = ({
 	const { t } = useTranslation();
 
 	return (
-		<Page
-			pageTitle={t(`SETTINGS.${activeSettings.toUpperCase()}.MENU_ITEM`)}
-			sidebar={
-				<SideBar
-					items={menuItems}
-					activeItem={activeSettings}
-					handleActiveItem={(activeSetting: string) => {
-						history.push(`/profiles/${profile.id()}/settings/${activeSetting}`);
-					}}
-				/>
-			}
-		>
-			<Section className="-mt-2 lg:mt-0" innerClassName="lg:px-12">
+		<Page pageTitle={t(`SETTINGS.${activeSettings.toUpperCase()}.MENU_ITEM`)}>
+			<PageHeader
+				title={t("SETTINGS.GENERAL.TITLE")}
+				subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
+				titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="SettigsDark" darkIcon="SettingsLight" />}
+			/>
+
+			<Section>
+				<div className="flex flex-1">
+					<div className="mx-auto flex w-full flex-col lg:container lg:flex-row lg:space-x-3">
+						<div>
+							<SideBar
+								items={menuItems}
+								activeItem={activeSettings}
+								handleActiveItem={(activeSetting: string) => {
+									history.push(`/profiles/${profile.id()}/settings/${activeSetting}`);
+								}}
+							/>
+						</div>
+
+						<div className="flex-1">{children}</div>
+					</div>
+				</div>
+
 				{children}
 			</Section>
 		</Page>

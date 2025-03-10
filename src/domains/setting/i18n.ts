@@ -98,7 +98,7 @@ export const translations = {
 		},
 		SUBTITLE: "Customize your wallet to suit your needs.",
 		SUCCESS: "Your profile settings have been updated",
-		TITLE: "Profile Settings",
+		TITLE: "Settings",
 		UNSUPPORTED_CURRENCY: "{{currency}} is not supported by {{provider}}. Currency has been changed to USD.",
 	},
 
