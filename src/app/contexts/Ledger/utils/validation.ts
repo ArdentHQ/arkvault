@@ -12,6 +12,4 @@ export const hasRequiredAppVersion = async (coin: Coins.Coin) => {
 			return false;
 		}
 	}
-
-	return true;
 };

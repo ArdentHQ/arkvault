@@ -5,6 +5,7 @@ import { useCallback, useMemo, useReducer, useRef, useState } from "react";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
+import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
 
 export const useLedgerScanner = (coin: string, network: string) => {
 	const { setBusy, setIdle } = useLedgerContext();
@@ -48,6 +49,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 
 			try {
 				const instance = profile.coins().set(coin, network);
+				await accessLedgerApp({ coin: instance });
 
 				// @ts-ignore
 				const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });

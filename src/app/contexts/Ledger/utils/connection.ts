@@ -1,12 +1,15 @@
 import retry, { AbortError, Options } from "p-retry";
 import { Coins } from "@ardenthq/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
-import { hasRequiredAppVersion } from "./validation";
+import Eth from "@ledgerhq/hw-app-eth";
+import { LedgerTransport } from "@/app/contexts/Ledger/Ledger.contracts";
+
+export const setupEthTransportInstance = (transport: LedgerTransport) => new Eth(transport);
 
 export const accessLedgerDevice = async (coin: Coins.Coin) => {
 	try {
 		await coin.__construct();
-		await coin.ledger().connect();
+		await coin.ledger().connect((transport) => setupEthTransportInstance(transport));
 	} catch (error) {
 		// If the device is open, continue normally.
 		// Can be triggered when the user retries ledger connection.
@@ -19,11 +22,6 @@ export const accessLedgerDevice = async (coin: Coins.Coin) => {
 export const accessLedgerApp = async ({ coin }: { coin: Coins.Coin }) => {
 	await accessLedgerDevice(coin);
 
-	if (!(await hasRequiredAppVersion(coin))) {
-		throw new Error("VERSION_ERROR");
-	}
-
-	// Ensure that the app is accessible.
 	await coin.ledger().getPublicKey(
 		formatLedgerDerivationPath({
 			coinType: coin.config().get<number>("network.constants.slip44"),

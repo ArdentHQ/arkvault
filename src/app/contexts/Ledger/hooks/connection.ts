@@ -9,7 +9,7 @@ import { openTransport, closeDevices, isLedgerTransportSupported } from "@/app/c
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 import { toasts } from "@/app/services";
 import { useLedgerImport } from "@/app/contexts/Ledger/hooks/import";
-import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
+import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
 
 export const useLedgerConnection = () => {
 	const { t } = useTranslation();
@@ -89,8 +89,15 @@ export const useLedgerConnection = () => {
 		[dispatch, t],
 	);
 
+	const isAttemptingConnect = useRef(false);
+
 	const connect = useCallback(
 		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: Options) => {
+			if (isAttemptingConnect.current) {
+				return;
+			}
+
+			isAttemptingConnect.current = true;
 			const coinInstance = profile.coins().set(coin, network);
 
 			if (!isLedgerTransportSupported()) {
@@ -99,21 +106,31 @@ export const useLedgerConnection = () => {
 			}
 
 			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+			console.log({ options });
+
 			await resetConnectionState();
 
 			dispatch({ type: "waiting" });
 			abortRetryReference.current = false;
 
 			try {
-				await persistLedgerConnection({
+				await accessLedgerApp({
 					coin: coinInstance,
-					hasRequestedAbort: () => abortRetryReference.current,
-					options,
 				});
+
+				//await persistLedgerConnection({
+				//	coin: coinInstance,
+				//	hasRequestedAbort: () => abortRetryReference.current,
+				//	options,
+				//});
+
 				dispatch({ type: "connected" });
 			} catch (connectError) {
+				console.log({ connectError });
 				handleLedgerConnectionError(connectError, coinInstance);
 			}
+
+			isAttemptingConnect.current = false;
 		},
 		[],
 	);
