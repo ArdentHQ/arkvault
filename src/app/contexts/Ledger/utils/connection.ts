@@ -1,15 +1,15 @@
 import retry, { AbortError, Options } from "p-retry";
 import { Coins } from "@ardenthq/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
-import Eth from "@ledgerhq/hw-app-eth"
+import Eth from "@ledgerhq/hw-app-eth";
 import { LedgerTransport } from "@/app/contexts/Ledger/Ledger.contracts";
 
-export const setupEthTransportInstance = (transport: LedgerTransport) => new Eth(transport)
+export const setupEthTransportInstance = (transport: LedgerTransport) => new Eth(transport);
 
 export const accessLedgerDevice = async (coin: Coins.Coin) => {
 	try {
 		await coin.__construct();
-		await coin.ledger().connect(transport => setupEthTransportInstance(transport));
+		await coin.ledger().connect((transport) => setupEthTransportInstance(transport));
 	} catch (error) {
 		// If the device is open, continue normally.
 		// Can be triggered when the user retries ledger connection.

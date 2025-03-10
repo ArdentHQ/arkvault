@@ -89,15 +89,15 @@ export const useLedgerConnection = () => {
 		[dispatch, t],
 	);
 
-	const isAttemptingConnect = useRef(false)
+	const isAttemptingConnect = useRef(false);
 
 	const connect = useCallback(
 		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: Options) => {
 			if (isAttemptingConnect.current) {
-				return
+				return;
 			}
 
-			isAttemptingConnect.current = true
+			isAttemptingConnect.current = true;
 			const coinInstance = profile.coins().set(coin, network);
 
 			if (!isLedgerTransportSupported()) {
@@ -105,7 +105,9 @@ export const useLedgerConnection = () => {
 				return;
 			}
 
-			//const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+			console.log({ options });
+
 			await resetConnectionState();
 
 			dispatch({ type: "waiting" });
@@ -124,11 +126,11 @@ export const useLedgerConnection = () => {
 
 				dispatch({ type: "connected" });
 			} catch (connectError) {
-				console.log({ connectError })
+				console.log({ connectError });
 				handleLedgerConnectionError(connectError, coinInstance);
 			}
 
-			isAttemptingConnect.current = false
+			isAttemptingConnect.current = false;
 		},
 		[],
 	);

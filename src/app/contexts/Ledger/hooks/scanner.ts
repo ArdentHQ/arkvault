@@ -49,7 +49,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 
 			try {
 				const instance = profile.coins().set(coin, network);
-				await accessLedgerApp({ coin: instance })
+				await accessLedgerApp({ coin: instance });
 
 				// @ts-ignore
 				const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });

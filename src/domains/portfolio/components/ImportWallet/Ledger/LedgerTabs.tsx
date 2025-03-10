@@ -134,7 +134,12 @@ export const LedgerTabs = ({
 				</TabPanel>
 
 				<TabPanel tabId={LedgerTabStep.LedgerScanStep}>
-					<LedgerScanStep cancelling={cancelling} profile={activeProfile} setRetryFn={handleRetry} network={activeNetwork} />
+					<LedgerScanStep
+						cancelling={cancelling}
+						profile={activeProfile}
+						setRetryFn={handleRetry}
+						network={activeNetwork}
+					/>
 				</TabPanel>
 
 				<TabPanel tabId={LedgerTabStep.LedgerImportStep}>
