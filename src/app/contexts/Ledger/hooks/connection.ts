@@ -9,8 +9,7 @@ import { openTransport, closeDevices, isLedgerTransportSupported } from "@/app/c
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 import { toasts } from "@/app/services";
 import { useLedgerImport } from "@/app/contexts/Ledger/hooks/import";
-import { accessLedgerApp, persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
-import { useRegisterSW } from "virtual:pwa-register/vue";
+import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
 
 export const useLedgerConnection = () => {
 	const { t } = useTranslation();
@@ -106,7 +105,7 @@ export const useLedgerConnection = () => {
 				return;
 			}
 
-			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+			//const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
 			await resetConnectionState();
 
 			dispatch({ type: "waiting" });

@@ -1,7 +1,6 @@
 import retry, { AbortError, Options } from "p-retry";
 import { Coins } from "@ardenthq/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
-import { hasRequiredAppVersion } from "./validation";
 import Eth from "@ledgerhq/hw-app-eth"
 import { LedgerTransport } from "@/app/contexts/Ledger/Ledger.contracts";
 
