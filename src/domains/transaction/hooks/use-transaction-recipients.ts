@@ -1,7 +1,6 @@
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
-import { isContractTransaction } from "@/domains/transaction/utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const useTransactionRecipients = ({
