@@ -23,15 +23,11 @@ export const accessLedgerDevice = async (coin: Coins.Coin) => {
 export const accessLedgerApp = async ({ coin }: { coin: Coins.Coin }) => {
 	await accessLedgerDevice(coin);
 
-	if (!(await hasRequiredAppVersion(coin))) {
-		throw new Error("VERSION_ERROR");
-	}
-
-	const path = formatLedgerDerivationPath({
-		coinType: coin.config().get<number>("network.constants.slip44"),
-	})
-
-	await coin.ledger().getPublicKey(path);
+	await coin.ledger().getPublicKey(
+		formatLedgerDerivationPath({
+			coinType: coin.config().get<number>("network.constants.slip44"),
+		}),
+	);
 };
 
 export const persistLedgerConnection = async ({
@@ -51,7 +47,6 @@ export const persistLedgerConnection = async ({
 		try {
 			await accessLedgerApp({ coin });
 		} catch (error) {
-			console.log({ error })
 			// Abort on version error or continue retrying access.
 			if (error.message === "VERSION_ERROR") {
 				throw new AbortError("VERSION_ERROR");
