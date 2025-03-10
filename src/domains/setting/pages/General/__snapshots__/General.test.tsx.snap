@@ -183,7 +183,7 @@ exports[`General Settings > should disable submit button when profile is not res
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -982,18 +982,22 @@ exports[`General Settings > should disable submit button when profile is not res
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Profile Settings
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Customize your wallet to suit your needs.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Profile Settings
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Customize your wallet to suit your needs.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1181,7 +1185,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -1320,7 +1324,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         value="BTC (Ƀ)"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -1463,7 +1467,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -1602,7 +1606,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         value="CryptoCompare"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -1741,7 +1745,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         value="12h"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -1904,7 +1908,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           value="15 minutes"
                                         />
                                         <span
-                                          class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                          class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                           data-testid="Input__suggestion"
                                         >
                                           <span
@@ -2503,7 +2507,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -3302,18 +3306,22 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Profile Settings
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Customize your wallet to suit your needs.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Profile Settings
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Customize your wallet to suit your needs.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3537,7 +3545,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -3676,7 +3684,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         value="BTC (Ƀ)"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -3819,7 +3827,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -3958,7 +3966,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         value="CryptoCompare"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -4097,7 +4105,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         value="12h"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -4260,7 +4268,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           value="15 minutes"
                                         />
                                         <span
-                                          class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                          class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                           data-testid="Input__suggestion"
                                         >
                                           <span
@@ -4858,7 +4866,7 @@ exports[`General Settings > should render 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -5657,18 +5665,22 @@ exports[`General Settings > should render 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Profile Settings
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Customize your wallet to suit your needs.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Profile Settings
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Customize your wallet to suit your needs.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5856,7 +5868,7 @@ exports[`General Settings > should render 1`] = `
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -5995,7 +6007,7 @@ exports[`General Settings > should render 1`] = `
                                         value="BTC (Ƀ)"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -6138,7 +6150,7 @@ exports[`General Settings > should render 1`] = `
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -6277,7 +6289,7 @@ exports[`General Settings > should render 1`] = `
                                         value="CryptoCompare"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -6416,7 +6428,7 @@ exports[`General Settings > should render 1`] = `
                                         value="12h"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -6579,7 +6591,7 @@ exports[`General Settings > should render 1`] = `
                                           value="15 minutes"
                                         />
                                         <span
-                                          class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                          class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                           data-testid="Input__suggestion"
                                         >
                                           <span
@@ -7178,7 +7190,7 @@ exports[`General Settings > should show identicon when removing image if name is
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -7977,18 +7989,22 @@ exports[`General Settings > should show identicon when removing image if name is
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Profile Settings
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Customize your wallet to suit your needs.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Profile Settings
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Customize your wallet to suit your needs.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -8176,7 +8192,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -8315,7 +8331,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         value="BTC (Ƀ)"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -8458,7 +8474,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -8597,7 +8613,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         value="CryptoCompare"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -8736,7 +8752,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         value="12h"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -8899,7 +8915,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                           value="15 minutes"
                                         />
                                         <span
-                                          class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                          class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                           data-testid="Input__suggestion"
                                         >
                                           <span
@@ -9498,7 +9514,7 @@ exports[`General Settings > should update profile 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -10297,18 +10313,22 @@ exports[`General Settings > should update profile 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Profile Settings
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Customize your wallet to suit your needs.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Profile Settings
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Customize your wallet to suit your needs.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -10496,7 +10516,7 @@ exports[`General Settings > should update profile 1`] = `
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -10635,7 +10655,7 @@ exports[`General Settings > should update profile 1`] = `
                                         value="BTC (Ƀ)"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -10778,7 +10798,7 @@ exports[`General Settings > should update profile 1`] = `
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -10917,7 +10937,7 @@ exports[`General Settings > should update profile 1`] = `
                                         value="CryptoCompare"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -11056,7 +11076,7 @@ exports[`General Settings > should update profile 1`] = `
                                         value="12h"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -11219,7 +11239,7 @@ exports[`General Settings > should update profile 1`] = `
                                           value="1 minute"
                                         />
                                         <span
-                                          class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                          class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                           data-testid="Input__suggestion"
                                         >
                                           <span
@@ -11818,7 +11838,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -12617,18 +12637,22 @@ exports[`General Settings > should update the avatar when removing focus from na
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Profile Settings
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Customize your wallet to suit your needs.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Profile Settings
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Customize your wallet to suit your needs.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -12816,7 +12840,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -12955,7 +12979,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="BTC (Ƀ)"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -13098,7 +13122,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -13237,7 +13261,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="CryptoCompare"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -13376,7 +13400,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="12h"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -13539,7 +13563,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           value="15 minutes"
                                         />
                                         <span
-                                          class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                          class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                           data-testid="Input__suggestion"
                                         >
                                           <span
@@ -14137,7 +14161,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -14936,18 +14960,22 @@ exports[`General Settings > should update the avatar when removing focus from na
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Profile Settings
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Customize your wallet to suit your needs.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Profile Settings
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Customize your wallet to suit your needs.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -15179,7 +15207,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -15318,7 +15346,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="BTC (Ƀ)"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -15461,7 +15489,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="English"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -15600,7 +15628,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="CryptoCompare"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -15739,7 +15767,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         value="12h"
                                       />
                                       <span
-                                        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                         data-testid="Input__suggestion"
                                       >
                                         <span
@@ -15902,7 +15930,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           value="15 minutes"
                                         />
                                         <span
-                                          class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                                          class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                                           data-testid="Input__suggestion"
                                         >
                                           <span

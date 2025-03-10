@@ -59,7 +59,24 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet")).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with empty results", async () => {
+		const { asFragment, container } = render(
+			<Wrapper>
+				<AddressTable wallets={[]} profile={profile} showEmptyResults />
+			</Wrapper>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -77,7 +94,7 @@ describe("AddressTable", () => {
 
 		expect(screen.getByTestId("AddressRowMobile")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
@@ -113,7 +130,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.queryByTestId("StatusIcon__icon")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("AddressRow__wallet-status")).not.toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 

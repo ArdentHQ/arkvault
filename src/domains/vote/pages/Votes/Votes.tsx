@@ -17,6 +17,8 @@ import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { VotesSection } from "@/domains/vote/components/VotesSection";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -36,18 +38,16 @@ export const Votes: FC = () => {
 
 	const { filter, voteValidators, unvoteValidators } = useVoteQueryParameters();
 
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+
 	const {
-		filterProperties,
-		isFilterChanged,
-		filteredWalletsByCoin,
+		filteredWallets,
 		hasEmptyResults,
 		hasWallets,
 		voteFilter,
 		setVoteFilter,
 		selectedAddress,
 		setSelectedAddress,
-		selectedNetwork,
-		setSelectedNetwork,
 		searchQuery,
 		setSearchQuery,
 		maxVotes,
@@ -78,15 +78,15 @@ export const Votes: FC = () => {
 		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
 		selectedAddress,
-		selectedNetwork,
+		selectedNetwork: activeNetwork.id(),
 		wallet: activeWallet!, // @TODO
 	});
 
 	useEffect(() => {
-		if (selectedAddress && selectedNetwork) {
-			fetchVotes(selectedAddress, selectedNetwork);
+		if (selectedAddress) {
+			fetchVotes(selectedAddress, activeNetwork.id());
 		}
-	}, [fetchVotes, selectedAddress, selectedNetwork]);
+	}, [fetchVotes, selectedAddress, activeNetwork]);
 
 	useEffect(() => {
 		if (hasWalletId) {
@@ -110,37 +110,27 @@ export const Votes: FC = () => {
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const handleSelectAddress = useCallback(
-		async (address: string, network: string) => {
-			const wallet = activeProfile.wallets().findByAddressWithNetwork(address, network);
+		async (address: string) => {
+			const wallet = activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id());
 
 			assertWallet(wallet);
 
 			setSearchQuery("");
 			setSelectedAddress(address);
-			setSelectedNetwork(network);
+			// setSelectedNetwork(network);
 			setSelectedWallet(wallet);
 			setMaxVotes(wallet.network().maximumVotesPerWallet());
 
 			await fetchValidators(wallet);
 		},
-		[activeProfile, fetchValidators, setMaxVotes, setSearchQuery, setSelectedAddress, setSelectedNetwork],
+		[activeProfile, fetchValidators, setMaxVotes, setSearchQuery, setSelectedAddress, activeNetwork],
 	);
 
 	const isSelectValidatorStep = !!selectedAddress;
 
 	return (
 		<Page pageTitle={isSelectValidatorStep ? t("VOTE.VALIDATOR_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
-			<VotesHeader
-				profile={activeProfile}
-				setSearchQuery={setSearchQuery}
-				selectedAddress={selectedAddress}
-				isFilterChanged={isFilterChanged}
-				isSelectDelegateStep={isSelectValidatorStep}
-				filterProperties={filterProperties}
-				totalCurrentVotes={currentVotes.length}
-				selectedFilter={voteFilter}
-				setSelectedFilter={setVoteFilter}
-			/>
+			<VotesHeader isSelectDelegateStep={!!selectedAddress} />
 
 			{!hasWallets && (
 				<Section>
@@ -152,46 +142,57 @@ export const Votes: FC = () => {
 			)}
 
 			{hasWallets && !isSelectValidatorStep && (
-				<VotingWallets
-					showEmptyResults={hasEmptyResults}
-					walletsByCoin={filteredWalletsByCoin}
-					onSelectAddress={handleSelectAddress}
-					profile={activeProfile}
-				/>
+				<VotesSection
+					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+					searchQuery={searchQuery}
+					setSearchQuery={setSearchQuery}
+				>
+					<VotingWallets
+						showEmptyResults={hasEmptyResults}
+						wallets={filteredWallets}
+						onSelectAddress={handleSelectAddress}
+						network={activeNetwork}
+						searchQuery={searchQuery}
+						setSearchQuery={setSearchQuery}
+					/>
+				</VotesSection>
 			)}
 
 			{isSelectValidatorStep && (
-				<Section innerClassName="lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18">
-					<ValidatorsTable
-						searchQuery={searchQuery}
-						validators={filteredValidators}
-						isLoading={isLoadingValidators}
-						maxVotes={maxVotes!}
-						votes={votes}
-						resignedValidatorVotes={resignedValidatorVotes}
-						unvoteValidators={unvoteValidators}
-						voteValidators={voteValidators}
-						selectedWallet={selectedWallet!}
-						onContinue={navigateToSendVote}
-						subtitle={
-							resignedValidatorVotes.length > 0 ? (
-								<Alert className="mb-4">
-									<div data-testid="Votes__resigned-vote">
-										<Trans
-											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
-											values={{
-												name: currentVotes
-													.find(({ wallet }) => wallet!.isResignedDelegate())
-													?.wallet!.username(),
-											}}
-											components={{ bold: <strong /> }}
-										/>
-									</div>
-								</Alert>
-							) : undefined
-						}
-					/>
-				</Section>
+				<ValidatorsTable
+					searchQuery={searchQuery}
+					validators={filteredValidators}
+					isLoading={isLoadingValidators}
+					maxVotes={maxVotes!}
+					votes={votes}
+					resignedValidatorVotes={resignedValidatorVotes}
+					unvoteValidators={unvoteValidators}
+					voteValidators={voteValidators}
+					selectedWallet={selectedWallet!}
+					onContinue={navigateToSendVote}
+					setSearchQuery={setSearchQuery}
+					totalCurrentVotes={currentVotes.length}
+					selectedFilter={voteFilter}
+					setSelectedFilter={setVoteFilter}
+					selectedAddress={selectedAddress}
+					subtitle={
+						resignedValidatorVotes.length > 0 ? (
+							<Alert className="mb-4">
+								<div data-testid="Votes__resigned-vote">
+									<Trans
+										i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
+										values={{
+											name: currentVotes
+												.find(({ wallet }) => wallet!.isResignedDelegate())
+												?.wallet!.username(),
+										}}
+										components={{ bold: <strong /> }}
+									/>
+								</div>
+							</Alert>
+						) : undefined
+					}
+				/>
 			)}
 		</Page>
 	);

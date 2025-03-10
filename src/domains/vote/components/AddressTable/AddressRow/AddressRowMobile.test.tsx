@@ -28,6 +28,8 @@ let wallet2: Contracts.IReadWriteWallet;
 
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
+const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
+
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
 
@@ -128,7 +130,7 @@ describe("AddressRowMobile", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -175,7 +177,7 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRowMobile__select-0")).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRowMobile__select-1")).resolves.toBeVisible();
 
@@ -216,7 +218,7 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		await expect(screen.findByTestId("AddressRowMobile__select-0")).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRowMobile__select-1")).resolves.toBeVisible();
@@ -250,9 +252,9 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(document.querySelector("svg#circle-check-mark")).toBeInTheDocument();
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Active");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -285,9 +287,9 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(document.querySelector("svg#clock")).toBeInTheDocument();
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Standby");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -320,9 +322,9 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(document.querySelector("svg#circle-cross")).toBeInTheDocument();
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Resigned");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -345,12 +347,12 @@ describe("AddressRowMobile", () => {
 		);
 		const selectButton = screen.getByTestId("AddressRowMobile__select-0");
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		await userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
-		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());
+		expect(onSelect).toHaveBeenCalledWith(wallet.address());
 		expect(asFragment()).toMatchSnapshot();
 	});
 

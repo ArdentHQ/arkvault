@@ -59,18 +59,22 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               </svg>
             </div>
           </div>
-          <h1
-            class="mb-0 text-2xl leading-[29px]"
-            data-testid="header__title"
+          <div
+            class="flex flex-col gap-2"
           >
-            Completed
-          </h1>
-        </div>
-        <div
-          class="flex items-center leading-5 text-theme-secondary-text"
-          data-testid="header__subtitle"
-        >
-          Your Ledger addresses have been imported.
+            <h1
+              class="mb-0 text-2xl leading-[29px]"
+              data-testid="header__title"
+            >
+              Completed
+            </h1>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Your Ledger addresses have been imported.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -435,18 +439,22 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
               </svg>
             </div>
           </div>
-          <h1
-            class="mb-0 text-2xl leading-[29px]"
-            data-testid="header__title"
+          <div
+            class="flex flex-col gap-2"
           >
-            Completed
-          </h1>
-        </div>
-        <div
-          class="flex items-center leading-5 text-theme-secondary-text"
-          data-testid="header__subtitle"
-        >
-          Your Ledger addresses have been imported.
+            <h1
+              class="mb-0 text-2xl leading-[29px]"
+              data-testid="header__title"
+            >
+              Completed
+            </h1>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Your Ledger addresses have been imported.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -912,18 +920,22 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
               </svg>
             </div>
           </div>
-          <h1
-            class="mb-0 text-2xl leading-[29px]"
-            data-testid="header__title"
+          <div
+            class="flex flex-col gap-2"
           >
-            Completed
-          </h1>
-        </div>
-        <div
-          class="flex items-center leading-5 text-theme-secondary-text"
-          data-testid="header__subtitle"
-        >
-          Your Ledger address has been imported.
+            <h1
+              class="mb-0 text-2xl leading-[29px]"
+              data-testid="header__title"
+            >
+              Completed
+            </h1>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Your Ledger address has been imported.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1174,18 +1186,22 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
               </svg>
             </div>
           </div>
-          <h1
-            class="mb-0 text-2xl leading-[29px]"
-            data-testid="header__title"
+          <div
+            class="flex flex-col gap-2"
           >
-            Completed
-          </h1>
-        </div>
-        <div
-          class="flex items-center leading-5 text-theme-secondary-text"
-          data-testid="header__subtitle"
-        >
-          Your Ledger address has been imported.
+            <h1
+              class="mb-0 text-2xl leading-[29px]"
+              data-testid="header__title"
+            >
+              Completed
+            </h1>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Your Ledger address has been imported.
+            </div>
+          </div>
         </div>
       </div>
     </div>

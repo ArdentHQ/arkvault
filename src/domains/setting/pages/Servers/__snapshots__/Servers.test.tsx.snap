@@ -181,7 +181,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -980,18 +980,22 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1565,7 +1569,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -2364,18 +2368,22 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3940,7 +3948,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -4739,18 +4747,22 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6157,7 +6169,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -6956,18 +6968,22 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -8677,7 +8693,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -9476,18 +9492,22 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -11052,7 +11072,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -11851,18 +11871,22 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -13841,7 +13865,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -14640,18 +14664,22 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -16368,7 +16396,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -17167,18 +17195,22 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -18731,7 +18763,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -19530,18 +19562,22 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -20686,7 +20722,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -21485,18 +21521,22 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <h1
-                        class="mb-0 mb-2 text-2xl"
-                        data-testid="header__title"
+                      <div
+                        class="flex flex-col gap-2"
                       >
-                        Peers & Multisig Servers
-                      </h1>
-                    </div>
-                    <div
-                      class="flex items-center leading-5 text-theme-secondary-text"
-                      data-testid="header__subtitle"
-                    >
-                      Manage custom network peers and multisignature servers for your Profile.
+                        <h1
+                          class="mb-0 mb-2 text-2xl"
+                          data-testid="header__title"
+                        >
+                          Peers & Multisig Servers
+                        </h1>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
+                          data-testid="header__subtitle"
+                        >
+                          Manage custom network peers and multisignature servers for your Profile.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -20,6 +20,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	initialState,
 	rowsPerPage,
 	currentPage = 1,
+	footer,
 }: TableProperties<RowDataType>) => {
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
@@ -111,6 +112,8 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 						return { ...renderChildNode(row.original, row.index), ...row.getRowProps() };
 					})}
 				</tbody>
+
+				{footer && <tfoot>{footer}</tfoot>}
 			</table>
 		</TableWrapper>
 	);
