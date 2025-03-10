@@ -31,7 +31,7 @@ export const LedgerTabs = ({
 
 	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
 
-	const { formState, getValues, handleSubmit } = useFormContext();
+	const { formState, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
 
 	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
@@ -105,11 +105,11 @@ export const LedgerTabs = ({
 
 		const importedWallet = activeProfile
 			.wallets()
-			.findByAddressWithNetwork(importedWallets[0].address, getValues("network").id());
+			.findByAddressWithNetwork(importedWallets[0].address, activeNetwork.id());
 
 		assertWallet(importedWallet);
 		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
-	}, [isMultiple, history, activeProfile, getValues, importedWallets]);
+	}, [isMultiple, history, activeProfile, activeNetwork, importedWallets]);
 
 	const handleDeviceNotAvailable = useCallback(() => {
 		history.replace(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }));
@@ -144,6 +144,7 @@ export const LedgerTabs = ({
 
 				<TabPanel tabId={LedgerTabStep.LedgerImportStep}>
 					<LedgerImportStep
+						network={activeNetwork}
 						wallets={importedWallets}
 						profile={activeProfile}
 						onClickEditWalletName={onClickEditWalletName}

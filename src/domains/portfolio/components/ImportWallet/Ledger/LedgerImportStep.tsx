@@ -1,7 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useCallback, useMemo, useState } from "react";
-import { useFormContext } from "react-hook-form";
+import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
@@ -9,7 +8,7 @@ import { Button } from "@/app/components/Button";
 import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { LedgerData } from "@/app/contexts/Ledger";
-import { assertNetwork, assertWallet } from "@/utils/assertions";
+import { assertWallet } from "@/utils/assertions";
 import { useBreakpoint } from "@/app/hooks";
 import { ImportedLedgerMobileItem, SectionHeaderMobile, SingleImport } from "./LedgerImportStep.blocks";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
@@ -129,17 +128,14 @@ export const LedgerImportStep = ({
 	onClickEditWalletName,
 	profile,
 	wallets,
+	network
 }: {
+	network: Networks.Network;
 	wallets: LedgerData[];
 	profile: Contracts.IProfile;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 }) => {
 	const { t } = useTranslation();
-
-	const { watch } = useFormContext();
-
-	const [network] = useState(() => watch("network"));
-	assertNetwork(network);
 
 	return (
 		<section data-testid="LedgerImportStep">

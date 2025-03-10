@@ -9,7 +9,7 @@ import { openTransport, closeDevices, isLedgerTransportSupported } from "@/app/c
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 import { toasts } from "@/app/services";
 import { useLedgerImport } from "@/app/contexts/Ledger/hooks/import";
-import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
+import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
 
 export const useLedgerConnection = () => {
 	const { t } = useTranslation();
@@ -106,7 +106,6 @@ export const useLedgerConnection = () => {
 			}
 
 			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
-			console.log({ options });
 
 			await resetConnectionState();
 
@@ -114,19 +113,14 @@ export const useLedgerConnection = () => {
 			abortRetryReference.current = false;
 
 			try {
-				await accessLedgerApp({
+				await persistLedgerConnection({
 					coin: coinInstance,
+					hasRequestedAbort: () => abortRetryReference.current,
+					options,
 				});
-
-				//await persistLedgerConnection({
-				//	coin: coinInstance,
-				//	hasRequestedAbort: () => abortRetryReference.current,
-				//	options,
-				//});
 
 				dispatch({ type: "connected" });
 			} catch (connectError) {
-				console.log({ connectError });
 				handleLedgerConnectionError(connectError, coinInstance);
 			}
 
