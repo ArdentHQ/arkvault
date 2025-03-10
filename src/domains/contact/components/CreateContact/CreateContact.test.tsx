@@ -23,21 +23,8 @@ const newContact = {
 };
 
 describe("CreateContact", () => {
-	let validateAddressSpy: any;
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-	});
-
-	beforeEach(() => {
-		validateAddressSpy = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
-	});
-
-	afterEach(() => {
-		validateAddressSpy.mockRestore();
 	});
 
 	it("should render", async () => {

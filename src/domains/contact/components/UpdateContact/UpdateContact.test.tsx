@@ -112,12 +112,6 @@ describe("UpdateContact", () => {
 			expect(nameInput()).toHaveValue(contact.name());
 		});
 
-		await userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
-
-		await waitFor(() => {
-			expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
-		});
-
 		(nameInput() as HTMLInputElement).select();
 
 		await userEvent.clear(nameInput());
@@ -128,18 +122,13 @@ describe("UpdateContact", () => {
 		});
 
 		const addressInput = screen.getByTestId("contact-form__address-input");
-		await waitFor(() => expect(addressInput).toHaveValue(""));
+		await waitFor(() => expect(addressInput).toHaveValue(contact.addresses().first().address()));
 		await userEvent.clear(addressInput);
 		await userEvent.type(addressInput, newAddress.address);
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(newAddress.address);
 		});
 
-		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
-		});
-
-		await userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__save-btn")).not.toBeDisabled();
 		});

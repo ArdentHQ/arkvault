@@ -68,7 +68,6 @@ const createContact = (targetProfile: Contracts.IProfile, name: string, address:
 describe("Contacts", () => {
 	let resetProfileNetworksMock: () => void;
 	let mockContact: Contracts.IContact;
-	let validateAddressSpy: any;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
@@ -79,18 +78,10 @@ describe("Contacts", () => {
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		validateAddressSpy = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
-
-		validateAddressSpy.mockRestore();
 	});
 
 	it("should render with contacts", async () => {
