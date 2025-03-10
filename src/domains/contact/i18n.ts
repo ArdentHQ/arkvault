@@ -6,7 +6,7 @@ export const translations = {
 		NO_CONTACTS_FOUND: `Your search query "{{query}}" does not match any Contacts.`,
 		SEARCH_PLACEHOLDER: "Enter Contact Name",
 		SUBTITLE: "Manage your frequent Contacts",
-		TITLE: "My Contacts",
+		TITLE: "Contacts",
 	},
 
 	CONTACT_FORM: {
