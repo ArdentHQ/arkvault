@@ -14,6 +14,7 @@ exports[`FeeField > should render 1`] = `
       >
         <button
           class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+          type="button"
         >
           Simple
         </button>
@@ -34,6 +35,7 @@ exports[`FeeField > should render 1`] = `
         </label>
         <button
           class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+          type="button"
         >
           Advanced
         </button>

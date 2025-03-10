@@ -8,7 +8,7 @@ import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, fireEvent } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
@@ -75,42 +75,6 @@ describe("DelegateVoteAmount", () => {
 		walletBalanceMock.mockRestore();
 		votesAmountMinimumMock.mockRestore();
 		votesAmountStepMock.mockRestore();
-	});
-
-	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
-		const { asFragment } = render(
-			<Wrapper>
-				<ValidatorVoteAmount
-					isSelectedVote={true}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={[]}
-					toggleUnvotesSelected={vi.fn()}
-					toggleVotesSelected={vi.fn()}
-					validatorAddress={validator.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={vi.fn()}
-					isCompact={isCompact}
-				/>
-			</Wrapper>,
-		);
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		// focusIn/focusOut need to be called manually, see https://github.com/testing-library/user-event/issues/592
-
-		await userEvent.click(inputElement);
-		fireEvent.focusIn(inputElement);
-
-		expect(inputElement).toHaveFocus();
-
-		await userEvent.tab();
-		fireEvent.focusOut(inputElement);
-
-		expect(inputElement).not.toHaveFocus();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should focus on the input by clicking on ticker", async () => {
@@ -794,5 +758,55 @@ describe("DelegateVoteAmount", () => {
 
 			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 		});
+	});
+
+	it("should calculate net amount when isGreaterThanAmountVoted is true", async () => {
+		let availableBalance = 90;
+		const toggleVotesSelected = vi.fn();
+		const setAvailableBalance = vi.fn((balance) => (availableBalance = balance));
+
+		const voted = { amount: 30, wallet: validator };
+
+		const VoteAmount = () => (
+			<Wrapper>
+				<ValidatorVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={[]}
+					voted={voted}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={toggleVotesSelected}
+					validatorAddress={validator.address()}
+					availableBalance={availableBalance}
+					setAvailableBalance={setAvailableBalance}
+				/>
+			</Wrapper>
+		);
+
+		const { rerender } = render(<VoteAmount />);
+
+		const amountField = screen.getByTestId("InputCurrency");
+
+		// eslint-disable-next-line testing-library/prefer-user-event
+		fireEvent.change(amountField, { target: { value: "40" } });
+
+		await waitFor(() => {
+			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 10);
+		});
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(80); // 90 - 10
+
+		rerender(<VoteAmount />);
+
+		// eslint-disable-next-line testing-library/prefer-user-event
+		fireEvent.change(amountField, { target: { value: "50" } });
+
+		await waitFor(() => {
+			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20); // 50 - 30
+		});
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(70); // 80 - 10
 	});
 });

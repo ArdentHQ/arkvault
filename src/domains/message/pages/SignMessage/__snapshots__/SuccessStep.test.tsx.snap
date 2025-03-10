@@ -12,12 +12,16 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
         <div
           class="flex items-center gap-3"
         >
-          <h1
-            class="mb-0 text-2xl leading-[29px]"
-            data-testid="header__title"
+          <div
+            class="flex flex-col gap-2"
           >
-            Message Successfully Signed
-          </h1>
+            <h1
+              class="mb-0 text-2xl leading-[29px]"
+              data-testid="header__title"
+            >
+              Message Successfully Signed
+            </h1>
+          </div>
         </div>
       </div>
     </div>
@@ -214,12 +218,16 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
         <div
           class="flex items-center gap-3"
         >
-          <h1
-            class="mb-0 text-2xl leading-[29px]"
-            data-testid="header__title"
+          <div
+            class="flex flex-col gap-2"
           >
-            Message Successfully Signed
-          </h1>
+            <h1
+              class="mb-0 text-2xl leading-[29px]"
+              data-testid="header__title"
+            >
+              Message Successfully Signed
+            </h1>
+          </div>
         </div>
       </div>
     </div>

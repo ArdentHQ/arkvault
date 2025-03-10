@@ -5,22 +5,14 @@ import { Column } from "react-table";
 import { AddressTableProperties } from "./AddressTable.contracts";
 import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
-import { Section } from "@/app/components/Layout";
 import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
-import { assertNetwork } from "@/utils/assertions";
-import { networkDisplayName } from "@/utils/network-utils";
-import { Icon } from "@/app/components/Icon";
 
-export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, profile }) => {
+export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, showEmptyResults = false, network }) => {
 	const { t } = useTranslation();
-	const wallet = useMemo(() => wallets[0], [wallets]);
-	const maxVotes = wallet.network().maximumVotesPerWallet();
+	const maxVotes = network?.maximumVotesPerWallet();
 	const { isXs, isSm } = useBreakpoint();
 	const memoizedWallets = useMemo(() => wallets, [wallets]);
-
-	const network = profile.availableNetworks().find((network) => network.id() === wallet.network().id());
-	assertNetwork(network);
 
 	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
 		const commonColumns: Column<Contracts.IReadWriteWallet>[] = [
@@ -29,6 +21,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, pr
 				accessor: (wallet) => wallet.alias() || wallet.address(),
 				cellWidth: "w-80",
 				headerClassName: "no-border",
+				noRoundedBorders: true,
 			},
 			{
 				Header: t("COMMON.BALANCE"),
@@ -78,18 +71,12 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, pr
 					disableSortBy: true,
 					headerClassName: "no-border",
 				},
-				{
-					Header: t("COMMON.INFO"),
-					accessor: () => "wallet-type",
-					cellWidth: "w-30",
-					className: "justify-center",
-					disableSortBy: true,
-					headerClassName: "hidden lg:table-cell no-border",
-				},
+
 				{
 					accessor: "onSelect",
 					disableSortBy: true,
 					headerClassName: "no-border",
+					noRoundedBorders: true,
 				},
 			] as Column<Contracts.IReadWriteWallet>[];
 		}
@@ -104,18 +91,12 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, pr
 				disableSortBy: true,
 				headerClassName: "no-border",
 			},
-			{
-				Header: t("COMMON.INFO"),
-				accessor: () => "wallet-type",
-				cellWidth: "w-30",
-				className: "justify-center",
-				disableSortBy: true,
-				headerClassName: "hidden lg:table-cell no-border",
-			},
+
 			{
 				accessor: "onSelect",
 				disableSortBy: true,
 				headerClassName: "no-border",
+				noRoundedBorders: true,
 			},
 		] as Column<Contracts.IReadWriteWallet>[];
 	}, [maxVotes, t]);
@@ -131,33 +112,41 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, pr
 		[maxVotes, onSelect, isSm, isXs],
 	);
 
-	return (
-		<Section className="py-0 pt-0 first:pt-1 sm:first:pt-0">
-			<div data-testid="AddressTable">
-				<div className="hidden items-center space-x-3 pb-3 pt-6 sm:flex">
-					<Icon
-						className="rounded-xl bg-theme-navy-100 p-2.5 text-theme-navy-600 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-						data-testid="NetworkIcon__icon"
-						name={network.ticker()}
-						fallback={
-							<span className="inline-flex w-5 justify-center text-sm">
-								{networkDisplayName(network).slice(0, 2).toUpperCase()}
-							</span>
-						}
-						dimensions={[24, 24]}
-					/>
-					<h2 className="mb-0 text-lg font-semibold leading-[21px]">{networkDisplayName(network)}</h2>
-				</div>
+	const footer = useMemo(() => {
+		if (!showEmptyResults) {
+			return null;
+		}
 
-				<Table
-					className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
-					columns={columns}
-					data={memoizedWallets}
-					hideHeader={isSm || isXs}
-				>
-					{renderTableRow}
-				</Table>
-			</div>
-		</Section>
+		return (
+			<tr
+				data-testid="EmptyResults"
+				className="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4"
+			>
+				<td colSpan={columns.length} className="pb-4 pt-[11px]">
+					<div className="flex flex-col items-center justify-center">
+						<h3 className="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+							{t("COMMON.EMPTY_RESULTS.TITLE")}
+						</h3>
+						<p className="text-sm text-theme-secondary-700 dark:text-theme-secondary-600">
+							{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+						</p>
+					</div>
+				</td>
+			</tr>
+		);
+	}, [t, showEmptyResults, columns]);
+
+	return (
+		<div data-testid="AddressTable">
+			<Table
+				footer={footer}
+				className="with-x-padding"
+				columns={columns}
+				data={memoizedWallets}
+				hideHeader={isSm || isXs}
+			>
+				{renderTableRow}
+			</Table>
+		</div>
 	);
 };

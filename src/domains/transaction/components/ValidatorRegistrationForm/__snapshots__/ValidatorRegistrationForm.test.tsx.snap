@@ -18,18 +18,22 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
             <div
               class="flex items-center gap-3"
             >
-              <h1
-                class="mb-0 text-2xl leading-[29px]"
-                data-testid="header__title"
+              <div
+                class="flex flex-col gap-2"
               >
-                Register Validator
-              </h1>
-            </div>
-            <div
-              class="flex items-center leading-5 text-theme-secondary-text"
-              data-testid="header__subtitle"
-            >
-              Register a new Validator address on the network below.
+                <h1
+                  class="mb-0 text-2xl leading-[29px]"
+                  data-testid="header__title"
+                >
+                  Register Validator
+                </h1>
+                <div
+                  class="flex items-center leading-5 text-theme-secondary-text"
+                  data-testid="header__subtitle"
+                >
+                  Register a new Validator address on the network below.
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -182,6 +186,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                 >
                   <button
                     class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                    type="button"
                   >
                     Simple
                   </button>
@@ -202,6 +207,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                   </label>
                   <button
                     class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+                    type="button"
                   >
                     Advanced
                   </button>
@@ -366,18 +372,22 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
             <div
               class="flex items-center gap-3"
             >
-              <h1
-                class="mb-0 text-2xl leading-[29px]"
-                data-testid="header__title"
+              <div
+                class="flex flex-col gap-2"
               >
-                Transaction Review
-              </h1>
-            </div>
-            <div
-              class="flex items-center leading-5 text-theme-secondary-text"
-              data-testid="header__subtitle"
-            >
-              Review the transaction details below.
+                <h1
+                  class="mb-0 text-2xl leading-[29px]"
+                  data-testid="header__title"
+                >
+                  Transaction Review
+                </h1>
+                <div
+                  class="flex items-center leading-5 text-theme-secondary-text"
+                  data-testid="header__subtitle"
+                >
+                  Review the transaction details below.
+                </div>
+              </div>
             </div>
           </div>
         </div>

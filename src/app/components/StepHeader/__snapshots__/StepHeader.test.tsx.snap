@@ -42,18 +42,22 @@ exports[`StepHeader > should render 1`] = `
           <div
             class="flex items-center gap-3"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
+            <div
+              class="flex flex-col gap-2"
             >
-              title
-            </h1>
-          </div>
-          <div
-            class="flex items-center leading-5 text-theme-secondary-text"
-            data-testid="header__subtitle"
-          >
-            subtitle
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                title
+              </h1>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
+                data-testid="header__subtitle"
+              >
+                subtitle
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -73,18 +77,22 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
       <div
         class="flex items-center gap-3"
       >
-        <h1
-          class="mb-0 text-2xl leading-[29px]"
-          data-testid="header__title"
+        <div
+          class="flex flex-col gap-2"
         >
-          title
-        </h1>
-      </div>
-      <div
-        class="flex items-center leading-5 text-theme-secondary-text"
-        data-testid="header__subtitle"
-      >
-        subtitle
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            title
+          </h1>
+          <div
+            class="flex items-center leading-5 text-theme-secondary-text"
+            data-testid="header__subtitle"
+          >
+            subtitle
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -133,18 +141,22 @@ exports[`StepHeader > should render with extra 1`] = `
           <div
             class="flex items-center gap-3"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
+            <div
+              class="flex flex-col gap-2"
             >
-              title
-            </h1>
-          </div>
-          <div
-            class="flex items-center leading-5 text-theme-secondary-text"
-            data-testid="header__subtitle"
-          >
-            subtitle
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                title
+              </h1>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
+                data-testid="header__subtitle"
+              >
+                subtitle
+              </div>
+            </div>
           </div>
         </div>
       </div>
