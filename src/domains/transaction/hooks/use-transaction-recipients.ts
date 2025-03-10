@@ -25,7 +25,7 @@ export const useTransactionRecipients = ({
 			);
 		}
 
-		if (transaction.isTransfer() || isContractTransaction(transaction)) {
+		if (transaction.isTransfer()) {
 			return [
 				getWalletAlias({
 					address: transaction.recipient(),
