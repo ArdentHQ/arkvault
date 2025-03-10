@@ -11,6 +11,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
+import { Coins } from "@ardenthq/sdk";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
@@ -81,6 +82,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 					registerRef={register}
 					coin={network?.coin()}
 					network={network?.id()}
+					useDefaultRules={false}
 					additionalRules={{
 						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 							field: t("COMMON.ADDRESS"),
@@ -99,6 +101,29 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 										address,
 									}).toString()
 								);
+							},
+							validAddress: async (address?: string) => {
+								if (!address) {
+									return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+										field: t("COMMON.ADDRESS"),
+									}).toString();
+								}
+
+								if (!network) {
+									return t("CONTACTS.VALIDATION.NETWORK_NOT_AVAILABLE").toString();
+								}
+
+								const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
+
+								await instance.__construct();
+
+								const isValidAddress: boolean = await instance.address().validate(address);
+
+								if (!isValidAddress) {
+									return t("CONTACTS.VALIDATION.ADDRESS_IS_INVALID").toString();
+								}
+
+								return true;
 							},
 						},
 					}}
