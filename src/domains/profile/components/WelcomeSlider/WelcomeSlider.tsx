@@ -11,7 +11,7 @@ interface SlideProperties {
 
 const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => (
 	<div className="flex w-full flex-row md:w-auto lg:flex-col">
-		<div className="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]">
+		<div className="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]">
 			<h3 className="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]">
 				{title}
 			</h3>
