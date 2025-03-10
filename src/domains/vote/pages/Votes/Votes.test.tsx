@@ -58,6 +58,8 @@ const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:wa
 
 const firstVoteButtonID = "DelegateRow__toggle-0";
 
+const searchInputID = "VotesSection__search-input";
+
 describe("Votes", () => {
 	beforeAll(async () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
@@ -137,118 +139,6 @@ describe("Votes", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 		expect(screen.queryByTestId("HeaderSearchBar__button")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should toggle network selection from network filters", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
-
-		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-
-		const toggle = screen.getByTestId("NetworkOption__ark.devnet");
-
-		await waitFor(() => expect(toggle).toBeInTheDocument());
-		await userEvent.click(toggle);
-
-		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
-
-		await waitFor(() => expect(toggle).toBeInTheDocument());
-		await userEvent.click(toggle);
-
-		await expect(screen.findByTestId("AddressTable")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render network selection with sorted network filters", async () => {
-		const profile = await env.profiles().create("test");
-		await env.profiles().restore(profile);
-
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		const { wallet: arkWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.devnet",
-		});
-		profile.wallets().push(arkWallet);
-		await env.wallets().syncByProfile(profile);
-
-		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
-
-		expect(screen.getAllByTestId("AddressTable")).toHaveLength(1);
-
-		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-
-		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
-
-		// eslint-disable-next-line testing-library/no-node-access
-		expect(screen.getByTestId("NetworkOption__ark.devnet").querySelector("svg#ark")).toBeInTheDocument();
-
-		resetProfileNetworksMock();
-	});
-
-	it("should select starred option in the wallets display type", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
-
-		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
-		);
-
-		const toggle = within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
-		await userEvent.click(toggle);
-
-		await expect(screen.findByTestId("filter-wallets__wallets")).resolves.toBeVisible();
-
-		await expect(screen.findByTestId("dropdown__option--1")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--1"));
-
-		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should select ledger option in the wallets display type", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
-
-		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
-		);
-
-		const toggle = within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
-		await userEvent.click(toggle);
-
-		await expect(screen.findByTestId("filter-wallets__wallets")).resolves.toBeVisible();
-
-		await expect(screen.findByTestId("dropdown__option--2")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--2"));
-
-		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -339,7 +229,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -368,7 +258,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -530,7 +420,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -567,11 +457,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
@@ -586,43 +474,15 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "ARK Wallet 2");
+		await userEvent.type(searchInput, "ARK Wallet 1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-	});
-
-	it("should reset wallet search", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
-
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
-
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
-		await waitFor(() => expect(searchInput).toBeInTheDocument());
-
-		// Search by wallet alias
-		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "non existent wallet name");
-
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
-
-		// Reset search
-		await userEvent.click(screen.getByTestId("header-search-bar__reset"));
-
-		await waitFor(() => expect(searchInput).not.toHaveValue());
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 	});
 
 	it("should show resigned validator notice", async () => {
@@ -660,11 +520,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
@@ -681,11 +539,9 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);

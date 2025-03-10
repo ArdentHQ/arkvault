@@ -689,18 +689,22 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                 </svg>
                               </div>
                             </div>
-                            <h1
-                              class="mb-0 text-2xl leading-[29px]"
-                              data-testid="header__title"
+                            <div
+                              class="flex flex-col gap-2"
                             >
-                              Resign Validator
-                            </h1>
-                          </div>
-                          <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
-                            data-testid="header__subtitle"
-                          >
-                            This transaction type permanently retires a Validator address.
+                              <h1
+                                class="mb-0 text-2xl leading-[29px]"
+                                data-testid="header__title"
+                              >
+                                Resign Validator
+                              </h1>
+                              <div
+                                class="flex items-center leading-5 text-theme-secondary-text"
+                                data-testid="header__subtitle"
+                              >
+                                This transaction type permanently retires a Validator address.
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2065,18 +2069,22 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                                 </svg>
                               </div>
                             </div>
-                            <h1
-                              class="mb-0 text-2xl leading-[29px]"
-                              data-testid="header__title"
+                            <div
+                              class="flex flex-col gap-2"
                             >
-                              Resign Validator
-                            </h1>
-                          </div>
-                          <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
-                            data-testid="header__subtitle"
-                          >
-                            This transaction type permanently retires a Validator address.
+                              <h1
+                                class="mb-0 text-2xl leading-[29px]"
+                                data-testid="header__title"
+                              >
+                                Resign Validator
+                              </h1>
+                              <div
+                                class="flex items-center leading-5 text-theme-secondary-text"
+                                data-testid="header__subtitle"
+                              >
+                                This transaction type permanently retires a Validator address.
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3324,18 +3332,22 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                                 </svg>
                               </div>
                             </div>
-                            <h1
-                              class="mb-0 text-2xl leading-[29px]"
-                              data-testid="header__title"
+                            <div
+                              class="flex flex-col gap-2"
                             >
-                              Transaction Review
-                            </h1>
-                          </div>
-                          <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
-                            data-testid="header__subtitle"
-                          >
-                            Review the transaction details below.
+                              <h1
+                                class="mb-0 text-2xl leading-[29px]"
+                                data-testid="header__title"
+                              >
+                                Transaction Review
+                              </h1>
+                              <div
+                                class="flex items-center leading-5 text-theme-secondary-text"
+                                data-testid="header__subtitle"
+                              >
+                                Review the transaction details below.
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4471,18 +4483,22 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                                 </svg>
                               </div>
                             </div>
-                            <h1
-                              class="mb-0 text-2xl leading-[29px]"
-                              data-testid="header__title"
+                            <div
+                              class="flex flex-col gap-2"
                             >
-                              Authenticate
-                            </h1>
-                          </div>
-                          <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
-                            data-testid="header__subtitle"
-                          >
-                            Enter your mnemonic passphrase to authenticate the transaction.
+                              <h1
+                                class="mb-0 text-2xl leading-[29px]"
+                                data-testid="header__title"
+                              >
+                                Authenticate
+                              </h1>
+                              <div
+                                class="flex items-center leading-5 text-theme-secondary-text"
+                                data-testid="header__subtitle"
+                              >
+                                Enter your mnemonic passphrase to authenticate the transaction.
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5410,12 +5426,16 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                                     stroke-width="2"
                                   />
                                 </svg>
-                                <h1
-                                  class="mb-0 text-2xl leading-[29px]"
-                                  data-testid="header__title"
+                                <div
+                                  class="flex flex-col gap-2"
                                 >
-                                  Transaction Error
-                                </h1>
+                                  <h1
+                                    class="mb-0 text-2xl leading-[29px]"
+                                    data-testid="header__title"
+                                  >
+                                    Transaction Error
+                                  </h1>
+                                </div>
                               </div>
                             </div>
                           </div>

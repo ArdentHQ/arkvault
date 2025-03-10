@@ -41,9 +41,11 @@ describe("useImportOptions", () => {
 		);
 
 		expect(current.options).toHaveLength(3);
-		expect(current.options[1].value).toBe(OptionsValue.ADDRESS);
+		expect(current.options[0].value).toBe(OptionsValue.LEDGER);
+
+		expect(current.options[1].value).toBe(OptionsValue.SECRET);
 		expect(current.options[1].canBeEncrypted).toBeDefined();
-		expect(current.options[2].value).toBe(OptionsValue.SECRET);
+		expect(current.options[2].value).toBe(OptionsValue.ADDRESS);
 		expect(current.options[2].canBeEncrypted).toBeDefined();
 	});
 
@@ -64,8 +66,8 @@ describe("useImportOptions", () => {
 		);
 
 		expect(current.options).toHaveLength(3);
-		expect(current.options[1].value).toBe(OptionsValue.ENCRYPTED_WIF);
-		expect(current.options[2].value).toBe(OptionsValue.BIP84);
+		expect(current.options[1].value).toBe(OptionsValue.BIP84);
+		expect(current.options[2].value).toBe(OptionsValue.ENCRYPTED_WIF);
 	});
 
 	it("should return default option if exist in the available options", () => {

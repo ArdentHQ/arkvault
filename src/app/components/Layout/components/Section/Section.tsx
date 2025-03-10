@@ -2,7 +2,7 @@ import cn from "classnames";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-interface SectionProperties {
+export interface SectionProperties {
 	children: React.ReactNode;
 	borderClassName?: string;
 	backgroundClassName?: string;

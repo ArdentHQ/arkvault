@@ -95,6 +95,24 @@ export const ImportAddressesSidePanel = ({
 		}
 	});
 
+	const forgetImportedWallets = (importedWallet?: Contracts.IReadWriteWallet) => {
+		assertWallet(importedWallet);
+
+		for (const profileWallet of activeProfile.wallets().values()) {
+			if (profileWallet.address() === importedWallet.address()) {
+				activeProfile.wallets().forget(profileWallet.id());
+			}
+		}
+	};
+
+	const handleOpenChange = (open: boolean) => {
+		// remove added wallets if side panel is closed early
+		if (!open && activeTab !== Step.SummaryStep && importedWallet) {
+			forgetImportedWallets(importedWallet);
+		}
+		onOpenChange(open);
+	};
+
 	const handleNext = () =>
 		({
 			// eslint-disable-next-line @typescript-eslint/require-await
@@ -135,8 +153,7 @@ export const ImportAddressesSidePanel = ({
 		}
 
 		if (activeTab === Step.EncryptPasswordStep) {
-			assertWallet(importedWallet);
-			activeProfile.wallets().forget(importedWallet.id());
+			forgetImportedWallets(importedWallet);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -159,10 +176,10 @@ export const ImportAddressesSidePanel = ({
 		assertWallet(importedWallet);
 		assertString(walletGenerationInput);
 
-		importedWallet.signingKey().set(walletGenerationInput, encryptionPassword);
+		await importedWallet.signingKey().set(walletGenerationInput, encryptionPassword);
 
 		if (secondInput) {
-			importedWallet.confirmKey().set(secondInput, encryptionPassword);
+			await importedWallet.confirmKey().set(secondInput, encryptionPassword);
 		}
 
 		if (importedWallet.actsWithMnemonic()) {
@@ -220,7 +237,7 @@ export const ImportAddressesSidePanel = ({
 		<SidePanel
 			header={<StepHeader step={activeTab} importOption={importOption} />}
 			open={open}
-			onOpenChange={onOpenChange}
+			onOpenChange={handleOpenChange}
 			dataTestId="ImportAddressSidePanel"
 		>
 			<Form context={form} onSubmit={handleFinish} data-testid="ImportWallet__form">

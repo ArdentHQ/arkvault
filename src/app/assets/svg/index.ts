@@ -103,6 +103,8 @@ import SelectNetworkLight from "./select-network-light.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
+import VotesDark from "./votes-dark.svg?react";
+import VotesLight from "./votes-light.svg?react";
 import Completed from "./completed.svg?react";
 import YourPassphraseLight from "./your-passphrase-light.svg?react";
 import YourPassphraseDark from "./your-passphrase-dark.svg?react";
@@ -227,6 +229,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UnderlineSun,
 	User,
 	UserCheckMark,
+	VotesDark,
+	VotesLight,
 	WalletEncryptionDark,
 	WalletEncryptionLight,
 	YourPassphraseDark,

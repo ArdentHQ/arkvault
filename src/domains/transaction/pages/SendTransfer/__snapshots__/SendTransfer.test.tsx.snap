@@ -116,18 +116,22 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                   </svg>
                 </div>
               </div>
-              <h1
-                class="mb-0 text-2xl leading-[29px]"
-                data-testid="header__title"
+              <div
+                class="flex flex-col gap-2"
               >
-                Transaction Review
-              </h1>
-            </div>
-            <div
-              class="flex items-center leading-5 text-theme-secondary-text"
-              data-testid="header__subtitle"
-            >
-              Review the transaction details below.
+                <h1
+                  class="mb-0 text-2xl leading-[29px]"
+                  data-testid="header__title"
+                >
+                  Transaction Review
+                </h1>
+                <div
+                  class="flex items-center leading-5 text-theme-secondary-text"
+                  data-testid="header__subtitle"
+                >
+                  Review the transaction details below.
+                </div>
+              </div>
             </div>
           </div>
         </div>
