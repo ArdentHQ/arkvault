@@ -7,7 +7,6 @@ import { Prompt } from "react-router-dom";
 import { GeneralSettingsState, SettingsOption } from "./General.contracts";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
 import { ListDivided } from "@/app/components/ListDivided";
@@ -21,7 +20,7 @@ import { PlatformSdkChoices } from "@/data";
 import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
-import { SettingsGroup, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
+import { SettingsGroup, SettingsGroupHeader, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -293,10 +292,8 @@ export const GeneralSettings: React.FC = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="general">
-			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
-				<div className="relative mt-8">
-					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.PERSONAL.TITLE")}</h2>
-
+			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
+				<SettingsGroup title={t("SETTINGS.GENERAL.PERSONAL.TITLE")}>
 					<SelectProfileImage
 						value={avatar}
 						name={formattedName}
@@ -487,23 +484,27 @@ export const GeneralSettings: React.FC = () => {
 							</FormField>
 						</div>
 					</div>
-				</div>
+				</SettingsGroup>
 
-				<SettingsGroup>
-					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.SECURITY.TITLE")}</h2>
+				<SettingsGroup title={t("SETTINGS.GENERAL.SECURITY.TITLE")}>
 					<ListDivided items={securityItems} />
 				</SettingsGroup>
 
-				<SettingsGroup>
-					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.OTHER.TITLE")}</h2>
+				<SettingsGroup title={t("SETTINGS.GENERAL.OTHER.TITLE")}>
 					<ListDivided items={otherItems} noBorder={isXs} />
 				</SettingsGroup>
 
-				<FormButtons>
-					<Button disabled={isSaveButtonDisabled} type="submit" data-testid="General-settings__submit-button">
-						{t("COMMON.SAVE")}
-					</Button>
-				</FormButtons>
+				<SettingsGroup>
+					<FormButtons>
+						<Button
+							disabled={isSaveButtonDisabled}
+							type="submit"
+							data-testid="General-settings__submit-button"
+						>
+							{t("COMMON.SAVE")}
+						</Button>
+					</FormButtons>
+				</SettingsGroup>
 			</Form>
 			<ResetProfile
 				isOpen={isResetProfileOpen}

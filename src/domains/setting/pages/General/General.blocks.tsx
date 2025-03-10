@@ -12,13 +12,28 @@ interface ViewingModeItem {
 	value: string;
 }
 
-export const SettingsGroup = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
-	<div
-		{...props}
+export const SettingsGroup = ({
+	className,
+	title,
+	children,
+	...properties
+}: React.HTMLAttributes<HTMLDivElement> & {
+	title?: string;
+}) => (
+	<div className={twMerge("relative flex flex-col", className)} {...properties}>
+		{title && <SettingsGroupHeader>{title}</SettingsGroupHeader>}
+
+		<div className="px-6 pb-6 pt-4">{children}</div>
+	</div>
+);
+
+const SettingsGroupHeader = ({ className, ...properties }: React.HTMLAttributes<HTMLHeadingElement>) => (
+	<h2
 		className={twMerge(
-			"relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0",
-			props.className,
+			"-mt-px mb-0 block border-t border-theme-secondary-300 bg-theme-secondary-100 px-6 py-3 text-base font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:bg-theme-dark-700 dark:text-theme-dark-200",
+			className,
 		)}
+		{...properties}
 	/>
 );
 
