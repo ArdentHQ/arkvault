@@ -9,7 +9,8 @@ import { openTransport, closeDevices, isLedgerTransportSupported } from "@/app/c
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 import { toasts } from "@/app/services";
 import { useLedgerImport } from "@/app/contexts/Ledger/hooks/import";
-import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
+import { accessLedgerApp, persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
+import { useRegisterSW } from "virtual:pwa-register/vue";
 
 export const useLedgerConnection = () => {
 	const { t } = useTranslation();
@@ -22,6 +23,7 @@ export const useLedgerConnection = () => {
 	const { device, isBusy, isConnected, isWaiting, error } = state;
 
 	const { importLedgerWallets } = useLedgerImport({ device, env });
+
 	useEffect(() => {
 		if (deviceName) {
 			if (isConnected) {
@@ -77,7 +79,7 @@ export const useLedgerConnection = () => {
 				return dispatch({
 					message: t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
 						coin: coin.network().coin(),
-						version: "1",
+						version: await coin.ledger().getVersion(),
 					}),
 					type: "failed",
 				});
@@ -88,8 +90,15 @@ export const useLedgerConnection = () => {
 		[dispatch, t],
 	);
 
+	const isAttemptingConnect = useRef(false)
+
 	const connect = useCallback(
 		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: Options) => {
+			if (isAttemptingConnect.current) {
+				return
+			}
+
+			isAttemptingConnect.current = true
 			const coinInstance = profile.coins().set(coin, network);
 
 			if (!isLedgerTransportSupported()) {
@@ -104,15 +113,23 @@ export const useLedgerConnection = () => {
 			abortRetryReference.current = false;
 
 			try {
-				await persistLedgerConnection({
+				await accessLedgerApp({
 					coin: coinInstance,
-					hasRequestedAbort: () => abortRetryReference.current,
-					options,
 				});
+
+				//await persistLedgerConnection({
+				//	coin: coinInstance,
+				//	hasRequestedAbort: () => abortRetryReference.current,
+				//	options,
+				//});
+
 				dispatch({ type: "connected" });
 			} catch (connectError) {
+				console.log({ connectError })
 				handleLedgerConnectionError(connectError, coinInstance);
 			}
+
+			isAttemptingConnect.current = false
 		},
 		[],
 	);

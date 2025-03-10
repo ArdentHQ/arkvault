@@ -70,7 +70,6 @@ export const LedgerTabs = ({
 	});
 
 	const handleNext = useCallback(async () => {
-		console.log("activeTab");
 		if (activeTab === LedgerTabStep.LedgerScanStep) {
 			await handleSubmit((data: any) => importWallets(data))();
 		}
@@ -135,7 +134,7 @@ export const LedgerTabs = ({
 				</TabPanel>
 
 				<TabPanel tabId={LedgerTabStep.LedgerScanStep}>
-					<LedgerScanStep cancelling={cancelling} profile={activeProfile} setRetryFn={handleRetry} network={activeNetwork}/>
+					<LedgerScanStep cancelling={cancelling} profile={activeProfile} setRetryFn={handleRetry} network={activeNetwork} />
 				</TabPanel>
 
 				<TabPanel tabId={LedgerTabStep.LedgerImportStep}>

@@ -2,11 +2,16 @@ import retry, { AbortError, Options } from "p-retry";
 import { Coins } from "@ardenthq/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
 import { hasRequiredAppVersion } from "./validation";
+import Eth from "@ledgerhq/hw-app-eth"
+import { LedgerTransport } from "../Ledger.contracts";
+import { setTime } from "react-datepicker/dist/date_utils";
+
+export const setupEthTransportInstance = (transport: LedgerTransport) => new Eth(transport)
 
 export const accessLedgerDevice = async (coin: Coins.Coin) => {
 	try {
 		await coin.__construct();
-		await coin.ledger().connect();
+		await coin.ledger().connect(transport => setupEthTransportInstance(transport));
 	} catch (error) {
 		// If the device is open, continue normally.
 		// Can be triggered when the user retries ledger connection.
@@ -23,23 +28,11 @@ export const accessLedgerApp = async ({ coin }: { coin: Coins.Coin }) => {
 		throw new Error("VERSION_ERROR");
 	}
 
-	// Ensure that the app is accessible.
 	const path = formatLedgerDerivationPath({
 		coinType: coin.config().get<number>("network.constants.slip44"),
 	})
 
-	const mainsailEvmPath = "44'/111'/0'/0/0"
-	const ethPath = "44'/60'/0'/0/0"
-
-
-	try {
-		console.log("Generating path ___________", ethPath)
-		await coin.ledger().getPublicKey(ethPath)
-		console.log("")
-		console.log("")
-	} catch (error) {
-		console.log("Generating path [error]", error)
-	}
+	await coin.ledger().getPublicKey(path);
 };
 
 export const persistLedgerConnection = async ({
@@ -59,6 +52,7 @@ export const persistLedgerConnection = async ({
 		try {
 			await accessLedgerApp({ coin });
 		} catch (error) {
+			console.log({ error })
 			// Abort on version error or continue retrying access.
 			if (error.message === "VERSION_ERROR") {
 				throw new AbortError("VERSION_ERROR");
@@ -68,9 +62,5 @@ export const persistLedgerConnection = async ({
 		}
 	};
 
-	setTimeout(() => {
-		retryAccess()
-	}, 3000)
-
-	// await retry(retryAccess, options);
+	await retry(retryAccess, options);
 };
