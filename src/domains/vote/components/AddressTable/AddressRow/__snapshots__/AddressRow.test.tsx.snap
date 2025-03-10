@@ -103,7 +103,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -162,103 +162,11 @@ exports[`AddressRow > should emit action on select button 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-danger-400"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-cross"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M7 13l6-6M13 13L7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Resigned
             </div>
           </div>
         </td>
@@ -390,7 +298,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -449,113 +357,11 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-danger-400"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-cross"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M7 13l6-6M13 13L7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Multisignature"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                />
-              </div>
+              Resigned
             </div>
           </div>
         </td>
@@ -687,7 +493,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -746,103 +552,11 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-danger-400"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-cross"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M7 13l6-6M13 13L7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Resigned
             </div>
           </div>
         </td>
@@ -975,7 +689,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1034,103 +748,11 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-danger-400"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-cross"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M7 13l6-6M13 13L7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Resigned
             </div>
           </div>
         </td>
@@ -1262,7 +884,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1321,103 +943,11 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-danger-400"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-cross"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M7 13l6-6M13 13L7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Resigned
             </div>
           </div>
         </td>
@@ -1549,7 +1079,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1608,103 +1138,11 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-danger-400"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-cross"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M7 13l6-6M13 13L7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Resigned
             </div>
           </div>
         </td>
@@ -1828,13 +1266,6 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         <td>
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
-          />
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           />
         </td>
         <td>
@@ -1966,7 +1397,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -2025,103 +1456,11 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-danger-400"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-cross"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M7 13l6-6M13 13L7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Resigned
             </div>
           </div>
         </td>
@@ -2245,13 +1584,6 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         <td>
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
-          />
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           />
         </td>
         <td>
@@ -2383,7 +1715,7 @@ exports[`AddressRow > should render with active validator 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -2440,103 +1772,11 @@ exports[`AddressRow > should render with active validator 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-navy-600 dark:text-theme-primary-600"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-check-mark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Active
             </div>
           </div>
         </td>
@@ -2688,66 +1928,6 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
             </div>
           </div>
         </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
         <td>
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
@@ -2885,7 +2065,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 </span>
               </div>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -2942,66 +2122,6 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
               <span>
                 /10
               </span>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
         </td>
@@ -3142,7 +2262,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                 </span>
               </div>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -3199,66 +2319,6 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
               <span>
                 /10
               </span>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
         </td>
@@ -3410,66 +2470,6 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
             </div>
           </div>
         </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
         <td>
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
@@ -3607,7 +2607,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 </span>
               </div>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -3664,66 +2664,6 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
               <span>
                 /10
               </span>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
         </td>
@@ -3864,7 +2804,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                 </span>
               </div>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -3921,66 +2861,6 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
               <span>
                 /10
               </span>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
         </td>
@@ -4112,7 +2992,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -4171,103 +3051,11 @@ exports[`AddressRow > should render with resigned validator 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-danger-400"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-cross"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M7 13l6-6M13 13L7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Resigned
             </div>
           </div>
         </td>
@@ -4399,7 +3187,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -4456,104 +3244,11 @@ exports[`AddressRow > should render with standby validator 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
-            <span>
-              <div
-                class="text-theme-warning-300"
-                data-testid="StatusIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="clock"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="2"
-                      transform="translate(1.5 1.5)"
-                    >
-                      <circle
-                        cx="8.5"
-                        cy="8.5"
-                        r="9"
-                      />
-                      <path
-                        d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
-          >
             <div
-              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="WalletIcon__Ledger"
+              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              data-testid="AddressRow__wallet-status"
             >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ledger"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div>
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="star-filled"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              Standby
             </div>
           </div>
         </td>

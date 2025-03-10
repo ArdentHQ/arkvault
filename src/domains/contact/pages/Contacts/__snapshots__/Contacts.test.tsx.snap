@@ -713,18 +713,22 @@ exports[`Contacts > should render compact on md screen 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
+                <div
+                  class="flex flex-col gap-2"
                 >
-                  My Contacts
-                </h1>
-              </div>
-              <div
-                class="flex items-center leading-5 text-theme-secondary-text"
-                data-testid="header__subtitle"
-              >
-                Manage your frequent Contacts
+                  <h1
+                    class="mb-0 text-2xl leading-[29px]"
+                    data-testid="header__title"
+                  >
+                    My Contacts
+                  </h1>
+                  <div
+                    class="flex items-center leading-5 text-theme-secondary-text"
+                    data-testid="header__subtitle"
+                  >
+                    Manage your frequent Contacts
+                  </div>
+                </div>
               </div>
             </div>
             <div>
@@ -2378,13 +2382,22 @@ exports[`Contacts > should render responsive with contacts 1`] = `
       class="flex flex-1 flex-col"
     >
       <section
-        class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-1.5 dark:bg-black"
+        class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-6 dark:bg-black"
       >
-        <h1
-          class="mb-0 text-lg"
+        <div
+          class="flex flex-col gap-2"
         >
-          My Contacts
-        </h1>
+          <h1
+            class="mb-0 text-lg font-semibold"
+          >
+            My Contacts
+          </h1>
+          <div
+            class="flex items-center text-sm leading-5 text-theme-secondary-text"
+          >
+            Manage your frequent Contacts
+          </div>
+        </div>
         <div
           class="items-top flex justify-end"
         >
@@ -3848,18 +3861,22 @@ exports[`Contacts > should render with contacts 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
+                <div
+                  class="flex flex-col gap-2"
                 >
-                  My Contacts
-                </h1>
-              </div>
-              <div
-                class="flex items-center leading-5 text-theme-secondary-text"
-                data-testid="header__subtitle"
-              >
-                Manage your frequent Contacts
+                  <h1
+                    class="mb-0 text-2xl leading-[29px]"
+                    data-testid="header__title"
+                  >
+                    My Contacts
+                  </h1>
+                  <div
+                    class="flex items-center leading-5 text-theme-secondary-text"
+                    data-testid="header__subtitle"
+                  >
+                    Manage your frequent Contacts
+                  </div>
+                </div>
               </div>
             </div>
             <div>
@@ -5527,18 +5544,22 @@ exports[`Contacts > should render without contacts 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
+                <div
+                  class="flex flex-col gap-2"
                 >
-                  My Contacts
-                </h1>
-              </div>
-              <div
-                class="flex items-center leading-5 text-theme-secondary-text"
-                data-testid="header__subtitle"
-              >
-                Manage your frequent Contacts
+                  <h1
+                    class="mb-0 text-2xl leading-[29px]"
+                    data-testid="header__title"
+                  >
+                    My Contacts
+                  </h1>
+                  <div
+                    class="flex items-center leading-5 text-theme-secondary-text"
+                    data-testid="header__subtitle"
+                  >
+                    Manage your frequent Contacts
+                  </div>
+                </div>
               </div>
             </div>
             <div>

@@ -36,18 +36,22 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
               </svg>
             </div>
           </div>
-          <h1
-            class="mb-0 text-2xl leading-[29px]"
-            data-testid="header__title"
+          <div
+            class="flex flex-col gap-2"
           >
-            Open App on Ledger
-          </h1>
-        </div>
-        <div
-          class="flex items-center leading-5 text-theme-secondary-text"
-          data-testid="header__subtitle"
-        >
-          Open the app on your Ledger and check for details.
+            <h1
+              class="mb-0 text-2xl leading-[29px]"
+              data-testid="header__title"
+            >
+              Open App on Ledger
+            </h1>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Open the app on your Ledger and check for details.
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -22,6 +22,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           >
             <button
               class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              type="button"
             >
               Single
             </button>
@@ -42,6 +43,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             </label>
             <button
               class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              type="button"
             >
               Multiple
             </button>
@@ -341,6 +343,7 @@ exports[`AddRecipient > should render 1`] = `
           >
             <button
               class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              type="button"
             >
               Single
             </button>
@@ -361,6 +364,7 @@ exports[`AddRecipient > should render 1`] = `
             </label>
             <button
               class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              type="button"
             >
               Multiple
             </button>
@@ -645,6 +649,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           >
             <button
               class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              type="button"
             >
               Single
             </button>
@@ -665,6 +670,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             </label>
             <button
               class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              type="button"
             >
               Multiple
             </button>
@@ -949,6 +955,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           >
             <button
               class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              type="button"
             >
               Single
             </button>
@@ -969,6 +976,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             </label>
             <button
               class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              type="button"
             >
               Multiple
             </button>
@@ -1253,6 +1261,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           >
             <button
               class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              type="button"
             >
               Single
             </button>
@@ -1273,6 +1282,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             </label>
             <button
               class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              type="button"
             >
               Multiple
             </button>
@@ -1795,6 +1805,7 @@ exports[`AddRecipient > should set available amount 1`] = `
           >
             <button
               class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              type="button"
             >
               Single
             </button>
@@ -1815,6 +1826,7 @@ exports[`AddRecipient > should set available amount 1`] = `
             </label>
             <button
               class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              type="button"
             >
               Multiple
             </button>
@@ -2099,6 +2111,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           >
             <button
               class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              type="button"
             >
               Single
             </button>
@@ -2119,6 +2132,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             </label>
             <button
               class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              type="button"
             >
               Multiple
             </button>

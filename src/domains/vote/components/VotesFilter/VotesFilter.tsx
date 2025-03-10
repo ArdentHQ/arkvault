@@ -1,13 +1,12 @@
-import cn from "classnames";
 import React from "react";
+import cn from "classnames";
 import { useTranslation } from "react-i18next";
 
 import { FilterProperties } from "./VotesFilter.contracts";
 import { Checkbox } from "@/app/components/Checkbox";
-import { ControlButton } from "@/app/components/ControlButton";
 import { Dropdown } from "@/app/components/Dropdown";
-import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { Button } from "@/app/components/Button";
 
 export const VotesFilter = ({
 	onChange,
@@ -18,17 +17,15 @@ export const VotesFilter = ({
 	const { t } = useTranslation();
 
 	return (
-		<div {...properties}>
+		<div {...properties} className="mr-6 hidden md:block">
 			<Dropdown
 				data-testid="VotesFilter"
 				variant="votesFilter"
 				placement="bottom-end"
 				toggleContent={
-					<ControlButton isChanged={selectedOption !== "all"} noBorder>
-						<div className="flex h-5 w-5 items-center justify-center">
-							<Icon name="Funnel" size="lg" />
-						</div>
-					</ControlButton>
+					<Button variant="secondary" size="sm" icon="Funnel" className="h-8">
+						<span className="text-base font-semibold">{t("COMMON.TYPE")}</span>
+					</Button>
 				}
 			>
 				<div className="flex w-56 flex-col items-start space-y-5 px-10 py-7 text-theme-secondary-700 dark:text-theme-secondary-200">

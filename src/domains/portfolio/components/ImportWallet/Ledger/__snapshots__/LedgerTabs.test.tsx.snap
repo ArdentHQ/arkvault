@@ -11,7 +11,7 @@ exports[`LedgerTabs > should render connection step 1`] = `
       <span
         class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
       >
-        Select a Cryptoasset
+        WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE
       </span>
       <ul
         class="flex space-x-3"
@@ -141,18 +141,22 @@ exports[`LedgerTabs > should render connection step 1`] = `
                     </svg>
                   </div>
                 </div>
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
+                <div
+                  class="flex flex-col gap-2"
                 >
-                  Select a Cryptoasset
-                </h1>
-              </div>
-              <div
-                class="flex items-center leading-5 text-theme-secondary-text"
-                data-testid="header__subtitle"
-              >
-                Select a cryptoasset to import your existing wallet address.
+                  <h1
+                    class="mb-0 text-2xl leading-[29px]"
+                    data-testid="header__title"
+                  >
+                    WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE
+                  </h1>
+                  <div
+                    class="flex items-center leading-5 text-theme-secondary-text"
+                    data-testid="header__subtitle"
+                  >
+                    WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE
+                  </div>
+                </div>
               </div>
             </div>
           </div>

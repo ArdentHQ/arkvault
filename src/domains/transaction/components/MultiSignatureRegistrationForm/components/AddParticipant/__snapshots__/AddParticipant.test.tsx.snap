@@ -922,7 +922,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           value="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                         <span
-                          class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                          class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                           data-testid="Input__suggestion"
                         >
                           <span
