@@ -60,13 +60,12 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 				/>
 			</div>
 
-			<div className="hidden h-full w-[200px] lg:block">
-				<ul>
-					{items.map(({ label, route, itemKey, icon }, index) => (
+			<div className="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dark:border-theme-dark-700 lg:block">
+				<ul className="space-y-1">
+					{items.map(({ label, route, itemKey }, index) => (
 						<SideBarItem
 							label={label}
 							route={route}
-							icon={icon}
 							itemKey={itemKey}
 							key={index}
 							handleActiveItem={handleActiveItem}

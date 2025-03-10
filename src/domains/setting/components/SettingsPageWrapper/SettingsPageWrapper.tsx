@@ -27,9 +27,10 @@ export const SettingsWrapper = ({
 	return (
 		<Page pageTitle={t(`SETTINGS.${activeSettings.toUpperCase()}.MENU_ITEM`)}>
 			<PageHeader
+				className="lg:-mb-4"
 				title={t("SETTINGS.GENERAL.TITLE")}
 				subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
-				titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="SettigsDark" darkIcon="SettingsLight" />}
+				titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="SettingsLight" darkIcon="SettingsDark" />}
 			/>
 
 			<Section>
@@ -48,8 +49,6 @@ export const SettingsWrapper = ({
 						<div className="flex-1">{children}</div>
 					</div>
 				</div>
-
-				{children}
 			</Section>
 		</Page>
 	);
