@@ -1,4 +1,3 @@
-import { uniq } from "@ardenthq/sdk-helpers";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useHistory } from "react-router-dom";
@@ -13,7 +12,6 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { LedgerData, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
