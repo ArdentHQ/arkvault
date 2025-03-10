@@ -73,7 +73,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 			<TableCell className={borderClasses()} innerClassName="space-x-4 justify-center">
 				<Clipboard variant="icon" data={address.address()}>
-					<div className="link">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200">
 						<Icon name="Copy" />
 					</div>
 				</Clipboard>
