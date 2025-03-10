@@ -40,7 +40,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 
 	const { name, address } = watch();
 
-	const contactFormValidation = contactForm(t, profile, network);
+	const contactFormValidation = contactForm(t, profile);
 
 	useEffect(() => {
 		for (const [field, message] of Object.entries(errors) as [keyof ContactFormState, string][]) {
@@ -85,6 +85,22 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 							field: t("COMMON.ADDRESS"),
 						}).toString(),
+						validate: {
+							duplicateAddress: (address) => {
+								const isForThisContact =
+									contact && contact.addresses().findByAddress(address).length > 0;
+
+								const isForOtherContact = profile.contacts().findByAddress(address).length > 0;
+
+								return (
+									isForThisContact ||
+									!isForOtherContact ||
+									t("COMMON.INPUT_ADDRESS.VALIDATION.ADDRESS_ALREADY_EXISTS", {
+										address,
+									}).toString()
+								);
+							},
+						},
 					}}
 					onChange={() => onChange("address")}
 					data-testid="contact-form__address-input"

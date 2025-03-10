@@ -68,7 +68,7 @@ const createContact = (targetProfile: Contracts.IProfile, name: string, address:
 describe("Contacts", () => {
 	let resetProfileNetworksMock: () => void;
 	let mockContact: Contracts.IContact;
-	let validateAddressSpy: jest.SpyInstance;
+	let validateAddressSpy: any;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";

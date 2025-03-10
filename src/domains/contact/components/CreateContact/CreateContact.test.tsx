@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-// import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { CreateContact } from "./CreateContact";
@@ -16,7 +14,6 @@ let profile: Contracts.IProfile;
 
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 const addressInput = () => screen.getByTestId("contact-form__address-input");
-const addAddressButton = () => screen.getByTestId("contact-form__add-address-btn");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const modalInner = () => screen.getByTestId("Modal__inner");
 
@@ -26,8 +23,21 @@ const newContact = {
 };
 
 describe("CreateContact", () => {
+	let validateAddressSpy: any;
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+	});
+
+	beforeEach(() => {
+		validateAddressSpy = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
+	});
+
+	afterEach(() => {
+		validateAddressSpy.mockRestore();
 	});
 
 	it("should render", async () => {
@@ -44,12 +54,6 @@ describe("CreateContact", () => {
 	});
 
 	it("should call onSave when form is submitted", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
 		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
 
 		await waitFor(() => {
@@ -62,12 +66,6 @@ describe("CreateContact", () => {
 		await userEvent.tab();
 
 		await waitFor(() => {
-			expect(addAddressButton()).not.toBeDisabled();
-		});
-
-		await userEvent.click(addAddressButton());
-
-		await waitFor(() => {
 			expect(saveButton()).not.toBeDisabled();
 		});
 
@@ -76,7 +74,6 @@ describe("CreateContact", () => {
 		await waitFor(() => {
 			expect(onSave).toHaveBeenCalled();
 		});
-		validateMock.mockRestore();
 	});
 
 	it("should update errors when handleChange is called", async () => {
