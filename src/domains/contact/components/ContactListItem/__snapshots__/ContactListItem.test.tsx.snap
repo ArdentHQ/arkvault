@@ -68,7 +68,7 @@ exports[`ContactListItem > should render 1`] = `
               type="button"
             >
               <div
-                class="link"
+                class="text-theme-secondary-700 dark:text-theme-dark-200"
               >
                 <div>
                   <div
@@ -263,7 +263,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
               type="button"
             >
               <div
-                class="link"
+                class="text-theme-secondary-700 dark:text-theme-dark-200"
               >
                 <div>
                   <div
@@ -458,7 +458,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="link"
+                class="text-theme-secondary-700 dark:text-theme-dark-200"
               >
                 <div>
                   <div
@@ -632,7 +632,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="link"
+                class="text-theme-secondary-700 dark:text-theme-dark-200"
               >
                 <div>
                   <div
@@ -803,7 +803,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="link"
+                class="text-theme-secondary-700 dark:text-theme-dark-200"
               >
                 <div>
                   <div
@@ -995,7 +995,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="link"
+                class="text-theme-secondary-700 dark:text-theme-dark-200"
               >
                 <div>
                   <div
@@ -1169,7 +1169,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="link"
+                class="text-theme-secondary-700 dark:text-theme-dark-200"
               >
                 <div>
                   <div
@@ -1340,7 +1340,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="link"
+                class="text-theme-secondary-700 dark:text-theme-dark-200"
               >
                 <div>
                   <div

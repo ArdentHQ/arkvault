@@ -1181,7 +1181,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -1367,7 +1367,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -1541,7 +1541,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -1712,7 +1712,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -1895,7 +1895,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -4707,7 +4707,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -4893,7 +4893,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -5067,7 +5067,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -5238,7 +5238,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
@@ -5421,7 +5421,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="link"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
                                 >
                                   <div>
                                     <div
