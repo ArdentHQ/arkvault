@@ -9,7 +9,6 @@ import { useCustomNetworks } from "./hooks/use-custom-networks";
 import { FallbackToDefaultNodesToggle } from "@/domains/setting/pages/Servers/blocks/FallbackToDefaultNodesToggle";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
 import { useActiveProfile, useBreakpoint, useNetworks, useProfileJobs } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
@@ -21,6 +20,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { DeleteResource } from "@/app/components/DeleteResource";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();
@@ -178,20 +178,22 @@ export const ServersSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="servers">
-			<Header
-				title={t("SETTINGS.SERVERS.TITLE")}
-				subtitle={t("SETTINGS.SERVERS.SUBTITLE")}
-				titleClassName="mb-2 text-2xl"
-			/>
+			<Form id="servers__form" context={form} onSubmit={saveSettings} className="space-y-0">
+				<SettingsGroup title={t("SETTINGS.SERVERS.TITLE")}>
+					<ListDivided items={serverOptions} noBorder={isXs} />
+				</SettingsGroup>
 
-			<Form id="servers__form" context={form} onSubmit={saveSettings} className="mt-2">
-				<ListDivided items={serverOptions} noBorder={isXs} />
-
-				<FormButtons>
-					<Button disabled={isSaveButtonDisabled} data-testid="Server-settings__submit-button" type="submit">
-						{t("COMMON.SAVE")}
-					</Button>
-				</FormButtons>
+				<SettingsButtonGroup>
+					<FormButtons>
+						<Button
+							disabled={isSaveButtonDisabled}
+							data-testid="Server-settings__submit-button"
+							type="submit"
+						>
+							{t("COMMON.SAVE")}
+						</Button>
+					</FormButtons>
+				</SettingsButtonGroup>
 			</Form>
 
 			{(showServerFormModal || networkToUpdate) && (

@@ -13,7 +13,7 @@ import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrappe
 import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
 import { useFiles } from "@/app/hooks/use-files";
 import { toasts } from "@/app/services";
-
+import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
 const EXTENSION = "wwe";
 
 export const ExportSettings = () => {
@@ -89,22 +89,20 @@ export const ExportSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="export">
-			<Header
-				title={t("SETTINGS.EXPORT.TITLE")}
-				subtitle={t("SETTINGS.EXPORT.SUBTITLE")}
-				titleClassName="mb-2 text-2xl"
-			/>
+			<Form id="export-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
+				<SettingsGroup title={t("SETTINGS.EXPORT.TITLE")}>
+					<h2 className="mb-0 text-lg">{t("COMMON.WALLETS")}</h2>
 
-			<Form id="export-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
-				<h2 className="mb-0 text-lg">{t("COMMON.WALLETS")}</h2>
+					<ListDivided items={walletExportOptions} noBorder={isXs} />
+				</SettingsGroup>
 
-				<ListDivided items={walletExportOptions} noBorder={isXs} />
-
-				<FormButtons>
-					<Button data-testid="Export-settings__submit-button" type="submit">
-						{t("COMMON.EXPORT")}
-					</Button>
-				</FormButtons>
+				<SettingsButtonGroup>
+					<FormButtons>
+						<Button data-testid="Export-settings__submit-button" type="submit">
+							{t("COMMON.EXPORT")}
+						</Button>
+					</FormButtons>
+				</SettingsButtonGroup>
 			</Form>
 		</SettingsWrapper>
 	);
