@@ -4,7 +4,6 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
 import { Toggle } from "@/app/components/Toggle";
 import { useEnvironmentContext } from "@/app/contexts";
