@@ -1,17 +1,14 @@
 import { Enums, Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useBreakpoint } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
-import { FeeField } from "@/domains/transaction/components/FeeField";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
