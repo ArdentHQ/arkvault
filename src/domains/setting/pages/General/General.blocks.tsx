@@ -27,6 +27,18 @@ export const SettingsGroup = ({
 	</div>
 );
 
+export const SettingsButtonGroup = ({
+	className,
+	children,
+	...properties
+}: React.HTMLAttributes<HTMLDivElement> & {
+	title?: string;
+}) => (
+	<div className={twMerge("px-6 pb-6", className)} {...properties}>
+		<div className="-mt-6">{children}</div>
+	</div>
+);
+
 const SettingsGroupHeader = ({ className, ...properties }: React.HTMLAttributes<HTMLHeadingElement>) => (
 	<h2
 		className={twMerge(

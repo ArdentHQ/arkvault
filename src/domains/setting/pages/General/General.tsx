@@ -20,7 +20,7 @@ import { PlatformSdkChoices } from "@/data";
 import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
-import { SettingsGroup, SettingsGroupHeader, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
+import { SettingsButtonGroup, SettingsGroup, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -494,7 +494,7 @@ export const GeneralSettings: React.FC = () => {
 					<ListDivided items={otherItems} noBorder={isXs} />
 				</SettingsGroup>
 
-				<SettingsGroup>
+				<SettingsButtonGroup>
 					<FormButtons>
 						<Button
 							disabled={isSaveButtonDisabled}
@@ -504,7 +504,7 @@ export const GeneralSettings: React.FC = () => {
 							{t("COMMON.SAVE")}
 						</Button>
 					</FormButtons>
-				</SettingsGroup>
+				</SettingsButtonGroup>
 			</Form>
 			<ResetProfile
 				isOpen={isResetProfileOpen}
