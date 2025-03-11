@@ -49,7 +49,7 @@ export const persistLedgerConnection = async ({
 			// Delay retry if an operation is in progress.
 			// Error: InvalidStateError: An operation that changes the device state is in progress.
 			if (error?.message?.includes?.("in progress")) {
-				await new Promise(resolve => setTimeout(resolve, 1000))
+				await new Promise((resolve) => setTimeout(resolve, 1000));
 			}
 
 			// Abort on version error or continue retrying access.

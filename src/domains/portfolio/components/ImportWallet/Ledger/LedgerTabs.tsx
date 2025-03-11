@@ -15,7 +15,7 @@ import { useKeydown } from "@/app/hooks/use-keydown";
 import { assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { ImportActionToolbar } from "../ImportAddressSidePanel.blocks";
+import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { useTranslation } from "react-i18next";
 
 export const LedgerTabs = ({
@@ -24,7 +24,7 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 
 	const history = useHistory();
 	const {
@@ -34,7 +34,7 @@ export const LedgerTabs = ({
 		isAwaitingConnection,
 		isAwaitingDeviceConfirmation,
 		isConnected,
-		listenDevice
+		listenDevice,
 	} = useLedgerContext();
 
 	const { formState, handleSubmit } = useFormContext();

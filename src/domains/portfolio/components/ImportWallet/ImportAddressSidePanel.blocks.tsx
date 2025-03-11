@@ -22,20 +22,19 @@ export const ImportActionToolbar = ({
 	showButtons,
 	isSubmitDisabled,
 }: {
-	showButtons?: boolean,
-	isLoading?: boolean,
-	showSteps?: boolean,
-	activeTab: number,
-	allSteps: string[]
+	showButtons?: boolean;
+	isLoading?: boolean;
+	showSteps?: boolean;
+	activeTab: number;
+	allSteps: string[];
 	isContinueDisabled?: boolean;
 	isBackDisabled?: boolean;
 	isSubmitDisabled?: boolean;
-	onBack?: () => void
-	onContinue?: () => void
+	onBack?: () => void;
+	onContinue?: () => void;
 }) => {
 	const { t } = useTranslation();
 	return (
-
 		<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
 			{showSteps && (
 				<div className="hidden w-[136px] sm:block">
@@ -73,5 +72,5 @@ export const ImportActionToolbar = ({
 				)}
 			</div>
 		</div>
-	)
-}
+	);
+};

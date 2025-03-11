@@ -128,7 +128,7 @@ export const LedgerImportStep = ({
 	onClickEditWalletName,
 	profile,
 	wallets,
-	network
+	network,
 }: {
 	network: Networks.Network;
 	wallets: LedgerData[];
