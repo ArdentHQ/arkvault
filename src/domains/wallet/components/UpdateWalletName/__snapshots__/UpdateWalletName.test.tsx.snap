@@ -72,7 +72,7 @@ exports[`UpdateWalletName > should render 1`] = `
               Enter a name for this wallet address (only visible to you).
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <fieldset
@@ -215,7 +215,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
               Enter a name for this wallet address (only visible to you).
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <fieldset
@@ -408,7 +408,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
               Enter a name for this wallet address (only visible to you).
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <fieldset
@@ -601,7 +601,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
               Enter a name for this wallet address (only visible to you).
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <fieldset
@@ -794,7 +794,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
               Enter a name for this wallet address (only visible to you).
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <fieldset
@@ -987,7 +987,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
               Enter a name for this wallet address (only visible to you).
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <fieldset
@@ -1180,7 +1180,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
               Enter a name for this wallet address (only visible to you).
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <fieldset

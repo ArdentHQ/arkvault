@@ -3521,22 +3521,7 @@ exports[`Page > should render with sidebar = true 1`] = `
     </nav>
     <div
       class="flex flex-1 flex-col"
-    >
-      <div
-        class="flex flex-1"
-      >
-        <div
-          class="mx-auto flex w-full flex-col lg:container lg:flex-row"
-        >
-          <div
-            class="mt-8 border-theme-primary-100 px-8 dark:border-theme-secondary-800 md:px-10 lg:mb-8 lg:border-r lg:px-12"
-          />
-          <div
-            class="w-full"
-          />
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;

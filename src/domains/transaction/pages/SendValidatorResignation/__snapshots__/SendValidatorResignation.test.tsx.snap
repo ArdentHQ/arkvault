@@ -577,7 +577,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="space-y-5 mx-auto max-w-xl"
             data-testid="Form"
           >
             <div>
@@ -1957,7 +1957,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="space-y-5 mx-auto max-w-xl"
             data-testid="Form"
           >
             <div>
@@ -3221,7 +3221,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="space-y-5 mx-auto max-w-xl"
             data-testid="Form"
           >
             <div>
@@ -4356,7 +4356,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="space-y-5 mx-auto max-w-xl"
             data-testid="Form"
           >
             <div>
@@ -5342,7 +5342,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="space-y-5 mx-auto max-w-xl"
             data-testid="Form"
           >
             <div>

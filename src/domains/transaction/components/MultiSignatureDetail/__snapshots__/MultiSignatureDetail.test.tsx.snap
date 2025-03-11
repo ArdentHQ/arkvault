@@ -321,11 +321,22 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       <div
                                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                                       >
+                                        <span
+                                          class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                                          data-testid="Address__alias"
+                                        >
+                                          <span
+                                            class="no-ligatures transition-colors duration-200"
+                                            data-testid="TruncateEnd"
+                                          >
+                                            ARK Wallet 1
+                                          </span>
+                                        </span>
                                         <div
                                           class="relative grow leading-[17px] sm:leading-5 text-left"
                                         >
                                           <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                            class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                                             data-testid="Address__address"
                                           >
                                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
