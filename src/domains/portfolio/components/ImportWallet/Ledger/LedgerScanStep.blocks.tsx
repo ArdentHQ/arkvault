@@ -111,7 +111,7 @@ export const LedgerLoaderOverlay = ({ children, className }: { className?: strin
 	<div>
 		<div
 			className={twMerge(
-				"absolute inset-0 -m-px rounded border border-theme-secondary-300 bg-white opacity-75 dark:border-theme-secondary-800 dark:bg-theme-secondary-900",
+				"absolute inset-0 -m-px rounded border border-theme-secondary-300 bg-white opacity-75 dark:border-theme-secondary-800 dark:bg-theme-background",
 				className,
 			)}
 		/>
