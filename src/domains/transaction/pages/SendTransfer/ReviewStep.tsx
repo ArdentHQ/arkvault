@@ -24,7 +24,7 @@ interface ReviewStepProperties {
 export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network }) => {
 	const { t } = useTranslation();
 
-	const { unregister, watch, } = useFormContext();
+	const { unregister, watch } = useFormContext();
 	const { recipients } = watch();
 	const profile = useActiveProfile();
 
@@ -88,10 +88,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 
 				<div className="space-y-3 sm:space-y-2">
 					<div className="mx-3 sm:mx-0">
-						<DetailWrapper
-							label={t("COMMON.TRANSACTION_SUMMARY")}
-							className="rounded-xl"
-						>
+						<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
 							<div className="flex flex-col gap-3">
 								<div
 									className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
@@ -113,7 +110,6 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 						</DetailWrapper>
 					</div>
 				</div>
-
 
 				{showFeeInput && (
 					<FormField name="fee" disableStateHints>
