@@ -28,6 +28,11 @@ export default defineConfig(() => {
 				// https://rollupjs.org/guide/en/#big-list-of-options
 				output: {
 					manualChunks: {
+						ledger: [
+							"@ledgerhq/hw-app-eth",
+							"@ledgerhq/hw-transport-webhid",
+							"@ledgerhq/hw-transport-webusb"
+						],
 						react: [
 							"react",
 							"react-datepicker",
@@ -56,12 +61,12 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-						visualizer({
-							open: true,
-							brotliSize: true,
-							gzipSize: true,
-							template: "treemap",
-						}),
+					visualizer({
+						open: true,
+						brotliSize: true,
+						gzipSize: true,
+						template: "treemap",
+					}),
 				],
 			},
 		},
