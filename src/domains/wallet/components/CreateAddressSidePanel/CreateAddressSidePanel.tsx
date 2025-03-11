@@ -261,7 +261,7 @@ export const CreateAddressesSidePanel = ({
 					</div>
 				</Tabs>
 
-				<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
+				<div className="fixed inset-x-0 bottom-0 z-50 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
 					<div className="hidden w-[136px] sm:block">
 						<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
 					</div>
