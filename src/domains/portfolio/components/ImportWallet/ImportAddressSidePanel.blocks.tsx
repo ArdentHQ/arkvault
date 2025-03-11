@@ -79,8 +79,13 @@ export const ImportActionToolbar = ({
 	);
 };
 
-
-export const StepHeader = ({ step, importOption }: { step: Step; importOption: ImportOption | undefined }): JSX.Element => {
+export const StepHeader = ({
+	step,
+	importOption,
+}: {
+	step: Step;
+	importOption: ImportOption | undefined;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const headers: Record<Step, JSX.Element> = {
@@ -140,7 +145,13 @@ export const StepHeader = ({ step, importOption }: { step: Step; importOption: I
 	return headers[step];
 };
 
-export const LedgerStepHeader = ({ step, importOption }: { step: LedgerTabStep; importOption: ImportOption | undefined }): JSX.Element => {
+export const LedgerStepHeader = ({
+	step,
+	importOption,
+}: {
+	step: LedgerTabStep;
+	importOption: ImportOption | undefined;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const headers: Record<string, JSX.Element> = {
@@ -178,7 +189,7 @@ export const LedgerStepHeader = ({ step, importOption }: { step: LedgerTabStep; 
 				}
 				className="mb-4 hidden sm:block"
 			/>
-		)
+		),
 	};
 
 	return headers[step];

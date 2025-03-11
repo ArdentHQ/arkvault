@@ -134,21 +134,21 @@ export const LedgerImportStep = ({
 	profile: Contracts.IProfile;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 }) => (
-		<section data-testid="LedgerImportStep">
-			{wallets.length > 1 ? (
-				<MultipleImport
-					wallets={wallets}
-					profile={profile}
-					network={network}
-					onClickEditWalletName={onClickEditWalletName}
-				/>
-			) : (
-				<SingleImport
-					wallets={wallets}
-					profile={profile}
-					network={network}
-					onClickEditWalletName={onClickEditWalletName}
-				/>
-			)}
-		</section>
-	);
+	<section data-testid="LedgerImportStep">
+		{wallets.length > 1 ? (
+			<MultipleImport
+				wallets={wallets}
+				profile={profile}
+				network={network}
+				onClickEditWalletName={onClickEditWalletName}
+			/>
+		) : (
+			<SingleImport
+				wallets={wallets}
+				profile={profile}
+				network={network}
+				onClickEditWalletName={onClickEditWalletName}
+			/>
+		)}
+	</section>
+);

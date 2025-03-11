@@ -235,13 +235,13 @@ export const ImportAddressesSidePanel = ({
 
 	const StepsHeaderComponent = () => {
 		if (activeTab === Step.ImportDetailStep && isLedgerImport) {
-			return <LedgerStepHeader step={ledgerActiveTab} importOption={importOption}/>
+			return <LedgerStepHeader step={ledgerActiveTab} importOption={importOption} />;
 		}
 
-		return <StepHeader step={activeTab} importOption={importOption} />
-	}
+		return <StepHeader step={activeTab} importOption={importOption} />;
+	};
 
-	console.log({ activeTab, ledgerActiveTab })
+	console.log({ activeTab, ledgerActiveTab });
 
 	return (
 		<SidePanel
@@ -266,10 +266,10 @@ export const ImportAddressesSidePanel = ({
 
 							<TabPanel tabId={Step.ImportDetailStep}>
 								{isLedgerImport && (
-									<LedgerTabs onClickEditWalletName={handleEditLedgerAlias}
+									<LedgerTabs
+										onClickEditWalletName={handleEditLedgerAlias}
 										onStepChange={setLedgerActiveTab}
 									/>
-
 								)}
 								{!isLedgerImport && importOption && (
 									<ImportDetailStep
@@ -321,4 +321,3 @@ export const ImportAddressesSidePanel = ({
 		</SidePanel>
 	);
 };
-

@@ -16,12 +16,11 @@ import { assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
-import { useTranslation } from "react-i18next";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
 	onClickEditWalletName,
-	onStepChange
+	onStepChange,
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -134,8 +133,8 @@ export const LedgerTabs = ({
 					<ListenLedger
 						noHeading
 						onDeviceAvailable={() => {
-							setActiveTab(LedgerTabStep.LedgerConnectionStep)
-							onStepChange?.(LedgerTabStep.LedgerConnectionStep)
+							setActiveTab(LedgerTabStep.LedgerConnectionStep);
+							onStepChange?.(LedgerTabStep.LedgerConnectionStep);
 						}}
 						onDeviceNotAvailable={handleDeviceNotAvailable}
 					/>
@@ -145,8 +144,8 @@ export const LedgerTabs = ({
 					<LedgerConnectionStep
 						cancelling={cancelling}
 						onConnect={() => {
-							setActiveTab(LedgerTabStep.LedgerScanStep)
-							onStepChange?.(LedgerTabStep.LedgerScanStep)
+							setActiveTab(LedgerTabStep.LedgerScanStep);
+							onStepChange?.(LedgerTabStep.LedgerScanStep);
 						}}
 						network={activeNetwork}
 					/>
