@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
@@ -23,14 +23,33 @@ interface SidePanelProps {
 	className?: string;
 }
 
+const ANIMATION_DURATION = 350;
+
 export const SidePanel = ({
 	children,
-	open,
-	onOpenChange,
+	open: isOpen,
+	onOpenChange: onChange,
 	header,
 	dataTestId,
 	className,
 }: SidePanelProps): JSX.Element => {
+	const [open, onOpenChange] = React.useState(isOpen);
+
+	useEffect(() => {
+		if (open) {
+			onChange(true);
+			return;
+		}
+
+		const id = setTimeout(() => {
+			onChange(false);
+		}, ANIMATION_DURATION)
+
+		return () => {
+			clearTimeout(id);
+		}
+	}, [onChange, open]);
+
 	const { refs, context } = useFloating({
 		onOpenChange,
 		open,
@@ -54,7 +73,7 @@ export const SidePanel = ({
 			transformOrigin: "right",
 			transitionProperty: "transform",
 		},
-		duration: 350,
+		duration: ANIMATION_DURATION,
 		initial: {
 			transform: "translateX(100%)",
 		},

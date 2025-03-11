@@ -44,14 +44,6 @@ export const AddressesSidePanel = ({
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
 
-	const selectedAddressesString = selectedAddresses.join("-");
-
-	useEffect(() => {
-		if (!open) {
-			onSetSelectedAddresses(defaultSelectedAddresses);
-		}
-	}, [selectedAddressesString]);
-
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
 			setShowManageHint(false);

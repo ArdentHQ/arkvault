@@ -367,7 +367,7 @@ export const PortfolioHeader = ({
 				</div>
 			</div>
 
-			<AddressesSidePanel
+			{showAddressesPanel && <AddressesSidePanel
 				profile={profile}
 				wallets={allWallets}
 				defaultSelectedAddresses={selectedAddresses}
@@ -379,7 +379,7 @@ export const PortfolioHeader = ({
 				onDelete={(address) => {
 					void onDeleteAddress(address);
 				}}
-			/>
+			/>}
 
 			<WalletActionsModals
 				wallets={selectedWallets}

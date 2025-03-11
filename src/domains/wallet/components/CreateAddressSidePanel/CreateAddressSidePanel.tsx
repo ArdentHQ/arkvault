@@ -74,13 +74,6 @@ export const CreateAddressesSidePanel = ({
 	}, [register, open]);
 
 	useEffect(() => {
-		if (open) {
-			setActiveTab(Step.WalletOverviewStep);
-			void handleGenerateWallet();
-		}
-	}, [open]);
-
-	useEffect(() => {
 		if (wallet && mnemonic) {
 			setIsGeneratingWallet(false);
 		}
