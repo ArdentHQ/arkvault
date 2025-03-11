@@ -21,7 +21,7 @@ export const ReviewStep = ({
 	const { t } = useTranslation();
 
 	const { getValues, unregister } = useFormContext();
-	const { username, } = getValues();
+	const { username } = getValues();
 
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
