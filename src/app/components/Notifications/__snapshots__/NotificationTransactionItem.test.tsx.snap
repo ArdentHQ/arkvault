@@ -171,18 +171,15 @@ exports[`Notifications > should render in xs 3`] = `
             class="w-2/5"
           >
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
+              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
             >
               <div
-                class="absolute bottom-0 left-4 top-0 flex items-center"
+                class="absolute bottom-0 left-2 top-0 flex items-center"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-danger-400"
                 />
               </div>
-              <div
-                class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
-              />
               <div
                 class="w-20 flex-1"
               >
@@ -223,7 +220,7 @@ exports[`Notifications > should render in xs 3`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
             >
               <div
                 class="h-5"
@@ -269,18 +266,15 @@ exports[`Notifications > should render in xs 4`] = `
             class="w-2/5"
           >
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
+              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
             >
               <div
-                class="absolute bottom-0 left-4 top-0 flex items-center"
+                class="absolute bottom-0 left-2 top-0 flex items-center"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-danger-400"
                 />
               </div>
-              <div
-                class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
-              />
               <div
                 class="w-20 flex-1"
               >
@@ -321,7 +315,7 @@ exports[`Notifications > should render in xs 4`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
             >
               <div
                 class="h-5"
@@ -367,18 +361,15 @@ exports[`Notifications > should render in xs 5`] = `
             class="w-2/5"
           >
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
+              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
             >
               <div
-                class="absolute bottom-0 left-4 top-0 flex items-center"
+                class="absolute bottom-0 left-2 top-0 flex items-center"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-danger-400"
                 />
               </div>
-              <div
-                class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
-              />
               <div
                 class="w-20 flex-1"
               >
@@ -419,7 +410,7 @@ exports[`Notifications > should render in xs 5`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
             >
               <div
                 class="h-5"
@@ -465,18 +456,15 @@ exports[`Notifications > should render notification item 1`] = `
             class="w-2/5"
           >
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-8 static"
+              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
             >
               <div
-                class="absolute bottom-0 left-4 top-0 flex items-center"
+                class="absolute bottom-0 left-2 top-0 flex items-center"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-danger-400"
                 />
               </div>
-              <div
-                class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
-              />
               <div
                 class="w-20 flex-1"
               >
@@ -517,7 +505,7 @@ exports[`Notifications > should render notification item 1`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-8 static"
+              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
             >
               <div
                 class="h-5"
