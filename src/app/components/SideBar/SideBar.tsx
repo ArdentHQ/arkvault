@@ -34,14 +34,14 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 
 	return (
 		<>
-			<div className="relative lg:hidden">
+			<div className="relative -mx-6 -mt-4 bg-theme-secondary-200 px-6 py-2 md:m-0 md:bg-transparent md:p-0 lg:hidden">
 				<Dropdown
 					placement="bottom-start"
 					wrapperClass="sm:w-full px-6 sm:px-6 md:px-10 -mt-2"
 					options={options}
 					onSelect={({ value }) => handleActiveItem(String(value))}
 					toggleContent={(isOpen) => (
-						<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-theme-secondary-300 px-4 py-3 dark:border-theme-dark-700">
+						<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border-theme-secondary-300 bg-white px-4 py-3 dark:border-theme-dark-700 md:border">
 							<span className="flex-1 font-semibold leading-tight">{selectedLabel}</span>
 
 							<Icon
