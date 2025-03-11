@@ -21,8 +21,8 @@ export const CreateContact: React.VFC<CreateContactProperties> = ({ profile, onC
 
 	const { persist } = useEnvironmentContext();
 
-	const handleOnSave = async ({ name, addresses }: ContactFormData) => {
-		const contact = profile.contacts().create(name, addresses);
+	const handleOnSave = async ({ name, address }: ContactFormData) => {
+		const contact = profile.contacts().create(name, [address]);
 		await persist();
 		onSave(contact.id());
 		setErrors({});

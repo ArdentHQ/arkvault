@@ -54,11 +54,9 @@ const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profile
 	);
 };
 
-const addAddress = () => screen.getByTestId("contact-form__add-address-btn");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const sendButton = (index = 0) => screen.getAllByTestId("ContactListItem__send-button")[index];
-const searchInput = () => within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
-
+const contactFormNameInputId = "contact-form__name-input";
 const createContact = (targetProfile: Contracts.IProfile, name: string, address: string) =>
 	targetProfile.contacts().create(name, [
 		{
@@ -69,10 +67,13 @@ const createContact = (targetProfile: Contracts.IProfile, name: string, address:
 
 describe("Contacts", () => {
 	let resetProfileNetworksMock: () => void;
+	let mockContact: Contracts.IContact;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		mockContact = createContact(profile, "Mock Contact", "0x0000000000000000000000000000000000000000");
 	});
 
 	beforeEach(() => {
@@ -90,7 +91,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
 		await expect(screen.findByTestId("ContactList")).resolves.toBeInTheDocument();
 
-		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("EmptyResults")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -102,7 +103,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
 		await expect(screen.findByTestId("ContactList")).resolves.toBeInTheDocument();
 
-		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("EmptyResults")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -110,13 +111,13 @@ describe("Contacts", () => {
 	it("should render responsive with contacts", async () => {
 		const { asFragment } = renderResponsiveComponent("xs");
 
-		expect(screen.getByTestId("ContactListMobile")).toBeInTheDocument();
+		expect(screen.getAllByTestId("ContactListItemMobile")).toHaveLength(profile.contacts().count());
 
-		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("EmptyResults")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const firstContactOptionsDropdown = within(screen.getByTestId("ContactListMobile")).getAllByTestId(
+		const firstContactOptionsDropdown = within(screen.getAllByTestId("ContactListItemMobile")[0]).getAllByTestId(
 			"dropdown__toggle",
 		)[0];
 
@@ -143,8 +144,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
 
-		expect(screen.queryByTestId("ContactList")).not.toBeInTheDocument();
-		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
+		expect(screen.getByTestId("EmptyResults")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -178,6 +178,7 @@ describe("Contacts", () => {
 				validate: vi.fn().mockResolvedValue(true),
 			}),
 		});
+
 		renderComponent();
 
 		await waitFor(() => {
@@ -189,14 +190,11 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(saveButton()).toBeDisabled();
 		});
-		expect(addAddress()).toBeDisabled();
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
-
-		await userEvent.type(screen.getByTestId("contact-form__name-input"), "Test Contact");
+		await userEvent.type(screen.getByTestId(contactFormNameInputId), "Test Contact");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("Test Contact");
+			expect(screen.getByTestId(contactFormNameInputId)).toHaveValue("Test Contact");
 		});
 
 		await userEvent.type(screen.getByTestId("contact-form__address-input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
@@ -205,20 +203,59 @@ describe("Contacts", () => {
 			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		});
 
-		await waitFor(() => {
-			expect(addAddress()).not.toBeDisabled();
-		});
-
-		await userEvent.click(addAddress());
-
-		await waitFor(() => expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1));
-
 		await waitFor(() => expect(saveButton()).not.toBeDisabled());
 
 		await userEvent.click(saveButton());
 
 		await waitFor(() => {
 			expect(profile.contacts().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).toHaveLength(1);
+		});
+		validateMock.mockRestore();
+	});
+
+	it("should successfully add contact on mobile", async () => {
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(true),
+			}),
+		});
+
+		renderResponsiveComponent();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contacts__add-contact-btn-mobile")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("contacts__add-contact-btn-mobile"));
+
+		await waitFor(() => {
+			expect(saveButton()).toBeDisabled();
+		});
+
+		await userEvent.type(screen.getByTestId(contactFormNameInputId), "Test Contact 2");
+
+		await waitFor(() => {
+			expect(screen.getByTestId(contactFormNameInputId)).toHaveValue("Test Contact 2");
+		});
+
+		await userEvent.type(
+			screen.getByTestId("contact-form__address-input"),
+			"0x0000000000000000000000000000000000000001",
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(
+				"0x0000000000000000000000000000000000000001",
+			);
+		});
+
+		await waitFor(() => expect(saveButton()).not.toBeDisabled());
+
+		await userEvent.click(saveButton());
+
+		await waitFor(() => {
+			expect(profile.contacts().findByAddress("0x0000000000000000000000000000000000000001")).toHaveLength(1);
 		});
 		validateMock.mockRestore();
 	});
@@ -233,10 +270,10 @@ describe("Contacts", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
+			expect(screen.getAllByTestId("ContactListItem")).toHaveLength(1);
 		});
 
-		const firstContactOptionsDropdown = within(screen.getByTestId("ContactList")).getAllByTestId(
+		const firstContactOptionsDropdown = within(screen.getAllByTestId("ContactListItem")[0]).getAllByTestId(
 			"dropdown__toggle",
 		)[0];
 		await userEvent.click(firstContactOptionsDropdown);
@@ -265,13 +302,17 @@ describe("Contacts", () => {
 		["close", "Modal__close-button"],
 		["cancel", "DeleteResource__cancel-button"],
 	])("should %s delete contact modal", async (_, buttonId) => {
+		const contactsSpy = vi
+			.spyOn(profile.contacts(), "values")
+			.mockReturnValue([profile.contacts().findById(mockContact.id())]);
+
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
+			expect(screen.getAllByTestId("ContactListItem")).toHaveLength(1);
 		});
 
-		const firstContactOptionsDropdown = within(screen.getByTestId("ContactList")).getAllByTestId(
+		const firstContactOptionsDropdown = within(screen.getAllByTestId("ContactListItem")[0]).getAllByTestId(
 			"dropdown__toggle",
 		)[0];
 		await userEvent.click(firstContactOptionsDropdown);
@@ -292,24 +333,24 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 		});
+
+		contactsSpy.mockRestore();
 	});
 
 	it("should update contact from update modal", async () => {
 		const newName = "Updated name";
 
-		const contact = profile.contacts().first();
-		const address = contact.addresses().create({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-		});
+		const contactsSpy = vi
+			.spyOn(profile.contacts(), "values")
+			.mockReturnValue([profile.contacts().findById(mockContact.id())]);
 
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
+			expect(screen.getAllByTestId("ContactListItem")).toHaveLength(1);
 		});
 
-		const firstContactOptionsDropdown = within(screen.getByTestId("ContactList")).getAllByTestId(
+		const firstContactOptionsDropdown = within(screen.getAllByTestId("ContactListItem")[0]).getAllByTestId(
 			"dropdown__toggle",
 		)[0];
 		await userEvent.click(firstContactOptionsDropdown);
@@ -324,19 +365,15 @@ describe("Contacts", () => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		});
 
-		const nameInput = screen.getByTestId("contact-form__name-input");
+		const nameInput = screen.getByTestId(contactFormNameInputId);
 
-		expect(nameInput).toHaveValue(profile.contacts().first().name());
+		expect(nameInput).toHaveValue("Mock Contact");
 
 		(nameInput as HTMLInputElement).select();
 		await userEvent.clear(nameInput);
 		await userEvent.type(nameInput, newName);
 
 		expect(nameInput).toHaveValue(newName);
-
-		expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(2);
-
-		await userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[1]);
 
 		await waitFor(() => {
 			expect(saveButton()).not.toBeDisabled();
@@ -349,7 +386,9 @@ describe("Contacts", () => {
 		});
 
 		expect(screen.getByText(newName)).toBeVisible();
-		expect(screen.queryByText(address.address())).not.toBeInTheDocument();
+		expect(screen.queryByText("Mock Contact")).not.toBeInTheDocument();
+
+		contactsSpy.mockRestore();
 	});
 
 	it("should successfully delete contact from update modal", async () => {
@@ -362,7 +401,7 @@ describe("Contacts", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
+			expect(screen.getAllByTestId("ContactListItem")).toHaveLength(1);
 		});
 
 		const firstContactOptionsDropdown = within(screen.getByTestId("ContactList")).getAllByTestId(
@@ -397,22 +436,20 @@ describe("Contacts", () => {
 	it("should redirect contact address to send transfer page if there are wallets", async () => {
 		expect(profile.wallets().count()).toBeGreaterThan(0);
 
-		const newContact = createContact(profile, "New Contact", "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
-
 		const contactsSpy = vi
 			.spyOn(profile.contacts(), "values")
-			.mockReturnValue([profile.contacts().findById(newContact.id())]);
+			.mockReturnValue([profile.contacts().findById(mockContact.id())]);
 
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
+			expect(screen.getAllByTestId("ContactListItem")).toHaveLength(1);
 		});
 
 		await userEvent.click(sendButton());
 
 		expect(history.location.pathname).toBe("/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer");
-		expect(history.location.search).toBe("?coin=ARK&recipient=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		expect(history.location.search).toBe("?coin=Mainsail&recipient=0x0000000000000000000000000000000000000000");
 
 		contactsSpy.mockRestore();
 	});
@@ -428,12 +465,10 @@ describe("Contacts", () => {
 		expect(screen.getByText(contact1.name())).toBeInTheDocument();
 		expect(screen.getByText(contact2.name())).toBeInTheDocument();
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		const searchInput = within(screen.getByTestId("SearchableTableWrapper__search-input")).getByTestId("Input");
 
-		await waitFor(() => expect(searchInput()).toBeInTheDocument());
-
-		searchInput().select();
-		await userEvent.type(searchInput(), contact1.name());
+		await userEvent.clear(searchInput);
+		await userEvent.type(searchInput, contact1.name());
 
 		await expect(screen.findByTestId("ContactListItem__name")).resolves.toBeInTheDocument();
 
@@ -441,17 +476,16 @@ describe("Contacts", () => {
 
 		expect(screen.queryByText(contact2.name())).not.toBeInTheDocument();
 
-		searchInput().select();
-		await userEvent.type(searchInput(), "Unknown Name");
+		await userEvent.clear(searchInput);
+		await userEvent.type(searchInput, "Unknown Name");
 
-		await expect(screen.findByTestId("Contacts--empty-results")).resolves.toBeVisible();
+		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 	});
 
 	it("should search for contact by address", async () => {
 		const blankProfile = await env.profiles().create("empty");
 
 		const resetBlankProfileNetworksMock = mockProfileWithPublicAndTestNetworks(blankProfile);
-
 		const contact1 = createContact(blankProfile, "contact1", "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		const contact2 = createContact(blankProfile, "contact2", "D5YZY7CKdeHtUQhWdmBaqqXvNshq3Tkj4a");
 
@@ -463,21 +497,21 @@ describe("Contacts", () => {
 			expect(screen.getAllByTestId("ContactListItem__address")).toHaveLength(2);
 		});
 
-		await userEvent.click(within(screen.getAllByTestId("HeaderSearchBar")[0]).getByRole("button"));
+		await expect(screen.findByTestId("SearchableTableWrapper__search-input")).resolves.toBeVisible();
 
-		await waitFor(() => expect(searchInput()).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("SearchableTableWrapper__search-input")).getByTestId("Input");
 
-		searchInput().select();
-		await userEvent.type(searchInput(), contact1Address);
+		await userEvent.clear(searchInput);
+		await userEvent.type(searchInput, contact1Address);
 
 		await waitFor(() => expect(screen.getAllByTestId("ContactListItem__address")).toHaveLength(1));
 
 		expect(screen.queryByText(contact2.name())).not.toBeInTheDocument();
 
-		searchInput().select();
-		await userEvent.type(searchInput(), "Unknown Address");
+		await userEvent.clear(searchInput);
+		await userEvent.type(searchInput, "Unknown Address");
 
-		await expect(screen.findByTestId("Contacts--empty-results")).resolves.toBeVisible();
+		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 
 		env.profiles().forget(blankProfile.id());
 

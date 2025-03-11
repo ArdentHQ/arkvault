@@ -31,9 +31,9 @@ export const UpdateContact: React.VFC<UpdateContactProperties> = ({
 	const { isSm, isXs } = useBreakpoint();
 	const { persist } = useEnvironmentContext();
 
-	const handleSave = async ({ name, addresses }: ContactFormData) => {
+	const handleSave = async ({ name, address }: ContactFormData) => {
 		profile.contacts().update(contact.id(), {
-			addresses,
+			addresses: [address],
 			name,
 		});
 		await persist();

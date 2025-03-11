@@ -10,7 +10,7 @@ import { Button } from "@/app/components/Button";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { WalletStatus } from "./AddressRow";
-import classNames from "classnames";
+import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
 
 interface AddressRowMobileProperties {
 	index: number;
@@ -117,17 +117,9 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	return (
 		<tr data-testid="AddressRowMobile">
 			<td className="pt-3">
-				<div
-					className={classNames(
-						"flex flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800",
-						{},
-					)}
-				>
-					<div className="flex justify-between overflow-hidden bg-theme-secondary-100 px-4 py-3 dark:bg-black">
-						<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">
-							{alias}
-						</span>
-
+				<MobileTableElement
+					title={alias}
+					titleExtra={
 						<div className="flex items-center gap-3">
 							<WalletStatus
 								dataTestId={`AddressRowMobile__wallet-status-${index}`}
@@ -153,45 +145,32 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 								{t("COMMON.VOTE")}
 							</Button>
 						</div>
-					</div>
+					}
+					bodyClassName="sm:grid-cols-3"
+				>
+					<MobileTableElementRow title={t("COMMON.ADDRESS")}>
+						<Address address={wallet.address()} size="sm" />
+					</MobileTableElementRow>
 
-					<div className="grid gap-4 px-4 py-3 sm:grid-cols-3">
-						<div className="grid grid-cols-1 gap-2">
-							<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200">
-								{t("COMMON.ADDRESS")}
-							</div>
+					<MobileTableElementRow title={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}>
+						{renderWalletVotes()}
+					</MobileTableElementRow>
 
-							<div>
-								<Address address={wallet.address()} size="sm" />
-							</div>
-						</div>
-
-						<div className="grid grid-cols-1 gap-2">
-							<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200">
-								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
-							</div>
-
-							<div>{renderWalletVotes()}</div>
-						</div>
-						<div className="hidden grid-cols-1 gap-2 sm:grid">
-							<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200">
-								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VALIDATOR_STATUS")}
-							</div>
-
-							<div>
-								<WalletStatus
-									wallet={votes[0]?.wallet}
-									activeDelegates={wallet.network().delegateCount()}
-									fallback={
-										<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
-											{t("COMMON.NOT_AVAILABLE")}
-										</span>
-									}
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
+					<MobileTableElementRow
+						title={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VALIDATOR_STATUS")}
+						className="hidden sm:grid"
+					>
+						<WalletStatus
+							wallet={votes[0]?.wallet}
+							activeDelegates={wallet.network().delegateCount()}
+							fallback={
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
+									{t("COMMON.NOT_AVAILABLE")}
+								</span>
+							}
+						/>
+					</MobileTableElementRow>
+				</MobileTableElement>
 			</td>
 		</tr>
 	);

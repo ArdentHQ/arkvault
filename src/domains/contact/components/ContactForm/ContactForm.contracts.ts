@@ -6,20 +6,10 @@ interface AddressItem {
 	name: string;
 }
 
-interface AddressListItemProperties {
-	address: AddressItem;
-	onRemove: () => void;
-}
-
 interface NetworkOption {
 	label: string;
 	value: string;
 	isTestNetwork?: boolean;
-}
-
-interface AddressListProperties {
-	addresses: AddressItem[];
-	onRemove: (address: AddressItem) => void;
 }
 
 interface ContactFormProperties {
@@ -33,7 +23,7 @@ interface ContactFormProperties {
 }
 
 interface ContactFormData {
-	addresses: AddressItem[];
+	address: AddressItem;
 	name: string;
 }
 
@@ -42,12 +32,4 @@ interface ContactFormState {
 	address: string;
 }
 
-export type {
-	AddressItem,
-	AddressListItemProperties,
-	AddressListProperties,
-	ContactFormData,
-	ContactFormProperties,
-	ContactFormState,
-	NetworkOption,
-};
+export type { AddressItem, ContactFormData, ContactFormProperties, ContactFormState, NetworkOption };
