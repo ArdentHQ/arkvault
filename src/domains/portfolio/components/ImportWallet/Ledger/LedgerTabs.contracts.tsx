@@ -16,7 +16,6 @@ export interface LedgerTabsProperties {
 	onStepChange?: (step: LedgerTabStep) => void;
 	activeIndex?: LedgerTabStep;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
-	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 }
 
 export interface LedgerTableProperties extends ReturnType<typeof useLedgerScanner> {

@@ -140,10 +140,9 @@ export const StepHeader = ({ step, importOption }: { step: Step; importOption: I
 	return headers[step];
 };
 
-export const LedgerStepHeader = ({ step, importOption }: { step: Step; importOption: ImportOption | undefined }): JSX.Element => {
+export const LedgerStepHeader = ({ step, importOption }: { step: LedgerTabStep; importOption: ImportOption | undefined }): JSX.Element => {
 	const { t } = useTranslation();
 
-	console.log({ import})
 	const headers: Record<string, JSX.Element> = {
 		[LedgerTabStep.LedgerConnectionStep]: (
 			<Header
