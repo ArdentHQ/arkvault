@@ -1,15 +1,15 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { FeeField } from "@/domains/transaction/components/FeeField";
 
 export const ReviewStep = ({
 	wallet,
@@ -22,9 +22,9 @@ export const ReviewStep = ({
 
 	const { getValues, unregister } = useFormContext();
 
-	const { gasPrice, gasLimit } = getValues();
+	const { validatorPublicKey } = getValues();
 
-	const fee = calculateGasFee(gasPrice, gasLimit);
+	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -80,12 +80,15 @@ export const ReviewStep = ({
 
 				<div data-testid="DetailWrapper">
 					<div className="mt-0 p-3 sm:p-0">
-						<TotalAmountBox
-							amount={0}
-							fee={fee}
-							ticker={wallet.currency()}
-							convertValues={!wallet.network().isTest()}
-						/>
+						<FormField name="fee">
+							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
+							<FeeField
+								type="delegateRegistration"
+								data={feeTransactionData}
+								network={wallet.network()}
+								profile={profile}
+							/>
+						</FormField>
 					</div>
 				</div>
 			</div>
