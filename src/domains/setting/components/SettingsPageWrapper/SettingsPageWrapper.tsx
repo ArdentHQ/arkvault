@@ -36,7 +36,7 @@ export const SettingsWrapper = ({
 			<Section>
 				<div className="flex flex-1">
 					<div className="mx-auto flex w-full flex-col lg:container lg:flex-row lg:space-x-3">
-						<div>
+						<div className="mb-4 md:-mt-4 lg:my-0">
 							<SideBar
 								items={menuItems}
 								activeItem={activeSettings}
