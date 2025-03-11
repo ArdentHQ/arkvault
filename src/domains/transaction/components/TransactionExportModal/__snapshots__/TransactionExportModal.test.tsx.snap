@@ -72,7 +72,7 @@ exports[`TransactionExportModal > should render 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <div>
@@ -709,7 +709,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <div>
@@ -1346,7 +1346,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <div>
@@ -1634,7 +1634,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
               Export your wallet's transaction history.
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <div>
@@ -1922,7 +1922,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
               Export your wallet's transaction history.
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <div>
@@ -2210,7 +2210,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <div>
@@ -2847,7 +2847,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="mt-8"
+              class="space-y-5 mt-8"
               data-testid="Form"
             >
               <div>

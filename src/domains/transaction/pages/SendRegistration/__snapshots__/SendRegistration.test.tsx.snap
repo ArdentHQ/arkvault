@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Registration > should register validator with keyboard 1`] = `<DocumentFragment />`;
+
+exports[`Registration > should register validator without keyboard 1`] = `<DocumentFragment />`;
