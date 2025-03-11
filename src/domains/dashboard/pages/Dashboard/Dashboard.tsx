@@ -76,7 +76,7 @@ export const Dashboard = ({
 
 				setVotes(wallet.voting().current());
 			} catch {
-				// TODO: Retry sync if error code is greater than 499. Needs status code number from sdk.
+				setVotes([]);
 			}
 
 			setIsLoadingVotes(false);
@@ -87,7 +87,7 @@ export const Dashboard = ({
 			return;
 		}
 
-		syncVotes(selectedWallet);
+		void syncVotes(selectedWallet);
 	}, [selectedWallet, env, activeProfile]);
 
 	useEffect(() => {
