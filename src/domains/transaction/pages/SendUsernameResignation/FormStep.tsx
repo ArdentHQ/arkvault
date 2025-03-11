@@ -95,11 +95,6 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 						</div>
 					</div>
 				</DetailWrapper>
-
-				<FormField name="fee">
-					<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
-					<FeeField type="usernameResignation" data={undefined} network={network} profile={profile} />
-				</FormField>
 			</div>
 		</section>
 	);
