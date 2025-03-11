@@ -61,7 +61,9 @@ export const SendVote = () => {
 		profile: activeProfile,
 	});
 
-	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
+	const walletFromUrl= useActiveWalletWhenNeeded(false);
+	const initialStep = useMemo(() => walletFromUrl ? Step.ReviewStep: Step.FormStep, [walletFromUrl]);
+	const [activeTab, setActiveTab] = useState<Step>(initialStep);
 
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
@@ -179,7 +181,7 @@ export const SendVote = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (activeTab === Step.FormStep) {
+		if (activeTab === Step.FormStep || (activeTab === Step.ReviewStep && skipFormStep)) {
 			const parameters = new URLSearchParams();
 
 			if (!wallet) {
@@ -443,10 +445,14 @@ export const SendVote = () => {
 	const hasErrors = Object.values(errors).length > 0;
 	const isNextDisabled = isDirty ? hasErrors : true;
 
+	const skipFormStep = initialStep === Step.ReviewStep;
+	const stepsCount = skipFormStep ? 3 : 4;
+	const activeIndex = skipFormStep ? activeTab - 1: activeTab;
+
 	return (
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
 			<Section className="flex-1">
-				<StepsProvider activeStep={activeTab} steps={4}>
+				<StepsProvider activeStep={activeIndex} steps={stepsCount}>
 					<Form className="mx-auto max-w-xl" context={form} onSubmit={submitForm}>
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
@@ -467,6 +473,7 @@ export const SendVote = () => {
 										unvotes={unvotes}
 										votes={votes}
 										wallet={activeWallet}
+										profile={activeProfile}
 									/>
 								)}
 							</TabPanel>
@@ -515,8 +522,8 @@ export const SendVote = () => {
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}
 									isNextDisabled={isNextDisabled}
-									size={4}
-									activeIndex={activeTab}
+									size={stepsCount}
+									activeIndex={activeIndex}
 								/>
 							)}
 						</Tabs>

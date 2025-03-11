@@ -20,22 +20,6 @@ type FormStepProperties = {
 export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFieldDisabled }: FormStepProperties) => {
 	const { t } = useTranslation();
 
-	const showFeeInput = useMemo(() => network.chargesZeroFees() === false, [wallet]);
-
-	const feeTransactionData = useMemo(
-		() => ({
-			unvotes: unvotes.map((vote) => ({
-				amount: vote.amount,
-				id: vote.wallet?.governanceIdentifier(),
-			})),
-			votes: votes.map((vote) => ({
-				amount: vote.amount,
-				id: vote.wallet?.governanceIdentifier(),
-			})),
-		}),
-		[unvotes, votes, wallet],
-	);
-
 	const { setValue } = useFormContext();
 
 	return (
@@ -75,13 +59,6 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 			</FormField>
 
 			<VoteTransactionType votes={votes} unvotes={unvotes} />
-
-			{showFeeInput && (
-				<FormField name="fee" className="flex-1">
-					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<FeeField type="vote" data={feeTransactionData} network={network} profile={profile} />
-				</FormField>
-			)}
 		</section>
 	);
 };

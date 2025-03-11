@@ -86,7 +86,7 @@ export const Votes: FC = () => {
 		if (selectedAddress) {
 			fetchVotes(selectedAddress, activeNetwork.id());
 		}
-	}, [fetchVotes, selectedAddress, activeNetwork]);
+	}, [fetchVotes, selectedAddress, activeNetwork.id()]);
 
 	useEffect(() => {
 		if (hasWalletId) {
