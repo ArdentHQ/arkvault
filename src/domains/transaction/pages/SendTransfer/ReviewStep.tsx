@@ -1,28 +1,32 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { Networks } from "@ardenthq/sdk";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { FeeField } from "@/domains/transaction/components/FeeField";
+import { getFeeType } from "@/domains/transaction/pages/SendTransfer/utils";
+import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Amount } from "@/app/components/Amount";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
+	network: Networks.Network;
 }
 
-export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
+export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network }) => {
 	const { t } = useTranslation();
 
-	const { unregister, watch } = useFormContext();
-	const { gasPrice, gasLimit, recipients } = watch();
+	const { unregister, watch, } = useFormContext();
+	const { recipients } = watch();
 	const profile = useActiveProfile();
-
-	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	let amount = 0;
 
@@ -37,6 +41,27 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
+
+	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
+
+	const coin = profile.coins().get(network.coin(), network.id());
+	useEffect(() => {
+		const updateFeeTransactionData = async () => {
+			const transferData = await buildTransferData({
+				coin,
+				recipients,
+			});
+
+			setFeeTransactionData(transferData);
+		};
+
+		void updateFeeTransactionData();
+	}, [recipients, coin]);
+
+	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
+
+	const isTestnet = wallet.network().isTest();
+	const convertedAmount = isTestnet ? 0 : convert(amount);
 
 	return (
 		<section data-testid="SendTransfer__review-step">
@@ -63,17 +88,46 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 
 				<div className="space-y-3 sm:space-y-2">
 					<div className="mx-3 sm:mx-0">
-						<TotalAmountBox
-							amount={amount}
-							fee={fee}
-							ticker={wallet.currency()}
-							convertedAmount={convert(amount)}
-							convertedFee={convert(fee)}
-							convertValues={!wallet.network().isTest()}
-							exchangeTicker={exchangeTicker}
-						/>
+						<DetailWrapper
+							label={t("COMMON.TRANSACTION_SUMMARY")}
+							className="rounded-xl"
+						>
+							<div className="flex flex-col gap-3">
+								<div
+									className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+									data-testid="AmountSection"
+								>
+									<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.AMOUNT")}</DetailTitle>
+
+									<div className="flex flex-row items-center gap-2">
+										<Amount ticker={ticker} value={amount} className="font-semibold" />
+										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
+											<div className="font-semibold text-theme-secondary-700">
+												(~
+												<Amount ticker={exchangeTicker} value={convertedAmount} />)
+											</div>
+										)}
+									</div>
+								</div>
+							</div>
+						</DetailWrapper>
 					</div>
 				</div>
+
+
+				{showFeeInput && (
+					<FormField name="fee" disableStateHints>
+						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
+						{!!network && (
+							<FeeField
+								type={getFeeType(recipients?.length)}
+								data={feeTransactionData}
+								network={network}
+								profile={profile}
+							/>
+						)}
+					</FormField>
+				)}
 			</div>
 		</section>
 	);

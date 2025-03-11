@@ -44,43 +44,15 @@ export const FormStep = ({
 	onScan?: () => void;
 	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
 }) => {
-	const isMounted = useRef(true);
-
 	const { t } = useTranslation();
 
 	const { isXs } = useBreakpoint();
 
-	const { getValues, setValue } = useFormContext();
+	const { setValue, getValues } = useFormContext();
+
 	const { recipients } = getValues();
 
 	const { allWallets } = usePortfolio({ profile });
-
-	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
-
-	const coin = profile.coins().get(network.coin(), network.id());
-	useEffect(() => {
-		const updateFeeTransactionData = async () => {
-			const transferData = await buildTransferData({
-				coin,
-				recipients,
-			});
-
-			/* istanbul ignore next -- @preserve */
-			if (isMounted.current) {
-				setFeeTransactionData(transferData);
-			}
-		};
-
-		updateFeeTransactionData();
-	}, [recipients, coin]);
-
-	useEffect(
-		/* istanbul ignore next -- @preserve */
-		() => () => {
-			isMounted.current = false;
-		},
-		[],
-	);
 
 	const getRecipients = (): RecipientItem[] => {
 		if (deeplinkProps.recipient && deeplinkProps.amount) {
@@ -110,8 +82,6 @@ export const FormStep = ({
 			sender,
 		});
 	};
-
-	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 
 	return (
 		<section data-testid="SendTransfer__form-step">
@@ -189,20 +159,6 @@ export const FormStep = ({
 						wallet={senderWallet}
 					/>
 				</div>
-
-				{showFeeInput && (
-					<FormField name="fee" disableStateHints>
-						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-						{!!network && (
-							<FeeField
-								type={getFeeType(recipients?.length)}
-								data={feeTransactionData}
-								network={network}
-								profile={profile}
-							/>
-						)}
-					</FormField>
-				)}
 			</div>
 		</section>
 	);
