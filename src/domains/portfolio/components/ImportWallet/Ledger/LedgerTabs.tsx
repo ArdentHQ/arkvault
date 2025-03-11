@@ -17,7 +17,6 @@ import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { useTranslation } from "react-i18next";
-import { ProgressBar } from "react-toastify/dist/components";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
@@ -26,7 +25,6 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-	const { t } = useTranslation();
 
 	const history = useHistory();
 	const {

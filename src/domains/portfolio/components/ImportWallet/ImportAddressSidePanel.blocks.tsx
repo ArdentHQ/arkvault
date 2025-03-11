@@ -4,7 +4,7 @@ import { StepIndicator } from "@/app/components/StepIndicator";
 import { useTranslation } from "react-i18next";
 import { Header } from "@/app/components/Header";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
-import { ImportOption, OptionsValue } from "@/domains/wallet/hooks";
+import { ImportOption } from "@/domains/wallet/hooks";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 
 enum Step {
@@ -143,6 +143,7 @@ export const StepHeader = ({ step, importOption }: { step: Step; importOption: I
 export const LedgerStepHeader = ({ step, importOption }: { step: Step; importOption: ImportOption | undefined }): JSX.Element => {
 	const { t } = useTranslation();
 
+	console.log({ import})
 	const headers: Record<string, JSX.Element> = {
 		[LedgerTabStep.LedgerConnectionStep]: (
 			<Header

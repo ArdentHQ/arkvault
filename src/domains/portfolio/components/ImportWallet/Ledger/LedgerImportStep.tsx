@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
-import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { LedgerData } from "@/app/contexts/Ledger";
 import { assertWallet } from "@/utils/assertions";

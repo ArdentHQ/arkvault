@@ -5,11 +5,9 @@ import { useTranslation } from "react-i18next";
 
 import { LedgerCancelling } from "./LedgerCancelling";
 import { Alert } from "@/app/components/Alert";
-import { Header } from "@/app/components/Header";
 import { Image } from "@/app/components/Image";
 import { useLedgerContext } from "@/app/contexts/Ledger";
 import { useActiveProfile } from "@/app/hooks";
-import { Icon } from "@/app/components/Icon";
 import { Loader } from "@/app/components/Loader";
 
 const ConnectionContent = ({
@@ -52,7 +50,6 @@ export const LedgerConnectionStep = ({
 	onConnect?: () => void;
 	onFailed?: (error: Error) => void;
 }) => {
-	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 
 	const { register, setValue, unregister } = useFormContext();
