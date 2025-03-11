@@ -374,13 +374,6 @@ export const LedgerScanStep = ({
 
 	return (
 		<section data-testid="LedgerScanStep" className="space-y-4">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
-				titleIcon={<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600" />}
-				className="hidden sm:block"
-			/>
-
 			{error ? (
 				<Alert variant="danger">
 					<span data-testid="LedgerScanStep__error">{error}</span>

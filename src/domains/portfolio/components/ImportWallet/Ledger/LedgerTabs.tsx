@@ -17,10 +17,12 @@ import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { useTranslation } from "react-i18next";
+import { ProgressBar } from "react-toastify/dist/components";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
 	onClickEditWalletName,
+	onStepChange
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -79,6 +81,7 @@ export const LedgerTabs = ({
 		}
 
 		setActiveTab(activeTab + 1);
+		onStepChange?.(activeTab + 1);
 	}, [activeTab, handleSubmit, importWallets]);
 
 	useEffect(() => {
@@ -122,22 +125,20 @@ export const LedgerTabs = ({
 	const handleBack = useCallback(() => {
 		listenDevice();
 
-		return setActiveTab(LedgerTabStep.LedgerScanStep);
+		setActiveTab(LedgerTabStep.LedgerScanStep);
+		onStepChange?.(LedgerTabStep.LedgerScanStep);
 	}, [activeTab, history, listenDevice]);
-
-	const steps = [
-		t("WALLETS.CONNECT_LEDGER.HEADER"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ACCOUNTS"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE"),
-	];
 
 	return (
 		<Tabs id="ledgerTabs" activeId={activeTab}>
 			<div data-testid="LedgerTabs" className="mt-8">
 				<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
 					<ListenLedger
-						onDeviceAvailable={() => setActiveTab(LedgerTabStep.LedgerConnectionStep)}
+						noHeading
+						onDeviceAvailable={() => {
+							setActiveTab(LedgerTabStep.LedgerConnectionStep)
+							onStepChange?.(LedgerTabStep.LedgerConnectionStep)
+						}}
 						onDeviceNotAvailable={handleDeviceNotAvailable}
 					/>
 				</TabPanel>
@@ -145,7 +146,10 @@ export const LedgerTabs = ({
 				<TabPanel tabId={LedgerTabStep.LedgerConnectionStep}>
 					<LedgerConnectionStep
 						cancelling={cancelling}
-						onConnect={() => setActiveTab(LedgerTabStep.LedgerScanStep)}
+						onConnect={() => {
+							setActiveTab(LedgerTabStep.LedgerScanStep)
+							onStepChange?.(LedgerTabStep.LedgerScanStep)
+						}}
 						network={activeNetwork}
 					/>
 				</TabPanel>
@@ -168,16 +172,18 @@ export const LedgerTabs = ({
 					/>
 				</TabPanel>
 
-				<ImportActionToolbar
-					activeTab={activeTab}
-					showSteps
-					showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
-					onBack={handleBack}
-					isContinueDisabled={isNextDisabled}
-					onContinue={handleNext}
-					allSteps={steps}
-					isSubmitDisabled={isSubmitting}
-				/>
+				{[LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab) && (
+					<ImportActionToolbar
+						activeTab={activeTab}
+						showSteps
+						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
+						onBack={handleBack}
+						isContinueDisabled={isNextDisabled}
+						onContinue={handleNext}
+						allSteps={["1", "2"]}
+						isSubmitDisabled={isSubmitting}
+					/>
+				)}
 			</div>
 		</Tabs>
 	);

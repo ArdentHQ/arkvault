@@ -134,24 +134,8 @@ export const LedgerImportStep = ({
 	wallets: LedgerData[];
 	profile: Contracts.IProfile;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
-}) => {
-	const { t } = useTranslation();
-
-	return (
+}) => (
 		<section data-testid="LedgerImportStep">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE", { count: wallets.length })}
-				titleIcon={
-					<Icon
-						name="DoubleCheckedCircle"
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[22, 22]}
-					/>
-				}
-				className="mb-4 hidden sm:block"
-			/>
-
 			{wallets.length > 1 ? (
 				<MultipleImport
 					wallets={wallets}
@@ -169,4 +153,3 @@ export const LedgerImportStep = ({
 			)}
 		</section>
 	);
-};

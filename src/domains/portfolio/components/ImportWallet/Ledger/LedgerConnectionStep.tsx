@@ -95,18 +95,6 @@ export const LedgerConnectionStep = ({
 
 	return (
 		<section data-testid="LedgerConnectionStep" className="space-y-4">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.SUBTITLE")}
-				titleIcon={
-					<Icon
-						name="LedgerAlt"
-						dimensions={[22, 22]}
-						className="stroke-theme-primary-600 stroke-2 text-theme-primary-100 dark:text-theme-primary-900"
-					/>
-				}
-				className="hidden md:block"
-			/>
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
 		</section>
 	);
