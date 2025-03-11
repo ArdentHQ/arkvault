@@ -1,4 +1,3 @@
-import { uniq } from "@ardenthq/sdk-helpers";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useHistory } from "react-router-dom";
@@ -13,10 +12,11 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { LedgerData, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
+import { useTranslation } from "react-i18next";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
@@ -24,14 +24,20 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+	const { t } = useTranslation();
 
 	const history = useHistory();
-	const { importLedgerWallets, isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected } =
-		useLedgerContext();
+	const {
+		importLedgerWallets,
+		isBusy,
+		disconnect,
+		isAwaitingConnection,
+		isAwaitingDeviceConfirmation,
+		isConnected,
+		listenDevice,
+	} = useLedgerContext();
 
-	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
-
-	const { formState, getValues, handleSubmit } = useFormContext();
+	const { formState, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
 
 	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
@@ -44,14 +50,12 @@ export const LedgerTabs = ({
 	const retryFunctionReference = useRef<() => void>();
 
 	const importWallets = useCallback(
-		async ({ network, wallets }: any) => {
+		async ({ wallets }: any) => {
 			setImportedWallets(wallets);
-			const coin = activeProfile.coins().set(network.coin(), network.id());
+			const coin = activeProfile.coins().set(activeNetwork.coin(), activeNetwork.id());
 			await importLedgerWallets(wallets, coin, activeProfile);
-
-			setValue("selectedNetworkIds", uniq([...selectedNetworkIds, coin.network().id()]));
 		},
-		[importLedgerWallets, activeProfile, setValue, selectedNetworkIds],
+		[importLedgerWallets, activeProfile, activeNetwork],
 	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);
@@ -105,15 +109,28 @@ export const LedgerTabs = ({
 
 		const importedWallet = activeProfile
 			.wallets()
-			.findByAddressWithNetwork(importedWallets[0].address, getValues("network").id());
+			.findByAddressWithNetwork(importedWallets[0].address, activeNetwork.id());
 
 		assertWallet(importedWallet);
 		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
-	}, [isMultiple, history, activeProfile, getValues, importedWallets]);
+	}, [isMultiple, history, activeProfile, activeNetwork, importedWallets]);
 
 	const handleDeviceNotAvailable = useCallback(() => {
 		history.replace(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }));
 	}, [history, activeProfile]);
+
+	const handleBack = useCallback(() => {
+		listenDevice();
+
+		return setActiveTab(LedgerTabStep.LedgerScanStep);
+	}, [activeTab, history, listenDevice]);
+
+	const steps = [
+		t("WALLETS.CONNECT_LEDGER.HEADER"),
+		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE"),
+		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ACCOUNTS"),
+		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE"),
+	];
 
 	return (
 		<Tabs id="ledgerTabs" activeId={activeTab}>
@@ -144,11 +161,23 @@ export const LedgerTabs = ({
 
 				<TabPanel tabId={LedgerTabStep.LedgerImportStep}>
 					<LedgerImportStep
+						network={activeNetwork}
 						wallets={importedWallets}
 						profile={activeProfile}
 						onClickEditWalletName={onClickEditWalletName}
 					/>
 				</TabPanel>
+
+				<ImportActionToolbar
+					activeTab={activeTab}
+					showSteps
+					showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
+					onBack={handleBack}
+					isContinueDisabled={isNextDisabled}
+					onContinue={handleNext}
+					allSteps={steps}
+					isSubmitDisabled={isSubmitting}
+				/>
 			</div>
 		</Tabs>
 	);
