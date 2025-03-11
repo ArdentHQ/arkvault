@@ -20,7 +20,7 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 	}, []);
 
 	return (
-		<div className="w-full sm:w-[35rem]" data-testid="NotificationsWrapper">
+		<div className="w-full dark:bg-theme-dark-900 sm:w-[35rem]" data-testid="NotificationsWrapper">
 			<div className="flex items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black">
 				<div className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
 					Notification
@@ -46,7 +46,9 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 					{transactions.length > 0 && (
 						<NotificationTransactionsTable
 							profile={profile}
-							isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
+							isLoading={
+								/* profile.notifications().transactions().isSyncing() || */ transactions.length === 0
+							}
 							transactions={transactions}
 							onClick={(item) => {
 								onTransactionClick?.(item);
