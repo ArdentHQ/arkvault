@@ -10,7 +10,6 @@ import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/a
 import { ValidatorsTable } from "@/domains/vote/components/ValidatorsTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
 import { VotesHeader } from "@/domains/vote/components/VotesHeader";
-import { VotingWallets } from "@/domains/vote/components/VotingWallets/VotingWallets";
 import { useValidators } from "@/domains/vote/hooks/use-validators";
 import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
@@ -18,7 +17,8 @@ import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-para
 import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { VotesSection } from "@/domains/vote/components/VotesSection";
+import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
+import { AddressTable } from "@/domains/vote/components/AddressTable";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -142,20 +142,21 @@ export const Votes: FC = () => {
 			)}
 
 			{hasWallets && !isSelectValidatorStep && (
-				<VotesSection
+				<SearchableTableWrapper
 					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
 					searchQuery={searchQuery}
 					setSearchQuery={setSearchQuery}
+					searchPlaceholder={t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER")}
 				>
-					<VotingWallets
-						showEmptyResults={hasEmptyResults}
-						wallets={filteredWallets}
-						onSelectAddress={handleSelectAddress}
+					<AddressTable
 						network={activeNetwork}
+						wallets={filteredWallets}
+						onSelect={handleSelectAddress}
 						searchQuery={searchQuery}
 						setSearchQuery={setSearchQuery}
+						showEmptyResults={hasEmptyResults}
 					/>
-				</VotesSection>
+				</SearchableTableWrapper>
 			)}
 
 			{isSelectValidatorStep && (
