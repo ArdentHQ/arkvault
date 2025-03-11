@@ -43,11 +43,11 @@ export const SidePanel = ({
 
 		const id = setTimeout(() => {
 			onChange(false);
-		}, ANIMATION_DURATION)
+		}, ANIMATION_DURATION);
 
 		return () => {
 			clearTimeout(id);
-		}
+		};
 	}, [onChange, open]);
 
 	const { refs, context } = useFloating({

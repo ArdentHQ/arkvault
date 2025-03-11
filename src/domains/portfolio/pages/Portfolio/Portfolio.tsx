@@ -34,15 +34,12 @@ export const Portfolio = () => {
 					/>
 				</Page>
 			)}
-			{showCreateAddressPanel &&
-				<CreateAddressesSidePanel
-					open={true}
-				onOpenChange={setShowCreateAddressPanel}
-				/>
-			}
-			{showImportAddressPanel &&
+			{showCreateAddressPanel && (
+				<CreateAddressesSidePanel open={true} onOpenChange={setShowCreateAddressPanel} />
+			)}
+			{showImportAddressPanel && (
 				<ImportAddressesSidePanel open={true} onOpenChange={setShowImportAddressPanel} />
-			}
+			)}
 		</>
 	);
 };

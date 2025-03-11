@@ -367,19 +367,21 @@ export const PortfolioHeader = ({
 				</div>
 			</div>
 
-			{showAddressesPanel && <AddressesSidePanel
-				profile={profile}
-				wallets={allWallets}
-				defaultSelectedAddresses={selectedAddresses}
-				onClose={(addresses) => {
-					setSelectedAddresses(addresses);
-				}}
-				open={showAddressesPanel}
-				onOpenChange={setShowAddressesPanel}
-				onDelete={(address) => {
-					void onDeleteAddress(address);
-				}}
-			/>}
+			{showAddressesPanel && (
+				<AddressesSidePanel
+					profile={profile}
+					wallets={allWallets}
+					defaultSelectedAddresses={selectedAddresses}
+					onClose={(addresses) => {
+						setSelectedAddresses(addresses);
+					}}
+					open={showAddressesPanel}
+					onOpenChange={setShowAddressesPanel}
+					onDelete={(address) => {
+						void onDeleteAddress(address);
+					}}
+				/>
+			)}
 
 			<WalletActionsModals
 				wallets={selectedWallets}
