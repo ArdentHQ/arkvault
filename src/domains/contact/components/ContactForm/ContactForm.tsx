@@ -1,19 +1,17 @@
-import { Coins } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { AddressList } from "./ContactForm.blocks";
-import { AddressItem, ContactFormProperties, ContactFormState } from "./ContactForm.contracts";
+import { ContactFormProperties, ContactFormState } from "./ContactForm.contracts";
 import { Button } from "@/app/components/Button";
-import { Form, FormButtons, FormField, FormLabel, SubForm } from "@/app/components/Form";
+import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { InputAddress, InputDefault } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
+import { Coins } from "@ardenthq/sdk";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
@@ -24,19 +22,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	onSave,
 	errors,
 }) => {
-	const [addresses, setAddresses] = useState<AddressItem[]>(() =>
-		contact
-			? contact
-					.addresses()
-					.values()
-					.map((address: Contracts.IContactAddress) => ({
-						address: address.address(),
-						coin: address.coin(),
-						name: contact.name(),
-					}))
-			: [],
-	);
-
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 	const { env } = useEnvironmentContext();
@@ -45,13 +30,13 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
-			address: "",
+			address: contact?.addresses().first().address() ?? "",
 			name: contact?.name() ?? "",
 		},
 		mode: "onChange",
 	});
 
-	const { formState, register, setError, setValue, watch } = form;
+	const { formState, register, setError, watch } = form;
 	const { isValid } = formState;
 
 	const { name, address } = watch();
@@ -64,49 +49,17 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 		}
 	}, [errors, setError]);
 
-	const handleAddAddress = async () => {
-		if (!network) {
-			return setError("address", { message: t("CONTACTS.VALIDATION.NETWORK_NOT_AVAILABLE"), type: "manual" });
-		}
-
-		const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
-		await instance.__construct();
-		const isValidAddress: boolean = await instance.address().validate(address);
-
-		if (!isValidAddress) {
-			return setError("address", { message: t("CONTACTS.VALIDATION.ADDRESS_IS_INVALID"), type: "manual" });
-		}
-
-		const duplicateAddress = profile.contacts().findByAddress(address);
-
-		if (duplicateAddress.length > 0) {
-			return setError("address", { message: t("CONTACTS.VALIDATION.CONTACT_ADDRESS_EXISTS"), type: "manual" });
-		}
-
-		setAddresses([
-			...addresses,
-			{
-				address,
-				coin: network.coin(),
-				name: address,
-			},
-		]);
-
-		setValue("address", "");
-	};
-
-	const handleRemoveAddress = (item: AddressItem) => {
-		setAddresses(addresses.filter((current) => !(current.address === item.address)));
-	};
-
 	return (
 		<Form
 			data-testid="contact-form"
 			context={form}
-			className="space-y-0"
 			onSubmit={() =>
 				onSave({
-					addresses,
+					address: {
+						address: address,
+						coin: network!.coin(),
+						name: address,
+					},
 					name,
 				})
 			}
@@ -121,33 +74,63 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 				/>
 			</FormField>
 
-			<SubForm className="!-mx-4 !mt-4 !p-4">
-				<FormField name="address" data-testid="ContactForm__address">
-					<FormLabel>{t("CONTACTS.CONTACT_FORM.ADDRESS")}</FormLabel>
+			<FormField name="address" data-testid="ContactForm__address">
+				<FormLabel>{t("CONTACTS.CONTACT_FORM.ADDRESS")}</FormLabel>
 
-					<InputAddress
-						profile={profile}
-						useDefaultRules={false}
-						registerRef={register}
-						onChange={() => onChange("address")}
-						data-testid="contact-form__address-input"
-					/>
-				</FormField>
+				<InputAddress
+					profile={profile}
+					registerRef={register}
+					coin={network?.coin()}
+					network={network?.id()}
+					useDefaultRules={false}
+					additionalRules={{
+						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+							field: t("COMMON.ADDRESS"),
+						}).toString(),
+						validate: {
+							duplicateAddress: (address) => {
+								const isForThisContact =
+									contact && contact.addresses().findByAddress(address).length > 0;
 
-				<div className="mt-4">
-					<Button
-						data-testid="contact-form__add-address-btn"
-						variant="secondary"
-						className="w-full"
-						disabled={!address}
-						onClick={handleAddAddress}
-					>
-						{t("CONTACTS.CONTACT_FORM.ADD_ADDRESS")}
-					</Button>
-				</div>
+								const isForOtherContact = profile.contacts().findByAddress(address).length > 0;
 
-				{addresses.length > 0 && <AddressList addresses={addresses} onRemove={handleRemoveAddress} />}
-			</SubForm>
+								return (
+									isForThisContact ||
+									!isForOtherContact ||
+									t("COMMON.INPUT_ADDRESS.VALIDATION.ADDRESS_ALREADY_EXISTS", {
+										address,
+									}).toString()
+								);
+							},
+							validAddress: async (address?: string) => {
+								if (!address) {
+									return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+										field: t("COMMON.ADDRESS"),
+									}).toString();
+								}
+
+								if (!network) {
+									return t("CONTACTS.VALIDATION.NETWORK_NOT_AVAILABLE").toString();
+								}
+
+								const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
+
+								await instance.__construct();
+
+								const isValidAddress: boolean = await instance.address().validate(address);
+
+								if (!isValidAddress) {
+									return t("CONTACTS.VALIDATION.ADDRESS_IS_INVALID").toString();
+								}
+
+								return true;
+							},
+						},
+					}}
+					onChange={() => onChange("address")}
+					data-testid="contact-form__address-input"
+				/>
+			</FormField>
 
 			<div
 				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${
@@ -171,12 +154,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 						{t("COMMON.CANCEL")}
 					</Button>
 
-					<Button
-						data-testid="contact-form__save-btn"
-						type="submit"
-						variant="primary"
-						disabled={addresses.length === 0 || !isValid}
-					>
+					<Button data-testid="contact-form__save-btn" type="submit" variant="primary" disabled={!isValid}>
 						{t("COMMON.SAVE")}
 					</Button>
 				</FormButtons>

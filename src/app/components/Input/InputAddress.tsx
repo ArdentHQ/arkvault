@@ -48,10 +48,10 @@ export const InputAddress = ({
 		...additionalRules,
 		validate: {
 			validateAddress,
-			...additionalRules?.validate,
+			...additionalRules.validate,
 		},
 	};
-	const rules = useDefaultRules ? defaultRules : {};
+	const rules = useDefaultRules ? defaultRules : additionalRules;
 
 	return (
 		<Input

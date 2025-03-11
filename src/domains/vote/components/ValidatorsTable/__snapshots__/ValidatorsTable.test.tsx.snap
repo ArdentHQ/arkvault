@@ -19,8 +19,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -87,7 +87,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -5876,8 +5876,8 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -5944,7 +5944,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -11733,8 +11733,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -11801,7 +11801,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -18734,8 +18734,8 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -18802,7 +18802,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -25735,8 +25735,8 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -25803,7 +25803,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -26551,8 +26551,8 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -26619,7 +26619,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -27367,8 +27367,8 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -27435,7 +27435,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -28183,8 +28183,8 @@ exports[`ValidatorsTable > should render 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -28251,7 +28251,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -29000,8 +29000,8 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -29068,7 +29068,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -30028,8 +30028,8 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -30096,7 +30096,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -30844,8 +30844,8 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -30912,7 +30912,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -31665,8 +31665,8 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -31733,7 +31733,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -32481,8 +32481,8 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -32549,7 +32549,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -32960,8 +32960,8 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -33028,7 +33028,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -33777,8 +33777,8 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -33845,7 +33845,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -34804,8 +34804,8 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -34872,7 +34872,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -35621,8 +35621,8 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -35689,7 +35689,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -36442,8 +36442,8 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -36510,7 +36510,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -37259,8 +37259,8 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -37327,7 +37327,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -38286,8 +38286,8 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -38354,7 +38354,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -39102,8 +39102,8 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -39170,7 +39170,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />
@@ -39919,8 +39919,8 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="relative flex items-center overflow-hidden rounded-xl border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
-              data-testid="VotesSection__search-input"
+              class="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+              data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
@@ -39987,7 +39987,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                     autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="Input"
-                    placeholder="Enter the wallet’s name or address"
+                    placeholder="Enter the validator’s name or address"
                     type="text"
                     value=""
                   />

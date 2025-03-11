@@ -58,7 +58,7 @@ const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:wa
 
 const firstVoteButtonID = "DelegateRow__toggle-0";
 
-const searchInputID = "VotesSection__search-input";
+const searchInputID = "SearchableTableWrapper__search-input";
 
 describe("Votes", () => {
 	beforeAll(async () => {

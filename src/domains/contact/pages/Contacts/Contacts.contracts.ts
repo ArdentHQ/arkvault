@@ -1,11 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-export interface ContactsHeaderProperties {
-	showSearchBar: boolean;
-	onAddContact: () => void;
-	onSearch: (query: string) => void;
-}
-
 export interface ContactsHeaderExtraProperties {
 	showSearchBar: boolean;
 	onSearch?: (query: string) => void;
