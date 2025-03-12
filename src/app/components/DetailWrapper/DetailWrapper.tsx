@@ -48,7 +48,7 @@ export const DetailWrapper = ({
 		{label && <DetailLabel>{label}</DetailLabel>}
 		<div
 			className={cn(
-				"overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border",
+				"overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border",
 				className,
 				{
 					"mt-0 sm:mt-2": !!label,
