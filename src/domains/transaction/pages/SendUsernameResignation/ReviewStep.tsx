@@ -20,9 +20,7 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister } = useFormContext();
-
-	const { gasPrice, gasLimit } = getValues();
+	const { unregister } = useFormContext();
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -77,7 +75,12 @@ export const ReviewStep = ({
 				<div className="mx-3 mt-2 sm:mx-0">
 					<FormField name="fee">
 						<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
-						<FeeField type="usernameResignation" data={undefined} network={senderWallet.network()} profile={profile} />
+						<FeeField
+							type="usernameResignation"
+							data={undefined}
+							network={senderWallet.network()}
+							profile={profile}
+						/>
 					</FormField>
 				</div>
 			</div>
