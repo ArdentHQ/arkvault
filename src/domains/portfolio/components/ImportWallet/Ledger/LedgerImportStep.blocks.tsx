@@ -116,7 +116,7 @@ export const SingleImport = ({
 		<div className="flex flex-col gap-4">
 			<DesktopImportSection title={t("COMMON.IMPORTED")}>
 				<SectionBodyItem title={t("COMMON.ADDRESS")}>
-					<Address address={ledgerWallet.address} showCopyButton truncateOnTable/>
+					<Address address={ledgerWallet.address} showCopyButton truncateOnTable />
 				</SectionBodyItem>
 
 				<hr className="w-full border border-dashed border-theme-secondary-300 dark:border-theme-secondary-800" />
