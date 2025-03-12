@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { Networks } from "@ardenthq/sdk";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -15,6 +15,7 @@ import { getFeeType } from "@/domains/transaction/pages/SendTransfer/utils";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount } from "@/app/components/Amount";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -24,7 +25,7 @@ interface ReviewStepProperties {
 export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network }) => {
 	const { t } = useTranslation();
 
-	const { unregister, watch } = useFormContext();
+	const { unregister, watch, register, getValues } = useFormContext();
 	const { recipients } = watch();
 	const profile = useActiveProfile();
 
@@ -37,6 +38,18 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 	const ticker = wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, ticker });
+
+	const { common: commonValidation } = useValidation();
+
+	const walletBalance = wallet.balance();
+
+	useEffect(() => {
+		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, wallet.network()));
+		register(
+			"gasLimit",
+			commonValidation.gasLimit(walletBalance, getValues, GasLimit["transfer"], wallet.network()),
+		);
+	}, [commonValidation, register, walletBalance]);
 
 	useEffect(() => {
 		unregister("mnemonic");

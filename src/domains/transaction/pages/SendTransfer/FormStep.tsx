@@ -1,6 +1,6 @@
 import { Enums, Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -45,7 +45,11 @@ export const FormStep = ({
 
 	const { isXs } = useBreakpoint();
 
-	const { setValue, getValues } = useFormContext();
+	const { setValue, getValues, unregister } = useFormContext();
+
+	useEffect(() => {
+		unregister(["gasLimit", "gasPrice"]);
+	}, [unregister]);
 
 	const { recipients } = getValues();
 
