@@ -29,6 +29,7 @@ import {
 	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -55,7 +56,7 @@ export const SendRegistration = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues } = form;
+	const { formState, register, setValue, watch, getValues, } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
@@ -81,13 +82,6 @@ export const SendRegistration = () => {
 	useEffect(() => {
 		register("fees");
 
-		const walletBalance = activeWallet?.balance() ?? 0;
-
-		const type = registrationType === "validatorRegistration" ? "delegateRegistration" : registrationType;
-
-		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
-		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit[type], activeWallet?.network()));
-
 		register("inputFeeSettings");
 
 		register("network", { required: true });
@@ -96,6 +90,17 @@ export const SendRegistration = () => {
 		register("suppressWarning");
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
+
+	const type = registrationType === "validatorRegistration"
+		? "delegateRegistration"
+		: registrationType as keyof typeof GasLimit;
+
+	useToggleFeeFields({
+		activeTab,
+		form,
+		gasLimitType: type,
+		wallet: activeWallet
+	});
 
 	useEffect(() => {
 		if (!activeWallet) {
