@@ -17,7 +17,6 @@ import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
 import { ListDivided } from "@/app/components/ListDivided";
-import classNames from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 
 export const PasswordSettings = () => {
