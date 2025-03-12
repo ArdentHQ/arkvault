@@ -25,8 +25,6 @@ import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/Gene
 export const ServersSettings = () => {
 	const { t } = useTranslation();
 
-	const { isXs } = useBreakpoint();
-
 	const { persist, env } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const { syncServerStatus } = useProfileJobs(profile);
@@ -177,7 +175,6 @@ export const ServersSettings = () => {
 						onUpdate={setNetworkToUpdate}
 						onToggle={toggleNetwork}
 					/>
-					{/* <ListDivided items={peersOptions} /> */}
 				</SettingsGroup>
 
 				<SettingsButtonGroup>
