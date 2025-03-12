@@ -484,6 +484,7 @@ export const SendVote = () => {
 										wallet={activeWallet}
 										ledgerDetails={
 											<VoteLedgerReview
+												profile={activeProfile}
 												wallet={activeWallet}
 												votes={votes}
 												unvotes={unvotes}
