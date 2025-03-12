@@ -24,6 +24,7 @@ import { SettingsButtonGroup, SettingsGroup, ViewingMode } from "@/domains/setti
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { Image } from "@/app/components/Image";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -171,7 +172,7 @@ export const GeneralSettings: React.FC = () => {
 		},
 	];
 
-	const otherItems = [
+	const appearenceItems = [
 		{
 			itemValueClass: "ml-5",
 			label: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.TITLE")}`,
@@ -190,7 +191,7 @@ export const GeneralSettings: React.FC = () => {
 			wrapperClass: "pb-6",
 		},
 		{
-			label: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.TITLE"),
+			label: t("SETTINGS.GENERAL.OTHER.ADDRESS_NAMING.TITLE"),
 			labelAddon: (
 				<Toggle
 					name="useNetworkWalletNames"
@@ -204,9 +205,12 @@ export const GeneralSettings: React.FC = () => {
 					}
 				/>
 			),
-			labelDescription: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.DESCRIPTION"),
+			labelDescription: t("SETTINGS.GENERAL.OTHER.ADDRESS_NAMING.DESCRIPTION"),
 			wrapperClass: "py-6",
 		},
+	];
+
+	const otherItems = [
 		{
 			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
 			labelAddon: (
@@ -294,24 +298,34 @@ export const GeneralSettings: React.FC = () => {
 		<SettingsWrapper profile={profile} activeSettings="general">
 			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
 				<SettingsGroup title={t("SETTINGS.GENERAL.PERSONAL.TITLE")}>
-					<SelectProfileImage
-						value={avatar}
-						name={formattedName}
-						onSelect={(value) => {
-							if (!value) {
-								setValue("avatar", Helpers.Avatar.make(formattedName), {
-									shouldDirty: true,
-									shouldValidate: true,
-								});
-								return;
-							}
+					<div className="group space-y-2">
+						<span className="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600">
+							{t("SETTINGS.GENERAL.PERSONAL.PROFILE_IMAGE")}
+						</span>
 
-							setValue("avatar", value, {
-								shouldDirty: true,
-								shouldValidate: true,
-							});
-						}}
-					/>
+						<div className="relative flex flex-row space-x-3">
+							<Image name="ProfileImageExample" />
+
+							<SelectProfileImage
+								value={avatar}
+								name={formattedName}
+								onSelect={(value) => {
+									if (!value) {
+										setValue("avatar", Helpers.Avatar.make(formattedName), {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
+										return;
+									}
+
+									setValue("avatar", value, {
+										shouldDirty: true,
+										shouldValidate: true,
+									});
+								}}
+							/>
+						</div>
+					</div>
 
 					<div className="mt-5 flex w-full flex-col justify-between sm:flex-row">
 						<div className="flex flex-col sm:w-2/4">
@@ -417,15 +431,15 @@ export const GeneralSettings: React.FC = () => {
 							</FormField>
 
 							<FormField className="mt-5" name="marketProvider">
-								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER")} />
+								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PRICE_SOURCE")} />
 								<Select
 									id="select-market-provider"
 									placeholder={t(selectOption, {
-										option: t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER"),
+										option: t("SETTINGS.GENERAL.PERSONAL.PRICE_SOURCE"),
 									})}
 									ref={register({
 										required: t(requiredFieldMessage, {
-											field: t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER"),
+											field: t("SETTINGS.GENERAL.PERSONAL.PRICE_SOURCE"),
 										}).toString(),
 									})}
 									options={PlatformSdkChoices.marketProviders}
@@ -488,6 +502,10 @@ export const GeneralSettings: React.FC = () => {
 
 				<SettingsGroup title={t("SETTINGS.GENERAL.SECURITY.TITLE")}>
 					<ListDivided items={securityItems} />
+				</SettingsGroup>
+
+				<SettingsGroup title={t("SETTINGS.GENERAL.APPEARANCE.TITLE")}>
+					<ListDivided items={appearenceItems} noBorder={isXs} />
 				</SettingsGroup>
 
 				<SettingsGroup title={t("SETTINGS.GENERAL.OTHER.TITLE")}>

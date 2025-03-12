@@ -2,6 +2,10 @@ export const translations = {
 	APPEARANCE: {
 		MENU_ITEM: "Appearance",
 		OPTIONS: {
+			ADDRESS_NAMING: {
+				DESCRIPTION: "Prioritize showing network provided names over wallet names.",
+				TITLE: "Address Naming",
+			},
 			VIEWING_MODE: {
 				DESCRIPTION: "Choose a light or dark viewing mode.",
 				TITLE: "Viewing Mode",
@@ -9,10 +13,6 @@ export const translations = {
 					DARK: "Dark",
 					LIGHT: "Light",
 				},
-			},
-			WALLET_NAMING: {
-				DESCRIPTION: "Prioritize showing network provided names over wallet names.",
-				TITLE: "Wallet Naming",
 			},
 		},
 		SUBTITLE: "Customize the look of the application.",
@@ -39,9 +39,16 @@ export const translations = {
 	},
 
 	GENERAL: {
+		APPEARANCE: {
+			TITLE: "Appearance",
+		},
 		ERROR: "Your profile settings could not be updated",
 		MENU_ITEM: "General",
 		OTHER: {
+			ADDRESS_NAMING: {
+				DESCRIPTION: "Prioritize showing network provided names over wallet names.",
+				TITLE: "Address Naming",
+			},
 			DARK_THEME: {
 				DESCRIPTION: "Enables a dark, high contrast scheme.",
 				TITLE: "Dark Theme",
@@ -68,10 +75,6 @@ export const translations = {
 					LIGHT: "Light",
 				},
 			},
-			WALLET_NAMING: {
-				DESCRIPTION: "Prioritize showing network provided names over wallet names.",
-				TITLE: "Wallet Naming",
-			},
 		},
 		PERSONAL: {
 			CONFIRM_PASSWORD: "Confirm Password",
@@ -81,7 +84,8 @@ export const translations = {
 			NAME: "Profile Name",
 			PASSPHRASE_LANGUAGE: "Passphrase Language",
 			PASSWORD: "Password",
-			PROFILE_IMAGE: "Profile Image",
+			PRICE_SOURCE: "Price Source",
+			PROFILE_IMAGE: "Select Profile Image",
 			REMOVE_AVATAR: "Remove Avatar",
 			TIME_FORMAT: "Time Format",
 			TITLE: "Personal Details",
