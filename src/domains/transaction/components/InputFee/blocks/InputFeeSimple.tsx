@@ -90,7 +90,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 									},
 								)}
 							>
-								<span className="capitalize">{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>
+								<span>{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>
 								<span>
 									{t("COMMON.CONFIRMATION_TIME", {
 										time: confirmationTimes[label as ConfirmationSpeed],
