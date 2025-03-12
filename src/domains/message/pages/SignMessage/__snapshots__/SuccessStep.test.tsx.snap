@@ -46,7 +46,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -145,7 +145,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -252,7 +252,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -351,7 +351,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
