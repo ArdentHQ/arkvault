@@ -46,7 +46,11 @@ export const useLedgerConnection = () => {
 			const { descriptor, deviceModel } = await openTransport();
 
 			setDeviceName(deviceModel?.productName);
-			dispatch({ id: deviceModel?.id || "nanoS", path: descriptor, type: "add" });
+
+			const deviceItem = { id: deviceModel?.id || "nanoS", path: descriptor, type: "add" as const };
+
+			dispatch(deviceItem);
+			return deviceItem;
 		} catch (error) {
 			dispatch({ message: error.message, type: "failed" });
 		}

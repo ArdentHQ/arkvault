@@ -13,6 +13,7 @@ export enum LedgerTabStep {
 export interface LedgerTabsProperties {
 	onBack?: () => void;
 	onCancel?: () => void;
+	onStepChange?: (step: LedgerTabStep) => void;
 	activeIndex?: LedgerTabStep;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 }

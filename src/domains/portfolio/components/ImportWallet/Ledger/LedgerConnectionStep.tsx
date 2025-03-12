@@ -5,11 +5,9 @@ import { useTranslation } from "react-i18next";
 
 import { LedgerCancelling } from "./LedgerCancelling";
 import { Alert } from "@/app/components/Alert";
-import { Header } from "@/app/components/Header";
 import { Image } from "@/app/components/Image";
 import { useLedgerContext } from "@/app/contexts/Ledger";
 import { useActiveProfile } from "@/app/hooks";
-import { Icon } from "@/app/components/Icon";
 import { Loader } from "@/app/components/Loader";
 
 const ConnectionContent = ({
@@ -52,7 +50,6 @@ export const LedgerConnectionStep = ({
 	onConnect?: () => void;
 	onFailed?: (error: Error) => void;
 }) => {
-	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 
 	const { register, setValue, unregister } = useFormContext();
@@ -95,18 +92,6 @@ export const LedgerConnectionStep = ({
 
 	return (
 		<section data-testid="LedgerConnectionStep" className="space-y-4">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.SUBTITLE")}
-				titleIcon={
-					<Icon
-						name="LedgerAlt"
-						dimensions={[22, 22]}
-						className="stroke-theme-primary-600 stroke-2 text-theme-primary-100 dark:text-theme-primary-900"
-					/>
-				}
-				className="hidden md:block"
-			/>
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
 		</section>
 	);

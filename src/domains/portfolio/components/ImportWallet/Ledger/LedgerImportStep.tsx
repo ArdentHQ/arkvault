@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
-import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { LedgerData } from "@/app/contexts/Ledger";
 import { assertWallet } from "@/utils/assertions";
@@ -79,6 +78,7 @@ const MultipleImport = ({
 							variant="secondary"
 							onClick={() => onClickEditWalletName(importedWallet)}
 							data-testid="LedgerImportStep__edit-alias"
+							className="my-2.5 p-4"
 						>
 							<Icon name="Pencil" dimensions={[14, 14]} />
 						</Button>
@@ -134,39 +134,22 @@ export const LedgerImportStep = ({
 	wallets: LedgerData[];
 	profile: Contracts.IProfile;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
-}) => {
-	const { t } = useTranslation();
-
-	return (
-		<section data-testid="LedgerImportStep">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE", { count: wallets.length })}
-				titleIcon={
-					<Icon
-						name="DoubleCheckedCircle"
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[22, 22]}
-					/>
-				}
-				className="mb-4 hidden sm:block"
+}) => (
+	<section data-testid="LedgerImportStep">
+		{wallets.length > 1 ? (
+			<MultipleImport
+				wallets={wallets}
+				profile={profile}
+				network={network}
+				onClickEditWalletName={onClickEditWalletName}
 			/>
-
-			{wallets.length > 1 ? (
-				<MultipleImport
-					wallets={wallets}
-					profile={profile}
-					network={network}
-					onClickEditWalletName={onClickEditWalletName}
-				/>
-			) : (
-				<SingleImport
-					wallets={wallets}
-					profile={profile}
-					network={network}
-					onClickEditWalletName={onClickEditWalletName}
-				/>
-			)}
-		</section>
-	);
-};
+		) : (
+			<SingleImport
+				wallets={wallets}
+				profile={profile}
+				network={network}
+				onClickEditWalletName={onClickEditWalletName}
+			/>
+		)}
+	</section>
+);

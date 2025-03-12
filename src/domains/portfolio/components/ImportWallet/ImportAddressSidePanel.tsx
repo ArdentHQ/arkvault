@@ -20,11 +20,10 @@ import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/u
 import { assertString, assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Header } from "@/app/components/Header";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { MethodStep } from "@/domains/portfolio/components/ImportWallet/MethodStep";
-import { ImportOption, OptionsValue } from "@/domains/wallet/hooks";
-import { ImportActionToolbar } from "./ImportAddressSidePanel.blocks";
+import { ImportActionToolbar, LedgerStepHeader, StepHeader } from "./ImportAddressSidePanel.blocks";
+import { OptionsValue } from "@/domains/wallet/hooks";
+import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 
 enum Step {
 	MethodStep = 1,
@@ -44,6 +43,7 @@ export const ImportAddressesSidePanel = ({
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState<Step>(Step.MethodStep);
+	const [ledgerActiveTab, setLedgerActiveTab] = useState<LedgerTabStep>(LedgerTabStep.ListenLedgerStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
 
@@ -233,9 +233,17 @@ export const ImportAddressesSidePanel = ({
 
 	const isMethodStep = activeTab === Step.MethodStep;
 
+	const StepsHeaderComponent = () => {
+		if (activeTab === Step.ImportDetailStep && isLedgerImport) {
+			return <LedgerStepHeader step={ledgerActiveTab} importOption={importOption} />;
+		}
+
+		return <StepHeader step={activeTab} importOption={importOption} />;
+	};
+
 	return (
 		<SidePanel
-			header={<StepHeader step={activeTab} importOption={importOption} />}
+			header={StepsHeaderComponent()}
 			open={open}
 			onOpenChange={handleOpenChange}
 			dataTestId="ImportAddressSidePanel"
@@ -255,7 +263,15 @@ export const ImportAddressesSidePanel = ({
 							</TabPanel>
 
 							<TabPanel tabId={Step.ImportDetailStep}>
-								{isLedgerImport && <LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />}
+								{isLedgerImport && (
+									<LedgerTabs
+										onClickEditWalletName={handleEditLedgerAlias}
+										onStepChange={setLedgerActiveTab}
+										onCancel={() => {
+											handleOpenChange(false);
+										}}
+									/>
+								)}
 								{!isLedgerImport && importOption && (
 									<ImportDetailStep
 										profile={activeProfile}
@@ -290,6 +306,7 @@ export const ImportAddressesSidePanel = ({
 							activeTab={activeTab}
 							isLoading={isEncrypting || isImporting}
 							isSubmitDisabled={isSubmitting}
+							showPortfoliobutton={activeTab === Step.SummaryStep}
 						/>
 					)}
 				</>
@@ -305,64 +322,4 @@ export const ImportAddressesSidePanel = ({
 			)}
 		</SidePanel>
 	);
-};
-
-const StepHeader = ({ step, importOption }: { step: Step; importOption: ImportOption | undefined }): JSX.Element => {
-	const { t } = useTranslation();
-
-	const headers: Record<Step, JSX.Element> = {
-		[Step.MethodStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
-				className="mt-px"
-			/>
-		),
-		[Step.ImportDetailStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={importOption?.header ?? ""}
-				subtitle={importOption?.description ?? ""}
-				titleIcon={
-					importOption?.icon ? (
-						<div className="text-theme-primary-600 dark:text-theme-navy-500"> {importOption.icon} </div>
-					) : undefined
-				}
-				className="mt-px"
-			/>
-		),
-		[Step.EncryptPasswordStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
-				className="mt-px"
-				titleIcon={
-					<ThemeIcon
-						lightIcon="WalletEncryptionLight"
-						darkIcon="WalletEncryptionDark"
-						dimensions={[24, 24]}
-					/>
-				}
-			/>
-		),
-		[Step.SummaryStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				className="mt-px"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
-				titleIcon={
-					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[24, 24]}
-						name="Completed"
-						data-testid="icon-Completed"
-					/>
-				}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE")}
-			/>
-		),
-	};
-
-	return headers[step];
 };

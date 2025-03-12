@@ -2,6 +2,10 @@ import React from "react";
 import { Button } from "@/app/components/Button";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { useTranslation } from "react-i18next";
+import { Header } from "@/app/components/Header";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { ImportOption } from "@/domains/wallet/hooks";
+import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 
 enum Step {
 	MethodStep = 1,
@@ -21,6 +25,7 @@ export const ImportActionToolbar = ({
 	isContinueDisabled,
 	showButtons,
 	isSubmitDisabled,
+	showPortfoliobutton,
 }: {
 	showButtons?: boolean;
 	isLoading?: boolean;
@@ -30,6 +35,7 @@ export const ImportActionToolbar = ({
 	isContinueDisabled?: boolean;
 	isBackDisabled?: boolean;
 	isSubmitDisabled?: boolean;
+	showPortfoliobutton?: boolean;
 	onBack?: () => void;
 	onContinue?: () => void;
 }) => {
@@ -65,7 +71,7 @@ export const ImportActionToolbar = ({
 					</>
 				)}
 
-				{activeTab === Step.SummaryStep && (
+				{showPortfoliobutton && (
 					<Button disabled={isSubmitDisabled} type="submit" data-testid="ImportWallet__finish-button">
 						{t("COMMON.GO_TO_PORTFOLIO")}
 					</Button>
@@ -73,4 +79,118 @@ export const ImportActionToolbar = ({
 			</div>
 		</div>
 	);
+};
+
+export const StepHeader = ({
+	step,
+	importOption,
+}: {
+	step: Step;
+	importOption: ImportOption | undefined;
+}): JSX.Element => {
+	const { t } = useTranslation();
+
+	const headers: Record<Step, JSX.Element> = {
+		[Step.MethodStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
+				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
+				className="mt-px"
+			/>
+		),
+		[Step.ImportDetailStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				title={importOption?.header ?? ""}
+				subtitle={importOption?.description ?? ""}
+				titleIcon={
+					importOption?.icon ? (
+						<div className="text-theme-primary-600 dark:text-theme-navy-500"> {importOption.icon} </div>
+					) : undefined
+				}
+				className="mt-px"
+			/>
+		),
+		[Step.EncryptPasswordStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
+				className="mt-px"
+				titleIcon={
+					<ThemeIcon
+						lightIcon="WalletEncryptionLight"
+						darkIcon="WalletEncryptionDark"
+						dimensions={[24, 24]}
+					/>
+				}
+			/>
+		),
+		[Step.SummaryStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				className="mt-px"
+				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
+				titleIcon={
+					<Icon
+						className="text-theme-success-100 dark:text-theme-success-900"
+						dimensions={[24, 24]}
+						name="Completed"
+						data-testid="icon-Completed"
+					/>
+				}
+				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE")}
+			/>
+		),
+	};
+
+	return headers[step];
+};
+
+export const LedgerStepHeader = ({
+	step,
+	importOption,
+}: {
+	step: LedgerTabStep;
+	importOption: ImportOption | undefined;
+}): JSX.Element => {
+	const { t } = useTranslation();
+
+	const headers: Record<string, JSX.Element> = {
+		[LedgerTabStep.LedgerConnectionStep]: (
+			<Header
+				titleClassName="text-lg md:text-2xl md:leading-[29px]"
+				title={importOption?.header ?? ""}
+				subtitle={importOption?.description ?? ""}
+				titleIcon={
+					importOption?.icon ? (
+						<div className="text-theme-primary-600 dark:text-theme-navy-500"> {importOption.icon} </div>
+					) : undefined
+				}
+				className="mt-px"
+			/>
+		),
+		[LedgerTabStep.LedgerScanStep]: (
+			<Header
+				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
+				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
+				titleIcon={<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600" />}
+			/>
+		),
+		[LedgerTabStep.LedgerImportStep]: (
+			<Header
+				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE")}
+				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE", { count: 2 })}
+				titleIcon={
+					<Icon
+						name="DoubleCheckedCircle"
+						className="text-theme-success-100 dark:text-theme-success-900"
+						dimensions={[22, 22]}
+					/>
+				}
+			/>
+		),
+	};
+
+	return headers[step];
 };

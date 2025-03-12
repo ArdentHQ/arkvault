@@ -6,7 +6,7 @@ import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { useEnvironmentContext } from "@/app/contexts";
 
 import { OptionsValue } from "./use-import-options";
-import { assertWallet } from "@/utils/assertions";
+import { assertString, assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
@@ -35,18 +35,41 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		type,
 		value,
 		encryptedWif,
+		ledgerOptions,
 	}: {
 		network: Networks.Network;
 		type: string;
 		value: WalletGenerationInput;
 		encryptedWif?: string;
+		ledgerOptions?: {
+			deviceId: string;
+			path: string;
+		};
 	}): Promise<Contracts.IReadWriteWallet | undefined> => {
 		const defaultOptions = {
 			coin: network.coin(),
 			network: network.id(),
 		};
 
-		const importOptions: Omit<ImportOptionsType, OptionsValue.LEDGER> = {
+		const importOptions: ImportOptionsType = {
+			[OptionsValue.LEDGER]: async () => {
+				const path = ledgerOptions?.path;
+				assertString(path);
+
+				const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
+					...defaultOptions,
+					address: value,
+					path,
+				});
+
+				wallet.data().set(Contracts.WalletData.LedgerModel, ledgerOptions?.deviceId);
+
+				if (!profile.wallets().findByAddressWithNetwork(wallet.address(), wallet.network().id())) {
+					return profile.wallets().push(wallet);
+				}
+
+				return wallet;
+			},
 			[OptionsValue.BIP39]: async () =>
 				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP39({
@@ -153,14 +176,20 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value,
 		type,
 		encryptedWif,
+		ledgerOptions,
 	}: {
 		value: WalletGenerationInput;
 		network: Networks.Network;
 		type: string;
 		encryptedWif?: string;
+		ledgerOptions?: {
+			deviceId: string;
+			path: string;
+		};
 	}): Promise<Contracts.IReadWriteWallet> => {
 		const wallet = await importWalletByType({
 			encryptedWif,
+			ledgerOptions,
 			network,
 			type,
 			value,
@@ -187,16 +216,21 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value,
 		type,
 		encryptedWif,
+		ledgerOptions,
 	}: {
 		value: WalletGenerationInput;
 		networks: Networks.Network[];
 		type: string;
 		encryptedWif?: string;
+		ledgerOptions?: {
+			deviceId: string;
+			path: string;
+		};
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
 		for (const network of networks) {
-			const wallet = await importWallet({ encryptedWif, network, type, value });
+			const wallet = await importWallet({ encryptedWif, ledgerOptions, network, type, value });
 			wallets.push(wallet);
 
 			await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
