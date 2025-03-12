@@ -31,7 +31,7 @@ import { useValidatorsFromURL } from "@/domains/vote/hooks/use-vote-query-parame
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 
 enum Step {
 	FormStep = 1,
@@ -93,11 +93,6 @@ export const SendVote = () => {
 		register("senderAddress", sendVote.senderAddress({ network: activeNetwork, profile: activeProfile, votes }));
 		register("fees");
 
-		const walletBalance = activeWallet?.balance() ?? 0;
-
-		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
-		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit["vote"], activeWallet?.network()));
-
 		register("inputFeeSettings");
 
 		register("suppressWarning");
@@ -127,6 +122,13 @@ export const SendVote = () => {
 	useEffect(() => {
 		setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: false });
 	}, [wallet]);
+
+	useToggleFeeFields({
+		activeTab,
+		form,
+		gasLimitType: "vote",
+		wallet,
+	})
 
 	useEffect(() => {
 		const updateWallet = async () => {
