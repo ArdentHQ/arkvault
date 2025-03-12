@@ -160,7 +160,7 @@ export const translations = {
 		LEDGER_IMPORT_STEP: {
 			SUBTITLE_one: "Your Ledger address has been imported.",
 			SUBTITLE_other: "Your Ledger addresses have been imported.",
-			TITLE: "Completed",
+			TITLE: "Import Completed",
 		},
 
 		LEDGER_SCAN_STEP: {
@@ -171,7 +171,7 @@ export const translations = {
 			LOADING_WALLETS: "Loading <strong>{{count}}</strong> Wallets",
 			SHOW_ALL: "Show All ({{count}})",
 			SUBTITLE: "Select the addresses that you want to import.",
-			TITLE: "Addresses",
+			TITLE: "Ledger Addresses",
 		},
 
 		METHOD_STEP: {
@@ -184,7 +184,7 @@ export const translations = {
 			SECRET_DESCRIPTION: "Import using a custom password",
 			SECRET_TITLE: "Import Secret",
 			SUBTITLE: "Select the method you want to use to import your address.",
-			TITLE: "Import",
+			TITLE: "Import Ledger",
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {

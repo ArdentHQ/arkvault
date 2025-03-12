@@ -187,7 +187,7 @@ export const LedgerStepHeader = ({
 						dimensions={[22, 22]}
 					/>
 				}
-				className="mb-4 hidden sm:block"
+				className="hidden sm:block"
 			/>
 		),
 	};

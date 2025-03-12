@@ -148,7 +148,7 @@ export const LedgerTabs = ({
 
 	return (
 		<Tabs id="ledgerTabs" activeId={activeTab}>
-			<div data-testid="LedgerTabs" className="mt-8">
+			<div data-testid="LedgerTabs" className="mt-4">
 				<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
 					<ListenLedger
 						noHeading
