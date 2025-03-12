@@ -128,7 +128,7 @@ export const SendVote = () => {
 		form,
 		gasLimitType: "vote",
 		wallet,
-	})
+	});
 
 	useEffect(() => {
 		const updateWallet = async () => {
