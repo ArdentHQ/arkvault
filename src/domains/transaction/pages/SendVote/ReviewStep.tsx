@@ -66,7 +66,12 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 						{showFeeInput && (
 							<FormField name="fee" className="flex-1">
 								<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-								<FeeField type="vote" data={feeTransactionData} network={wallet.network()} profile={profile} />
+								<FeeField
+									type="vote"
+									data={feeTransactionData}
+									network={wallet.network()}
+									profile={profile}
+								/>
 							</FormField>
 						)}
 					</div>

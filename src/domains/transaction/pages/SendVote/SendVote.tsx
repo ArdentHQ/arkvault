@@ -61,8 +61,8 @@ export const SendVote = () => {
 		profile: activeProfile,
 	});
 
-	const walletFromUrl= useActiveWalletWhenNeeded(false);
-	const initialStep = useMemo(() => walletFromUrl ? Step.ReviewStep: Step.FormStep, [walletFromUrl]);
+	const walletFromUrl = useActiveWalletWhenNeeded(false);
+	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
 	const [activeTab, setActiveTab] = useState<Step>(initialStep);
 
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -447,7 +447,7 @@ export const SendVote = () => {
 
 	const skipFormStep = initialStep === Step.ReviewStep;
 	const stepsCount = skipFormStep ? 3 : 4;
-	const activeIndex = skipFormStep ? activeTab - 1: activeTab;
+	const activeIndex = skipFormStep ? activeTab - 1 : activeTab;
 
 	return (
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
