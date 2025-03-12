@@ -13,7 +13,7 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
+import { useActiveProfile, useProfileJobs, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
@@ -35,8 +35,6 @@ export const GeneralSettings: React.FC = () => {
 	const { resetToDefaults } = useActiveNetwork({ profile });
 
 	const isProfileRestored = profile.status().isRestored();
-
-	const { isXs } = useBreakpoint();
 
 	const { persist } = useEnvironmentContext();
 	const { syncExchangeRates } = useProfileJobs(profile);
@@ -188,7 +186,6 @@ export const GeneralSettings: React.FC = () => {
 					}}
 				/>
 			),
-			wrapperClass: "pb-6",
 		},
 		{
 			label: t("SETTINGS.GENERAL.OTHER.ADDRESS_NAMING.TITLE"),
@@ -206,7 +203,6 @@ export const GeneralSettings: React.FC = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.ADDRESS_NAMING.DESCRIPTION"),
-			wrapperClass: "py-6",
 		},
 	];
 
@@ -227,7 +223,6 @@ export const GeneralSettings: React.FC = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
-			wrapperClass: "py-6",
 		},
 		{
 			itemValueClass: "w-full sm:w-auto",
@@ -240,7 +235,6 @@ export const GeneralSettings: React.FC = () => {
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
 				</Button>
 			),
-			wrapperClass: "py-6",
 		},
 	];
 
@@ -505,11 +499,11 @@ export const GeneralSettings: React.FC = () => {
 				</SettingsGroup>
 
 				<SettingsGroup title={t("SETTINGS.GENERAL.APPEARANCE.TITLE")}>
-					<ListDivided items={appearenceItems} noBorder={isXs} />
+					<ListDivided items={appearenceItems} />
 				</SettingsGroup>
 
 				<SettingsGroup title={t("SETTINGS.GENERAL.OTHER.TITLE")}>
-					<ListDivided items={otherItems} noBorder={isXs} />
+					<ListDivided items={otherItems} />
 				</SettingsGroup>
 
 				<SettingsButtonGroup>

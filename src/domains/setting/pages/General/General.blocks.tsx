@@ -34,7 +34,10 @@ export const SettingsButtonGroup = ({
 }: React.HTMLAttributes<HTMLDivElement> & {
 	title?: string;
 }) => (
-	<div className={cn("px-6 pb-6", className)} {...properties}>
+	<div
+		className={cn("border-t border-theme-secondary-300 p-6 dark:border-theme-dark-700", className)}
+		{...properties}
+	>
 		<div className="-mt-6">{children}</div>
 	</div>
 );
