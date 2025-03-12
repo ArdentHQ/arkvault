@@ -388,7 +388,7 @@ export const SendTransfer = () => {
 	return (
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.TRANSFER")}>
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-34" context={form}>
+				<Form className="mx-auto max-w-172" context={form}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
 
 					<QRModal
