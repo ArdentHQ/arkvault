@@ -133,6 +133,10 @@ export const translations = {
 			SUCCESS: "Password successfully removed.",
 			TITLE: "Remove Profile Password",
 		},
+		REMOVE_PASSWORD: {
+			DESCRIPTION: "Sign in to your profile without a password.",
+			TITLE: "Remove Password",
+		},
 		SUBTITLE: {
 			CHANGE: "Change the password used to secure your Profile below.",
 			CREATE: "Set your password below to secure your Profile.",

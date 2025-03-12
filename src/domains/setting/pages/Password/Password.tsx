@@ -16,6 +16,8 @@ import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrappe
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { ListDivided } from "@/app/components/ListDivided";
+import classNames from "classnames";
 
 export const PasswordSettings = () => {
 	const activeProfile = useActiveProfile();
@@ -107,12 +109,37 @@ export const PasswordSettings = () => {
 		return t(`SETTINGS.PASSWORD.BUTTON.${passwordStatus}`);
 	};
 
+	const items = [
+		{
+			itemValueClass: "w-full sm:w-auto",
+			label: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.TITLE"),
+			labelDescription: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.DESCRIPTION"),
+			labelWrapperClass: "flex flex-col sm:flex-row space-y-3 justify-between items-center",
+			value: (
+				<Button
+					data-testid="Password-settings__remove-button"
+					variant="danger"
+					className="w-full sm:w-auto"
+					onClick={() => setIsConfirmRemovalVisible(true)}
+				>
+					<Icon name="Trash" />
+					<span className="whitespace-nowrap">{getRemoveButtonText()}</span>
+				</Button>
+			),
+		},
+	];
+
 	return (
 		<>
 			<SettingsWrapper profile={activeProfile} activeSettings="password">
 				<Form id="password-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
 					<SettingsGroup title={t("SETTINGS.PASSWORD.TITLE")}>
-						<div className="space-y-5">
+						<div
+							className={classNames("space-y-5", {
+								"mb-6 border-b border-dashed border-theme-secondary-300 pb-6 dark:border-theme-secondary-800":
+									usesPassword,
+							})}
+						>
 							{usesPassword && (
 								<FormField name="currentPassword">
 									<FormLabel label={t("SETTINGS.PASSWORD.CURRENT")} />
@@ -136,22 +163,12 @@ export const PasswordSettings = () => {
 								optional={false}
 							/>
 						</div>
+
+						{usesPassword && <ListDivided items={items} />}
 					</SettingsGroup>
 
 					<SettingsButtonGroup>
 						<FormButtons>
-							{usesPassword && (
-								<Button
-									data-testid="Password-settings__remove-button"
-									variant="danger"
-									className="mr-auto flex w-full space-x-2 sm:w-auto"
-									onClick={() => setIsConfirmRemovalVisible(true)}
-								>
-									<Icon name="Trash" />
-									<span>{getRemoveButtonText()}</span>
-								</Button>
-							)}
-
 							<Button
 								data-testid="Password-settings__submit-button"
 								disabled={isSubmitDisabled()}
