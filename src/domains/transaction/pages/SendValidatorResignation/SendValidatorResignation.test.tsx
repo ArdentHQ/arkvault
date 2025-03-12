@@ -197,6 +197,8 @@ describe("SendValidatorResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
+			await userEvent.click(continueButton());
+
 			// Fee (simple)
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
