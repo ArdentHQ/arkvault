@@ -1,10 +1,10 @@
 import React from "react";
-import { twMerge } from "tailwind-merge";
 import { useTranslation } from "react-i18next";
 
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { Icon } from "@/app/components/Icon";
 import { ViewingModeType } from "@/app/hooks";
+import cn from "classnames";
 
 interface ViewingModeItem {
 	icon: string;
@@ -20,7 +20,7 @@ export const SettingsGroup = ({
 }: React.HTMLAttributes<HTMLDivElement> & {
 	title?: string;
 }) => (
-	<div className={twMerge("relative flex flex-col", className)} {...properties}>
+	<div className={cn("relative flex flex-col", className)} {...properties}>
 		{title && <SettingsGroupHeader>{title}</SettingsGroupHeader>}
 
 		<div className="px-6 pb-6 pt-4">{children}</div>
@@ -34,14 +34,14 @@ export const SettingsButtonGroup = ({
 }: React.HTMLAttributes<HTMLDivElement> & {
 	title?: string;
 }) => (
-	<div className={twMerge("px-6 pb-6", className)} {...properties}>
+	<div className={cn("px-6 pb-6", className)} {...properties}>
 		<div className="-mt-6">{children}</div>
 	</div>
 );
 
 const SettingsGroupHeader = ({ className, ...properties }: React.HTMLAttributes<HTMLHeadingElement>) => (
 	<h2
-		className={twMerge(
+		className={cn(
 			"-mt-px mb-0 block border-t border-theme-secondary-300 bg-theme-secondary-100 px-6 py-3 text-base font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:bg-theme-dark-700 dark:text-theme-dark-200",
 			className,
 		)}
