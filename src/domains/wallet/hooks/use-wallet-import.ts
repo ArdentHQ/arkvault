@@ -64,7 +64,11 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 
 				wallet.data().set(Contracts.WalletData.LedgerModel, ledgerOptions?.deviceId);
 
-				return profile.wallets().push(wallet)
+				if (!profile.wallets().findByAddressWithNetwork(wallet.address(), wallet.network().id())) {
+					return profile.wallets().push(wallet)
+				}
+
+				return wallet
 			},
 			[OptionsValue.BIP39]: async () =>
 				profile.wallets().push(

@@ -241,8 +241,6 @@ export const ImportAddressesSidePanel = ({
 		return <StepHeader step={activeTab} importOption={importOption} />;
 	};
 
-	console.log({ activeTab, ledgerActiveTab });
-
 	return (
 		<SidePanel
 			header={StepsHeaderComponent()}

@@ -12,10 +12,12 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { LedgerData, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
-import { assertWallet } from "@/utils/assertions";
+import { assertString, assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
+import { OptionsValue, useWalletImport } from "@/domains/wallet/hooks";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
@@ -24,10 +26,10 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+	const { importWallet } = useWalletImport({ profile: activeProfile });
 
 	const history = useHistory();
 	const {
-		importLedgerWallets,
 		isBusy,
 		disconnect,
 		isAwaitingConnection,
@@ -38,6 +40,7 @@ export const LedgerTabs = ({
 
 	const { formState, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
+	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
 	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
 	const [activeTab, setActiveTab] = useState<number>(activeIndex);
@@ -50,11 +53,27 @@ export const LedgerTabs = ({
 
 	const importWallets = useCallback(
 		async ({ wallets }: any) => {
+			const device = await listenDevice()
+			const deviceId = device?.id
+			assertString(deviceId)
+
 			setImportedWallets(wallets);
-			const coin = activeProfile.coins().set(activeNetwork.coin(), activeNetwork.id());
-			await importLedgerWallets(wallets, coin, activeProfile);
+
+			for (const network of activeProfile.availableNetworks()) {
+				const importedWallets = await Promise.all(wallets.map(({ path, address }) => importWallet({
+					ledgerOptions: {
+						deviceId,
+						path
+					},
+					network,
+					type: OptionsValue.LEDGER,
+					value: address
+				})))
+
+				await setSelectedAddresses([...selectedAddresses, ...importedWallets.map(wallet => wallet.address())], network);
+			}
 		},
-		[importLedgerWallets, activeProfile, activeNetwork],
+		[activeProfile, activeNetwork],
 	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);
@@ -175,8 +194,9 @@ export const LedgerTabs = ({
 						showSteps
 						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
 						onBack={handleBack}
-						isContinueDisabled={isNextDisabled}
-						onContinue={handleNext}
+						isContinueDisabled={isNextDisabled || isSubmitting}
+						isLoading={isSubmitting}
+						onContinue={handleNext || isSubmitting}
 						allSteps={["1", "2"]}
 						isSubmitDisabled={isSubmitting}
 					/>
