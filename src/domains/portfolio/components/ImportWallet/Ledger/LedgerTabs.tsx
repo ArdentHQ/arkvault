@@ -29,14 +29,8 @@ export const LedgerTabs = ({
 	const { importWallet } = useWalletImport({ profile: activeProfile });
 
 	const history = useHistory();
-	const {
-		isBusy,
-		disconnect,
-		isAwaitingConnection,
-		isAwaitingDeviceConfirmation,
-		isConnected,
-		listenDevice,
-	} = useLedgerContext();
+	const { isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected, listenDevice } =
+		useLedgerContext();
 
 	const { formState, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
@@ -53,24 +47,31 @@ export const LedgerTabs = ({
 
 	const importWallets = useCallback(
 		async ({ wallets }: any) => {
-			const device = await listenDevice()
-			const deviceId = device?.id
-			assertString(deviceId)
+			const device = await listenDevice();
+			const deviceId = device?.id;
+			assertString(deviceId);
 
 			setImportedWallets(wallets);
 
 			for (const network of activeProfile.availableNetworks()) {
-				const importedWallets = await Promise.all(wallets.map(({ path, address }) => importWallet({
-					ledgerOptions: {
-						deviceId,
-						path
-					},
-					network,
-					type: OptionsValue.LEDGER,
-					value: address
-				})))
+				const importedWallets = await Promise.all(
+					wallets.map(({ path, address }) =>
+						importWallet({
+							ledgerOptions: {
+								deviceId,
+								path,
+							},
+							network,
+							type: OptionsValue.LEDGER,
+							value: address,
+						}),
+					),
+				);
 
-				await setSelectedAddresses([...selectedAddresses, ...importedWallets.map(wallet => wallet.address())], network);
+				await setSelectedAddresses(
+					[...selectedAddresses, ...importedWallets.map((wallet) => wallet.address())],
+					network,
+				);
 			}
 		},
 		[activeProfile, activeNetwork],

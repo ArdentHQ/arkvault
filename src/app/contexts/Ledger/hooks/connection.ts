@@ -47,10 +47,10 @@ export const useLedgerConnection = () => {
 
 			setDeviceName(deviceModel?.productName);
 
-			const deviceItem = { id: deviceModel?.id || "nanoS", path: descriptor, type: "add" as const }
+			const deviceItem = { id: deviceModel?.id || "nanoS", path: descriptor, type: "add" as const };
 
 			dispatch(deviceItem);
-			return deviceItem
+			return deviceItem;
 		} catch (error) {
 			dispatch({ message: error.message, type: "failed" });
 		}

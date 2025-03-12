@@ -44,7 +44,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		ledgerOptions?: {
 			deviceId: string;
 			path: string;
-		}
+		};
 	}): Promise<Contracts.IReadWriteWallet | undefined> => {
 		const defaultOptions = {
 			coin: network.coin(),
@@ -53,8 +53,8 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 
 		const importOptions: ImportOptionsType = {
 			[OptionsValue.LEDGER]: async () => {
-				const path = ledgerOptions?.path
-				assertString(path)
+				const path = ledgerOptions?.path;
+				assertString(path);
 
 				const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
 					...defaultOptions,
@@ -65,10 +65,10 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 				wallet.data().set(Contracts.WalletData.LedgerModel, ledgerOptions?.deviceId);
 
 				if (!profile.wallets().findByAddressWithNetwork(wallet.address(), wallet.network().id())) {
-					return profile.wallets().push(wallet)
+					return profile.wallets().push(wallet);
 				}
 
-				return wallet
+				return wallet;
 			},
 			[OptionsValue.BIP39]: async () =>
 				profile.wallets().push(
@@ -185,14 +185,14 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		ledgerOptions?: {
 			deviceId: string;
 			path: string;
-		}
+		};
 	}): Promise<Contracts.IReadWriteWallet> => {
 		const wallet = await importWalletByType({
 			encryptedWif,
 			ledgerOptions,
 			network,
 			type,
-			value
+			value,
 		});
 
 		assertWallet(wallet);
@@ -225,7 +225,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		ledgerOptions?: {
 			deviceId: string;
 			path: string;
-		}
+		};
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
