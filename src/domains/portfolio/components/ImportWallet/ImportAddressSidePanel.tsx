@@ -268,7 +268,7 @@ export const ImportAddressesSidePanel = ({
 										onClickEditWalletName={handleEditLedgerAlias}
 										onStepChange={setLedgerActiveTab}
 										onCancel={() => {
-											handleOpenChange(false)
+											handleOpenChange(false);
 										}}
 									/>
 								)}

@@ -25,7 +25,7 @@ export const ImportActionToolbar = ({
 	isContinueDisabled,
 	showButtons,
 	isSubmitDisabled,
-	showPortfoliobutton
+	showPortfoliobutton,
 }: {
 	showButtons?: boolean;
 	isLoading?: boolean;

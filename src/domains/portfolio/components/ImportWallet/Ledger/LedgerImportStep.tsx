@@ -78,7 +78,7 @@ const MultipleImport = ({
 							variant="secondary"
 							onClick={() => onClickEditWalletName(importedWallet)}
 							data-testid="LedgerImportStep__edit-alias"
-							className="p-4 my-2.5"
+							className="my-2.5 p-4"
 						>
 							<Icon name="Pencil" dimensions={[14, 14]} />
 						</Button>

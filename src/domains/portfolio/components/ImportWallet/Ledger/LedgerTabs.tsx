@@ -23,7 +23,7 @@ export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
 	onClickEditWalletName,
 	onStepChange,
-	onCancel
+	onCancel,
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -141,7 +141,7 @@ export const LedgerTabs = ({
 	}, [history, activeProfile]);
 
 	const handleBack = useCallback(() => {
-		onCancel?.()
+		onCancel?.();
 	}, [activeTab, history, listenDevice]);
 
 	return (
