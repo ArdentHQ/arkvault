@@ -18,6 +18,7 @@ import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
 import { ListDivided } from "@/app/components/ListDivided";
 import classNames from "classnames";
+import { Tooltip } from "@/app/components/Tooltip";
 
 export const PasswordSettings = () => {
 	const activeProfile = useActiveProfile();
@@ -91,15 +92,6 @@ export const PasswordSettings = () => {
 		return !password || isSubmitting || !isValid || errors.validation;
 	};
 
-	const getRemoveButtonText = () => {
-		/* istanbul ignore next -- @preserve */
-		if (isXs) {
-			return t("COMMON.REMOVE");
-		}
-
-		return t("SETTINGS.PASSWORD.BUTTON.REMOVE");
-	};
-
 	const getSubmitButtonText = () => {
 		/* istanbul ignore next -- @preserve */
 		if (isXs && passwordStatus === "CHANGE") {
@@ -116,15 +108,20 @@ export const PasswordSettings = () => {
 			labelDescription: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.DESCRIPTION"),
 			labelWrapperClass: "flex flex-col sm:flex-row space-y-3 justify-between items-center",
 			value: (
-				<Button
-					data-testid="Password-settings__remove-button"
-					variant="danger"
-					className="w-full sm:w-auto"
-					onClick={() => setIsConfirmRemovalVisible(true)}
-				>
-					<Icon name="Trash" />
-					<span className="whitespace-nowrap">{getRemoveButtonText()}</span>
-				</Button>
+				<Tooltip disabled={usesPassword} content={t("SETTINGS.PASSWORD.REMOVE_PASSWORD.TOOLTIP")}>
+					<div>
+						<Button
+							disabled={!usesPassword}
+							data-testid="Password-settings__remove-button"
+							variant="danger"
+							className="w-full sm:w-auto"
+							onClick={() => setIsConfirmRemovalVisible(true)}
+						>
+							<Icon name="Trash" />
+							<span className="whitespace-nowrap">{t("COMMON.REMOVE")}</span>
+						</Button>
+					</div>
+				</Tooltip>
 			),
 		},
 	];
@@ -134,12 +131,7 @@ export const PasswordSettings = () => {
 			<SettingsWrapper profile={activeProfile} activeSettings="password">
 				<Form id="password-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
 					<SettingsGroup title={t("SETTINGS.PASSWORD.TITLE")}>
-						<div
-							className={classNames("space-y-5", {
-								"mb-6 border-b border-dashed border-theme-secondary-300 pb-6 dark:border-theme-secondary-800":
-									usesPassword,
-							})}
-						>
+						<div className="mb-6 space-y-5 border-b border-dashed border-theme-secondary-300 pb-6 dark:border-theme-secondary-800">
 							{usesPassword && (
 								<FormField name="currentPassword">
 									<FormLabel label={t("SETTINGS.PASSWORD.CURRENT")} />
@@ -164,7 +156,7 @@ export const PasswordSettings = () => {
 							/>
 						</div>
 
-						{usesPassword && <ListDivided items={items} />}
+						<ListDivided items={items} />
 					</SettingsGroup>
 
 					<SettingsButtonGroup>

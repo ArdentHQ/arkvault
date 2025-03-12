@@ -136,6 +136,7 @@ export const translations = {
 		REMOVE_PASSWORD: {
 			DESCRIPTION: "Sign in to your profile without a password.",
 			TITLE: "Remove Password",
+			TOOLTIP: "Password isn't set.",
 		},
 		SUBTITLE: {
 			CHANGE: "Change the password used to secure your Profile below.",
