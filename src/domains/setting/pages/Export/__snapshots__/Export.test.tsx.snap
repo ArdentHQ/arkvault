@@ -921,11 +921,15 @@ exports[`Export Settings > should render export settings 1`] = `
                   <div
                     class="relative flex flex-col"
                   >
-                    <h2
-                      class="-mt-px mb-0 block border-t border-theme-secondary-300 bg-theme-secondary-100 px-6 py-3 text-base font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:bg-theme-dark-700 dark:text-theme-dark-200"
+                    <div
+                      class="-mt-px block border-t border-theme-secondary-300 bg-theme-secondary-100 px-6 py-3 dark:border-theme-dark-700 dark:bg-theme-dark-700"
                     >
-                      Export Profile
-                    </h2>
+                      <h2
+                        class="mb-0 text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                      >
+                        Export Profile
+                      </h2>
+                    </div>
                     <div
                       class="px-6 pb-6 pt-4"
                     >
@@ -935,7 +939,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         Wallets
                       </h2>
                       <ul
-                        class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800"
+                        class="[&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 [&>li]:pb-6 dark:[&>li]:border-theme-secondary-800"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -953,7 +957,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
                                   data-testid="list-divided-item__label"
                                 >
                                   Exclude Empty Wallets
@@ -979,7 +983,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                                class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Wallets with a balance of 0 will not be exported.
@@ -1002,7 +1006,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
                                   data-testid="list-divided-item__label"
                                 >
                                   Exclude Ledger Wallets
@@ -1028,7 +1032,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                                class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Ledger hardware addresses will not be exported.
@@ -1040,10 +1044,10 @@ exports[`Export Settings > should render export settings 1`] = `
                     </div>
                   </div>
                   <div
-                    class="px-6 pb-6"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 sm:border-t sm:p-6"
                   >
                     <div
-                      class="-mt-6"
+                      class="sm:-mt-6"
                     >
                       <div
                         class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
