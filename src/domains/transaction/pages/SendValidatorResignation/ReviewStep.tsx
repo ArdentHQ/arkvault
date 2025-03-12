@@ -20,9 +20,7 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister } = useFormContext();
-
-	const { gasPrice, gasLimit } = getValues();
+	const { unregister } = useFormContext();
 
 	useEffect(() => {
 		unregister("mnemonic");
