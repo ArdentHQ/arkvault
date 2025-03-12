@@ -161,7 +161,7 @@ export const SignMessage: React.VFC = () => {
 	return (
 		<Page pageTitle={t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE")}>
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-xl" data-testid="SignMessage" context={form} onSubmit={submitForm}>
+				<Form className="mx-auto max-w-172" data-testid="SignMessage" context={form} onSubmit={submitForm}>
 					<Tabs activeId={activeTab}>
 						<StepsProvider steps={selectedWallet?.isLedger() ? 3 : 2} activeStep={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
