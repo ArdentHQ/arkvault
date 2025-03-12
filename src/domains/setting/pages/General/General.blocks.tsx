@@ -35,10 +35,10 @@ export const SettingsButtonGroup = ({
 	title?: string;
 }) => (
 	<div
-		className={cn("border-t border-theme-secondary-300 p-6 dark:border-theme-dark-700", className)}
+		className={cn("border-theme-secondary-300 dark:border-theme-dark-700 sm:border-t sm:p-6", className)}
 		{...properties}
 	>
-		<div className="-mt-6">{children}</div>
+		<div className="sm:-mt-6">{children}</div>
 	</div>
 );
 
