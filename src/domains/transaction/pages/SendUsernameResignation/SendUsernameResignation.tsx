@@ -77,7 +77,7 @@ export const SendUsernameResignation = () => {
 		activeTab,
 		form,
 		gasLimitType: "usernameResignation",
-		wallet: activeWallet
+		wallet: activeWallet,
 	});
 
 	useEffect(() => {

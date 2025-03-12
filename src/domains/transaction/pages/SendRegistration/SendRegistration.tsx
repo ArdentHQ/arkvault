@@ -56,7 +56,7 @@ export const SendRegistration = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues, } = form;
+	const { formState, register, setValue, watch, getValues } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
@@ -91,15 +91,16 @@ export const SendRegistration = () => {
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
 
-	const type = registrationType === "validatorRegistration"
-		? "delegateRegistration"
-		: registrationType as keyof typeof GasLimit;
+	const type =
+		registrationType === "validatorRegistration"
+			? "delegateRegistration"
+			: (registrationType as keyof typeof GasLimit);
 
 	useToggleFeeFields({
 		activeTab,
 		form,
 		gasLimitType: type,
-		wallet: activeWallet
+		wallet: activeWallet,
 	});
 
 	useEffect(() => {

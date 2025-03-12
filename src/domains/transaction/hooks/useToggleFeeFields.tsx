@@ -11,8 +11,8 @@ interface Properties {
 	form: ReturnType<typeof useFormContext>;
 }
 
-export const useToggleFeeFields = ({wallet, activeTab, gasLimitType, form}: Properties) => {
-	const {register, unregister, getValues} = form;
+export const useToggleFeeFields = ({ wallet, activeTab, gasLimitType, form }: Properties) => {
+	const { register, unregister, getValues } = form;
 
 	const { common } = useValidation();
 
@@ -21,10 +21,10 @@ export const useToggleFeeFields = ({wallet, activeTab, gasLimitType, form}: Prop
 
 		// unregister fee fields when active step is FormStep
 		if (activeTab === 1) {
-			unregister(['gasPrice', 'gasLimit']);
+			unregister(["gasPrice", "gasLimit"]);
 		} else if (activeTab === 2) {
 			register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, wallet?.network()));
 			register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit[gasLimitType], wallet?.network()));
 		}
 	}, [activeTab, wallet, common]);
-}
+};
