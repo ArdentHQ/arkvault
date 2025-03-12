@@ -25,6 +25,7 @@ export const ImportActionToolbar = ({
 	isContinueDisabled,
 	showButtons,
 	isSubmitDisabled,
+	showPortfoliobutton
 }: {
 	showButtons?: boolean;
 	isLoading?: boolean;
@@ -34,6 +35,7 @@ export const ImportActionToolbar = ({
 	isContinueDisabled?: boolean;
 	isBackDisabled?: boolean;
 	isSubmitDisabled?: boolean;
+	showPortfoliobutton?: boolean;
 	onBack?: () => void;
 	onContinue?: () => void;
 }) => {
@@ -69,7 +71,7 @@ export const ImportActionToolbar = ({
 					</>
 				)}
 
-				{activeTab === Step.SummaryStep && (
+				{showPortfoliobutton && (
 					<Button disabled={isSubmitDisabled} type="submit" data-testid="ImportWallet__finish-button">
 						{t("COMMON.GO_TO_PORTFOLIO")}
 					</Button>

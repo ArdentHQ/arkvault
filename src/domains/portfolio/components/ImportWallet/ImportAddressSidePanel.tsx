@@ -267,6 +267,9 @@ export const ImportAddressesSidePanel = ({
 									<LedgerTabs
 										onClickEditWalletName={handleEditLedgerAlias}
 										onStepChange={setLedgerActiveTab}
+										onCancel={() => {
+											handleOpenChange(false)
+										}}
 									/>
 								)}
 								{!isLedgerImport && importOption && (
@@ -303,6 +306,7 @@ export const ImportAddressesSidePanel = ({
 							activeTab={activeTab}
 							isLoading={isEncrypting || isImporting}
 							isSubmitDisabled={isSubmitting}
+							showPortfoliobutton={activeTab === Step.SummaryStep}
 						/>
 					)}
 				</>

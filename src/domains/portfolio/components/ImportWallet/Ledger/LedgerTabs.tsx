@@ -23,6 +23,7 @@ export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
 	onClickEditWalletName,
 	onStepChange,
+	onCancel
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -140,10 +141,7 @@ export const LedgerTabs = ({
 	}, [history, activeProfile]);
 
 	const handleBack = useCallback(() => {
-		listenDevice();
-
-		setActiveTab(LedgerTabStep.LedgerScanStep);
-		onStepChange?.(LedgerTabStep.LedgerScanStep);
+		onCancel?.()
 	}, [activeTab, history, listenDevice]);
 
 	return (
@@ -191,15 +189,16 @@ export const LedgerTabs = ({
 
 				{[LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab) && (
 					<ImportActionToolbar
-						activeTab={activeTab}
+						activeTab={activeTab - 2}
 						showSteps
 						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
 						onBack={handleBack}
 						isContinueDisabled={isNextDisabled || isSubmitting}
 						isLoading={isSubmitting}
-						onContinue={handleNext || isSubmitting}
+						onContinue={handleNext}
 						allSteps={["1", "2"]}
 						isSubmitDisabled={isSubmitting}
+						showPortfoliobutton={activeTab === LedgerTabStep.LedgerImportStep}
 					/>
 				)}
 			</div>
