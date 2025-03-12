@@ -226,7 +226,6 @@ const CustomPeersPeer: React.VFC<{
 	onUpdate: (network: NormalizedNetwork) => void;
 	onToggle: (isEnabled: boolean) => void;
 	// TODO: break it down into smaller components.
-	// eslint-disable-next-line sonarjs/cognitive-complexity
 }> = ({ normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
 	const { name, network, serverType, address, height, enabled } = normalizedNetwork;
@@ -483,7 +482,7 @@ const CustomPeers: React.VFC<{
 	};
 
 	return (
-		<div data-testid="CustomPeers--list" className={networks.length === 0 ? "mt-3" : "mt-1 sm:mt-3"}>
+		<div data-testid="CustomPeers--list">
 			{renderPeers()}
 
 			<Button

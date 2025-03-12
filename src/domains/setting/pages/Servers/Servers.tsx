@@ -129,29 +129,11 @@ export const ServersSettings = () => {
 				label: t("SETTINGS.SERVERS.OPTIONS.FALLBACK_TO_DEFAULT_NODES.TITLE"),
 				labelAddon: <FallbackToDefaultNodesToggle />,
 				labelDescription: t("SETTINGS.SERVERS.OPTIONS.FALLBACK_TO_DEFAULT_NODES.DESCRIPTION"),
-				wrapperClass: "py-6",
 			},
 			{
 				content: <NodesStatus networks={enabledNetworks} />,
 				label: t("SETTINGS.SERVERS.OPTIONS.DEFAULT_NODE_STATUS.TITLE"),
 				labelDescription: t("SETTINGS.SERVERS.OPTIONS.DEFAULT_NODE_STATUS.DESCRIPTION"),
-				wrapperClass: "pt-6 pb-3",
-			},
-			{
-				content: (
-					<CustomPeers
-						profile={profile}
-						addNewServerHandler={() => setShowServerFormModal(true)}
-						networks={customNetworks}
-						onDelete={setNetworkToDelete}
-						onUpdate={setNetworkToUpdate}
-						onToggle={toggleNetwork}
-					/>
-				),
-				contentClass: "sm:mt-3",
-				label: t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.TITLE"),
-				labelDescription: t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.DESCRIPTION"),
-				wrapperClass: "pt-6 sm:pb-6",
 			},
 		],
 		[enabledNetworks, customNetworks],
@@ -180,7 +162,22 @@ export const ServersSettings = () => {
 		<SettingsWrapper profile={profile} activeSettings="servers">
 			<Form id="servers__form" context={form} onSubmit={saveSettings} className="space-y-0">
 				<SettingsGroup title={t("SETTINGS.SERVERS.TITLE")}>
-					<ListDivided items={serverOptions} noBorder={isXs} />
+					<ListDivided items={serverOptions} />
+				</SettingsGroup>
+
+				<SettingsGroup
+					title={t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.TITLE")}
+					description={t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.DESCRIPTION")}
+				>
+					<CustomPeers
+						profile={profile}
+						addNewServerHandler={() => setShowServerFormModal(true)}
+						networks={customNetworks}
+						onDelete={setNetworkToDelete}
+						onUpdate={setNetworkToUpdate}
+						onToggle={toggleNetwork}
+					/>
+					{/* <ListDivided items={peersOptions} /> */}
 				</SettingsGroup>
 
 				<SettingsButtonGroup>

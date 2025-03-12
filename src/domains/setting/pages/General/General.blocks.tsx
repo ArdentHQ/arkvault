@@ -15,13 +15,15 @@ interface ViewingModeItem {
 export const SettingsGroup = ({
 	className,
 	title,
+	description,
 	children,
 	...properties
 }: React.HTMLAttributes<HTMLDivElement> & {
 	title?: string;
+	description?: string;
 }) => (
 	<div className={cn("relative flex flex-col", className)} {...properties}>
-		{title && <SettingsGroupHeader>{title}</SettingsGroupHeader>}
+		{title && <SettingsGroupHeader description={description}>{title}</SettingsGroupHeader>}
 
 		<div className="px-6 pb-6 pt-4">{children}</div>
 	</div>
@@ -42,14 +44,25 @@ export const SettingsButtonGroup = ({
 	</div>
 );
 
-const SettingsGroupHeader = ({ className, ...properties }: React.HTMLAttributes<HTMLHeadingElement>) => (
-	<h2
+const SettingsGroupHeader = ({
+	className,
+	children,
+	description,
+	...properties
+}: React.HTMLAttributes<HTMLHeadingElement> & {
+	description?: string;
+}) => (
+	<div
 		className={cn(
-			"-mt-px mb-0 block border-t border-theme-secondary-300 bg-theme-secondary-100 px-6 py-3 text-base font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:bg-theme-dark-700 dark:text-theme-dark-200",
+			"-mt-px block border-t border-theme-secondary-300 bg-theme-secondary-100 px-6 py-3 dark:border-theme-dark-700 dark:bg-theme-dark-700",
 			className,
 		)}
 		{...properties}
-	/>
+	>
+		<h2 className="mb-0 text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200">{children}</h2>
+
+		{description && <p className="mt-1 text-sm text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>}
+	</div>
 );
 
 export const ViewingMode = ({
