@@ -23,6 +23,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
 import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 interface PeerRowProperties {
 	name: string;
@@ -438,17 +439,19 @@ const CustomPeers: React.VFC<{
 		{
 			Header: t("COMMON.HEIGHT"),
 			disableSortBy: true,
-			headerClassName: "hidden md:table-cell",
+			headerClassName: "hidden md:table-cell no-border",
 			minimumWidth: true,
 		},
 		{
 			Header: t("COMMON.TYPE"),
 			disableSortBy: true,
+			headerClassName: "no-border",
 			minimumWidth: true,
 		},
 		{
 			Header: t("COMMON.STATUS"),
 			disableSortBy: true,
+			headerClassName: "no-border",
 			minimumWidth: true,
 		},
 		{
@@ -466,18 +469,26 @@ const CustomPeers: React.VFC<{
 		}
 
 		return (
-			<Table columns={columns} data={networks} rowsPerPage={networks.length} hideHeader={isXs}>
-				{(network: NormalizedNetwork) => (
-					<CustomPeersPeer
-						profile={profile}
-						key={network.name}
-						onDelete={onDelete}
-						onUpdate={onUpdate}
-						onToggle={(isEnabled) => onToggle(isEnabled, network)}
-						normalizedNetwork={network}
-					/>
-				)}
-			</Table>
+			<TableWrapper>
+				<Table
+					columns={columns}
+					data={networks}
+					rowsPerPage={networks.length}
+					hideHeader={isXs}
+					className="with-x-padding"
+				>
+					{(network: NormalizedNetwork) => (
+						<CustomPeersPeer
+							profile={profile}
+							key={network.name}
+							onDelete={onDelete}
+							onUpdate={onUpdate}
+							onToggle={(isEnabled) => onToggle(isEnabled, network)}
+							normalizedNetwork={network}
+						/>
+					)}
+				</Table>
+			</TableWrapper>
 		);
 	};
 
