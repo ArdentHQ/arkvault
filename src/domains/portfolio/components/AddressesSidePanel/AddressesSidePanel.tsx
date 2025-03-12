@@ -131,7 +131,6 @@ export const AddressesSidePanel = ({
 				placeholder={t("WALLETS.ADDRESSES_SIDE_PANEL.SEARCH_BY")}
 				innerClassName="font-normal"
 				value={searchQuery}
-				isFocused
 				data-testid="AddressesPanel--SearchInput"
 				ignoreContext
 				onChange={(event: ChangeEvent<HTMLInputElement>) => setSearchQuery(event.target.value)}
