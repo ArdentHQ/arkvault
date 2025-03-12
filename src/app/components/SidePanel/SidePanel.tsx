@@ -82,7 +82,7 @@ export const SidePanel = ({
 										style={{ ...styles }}
 										className={cn("fixed right-0 top-0 w-full md:w-[608px]", className)}
 									>
-										<div className="custom-scroll h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:p-8">
+										<div className="custom-scroll h-dvh w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:p-8">
 											<div className="relative mb-4 flex items-start justify-between">
 												{typeof header === "string" ? (
 													<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">
