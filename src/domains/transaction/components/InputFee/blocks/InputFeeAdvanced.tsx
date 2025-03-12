@@ -148,7 +148,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					)}
 				</div>
 				<div>
-					<span>{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>
+					<span className="capitalize">{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>
 					<span>
 						{" "}
 						{t("COMMON.CONFIRMATION_TIME", {
