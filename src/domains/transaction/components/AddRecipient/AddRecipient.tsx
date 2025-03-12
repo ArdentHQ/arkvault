@@ -21,7 +21,7 @@ import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { twMerge } from "tailwind-merge";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
-import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -94,7 +94,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 		watch();
 	const { sendTransfer } = useValidation();
 
-	const fee = calculateGasFee(gasPrice ?? 5, gasLimit ?? GasLimit["transfer"]);
+	const fee = calculateGasFee(gasPrice ?? MIN_GAS_PRICE, gasLimit ?? GasLimit["transfer"]);
 
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
