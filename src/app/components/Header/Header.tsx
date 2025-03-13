@@ -33,10 +33,7 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 			</div>
 
 			{subtitle && (
-				<div
-					className="flex items-center leading-5 text-theme-secondary-text"
-					data-testid="header__subtitle"
-				>
+				<div className="flex items-center leading-5 text-theme-secondary-text" data-testid="header__subtitle">
 					{subtitle}
 				</div>
 			)}
