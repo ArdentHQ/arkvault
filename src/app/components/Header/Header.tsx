@@ -15,37 +15,30 @@ interface Properties {
 }
 
 export const Header = ({ title, titleIcon, className, subtitle, extra, titleClassName, isPageHeader }: Properties) => {
-	const renderSubtitle = () => {
-		return (
-			<>
-				{subtitle && (
-					<div
-						className="flex items-center leading-5 text-theme-secondary-text"
-						data-testid="header__subtitle"
-					>
-						{subtitle}
-					</div>
-				)}
-			</>
-		);
-	};
+	const renderSubtitle = () => (
+		<>
+			{subtitle && (
+				<div className="flex items-center leading-5 text-theme-secondary-text" data-testid="header__subtitle">
+					{subtitle}
+				</div>
+			)}
+		</>
+	);
 
-	const renderTitle = () => {
-		return (
-			<h1
-				className={cn(
-					"mb-0",
-					{
-						"text-2xl leading-[29px]": !titleClassName,
-					},
-					titleClassName,
-				)}
-				data-testid="header__title"
-			>
-				{title}
-			</h1>
-		);
-	};
+	const renderTitle = () => (
+		<h1
+			className={cn(
+				"mb-0",
+				{
+					"text-2xl leading-[29px]": !titleClassName,
+				},
+				titleClassName,
+			)}
+			data-testid="header__title"
+		>
+			{title}
+		</h1>
+	);
 
 	return (
 		<div className={cn("flex items-end justify-between bg-theme-background", className)}>
@@ -54,7 +47,7 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 					{titleIcon ?? undefined}
 					{isPageHeader ? (
 						<div className="flex flex-col gap-2">
-							{renderTitle()} { renderSubtitle() }
+							{renderTitle()} {renderSubtitle()}
 						</div>
 					) : (
 						renderTitle()
