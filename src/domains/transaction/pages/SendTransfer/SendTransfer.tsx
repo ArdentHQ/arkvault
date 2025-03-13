@@ -319,7 +319,7 @@ export const SendTransfer = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ReviewStep}>
-				<ReviewStep wallet={wallet!} />
+				<ReviewStep wallet={wallet!} network={activeNetwork} />
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.AuthenticationStep}>
