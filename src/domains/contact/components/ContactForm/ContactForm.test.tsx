@@ -5,13 +5,13 @@ import "jest-styled-components";
 import { ContactForm } from "./ContactForm";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	renderResponsive,
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const onSave = vi.fn();
@@ -20,7 +20,7 @@ const onChange = vi.fn();
 
 let profile: Contracts.IProfile;
 let contact: Contracts.IContact;
-let validArkDevnetAddress: string;
+let validDevnetAddress: string;
 let resetProfileNetworksMock: () => void;
 
 const addressInput = () => screen.getByTestId("contact-form__address-input");
@@ -33,12 +33,12 @@ describe("ContactForm", () => {
 	});
 
 	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 
 		const [wallet] = profile.wallets().values();
-		validArkDevnetAddress = wallet.address();
+		validDevnetAddress = wallet.address();
 		contact = profile.contacts().values()[0];
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
@@ -119,10 +119,10 @@ describe("ContactForm", () => {
 			expect(nameInput()).toHaveValue("name");
 		});
 
-		await userEvent.type(addressInput(), validArkDevnetAddress);
+		await userEvent.type(addressInput(), validDevnetAddress);
 
 		await waitFor(() => {
-			expect(addressInput()).toHaveValue(validArkDevnetAddress);
+			expect(addressInput()).toHaveValue(validDevnetAddress);
 		});
 
 		await waitFor(() => {
@@ -217,10 +217,10 @@ describe("ContactForm", () => {
 			expect(nameInput()).toHaveValue("name");
 		});
 
-		await userEvent.type(addressInput(), validArkDevnetAddress);
+		await userEvent.type(addressInput(), validDevnetAddress);
 
 		await waitFor(() => {
-			expect(addressInput()).toHaveValue(validArkDevnetAddress);
+			expect(addressInput()).toHaveValue(validDevnetAddress);
 		});
 
 		await waitFor(() => {
@@ -232,9 +232,9 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(onSave).toHaveBeenCalledWith({
 				address: {
-					address: validArkDevnetAddress,
+					address: validDevnetAddress,
 					coin: "Mainsail",
-					name: validArkDevnetAddress,
+					name: validDevnetAddress,
 				},
 				name: expect.any(String),
 			});
