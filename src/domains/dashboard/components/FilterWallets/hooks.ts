@@ -28,7 +28,6 @@ export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) =
 			return true;
 		}
 
-		console.log(selectedNetworkIds, defaultConfiguration.selectedNetworkIds);
 		if (selectedNetworkIds.length < defaultConfiguration.selectedNetworkIds?.length) {
 			return true;
 		}
