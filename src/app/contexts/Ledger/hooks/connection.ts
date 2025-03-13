@@ -10,6 +10,7 @@ import { useEnvironmentContext } from "@/app/contexts/Environment";
 import { toasts } from "@/app/services";
 import { useLedgerImport } from "@/app/contexts/Ledger/hooks/import";
 import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
+import { Id } from "react-toastify";
 
 export const useLedgerConnection = () => {
 	const { t } = useTranslation();
@@ -22,12 +23,20 @@ export const useLedgerConnection = () => {
 	const { device, isBusy, isConnected, isWaiting, error } = state;
 
 	const { importLedgerWallets } = useLedgerImport({ device, env });
+	const connectedToast = useRef<Id>()
 
 	useEffect(() => {
+
 		if (deviceName) {
+			if (connectedToast.current) {
+				return
+			}
+
 			if (isConnected) {
-				toasts.success(t("COMMON.LEDGER_CONNECTED", { device: deviceName }));
+				connectedToast.current = toasts.success(t("COMMON.LEDGER_CONNECTED", { device: deviceName }));
+				setTimeout(() => connectedToast.current = undefined, 2000);
 			} else {
+				connectedToast.current = undefined
 				toasts.warning(t("COMMON.LEDGER_DISCONNECTED", { device: deviceName }));
 			}
 		}
