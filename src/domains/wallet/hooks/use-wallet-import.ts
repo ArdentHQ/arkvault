@@ -2,7 +2,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
-import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+import { getDefaultAlias, getLedgerDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { useEnvironmentContext } from "@/app/contexts";
 
 import { OptionsValue } from "./use-import-options";
@@ -201,12 +201,11 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			await syncAll(wallet);
 		}
 
-		wallet.mutator().alias(
-			getDefaultAlias({
-				network,
-				profile,
-			}),
-		);
+		const alias = ledgerOptions?.path
+			? getLedgerDefaultAlias({ network, path: ledgerOptions.path, profile })
+			: getDefaultAlias({ network, profile });
+
+		wallet.mutator().alias(alias);
 
 		return wallet;
 	};
