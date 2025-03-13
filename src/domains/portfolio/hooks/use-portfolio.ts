@@ -154,11 +154,10 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 		selectedWallet: addresses.defaultSelectedWallet(),
 		selectedWallets: wallets,
 		setSelectedAddresses: async (selectedAddresses: string[], network?: Networks.Network) => {
-			const selected = SelectedAddresses({ activeNetwork, profile });
-			selected.set(selectedAddresses, network);
+			addresses.set(selectedAddresses, network);
 
-			if (!selected.hasSelected() && profile.wallets().first()) {
-				selected.set([profile.wallets().first().address()], network);
+			if (!addresses.hasSelected() && profile.wallets().first()) {
+				addresses.set([profile.wallets().first().address()], network);
 			}
 
 			await persist();

@@ -50,7 +50,7 @@ export const AddressesSidePanel = ({
 		if (!open) {
 			onSetSelectedAddresses(defaultSelectedAddresses);
 		}
-	}, [selectedAddressesString]);
+	}, [selectedAddressesString, open, defaultSelectedAddresses]);
 
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
