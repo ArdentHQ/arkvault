@@ -69,7 +69,6 @@ export const LedgerTabs = ({
 					),
 				);
 
-				console.log({ importedWallets: importedWallets.map((wallet) => wallet.address()), selectedAddresses });
 				await setSelectedAddresses(
 					[...selectedAddresses, ...importedWallets.map((wallet) => wallet.address())],
 					network,
