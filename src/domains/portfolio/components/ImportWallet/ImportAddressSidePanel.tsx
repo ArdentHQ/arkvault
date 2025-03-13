@@ -248,7 +248,7 @@ export const ImportAddressesSidePanel = ({
 			onOpenChange={handleOpenChange}
 			dataTestId="ImportAddressSidePanel"
 		>
-			<Form context={form} onSubmit={handleFinish} data-testid="ImportWallet__form">
+			<Form context={form} data-testid="ImportWallet__form">
 				<>
 					<Tabs activeId={activeTab} className="pb-20">
 						{!isMethodStep && (
@@ -270,6 +270,7 @@ export const ImportAddressesSidePanel = ({
 										onCancel={() => {
 											handleOpenChange(false);
 										}}
+										onSubmit={handleFinish}
 									/>
 								)}
 								{!isLedgerImport && importOption && (
@@ -307,6 +308,7 @@ export const ImportAddressesSidePanel = ({
 							isLoading={isEncrypting || isImporting}
 							isSubmitDisabled={isSubmitting}
 							showPortfoliobutton={activeTab === Step.SummaryStep}
+							onSubmit={handleFinish}
 						/>
 					)}
 				</>

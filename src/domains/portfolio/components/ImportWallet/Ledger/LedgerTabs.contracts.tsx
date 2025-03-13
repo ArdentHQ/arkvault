@@ -12,6 +12,7 @@ export enum LedgerTabStep {
 
 export interface LedgerTabsProperties {
 	onBack?: () => void;
+	onSubmit?: () => void;
 	onCancel?: () => void;
 	onStepChange?: (step: LedgerTabStep) => void;
 	activeIndex?: LedgerTabStep;

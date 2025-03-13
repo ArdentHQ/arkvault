@@ -26,6 +26,7 @@ export const ImportActionToolbar = ({
 	showButtons,
 	isSubmitDisabled,
 	showPortfoliobutton,
+	onSubmit,
 }: {
 	showButtons?: boolean;
 	isLoading?: boolean;
@@ -38,6 +39,7 @@ export const ImportActionToolbar = ({
 	showPortfoliobutton?: boolean;
 	onBack?: () => void;
 	onContinue?: () => void;
+	onSubmit?: () => void;
 }) => {
 	const { t } = useTranslation();
 	return (
@@ -72,7 +74,7 @@ export const ImportActionToolbar = ({
 				)}
 
 				{showPortfoliobutton && (
-					<Button disabled={isSubmitDisabled} type="submit" data-testid="ImportWallet__finish-button">
+					<Button disabled={isSubmitDisabled} data-testid="ImportWallet__finish-button" onClick={onSubmit}>
 						{t("COMMON.GO_TO_PORTFOLIO")}
 					</Button>
 				)}

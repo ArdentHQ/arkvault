@@ -1,17 +1,14 @@
 import { Enums, Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useBreakpoint } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
-import { FeeField } from "@/domains/transaction/components/FeeField";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
@@ -44,43 +41,19 @@ export const FormStep = ({
 	onScan?: () => void;
 	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
 }) => {
-	const isMounted = useRef(true);
-
 	const { t } = useTranslation();
 
 	const { isXs } = useBreakpoint();
 
-	const { getValues, setValue } = useFormContext();
+	const { setValue, getValues, unregister } = useFormContext();
+
+	useEffect(() => {
+		unregister(["gasLimit", "gasPrice"]);
+	}, [unregister]);
+
 	const { recipients } = getValues();
 
 	const { allWallets } = usePortfolio({ profile });
-
-	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
-
-	const coin = profile.coins().get(network.coin(), network.id());
-	useEffect(() => {
-		const updateFeeTransactionData = async () => {
-			const transferData = await buildTransferData({
-				coin,
-				recipients,
-			});
-
-			/* istanbul ignore next -- @preserve */
-			if (isMounted.current) {
-				setFeeTransactionData(transferData);
-			}
-		};
-
-		updateFeeTransactionData();
-	}, [recipients, coin]);
-
-	useEffect(
-		/* istanbul ignore next -- @preserve */
-		() => () => {
-			isMounted.current = false;
-		},
-		[],
-	);
 
 	const getRecipients = (): RecipientItem[] => {
 		if (deeplinkProps.recipient && deeplinkProps.amount) {
@@ -110,8 +83,6 @@ export const FormStep = ({
 			sender,
 		});
 	};
-
-	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 
 	return (
 		<section data-testid="SendTransfer__form-step">
@@ -189,20 +160,6 @@ export const FormStep = ({
 						wallet={senderWallet}
 					/>
 				</div>
-
-				{showFeeInput && (
-					<FormField name="fee" disableStateHints>
-						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-						{!!network && (
-							<FeeField
-								type={getFeeType(recipients?.length)}
-								data={feeTransactionData}
-								network={network}
-								profile={profile}
-							/>
-						)}
-					</FormField>
-				)}
 			</div>
 		</section>
 	);

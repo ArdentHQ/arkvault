@@ -24,6 +24,7 @@ export const LedgerTabs = ({
 	onClickEditWalletName,
 	onStepChange,
 	onCancel,
+	onSubmit,
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -189,6 +190,7 @@ export const LedgerTabs = ({
 						allSteps={["1", "2"]}
 						isSubmitDisabled={isSubmitting}
 						showPortfoliobutton={activeTab === LedgerTabStep.LedgerImportStep}
+						onSubmit={onSubmit}
 					/>
 				)}
 			</div>
