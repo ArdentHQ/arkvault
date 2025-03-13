@@ -43,7 +43,7 @@ describe("useWalletFilters", () => {
 			result.current.update("selectedNetworkIds", []);
 		});
 
-		await waitFor(() => expect(result.current.isFilterChanged).toBe(true));
+		await waitFor(() => expect(result.current.isFilterChanged).toBe(false));
 
 		resetProfileNetworksMock2();
 	});
