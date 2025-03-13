@@ -6,7 +6,6 @@ import { useBreakpoint } from "@/app/hooks";
 interface Properties {
 	title: string;
 	titleIcon?: React.ReactNode;
-	titleSuffix?: string | React.ReactNode;
 	subtitle?: string | React.ReactNode;
 	className?: string;
 	titleClassName?: string;
@@ -14,50 +13,46 @@ interface Properties {
 	border?: boolean;
 }
 
-export const Header = ({ title, titleIcon, titleSuffix, className, subtitle, extra, titleClassName }: Properties) => (
+export const Header = ({ title, titleIcon, className, subtitle, extra, titleClassName }: Properties) => (
 	<div className={cn("flex items-end justify-between bg-theme-background", className)}>
 		<div className="space-y-2">
 			<div className="flex items-center gap-3">
 				{titleIcon ?? undefined}
-
-				<div className="flex flex-col gap-2">
-					<h1
-						className={cn(
-							"mb-0",
-							{
-								"text-2xl leading-[29px]": !titleClassName,
-							},
-							titleClassName,
-						)}
-						data-testid="header__title"
-					>
-						{title}
-						{titleSuffix && <span> {titleSuffix}</span>}
-					</h1>
-
-					{subtitle && (
-						<div
-							className="flex items-center leading-5 text-theme-secondary-text"
-							data-testid="header__subtitle"
-						>
-							{subtitle}
-						</div>
+				<h1
+					className={cn(
+						"mb-0",
+						{
+							"text-2xl leading-[29px]": !titleClassName,
+						},
+						titleClassName,
 					)}
-				</div>
+					data-testid="header__title"
+				>
+					{title}
+				</h1>
 			</div>
+
+			{subtitle && (
+				<div
+					className="flex items-center leading-5 text-theme-secondary-text"
+					data-testid="header__subtitle"
+				>
+					{subtitle}
+				</div>
+			)}
 		</div>
 
 		{extra && <div>{extra}</div>}
 	</div>
 );
 
-export const PageHeader = ({ title, titleSuffix, subtitle, extra, border = false, ...parameters }: Properties) => {
+export const PageHeader = ({ title, subtitle, extra, border = false, ...parameters }: Properties) => {
 	const { isMdAndAbove } = useBreakpoint();
 
 	if (isMdAndAbove) {
 		return (
 			<Section border={border}>
-				<Header title={title} titleSuffix={titleSuffix} subtitle={subtitle} extra={extra} {...parameters} />
+				<Header title={title} subtitle={subtitle} extra={extra} {...parameters} />
 			</Section>
 		);
 	}
