@@ -10,13 +10,13 @@ import { translations } from "@/domains/contact/i18n";
 import {
 	breakpoints,
 	env,
-	getDefaultProfileId,
 	render,
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
@@ -65,13 +65,15 @@ const createContact = (targetProfile: Contracts.IProfile, name: string, address:
 		},
 	]);
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("Contacts", () => {
 	let resetProfileNetworksMock: () => void;
 	let mockContact: Contracts.IContact;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		mockContact = createContact(profile, "Mock Contact", "0x0000000000000000000000000000000000000000");
 	});
@@ -448,7 +450,7 @@ describe("Contacts", () => {
 
 		await userEvent.click(sendButton());
 
-		expect(history.location.pathname).toBe("/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer");
+		expect(history.location.pathname).toBe("/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer");
 		expect(history.location.search).toBe("?coin=Mainsail&recipient=0x0000000000000000000000000000000000000000");
 
 		contactsSpy.mockRestore();
