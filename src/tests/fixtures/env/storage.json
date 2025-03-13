@@ -279,7 +279,9 @@
 				"USE_TEST_NETWORKS": true,
 				"DO_NOT_SHOW_FEE_WARNING": false,
 				"DASHBOARD_CONFIGURATION": {
-					"hideBalance": false
+					"hideBalance": false,
+					"walletsDisplayType": "all",
+					"selectedNetworkIds": []
 				}
 			}
 		}
