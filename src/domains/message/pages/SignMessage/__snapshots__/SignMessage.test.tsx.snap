@@ -1028,7 +1028,9 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                                 data-testid="InputPassword__toggle"
                                 type="button"
                               >
-                                <div>
+                                <div
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                                >
                                   <div
                                     style="height: 20px; width: 20px;"
                                   >
@@ -2131,7 +2133,9 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                                 data-testid="InputPassword__toggle"
                                 type="button"
                               >
-                                <div>
+                                <div
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                                >
                                   <div
                                     style="height: 20px; width: 20px;"
                                   >
