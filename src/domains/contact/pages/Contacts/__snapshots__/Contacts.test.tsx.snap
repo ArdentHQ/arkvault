@@ -803,6 +803,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   >
                     Contacts
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -4329,6 +4330,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   >
                     Contacts
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -6360,6 +6362,7 @@ exports[`Contacts > should render without contacts 1`] = `
                   >
                     Contacts
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"

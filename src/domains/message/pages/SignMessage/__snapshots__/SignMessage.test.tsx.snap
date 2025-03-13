@@ -814,22 +814,18 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                                   </svg>
                                 </div>
                               </div>
-                              <div
-                                class="flex flex-col gap-2"
+                              <h1
+                                class="mb-0 text-2xl leading-[29px]"
+                                data-testid="header__title"
                               >
-                                <h1
-                                  class="mb-0 text-2xl leading-[29px]"
-                                  data-testid="header__title"
-                                >
-                                  Sign Message
-                                </h1>
-                                <div
-                                  class="flex items-center leading-5 text-theme-secondary-text"
-                                  data-testid="header__subtitle"
-                                >
-                                  Provide a message below and sign with your mnemonic passphrase.
-                                </div>
-                              </div>
+                                Sign Message
+                              </h1>
+                            </div>
+                            <div
+                              class="flex items-center leading-5 text-theme-secondary-text"
+                              data-testid="header__subtitle"
+                            >
+                              Provide a message below and sign with your mnemonic passphrase.
                             </div>
                           </div>
                         </div>
@@ -1917,22 +1913,18 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                                   </svg>
                                 </div>
                               </div>
-                              <div
-                                class="flex flex-col gap-2"
+                              <h1
+                                class="mb-0 text-2xl leading-[29px]"
+                                data-testid="header__title"
                               >
-                                <h1
-                                  class="mb-0 text-2xl leading-[29px]"
-                                  data-testid="header__title"
-                                >
-                                  Sign Message
-                                </h1>
-                                <div
-                                  class="flex items-center leading-5 text-theme-secondary-text"
-                                  data-testid="header__subtitle"
-                                >
-                                  Provide a message below and sign with your mnemonic passphrase.
-                                </div>
-                              </div>
+                                Sign Message
+                              </h1>
+                            </div>
+                            <div
+                              class="flex items-center leading-5 text-theme-secondary-text"
+                              data-testid="header__subtitle"
+                            >
+                              Provide a message below and sign with your mnemonic passphrase.
                             </div>
                           </div>
                         </div>
