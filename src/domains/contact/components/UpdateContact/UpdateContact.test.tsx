@@ -10,7 +10,8 @@ import {
 	renderResponsive,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
