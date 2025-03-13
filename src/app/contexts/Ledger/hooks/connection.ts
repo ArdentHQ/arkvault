@@ -23,20 +23,19 @@ export const useLedgerConnection = () => {
 	const { device, isBusy, isConnected, isWaiting, error } = state;
 
 	const { importLedgerWallets } = useLedgerImport({ device, env });
-	const connectedToast = useRef<Id>()
+	const connectedToast = useRef<Id>();
 
 	useEffect(() => {
-
 		if (deviceName) {
 			if (connectedToast.current) {
-				return
+				return;
 			}
 
 			if (isConnected) {
 				connectedToast.current = toasts.success(t("COMMON.LEDGER_CONNECTED", { device: deviceName }));
-				setTimeout(() => connectedToast.current = undefined, 2000);
+				setTimeout(() => (connectedToast.current = undefined), 2000);
 			} else {
-				connectedToast.current = undefined
+				connectedToast.current = undefined;
 				toasts.warning(t("COMMON.LEDGER_DISCONNECTED", { device: deviceName }));
 			}
 		}

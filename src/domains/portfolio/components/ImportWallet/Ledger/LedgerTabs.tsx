@@ -12,7 +12,7 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { LedgerData, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
-import { assertString, assertWallet } from "@/utils/assertions";
+import { assertString } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
@@ -69,13 +69,14 @@ export const LedgerTabs = ({
 					),
 				);
 
+				console.log({ importedWallets: importedWallets.map((wallet) => wallet.address()), selectedAddresses });
 				await setSelectedAddresses(
 					[...selectedAddresses, ...importedWallets.map((wallet) => wallet.address())],
 					network,
 				);
 			}
 		},
-		[activeProfile, activeNetwork],
+		[activeProfile, activeNetwork, selectedAddresses],
 	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);
@@ -123,17 +124,7 @@ export const LedgerTabs = ({
 	);
 
 	const handleFinish = useCallback(() => {
-		if (isMultiple) {
-			history.push(`/profiles/${activeProfile.id()}/dashboard`);
-			return;
-		}
-
-		const importedWallet = activeProfile
-			.wallets()
-			.findByAddressWithNetwork(importedWallets[0].address, activeNetwork.id());
-
-		assertWallet(importedWallet);
-		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
+		history.push(`/profiles/${activeProfile.id()}/dashboard`);
 	}, [isMultiple, history, activeProfile, activeNetwork, importedWallets]);
 
 	const handleDeviceNotAvailable = useCallback(() => {
