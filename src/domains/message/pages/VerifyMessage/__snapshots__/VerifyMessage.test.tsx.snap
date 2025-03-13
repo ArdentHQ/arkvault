@@ -708,7 +708,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-172"
             data-testid="VerifyMessage"
           >
             <div>
@@ -1702,7 +1702,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-172"
             data-testid="VerifyMessage"
           >
             <div>
