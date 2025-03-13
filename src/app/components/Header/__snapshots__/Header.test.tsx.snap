@@ -134,10 +134,8 @@ exports[`PageHeader > should render responsive (md) 1`] = `
                 data-testid="header__title"
               >
                 Header test
-                <span>
-                   suffix
-                </span>
               </h1>
+               
               <div
                 class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
