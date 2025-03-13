@@ -27,7 +27,7 @@ describe("PortfolioBreakdown", () => {
 
 	let useGraphWidthMock: vi.SpyInstance;
 
-	const liveNetworkIds = ["ark.mainnet", "lsk.mainnet"];
+	const liveNetworkIds = ["mainsail.mainnet", "lsk.mainnet"];
 
 	beforeAll(async () => {
 		profile = await env.profiles().create("blank");
@@ -39,10 +39,10 @@ describe("PortfolioBreakdown", () => {
 			wallet: Contracts.IReadWriteWallet;
 		};
 
-		walletData = await profile.walletFactory().generate({ coin: "ARK", network: "ark.mainnet" });
+		walletData = await profile.walletFactory().generate({ coin: "Mainsail", network: "mainsail.mainnet" });
 		firstWallet = walletData.wallet;
 
-		walletData = await profile.walletFactory().generate({ coin: "ARK", network: "ark.mainnet" });
+		walletData = await profile.walletFactory().generate({ coin: "Mainsail", network: "mainsail.mainnet" });
 		secondWallet = walletData.wallet;
 
 		profile.wallets().push(firstWallet);
