@@ -3,7 +3,7 @@ import React from "react";
 
 import { CreateContact } from "./CreateContact";
 import { translations } from "@/domains/contact/i18n";
-import { env, getDefaultProfileId, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 
 const onSave = vi.fn();

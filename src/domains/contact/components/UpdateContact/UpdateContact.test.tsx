@@ -6,7 +6,6 @@ import React from "react";
 import { UpdateContact } from "./UpdateContact";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	renderResponsive,
 	screen,

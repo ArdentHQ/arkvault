@@ -4,7 +4,7 @@ import React from "react";
 
 import { DeleteContact } from "./DeleteContact";
 import { translations } from "@/domains/contact/i18n";
-import { env, getDefaultProfileId, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let contact: Contracts.IContact;
 let profile: Contracts.IProfile;
