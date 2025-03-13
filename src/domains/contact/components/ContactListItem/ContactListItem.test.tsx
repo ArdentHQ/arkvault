@@ -23,7 +23,7 @@ let resetProfileNetworksMock: () => void;
 process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("ContactListItem", () => {
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		contact = profile.contacts().first();
 	});
