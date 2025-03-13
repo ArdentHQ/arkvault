@@ -5,10 +5,10 @@ import React from "react";
 import { ContactListItem } from "./ContactListItem";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const options = [
@@ -20,9 +20,11 @@ let contact: Contracts.IContact;
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("ContactListItem", () => {
-	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+	beforeAll(async () => {
+		profile = env.profiles().findById(getMainsailProfileId());
 		contact = profile.contacts().first();
 	});
 
