@@ -11,7 +11,7 @@ import {
 	renderResponsive,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
@@ -25,9 +25,11 @@ const onSave = vi.fn();
 
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("UpdateContact", () => {
 	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		contact = profile.contacts().values()[0];
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);

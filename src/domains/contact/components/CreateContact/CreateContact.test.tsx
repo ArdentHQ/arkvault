@@ -3,7 +3,7 @@ import React from "react";
 
 import { CreateContact } from "./CreateContact";
 import { translations } from "@/domains/contact/i18n";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 
 const onSave = vi.fn();
@@ -22,9 +22,11 @@ const newContact = {
 	name: "Test Contact",
 };
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("CreateContact", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it("should render", async () => {

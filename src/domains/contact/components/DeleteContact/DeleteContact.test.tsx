@@ -4,16 +4,18 @@ import React from "react";
 
 import { DeleteContact } from "./DeleteContact";
 import { translations } from "@/domains/contact/i18n";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let contact: Contracts.IContact;
 let profile: Contracts.IProfile;
 
 const onDelete = vi.fn();
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("DeleteContact", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		contact = profile.contacts().values()[0];
 	});
 

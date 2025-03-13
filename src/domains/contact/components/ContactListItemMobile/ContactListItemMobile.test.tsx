@@ -4,11 +4,11 @@ import userEvent from "@testing-library/user-event";
 import { ContactListItemMobile } from "./ContactListItemMobile";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const options = [
@@ -16,13 +16,15 @@ const options = [
 	{ label: "Option 2", value: "option_2" },
 ];
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("ContactListItemMobile", () => {
 	let profile: Contracts.IProfile;
 	let contact: Contracts.IContact;
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		contact = profile.contacts().first();
 	});
 
