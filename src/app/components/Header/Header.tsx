@@ -11,48 +11,76 @@ interface Properties {
 	titleClassName?: string;
 	extra?: React.ReactNode;
 	border?: boolean;
+	isPageHeader?: boolean;
 }
 
-export const Header = ({ title, titleIcon, className, subtitle, extra, titleClassName }: Properties) => (
-	<div className={cn("flex items-end justify-between bg-theme-background", className)}>
-		<div className="space-y-2">
-			<div className="flex items-center gap-3">
-				{titleIcon ?? undefined}
-				<h1
-					className={cn(
-						"mb-0",
-						{
-							"text-2xl leading-[29px]": !titleClassName,
-						},
-						titleClassName,
+export const Header = ({ title, titleIcon, className, subtitle, extra, titleClassName, isPageHeader }: Properties) => {
+	const renderSubtitle = () => {
+		return (
+			<>
+				{subtitle && (
+					<div
+						className="flex items-center leading-5 text-theme-secondary-text"
+						data-testid="header__subtitle"
+					>
+						{subtitle}
+					</div>
+				)}
+			</>
+		);
+	};
+
+	const renderTitle = () => {
+		return (
+			<h1
+				className={cn(
+					"mb-0",
+					{
+						"text-2xl leading-[29px]": !titleClassName,
+					},
+					titleClassName,
+				)}
+				data-testid="header__title"
+			>
+				{title}
+			</h1>
+		);
+	};
+
+	return (
+		<div className={cn("flex items-end justify-between bg-theme-background", className)}>
+			<div className="space-y-2">
+				<div className="flex items-center gap-3">
+					{titleIcon ?? undefined}
+					{isPageHeader ? (
+						<div className="flex flex-col gap-2">
+							{renderTitle()} { renderSubtitle() }
+						</div>
+					) : (
+						renderTitle()
 					)}
-					data-testid="header__title"
-				>
-					{title}
-				</h1>
+				</div>
+				{!isPageHeader && renderSubtitle()}
 			</div>
 
-			{subtitle && (
-				<div
-					className="flex items-center leading-5 text-theme-secondary-text"
-					data-testid="header__subtitle"
-				>
-					{subtitle}
-				</div>
-			)}
+			{extra && <div>{extra}</div>}
 		</div>
+	);
+};
 
-		{extra && <div>{extra}</div>}
-	</div>
-);
-
-export const PageHeader = ({ title, subtitle, extra, border = false, ...parameters }: Properties) => {
+export const PageHeader = ({
+	title,
+	subtitle,
+	extra,
+	border = false,
+	...parameters
+}: Omit<Properties, "isPageHeader">) => {
 	const { isMdAndAbove } = useBreakpoint();
 
 	if (isMdAndAbove) {
 		return (
 			<Section border={border}>
-				<Header title={title} subtitle={subtitle} extra={extra} {...parameters} />
+				<Header title={title} subtitle={subtitle} isPageHeader={true} extra={extra} {...parameters} />
 			</Section>
 		);
 	}
