@@ -236,7 +236,7 @@ export const ImportAddressesSidePanel = ({
 			onOpenChange={handleOpenChange}
 			dataTestId="ImportAddressSidePanel"
 		>
-			<Form context={form} onSubmit={handleFinish} data-testid="ImportWallet__form">
+			<Form context={form} data-testid="ImportWallet__form">
 				{isLedgerImport ? (
 					<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
 				) : (
@@ -302,7 +302,7 @@ export const ImportAddressesSidePanel = ({
 								{activeTab === Step.SummaryStep && (
 									<Button
 										disabled={isSubmitting}
-										type="submit"
+										onClick={handleFinish}
 										data-testid="ImportWallet__finish-button"
 									>
 										{t("COMMON.GO_TO_PORTFOLIO")}
