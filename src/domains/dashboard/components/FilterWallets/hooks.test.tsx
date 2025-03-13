@@ -4,12 +4,7 @@ import React from "react";
 
 import { useWalletFilters } from "./hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import {
-	env,
-	waitFor,
-	mockProfileWithPublicAndTestNetworks,
-	getMainsailProfileId,
-} from "@/utils/testing-library";
+import { env, waitFor, mockProfileWithPublicAndTestNetworks, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
