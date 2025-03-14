@@ -17,7 +17,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
       </div>
     </div>
     <div
-      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
         class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -94,7 +94,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           <div
             class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
           >
-            Confirmation time
+            Confirmation Time
           </div>
           <div
             class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
@@ -125,7 +125,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
       </div>
     </div>
     <div
-      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
         class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -202,7 +202,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           <div
             class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
           >
-            Confirmation time
+            Confirmation Time
           </div>
           <div
             class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
@@ -233,7 +233,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
       </div>
     </div>
     <div
-      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
         class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -310,7 +310,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           <div
             class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
           >
-            Confirmation time
+            Confirmation Time
           </div>
           <div
             class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
@@ -341,7 +341,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
       </div>
     </div>
     <div
-      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
         class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -418,7 +418,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           <div
             class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
           >
-            Confirmation time
+            Confirmation Time
           </div>
           <div
             class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
