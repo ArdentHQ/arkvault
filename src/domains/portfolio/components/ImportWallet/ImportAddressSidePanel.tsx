@@ -7,7 +7,6 @@ import { useHistory } from "react-router-dom";
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
-import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -21,10 +20,10 @@ import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/u
 import { assertString, assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Header } from "@/app/components/Header";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { MethodStep } from "@/domains/portfolio/components/ImportWallet/MethodStep";
-import { ImportOption } from "@/domains/wallet/hooks";
+import { ImportActionToolbar, LedgerStepHeader, StepHeader } from "./ImportAddressSidePanel.blocks";
+import { OptionsValue } from "@/domains/wallet/hooks";
+import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 
 enum Step {
 	MethodStep = 1,
@@ -41,10 +40,10 @@ export const ImportAddressesSidePanel = ({
 	onOpenChange: (open: boolean) => void;
 }): JSX.Element => {
 	const history = useHistory();
-	const isLedgerImport = history.location.pathname.includes("/import/ledger");
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState<Step>(Step.MethodStep);
+	const [ledgerActiveTab, setLedgerActiveTab] = useState<LedgerTabStep>(LedgerTabStep.ListenLedgerStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
 
@@ -64,6 +63,7 @@ export const ImportAddressesSidePanel = ({
 	const { getValues, formState, register, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
+	const isLedgerImport = !!importOption && importOption.value === OptionsValue.LEDGER;
 
 	useEffect(() => {
 		register({ name: "importOption", type: "custom" });
@@ -74,7 +74,11 @@ export const ImportAddressesSidePanel = ({
 		if (open) {
 			setActiveTab(Step.MethodStep);
 			setWalletGenerationInput(undefined);
+			return;
 		}
+
+		setActiveTab(Step.MethodStep);
+		form.reset();
 	}, [open]);
 
 	useEffect(() => {
@@ -229,89 +233,85 @@ export const ImportAddressesSidePanel = ({
 
 	const isMethodStep = activeTab === Step.MethodStep;
 
+	const StepsHeaderComponent = () => {
+		if (activeTab === Step.ImportDetailStep && isLedgerImport) {
+			return <LedgerStepHeader step={ledgerActiveTab} importOption={importOption} />;
+		}
+
+		return <StepHeader step={activeTab} importOption={importOption} />;
+	};
+
 	return (
 		<SidePanel
-			header={<StepHeader step={activeTab} importOption={importOption} />}
+			header={StepsHeaderComponent()}
 			open={open}
 			onOpenChange={handleOpenChange}
 			dataTestId="ImportAddressSidePanel"
 		>
 			<Form context={form} data-testid="ImportWallet__form">
-				{isLedgerImport ? (
-					<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
-				) : (
-					<>
-						<Tabs activeId={activeTab} className="pb-20">
-							{!isMethodStep && (
-								<div className="mb-4 sm:hidden">
-									<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-								</div>
-							)}
+				<>
+					<Tabs activeId={activeTab} className="pb-20">
+						{!isMethodStep && (
+							<div className="mb-4 sm:hidden">
+								<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
+							</div>
+						)}
 
-							<div>
-								<TabPanel tabId={Step.MethodStep}>
-									<MethodStep network={activeNetwork} onSelect={handleNext} />
-								</TabPanel>
+						<div>
+							<TabPanel tabId={Step.MethodStep}>
+								<MethodStep network={activeNetwork} onSelect={handleNext} />
+							</TabPanel>
 
-								<TabPanel tabId={Step.ImportDetailStep}>
-									<ImportDetailStep profile={activeProfile} network={activeNetwork} />
-								</TabPanel>
-
-								<TabPanel tabId={Step.EncryptPasswordStep}>
-									<EncryptPasswordStep importedWallet={importedWallet} />
-								</TabPanel>
-
-								<TabPanel tabId={Step.SummaryStep}>
-									<SuccessStep
-										importedWallet={importedWallet}
-										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+							<TabPanel tabId={Step.ImportDetailStep}>
+								{isLedgerImport && (
+									<LedgerTabs
+										onClickEditWalletName={handleEditLedgerAlias}
+										onStepChange={setLedgerActiveTab}
+										onCancel={() => {
+											handleOpenChange(false);
+										}}
+										onSubmit={handleFinish}
 									/>
-								</TabPanel>
-							</div>
-						</Tabs>
-						<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
-							{!isMethodStep && (
-								<div className="hidden min-w-[136px] sm:block">
-									<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-								</div>
-							)}
-
-							<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
-								{!isMethodStep && activeTab <= Step.EncryptPasswordStep && (
-									<>
-										<Button
-											disabled={isImporting}
-											variant="secondary"
-											onClick={handleBack}
-											data-testid="ImportWallet__back-button"
-										>
-											{t("COMMON.BACK")}
-										</Button>
-
-										<Button
-											disabled={isNextDisabled}
-											isLoading={isEncrypting || isImporting}
-											onClick={handleNext}
-											data-testid="ImportWallet__continue-button"
-										>
-											{t("COMMON.CONTINUE")}
-										</Button>
-									</>
 								)}
-
-								{activeTab === Step.SummaryStep && (
-									<Button
-										disabled={isSubmitting}
-										onClick={handleFinish}
-										data-testid="ImportWallet__finish-button"
-									>
-										{t("COMMON.GO_TO_PORTFOLIO")}
-									</Button>
+								{!isLedgerImport && importOption && (
+									<ImportDetailStep
+										profile={activeProfile}
+										network={activeNetwork}
+										importOption={importOption}
+									/>
 								)}
-							</div>
+							</TabPanel>
+
+							<TabPanel tabId={Step.EncryptPasswordStep}>
+								<EncryptPasswordStep importedWallet={importedWallet} />
+							</TabPanel>
+
+							<TabPanel tabId={Step.SummaryStep}>
+								<SuccessStep
+									importedWallet={importedWallet}
+									onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+								/>
+							</TabPanel>
 						</div>
-					</>
-				)}
+					</Tabs>
+
+					{!isLedgerImport && (
+						<ImportActionToolbar
+							showSteps={!isMethodStep}
+							showButtons={!isMethodStep && activeTab <= Step.EncryptPasswordStep}
+							isBackDisabled={isImporting}
+							onBack={handleBack}
+							isContinueDisabled={isNextDisabled}
+							onContinue={handleNext}
+							allSteps={allSteps}
+							activeTab={activeTab}
+							isLoading={isEncrypting || isImporting}
+							isSubmitDisabled={isSubmitting}
+							showPortfoliobutton={activeTab === Step.SummaryStep}
+							onSubmit={handleFinish}
+						/>
+					)}
+				</>
 			</Form>
 
 			{!!importedWallet && isEditAliasModalOpen && (
@@ -324,64 +324,4 @@ export const ImportAddressesSidePanel = ({
 			)}
 		</SidePanel>
 	);
-};
-
-const StepHeader = ({ step, importOption }: { step: Step; importOption: ImportOption | undefined }): JSX.Element => {
-	const { t } = useTranslation();
-
-	const headers: Record<Step, JSX.Element> = {
-		[Step.MethodStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
-				className="mt-px"
-			/>
-		),
-		[Step.ImportDetailStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={importOption?.header ?? ""}
-				subtitle={importOption?.description ?? ""}
-				titleIcon={
-					importOption?.icon ? (
-						<div className="text-theme-primary-600 dark:text-theme-navy-500"> {importOption.icon} </div>
-					) : undefined
-				}
-				className="mt-px"
-			/>
-		),
-		[Step.EncryptPasswordStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
-				className="mt-px"
-				titleIcon={
-					<ThemeIcon
-						lightIcon="WalletEncryptionLight"
-						darkIcon="WalletEncryptionDark"
-						dimensions={[24, 24]}
-					/>
-				}
-			/>
-		),
-		[Step.SummaryStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				className="mt-px"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
-				titleIcon={
-					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[24, 24]}
-						name="Completed"
-						data-testid="icon-Completed"
-					/>
-				}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE")}
-			/>
-		),
-	};
-
-	return headers[step];
 };
