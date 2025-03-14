@@ -708,7 +708,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="space-y-5 mx-auto max-w-xl"
+            class="mx-auto max-w-172"
             data-testid="SignMessage"
           >
             <div>
@@ -814,22 +814,18 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                                   </svg>
                                 </div>
                               </div>
-                              <div
-                                class="flex flex-col gap-2"
+                              <h1
+                                class="mb-0 text-2xl leading-[29px]"
+                                data-testid="header__title"
                               >
-                                <h1
-                                  class="mb-0 text-2xl leading-[29px]"
-                                  data-testid="header__title"
-                                >
-                                  Sign Message
-                                </h1>
-                                <div
-                                  class="flex items-center leading-5 text-theme-secondary-text"
-                                  data-testid="header__subtitle"
-                                >
-                                  Provide a message below and sign with your mnemonic passphrase.
-                                </div>
-                              </div>
+                                Sign Message
+                              </h1>
+                            </div>
+                            <div
+                              class="flex items-center leading-5 text-theme-secondary-text"
+                              data-testid="header__subtitle"
+                            >
+                              Provide a message below and sign with your mnemonic passphrase.
                             </div>
                           </div>
                         </div>
@@ -1028,7 +1024,9 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                                 data-testid="InputPassword__toggle"
                                 type="button"
                               >
-                                <div>
+                                <div
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                                >
                                   <div
                                     style="height: 20px; width: 20px;"
                                   >
@@ -1811,7 +1809,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="space-y-5 mx-auto max-w-xl"
+            class="mx-auto max-w-172"
             data-testid="SignMessage"
           >
             <div>
@@ -1917,22 +1915,18 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                                   </svg>
                                 </div>
                               </div>
-                              <div
-                                class="flex flex-col gap-2"
+                              <h1
+                                class="mb-0 text-2xl leading-[29px]"
+                                data-testid="header__title"
                               >
-                                <h1
-                                  class="mb-0 text-2xl leading-[29px]"
-                                  data-testid="header__title"
-                                >
-                                  Sign Message
-                                </h1>
-                                <div
-                                  class="flex items-center leading-5 text-theme-secondary-text"
-                                  data-testid="header__subtitle"
-                                >
-                                  Provide a message below and sign with your mnemonic passphrase.
-                                </div>
-                              </div>
+                                Sign Message
+                              </h1>
+                            </div>
+                            <div
+                              class="flex items-center leading-5 text-theme-secondary-text"
+                              data-testid="header__subtitle"
+                            >
+                              Provide a message below and sign with your mnemonic passphrase.
                             </div>
                           </div>
                         </div>
@@ -2131,7 +2125,9 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                                 data-testid="InputPassword__toggle"
                                 type="button"
                               >
-                                <div>
+                                <div
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                                >
                                   <div
                                     style="height: 20px; width: 20px;"
                                   >
