@@ -1,8 +1,7 @@
 import { FormField, FormLabel } from "@/app/components/Form";
-import React, { ChangeEvent, useEffect, useMemo, useRef } from "react";
+import React, { ChangeEvent, useEffect, useRef } from "react";
 
 import { Alert } from "@/app/components/Alert";
-import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
@@ -26,7 +25,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const userExistsController = useRef<AbortController | undefined>(undefined);
 	const { activeNetwork: network } = useActiveNetwork({ profile });
 	const { allWallets } = usePortfolio({ profile });
-	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
 	useEffect(() => {
 		if (!username) {
@@ -98,16 +96,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 							userExistsController.current = new AbortController();
 							setValue("username", event.target.value, { shouldDirty: true, shouldValidate: true });
 						}}
-					/>
-				</FormField>
-
-				<FormField name="fee">
-					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<FeeField
-						type="usernameRegistration"
-						data={feeTransactionData}
-						network={network}
-						profile={profile}
 					/>
 				</FormField>
 			</div>
