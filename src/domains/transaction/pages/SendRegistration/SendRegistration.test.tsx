@@ -231,12 +231,6 @@ describe("Registration", () => {
 
 		await inputValidatorPublicKey();
 
-		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
-		await userEvent.click(fees[1]);
-
-		// remove focus from fee button
-		await userEvent.click(document.body);
-
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		if (inputMethod === withKeyboard) {
@@ -246,6 +240,12 @@ describe("Registration", () => {
 		}
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
+		await userEvent.click(fees[1]);
+
+		// remove focus from fee button
+		await userEvent.click(document.body);
 
 		await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
