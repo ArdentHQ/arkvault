@@ -113,7 +113,7 @@ export const PasswordSettings = () => {
 							disabled={!usesPassword}
 							data-testid="Password-settings__remove-button"
 							variant="danger"
-							className="w-full sm:w-auto"
+							className="w-full bg-theme-danger-50 sm:w-auto"
 							onClick={() => setIsConfirmRemovalVisible(true)}
 						>
 							<Icon name="Trash" />
