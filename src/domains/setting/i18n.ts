@@ -20,6 +20,8 @@ export const translations = {
 	},
 	EXPORT: {
 		ADD_INFORMATION_ABOUT_THE_NETWORK: "Add information about the network",
+		DESCRIPTION:
+			"Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.",
 		MENU_ITEM: "Export",
 		OPTIONS: {
 			EXCLUDE_EMPTY_WALLETS: {
