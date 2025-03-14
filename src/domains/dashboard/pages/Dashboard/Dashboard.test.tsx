@@ -6,27 +6,25 @@ import { Route } from "react-router-dom";
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
+import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 
-import { requestMock, server } from "@/tests/mocks/server";
-import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
 let mockTransactionsAggregate;
 
@@ -34,32 +32,35 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-// @TODO: Enable & refactor tests once mainsail coin support will be completed.
-//		  See https://app.clickup.com/t/86dvbvrvf
 describe("Dashboard", () => {
 	beforeAll(async () => {
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: devnetTransactionsFixture.data.slice(0, 2),
-				meta: devnetTransactionsFixture.meta,
-			}),
-			requestMock("https://ark-live.arkvault.io/api/transactions", {
-				data: [],
-				meta: mainnetTransactionsFixture.meta,
-			}),
-		);
-
 		profile = env.profiles().findById(fixtureProfileId);
 
+		await syncDelegates(profile);
+
 		const wallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
+			address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
 
-		await syncDelegates(profile);
+		// const wallet = profile.wallets().first()
+
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+
+		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet.address()],
+			selectedWallets: [wallet],
+			setSelectedAddresses: () => {},
+		});
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -90,7 +91,7 @@ describe("Dashboard", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it.skip("should render", async () => {
+	it("should render", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
@@ -103,16 +104,10 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("Balance__value")).toBeInTheDocument();
-		});
-
 		expect(asFragment()).toMatchSnapshot();
-
-		mockTransactionsAggregate.mockRestore();
 	});
 
 	it.skip("should show introductory tutorial", async () => {
@@ -132,6 +127,5 @@ describe("Dashboard", () => {
 		await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
 
 		mockHasCompletedTutorial.mockRestore();
-		mockTransactionsAggregate.mockRestore();
 	});
 });
