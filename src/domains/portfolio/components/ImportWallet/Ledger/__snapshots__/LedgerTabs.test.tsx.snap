@@ -14,22 +14,22 @@ exports[`LedgerTabs > should render connection step 1`] = `
         WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE
       </span>
       <ul
-        class="flex space-x-3"
+        class="flex flex-row gap-2"
       >
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
       </ul>
     </div>

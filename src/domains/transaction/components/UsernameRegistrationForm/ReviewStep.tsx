@@ -1,15 +1,15 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { FeeField } from "@/domains/transaction/components/FeeField";
 
 export const ReviewStep = ({
 	wallet,
@@ -21,9 +21,9 @@ export const ReviewStep = ({
 	const { t } = useTranslation();
 
 	const { getValues, unregister } = useFormContext();
-	const { username, gasLimit, gasPrice } = getValues();
+	const { username } = getValues();
 
-	const fee = calculateGasFee(gasPrice, gasLimit);
+	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -76,7 +76,15 @@ export const ReviewStep = ({
 				</DetailWrapper>
 
 				<div className="mt-2">
-					<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
+					<FormField name="fee">
+						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
+						<FeeField
+							type="usernameRegistration"
+							data={feeTransactionData}
+							network={wallet.network()}
+							profile={profile}
+						/>
+					</FormField>
 				</div>
 			</div>
 		</section>

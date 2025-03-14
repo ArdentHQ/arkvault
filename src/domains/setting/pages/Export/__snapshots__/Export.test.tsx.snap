@@ -702,139 +702,196 @@ exports[`Export Settings > should render export settings 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8"
+        class="flex flex-1"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto flex w-full flex-col lg:container lg:flex-row"
         >
           <div
-            class="flex items-end justify-between bg-theme-background lg:-mb-4"
+            class="mt-8 border-theme-primary-100 px-8 dark:border-theme-secondary-800 md:px-10 lg:mb-8 lg:border-r lg:px-12"
           >
             <div
-              class="space-y-2"
+              class="relative -mx-4 lg:hidden"
             >
               <div
-                class="flex items-center gap-3"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
                 <div
-                  data-testid="icon-SettingsLight"
+                  class="mx-4 flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:p-6"
                 >
-                  <div
-                    style="height: 55px; width: 54px;"
-                  >
-                    <svg
-                      fill="none"
-                      height="57"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 55 57"
-                      width="55"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <div>
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <path
-                        d="M25 55.1562H9C4.58172 55.1562 1 51.5745 1 47.1562V19.1563C1 14.738 4.58172 11.1562 9 11.1562V11.1562H13.5"
-                        stroke="#5CA4EC"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M21.0342 7.80989L30.9436 4.29914C33.0635 3.54809 35.4267 4.097 36.9985 5.70558L47.4422 16.3935C48.626 17.605 49.2178 19.2755 49.0607 20.962L47.675 35.841C47.4664 38.0803 45.9759 39.9945 43.856 40.7456L33.9465 44.2563M21.0342 7.80989C18.9143 8.56095 17.4238 10.4751 17.2152 12.7145L15.8294 27.5934M21.0342 7.80989L14.1383 10.8115C10.6953 12.3102 8.38205 15.6115 8.14876 19.3593L7.43912 30.7598C7.28204 32.4463 7.87384 34.1168 9.05766 35.3283M17.448 32.1619L27.8917 42.8499C29.4635 44.4585 31.8266 45.0074 33.9465 44.2563M17.448 32.1619C16.2641 30.9504 15.6723 29.28 15.8294 27.5934M17.448 32.1619L9.05766 35.3283M15.8294 27.5934L11.6343 29.1766M33.9465 44.2563L26.8777 46.3142C23.2667 47.3655 19.3714 46.3018 16.7957 43.5614L9.05766 35.3283"
-                        stroke="#235B95"
-                        stroke-linecap="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M37.1049 35.1215C42.4262 33.1123 44.9195 26.6623 42.6739 20.715C40.4283 14.7677 34.2941 11.5753 28.9728 13.5845C27.1526 14.2718 25.6632 15.4788 24.5813 17.0075C28.1709 17.777 31.4304 20.5278 32.9378 24.52C34.4153 28.4328 33.8414 32.5633 31.7604 35.5036C33.5184 35.8804 35.3556 35.7821 37.1049 35.1215Z"
-                        fill="#5CA4EC"
-                      />
-                      <path
-                        d="M31.7762 35.4881C33.8572 32.5479 34.431 28.4174 32.9536 24.5045C31.4462 20.5123 28.1867 17.7615 24.5971 16.992M31.7762 35.4881C33.5342 35.865 35.3714 35.7666 37.1207 35.1061C42.442 33.0968 44.9353 26.6468 42.6897 20.6995C40.444 14.7522 34.3099 11.5598 28.9886 13.569C27.1684 14.2563 25.679 15.4633 24.5971 16.992M31.7762 35.4881C28.1866 34.7186 24.9271 31.9678 23.4197 27.9756C21.9422 24.0627 22.5161 19.9322 24.5971 16.992"
-                        stroke="#235B95"
-                        stroke-linecap="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M1 40.1563C1 38.4994 2.34315 37.1562 4 37.1562H23.3474C24.739 37.1562 26.0874 37.64 27.1617 38.5247L32.3383 42.7878C33.4126 43.6725 34.761 44.1562 36.1526 44.1562H42C43.6569 44.1562 45 45.4994 45 47.1562C45 51.5745 41.4183 55.1562 37 55.1562H9C4.58172 55.1562 1 51.5745 1 47.1562V40.1563Z"
-                        fill="#5CA4EC"
-                        stroke="#5CA4EC"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 15.5h18M1 10h18M1 4.5h18"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="flex flex-col gap-2"
-                >
-                  <h1
-                    class="mb-0 text-2xl leading-[29px]"
-                    data-testid="header__title"
+                  <span
+                    class="font-semibold leading-tight"
                   >
-                    Settings
-                  </h1>
-                   
-                  <div
-                    class="flex items-center leading-5 text-theme-secondary-text"
-                    data-testid="header__subtitle"
-                  >
-                    Customize your wallet to suit your needs.
-                  </div>
+                    Export
+                  </span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="w-full py-4 first:pt-8 last:pb-8"
-      >
-        <div
-          class="mx-auto px-6 lg:container md:px-10"
-        >
-          <div
-            class="flex flex-1"
-          >
             <div
-              class="mx-auto flex w-full flex-col lg:container lg:flex-row lg:space-x-3"
+              class="hidden h-full w-[210px] lg:block"
             >
-              <div
-                class="mb-4 md:-mt-4 lg:my-0"
-              >
-                <div
-                  class="relative -mx-6 -mt-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:m-0 md:border-t-0 md:bg-transparent md:p-0 dark:md:bg-transparent lg:hidden"
+              <ul>
+                <li
+                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+                  data-testid="side-menu__item--general"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="dialog"
-                    data-testid="dropdown__toggle"
+                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
                   >
                     <div
-                      class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                     >
-                      <span
-                        class="flex-1 font-semibold leading-tight"
-                      >
-                        Export
-                      </span>
-                      <div
-                        class="transition-transform"
-                      >
+                      <div>
                         <div
-                          style="height: 10px; width: 10px;"
+                          style="height: 20px; width: 20px;"
                         >
                           <svg
-                            id="chevron-down-small"
+                            id="sliders"
                             style="height: 100%; width: 100%;"
-                            viewBox="0 0 10 10"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      General
+                    </span>
+                  </div>
+                </li>
+                <li
+                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+                  data-testid="side-menu__item--password"
+                >
+                  <div
+                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                    >
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="lock"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Password
+                    </span>
+                  </div>
+                </li>
+                <li
+                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+                  data-testid="side-menu__item--servers"
+                >
+                  <div
+                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                    >
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 21"
                             x="0"
                             xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
                             y="0"
                           >
                             <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
+                              d="M5.678 15.416a.276.276 0 1 0 0 .552.276.276 0 0 0 0-.552v0"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M15.241 12.38a3.31 3.31 0 1 1 0 6.621h-9.93a3.31 3.31 0 1 1 0-6.62h9.93z"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M9.172 15.69h6.069"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M13.6 9.276c1.294 0 2.429-.824 2.777-2.016.348-1.192-.176-2.46-1.282-3.101a2.98 2.98 0 0 0-3.465.348c-.351-2.178-2.423-3.71-4.713-3.485-2.29.224-3.994 2.127-3.876 4.327.117 2.2 2.015 3.927 4.317 3.927H13.6z"
                               stroke="currentColor"
                               stroke-linecap="round"
                               stroke-linejoin="round"
@@ -844,286 +901,227 @@ exports[`Export Settings > should render export settings 1`] = `
                         </div>
                       </div>
                     </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Servers
+                    </span>
                   </div>
-                </div>
-                <div
-                  class="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dark:border-theme-dark-700 lg:block"
-                >
-                  <ul
-                    class="space-y-1"
-                  >
-                    <li
-                      class="relative cursor-pointer"
-                      data-testid="side-menu__item--general"
-                    >
-                      <div
-                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
-                      >
-                        <span
-                          class="font-semibold"
-                        >
-                          General
-                        </span>
-                      </div>
-                    </li>
-                    <li
-                      class="relative cursor-pointer"
-                      data-testid="side-menu__item--password"
-                    >
-                      <div
-                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
-                      >
-                        <span
-                          class="font-semibold"
-                        >
-                          Password
-                        </span>
-                      </div>
-                    </li>
-                    <li
-                      class="relative cursor-pointer"
-                      data-testid="side-menu__item--servers"
-                    >
-                      <div
-                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
-                      >
-                        <span
-                          class="font-semibold"
-                        >
-                          Servers
-                        </span>
-                      </div>
-                    </li>
-                    <li
-                      class="relative cursor-default"
-                      data-testid="side-menu__item--export"
-                    >
-                      <div
-                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
-                      >
-                        <span
-                          class="font-semibold"
-                        >
-                          Export
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="flex-1 overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-dark-700"
-              >
-                <form
-                  class="space-y-0"
-                  data-testid="Form"
-                  id="export-settings__form"
+                </li>
+                <li
+                  class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-default"
+                  data-testid="side-menu__item--export"
                 >
                   <div
-                    class="relative flex flex-col"
+                    class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                   >
                     <div
-                      class="-mt-px block border-t border-theme-secondary-300 bg-theme-secondary-100 px-6 py-3 dark:border-theme-dark-700 dark:bg-theme-dark-700"
-                    >
-                      <h2
-                        class="mb-0 text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
-                      >
-                        Export Profile
-                      </h2>
-                      <p
-                        class="mt-1 text-sm text-theme-secondary-700 dark:text-theme-dark-200"
-                      >
-                        Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
-                      </p>
-                    </div>
+                      class="absolute inset-y-0 left-0 w-1 rounded bg-theme-primary-600"
+                    />
                     <div
-                      class="px-6 pb-6 pt-4"
+                      class="mr-3"
                     >
-                      <ul
-                        class="[&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 [&>li]:pb-6 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
-                        data-testid="list-divided__items"
-                      >
-                        <li
-                          class="flex w-full flex-col"
-                          data-testid="list-divided-item__wrapper"
-                        >
-                          <div
-                            class="flex justify-between flex-col items-start"
-                            data-testid="list-divided-item__inner-wrapper"
-                          >
-                            <div
-                              class="flex w-full flex-col space-y-2"
-                            >
-                              <div
-                                class="flex items-center justify-between space-x-5"
-                              >
-                                <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
-                                  data-testid="list-divided-item__label"
-                                >
-                                  Exclude Empty Wallets
-                                </span>
-                                <span>
-                                  <label
-                                    class="flex items-center cursor-pointer h-4"
-                                  >
-                                    <input
-                                      class="toggle-input sr-only"
-                                      data-testid="Plugin-settings__toggle--exclude-empty-wallets"
-                                      name="excludeEmptyWallets"
-                                      type="checkbox"
-                                    />
-                                    <div
-                                      class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
-                                    >
-                                      <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
-                                      />
-                                    </div>
-                                  </label>
-                                </span>
-                              </div>
-                              <span
-                                class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
-                                data-testid="list-divided-item__label--description"
-                              >
-                                Wallets with a balance of 0 will not be exported.
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="flex w-full flex-col"
-                          data-testid="list-divided-item__wrapper"
-                        >
-                          <div
-                            class="flex justify-between flex-col items-start"
-                            data-testid="list-divided-item__inner-wrapper"
-                          >
-                            <div
-                              class="flex w-full flex-col space-y-2"
-                            >
-                              <div
-                                class="flex items-center justify-between space-x-5"
-                              >
-                                <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
-                                  data-testid="list-divided-item__label"
-                                >
-                                  Exclude Ledger Wallets
-                                </span>
-                                <span>
-                                  <label
-                                    class="flex items-center cursor-pointer h-4"
-                                  >
-                                    <input
-                                      class="toggle-input sr-only"
-                                      data-testid="Plugin-settings__toggle--exclude-ledger-wallets"
-                                      name="excludeLedgerWallets"
-                                      type="checkbox"
-                                    />
-                                    <div
-                                      class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
-                                    >
-                                      <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
-                                      />
-                                    </div>
-                                  </label>
-                                </span>
-                              </div>
-                              <span
-                                class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
-                                data-testid="list-divided-item__label--description"
-                              >
-                                Ledger hardware addresses will not be exported.
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <div
-                        class="mt-6 space-y-5 border-t border-dashed border-theme-secondary-300 pb-6 pt-6 dark:border-theme-secondary-800"
-                      >
+                      <div>
                         <div
-                          class="flex flex-col overflow-hidden rounded-xl"
+                          style="height: 20px; width: 20px;"
                         >
-                          <div
-                            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
+                          <svg
+                            id="arrow-up-turn-bracket"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <div>
-                              <div
-                                style="height: 16px; width: 16px;"
-                              >
-                                <svg
-                                  id="circle-info"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
-                                >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                  >
-                                    <circle
-                                      cx="10"
-                                      cy="10"
-                                      r="9"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M10 9.2v5"
-                                      stroke-linecap="round"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M10 5.8h0"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                  </g>
-                                </svg>
-                              </div>
-                            </div>
-                            <span>
-                              Information
-                            </span>
-                          </div>
-                          <div
-                            class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-info-50"
-                          >
-                            Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
-                          </div>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
+                              />
+                              <path
+                                d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                              />
+                            </g>
+                          </svg>
                         </div>
                       </div>
                     </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Export
+                    </span>
                   </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="w-full"
+          >
+            <div
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0"
+            >
+              <div
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
+              >
+                <div
+                  class="flex items-end justify-between bg-theme-background"
+                >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-dark-700 sm:border-t sm:p-6"
+                    class="space-y-2"
                   >
                     <div
-                      class="sm:-mt-6"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Export Profile
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
+                    </div>
+                  </div>
+                </div>
+                <form
+                  class="mt-8"
+                  data-testid="Form"
+                  id="export-settings__form"
+                >
+                  <h2
+                    class="mb-0 text-lg"
+                  >
+                    Wallets
+                  </h2>
+                  <ul
+                    class="[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800"
+                    data-testid="list-divided__items"
+                  >
+                    <li
+                      class="flex w-full flex-col pt-4 pb-6"
+                      data-testid="list-divided-item__wrapper"
                     >
                       <div
-                        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
+                        class="flex justify-between flex-col items-start"
+                        data-testid="list-divided-item__inner-wrapper"
                       >
-                        <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
-                          data-testid="Export-settings__submit-button"
-                          type="submit"
+                        <div
+                          class="flex w-full flex-col space-y-2"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center justify-between space-x-5"
                           >
-                            Export
+                            <span
+                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                              data-testid="list-divided-item__label"
+                            >
+                              Exclude Empty Wallets
+                            </span>
+                            <span>
+                              <label
+                                class="flex items-center cursor-pointer h-4"
+                              >
+                                <input
+                                  class="toggle-input sr-only"
+                                  data-testid="Plugin-settings__toggle--exclude-empty-wallets"
+                                  name="excludeEmptyWallets"
+                                  type="checkbox"
+                                />
+                                <div
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                >
+                                  <span
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                  />
+                                </div>
+                              </label>
+                            </span>
                           </div>
-                        </button>
+                          <span
+                            class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                            data-testid="list-divided-item__label--description"
+                          >
+                            Wallets with a balance of 0 will not be exported.
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    </li>
+                    <li
+                      class="flex w-full flex-col py-6"
+                      data-testid="list-divided-item__wrapper"
+                    >
+                      <div
+                        class="flex justify-between flex-col items-start"
+                        data-testid="list-divided-item__inner-wrapper"
+                      >
+                        <div
+                          class="flex w-full flex-col space-y-2"
+                        >
+                          <div
+                            class="flex items-center justify-between space-x-5"
+                          >
+                            <span
+                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                              data-testid="list-divided-item__label"
+                            >
+                              Exclude Ledger Wallets
+                            </span>
+                            <span>
+                              <label
+                                class="flex items-center cursor-pointer h-4"
+                              >
+                                <input
+                                  class="toggle-input sr-only"
+                                  data-testid="Plugin-settings__toggle--exclude-ledger-wallets"
+                                  name="excludeLedgerWallets"
+                                  type="checkbox"
+                                />
+                                <div
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-[30px]"
+                                >
+                                  <span
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                  />
+                                </div>
+                              </label>
+                            </span>
+                          </div>
+                          <span
+                            class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+                            data-testid="list-divided-item__label--description"
+                          >
+                            Ledger hardware addresses will not be exported.
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div
+                    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
+                  >
+                    <button
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                      data-testid="Export-settings__submit-button"
+                      type="submit"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Export
+                      </div>
+                    </button>
                   </div>
                 </form>
               </div>

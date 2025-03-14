@@ -577,7 +577,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="space-y-5 mx-auto max-w-172"
+            class="mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -585,8 +585,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 data-testid="tab-pabel__active-panel"
               >
                 <section
-                  class="space-y-6 sm:space-y-4"
-                  data-testid="SendValidatorResignation__form-step"
+                  data-testid="SendValidatorResignation__review-step"
                 >
                   <div
                     class="w-full sm:mt-8"
@@ -597,22 +596,22 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       <span
                         class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
                       >
-                        Resign Validator
+                        Transaction Review
                       </span>
                       <ul
-                        class="flex space-x-3"
+                        class="flex flex-row gap-2"
                       >
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                       </ul>
                     </div>
@@ -693,130 +692,80 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                               class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
-                              Resign Validator
+                              Transaction Review
                             </h1>
                           </div>
                           <div
                             class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
-                            This transaction type permanently retires a Validator address.
+                            Review the transaction details below.
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl"
+                    class="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4"
                   >
                     <div
-                      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+                      data-testid="DetailWrapper"
                     >
-                      <div>
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="circle-exclamation-mark"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                      <span>
-                        Warning
-                      </span>
-                    </div>
-                    <div
-                      class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
-                    >
-                      This action is permanent and cannot be undone. It is registered on the network.
-                    </div>
-                  </div>
-                  <div
-                    class="space-y-3 sm:space-y-4"
-                  >
-                    <fieldset
-                      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-                    >
-                      <button
-                        class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                        data-testid="SelectAddress__wrapper"
-                        type="button"
+                      <div
+                        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                        data-testid="DetailLabel"
                       >
-                        <span
-                          class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-4"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                            </span>
-                          </div>
-                        </span>
                         <div
-                          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                          data-testid="DetailLabelText"
+                        >
+                          Addressing
+                        </div>
+                      </div>
+                      <div
+                        class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+                      >
+                        <div
+                          class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
                         >
                           <div
-                            class="relative flex h-full flex-1 invisible"
-                          >
-                            <input
-                              autocomplete="off"
-                              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
-                              data-testid="SelectAddress__input"
-                              name="senderAddress"
-                              readonly=""
-                              type="text"
-                              value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
-                            />
-                          </div>
-                          <div
-                            class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                            data-testid="Input__addon-end"
+                            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                           >
                             <div
-                              class=""
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                            >
+                              From
+                            </div>
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <div>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
+                              <button
+                                class="ring-focus relative focus:outline-none"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
+                              >
+                                <div
+                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                >
                                   <div
-                                    style="height: 20px; width: 20px;"
+                                    style="height: 16px; width: 16px;"
                                   >
                                     <svg
-                                      id="user"
+                                      id="copy"
                                       style="height: 100%; width: 100%;"
                                       viewBox="0 0 20 20"
                                       x="0"
@@ -831,24 +780,22 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                         stroke-linejoin="round"
                                         stroke-width="2"
                                       >
-                                        <circle
-                                          cx="10"
-                                          cy="5"
-                                          r="4"
+                                        <path
+                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
                                         />
                                         <path
-                                          d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
                                         />
                                       </g>
                                     </svg>
                                   </div>
                                 </div>
-                              </div>
+                              </button>
                             </div>
                           </div>
                         </div>
-                      </button>
-                    </fieldset>
+                      </div>
+                    </div>
                     <div
                       data-testid="DetailWrapper"
                     >
@@ -915,305 +862,309 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                         </div>
                       </div>
                     </div>
-                    <fieldset
-                      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                    <div
+                      class="mx-3 mt-2 sm:mx-0"
                     >
-                      <label
-                        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
-                        data-testid="FormLabel"
-                        for="fee"
+                      <fieldset
+                        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                       >
-                        Transaction Fee
-                      </label>
-                      <div
-                        class="relative"
-                        data-testid="InputFee"
-                      >
+                        <label
+                          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                          data-testid="FormLabel"
+                          for="fee"
+                        >
+                          Transaction Fee
+                        </label>
                         <div
-                          class="absolute right-0 -mt-7"
+                          class="relative"
+                          data-testid="InputFee"
                         >
                           <div
-                            class="flex items-center"
+                            class="absolute right-0 -mt-7"
                           >
-                            <button
-                              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
-                              type="button"
+                            <div
+                              class="flex items-center"
                             >
-                              Simple
-                            </button>
-                            <label
-                              class="flex items-center cursor-pointer h-3"
-                            >
-                              <input
-                                class="toggle-input sr-only"
-                                type="checkbox"
-                              />
-                              <div
-                                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
+                              <button
+                                class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+                                type="button"
                               >
-                                <span
-                                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+                                Simple
+                              </button>
+                              <label
+                                class="flex items-center cursor-pointer h-3"
+                              >
+                                <input
+                                  class="toggle-input sr-only"
+                                  type="checkbox"
                                 />
-                              </div>
-                            </label>
-                            <button
-                              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-                              type="button"
-                            >
-                              Advanced
-                            </button>
-                          </div>
-                        </div>
-                        <div
-                          class="-mx-4 overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-700"
-                        >
-                          <div
-                            class="space-y-4 p-4"
-                          >
-                            <fieldset
-                              class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-                            >
-                              <label
-                                class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
-                                data-testid="FormLabel"
-                                for="gasPrice"
-                                id="fee"
-                              >
-                                Gas Price (Gwei)
-                              </label>
-                              <div
-                                class="relative"
-                              >
                                 <div
-                                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
+                                >
+                                  <span
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+                                  />
+                                </div>
+                              </label>
+                              <button
+                                class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                                type="button"
+                              >
+                                Advanced
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="-mx-4 overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-700"
+                          >
+                            <div
+                              class="space-y-4 p-4"
+                            >
+                              <fieldset
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                              >
+                                <label
+                                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                                  data-testid="FormLabel"
+                                  for="gasPrice"
+                                  id="fee"
+                                >
+                                  Gas Price (Gwei)
+                                </label>
+                                <div
+                                  class="relative"
                                 >
                                   <div
-                                    class="relative flex h-full flex-1"
-                                  >
-                                    <input
-                                      autocomplete="off"
-                                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
-                                      data-testid="Input_GasPrice"
-                                      name="gasPrice"
-                                      type="text"
-                                      value="10"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
-                                    data-testid="Input__addon-end"
+                                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                                   >
                                     <div
-                                      class=""
+                                      class="relative flex h-full flex-1"
+                                    >
+                                      <input
+                                        autocomplete="off"
+                                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                                        data-testid="Input_GasPrice"
+                                        name="gasPrice"
+                                        type="text"
+                                        value="10"
+                                      />
+                                    </div>
+                                    <div
+                                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                                      data-testid="Input__addon-end"
                                     >
                                       <div
-                                        class="flex items-center"
+                                        class=""
                                       >
                                         <div
-                                          class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 sm:w-10 sm:flex-col border-theme-secondary-400"
+                                          class="flex items-center"
                                         >
-                                          <button
-                                            class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
-                                            data-testid="InputFeeAdvanced__up"
-                                            type="button"
+                                          <div
+                                            class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 sm:w-10 sm:flex-col border-theme-secondary-400"
                                           >
-                                            <div>
-                                              <div
-                                                style="height: 10px; width: 10px;"
-                                              >
-                                                <svg
-                                                  id="chevron-up-small"
-                                                  style="height: 100%; width: 100%;"
-                                                  viewBox="0 0 10 10"
-                                                  x="0"
-                                                  xml:space="preserve"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  y="0"
+                                            <button
+                                              class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
+                                              data-testid="InputFeeAdvanced__up"
+                                              type="button"
+                                            >
+                                              <div>
+                                                <div
+                                                  style="height: 10px; width: 10px;"
                                                 >
-                                                  <path
-                                                    d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                  />
-                                                </svg>
+                                                  <svg
+                                                    id="chevron-up-small"
+                                                    style="height: 100%; width: 100%;"
+                                                    viewBox="0 0 10 10"
+                                                    x="0"
+                                                    xml:space="preserve"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    y="0"
+                                                  >
+                                                    <path
+                                                      d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                                                      fill="none"
+                                                      stroke="currentColor"
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                    />
+                                                  </svg>
+                                                </div>
                                               </div>
-                                            </div>
-                                          </button>
-                                          <button
-                                            class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
-                                            data-testid="InputFeeAdvanced__down"
-                                            type="button"
-                                          >
-                                            <div>
-                                              <div
-                                                style="height: 10px; width: 10px;"
-                                              >
-                                                <svg
-                                                  id="chevron-down-small"
-                                                  style="height: 100%; width: 100%;"
-                                                  viewBox="0 0 10 10"
-                                                  x="0"
-                                                  xml:space="preserve"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  y="0"
+                                            </button>
+                                            <button
+                                              class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
+                                              data-testid="InputFeeAdvanced__down"
+                                              type="button"
+                                            >
+                                              <div>
+                                                <div
+                                                  style="height: 10px; width: 10px;"
                                                 >
-                                                  <path
-                                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                  />
-                                                </svg>
+                                                  <svg
+                                                    id="chevron-down-small"
+                                                    style="height: 100%; width: 100%;"
+                                                    viewBox="0 0 10 10"
+                                                    x="0"
+                                                    xml:space="preserve"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    y="0"
+                                                  >
+                                                    <path
+                                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                                      fill="none"
+                                                      stroke="currentColor"
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                    />
+                                                  </svg>
+                                                </div>
                                               </div>
-                                            </div>
-                                          </button>
+                                            </button>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                            </fieldset>
-                            <fieldset
-                              class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-                            >
-                              <label
-                                class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
-                                data-testid="FormLabel"
-                                for="gasLimit"
+                              </fieldset>
+                              <fieldset
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
-                                Gas Limit
-                              </label>
-                              <div
-                                class="relative"
-                              >
+                                <label
+                                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                                  data-testid="FormLabel"
+                                  for="gasLimit"
+                                >
+                                  Gas Limit
+                                </label>
                                 <div
-                                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                  class="relative"
                                 >
                                   <div
-                                    class="relative flex h-full flex-1"
-                                  >
-                                    <input
-                                      autocomplete="off"
-                                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
-                                      data-testid="Input_GasLimit"
-                                      name="gasLimit"
-                                      type="text"
-                                      value="210000"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
-                                    data-testid="Input__addon-end"
+                                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                                   >
                                     <div
-                                      class=""
+                                      class="relative flex h-full flex-1"
+                                    >
+                                      <input
+                                        autocomplete="off"
+                                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                                        data-testid="Input_GasLimit"
+                                        name="gasLimit"
+                                        type="text"
+                                        value="210000"
+                                      />
+                                    </div>
+                                    <div
+                                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                                      data-testid="Input__addon-end"
                                     >
                                       <div
-                                        class="flex items-center"
+                                        class=""
                                       >
                                         <div
-                                          class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 sm:w-10 sm:flex-col border-theme-secondary-400"
+                                          class="flex items-center"
                                         >
-                                          <button
-                                            class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
-                                            data-testid="InputFeeAdvanced__up"
-                                            type="button"
+                                          <div
+                                            class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 sm:w-10 sm:flex-col border-theme-secondary-400"
                                           >
-                                            <div>
-                                              <div
-                                                style="height: 10px; width: 10px;"
-                                              >
-                                                <svg
-                                                  id="chevron-up-small"
-                                                  style="height: 100%; width: 100%;"
-                                                  viewBox="0 0 10 10"
-                                                  x="0"
-                                                  xml:space="preserve"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  y="0"
+                                            <button
+                                              class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
+                                              data-testid="InputFeeAdvanced__up"
+                                              type="button"
+                                            >
+                                              <div>
+                                                <div
+                                                  style="height: 10px; width: 10px;"
                                                 >
-                                                  <path
-                                                    d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                  />
-                                                </svg>
+                                                  <svg
+                                                    id="chevron-up-small"
+                                                    style="height: 100%; width: 100%;"
+                                                    viewBox="0 0 10 10"
+                                                    x="0"
+                                                    xml:space="preserve"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    y="0"
+                                                  >
+                                                    <path
+                                                      d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                                                      fill="none"
+                                                      stroke="currentColor"
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                    />
+                                                  </svg>
+                                                </div>
                                               </div>
-                                            </div>
-                                          </button>
-                                          <button
-                                            class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
-                                            data-testid="InputFeeAdvanced__down"
-                                            type="button"
-                                          >
-                                            <div>
-                                              <div
-                                                style="height: 10px; width: 10px;"
-                                              >
-                                                <svg
-                                                  id="chevron-down-small"
-                                                  style="height: 100%; width: 100%;"
-                                                  viewBox="0 0 10 10"
-                                                  x="0"
-                                                  xml:space="preserve"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  y="0"
+                                            </button>
+                                            <button
+                                              class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
+                                              data-testid="InputFeeAdvanced__down"
+                                              type="button"
+                                            >
+                                              <div>
+                                                <div
+                                                  style="height: 10px; width: 10px;"
                                                 >
-                                                  <path
-                                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                  />
-                                                </svg>
+                                                  <svg
+                                                    id="chevron-down-small"
+                                                    style="height: 100%; width: 100%;"
+                                                    viewBox="0 0 10 10"
+                                                    x="0"
+                                                    xml:space="preserve"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    y="0"
+                                                  >
+                                                    <path
+                                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                                      fill="none"
+                                                      stroke="currentColor"
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                    />
+                                                  </svg>
+                                                </div>
                                               </div>
-                                            </div>
-                                          </button>
+                                            </button>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                            </fieldset>
-                          </div>
-                          <div
-                            class="flex flex-col space-y-2 bg-theme-secondary-200 px-4 py-3 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:py-2"
-                          >
-                            <div>
-                              <span>
-                                Max Fee 
-                              </span>
-                              <span
-                                class="whitespace-nowrap"
-                                data-testid="Amount"
-                              >
-                                0.0021 ARK
-                              </span>
+                              </fieldset>
                             </div>
-                            <div>
-                              <span>
-                                Confirmation Time
-                              </span>
-                              <span>
-                                 ~10s
-                              </span>
+                            <div
+                              class="flex flex-col space-y-2 bg-theme-secondary-200 px-4 py-3 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:py-2"
+                            >
+                              <div>
+                                <span>
+                                  Max Fee 
+                                </span>
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0.0021 ARK
+                                </span>
+                              </div>
+                              <div>
+                                <span>
+                                  Confirmation Time
+                                </span>
+                                <span>
+                                   ~10s
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </fieldset>
+                      </fieldset>
+                    </div>
                   </div>
                 </section>
               </div>
@@ -1953,7 +1904,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="space-y-5 mx-auto max-w-172"
+            class="mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -1976,19 +1927,19 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                         Resign Validator
                       </span>
                       <ul
-                        class="flex space-x-3"
+                        class="flex flex-row gap-2"
                       >
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                       </ul>
                     </div>
@@ -2291,189 +2242,6 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                         </div>
                       </div>
                     </div>
-                    <fieldset
-                      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-                    >
-                      <label
-                        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
-                        data-testid="FormLabel"
-                        for="fee"
-                      >
-                        Transaction Fee
-                      </label>
-                      <div
-                        class="relative"
-                        data-testid="InputFee"
-                      >
-                        <div
-                          class="absolute right-0 -mt-7"
-                        >
-                          <div
-                            class="flex items-center"
-                          >
-                            <button
-                              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-                              type="button"
-                            >
-                              Simple
-                            </button>
-                            <label
-                              class="flex items-center cursor-pointer h-3"
-                            >
-                              <input
-                                class="toggle-input sr-only"
-                                type="checkbox"
-                              />
-                              <div
-                                class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
-                              >
-                                <span
-                                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
-                                />
-                              </div>
-                            </label>
-                            <button
-                              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
-                              type="button"
-                            >
-                              Advanced
-                            </button>
-                          </div>
-                        </div>
-                        <div
-                          class="inline-flex w-full items-center flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
-                          data-testid="ButtonGroup"
-                          role="radiogroup"
-                        >
-                          <button
-                            aria-checked="false"
-                            aria-label="0.00075"
-                            class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
-                            data-testid="ButtonGroupOption"
-                            role="radio"
-                            type="button"
-                          >
-                            <div
-                              class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
-                            >
-                              <div
-                                class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
-                              >
-                                <div
-                                  class="text-sm leading-[17px] sm:leading-5"
-                                >
-                                  Slow
-                                </div>
-                                <div
-                                  class="flex justify-between sm:w-full"
-                                >
-                                  <span
-                                    class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
-                                    data-testid="Amount"
-                                  >
-                                    0.00075 ARK
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
-                              >
-                                <span>
-                                  Confirmation Time
-                                </span>
-                                <span>
-                                  ~10s
-                                </span>
-                              </div>
-                            </div>
-                          </button>
-                          <button
-                            aria-checked="true"
-                            aria-label="0.0007600051875"
-                            class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
-                            data-testid="ButtonGroupOption"
-                            role="radio"
-                            type="button"
-                          >
-                            <div
-                              class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200"
-                            >
-                              <div
-                                class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
-                              >
-                                <div
-                                  class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50"
-                                >
-                                  Average
-                                </div>
-                                <div
-                                  class="flex justify-between sm:w-full"
-                                >
-                                  <span
-                                    class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
-                                    data-testid="Amount"
-                                  >
-                                    0.00076001 ARK
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
-                              >
-                                <span>
-                                  Confirmation Time
-                                </span>
-                                <span>
-                                  ~5s
-                                </span>
-                              </div>
-                            </div>
-                          </button>
-                          <button
-                            aria-checked="false"
-                            aria-label="0.0009"
-                            class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
-                            data-testid="ButtonGroupOption"
-                            role="radio"
-                            type="button"
-                          >
-                            <div
-                              class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
-                            >
-                              <div
-                                class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
-                              >
-                                <div
-                                  class="text-sm leading-[17px] sm:leading-5"
-                                >
-                                  Fast
-                                </div>
-                                <div
-                                  class="flex justify-between sm:w-full"
-                                >
-                                  <span
-                                    class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
-                                    data-testid="Amount"
-                                  >
-                                    0.0009 ARK
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
-                              >
-                                <span>
-                                  Confirmation Time
-                                </span>
-                                <span>
-                                  ~2s
-                                </span>
-                              </div>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                    </fieldset>
                   </div>
                 </section>
               </div>
@@ -3213,7 +2981,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="space-y-5 mx-auto max-w-172"
+            class="mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -3235,19 +3003,19 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                         Transaction Review
                       </span>
                       <ul
-                        class="flex space-x-3"
+                        class="flex flex-row gap-2"
                       >
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                       </ul>
                     </div>
@@ -3501,109 +3269,189 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                     <div
                       class="mx-3 mt-2 sm:mx-0"
                     >
-                      <div
-                        data-testid="DetailWrapper"
+                      <fieldset
+                        class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                       >
+                        <label
+                          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                          data-testid="FormLabel"
+                          for="fee"
+                        >
+                          Transaction Fee
+                        </label>
                         <div
-                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-                          data-testid="DetailLabel"
+                          class="relative"
+                          data-testid="InputFee"
                         >
                           <div
-                            class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
-                            data-testid="DetailLabelText"
-                          >
-                            Transaction Summary
-                          </div>
-                        </div>
-                        <div
-                          class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
-                        >
-                          <div
-                            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+                            class="absolute right-0 -mt-7"
                           >
                             <div
-                              class="flex flex-col gap-3"
+                              class="flex items-center"
                             >
-                              <div
-                                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-                                data-testid="AmountSection"
+                              <button
+                                class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                                type="button"
                               >
+                                Simple
+                              </button>
+                              <label
+                                class="flex items-center cursor-pointer h-3"
+                              >
+                                <input
+                                  class="toggle-input sr-only"
+                                  type="checkbox"
+                                />
                                 <div
-                                  class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
-                                >
-                                  Amount
-                                </div>
-                                <div
-                                  class="flex flex-row items-center gap-2"
+                                  class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
                                 >
                                   <span
-                                    class="whitespace-nowrap font-semibold"
-                                    data-testid="Amount"
-                                  >
-                                    0 ARK
-                                  </span>
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+                                  />
                                 </div>
-                              </div>
-                              <div
-                                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                              </label>
+                              <button
+                                class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+                                type="button"
                               >
-                                <div
-                                  class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
-                                >
-                                  Fee
-                                </div>
-                                <div
-                                  class="flex flex-row items-center gap-2"
-                                >
-                                  <span
-                                    class="whitespace-nowrap font-semibold"
-                                    data-testid="Amount"
-                                  >
-                                    0.00076001 ARK
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-                              >
-                                <div
-                                  class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
-                                >
-                                  Total
-                                </div>
-                                <div
-                                  class="flex flex-row items-center gap-2"
-                                >
-                                  <span
-                                    class="whitespace-nowrap font-semibold"
-                                    data-testid="Amount"
-                                  >
-                                    0.00076001 ARK
-                                  </span>
-                                </div>
-                              </div>
+                                Advanced
+                              </button>
                             </div>
                           </div>
                           <div
-                            class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
+                            class="inline-flex w-full items-center flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
+                            data-testid="ButtonGroup"
+                            role="radiogroup"
                           >
-                            <div
-                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                            <button
+                              aria-checked="false"
+                              aria-label="0.00075"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              data-testid="ButtonGroupOption"
+                              role="radio"
+                              type="button"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+                                class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
                               >
-                                Confirmation Time
+                                <div
+                                  class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                                >
+                                  <div
+                                    class="text-sm leading-[17px] sm:leading-5"
+                                  >
+                                    Slow
+                                  </div>
+                                  <div
+                                    class="flex justify-between sm:w-full"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                                      data-testid="Amount"
+                                    >
+                                      0.00075 ARK
+                                    </span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+                                >
+                                  <span>
+                                    Confirmation Time
+                                  </span>
+                                  <span>
+                                    ~10s
+                                  </span>
+                                </div>
                               </div>
+                            </button>
+                            <button
+                              aria-checked="true"
+                              aria-label="0.0007600051875"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              data-testid="ButtonGroupOption"
+                              role="radio"
+                              type="button"
+                            >
                               <div
-                                class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+                                class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200"
                               >
-                                ~10s
+                                <div
+                                  class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                                >
+                                  <div
+                                    class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50"
+                                  >
+                                    Average
+                                  </div>
+                                  <div
+                                    class="flex justify-between sm:w-full"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
+                                      data-testid="Amount"
+                                    >
+                                      0.00076001 ARK
+                                    </span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
+                                >
+                                  <span>
+                                    Confirmation Time
+                                  </span>
+                                  <span>
+                                    ~5s
+                                  </span>
+                                </div>
                               </div>
-                            </div>
+                            </button>
+                            <button
+                              aria-checked="false"
+                              aria-label="0.0009"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              data-testid="ButtonGroupOption"
+                              role="radio"
+                              type="button"
+                            >
+                              <div
+                                class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                              >
+                                <div
+                                  class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                                >
+                                  <div
+                                    class="text-sm leading-[17px] sm:leading-5"
+                                  >
+                                    Fast
+                                  </div>
+                                  <div
+                                    class="flex justify-between sm:w-full"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                                      data-testid="Amount"
+                                    >
+                                      0.0009 ARK
+                                    </span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+                                >
+                                  <span>
+                                    Confirmation Time
+                                  </span>
+                                  <span>
+                                    ~2s
+                                  </span>
+                                </div>
+                              </div>
+                            </button>
                           </div>
                         </div>
-                      </div>
+                      </fieldset>
                     </div>
                   </div>
                 </section>
@@ -4344,7 +4192,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="space-y-5 mx-auto max-w-172"
+            class="mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -4367,19 +4215,19 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                         Authenticate
                       </span>
                       <ul
-                        class="flex space-x-3"
+                        class="flex flex-row gap-2"
                       >
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                       </ul>
                     </div>
@@ -5328,7 +5176,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="space-y-5 mx-auto max-w-172"
+            class="mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -5356,19 +5204,19 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                             Transaction Error
                           </span>
                           <ul
-                            class="flex space-x-3"
+                            class="flex flex-row gap-2"
                           >
                             <li
-                              class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                              class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                             />
                             <li
-                              class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                              class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                             />
                             <li
-                              class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                              class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                             />
                             <li
-                              class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                              class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                             />
                           </ul>
                         </div>
