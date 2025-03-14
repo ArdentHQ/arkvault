@@ -15,7 +15,9 @@ const endpoints = [
 	// { path: "/transactions/fees", data: require("../../fixtures/coins/mainsail/devnet/transaction-fees.json") },
 ];
 
-const wallets = ["0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"];
+const wallets = [
+	"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+];
 
 export const mainsailDevnetHandlers = [
 	...endpoints.map((endpoint) =>
@@ -67,16 +69,16 @@ export const mainsailDevnetHandlers = [
 		});
 	}),
 	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier", (request) => {
-		const address = new URL(request.url).pathname.split("/").pop();
+		const address = request.params.identifier as string;
 
 		if (!address) {
-			return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"));
+			return HttpResponse.json(require("../../fixtures/coins/mainsail/mainnet/wallets/not-found.json"));
 		}
 
 		if (wallets.includes(address)) {
-			return HttpResponse.json(require(`../../fixtures/coins/ark/devnet/wallets/${address}.json`));
+			return HttpResponse.json(require(`../../fixtures/coins/mainsail/devnet/wallets/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6.json`));
 		}
 
-		return HttpResponse.json(require("../../fixtures/coins/ark/devnet/wallets/not-found.json"));
+		return HttpResponse.json(require("../../fixtures/coins/mainsail/devnet/wallets/not-found.json"));
 	}),
 ];

@@ -19,9 +19,7 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 
-import { server, requestMock } from "@/tests/mocks/server";
 import { BigNumber } from "@ardenthq/sdk-helpers";
-import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -44,19 +42,7 @@ describe("Dashboard", () => {
 
 		await syncDelegates(profile);
 
-		server.use(
-			requestMock(
-				"https://dwallets-evm.mainsailhq.com/api/wallets/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-				walletFixture,
-			),
-		);
-
 		const wallet = profile.wallets().first();
-
-		await wallet.synchroniser().identity();
-
-		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
 
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			allWallets: [wallet],
