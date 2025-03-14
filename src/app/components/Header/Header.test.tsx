@@ -42,21 +42,12 @@ describe("Header", () => {
 		expect(screen.getAllByTestId("header__extra")).toHaveLength(2);
 		expect(asFragment()).toMatchSnapshot();
 	});
-
-	it("should render with title suffix", () => {
-		const { container, asFragment } = render(
-			<Header title="Header test" titleSuffix="suffix" subtitle="Subtitle test" />,
-		);
-
-		expect(container).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
 });
 
 describe("PageHeader", () => {
 	it.each(["xs", "md"])("should render responsive (%s)", (breakpoint) => {
 		const { container, asFragment } = renderResponsive(
-			<PageHeader title="Header test" titleSuffix="suffix" subtitle="Subtitle test" extra="extra" />,
+			<PageHeader title="Header test" subtitle="Subtitle test" extra="extra" />,
 			breakpoint,
 		);
 
