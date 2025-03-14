@@ -76,7 +76,7 @@ export const mainsailDevnetHandlers = [
 		}
 
 		if (wallets.includes(address)) {
-			return HttpResponse.json(require(`../../fixtures/coins/mainsail/devnet/wallets/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6.json`));
+			return HttpResponse.json(require(`../../fixtures/coins/mainsail/devnet/wallets/${address}.json`));
 		}
 
 		return HttpResponse.json(require("../../fixtures/coins/mainsail/devnet/wallets/not-found.json"));
