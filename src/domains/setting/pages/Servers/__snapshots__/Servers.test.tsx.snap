@@ -980,22 +980,18 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -2368,22 +2364,18 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -4747,22 +4739,18 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -6968,22 +6956,18 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -9492,22 +9476,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -11871,22 +11851,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -14664,22 +14640,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -17195,22 +17167,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -19562,22 +19530,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
@@ -21521,22 +21485,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Peers & Multisig Servers
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Manage custom network peers and multisignature servers for your Profile.
-                        </div>
-                      </div>
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Manage custom network peers and multisignature servers for your Profile.
                     </div>
                   </div>
                 </div>
