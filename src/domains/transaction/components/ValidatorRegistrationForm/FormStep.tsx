@@ -1,11 +1,10 @@
-import React, { ChangeEvent, useEffect, useMemo } from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputDefault } from "@/app/components/Input";
 import { useValidation } from "@/app/hooks";
-import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
@@ -24,7 +23,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
 	const { allWallets } = usePortfolio({ profile });
-	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
 	useEffect(() => {
 		if (wallet) {
@@ -85,16 +83,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 								shouldValidate: true,
 							})
 						}
-					/>
-				</FormField>
-
-				<FormField name="fee">
-					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<FeeField
-						type="delegateRegistration"
-						data={feeTransactionData}
-						network={network}
-						profile={profile}
 					/>
 				</FormField>
 			</div>
