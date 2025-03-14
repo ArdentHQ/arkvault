@@ -773,6 +773,7 @@ exports[`Export Settings > should render export settings 1`] = `
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -929,21 +930,21 @@ exports[`Export Settings > should render export settings 1`] = `
                       >
                         Export Profile
                       </h2>
+                      <p
+                        class="mt-1 text-sm text-theme-secondary-700 dark:text-theme-dark-200"
+                      >
+                        Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
+                      </p>
                     </div>
                     <div
                       class="px-6 pb-6 pt-4"
                     >
-                      <h2
-                        class="mb-0 text-lg"
-                      >
-                        Wallets
-                      </h2>
                       <ul
-                        class="[&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 [&>li]:pb-6 dark:[&>li]:border-theme-secondary-800"
+                        class="[&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 [&>li]:pb-6 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
-                          class="flex w-full flex-col pt-4 pb-6"
+                          class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
@@ -992,7 +993,7 @@ exports[`Export Settings > should render export settings 1`] = `
                           </div>
                         </li>
                         <li
-                          class="flex w-full flex-col py-6"
+                          class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
@@ -1041,6 +1042,64 @@ exports[`Export Settings > should render export settings 1`] = `
                           </div>
                         </li>
                       </ul>
+                      <div
+                        class="mt-6 space-y-5 border-t border-dashed border-theme-secondary-300 pb-6 pt-6 dark:border-theme-secondary-800"
+                      >
+                        <div
+                          class="flex flex-col overflow-hidden rounded-xl"
+                        >
+                          <div
+                            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
+                          >
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="circle-info"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="10"
+                                      r="9"
+                                      stroke-miterlimit="10"
+                                    />
+                                    <path
+                                      d="M10 9.2v5"
+                                      stroke-linecap="round"
+                                      stroke-miterlimit="10"
+                                    />
+                                    <path
+                                      d="M10 5.8h0"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                            <span>
+                              Information
+                            </span>
+                          </div>
+                          <div
+                            class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-info-50"
+                          >
+                            Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div
