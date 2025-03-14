@@ -9,7 +9,8 @@ import {
 	env,
 	syncDelegates,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import * as useWalletConfig from "@/domains/wallet/hooks/use-wallet-config";
 
