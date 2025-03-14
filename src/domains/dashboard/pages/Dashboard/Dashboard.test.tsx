@@ -32,21 +32,26 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("Dashboard", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await syncDelegates(profile);
 
-		const wallet = await profile.walletFactory().fromAddress({
-			address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-			coin: "Mainsail",
-			network: "mainsail.devnet",
-		});
+		// const wallet = await profile.walletFactory().fromAddress({
+		// 	address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	coin: "Mainsail",
+		// 	network: "mainsail.devnet",
+		// });
+		//
+		// profile.wallets().push(wallet);
 
-		profile.wallets().push(wallet);
+		const wallet = profile.wallets().first();
 
-		// const wallet = profile.wallets().first()
+		await wallet.synchroniser().identity();
 
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
 		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
