@@ -6,58 +6,74 @@ import { useBreakpoint } from "@/app/hooks";
 interface Properties {
 	title: string;
 	titleIcon?: React.ReactNode;
-	titleSuffix?: string | React.ReactNode;
 	subtitle?: string | React.ReactNode;
 	className?: string;
 	titleClassName?: string;
 	extra?: React.ReactNode;
 	border?: boolean;
+	isPageHeader?: boolean;
 }
 
-export const Header = ({ title, titleIcon, titleSuffix, className, subtitle, extra, titleClassName }: Properties) => (
-	<div className={cn("flex items-end justify-between bg-theme-background", className)}>
-		<div className="space-y-2">
-			<div className="flex items-center gap-3">
-				{titleIcon ?? undefined}
+export const Header = ({ title, titleIcon, className, subtitle, extra, titleClassName, isPageHeader }: Properties) => {
+	const renderSubtitle = () => (
+		<>
+			{subtitle && (
+				<div className="flex items-center leading-5 text-theme-secondary-text" data-testid="header__subtitle">
+					{subtitle}
+				</div>
+			)}
+		</>
+	);
 
-				<div className="flex flex-col gap-2">
-					<h1
-						className={cn(
-							"mb-0",
-							{
-								"text-2xl leading-[29px]": !titleClassName,
-							},
-							titleClassName,
-						)}
-						data-testid="header__title"
-					>
-						{title}
-						{titleSuffix && <span> {titleSuffix}</span>}
-					</h1>
+	const renderTitle = () => (
+		<h1
+			className={cn(
+				"mb-0",
+				{
+					"text-2xl leading-[29px]": !titleClassName,
+				},
+				titleClassName,
+			)}
+			data-testid="header__title"
+		>
+			{title}
+		</h1>
+	);
 
-					{subtitle && (
-						<div
-							className="flex items-center leading-5 text-theme-secondary-text"
-							data-testid="header__subtitle"
-						>
-							{subtitle}
+	return (
+		<div className={cn("flex items-end justify-between bg-theme-background", className)}>
+			<div className="space-y-2">
+				<div className="flex items-center gap-3">
+					{titleIcon ?? undefined}
+					{isPageHeader ? (
+						<div className="flex flex-col gap-2">
+							{renderTitle()} {renderSubtitle()}
 						</div>
+					) : (
+						renderTitle()
 					)}
 				</div>
+				{!isPageHeader && renderSubtitle()}
 			</div>
+
+			{extra && <div>{extra}</div>}
 		</div>
+	);
+};
 
-		{extra && <div>{extra}</div>}
-	</div>
-);
-
-export const PageHeader = ({ title, titleSuffix, subtitle, extra, border = false, ...parameters }: Properties) => {
+export const PageHeader = ({
+	title,
+	subtitle,
+	extra,
+	border = false,
+	...parameters
+}: Omit<Properties, "isPageHeader">) => {
 	const { isMdAndAbove } = useBreakpoint();
 
 	if (isMdAndAbove) {
 		return (
 			<Section border={border}>
-				<Header title={title} titleSuffix={titleSuffix} subtitle={subtitle} extra={extra} {...parameters} />
+				<Header title={title} subtitle={subtitle} isPageHeader={true} extra={extra} {...parameters} />
 			</Section>
 		);
 	}

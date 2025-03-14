@@ -53,7 +53,7 @@ export const CreateProfile = () => {
 			wrapperClassName="pb-32 sm:pb-0"
 		>
 			<div className="flex h-page sm:items-center" data-testid="CreateProfile">
-				<div className="mx-auto max-w-lg px-6">
+				<div className="mx-auto max-w-172 px-6">
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 						titleClassName="text-lg leading-[21px] sm:text-2xl sm:leading-[29px]"

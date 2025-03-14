@@ -3,13 +3,13 @@ import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { FeeField } from "@/domains/transaction/components/FeeField";
 
 export const ReviewStep = ({
 	senderWallet,
@@ -20,11 +20,7 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister } = useFormContext();
-
-	const { gasPrice, gasLimit } = getValues();
-
-	const fee = calculateGasFee(gasPrice, gasLimit);
+	const { unregister } = useFormContext();
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -79,12 +75,15 @@ export const ReviewStep = ({
 				</DetailWrapper>
 
 				<div className="mx-3 mt-2 sm:mx-0">
-					<TotalAmountBox
-						amount={0}
-						fee={fee}
-						ticker={senderWallet.currency()}
-						convertValues={!senderWallet.network().isTest()}
-					/>
+					<FormField name="fee">
+						<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
+						<FeeField
+							type="delegateResignation"
+							data={undefined}
+							network={senderWallet.network()}
+							profile={profile}
+						/>
+					</FormField>
 				</div>
 			</div>
 		</section>
