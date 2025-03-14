@@ -25,6 +25,7 @@ import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Image } from "@/app/components/Image";
+import { useDarkMode } from "usehooks-ts";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -107,6 +108,7 @@ export const GeneralSettings: React.FC = () => {
 
 	const formattedName = name.trim();
 
+	const { isDarkMode } = useTheme();
 	const hasDefaultAvatar = !!avatar.endsWith("</svg>");
 
 	const { settings: settingsValidation } = useValidation();
@@ -303,8 +305,18 @@ export const GeneralSettings: React.FC = () => {
 
 						<div className="relative flex flex-row sm:space-x-3">
 							<div className="hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg bg-theme-primary-50 px-4 dark:bg-theme-dark-950 sm:flex">
-								<Image className="hidden lg:block" name="ProfileImageExample" />
-								<Image className="lg:hidden" name="ProfileImageExampleResponsive" />
+								<Image
+									className="hidden lg:block"
+									name={isDarkMode ? "ProfileImageExampleDark" : "ProfileImageExampleLight"}
+								/>
+								<Image
+									className="lg:hidden"
+									name={
+										isDarkMode
+											? "ProfileImageExampleResponsiveDark"
+											: "ProfileImageExampleResponsiveLight"
+									}
+								/>
 							</div>
 
 							<SelectProfileImage
