@@ -79,16 +79,12 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                         <div
                           class="flex items-center gap-3"
                         >
-                          <div
-                            class="flex flex-col gap-2"
+                          <h1
+                            class="mb-0 text-2xl leading-[29px]"
+                            data-testid="header__title"
                           >
-                            <h1
-                              class="mb-0 text-2xl leading-[29px]"
-                              data-testid="header__title"
-                            >
-                              Transaction Details
-                            </h1>
-                          </div>
+                            Transaction Details
+                          </h1>
                         </div>
                       </div>
                     </div>
@@ -237,7 +233,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 </div>
                               </div>
                               <div
-                                class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+                                class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
                               >
                                 <div
                                   class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -430,7 +426,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                   </div>
                                 </div>
                                 <div
-                                  class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+                                  class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
                                 >
                                   <div
                                     class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -495,7 +491,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 </div>
                               </div>
                               <div
-                                class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+                                class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
                               >
                                 <div
                                   class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -623,7 +619,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 </div>
                               </div>
                               <div
-                                class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+                                class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
                               >
                                 <div
                                   class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -1299,22 +1295,18 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                           <div
                             class="flex items-center gap-3"
                           >
-                            <div
-                              class="flex flex-col gap-2"
+                            <h1
+                              class="mb-0 text-2xl leading-[29px]"
+                              data-testid="header__title"
                             >
-                              <h1
-                                class="mb-0 text-2xl leading-[29px]"
-                                data-testid="header__title"
-                              >
-                                Ledger Wallet
-                              </h1>
-                              <div
-                                class="flex items-center leading-5 text-theme-secondary-text"
-                                data-testid="header__subtitle"
-                              >
-                                Connect your Ledger Nano X and confirm input.
-                              </div>
-                            </div>
+                              Ledger Wallet
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Connect your Ledger Nano X and confirm input.
                           </div>
                         </div>
                       </div>
@@ -1619,16 +1611,12 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                         <div
                           class="flex items-center gap-3"
                         >
-                          <div
-                            class="flex flex-col gap-2"
+                          <h1
+                            class="mb-0 text-2xl leading-[29px]"
+                            data-testid="header__title"
                           >
-                            <h1
-                              class="mb-0 text-2xl leading-[29px]"
-                              data-testid="header__title"
-                            >
-                              Transaction Signed
-                            </h1>
-                          </div>
+                            Transaction Signed
+                          </h1>
                         </div>
                       </div>
                     </div>
@@ -2122,16 +2110,12 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                         <div
                           class="flex items-center gap-3"
                         >
-                          <div
-                            class="flex flex-col gap-2"
+                          <h1
+                            class="mb-0 text-2xl leading-[29px]"
+                            data-testid="header__title"
                           >
-                            <h1
-                              class="mb-0 text-2xl leading-[29px]"
-                              data-testid="header__title"
-                            >
-                              Transaction Signed
-                            </h1>
-                          </div>
+                            Transaction Signed
+                          </h1>
                         </div>
                       </div>
                     </div>

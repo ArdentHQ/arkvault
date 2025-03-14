@@ -80,7 +80,7 @@ exports[`FeeField > should render 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -122,7 +122,7 @@ exports[`FeeField > should render 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -164,7 +164,7 @@ exports[`FeeField > should render 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
