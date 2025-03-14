@@ -11,7 +11,7 @@ export const DropdownItem = ({
 	<li
 		{...props}
 		className={twMerge(
-			"my-1 flex items-center space-x-2 whitespace-nowrap px-5 mx-1 py-4 text-left text-base font-semibold transition-colors-shadow duration-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400",
+			"mx-1 my-1 flex items-center space-x-2 whitespace-nowrap px-5 py-4 text-left text-base font-semibold transition-colors-shadow duration-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400",
 			cn({
 				"border-l-4": variant !== "navbar",
 				"border-theme-primary-600 bg-theme-primary-50 text-theme-primary-600 dark:bg-black": isActive,
