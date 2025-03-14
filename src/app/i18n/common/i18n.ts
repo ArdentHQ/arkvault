@@ -62,7 +62,7 @@ export const translations = {
 		TITLE: "Confirmation",
 	},
 	CONFIRMATION_TIME: "~{{time}}s",
-	CONFIRMATION_TIME_LABEL: "Confirmation time",
+	CONFIRMATION_TIME_LABEL: "Confirmation Time",
 	CONTACT: "Contact",
 	CONTACTS: "Contacts",
 	CONTACT_US: "Contact Us",

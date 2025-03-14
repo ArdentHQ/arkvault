@@ -130,6 +130,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
               >
                 Contacts
               </h1>
+               
               <div
                 class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"

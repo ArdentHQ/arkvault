@@ -42,10 +42,10 @@ export const VoteTransactionType = ({
 	const showValidatorField = showValidator ? voteCategory === "vote" : voteCategory !== "swap";
 
 	return (
-		<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
+		<DetailWrapper label={t("COMMON.ACTION")}>
 			<div className="flex flex-col gap-3" data-testid="VoteDetail">
 				<div className="flex w-full items-center justify-between sm:justify-start">
-					<DetailTitle className={cn("w-auto sm:min-w-36")}>{t("COMMON.CATEGORY")}</DetailTitle>
+					<DetailTitle className={cn("w-auto sm:min-w-24")}>{t("COMMON.METHOD")}</DetailTitle>
 					<Label color="neutral" size="xs">
 						{categoryLabels[voteCategory]}
 					</Label>
@@ -54,7 +54,7 @@ export const VoteTransactionType = ({
 				{voteCategory === "swap" && (
 					<>
 						<div className="flex w-full items-center justify-between sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
 
 							<Address
 								truncateOnTable
@@ -65,7 +65,7 @@ export const VoteTransactionType = ({
 						</div>
 
 						<div className="flex w-full items-center justify-between sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
 
 							<Address
 								truncateOnTable
@@ -79,7 +79,7 @@ export const VoteTransactionType = ({
 
 				{showValidatorField && (
 					<div className="flex w-full items-center justify-between sm:justify-start">
-						<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.VALIDATOR")}</DetailTitle>
+						<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.VALIDATOR")}</DetailTitle>
 
 						<Address
 							truncateOnTable

@@ -455,7 +455,7 @@ export const SendVote = () => {
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
 			<Section className="flex-1">
 				<StepsProvider activeStep={activeIndex} steps={stepsCount}>
-					<Form className="mx-auto max-w-xl" context={form} onSubmit={submitForm}>
+					<Form className="mx-auto max-w-172" context={form} onSubmit={submitForm}>
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep

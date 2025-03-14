@@ -256,7 +256,7 @@ export const SendRegistration = () => {
 				<StepsProvider steps={stepCount} activeStep={activeTab}>
 					<Form
 						data-testid="Registration__form"
-						className="mx-auto max-w-xl"
+						className="mx-auto max-w-172"
 						context={form}
 						onSubmit={handleSubmit}
 					>
