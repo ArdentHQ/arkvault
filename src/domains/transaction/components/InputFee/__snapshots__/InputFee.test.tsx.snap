@@ -91,7 +91,7 @@ exports[`InputFee > simple view type > should display converted values when on l
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -144,7 +144,7 @@ exports[`InputFee > simple view type > should display converted values when on l
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -197,7 +197,7 @@ exports[`InputFee > simple view type > should display converted values when on l
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -294,7 +294,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -339,7 +339,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -384,7 +384,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -481,7 +481,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -526,7 +526,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -571,7 +571,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -664,7 +664,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -706,7 +706,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -748,7 +748,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -841,7 +841,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -883,7 +883,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -925,7 +925,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -1018,7 +1018,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -1060,7 +1060,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -1102,7 +1102,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -1195,7 +1195,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -1237,7 +1237,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -1279,7 +1279,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -1372,7 +1372,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -1414,7 +1414,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -1456,7 +1456,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -1560,7 +1560,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -1613,7 +1613,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -1666,7 +1666,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -1770,7 +1770,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -1823,7 +1823,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -1876,7 +1876,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -1980,7 +1980,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -2033,7 +2033,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -2086,7 +2086,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -2190,7 +2190,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -2243,7 +2243,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -2296,7 +2296,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s
@@ -2400,7 +2400,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~10s
@@ -2453,7 +2453,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~5s
@@ -2506,7 +2506,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
           >
             <span>
-              Confirmation time
+              Confirmation Time
             </span>
             <span>
               ~2s

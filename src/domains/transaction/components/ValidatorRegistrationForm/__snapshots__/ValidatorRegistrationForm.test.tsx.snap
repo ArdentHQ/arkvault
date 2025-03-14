@@ -18,22 +18,18 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
             <div
               class="flex items-center gap-3"
             >
-              <div
-                class="flex flex-col gap-2"
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
-                >
-                  Register Validator
-                </h1>
-                <div
-                  class="flex items-center leading-5 text-theme-secondary-text"
-                  data-testid="header__subtitle"
-                >
-                  Register a new Validator address on the network below.
-                </div>
-              </div>
+                Register Validator
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Register a new Validator address on the network below.
             </div>
           </div>
         </div>
@@ -252,7 +248,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                       class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
                     >
                       <span>
-                        Confirmation time
+                        Confirmation Time
                       </span>
                       <span>
                         ~10s
@@ -294,7 +290,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                       class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
                     >
                       <span>
-                        Confirmation time
+                        Confirmation Time
                       </span>
                       <span>
                         ~5s
@@ -336,7 +332,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                       class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
                     >
                       <span>
-                        Confirmation time
+                        Confirmation Time
                       </span>
                       <span>
                         ~2s
@@ -372,22 +368,18 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
             <div
               class="flex items-center gap-3"
             >
-              <div
-                class="flex flex-col gap-2"
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
-                >
-                  Transaction Review
-                </h1>
-                <div
-                  class="flex items-center leading-5 text-theme-secondary-text"
-                  data-testid="header__subtitle"
-                >
-                  Review the transaction details below.
-                </div>
-              </div>
+                Transaction Review
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Review the transaction details below.
             </div>
           </div>
         </div>
@@ -409,7 +401,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
               </div>
             </div>
             <div
-              class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+              class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
             >
               <div
                 class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -508,7 +500,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
               </div>
             </div>
             <div
-              class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+              class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
             >
               <div
                 class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -578,7 +570,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                   </div>
                 </div>
                 <div
-                  class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+                  class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
                 >
                   <div
                     class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -655,7 +647,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                       <div
                         class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
                       >
-                        Confirmation time
+                        Confirmation Time
                       </div>
                       <div
                         class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"

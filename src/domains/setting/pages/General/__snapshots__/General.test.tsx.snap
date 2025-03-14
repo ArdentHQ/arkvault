@@ -982,22 +982,18 @@ exports[`General Settings > should disable submit button when profile is not res
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Profile Settings
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Customize your wallet to suit your needs.
-                        </div>
-                      </div>
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Customize your wallet to suit your needs.
                     </div>
                   </div>
                 </div>
@@ -3306,22 +3302,18 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Profile Settings
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Customize your wallet to suit your needs.
-                        </div>
-                      </div>
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Customize your wallet to suit your needs.
                     </div>
                   </div>
                 </div>
@@ -5665,22 +5657,18 @@ exports[`General Settings > should render 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Profile Settings
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Customize your wallet to suit your needs.
-                        </div>
-                      </div>
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Customize your wallet to suit your needs.
                     </div>
                   </div>
                 </div>
@@ -7989,22 +7977,18 @@ exports[`General Settings > should show identicon when removing image if name is
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Profile Settings
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Customize your wallet to suit your needs.
-                        </div>
-                      </div>
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Customize your wallet to suit your needs.
                     </div>
                   </div>
                 </div>
@@ -10313,22 +10297,18 @@ exports[`General Settings > should update profile 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Profile Settings
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Customize your wallet to suit your needs.
-                        </div>
-                      </div>
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Customize your wallet to suit your needs.
                     </div>
                   </div>
                 </div>
@@ -12637,22 +12617,18 @@ exports[`General Settings > should update the avatar when removing focus from na
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Profile Settings
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Customize your wallet to suit your needs.
-                        </div>
-                      </div>
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Customize your wallet to suit your needs.
                     </div>
                   </div>
                 </div>
@@ -14960,22 +14936,18 @@ exports[`General Settings > should update the avatar when removing focus from na
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Profile Settings
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Customize your wallet to suit your needs.
-                        </div>
-                      </div>
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Customize your wallet to suit your needs.
                     </div>
                   </div>
                 </div>
