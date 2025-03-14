@@ -3,8 +3,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
-import { FormField, FormLabel } from "@/app/components/Form";
-import { FeeField } from "@/domains/transaction/components/FeeField";
+import { FormField } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
@@ -100,11 +99,6 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 						</div>
 					</div>
 				</DetailWrapper>
-
-				<FormField name="fee">
-					<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
-					<FeeField type="delegateResignation" data={undefined} network={network} profile={profile} />
-				</FormField>
 			</div>
 		</section>
 	);
