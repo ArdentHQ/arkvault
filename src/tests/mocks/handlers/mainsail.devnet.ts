@@ -26,25 +26,28 @@ export const mainsailDevnetHandlers = [
 	http.get("https://dwallets-evm.mainsailhq.com/", () => {
 		return HttpResponse.json({ data: "Hello World!" });
 	}),
-	http.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json", () => {
-		return HttpResponse.json([
-			{
-				"type": "team",
-				"name": "Genesis 1",
-				"address": "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466"
-			},
-			{
-				"type": "team",
-				"name": "Genesis 2",
-				"address": "0x12361f0Bd5f95C3Ea8BF34af48F5484b811B5CCe"
-			},
-			{
-				"type": "exchange",
-				"name": "Some Exchange",
-				"address": "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10"
-			}
-		]);
-	}),
+	http.get(
+		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
+		() => {
+			return HttpResponse.json([
+				{
+					type: "team",
+					name: "Genesis 1",
+					address: "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
+				},
+				{
+					type: "team",
+					name: "Genesis 2",
+					address: "0x12361f0Bd5f95C3Ea8BF34af48F5484b811B5CCe",
+				},
+				{
+					type: "exchange",
+					name: "Some Exchange",
+					address: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
+				},
+			]);
+		},
+	),
 	http.post("https://dwallets-evm.mainsailhq.com/evm/api", async ({ request }) => {
 		const body = await request.json();
 
