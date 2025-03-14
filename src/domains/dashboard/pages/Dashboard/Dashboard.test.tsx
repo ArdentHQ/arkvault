@@ -15,7 +15,8 @@ import {
 	syncDelegates,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 import { BigNumber } from "@ardenthq/sdk-helpers";
