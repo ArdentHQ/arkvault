@@ -446,19 +446,19 @@ exports[`ExchangeForm > should render exchange form 1`] = `
           class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
         />
         <ul
-          class="flex space-x-3"
+          class="flex flex-row gap-2"
         >
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
           />
         </ul>
       </div>
@@ -1045,19 +1045,19 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
           class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
         />
         <ul
-          class="flex space-x-3"
+          class="flex flex-row gap-2"
         >
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
         </ul>
       </div>
@@ -1680,19 +1680,19 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
           class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
         />
         <ul
-          class="flex space-x-3"
+          class="flex flex-row gap-2"
         >
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
           />
         </ul>
       </div>
