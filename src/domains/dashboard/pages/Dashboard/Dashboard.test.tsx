@@ -19,7 +19,9 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 
+import { server, requestMock } from "@/tests/mocks/server";
 import { BigNumber } from "@ardenthq/sdk-helpers";
+import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -28,6 +30,7 @@ let resetProfileNetworksMock: () => void;
 const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
 let mockTransactionsAggregate;
+
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -42,13 +45,9 @@ describe("Dashboard", () => {
 
 		await syncDelegates(profile);
 
-		// const wallet = await profile.walletFactory().fromAddress({
-		// 	address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	coin: "Mainsail",
-		// 	network: "mainsail.devnet",
-		// });
-		//
-		// profile.wallets().push(wallet);
+		server.use(
+			requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", walletFixture)
+		);
 
 		const wallet = profile.wallets().first();
 

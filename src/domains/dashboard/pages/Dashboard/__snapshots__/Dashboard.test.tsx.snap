@@ -14,9 +14,8 @@ exports[`Dashboard > should render 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -92,9 +91,8 @@ exports[`Dashboard > should render 1`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -418,9 +416,8 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -471,9 +468,8 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -737,7 +733,19 @@ exports[`Dashboard > should render 1`] = `
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
-                      />
+                      >
+                        <span
+                          class="font-semibold text-base text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet 1
+                          </span>
+                        </span>
+                      </div>
                       <div
                         class="text-theme-dark-200 text-theme-secondary-700"
                       >
@@ -893,7 +901,7 @@ exports[`Dashboard > should render 1`] = `
                               class="no-ligatures min-w-0 overflow-hidden text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50 font-semibold text-base absolute w-full"
                               data-testid="Address__address"
                             >
-                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                             </span>
                             <span>
                                
@@ -942,6 +950,39 @@ exports[`Dashboard > should render 1`] = `
                                       d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
                                     />
                                   </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </span>
+                        </button>
+                        <button
+                          class="ring-focus relative focus:outline-none space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 hover:dark:text-theme-dark-50 hover:bg-theme-primary-200 hover:dark:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <span>
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy-key"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1023,7 +1064,7 @@ exports[`Dashboard > should render 1`] = `
                           class="whitespace-nowrap dark:text-theme-dark-50"
                           data-testid="Amount"
                         >
-                          0 ARK
+                          5.27653252 ARK
                         </span>
                         <div
                           class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-6 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block"
@@ -1040,9 +1081,8 @@ exports[`Dashboard > should render 1`] = `
                       class="flex flex-row items-center gap-3"
                     >
                       <button
-                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
+                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                         data-testid="WalletHeader__send-button"
-                        disabled=""
                         type="button"
                       >
                         <div
@@ -1173,9 +1213,8 @@ exports[`Dashboard > should render 1`] = `
                       class="md:max-md:self-end w-full md:w-auto"
                     >
                       <button
-                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
+                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
                         data-testid="WalletVote__button"
-                        disabled=""
                         type="button"
                       >
                         <div
@@ -1217,9 +1256,8 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </button>
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
                         data-testid="WalletVote__button_mobile"
-                        disabled=""
                         type="button"
                       >
                         <div
@@ -2543,10 +2581,10 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <div
                                 class="flex w-full items-center justify-between space-x-4"
@@ -2617,7 +2655,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -2627,7 +2665,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    0 ARK
+                                    - 0.00254046 ARK
                                   </span>
                                 </div>
                               </div>
@@ -2994,10 +3032,10 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <div
                                 class="flex min-w-36 grow items-center justify-between space-x-4"
@@ -3009,17 +3047,19 @@ exports[`Dashboard > should render 1`] = `
                                   <div
                                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
-                                    <span
-                                      class="font-semibold text-sm text-theme-text"
-                                      data-testid="Address__alias"
+                                    <div
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
                                       <span
-                                        class="no-ligatures transition-colors duration-200"
-                                        data-testid="TruncateEnd"
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        Mainsail Wallet …
+                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
                                       </span>
-                                    </span>
+                                      <span>
+                                         
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                                 <button
@@ -3075,7 +3115,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -3085,7 +3125,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    0 ARK
+                                    - 0.001 ARK
                                   </span>
                                 </div>
                               </div>
@@ -3452,10 +3492,10 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <div
                                 class="flex min-w-36 grow items-center justify-between space-x-4"
@@ -3467,17 +3507,19 @@ exports[`Dashboard > should render 1`] = `
                                   <div
                                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
-                                    <span
-                                      class="font-semibold text-sm text-theme-text"
-                                      data-testid="Address__alias"
+                                    <div
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
                                       <span
-                                        class="no-ligatures transition-colors duration-200"
-                                        data-testid="TruncateEnd"
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        Mainsail Wallet …
+                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
                                       </span>
-                                    </span>
+                                      <span>
+                                         
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                                 <button
@@ -3533,7 +3575,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -3543,7 +3585,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    0 ARK
+                                    - 0.001 ARK
                                   </span>
                                 </div>
                               </div>
@@ -3910,10 +3952,10 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <div
                                 class="flex min-w-36 grow items-center justify-between space-x-4"
@@ -3925,17 +3967,19 @@ exports[`Dashboard > should render 1`] = `
                                   <div
                                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
-                                    <span
-                                      class="font-semibold text-sm text-theme-text"
-                                      data-testid="Address__alias"
+                                    <div
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
                                       <span
-                                        class="no-ligatures transition-colors duration-200"
-                                        data-testid="TruncateEnd"
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        Mainsail Wallet …
+                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
                                       </span>
-                                    </span>
+                                      <span>
+                                         
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                                 <button
@@ -3991,7 +4035,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -4001,7 +4045,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    0 ARK
+                                    - 0.001 ARK
                                   </span>
                                 </div>
                               </div>
@@ -4350,10 +4394,10 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <div
                                 class="flex w-full items-center justify-between space-x-4"
@@ -4424,7 +4468,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -4434,7 +4478,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    0 ARK
+                                    - 0.001 ARK
                                   </span>
                                 </div>
                               </div>
@@ -4783,10 +4827,10 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <div
                                 class="flex w-full items-center justify-between space-x-4"
@@ -4857,7 +4901,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -4867,7 +4911,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    0 ARK
+                                    - 0.001 ARK
                                   </span>
                                 </div>
                               </div>
@@ -5230,10 +5274,10 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <div
                                 class="flex min-w-36 grow items-center justify-between space-x-4"
@@ -5253,7 +5297,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures transition-colors duration-200"
                                         data-testid="TruncateEnd"
                                       >
-                                        Mainsail Wallet …
+                                        shahin
                                       </span>
                                     </span>
                                   </div>
@@ -5311,7 +5355,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -5321,7 +5365,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    + 0.2 ARK
+                                    - 0.200105 ARK
                                   </span>
                                 </div>
                               </div>
@@ -5521,76 +5565,17 @@ exports[`Dashboard > should render 1`] = `
                                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
-                                    From
+                                    To
                                   </div>
                                   <span
                                     class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                   >
-                                    <div
-                                      class="flex min-w-36 grow items-center justify-between space-x-4"
+                                    Multiple 
+                                    <span
+                                      class="text-theme-secondary-700 dark:text-theme-secondary-500"
                                     >
-                                      <div
-                                        class="grow"
-                                        data-testid="TransactionRowAddressing__address-container"
-                                      >
-                                        <div
-                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                        >
-                                          <div
-                                            class="relative grow leading-[17px] sm:leading-5 text-left"
-                                          >
-                                            <span
-                                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                              data-testid="Address__address"
-                                            >
-                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                            </span>
-                                            <span>
-                                               
-                                            </span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <button
-                                        class="ring-focus relative focus:outline-none"
-                                        data-ring-focus-margin="-m-1"
-                                        data-testid="clipboard-icon__wrapper"
-                                        type="button"
-                                      >
-                                        <div
-                                          class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                                        >
-                                          <div
-                                            style="height: 16px; width: 16px;"
-                                          >
-                                            <svg
-                                              id="copy"
-                                              style="height: 100%; width: 100%;"
-                                              viewBox="0 0 20 20"
-                                              x="0"
-                                              xml:space="preserve"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                              y="0"
-                                            >
-                                              <g
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                              >
-                                                <path
-                                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                                />
-                                                <path
-                                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                                />
-                                              </g>
-                                            </svg>
-                                          </div>
-                                        </div>
-                                      </button>
-                                    </div>
+                                      (2)
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -5611,76 +5596,17 @@ exports[`Dashboard > should render 1`] = `
                                 class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <span
                                 class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                               >
-                                <div
-                                  class="flex min-w-36 grow items-center justify-between space-x-4"
+                                Multiple 
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-secondary-500"
                                 >
-                                  <div
-                                    class="grow"
-                                    data-testid="TransactionRowAddressing__address-container"
-                                  >
-                                    <div
-                                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                    >
-                                      <div
-                                        class="relative grow leading-[17px] sm:leading-5 text-left"
-                                      >
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                          data-testid="Address__address"
-                                        >
-                                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                        </span>
-                                        <span>
-                                           
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <button
-                                    class="ring-focus relative focus:outline-none"
-                                    data-ring-focus-margin="-m-1"
-                                    data-testid="clipboard-icon__wrapper"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                                    >
-                                      <div
-                                        style="height: 16px; width: 16px;"
-                                      >
-                                        <svg
-                                          id="copy"
-                                          style="height: 100%; width: 100%;"
-                                          viewBox="0 0 20 20"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
-                                        >
-                                          <g
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                          >
-                                            <path
-                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                            />
-                                            <path
-                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                            />
-                                          </g>
-                                        </svg>
-                                      </div>
-                                    </div>
-                                  </button>
-                                </div>
+                                  (2)
+                                </span>
                               </span>
                             </div>
                           </div>
@@ -5696,77 +5622,20 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__multipayment"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                From
+                                To
                               </div>
                               <span
                                 class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                               >
-                                <div
-                                  class="flex min-w-36 grow items-center justify-between space-x-4"
+                                Multiple 
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-secondary-500"
                                 >
-                                  <div
-                                    class="grow"
-                                    data-testid="TransactionRowAddressing__address-container"
-                                  >
-                                    <div
-                                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                    >
-                                      <span
-                                        class="font-semibold text-sm text-theme-text"
-                                        data-testid="Address__alias"
-                                      >
-                                        <span
-                                          class="no-ligatures transition-colors duration-200"
-                                          data-testid="TruncateEnd"
-                                        >
-                                          Mainsail Wallet …
-                                        </span>
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <button
-                                    class="ring-focus relative focus:outline-none"
-                                    data-ring-focus-margin="-m-1"
-                                    data-testid="clipboard-icon__wrapper"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                                    >
-                                      <div
-                                        style="height: 16px; width: 16px;"
-                                      >
-                                        <svg
-                                          id="copy"
-                                          style="height: 100%; width: 100%;"
-                                          viewBox="0 0 20 20"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
-                                        >
-                                          <g
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                          >
-                                            <path
-                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                            />
-                                            <path
-                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                            />
-                                          </g>
-                                        </svg>
-                                      </div>
-                                    </div>
-                                  </button>
-                                </div>
+                                  (2)
+                                </span>
                               </span>
                             </div>
                           </div>
@@ -5781,7 +5650,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -5791,7 +5660,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    0 ARK
+                                    - 1.50102853 ARK
                                   </span>
                                 </div>
                               </div>
@@ -5926,17 +5795,19 @@ exports[`Dashboard > should render 1`] = `
                                     <div
                                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                     >
-                                      <span
-                                        class="font-semibold text-sm text-theme-text"
-                                        data-testid="Address__alias"
+                                      <div
+                                        class="relative grow leading-[17px] sm:leading-5 text-left"
                                       >
                                         <span
-                                          class="no-ligatures transition-colors duration-200"
-                                          data-testid="TruncateEnd"
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                          data-testid="Address__address"
                                         >
-                                          Mainsail Wallet …
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                         </span>
-                                      </span>
+                                        <span>
+                                           
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                   <button
@@ -6154,10 +6025,10 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
-                                To
+                                From
                               </div>
                               <div
                                 class="flex min-w-36 grow items-center justify-between space-x-4"
@@ -6169,17 +6040,19 @@ exports[`Dashboard > should render 1`] = `
                                   <div
                                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                   >
-                                    <span
-                                      class="font-semibold text-sm text-theme-text"
-                                      data-testid="Address__alias"
+                                    <div
+                                      class="relative grow leading-[17px] sm:leading-5 text-left"
                                     >
                                       <span
-                                        class="no-ligatures transition-colors duration-200"
-                                        data-testid="TruncateEnd"
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
                                       >
-                                        Mainsail Wallet …
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
                                       </span>
-                                    </span>
+                                      <span>
+                                         
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                                 <button
@@ -6235,7 +6108,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -6245,7 +6118,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 4.98010784 ARK
+                                    + 4.98 ARK
                                   </span>
                                 </div>
                               </div>
