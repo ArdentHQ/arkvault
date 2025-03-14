@@ -775,6 +775,7 @@ exports[`General Settings > should disable submit button when profile is not res
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -3310,6 +3311,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -5880,6 +5882,7 @@ exports[`General Settings > should render 1`] = `
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -8415,6 +8418,7 @@ exports[`General Settings > should show identicon when removing image if name is
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -10950,6 +10954,7 @@ exports[`General Settings > should update profile 1`] = `
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -13485,6 +13490,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -16019,6 +16025,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"

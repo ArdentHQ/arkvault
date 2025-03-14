@@ -773,6 +773,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -3082,6 +3083,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -7621,6 +7623,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
@@ -14982,6 +14985,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   >
                     Settings
                   </h1>
+                   
                   <div
                     class="flex items-center leading-5 text-theme-secondary-text"
                     data-testid="header__subtitle"
