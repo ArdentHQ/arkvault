@@ -230,7 +230,11 @@ export const GeneralSettings: React.FC = () => {
 			labelDescription: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.DESCRIPTION"),
 			labelWrapperClass: "flex flex-col sm:flex-row space-y-3 justify-between items-center",
 			value: (
-				<Button onClick={() => setIsResetProfileOpen(true)} variant="danger" className="w-full sm:w-auto">
+				<Button
+					onClick={() => setIsResetProfileOpen(true)}
+					variant="danger"
+					className="w-full bg-theme-danger-50 sm:w-auto"
+				>
 					<Icon name="ArrowRotateLeft" />
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
 				</Button>
