@@ -187,7 +187,12 @@ export const useProfileTransactions = ({
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const updateFilters = useCallback(
-		({ activeMode, activeTransactionType, timestamp, selectedTransactionTypes: newTransactionTypes }: TransactionFilters) => {
+		({
+			activeMode,
+			activeTransactionType,
+			timestamp,
+			selectedTransactionTypes: newTransactionTypes,
+		}: TransactionFilters) => {
 			lastQuery.current = JSON.stringify({ activeMode, activeTransactionType });
 
 			const hasWallets = wallets.length > 0;
