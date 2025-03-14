@@ -25,7 +25,7 @@ export const SettingsGroup = ({
 	<div className={cn("relative flex flex-col", className)} {...properties}>
 		{title && <SettingsGroupHeader description={description}>{title}</SettingsGroupHeader>}
 
-		<div className="px-6 pb-6 pt-4">{children}</div>
+		<div className="pb-6 pt-4 sm:px-6">{children}</div>
 	</div>
 );
 
@@ -54,7 +54,7 @@ const SettingsGroupHeader = ({
 }) => (
 	<div
 		className={cn(
-			"-mt-px block border-t border-theme-secondary-300 bg-theme-secondary-100 px-6 py-3 dark:border-theme-dark-700 dark:bg-theme-dark-700",
+			"-mx-3 block border-l-2 border-theme-primary-400 bg-theme-secondary-100 px-2.5 py-3 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:mx-0 sm:-mt-px sm:border-l-0 sm:border-t sm:border-theme-secondary-300 sm:px-6",
 			className,
 		)}
 		{...properties}
