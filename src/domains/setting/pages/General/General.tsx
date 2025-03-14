@@ -25,7 +25,6 @@ import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Image } from "@/app/components/Image";
-import { useDarkMode } from "usehooks-ts";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
