@@ -31,7 +31,6 @@ const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
 let mockTransactionsAggregate;
 
-
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
@@ -46,7 +45,10 @@ describe("Dashboard", () => {
 		await syncDelegates(profile);
 
 		server.use(
-			requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", walletFixture)
+			requestMock(
+				"https://dwallets-evm.mainsailhq.com/api/wallets/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+				walletFixture,
+			),
 		);
 
 		const wallet = profile.wallets().first();
