@@ -10,11 +10,8 @@ import {
 	syncFees, getMainsailProfileId,
 } from "@/utils/testing-library";
 import { SendExchangeTransfer } from "./SendExchangeTransfer";
-import { afterAll, beforeEach, expect, MockInstance } from "vitest";
+import { afterAll, expect, MockInstance } from "vitest";
 import * as environmentHooks from "@/app/hooks/env";
-import { server, requestMock } from "@/tests/mocks/server";
-import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
-import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
 import { renderHook } from "@testing-library/react";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import { useTranslation } from "react-i18next";
