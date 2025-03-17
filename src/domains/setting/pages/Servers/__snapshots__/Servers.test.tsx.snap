@@ -681,7 +681,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -2233,7 +2233,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >
@@ -2991,7 +2991,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -4385,7 +4385,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >
@@ -5143,7 +5143,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -5915,7 +5915,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -5945,7 +5945,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -6317,7 +6317,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -6347,7 +6347,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -6691,7 +6691,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -6721,7 +6721,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -6773,7 +6773,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >
@@ -7531,7 +7531,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -9083,7 +9083,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >
@@ -9841,7 +9841,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -10744,7 +10744,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -10774,7 +10774,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -11215,7 +11215,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -11245,7 +11245,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -11658,7 +11658,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -11688,7 +11688,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -11740,7 +11740,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >
@@ -12498,7 +12498,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -13610,7 +13610,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -13640,7 +13640,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -14053,7 +14053,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -14083,7 +14083,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -14135,7 +14135,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >
@@ -14893,7 +14893,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -16433,7 +16433,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >
@@ -17191,7 +17191,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -18256,7 +18256,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >
@@ -19014,7 +19014,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -19908,7 +19908,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                                         data-testid="CustomPeers-network-item--mobile--refresh"
                                         type="button"
                                       >
@@ -19938,7 +19938,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         </div>
                                       </button>
                                       <button
-                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
+                                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full"
                                         data-testid="CustomPeers-network-item--mobile--edit"
                                         type="button"
                                       >
@@ -20338,7 +20338,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           </div>
                         </div>
                         <button
-                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
+                          class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-6 w-full space-x-2 sm:mt-3"
                           data-testid="CustomPeers--addnew"
                           type="button"
                         >

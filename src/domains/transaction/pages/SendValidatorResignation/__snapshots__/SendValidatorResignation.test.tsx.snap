@@ -550,7 +550,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -577,7 +577,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -1172,7 +1172,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -1877,7 +1877,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -1904,7 +1904,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -2249,7 +2249,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -2954,7 +2954,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -2981,7 +2981,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -3326,7 +3326,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="false"
                               aria-label="0.00075"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3368,7 +3368,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="true"
                               aria-label="0.0007600051875"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3410,7 +3410,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="false"
                               aria-label="0.0009"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3460,7 +3460,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -4165,7 +4165,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -4192,7 +4192,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -4417,7 +4417,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -5149,7 +5149,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -5176,7 +5176,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -5366,7 +5366,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                         class="relative"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -5413,7 +5413,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="ErrorStep__close-button"
                       type="button"
                     >
