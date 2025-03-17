@@ -256,7 +256,8 @@ export const Transactions = memo(function Transactions({
 						{selectedTransactionTypes?.length ? (
 							<div
 								data-testid="Transactions__no-results"
-								className="mb-1 mt-3 px-6 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 md:px-6">
+								className="mb-1 mt-3 px-6 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 md:px-6"
+							>
 								<Trans
 									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
 									values={{

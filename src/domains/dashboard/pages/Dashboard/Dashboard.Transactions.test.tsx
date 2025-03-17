@@ -12,7 +12,8 @@ import {
 	syncDelegates,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 import { requestMock, server } from "@/tests/mocks/server";
