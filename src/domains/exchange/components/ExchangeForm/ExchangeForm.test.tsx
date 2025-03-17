@@ -1670,7 +1670,7 @@ describe("ExchangeForm", () => {
 
 describe("FormStep", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	afterEach(() => {
@@ -1708,7 +1708,7 @@ describe("FormStep", () => {
 
 describe("ReviewStep", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	afterEach(() => {
@@ -1762,7 +1762,7 @@ describe("ReviewStep", () => {
 
 describe("StatusStep", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	afterEach(() => {
@@ -1861,7 +1861,7 @@ describe("StatusStep", () => {
 
 describe("ConfirmationStep", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	afterEach(() => {

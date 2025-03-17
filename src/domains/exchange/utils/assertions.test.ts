@@ -3,7 +3,7 @@ import { assertCurrency, assertExchangeService, assertExchangeTransaction } from
 import { CurrencyData } from "@/domains/exchange/exchange.contracts";
 import { httpClient } from "@/app/services";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId, } from "@/utils/testing-library";
 
 describe("#assertExchangeService", () => {
 	it("should pass with a ExchangeService instance", () => {
@@ -43,7 +43,7 @@ describe("#assertExchangeService", () => {
 
 describe("#assertExchangeTransaction", () => {
 	it("should pass with a ExchangeTransaction instance", () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
 				address: "",
