@@ -14,7 +14,6 @@ import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import userEvent from "@testing-library/user-event";
 import { afterAll, expect, MockInstance } from "vitest";
 import * as environmentHooks from "@/app/hooks/env";
-import { server, requestMock } from "@/tests/mocks/server";
 import { renderHook, within } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
