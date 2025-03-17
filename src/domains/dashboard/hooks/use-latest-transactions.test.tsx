@@ -35,8 +35,6 @@ describe("useLatestTransactions", () => {
 
 		wallet = profile.wallets().first();
 
-		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-
 		vi.spyOn(useWalletConfig, "useWalletConfig").mockReturnValue({
 			selectedWallets: [wallet],
 		});
