@@ -1,10 +1,9 @@
 import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
-import React, { useMemo } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { SendVoteStepProperties } from "./SendVote.contracts";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { FeeField } from "@/domains/transaction/components/FeeField";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
@@ -19,22 +18,6 @@ type FormStepProperties = {
 
 export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFieldDisabled }: FormStepProperties) => {
 	const { t } = useTranslation();
-
-	const showFeeInput = useMemo(() => network.chargesZeroFees() === false, [wallet]);
-
-	const feeTransactionData = useMemo(
-		() => ({
-			unvotes: unvotes.map((vote) => ({
-				amount: vote.amount,
-				id: vote.wallet?.governanceIdentifier(),
-			})),
-			votes: votes.map((vote) => ({
-				amount: vote.amount,
-				id: vote.wallet?.governanceIdentifier(),
-			})),
-		}),
-		[unvotes, votes, wallet],
-	);
 
 	const { setValue } = useFormContext();
 
@@ -75,13 +58,6 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 			</FormField>
 
 			<VoteTransactionType votes={votes} unvotes={unvotes} />
-
-			{showFeeInput && (
-				<FormField name="fee" className="flex-1">
-					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<FeeField type="vote" data={feeTransactionData} network={network} profile={profile} />
-				</FormField>
-			)}
 		</section>
 	);
 };
