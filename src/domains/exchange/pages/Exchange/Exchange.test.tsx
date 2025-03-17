@@ -9,14 +9,21 @@ import { Exchange } from "./Exchange";
 import { httpClient, toasts } from "@/app/services";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { translations } from "@/domains/exchange/i18n";
-import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import {
+	env,
+	getMainsailProfileId,
+	render,
+	screen,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 let history: HashHistory;
 let profile: Contracts.IProfile;
 
 const exchangeBaseURL = "https://exchanges.arkvault.io/api";
-const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange`;
+const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange`;
 
 const stubData = {
 	input: {
@@ -73,7 +80,7 @@ const mockExchangeTransaction = (profile: Contracts.IProfile) => {
 
 describe("Exchange", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		history = createHashHistory();
 	});
