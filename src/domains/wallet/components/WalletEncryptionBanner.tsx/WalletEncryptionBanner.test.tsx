@@ -31,7 +31,4 @@ describe("WalletEncryptionBanner", () => {
 
         expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).toBeEnabled();
     });
-    
-    
-    
 });
