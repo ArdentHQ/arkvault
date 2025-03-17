@@ -218,7 +218,9 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                             data-testid="InputPassword__toggle"
                             type="button"
                           >
-                            <div>
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200"
+                            >
                               <div
                                 style="height: 20px; width: 20px;"
                               >
@@ -536,7 +538,9 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                             data-testid="InputPassword__toggle"
                             type="button"
                           >
-                            <div>
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200"
+                            >
                               <div
                                 style="height: 20px; width: 20px;"
                               >

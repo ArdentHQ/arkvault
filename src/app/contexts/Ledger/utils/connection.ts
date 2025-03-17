@@ -1,12 +1,15 @@
 import retry, { AbortError, Options } from "p-retry";
 import { Coins } from "@ardenthq/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
-import { hasRequiredAppVersion } from "./validation";
+import Eth from "@ledgerhq/hw-app-eth";
+import { LedgerTransport } from "@/app/contexts/Ledger/Ledger.contracts";
+
+export const setupEthTransportInstance = (transport: LedgerTransport) => new Eth(transport);
 
 export const accessLedgerDevice = async (coin: Coins.Coin) => {
 	try {
 		await coin.__construct();
-		await coin.ledger().connect();
+		await coin.ledger().connect((transport) => setupEthTransportInstance(transport));
 	} catch (error) {
 		// If the device is open, continue normally.
 		// Can be triggered when the user retries ledger connection.
@@ -19,11 +22,6 @@ export const accessLedgerDevice = async (coin: Coins.Coin) => {
 export const accessLedgerApp = async ({ coin }: { coin: Coins.Coin }) => {
 	await accessLedgerDevice(coin);
 
-	if (!(await hasRequiredAppVersion(coin))) {
-		throw new Error("VERSION_ERROR");
-	}
-
-	// Ensure that the app is accessible.
 	await coin.ledger().getPublicKey(
 		formatLedgerDerivationPath({
 			coinType: coin.config().get<number>("network.constants.slip44"),
@@ -48,6 +46,12 @@ export const persistLedgerConnection = async ({
 		try {
 			await accessLedgerApp({ coin });
 		} catch (error) {
+			// Delay retry if an operation is in progress.
+			// Error: InvalidStateError: An operation that changes the device state is in progress.
+			if (error?.message?.includes?.("in progress")) {
+				await new Promise((resolve) => setTimeout(resolve, 1000));
+			}
+
 			// Abort on version error or continue retrying access.
 			if (error.message === "VERSION_ERROR") {
 				throw new AbortError("VERSION_ERROR");

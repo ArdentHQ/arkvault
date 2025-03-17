@@ -11,16 +11,15 @@ import { Address } from "@/app/components/Address";
 import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Header } from "@/app/components/Header";
 import { Skeleton } from "@/app/components/Skeleton";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
 import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
+
 import { BIP44 } from "@/app/lib";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
@@ -271,19 +270,17 @@ export const showLoadedLedgerWalletsMessage = (wallets: Contracts.WalletData[]) 
 };
 
 export const LedgerScanStep = ({
+	network,
 	setRetryFn,
 	profile,
 	cancelling,
 }: {
+	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
 	cancelling: boolean;
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
-	const { t } = useTranslation();
-
-	const { watch, register, unregister, setValue } = useFormContext();
-	const [network] = useState<Networks.Network>(() => watch("network"));
-
+	const { register, unregister, setValue } = useFormContext();
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
@@ -373,13 +370,6 @@ export const LedgerScanStep = ({
 
 	return (
 		<section data-testid="LedgerScanStep" className="space-y-4">
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
-				titleIcon={<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600" />}
-				className="hidden sm:block"
-			/>
-
 			{error ? (
 				<Alert variant="danger">
 					<span data-testid="LedgerScanStep__error">{error}</span>
