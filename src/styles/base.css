@@ -161,10 +161,6 @@ main {
 	@apply h-full w-full focus:ring-0;
 }
 
-.upload-button-wrapper button:not(:focus):hover:enabled {
-	@apply bg-theme-secondary-900 opacity-85 dark:bg-theme-secondary-600;
-}
-
 .profile-image:hover .upload-button-overlay {
 	@apply opacity-100;
 }
