@@ -81,7 +81,8 @@ describe("EncryptionPasswordStep", () => {
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
 		await userEvent.click(continueButton);
 
@@ -169,7 +170,8 @@ describe("EncryptionPasswordStep", () => {
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
 		await userEvent.click(continueButton);
 

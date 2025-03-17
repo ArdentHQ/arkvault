@@ -26,7 +26,8 @@ const randomPublicKeyInvalid = "a34151a3ec46b5670a682b0a63394f863587d1bc97483b1b
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
-const enableEncryptionToggle = async () => await userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
+const enableEncryptionToggle = async () => await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+const toggleEncryptionCheckbox = async () => await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const backButton = () => screen.getByTestId("ImportWallet__back-button");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
@@ -269,9 +270,10 @@ describe("ImportAddress Methods", () => {
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await enableEncryptionToggle();
+		await toggleEncryptionCheckbox();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeEnabled();
+			expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).toBeEnabled();
 		});
 
 		await userEvent.click(continueButton());
@@ -336,7 +338,7 @@ describe("ImportAddress Methods", () => {
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await enableEncryptionToggle();
-
+		await toggleEncryptionCheckbox();
 		await userEvent.click(continueButton());
 
 		await waitFor(() => {
@@ -396,7 +398,7 @@ describe("ImportAddress Methods", () => {
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await enableEncryptionToggle();
-
+		await toggleEncryptionCheckbox();
 		await userEvent.click(continueButton());
 
 		await waitFor(() => {
