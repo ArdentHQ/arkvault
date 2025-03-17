@@ -8,7 +8,6 @@ import { toasts } from "@/app/services";
 
 interface SelectProfileImageProperties {
 	value?: string;
-	name?: string;
 	onSelect: (raw: string) => void;
 }
 
@@ -25,7 +24,7 @@ const ProfileImageStyled = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) 
 
 const ALLOWED_EXTENSIONS = ["png", "jpg", "jpeg", "bmp"];
 
-export const SelectProfileImage = ({ value, name, onSelect }: SelectProfileImageProperties) => {
+export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProperties) => {
 	const { t } = useTranslation();
 	const { openImage } = useFiles();
 
@@ -44,22 +43,16 @@ export const SelectProfileImage = ({ value, name, onSelect }: SelectProfileImage
 	const isSvg = useMemo(() => value?.endsWith("</svg>"), [value]);
 
 	const renderButton = () => {
-		if (value) {
+		if (!isSvg) {
 			return (
 				<div className="relative z-0 h-[92px] w-[92px]">
 					<ProfileImageStyled>
 						<img
 							data-testid={`SelectProfileImage__avatar-${isSvg ? "identicon" : "image"}`}
-							src={isSvg ? `data:image/svg+xml;utf8,${value}` : value}
+							src={value}
 							className="min-h-full object-cover"
 							alt="Avatar"
 						/>
-
-						{isSvg && (
-							<span className="absolute text-2xl font-semibold text-white">
-								{name?.slice(0, 2).toUpperCase()}
-							</span>
-						)}
 
 						<button
 							type="button"
@@ -77,19 +70,17 @@ export const SelectProfileImage = ({ value, name, onSelect }: SelectProfileImage
 						</button>
 					</ProfileImageStyled>
 
-					{!isSvg && (
-						<div className="absolute -right-2 -top-2 z-20">
-							<Button
-								size="icon"
-								variant="danger"
-								className="flex h-5 w-5 items-center justify-center p-0"
-								onClick={() => onSelect("")}
-								data-testid="SelectProfileImage__remove-button"
-							>
-								<Icon name="Cross" size="sm" />
-							</Button>
-						</div>
-					)}
+					<div className="absolute -right-2 -top-2 z-20">
+						<Button
+							size="icon"
+							variant="danger"
+							className="flex h-5 w-5 items-center justify-center p-0"
+							onClick={() => onSelect("")}
+							data-testid="SelectProfileImage__remove-button"
+						>
+							<Icon name="Cross" size="sm" />
+						</Button>
+					</div>
 				</div>
 			);
 		}

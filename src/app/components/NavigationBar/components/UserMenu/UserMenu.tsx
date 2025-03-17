@@ -43,7 +43,10 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 					<Avatar size="avatarMobile" highlight={isOpen}>
 						{avatarImage.endsWith("</svg>") ? (
 							<>
-								<img alt="Profile Avatar" src={`data:image/svg+xml;utf8,${avatarImage}`} />
+								<img
+									alt="Profile Avatar"
+									src={`data:image/svg+xml;utf8,${encodeURIComponent(avatarImage)}`}
+								/>
 								<span className="absolute text-xs font-semibold text-theme-background dark:text-theme-text">
 									{userInitials}
 								</span>
