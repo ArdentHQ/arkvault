@@ -11,7 +11,8 @@ import {
 	env,
 	render,
 	screen,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { expect } from "vitest";
 
@@ -71,7 +72,7 @@ describe("Dashboard", () => {
 		const onImportAddress = vi.fn();
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard onImportAddress={onImportAddress}/>
+				<Dashboard onImportAddress={onImportAddress} />
 			</Route>,
 			{
 				history,
