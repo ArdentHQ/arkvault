@@ -980,22 +980,18 @@ exports[`Export Settings > should render export settings 1`] = `
                     <div
                       class="flex items-center gap-3"
                     >
-                      <div
-                        class="flex flex-col gap-2"
+                      <h1
+                        class="mb-0 mb-2 text-2xl"
+                        data-testid="header__title"
                       >
-                        <h1
-                          class="mb-0 mb-2 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Export Profile
-                        </h1>
-                        <div
-                          class="flex items-center leading-5 text-theme-secondary-text"
-                          data-testid="header__subtitle"
-                        >
-                          Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
-                        </div>
-                      </div>
+                        Export Profile
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
+                      data-testid="header__subtitle"
+                    >
+                      Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
                     </div>
                   </div>
                 </div>

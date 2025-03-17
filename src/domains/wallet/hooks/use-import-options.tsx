@@ -6,6 +6,7 @@ import { Icon } from "@/app/components/Icon";
 
 export enum OptionsValue {
 	ADDRESS = "address",
+	LEDGER = "ledger",
 	BIP39 = "bip39",
 	BIP44 = "bip44",
 	BIP49 = "bip49",
@@ -109,7 +110,15 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 
 		let defaultOption: ImportOption | undefined;
 
-		const options: ImportOption[] = [];
+		const options: ImportOption[] = [
+			{
+				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.LEDGER_DESCRIPTION"),
+				header: t("COMMON.LEDGER"),
+				icon: <Icon name="LedgerImport" size="lg" />,
+				label: t("COMMON.LEDGER"),
+				value: OptionsValue.LEDGER,
+			},
+		];
 
 		for (const option of allOptions) {
 			const methodName = Object.keys(methods).find(

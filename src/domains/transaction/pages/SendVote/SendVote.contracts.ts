@@ -6,4 +6,5 @@ export interface SendVoteStepProperties {
 	votes: Contracts.VoteRegistryItem[];
 	unvotes: Contracts.VoteRegistryItem[];
 	network: Networks.Network;
+	profile: Contracts.IProfile;
 }

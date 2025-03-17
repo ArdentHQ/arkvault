@@ -31,7 +31,7 @@ import { useValidatorsFromURL } from "@/domains/vote/hooks/use-vote-query-parame
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 
 enum Step {
 	FormStep = 1,
@@ -61,7 +61,9 @@ export const SendVote = () => {
 		profile: activeProfile,
 	});
 
-	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
+	const walletFromUrl = useActiveWalletWhenNeeded(false);
+	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
+	const [activeTab, setActiveTab] = useState<Step>(initialStep);
 
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
@@ -90,11 +92,6 @@ export const SendVote = () => {
 		register("network", sendVote.network());
 		register("senderAddress", sendVote.senderAddress({ network: activeNetwork, profile: activeProfile, votes }));
 		register("fees");
-
-		const walletBalance = activeWallet?.balance() ?? 0;
-
-		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
-		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit["vote"], activeWallet?.network()));
 
 		register("inputFeeSettings");
 
@@ -125,6 +122,13 @@ export const SendVote = () => {
 	useEffect(() => {
 		setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: false });
 	}, [wallet]);
+
+	useToggleFeeFields({
+		activeTab,
+		form,
+		gasLimitType: "vote",
+		wallet,
+	});
 
 	useEffect(() => {
 		const updateWallet = async () => {
@@ -179,7 +183,7 @@ export const SendVote = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (activeTab === Step.FormStep) {
+		if (activeTab === Step.FormStep || (activeTab === Step.ReviewStep && skipFormStep)) {
 			const parameters = new URLSearchParams();
 
 			if (!wallet) {
@@ -443,10 +447,14 @@ export const SendVote = () => {
 	const hasErrors = Object.values(errors).length > 0;
 	const isNextDisabled = isDirty ? hasErrors : true;
 
+	const skipFormStep = initialStep === Step.ReviewStep;
+	const stepsCount = skipFormStep ? 3 : 4;
+	const activeIndex = skipFormStep ? activeTab - 1 : activeTab;
+
 	return (
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
 			<Section className="flex-1">
-				<StepsProvider activeStep={activeTab} steps={4}>
+				<StepsProvider activeStep={activeIndex} steps={stepsCount}>
 					<Form className="mx-auto max-w-172" context={form} onSubmit={submitForm}>
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
@@ -467,6 +475,7 @@ export const SendVote = () => {
 										unvotes={unvotes}
 										votes={votes}
 										wallet={activeWallet}
+										profile={activeProfile}
 									/>
 								)}
 							</TabPanel>
@@ -477,6 +486,7 @@ export const SendVote = () => {
 										wallet={activeWallet}
 										ledgerDetails={
 											<VoteLedgerReview
+												profile={activeProfile}
 												wallet={activeWallet}
 												votes={votes}
 												unvotes={unvotes}
@@ -515,8 +525,8 @@ export const SendVote = () => {
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}
 									isNextDisabled={isNextDisabled}
-									size={4}
-									activeIndex={activeTab}
+									size={stepsCount}
+									activeIndex={activeIndex}
 								/>
 							)}
 						</Tabs>

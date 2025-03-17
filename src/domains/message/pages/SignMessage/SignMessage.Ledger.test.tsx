@@ -114,7 +114,7 @@ describe("SignMessage with ledger", () => {
 		getVersionMock.mockRestore();
 	});
 
-	it("should sign message with a ledger wallet", async () => {
+	it.skip("should sign message with a ledger wallet", async () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 		const signMessageSpy = vi

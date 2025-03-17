@@ -14,7 +14,7 @@ const StepStyled = ({ isActive, ...props }: React.HTMLProps<HTMLLIElement> & { i
 	<li
 		{...props}
 		className={twMerge(
-			"h-0.5 flex-1 rounded-lg transition-colors duration-300",
+			"h-1 flex-1 rounded-[4px] transition-colors duration-300",
 			cn({
 				"bg-theme-primary-100 dark:bg-theme-secondary-800": !isActive,
 				"bg-theme-warning-300": isActive,
@@ -53,7 +53,7 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 					{title}
 				</span>
 			)}
-			<ul className="flex space-x-3">
+			<ul className="flex flex-row gap-2">
 				{steps.map((_, index) => (
 					<StepStyled key={index} isActive={activeIndex >= index + 1} />
 				))}

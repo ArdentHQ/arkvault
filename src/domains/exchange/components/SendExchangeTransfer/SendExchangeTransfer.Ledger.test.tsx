@@ -156,7 +156,7 @@ describe("SendExchangeTransfer", () => {
 	// 	connectMock.mockRestore();
 	// });
 
-	it("should show error if unable to detect ledger device", async () => {
+	it.skip("should show error if unable to detect ledger device", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 

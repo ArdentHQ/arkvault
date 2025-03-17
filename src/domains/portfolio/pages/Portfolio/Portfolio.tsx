@@ -34,6 +34,7 @@ export const Portfolio = () => {
 					/>
 				</Page>
 			)}
+
 			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 			<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
 		</>

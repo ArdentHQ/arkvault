@@ -56,6 +56,7 @@ import Grid from "./grid.svg?react";
 import HintSmall from "./hint-small.svg?react";
 import Ledger from "./ledger.svg?react";
 import LedgerAlt from "./ledger-alt.svg?react";
+import LedgerImport from "./ledger-import.svg?react";
 import List from "./list.svg?react";
 import LoaderLogo from "./loader-logo.svg?react";
 import Lock from "./lock.svg?react";
@@ -189,6 +190,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ImportWalletLight,
 	Ledger,
 	LedgerAlt,
+	LedgerImport,
 	LedgerImportMethod,
 	List,
 	LoaderLogo,
