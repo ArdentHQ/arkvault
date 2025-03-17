@@ -15,9 +15,7 @@ const endpoints = [
 	// { path: "/transactions/fees", data: require("../../fixtures/coins/mainsail/devnet/transaction-fees.json") },
 ];
 
-const wallets = [
-	"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-];
+const wallets = ["0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"];
 
 export const mainsailDevnetHandlers = [
 	...endpoints.map((endpoint) =>
