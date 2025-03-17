@@ -15,10 +15,6 @@ import {
 	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 
-import { requestMock, server } from "@/tests/mocks/server";
-import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
-
 const history = createHashHistory();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
@@ -33,19 +29,6 @@ vi.mock("@/utils/delay", () => ({
 process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("Dashboard", () => {
-	beforeEach(() => {
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: devnetTransactionsFixture.data.slice(0, 2),
-				meta: devnetTransactionsFixture.meta,
-			}),
-			requestMock("https://ark-live.arkvault.io/api/transactions", {
-				data: [],
-				meta: mainnetTransactionsFixture.meta,
-			}),
-		);
-	});
-
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 

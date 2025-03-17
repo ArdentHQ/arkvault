@@ -7,41 +7,26 @@ import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
-import { translations as dashboardTranslations } from "@/domains/dashboard/i18n";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
-	waitFor,
-	mockNanoXTransport,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
-
-import { requestMock, server } from "@/tests/mocks/server";
-import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
+import { expect } from "vitest";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: devnetTransactionsFixture.data.slice(0, 2),
-				meta: devnetTransactionsFixture.meta,
-			}),
-			requestMock("https://ark-live.arkvault.io/api/transactions", {
-				data: [],
-				meta: mainnetTransactionsFixture.meta,
-			}),
-		);
-
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
@@ -65,55 +50,28 @@ describe("Dashboard", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should navigate to import ledger page", async () => {
-		profile.markIntroductoryTutorialAsComplete();
-		const ledgerTransportMock = mockNanoXTransport();
-
+	it("should show create address side panel", async () => {
+		const onCreateAddress = vi.fn();
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
+				<Dashboard onCreateAddress={onCreateAddress} />
 			</Route>,
 			{
 				history,
 				route: dashboardURL,
 			},
 		);
-
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(12));
-
-		await userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
-
-		await waitFor(() =>
-			// Restore when enabling Ledger buttons again
-			// expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import/ledger`),
-			expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/dashboard`),
-		);
-
-		ledgerTransportMock.mockRestore();
-	});
-
-	it("should navigate to create wallet page", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(12));
 
 		await userEvent.click(screen.getByText("Create"));
 
-		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
+		expect(onCreateAddress).toBeCalledWith(true);
 	});
 
-	it("should navigate to import wallet page", async () => {
+	it("should show import wallet panel", async () => {
+		const onImportAddress = vi.fn();
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
+				<Dashboard onImportAddress={onImportAddress}/>
 			</Route>,
 			{
 				history,
@@ -121,10 +79,8 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(12));
-
 		await userEvent.click(screen.getByText("Import"));
 
-		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
+		expect(onImportAddress).toBeCalledWith(true);
 	});
 });
