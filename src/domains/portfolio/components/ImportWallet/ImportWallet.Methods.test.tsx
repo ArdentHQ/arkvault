@@ -26,8 +26,10 @@ const randomPublicKeyInvalid = "a34151a3ec46b5670a682b0a63394f863587d1bc97483b1b
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
-const enableEncryptionToggle = async () => await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
-const toggleEncryptionCheckbox = async () => await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
+const enableEncryptionToggle = async () =>
+	await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+const toggleEncryptionCheckbox = async () =>
+	await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const backButton = () => screen.getByTestId("ImportWallet__back-button");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
