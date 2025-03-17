@@ -4,7 +4,14 @@ import React, { useEffect } from "react";
 
 import { ExchangeTransactionsRowMobile } from "./ExchangeTransactionsRowMobile";
 import { useExchangeContext, ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { env, getDefaultProfileId, render, screen, within, waitFor } from "@/utils/testing-library";
+import {
+	env,
+	render,
+	screen,
+	within,
+	waitFor,
+	getMainsailProfileId,
+} from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
@@ -40,7 +47,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 	beforeAll(() => {
 		dateNowSpy = vi.spyOn(Date, "now").mockImplementation(() => new Date("2021-01-01").getTime());
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		exchangeTransaction = profile.exchangeTransactions().create(stubData);
 	});
 

@@ -16,7 +16,7 @@ import { ReviewStep } from "./ReviewStep";
 import { StatusStep } from "./StatusStep";
 import {
 	env,
-	getDefaultProfileId,
+	getMainsailProfileId,
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	renderResponsiveWithRoute,
@@ -36,7 +36,7 @@ import * as SendExchangeTransfer from "@/domains/exchange/components/SendExchang
 let profile: Contracts.IProfile;
 
 const exchangeBaseURL = "https://exchanges.arkvault.io";
-const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view`;
+const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view`;
 const exchangeETHURL = "/api/changenow/currencies/eth";
 let history: HashHistory;
 
@@ -145,7 +145,7 @@ describe("ExchangeForm", () => {
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
 			get: () => "changenow",
@@ -318,7 +318,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/exchange`);
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getMainsailProfileId()}/exchange`);
 		});
 
 		historySpy.mockRestore();
@@ -1323,7 +1323,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getMainsailProfileId()}/dashboard`);
 		});
 
 		historySpy.mockRestore();

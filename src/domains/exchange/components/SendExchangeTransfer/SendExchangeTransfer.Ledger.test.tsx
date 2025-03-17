@@ -3,12 +3,11 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 
 import {
 	env,
-	getDefaultProfileId,
 	mockNanoXTransport,
 	mockLedgerTransportError,
 	render,
 	screen,
-	syncFees,
+	syncFees, getMainsailProfileId,
 } from "@/utils/testing-library";
 import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import { afterAll, beforeEach, expect, MockInstance } from "vitest";
@@ -36,9 +35,12 @@ let useActiveProfileSpy: MockInstance;
 // 	await userEvent.click(firstAddress);
 // };
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = profile.wallets().first();
 
@@ -59,16 +61,7 @@ describe("SendExchangeTransfer", () => {
 
 		useActiveProfileSpy = vi.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() => profile);
 
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/node/fees", nodeFeesFixture),
-			requestMock("https://ark-test.arkvault.io/api/transactions/fees", transactionFeesFixture),
-		);
-
 		await syncFees(profile);
-	});
-
-	beforeEach(() => {
-		server.use(requestMock("https://ark-test-musig.arkvault.io", { result: [] }, { method: "post" }));
 	});
 
 	afterAll(() => {
