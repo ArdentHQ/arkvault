@@ -4,14 +4,7 @@ import React, { useEffect } from "react";
 
 import { ExchangeTransactionsRowMobile } from "./ExchangeTransactionsRowMobile";
 import { useExchangeContext, ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import {
-	env,
-	render,
-	screen,
-	within,
-	waitFor,
-	getMainsailProfileId,
-} from "@/utils/testing-library";
+import { env, render, screen, within, waitFor, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;

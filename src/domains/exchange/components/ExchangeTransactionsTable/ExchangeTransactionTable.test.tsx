@@ -4,14 +4,7 @@ import React from "react";
 
 import { ExchangeTransactionsTable } from "./ExchangeTransactionsTable";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import {
-	env,
-	render,
-	screen,
-	within,
-	renderResponsive,
-	getMainsailProfileId,
-} from "@/utils/testing-library";
+import { env, render, screen, within, renderResponsive, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 

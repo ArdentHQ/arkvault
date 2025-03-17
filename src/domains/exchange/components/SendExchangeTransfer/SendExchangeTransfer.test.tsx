@@ -3,7 +3,8 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 
 import {
 	createMainsailTransactionMock,
-	env, getDefaultMainsailWalletMnemonic,
+	env,
+	getDefaultMainsailWalletMnemonic,
 	getMainsailProfileId,
 	render,
 	screen,

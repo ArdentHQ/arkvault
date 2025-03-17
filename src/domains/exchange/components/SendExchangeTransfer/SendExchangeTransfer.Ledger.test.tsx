@@ -7,7 +7,8 @@ import {
 	mockLedgerTransportError,
 	render,
 	screen,
-	syncFees, getMainsailProfileId,
+	syncFees,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import { afterAll, expect, MockInstance } from "vitest";
