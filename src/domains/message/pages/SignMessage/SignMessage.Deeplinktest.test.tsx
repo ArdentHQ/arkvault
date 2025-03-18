@@ -8,13 +8,13 @@ import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
-	getDefaultProfileId,
-	MNEMONICS,
+	getMainsailProfileId,
 	render,
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	triggerMessageSignOnce,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -23,7 +23,7 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallet2: Contracts.IReadWriteWallet;
 
-const mnemonic = MNEMONICS[0];
+const mnemonic = MAINSAIL_MNEMONICS[0];
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
@@ -46,27 +46,29 @@ vi.stubGlobal(
 	},
 );
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("SignMessage", () => {
 	beforeAll(async () => {
-		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic,
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 
 		wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic,
-			network: "ark.mainnet",
+			network: "mainsail.mainnet",
 		});
 
 		profile.wallets().push(wallet);
 		profile.wallets().push(wallet2);
 
-		profile.coins().set("ARK", "ark.devnet");
+		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
 	});
@@ -83,7 +85,7 @@ describe("SignMessage", () => {
 		});
 
 		it("should show address selector if using deeplinking", async () => {
-			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+			const signUrl = `/profiles/${getMainsailProfileId()}/sign-message?coin=Mainsail&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
 				signMessage,
 			)}`;
 
@@ -127,7 +129,7 @@ describe("SignMessage", () => {
 		});
 
 		it("should select address from deeplinking", async () => {
-			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+			const signUrl = `/profiles/${getMainsailProfileId()}/sign-message?coin=Mainsail&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
 				signMessage,
 			)}&address=${wallet2.address()}`;
 
@@ -159,7 +161,7 @@ describe("SignMessage", () => {
 		});
 
 		it("back button sends to welcome page", async () => {
-			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+			const signUrl = `/profiles/${getMainsailProfileId()}/sign-message?coin=Mainsail&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
 				signMessage,
 			)}`;
 

@@ -42,6 +42,7 @@ export const VerifyMessage = () => {
 
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
+	console.log(activeWallet);
 
 	const history = useHistory();
 
@@ -121,7 +122,7 @@ export const VerifyMessage = () => {
 			} else {
 				const coin: Coins.Coin = activeProfile
 					.coins()
-					.set("ARK", activeProfile.networks().allByCoin("ARK")[0].id);
+					.set("Mainsail", activeProfile.networks().allByCoin("Mainsail")[0].id);
 
 				await coin.__construct();
 
