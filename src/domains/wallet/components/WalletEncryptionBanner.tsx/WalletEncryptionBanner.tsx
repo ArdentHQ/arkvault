@@ -56,30 +56,32 @@ export const WalletEncryptionBanner = ({
 
 			<div
 				className={cn(
-					"flex flex-col gap-3 bg-theme-warning-50 transition-all duration-300 dark:bg-theme-dark-950",
+					"bg-theme-warning-50 transition-[max-height,opacity] duration-300 dark:bg-theme-dark-950",
 					{
-						"h-0 opacity-0": !toggleChecked,
-						"min-h-[120px] px-6 pb-5 pt-3 opacity-100": toggleChecked,
+						"max-h-0 opacity-0": !toggleChecked,
+						"max-h-[300px] opacity-100": toggleChecked,
 					},
 				)}
 			>
-				<p className="text-sm font-normal leading-[21px] text-theme-secondary-900 dark:text-theme-dark-50">
-					{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.WARNING")}
-				</p>
+				<div className="flex flex-col gap-3 px-6 pb-5 pt-3">
+					<p className="text-sm font-normal leading-[21px] text-theme-secondary-900 dark:text-theme-dark-50">
+						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.WARNING")}
+					</p>
 
-				<hr className="border border-dashed border-theme-warning-300 dark:border-theme-dark-700" />
+					<hr className="border border-dashed border-theme-warning-300 dark:border-theme-dark-700" />
 
-				<label className="inline-flex cursor-pointer items-center space-x-3">
-					<Checkbox
-						data-testid="WalletEncryptionBanner__checkbox"
-						checked={checkboxChecked}
-						onChange={checkboxOnChange}
-						color="warning"
-					/>
-					<span className="text-sm font-normal leading-[21px] text-theme-secondary-900 dark:text-theme-dark-50">
-						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.CHECKBOX")}
-					</span>
-				</label>
+					<label className="inline-flex cursor-pointer items-center space-x-3">
+						<Checkbox
+							data-testid="WalletEncryptionBanner__checkbox"
+							checked={checkboxChecked}
+							onChange={checkboxOnChange}
+							color="warning"
+						/>
+						<span className="text-sm font-normal leading-[21px] text-theme-secondary-900 dark:text-theme-dark-50">
+							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.CHECKBOX")}
+						</span>
+					</label>
+				</div>
 			</div>
 		</div>
 	);
