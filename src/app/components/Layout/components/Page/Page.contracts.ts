@@ -8,6 +8,5 @@ export interface PageProperties {
 	pageTitle?: string;
 	wrapperClassName?: string;
 	isBackDisabled?: boolean;
-	sidebar?: React.ReactNode;
 	children: React.ReactNode;
 }

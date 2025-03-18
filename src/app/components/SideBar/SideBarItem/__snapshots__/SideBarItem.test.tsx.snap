@@ -3,23 +3,14 @@
 exports[`SideBarItem > should render 1`] = `
 <DocumentFragment>
   <li
-    class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+    class="relative cursor-pointer"
     data-testid="side-menu__item--plugin"
   >
     <div
-      class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+      class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
     >
-      <div
-        class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-      >
-        <div>
-          <div
-            style="height: 20px; width: 20px;"
-          />
-        </div>
-      </div>
       <span
-        class="text-lg font-semibold"
+        class="font-semibold"
       >
         General
       </span>
@@ -31,26 +22,14 @@ exports[`SideBarItem > should render 1`] = `
 exports[`SideBarItem > should render as active 1`] = `
 <DocumentFragment>
   <li
-    class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-default"
+    class="relative cursor-default"
     data-testid="side-menu__item--plugin"
   >
     <div
-      class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+      class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
     >
-      <div
-        class="absolute inset-y-0 left-0 w-1 rounded bg-theme-primary-600"
-      />
-      <div
-        class="mr-3"
-      >
-        <div>
-          <div
-            style="height: 20px; width: 20px;"
-          />
-        </div>
-      </div>
       <span
-        class="text-lg font-semibold"
+        class="font-semibold"
       >
         General
       </span>

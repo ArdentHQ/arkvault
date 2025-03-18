@@ -14,9 +14,9 @@ const StyledList = ({ noBorder, ...props }: { noBorder: boolean } & React.HTMLAt
 	<ul
 		{...props}
 		className={twMerge(
-			"[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800",
+			"[&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 [&>li]:pb-6 dark:[&>li]:border-theme-secondary-800",
 			cn({
-				"[&>li:last-child]:border-b-0": noBorder,
+				"[&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0": noBorder,
 			}),
 			props.className,
 		)}

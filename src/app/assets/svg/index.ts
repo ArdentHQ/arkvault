@@ -119,6 +119,8 @@ import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
 import MarkedTrash from "./marked-trash.svg?react";
 import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
+import SettingsDark from "./settings-dark.svg?react";
+import SettingsLight from "./settings-light.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -219,6 +221,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Server,
 	ServerMultisign,
 	ServerPeer,
+	SettingsDark,
+	SettingsLight,
 	ShieldCheckMark,
 	Sliders,
 	SlidersVertical,

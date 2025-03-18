@@ -193,7 +193,8 @@ describe("CreateAddressSidePanel", () => {
 
 		await userEvent.click(continueButton());
 
-		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
 
@@ -284,7 +285,8 @@ describe("CreateAddressSidePanel", () => {
 
 		await userEvent.click(continueButton());
 
-		await userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
 
