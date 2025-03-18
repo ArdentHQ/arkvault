@@ -3,7 +3,7 @@ import { assertCurrency, assertExchangeService, assertExchangeTransaction } from
 import { CurrencyData } from "@/domains/exchange/exchange.contracts";
 import { httpClient } from "@/app/services";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
-import { env, getMainsailProfileId, } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 describe("#assertExchangeService", () => {
 	it("should pass with a ExchangeService instance", () => {
