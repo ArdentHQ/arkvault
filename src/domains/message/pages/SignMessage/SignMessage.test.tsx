@@ -8,24 +8,24 @@ import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
-	getDefaultProfileId,
-	MNEMONICS,
+	getMainsailProfileId,
 	render,
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
 	triggerMessageSignOnce,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
-const walletUrl = (walletId: string) => `/profiles/${getDefaultProfileId()}/wallets/${walletId}/sign-message`;
+const walletUrl = (walletId: string) => `/profiles/${getMainsailProfileId()}/wallets/${walletId}/sign-message`;
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallet2: Contracts.IReadWriteWallet;
 
-const mnemonic = MNEMONICS[0];
+const mnemonic = MAINSAIL_MNEMONICS[0];
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
@@ -48,26 +48,30 @@ vi.stubGlobal(
 	},
 );
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("SignMessage", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
+		// wallet = profile.wallets().first();
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic,
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 
 		wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic,
-			network: "ark.mainnet",
+			network: "mainsail.mainnet",
 		});
 
 		profile.wallets().push(wallet);
 		profile.wallets().push(wallet2);
 
-		profile.coins().set("ARK", "ark.devnet");
+		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
 	});
@@ -122,9 +126,9 @@ describe("SignMessage", () => {
 		it("should sign message with mnemonic", async () => {
 			const signedMessage = {
 				message: signMessage,
-				signatory: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
+				signatory: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
 				signature:
-					"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6",
+					"345bc9b6111d11432032f6005391a98fb2d21b0358800406f3dcd05b5477730ab300c9f5707597903f1e9fa1b4f3db2a67f2c98fed09160cb4212080e82e21be",
 			};
 
 			render(

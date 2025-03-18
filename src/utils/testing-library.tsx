@@ -391,7 +391,7 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 // This is probably caused by how jsdom initialization runs with vitest as it's not an issue with jsdom in jest.
 export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet) => {
 	try {
-		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
+		const signatory = await wallet.signatory().mnemonic(getDefaultMainsailWalletMnemonic());
 		await wallet.message().sign({ message: "message", signatory });
 	} catch {
 		//

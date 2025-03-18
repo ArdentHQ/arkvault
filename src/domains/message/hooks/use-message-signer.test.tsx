@@ -4,10 +4,10 @@ import { renderHook } from "@testing-library/react";
 import { useMessageSigner } from "./use-message-signer";
 import {
 	env,
-	getDefaultProfileId,
-	getDefaultWalletMnemonic,
+	getMainsailProfileId,
 	mockNanoXTransport,
 	triggerMessageSignOnce,
+	getDefaultMainsailWalletMnemonic,
 } from "@/utils/testing-library";
 
 // Mock implementation of TextEncoder to always return Uint8Array.
@@ -20,12 +20,15 @@ vi.stubGlobal(
 	},
 );
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("Use Message Signer Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().first();
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -36,13 +39,13 @@ describe("Use Message Signer Hook", () => {
 	it("should sign message", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
-		const signedMessage = await result.current.sign(wallet, "message", getDefaultWalletMnemonic());
+		const signedMessage = await result.current.sign(wallet, "message", getDefaultMainsailWalletMnemonic());
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 			signature:
-				"1b507279e46a1c4d6c97abca5a8f9ec03abd59164693dd2d81462bb9c2b4d23c6921c5ce940824bc3a1075ff87a6f2bffcd47c3b803dac6520e043b2dc21f0c7",
+				"dd6c2e62443bef9baa27178493184abb5320409d3b90314f64bbb527e838bd7b12599004762c2ff9ac0ed551e95a70ecd2b8d7c5d33aff30b8dd593489d573c2",
 		});
 	});
 
@@ -66,15 +69,15 @@ describe("Use Message Signer Hook", () => {
 			.spyOn(wallet, "actsWithMnemonicWithEncryption")
 			.mockReturnValue(true);
 		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
-		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(getDefaultWalletMnemonic());
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(getDefaultMainsailWalletMnemonic());
 
 		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 			signature:
-				"1b507279e46a1c4d6c97abca5a8f9ec03abd59164693dd2d81462bb9c2b4d23c6921c5ce940824bc3a1075ff87a6f2bffcd47c3b803dac6520e043b2dc21f0c7",
+				"dd6c2e62443bef9baa27178493184abb5320409d3b90314f64bbb527e838bd7b12599004762c2ff9ac0ed551e95a70ecd2b8d7c5d33aff30b8dd593489d573c2",
 		});
 
 		walletActsWithMnemonicWithEncryption.mockRestore();
@@ -175,7 +178,7 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 			signature: "signature",
 		});
 

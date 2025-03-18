@@ -7,6 +7,7 @@ import {
 	exchangeHandlers,
 	mainnetHandlers,
 	mainsailDevnetHandlers,
+	mainsailMainnetHandlers,
 	miscHandlers,
 } from "./handlers";
 
@@ -53,6 +54,7 @@ const restHandlers = [
 	...exchangeHandlers,
 	...mainnetHandlers,
 	...mainsailDevnetHandlers,
+	...mainsailMainnetHandlers,
 	...miscHandlers,
 ];
 
