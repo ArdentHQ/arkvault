@@ -7,24 +7,24 @@ import { Prompt } from "react-router-dom";
 import { GeneralSettingsState, SettingsOption } from "./General.contracts";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
 import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useProfileJobs, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
+import { useActiveProfile, useProfileJobs, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
 import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
-import { SettingsGroup, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
+import { SettingsButtonGroup, SettingsGroup, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { Image } from "@/app/components/Image";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -35,8 +35,6 @@ export const GeneralSettings: React.FC = () => {
 	const { resetToDefaults } = useActiveNetwork({ profile });
 
 	const isProfileRestored = profile.status().isRestored();
-
-	const { isXs } = useBreakpoint();
 
 	const { persist } = useEnvironmentContext();
 	const { syncExchangeRates } = useProfileJobs(profile);
@@ -109,6 +107,7 @@ export const GeneralSettings: React.FC = () => {
 
 	const formattedName = name.trim();
 
+	const { isDarkMode } = useTheme();
 	const hasDefaultAvatar = !!avatar.endsWith("</svg>");
 
 	const { settings: settingsValidation } = useValidation();
@@ -172,7 +171,7 @@ export const GeneralSettings: React.FC = () => {
 		},
 	];
 
-	const otherItems = [
+	const appearenceItems = [
 		{
 			itemValueClass: "ml-5",
 			label: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.TITLE")}`,
@@ -188,10 +187,9 @@ export const GeneralSettings: React.FC = () => {
 					}}
 				/>
 			),
-			wrapperClass: "pb-6",
 		},
 		{
-			label: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.TITLE"),
+			label: t("SETTINGS.GENERAL.OTHER.ADDRESS_NAMING.TITLE"),
 			labelAddon: (
 				<Toggle
 					name="useNetworkWalletNames"
@@ -205,9 +203,11 @@ export const GeneralSettings: React.FC = () => {
 					}
 				/>
 			),
-			labelDescription: t("SETTINGS.GENERAL.OTHER.WALLET_NAMING.DESCRIPTION"),
-			wrapperClass: "py-6",
+			labelDescription: t("SETTINGS.GENERAL.OTHER.ADDRESS_NAMING.DESCRIPTION"),
 		},
+	];
+
+	const otherItems = [
 		{
 			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
 			labelAddon: (
@@ -224,7 +224,6 @@ export const GeneralSettings: React.FC = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
-			wrapperClass: "py-6",
 		},
 		{
 			itemValueClass: "w-full sm:w-auto",
@@ -232,12 +231,15 @@ export const GeneralSettings: React.FC = () => {
 			labelDescription: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.DESCRIPTION"),
 			labelWrapperClass: "flex flex-col sm:flex-row space-y-3 justify-between items-center",
 			value: (
-				<Button onClick={() => setIsResetProfileOpen(true)} variant="danger" className="w-full sm:w-auto">
+				<Button
+					onClick={() => setIsResetProfileOpen(true)}
+					variant="danger"
+					className="w-full bg-theme-danger-50 sm:w-auto"
+				>
 					<Icon name="ArrowRotateLeft" />
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
 				</Button>
 			),
-			wrapperClass: "py-6",
 		},
 	];
 
@@ -293,34 +295,49 @@ export const GeneralSettings: React.FC = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="general">
-			<Header
-				title={t("SETTINGS.GENERAL.TITLE")}
-				subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
-				titleClassName="mb-2 text-2xl"
-			/>
+			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
+				<SettingsGroup title={t("SETTINGS.GENERAL.PERSONAL.TITLE")}>
+					<div className="group space-y-2">
+						<span className="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600">
+							{t("SETTINGS.GENERAL.PERSONAL.PROFILE_IMAGE")}
+						</span>
 
-			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
-				<div className="relative mt-8">
-					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.PERSONAL.TITLE")}</h2>
+						<div className="relative flex flex-row sm:space-x-3">
+							<div className="hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg bg-theme-primary-50 px-4 dark:bg-theme-dark-950 sm:flex">
+								<Image
+									className="hidden lg:block"
+									name={isDarkMode ? "ProfileImageExampleDark" : "ProfileImageExampleLight"}
+								/>
+								<Image
+									className="lg:hidden"
+									name={
+										isDarkMode
+											? "ProfileImageExampleResponsiveDark"
+											: "ProfileImageExampleResponsiveLight"
+									}
+								/>
+							</div>
 
-					<SelectProfileImage
-						value={avatar}
-						name={formattedName}
-						onSelect={(value) => {
-							if (!value) {
-								setValue("avatar", Helpers.Avatar.make(formattedName), {
-									shouldDirty: true,
-									shouldValidate: true,
-								});
-								return;
-							}
+							<SelectProfileImage
+								value={avatar}
+								name={formattedName}
+								onSelect={(value) => {
+									if (!value) {
+										setValue("avatar", Helpers.Avatar.make(formattedName), {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
+										return;
+									}
 
-							setValue("avatar", value, {
-								shouldDirty: true,
-								shouldValidate: true,
-							});
-						}}
-					/>
+									setValue("avatar", value, {
+										shouldDirty: true,
+										shouldValidate: true,
+									});
+								}}
+							/>
+						</div>
+					</div>
 
 					<div className="mt-5 flex w-full flex-col justify-between sm:flex-row">
 						<div className="flex flex-col sm:w-2/4">
@@ -426,15 +443,15 @@ export const GeneralSettings: React.FC = () => {
 							</FormField>
 
 							<FormField className="mt-5" name="marketProvider">
-								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER")} />
+								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PRICE_SOURCE")} />
 								<Select
 									id="select-market-provider"
 									placeholder={t(selectOption, {
-										option: t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER"),
+										option: t("SETTINGS.GENERAL.PERSONAL.PRICE_SOURCE"),
 									})}
 									ref={register({
 										required: t(requiredFieldMessage, {
-											field: t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER"),
+											field: t("SETTINGS.GENERAL.PERSONAL.PRICE_SOURCE"),
 										}).toString(),
 									})}
 									options={PlatformSdkChoices.marketProviders}
@@ -493,25 +510,32 @@ export const GeneralSettings: React.FC = () => {
 							</FormField>
 						</div>
 					</div>
-				</div>
+				</SettingsGroup>
 
-				<SettingsGroup>
-					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.SECURITY.TITLE")}</h2>
+				<SettingsGroup title={t("SETTINGS.GENERAL.SECURITY.TITLE")}>
 					<ListDivided items={securityItems} />
 				</SettingsGroup>
 
-				<SettingsGroup>
-					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.OTHER.TITLE")}</h2>
-					<ListDivided items={otherItems} noBorder={isXs} />
+				<SettingsGroup title={t("SETTINGS.GENERAL.APPEARANCE.TITLE")}>
+					<ListDivided items={appearenceItems} />
 				</SettingsGroup>
 
-				<FormButtons>
-					<Button disabled={isSaveButtonDisabled} type="submit" data-testid="General-settings__submit-button">
-						{t("COMMON.SAVE")}
-					</Button>
-				</FormButtons>
-			</Form>
+				<SettingsGroup title={t("SETTINGS.GENERAL.OTHER.TITLE")}>
+					<ListDivided items={otherItems} />
+				</SettingsGroup>
 
+				<SettingsButtonGroup>
+					<FormButtons>
+						<Button
+							disabled={isSaveButtonDisabled}
+							type="submit"
+							data-testid="General-settings__submit-button"
+						>
+							{t("COMMON.SAVE")}
+						</Button>
+					</FormButtons>
+				</SettingsButtonGroup>
+			</Form>
 			<ResetProfile
 				isOpen={isResetProfileOpen}
 				profile={profile}
@@ -519,7 +543,6 @@ export const GeneralSettings: React.FC = () => {
 				onClose={() => setIsResetProfileOpen(false)}
 				onReset={handleOnReset}
 			/>
-
 			<Prompt message={getPromptMessage} />
 		</SettingsWrapper>
 	);

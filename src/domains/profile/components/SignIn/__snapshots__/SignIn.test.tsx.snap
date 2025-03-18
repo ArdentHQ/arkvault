@@ -122,6 +122,7 @@ exports[`SignIn > should render a modal 1`] = `
               class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
             />
             <form
+              class="space-y-5"
               data-testid="Form"
             >
               <fieldset
