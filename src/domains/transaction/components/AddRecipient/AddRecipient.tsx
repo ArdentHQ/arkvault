@@ -343,20 +343,25 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 					<FormField name="amount">
 						<FormLabel>
 							<span className="items-centers flex w-full justify-between">
-								<span>{t("COMMON.AMOUNT")}</span>
+								<div className="flex flex-row items-center gap-1.5">
+									<span>{t("COMMON.AMOUNT")}</span>
+									<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden">
+										(<Amount value={+remainingBalance} ticker={ticker} showTicker={false} />)
+									</span>
+								</div>
 								<div className="flex flex-row items-center gap-2">
 									{isSenderFilled && !!remainingBalance && (
-										<span
+										<div
 											data-testid="AddRecipient__available"
-											className="text-theme-secondary-700 dark:text-theme-dark-200"
+											className="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
 										>
-											{t("COMMON.BALANCE")}:{" "}
+											<span className="hidden sm:inline pr-1">{t("COMMON.BALANCE")}:</span>
 											<Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
-										</span>
+										</div>
 									)}
 									{isSenderFilled && !!remainingBalance && isSingle && (
 										<div
-											className="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
+											className="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
 											data-testid="AddRecipient__divider"
 										/>
 									)}

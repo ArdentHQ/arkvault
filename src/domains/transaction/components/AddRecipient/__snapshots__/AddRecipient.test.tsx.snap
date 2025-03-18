@@ -224,28 +224,47 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             <span
               class="items-centers flex w-full justify-between"
             >
-              <span>
-                Amount
-              </span>
+              <div
+                class="flex flex-row items-center gap-1.5"
+              >
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden"
+                >
+                  (
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    12
+                  </span>
+                  )
+                </span>
+              </div>
               <div
                 class="flex flex-row items-center gap-2"
               >
-                <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
-                  Balance
-                  :
-                   
+                  <span
+                    class="hidden sm:inline pr-1"
+                  >
+                    Balance
+                    :
+                  </span>
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
                     12 DARK
                   </span>
-                </span>
+                </div>
                 <div
-                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -541,28 +560,47 @@ exports[`AddRecipient > should render 1`] = `
             <span
               class="items-centers flex w-full justify-between"
             >
-              <span>
-                Amount
-              </span>
+              <div
+                class="flex flex-row items-center gap-1.5"
+              >
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden"
+                >
+                  (
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
+              </div>
               <div
                 class="flex flex-row items-center gap-2"
               >
-                <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
-                  Balance
-                  :
-                   
+                  <span
+                    class="hidden sm:inline pr-1"
+                  >
+                    Balance
+                    :
+                  </span>
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
                     33.75089801 DARK
                   </span>
-                </span>
+                </div>
                 <div
-                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -843,28 +881,47 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             <span
               class="items-centers flex w-full justify-between"
             >
-              <span>
-                Amount
-              </span>
+              <div
+                class="flex flex-row items-center gap-1.5"
+              >
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden"
+                >
+                  (
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
+              </div>
               <div
                 class="flex flex-row items-center gap-2"
               >
-                <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
-                  Balance
-                  :
-                   
+                  <span
+                    class="hidden sm:inline pr-1"
+                  >
+                    Balance
+                    :
+                  </span>
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
                     33.75089801 DARK
                   </span>
-                </span>
+                </div>
                 <div
-                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -1145,28 +1202,47 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             <span
               class="items-centers flex w-full justify-between"
             >
-              <span>
-                Amount
-              </span>
+              <div
+                class="flex flex-row items-center gap-1.5"
+              >
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden"
+                >
+                  (
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
+              </div>
               <div
                 class="flex flex-row items-center gap-2"
               >
-                <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
-                  Balance
-                  :
-                   
+                  <span
+                    class="hidden sm:inline pr-1"
+                  >
+                    Balance
+                    :
+                  </span>
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
                     33.75089801 DARK
                   </span>
-                </span>
+                </div>
                 <div
-                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -1447,28 +1523,47 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             <span
               class="items-centers flex w-full justify-between"
             >
-              <span>
-                Amount
-              </span>
+              <div
+                class="flex flex-row items-center gap-1.5"
+              >
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden"
+                >
+                  (
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
+              </div>
               <div
                 class="flex flex-row items-center gap-2"
               >
-                <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
-                  Balance
-                  :
-                   
+                  <span
+                    class="hidden sm:inline pr-1"
+                  >
+                    Balance
+                    :
+                  </span>
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
                     33.75089801 DARK
                   </span>
-                </span>
+                </div>
                 <div
-                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -1681,28 +1776,47 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
             <span
               class="items-centers flex w-full justify-between"
             >
-              <span>
-                Amount
-              </span>
+              <div
+                class="flex flex-row items-center gap-1.5"
+              >
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden"
+                >
+                  (
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
+              </div>
               <div
                 class="flex flex-row items-center gap-2"
               >
-                <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200"
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
-                  Balance
-                  :
-                   
+                  <span
+                    class="hidden sm:inline pr-1"
+                  >
+                    Balance
+                    :
+                  </span>
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
                     33.75089801 DARK
                   </span>
-                </span>
+                </div>
                 <div
-                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -1983,9 +2097,25 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             <span
               class="items-centers flex w-full justify-between"
             >
-              <span>
-                Amount
-              </span>
+              <div
+                class="flex flex-row items-center gap-1.5"
+              >
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden"
+                >
+                  (
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0
+                  </span>
+                  )
+                </span>
+              </div>
               <div
                 class="flex flex-row items-center gap-2"
               >
