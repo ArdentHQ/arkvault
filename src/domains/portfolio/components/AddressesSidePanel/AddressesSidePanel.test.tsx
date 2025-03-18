@@ -217,7 +217,6 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		await userEvent.type(getSearchInput(), "{enter}");
 		await userEvent.type(getSearchInput(), wallets.first().address());
 
 		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
@@ -236,8 +235,11 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		await userEvent.type(getSearchInput(), "{enter}");
 		await userEvent.type(getSearchInput(), "Mainsail Wallet 1");
+
+		await waitFor(() => {
+			expect(getSearchInput()).toHaveValue("Mainsail Wallet 1");
+		})
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("AddressRow").length).toBe(1);
