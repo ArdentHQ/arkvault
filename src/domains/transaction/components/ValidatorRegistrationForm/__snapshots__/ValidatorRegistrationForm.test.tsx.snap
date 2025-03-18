@@ -393,28 +393,29 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                       class="flex items-center"
                     >
                       <button
-                        class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                        class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 cursor-default"
                         type="button"
                       >
                         Simple
                       </button>
                       <label
-                        class="flex items-center cursor-pointer h-3"
+                        class="flex items-center cursor-not-allowed h-3"
                       >
                         <input
                           class="toggle-input sr-only"
+                          disabled=""
                           type="checkbox"
                         />
                         <div
                           class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
                         >
                           <span
-                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+                            class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 h-3 w-3"
                           />
                         </div>
                       </label>
                       <button
-                        class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+                        class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2 cursor-default"
                         type="button"
                       >
                         Advanced
@@ -445,16 +446,19 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                           >
                             Slow
                           </div>
-                          <div
-                            class="flex justify-between sm:w-full"
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                           >
                             <span
-                              class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
-                              data-testid="Amount"
+                              class="react-loading-skeleton h-4"
+                              style="width: 100px;"
                             >
-                              0 DARK
+                              ‌
                             </span>
-                          </div>
+                            <br />
+                          </span>
                         </div>
                         <div
                           class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
@@ -487,16 +491,19 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                           >
                             Average
                           </div>
-                          <div
-                            class="flex justify-between sm:w-full"
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                           >
                             <span
-                              class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
-                              data-testid="Amount"
+                              class="react-loading-skeleton h-4"
+                              style="width: 100px;"
                             >
-                              0 DARK
+                              ‌
                             </span>
-                          </div>
+                            <br />
+                          </span>
                         </div>
                         <div
                           class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
@@ -529,16 +536,19 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                           >
                             Fast
                           </div>
-                          <div
-                            class="flex justify-between sm:w-full"
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                           >
                             <span
-                              class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
-                              data-testid="Amount"
+                              class="react-loading-skeleton h-4"
+                              style="width: 100px;"
                             >
-                              0 DARK
+                              ‌
                             </span>
-                          </div>
+                            <br />
+                          </span>
                         </div>
                         <div
                           class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
