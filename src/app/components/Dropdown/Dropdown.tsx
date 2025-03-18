@@ -25,8 +25,6 @@ export const Wrapper = ({ variant, ...props }: { variant?: DropdownVariantType }
 		className={twMerge(
 			cn({
 				"py-3 dark:bg-theme-secondary-800": variant === undefined,
-				"rounded-xl": variant !== "navbar",
-				"sm:rounded-xl": variant === "navbar",
 			}),
 			props.className,
 		)}
@@ -138,7 +136,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 					>
 						<Wrapper
 							variant={options && variant === undefined ? "options" : variant}
-							className="dropdown-body overflow-hidden bg-theme-background py-0 shadow-xl"
+							className="dropdown-body overflow-hidden rounded bg-white p-1 shadow-xl outline-none dark:bg-theme-dark-900"
 						>
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options, variant })}

@@ -2629,7 +2629,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -2878,7 +2878,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -3127,7 +3127,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -3376,7 +3376,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -3625,7 +3625,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -3874,7 +3874,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -4123,7 +4123,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -4372,7 +4372,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -4574,7 +4574,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >
@@ -4885,7 +4885,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
         class="pagination-search-wrapper"
       >
         <form
-          class="search-form"
+          class="space-y-5 search-form"
           data-testid="PaginationSearchForm"
           name="searchForm"
         >

@@ -3,7 +3,7 @@
 exports[`SideBar > should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative -mx-4 lg:hidden"
+    class="relative -mx-6 -mt-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:m-0 md:border-t-0 md:bg-transparent md:p-0 dark:md:bg-transparent lg:hidden"
   >
     <div
       aria-expanded="false"
@@ -11,20 +11,30 @@ exports[`SideBar > should render 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="mx-4 flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:p-6"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
-        <div>
+        <span
+          class="flex-1 font-semibold leading-tight"
+        >
+          General
+        </span>
+        <div
+          class="transition-transform"
+        >
           <div
-            style="height: 20px; width: 20px;"
+            style="height: 10px; width: 10px;"
           >
             <svg
+              id="chevron-down-small"
               style="height: 100%; width: 100%;"
-              viewBox="0 0 20 20"
+              viewBox="0 0 10 10"
+              x="0"
               xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
               <path
-                d="M1 15.5h18M1 10h18M1 4.5h18"
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
                 fill="none"
                 stroke="currentColor"
                 stroke-linecap="round"
@@ -34,154 +44,52 @@ exports[`SideBar > should render 1`] = `
             </svg>
           </div>
         </div>
-        <span
-          class="font-semibold leading-tight"
-        >
-          General
-        </span>
       </div>
     </div>
   </div>
   <div
-    class="hidden h-full w-[210px] lg:block"
+    class="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dark:border-theme-dark-700 lg:block"
   >
-    <ul>
+    <ul
+      class="space-y-1"
+    >
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-default"
+        class="relative cursor-default"
         data-testid="side-menu__item--general"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
         >
-          <div
-            class="absolute inset-y-0 left-0 w-1 rounded bg-theme-primary-600"
-          />
-          <div
-            class="mr-3"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="sliders"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             General
           </span>
         </div>
       </li>
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+        class="relative cursor-pointer"
         data-testid="side-menu__item--password"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
-          <div
-            class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="lock"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             Password
           </span>
         </div>
       </li>
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+        class="relative cursor-pointer"
         data-testid="side-menu__item--export"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
-          <div
-            class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="arrow-up-turn-bracket"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
-                    />
-                    <path
-                      d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             Export
           </span>
@@ -195,7 +103,7 @@ exports[`SideBar > should render 1`] = `
 exports[`SideBar > should render responsive dropdown 1`] = `
 <DocumentFragment>
   <div
-    class="relative -mx-4 lg:hidden"
+    class="relative -mx-6 -mt-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:m-0 md:border-t-0 md:bg-transparent md:p-0 dark:md:bg-transparent lg:hidden"
   >
     <div
       aria-controls=":r2:"
@@ -204,34 +112,31 @@ exports[`SideBar > should render responsive dropdown 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="mx-4 flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:p-6"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
-        <div>
+        <span
+          class="flex-1 font-semibold leading-tight"
+        >
+          General
+        </span>
+        <div
+          class="transition-transform rotate-180"
+        >
           <div
-            style="height: 20px; width: 20px;"
+            style="height: 10px; width: 10px;"
           >
             <svg
-              fill="none"
+              id="chevron-down-small"
               style="height: 100%; width: 100%;"
-              viewBox="0 0 20 14"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
               <path
-                d="M1 12.0781H7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M1 6.53906H11"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M1 1H19"
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -240,154 +145,52 @@ exports[`SideBar > should render responsive dropdown 1`] = `
             </svg>
           </div>
         </div>
-        <span
-          class="font-semibold leading-tight"
-        >
-          General
-        </span>
       </div>
     </div>
   </div>
   <div
-    class="hidden h-full w-[210px] lg:block"
+    class="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dark:border-theme-dark-700 lg:block"
   >
-    <ul>
+    <ul
+      class="space-y-1"
+    >
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-default"
+        class="relative cursor-default"
         data-testid="side-menu__item--general"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
         >
-          <div
-            class="absolute inset-y-0 left-0 w-1 rounded bg-theme-primary-600"
-          />
-          <div
-            class="mr-3"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="sliders"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             General
           </span>
         </div>
       </li>
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+        class="relative cursor-pointer"
         data-testid="side-menu__item--password"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
-          <div
-            class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="lock"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             Password
           </span>
         </div>
       </li>
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+        class="relative cursor-pointer"
         data-testid="side-menu__item--export"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
-          <div
-            class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="arrow-up-turn-bracket"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
-                    />
-                    <path
-                      d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             Export
           </span>
@@ -401,7 +204,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
 exports[`SideBar > should render responsive dropdown 2`] = `
 <DocumentFragment>
   <div
-    class="relative -mx-4 lg:hidden"
+    class="relative -mx-6 -mt-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:m-0 md:border-t-0 md:bg-transparent md:p-0 dark:md:bg-transparent lg:hidden"
   >
     <div
       aria-controls=":r5:"
@@ -410,34 +213,31 @@ exports[`SideBar > should render responsive dropdown 2`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="mx-4 flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:p-6"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
-        <div>
+        <span
+          class="flex-1 font-semibold leading-tight"
+        >
+          General
+        </span>
+        <div
+          class="transition-transform rotate-180"
+        >
           <div
-            style="height: 20px; width: 20px;"
+            style="height: 10px; width: 10px;"
           >
             <svg
-              fill="none"
+              id="chevron-down-small"
               style="height: 100%; width: 100%;"
-              viewBox="0 0 20 14"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
               <path
-                d="M1 12.0781H7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M1 6.53906H11"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M1 1H19"
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -446,154 +246,52 @@ exports[`SideBar > should render responsive dropdown 2`] = `
             </svg>
           </div>
         </div>
-        <span
-          class="font-semibold leading-tight"
-        >
-          General
-        </span>
       </div>
     </div>
   </div>
   <div
-    class="hidden h-full w-[210px] lg:block"
+    class="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dark:border-theme-dark-700 lg:block"
   >
-    <ul>
+    <ul
+      class="space-y-1"
+    >
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-default"
+        class="relative cursor-default"
         data-testid="side-menu__item--general"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
         >
-          <div
-            class="absolute inset-y-0 left-0 w-1 rounded bg-theme-primary-600"
-          />
-          <div
-            class="mr-3"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="sliders"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             General
           </span>
         </div>
       </li>
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+        class="relative cursor-pointer"
         data-testid="side-menu__item--password"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
-          <div
-            class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="lock"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             Password
           </span>
         </div>
       </li>
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+        class="relative cursor-pointer"
         data-testid="side-menu__item--export"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
-          <div
-            class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="arrow-up-turn-bracket"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
-                    />
-                    <path
-                      d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             Export
           </span>
@@ -607,7 +305,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
 exports[`SideBar > should render responsive dropdown 3`] = `
 <DocumentFragment>
   <div
-    class="relative -mx-4 lg:hidden"
+    class="relative -mx-6 -mt-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:m-0 md:border-t-0 md:bg-transparent md:p-0 dark:md:bg-transparent lg:hidden"
   >
     <div
       aria-controls=":r8:"
@@ -616,34 +314,31 @@ exports[`SideBar > should render responsive dropdown 3`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="mx-4 flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:p-6"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
-        <div>
+        <span
+          class="flex-1 font-semibold leading-tight"
+        >
+          General
+        </span>
+        <div
+          class="transition-transform rotate-180"
+        >
           <div
-            style="height: 20px; width: 20px;"
+            style="height: 10px; width: 10px;"
           >
             <svg
-              fill="none"
+              id="chevron-down-small"
               style="height: 100%; width: 100%;"
-              viewBox="0 0 20 14"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
               <path
-                d="M1 12.0781H7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M1 6.53906H11"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M1 1H19"
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -652,154 +347,52 @@ exports[`SideBar > should render responsive dropdown 3`] = `
             </svg>
           </div>
         </div>
-        <span
-          class="font-semibold leading-tight"
-        >
-          General
-        </span>
       </div>
     </div>
   </div>
   <div
-    class="hidden h-full w-[210px] lg:block"
+    class="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dark:border-theme-dark-700 lg:block"
   >
-    <ul>
+    <ul
+      class="space-y-1"
+    >
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-default"
+        class="relative cursor-default"
         data-testid="side-menu__item--general"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
         >
-          <div
-            class="absolute inset-y-0 left-0 w-1 rounded bg-theme-primary-600"
-          />
-          <div
-            class="mr-3"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="sliders"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             General
           </span>
         </div>
       </li>
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+        class="relative cursor-pointer"
         data-testid="side-menu__item--password"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
-          <div
-            class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="lock"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             Password
           </span>
         </div>
       </li>
       <li
-        class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
+        class="relative cursor-pointer"
         data-testid="side-menu__item--export"
       >
         <div
-          class="group relative -ml-5 flex h-11 items-center rounded px-5 transition-all hover:bg-theme-secondary-100 hover:text-theme-primary-700 dark:hover:bg-black dark:hover:text-theme-secondary-200"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
-          <div
-            class="mr-3 text-theme-primary-300 transition-all group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-          >
-            <div>
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="arrow-up-turn-bracket"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
-                    />
-                    <path
-                      d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
           <span
-            class="text-lg font-semibold"
+            class="font-semibold"
           >
             Export
           </span>
