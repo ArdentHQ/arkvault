@@ -59,7 +59,8 @@ export const CreateAddressesSidePanel = ({
 	const { getValues, formState, register, setValue, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
+	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic, acceptResponsibility } =
+		watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
@@ -67,9 +68,10 @@ export const CreateAddressesSidePanel = ({
 
 	useEffect(() => {
 		register("network", { required: true });
+		register({ name: "useEncryption", type: "boolean", value: false });
+		register({ name: "acceptResponsibility", type: "boolean", value: false });
 		register("wallet");
 		register("mnemonic");
-		register("useEncryption");
 		register("passphraseDisclaimer");
 	}, [register, open]);
 
@@ -229,6 +231,12 @@ export const CreateAddressesSidePanel = ({
 		return steps;
 	}, [useEncryption, t]);
 
+	const isNextDisabled = useMemo(() => {
+		if (activeTab === Step.ConfirmPassphraseStep) {
+			return useEncryption && !acceptResponsibility;
+		}
+	}, [activeTab, acceptResponsibility, useEncryption]);
+
 	return (
 		<SidePanel
 			header={<StepHeader step={activeTab} />}
@@ -283,7 +291,7 @@ export const CreateAddressesSidePanel = ({
 								{activeTab < Step.EncryptPasswordStep && (
 									<Button
 										data-testid="CreateWallet__continue-button"
-										disabled={isDirty ? !isValid || isGeneratingWallet : true}
+										disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
 										isLoading={isGeneratingWallet}
 										onClick={() => handleNext()}
 									>
