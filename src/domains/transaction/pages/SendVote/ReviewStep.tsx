@@ -10,7 +10,6 @@ import { getVoteCategory, VoteTransactionType } from "@/domains/transaction/comp
 import cn from "classnames";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { Contracts } from "@ardenthq/sdk-profiles";
 
 export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProperties) => {
 	const { t } = useTranslation();
