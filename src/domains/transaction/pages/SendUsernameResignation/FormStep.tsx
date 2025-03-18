@@ -71,7 +71,7 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 					<div className="space-y-3 sm:space-y-0">
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.CATEGORY")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-[89px]">{t("COMMON.CATEGORY")}</DetailTitle>
 							<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
 								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
 									{t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION")}
@@ -87,7 +87,7 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.USERNAME")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-[89px]">{t("COMMON.USERNAME")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{senderWallet && senderWallet.username()}
 							</div>
