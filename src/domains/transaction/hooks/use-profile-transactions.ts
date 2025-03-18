@@ -2,7 +2,6 @@ import { Contracts, Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-pro
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
-import { isUnit } from "@/utils/test-helpers";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
 
@@ -90,7 +89,7 @@ export const useProfileTransactions = ({
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
-	const LIMIT = useMemo(() => (isUnit() ? 0 : limit), [limit]);
+	const LIMIT = limit;
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
 	const allTransactionTypes = [...types.core];
@@ -188,7 +187,12 @@ export const useProfileTransactions = ({
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const updateFilters = useCallback(
-		({ activeMode, activeTransactionType, timestamp, selectedTransactionTypes }: TransactionFilters) => {
+		({
+			activeMode,
+			activeTransactionType,
+			timestamp,
+			selectedTransactionTypes: newTransactionTypes,
+		}: TransactionFilters) => {
 			lastQuery.current = JSON.stringify({ activeMode, activeTransactionType });
 
 			const hasWallets = wallets.length > 0;
@@ -206,7 +210,7 @@ export const useProfileTransactions = ({
 				activeTransactionType,
 				isLoadingMore: false,
 				isLoadingTransactions: hasWallets,
-				selectedTransactionTypes,
+				selectedTransactionTypes: newTransactionTypes ?? selectedTransactionTypes,
 				timestamp,
 				transactions: [],
 			});

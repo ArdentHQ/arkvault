@@ -204,7 +204,9 @@ export const MNEMONICS = [
 ];
 
 export const MAINSAIL_MNEMONICS = [
+	// 0x659A76be283644AEc2003aa8ba26485047fd1BFB
 	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
+	// 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
 	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
 ];
 

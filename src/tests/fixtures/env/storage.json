@@ -188,8 +188,8 @@
 		"877b7695-8a55-4e16-a7ff-412113131856": {
 			"id": "877b7695-8a55-4e16-a7ff-412113131856",
 			"wallets": {
-				"ac38fe6d-4b67-4ef1-85be-17c5f6841129": {
-					"id": "ac38fe6d-4b67-4ef1-85be-17c5f6841129",
+				"ee02b13f-8dbf-4191-a9dc-08d2ab72ec28": {
+					"id": "ee02b13f-8dbf-4191-a9dc-08d2ab72ec28",
 					"data": {
 						"COIN": "Mainsail",
 						"NETWORK": "mainsail.devnet",
@@ -279,7 +279,16 @@
 				"USE_TEST_NETWORKS": true,
 				"DO_NOT_SHOW_FEE_WARNING": false,
 				"DASHBOARD_CONFIGURATION": {
-					"hideBalance": false
+					"hideBalance": false,
+					"walletsDisplayType": "all",
+					"selectedNetworkIds": [],
+					"activeNetworkId": "mainsail.devnet",
+					"selectedAddresses": ["0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"],
+					"selectedAddressesByNetwork": {
+						"c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51": [
+							"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+						]
+					}
 				}
 			}
 		}

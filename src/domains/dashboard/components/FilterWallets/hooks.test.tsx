@@ -4,7 +4,7 @@ import React from "react";
 
 import { useWalletFilters } from "./hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, waitFor, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import { env, waitFor, mockProfileWithPublicAndTestNetworks, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -14,9 +14,12 @@ const wrapper = ({ children }: any) => (
 	</EnvironmentProvider>
 );
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("useWalletFilters", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it("should match default filters", () => {
@@ -35,7 +38,7 @@ describe("useWalletFilters", () => {
 			result.current.update("selectedNetworkIds", []);
 		});
 
-		await waitFor(() => expect(result.current.isFilterChanged).toBe(true));
+		await waitFor(() => expect(result.current.isFilterChanged).toBe(false));
 
 		resetProfileNetworksMock2();
 	});

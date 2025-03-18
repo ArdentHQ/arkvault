@@ -7,13 +7,15 @@ import { useLatestTransactions } from "./use-latest-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import {
 	env,
-	getDefaultProfileId,
 	syncDelegates,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
+import * as useWalletConfig from "@/domains/wallet/hooks/use-wallet-config";
 
 let profile: Contracts.IProfile;
+let wallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
 
 const wrapper = ({ children }: any) => (
@@ -24,12 +26,18 @@ const wrapper = ({ children }: any) => (
 
 describe("useLatestTransactions", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await syncDelegates(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
+
+		wallet = profile.wallets().first();
+
+		vi.spyOn(useWalletConfig, "useWalletConfig").mockReturnValue({
+			selectedWallets: [wallet],
+		});
 	});
 
 	beforeEach(() => {
