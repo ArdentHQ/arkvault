@@ -353,9 +353,9 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									{isSenderFilled && !!remainingBalance && (
 										<div
 											data-testid="AddRecipient__available"
-											className="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+											className="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
 										>
-											<span className="hidden sm:inline pr-1">{t("COMMON.BALANCE")}:</span>
+											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
 											<Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
 										</div>
 									)}
