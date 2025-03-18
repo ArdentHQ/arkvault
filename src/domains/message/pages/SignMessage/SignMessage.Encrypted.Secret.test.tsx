@@ -8,22 +8,22 @@ import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
-	getDefaultProfileId,
-	MNEMONICS,
+	getMainsailProfileId,
 	render,
 	screen,
 	waitFor,
 	triggerMessageSignOnce,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
-const walletUrl = (walletId: string) => `/profiles/${getDefaultProfileId()}/wallets/${walletId}/sign-message`;
+const walletUrl = (walletId: string) => `/profiles/${getMainsailProfileId()}/wallets/${walletId}/sign-message`;
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
-const mnemonic = MNEMONICS[0];
+const mnemonic = MAINSAIL_MNEMONICS[0];
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
@@ -38,17 +38,17 @@ const expectHeading = async (text: string) => {
 
 describe("SignMessage with encrypted secret", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic,
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
 
-		profile.coins().set("ARK", "ark.devnet");
+		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
 	});
@@ -61,8 +61,8 @@ describe("SignMessage with encrypted secret", () => {
 		const secret = "secret";
 
 		const encryptedWallet = await profile.walletFactory().fromSecret({
-			coin: "ARK",
-			network: "ark.devnet",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 			secret,
 		});
 
