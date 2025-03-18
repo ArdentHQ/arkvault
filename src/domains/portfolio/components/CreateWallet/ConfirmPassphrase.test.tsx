@@ -5,13 +5,7 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
 import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
-import {
-	env,
-	getMainsailProfileId,
-	MAINSAIL_MNEMONICS,
-	render,
-	screen,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
