@@ -6,7 +6,6 @@ import { Prompt } from "react-router-dom";
 import { PasswordSettingsState } from "./Password.contracts";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { InputPassword } from "@/app/components/Input";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -16,6 +15,9 @@ import { PasswordRemovalConfirmModal } from "@/domains/setting/components/Passwo
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
+import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { ListDivided } from "@/app/components/ListDivided";
+import { Tooltip } from "@/app/components/Tooltip";
 
 export const PasswordSettings = () => {
 	const activeProfile = useActiveProfile();
@@ -89,15 +91,6 @@ export const PasswordSettings = () => {
 		return !password || isSubmitting || !isValid || errors.validation;
 	};
 
-	const getRemoveButtonText = () => {
-		/* istanbul ignore next -- @preserve */
-		if (isXs) {
-			return t("COMMON.REMOVE");
-		}
-
-		return t("SETTINGS.PASSWORD.BUTTON.REMOVE");
-	};
-
 	const getSubmitButtonText = () => {
 		/* istanbul ignore next -- @preserve */
 		if (isXs && passwordStatus === "CHANGE") {
@@ -107,63 +100,76 @@ export const PasswordSettings = () => {
 		return t(`SETTINGS.PASSWORD.BUTTON.${passwordStatus}`);
 	};
 
+	const items = [
+		{
+			itemValueClass: "w-full sm:w-auto",
+			label: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.TITLE"),
+			labelDescription: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.DESCRIPTION"),
+			labelWrapperClass: "flex flex-col sm:flex-row space-y-3 justify-between items-center",
+			value: (
+				<Tooltip disabled={usesPassword} content={t("SETTINGS.PASSWORD.REMOVE_PASSWORD.TOOLTIP")}>
+					<div>
+						<Button
+							disabled={!usesPassword}
+							data-testid="Password-settings__remove-button"
+							variant="danger"
+							className="w-full bg-theme-danger-50 sm:w-auto"
+							onClick={() => setIsConfirmRemovalVisible(true)}
+						>
+							<Icon name="Trash" />
+							<span className="whitespace-nowrap">{t("COMMON.REMOVE")}</span>
+						</Button>
+					</div>
+				</Tooltip>
+			),
+		},
+	];
+
 	return (
 		<>
 			<SettingsWrapper profile={activeProfile} activeSettings="password">
-				<Header
-					title={t("SETTINGS.PASSWORD.TITLE")}
-					subtitle={t(`SETTINGS.PASSWORD.SUBTITLE.${passwordStatus}`)}
-					titleClassName="mb-2 text-2xl"
-				/>
+				<Form id="password-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
+					<SettingsGroup title={t("SETTINGS.PASSWORD.TITLE")}>
+						<div className="mb-6 space-y-5 border-b border-dashed border-theme-secondary-300 pb-6 dark:border-theme-secondary-800">
+							{usesPassword && (
+								<FormField name="currentPassword">
+									<FormLabel label={t("SETTINGS.PASSWORD.CURRENT")} />
+									<InputPassword
+										ref={register({
+											required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+												field: t("SETTINGS.PASSWORD.CURRENT"),
+											}).toString(),
+										})}
+										data-testid="Password-settings__input--currentPassword"
+									/>
+								</FormField>
+							)}
 
-				<Form id="password-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
-					<div className="space-y-5">
-						{usesPassword && (
-							<FormField name="currentPassword">
-								<FormLabel label={t("SETTINGS.PASSWORD.CURRENT")} />
-								<InputPassword
-									ref={register({
-										required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-											field: t("SETTINGS.PASSWORD.CURRENT"),
-										}).toString(),
-									})}
-									data-testid="Password-settings__input--currentPassword"
-								/>
-							</FormField>
-						)}
+							<PasswordValidation
+								passwordField="password"
+								passwordFieldLabel={t("SETTINGS.PASSWORD.PASSWORD_1")}
+								confirmPasswordField="confirmPassword"
+								confirmPasswordFieldLabel={t("SETTINGS.PASSWORD.PASSWORD_2")}
+								currentPasswordField={usesPassword ? "currentPassword" : undefined}
+								optional={false}
+							/>
+						</div>
 
-						<PasswordValidation
-							passwordField="password"
-							passwordFieldLabel={t("SETTINGS.PASSWORD.PASSWORD_1")}
-							confirmPasswordField="confirmPassword"
-							confirmPasswordFieldLabel={t("SETTINGS.PASSWORD.PASSWORD_2")}
-							currentPasswordField={usesPassword ? "currentPassword" : undefined}
-							optional={false}
-						/>
-					</div>
+						<ListDivided items={items} />
+					</SettingsGroup>
 
-					<FormButtons>
-						{usesPassword && (
+					<SettingsButtonGroup>
+						<FormButtons>
 							<Button
-								data-testid="Password-settings__remove-button"
-								variant="danger"
-								className="mr-auto flex w-full space-x-2 sm:w-auto"
-								onClick={() => setIsConfirmRemovalVisible(true)}
+								data-testid="Password-settings__submit-button"
+								disabled={isSubmitDisabled()}
+								type="submit"
+								className="w-full sm:w-auto"
 							>
-								<Icon name="Trash" />
-								<span>{getRemoveButtonText()}</span>
+								{getSubmitButtonText()}
 							</Button>
-						)}
-
-						<Button
-							data-testid="Password-settings__submit-button"
-							disabled={isSubmitDisabled()}
-							type="submit"
-							className="w-full sm:w-auto"
-						>
-							{getSubmitButtonText()}
-						</Button>
-					</FormButtons>
+						</FormButtons>
+					</SettingsButtonGroup>
 				</Form>
 
 				<Prompt message={getPromptMessage} />

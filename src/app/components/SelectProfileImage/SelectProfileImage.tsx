@@ -1,4 +1,3 @@
-import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -8,10 +7,8 @@ import { useFiles } from "@/app/hooks/use-files";
 import { toasts } from "@/app/services";
 
 interface SelectProfileImageProperties {
-	className?: string;
 	value?: string;
 	name?: string;
-	showLabel?: boolean;
 	onSelect: (raw: string) => void;
 }
 
@@ -28,13 +25,7 @@ const ProfileImageStyled = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) 
 
 const ALLOWED_EXTENSIONS = ["png", "jpg", "jpeg", "bmp"];
 
-export const SelectProfileImage = ({
-	className,
-	value,
-	name,
-	showLabel = true,
-	onSelect,
-}: SelectProfileImageProperties) => {
+export const SelectProfileImage = ({ value, name, onSelect }: SelectProfileImageProperties) => {
 	const { t } = useTranslation();
 	const { openImage } = useFiles();
 
@@ -42,7 +33,7 @@ export const SelectProfileImage = ({
 		try {
 			const image = await openImage({ extensions: ALLOWED_EXTENSIONS });
 
-			onSelect(image?.content);
+			onSelect(image.content);
 		} catch (error) {
 			if (!error.message.includes("The user aborted a request")) {
 				toasts.error(t("COMMON.ERRORS.INVALID_IMAGE"));
@@ -55,7 +46,7 @@ export const SelectProfileImage = ({
 	const renderButton = () => {
 		if (value) {
 			return (
-				<div className="relative z-0 h-20 w-20">
+				<div className="relative z-0 h-[92px] w-[92px]">
 					<ProfileImageStyled>
 						<img
 							data-testid={`SelectProfileImage__avatar-${isSvg ? "identicon" : "image"}`}
@@ -104,7 +95,7 @@ export const SelectProfileImage = ({
 		}
 
 		return (
-			<div className="h-20 w-20 rounded-md border-2 border-dashed border-theme-secondary-400 p-1 focus-within:border-solid focus-within:border-theme-primary-400 dark:border-theme-secondary-700">
+			<div className="h-[92px] w-[92px] rounded-md border-2 border-dashed border-theme-secondary-400 p-1 focus-within:border-solid focus-within:border-theme-primary-400 dark:border-theme-secondary-700">
 				<div className="h-full overflow-hidden rounded-full">
 					<UploadButtonWrapper>
 						<Button
@@ -124,15 +115,5 @@ export const SelectProfileImage = ({
 		);
 	};
 
-	return (
-		<div className={cn("group space-y-2", className)}>
-			{showLabel && (
-				<span className="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600">
-					{t("SETTINGS.GENERAL.PERSONAL.PROFILE_IMAGE")}
-				</span>
-			)}
-
-			<div className="flex flex-row">{renderButton()}</div>
-		</div>
-	);
+	return <div className="flex flex-row">{renderButton()}</div>;
 };

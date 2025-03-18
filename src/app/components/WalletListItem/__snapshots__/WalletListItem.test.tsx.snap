@@ -395,7 +395,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                       Enter a name for this wallet address (only visible to you).
                     </div>
                     <form
-                      class="mt-8"
+                      class="space-y-5 mt-8"
                       data-testid="Form"
                     >
                       <fieldset
@@ -1086,7 +1086,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                       Enter a name for this wallet address (only visible to you).
                     </div>
                     <form
-                      class="mt-8"
+                      class="space-y-5 mt-8"
                       data-testid="Form"
                     >
                       <fieldset
@@ -1551,7 +1551,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                       Enter a name for this wallet address (only visible to you).
                     </div>
                     <form
-                      class="mt-8"
+                      class="space-y-5 mt-8"
                       data-testid="Form"
                     >
                       <fieldset
@@ -2470,7 +2470,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                       Enter a name for this wallet address (only visible to you).
                     </div>
                     <form
-                      class="mt-8"
+                      class="space-y-5 mt-8"
                       data-testid="Form"
                     >
                       <fieldset
@@ -2944,7 +2944,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                       Enter a name for this wallet address (only visible to you).
                     </div>
                     <form
-                      class="mt-8"
+                      class="space-y-5 mt-8"
                       data-testid="Form"
                     >
                       <fieldset
@@ -3409,7 +3409,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                       Enter a name for this wallet address (only visible to you).
                     </div>
                     <form
-                      class="mt-8"
+                      class="space-y-5 mt-8"
                       data-testid="Form"
                     >
                       <fieldset
@@ -3874,7 +3874,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                       Enter a name for this wallet address (only visible to you).
                     </div>
                     <form
-                      class="mt-8"
+                      class="space-y-5 mt-8"
                       data-testid="Form"
                     >
                       <fieldset

@@ -9,9 +9,8 @@ import { useCustomNetworks } from "./hooks/use-custom-networks";
 import { FallbackToDefaultNodesToggle } from "@/domains/setting/pages/Servers/blocks/FallbackToDefaultNodesToggle";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
-import { useActiveProfile, useBreakpoint, useNetworks, useProfileJobs } from "@/app/hooks";
+import { useActiveProfile, useNetworks, useProfileJobs } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import NodesStatus from "@/domains/setting/pages/Servers/blocks/NodesStatus";
 import CustomPeers from "@/domains/setting/pages/Servers/blocks/CustomPeers";
@@ -21,11 +20,10 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { DeleteResource } from "@/app/components/DeleteResource";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();
-
-	const { isXs } = useBreakpoint();
 
 	const { persist, env } = useEnvironmentContext();
 	const profile = useActiveProfile();
@@ -129,29 +127,11 @@ export const ServersSettings = () => {
 				label: t("SETTINGS.SERVERS.OPTIONS.FALLBACK_TO_DEFAULT_NODES.TITLE"),
 				labelAddon: <FallbackToDefaultNodesToggle />,
 				labelDescription: t("SETTINGS.SERVERS.OPTIONS.FALLBACK_TO_DEFAULT_NODES.DESCRIPTION"),
-				wrapperClass: "py-6",
 			},
 			{
 				content: <NodesStatus networks={enabledNetworks} />,
 				label: t("SETTINGS.SERVERS.OPTIONS.DEFAULT_NODE_STATUS.TITLE"),
 				labelDescription: t("SETTINGS.SERVERS.OPTIONS.DEFAULT_NODE_STATUS.DESCRIPTION"),
-				wrapperClass: "pt-6 pb-3",
-			},
-			{
-				content: (
-					<CustomPeers
-						profile={profile}
-						addNewServerHandler={() => setShowServerFormModal(true)}
-						networks={customNetworks}
-						onDelete={setNetworkToDelete}
-						onUpdate={setNetworkToUpdate}
-						onToggle={toggleNetwork}
-					/>
-				),
-				contentClass: "sm:mt-3",
-				label: t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.TITLE"),
-				labelDescription: t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.DESCRIPTION"),
-				wrapperClass: "pt-6 sm:pb-6",
 			},
 		],
 		[enabledNetworks, customNetworks],
@@ -178,20 +158,36 @@ export const ServersSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="servers">
-			<Header
-				title={t("SETTINGS.SERVERS.TITLE")}
-				subtitle={t("SETTINGS.SERVERS.SUBTITLE")}
-				titleClassName="mb-2 text-2xl"
-			/>
+			<Form id="servers__form" context={form} onSubmit={saveSettings} className="space-y-0">
+				<SettingsGroup title={t("SETTINGS.SERVERS.TITLE")}>
+					<ListDivided items={serverOptions} />
+				</SettingsGroup>
 
-			<Form id="servers__form" context={form} onSubmit={saveSettings} className="mt-2">
-				<ListDivided items={serverOptions} noBorder={isXs} />
+				<SettingsGroup
+					title={t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.TITLE")}
+					description={t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.DESCRIPTION")}
+				>
+					<CustomPeers
+						profile={profile}
+						addNewServerHandler={() => setShowServerFormModal(true)}
+						networks={customNetworks}
+						onDelete={setNetworkToDelete}
+						onUpdate={setNetworkToUpdate}
+						onToggle={toggleNetwork}
+					/>
+				</SettingsGroup>
 
-				<FormButtons>
-					<Button disabled={isSaveButtonDisabled} data-testid="Server-settings__submit-button" type="submit">
-						{t("COMMON.SAVE")}
-					</Button>
-				</FormButtons>
+				<SettingsButtonGroup>
+					<FormButtons>
+						<Button
+							disabled={isSaveButtonDisabled}
+							data-testid="Server-settings__submit-button"
+							type="submit"
+						>
+							{t("COMMON.SAVE")}
+						</Button>
+					</FormButtons>
+				</SettingsButtonGroup>
 			</Form>
 
 			{(showServerFormModal || networkToUpdate) && (

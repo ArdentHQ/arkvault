@@ -30,7 +30,10 @@ const addressInput = () => screen.findByTestId("ImportWallet__address-input");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
 const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
-const enableEncryptionToggle = async () => await userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
+const enableEncryptionToggle = async () =>
+	await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+const toggleEncryptionCheckbox = async () =>
+	await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
 const secretInputID = "ImportWallet__secret-input";
 const errorText = "data-errortext";
@@ -175,7 +178,7 @@ describe("ImportAddress Validations", () => {
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await enableEncryptionToggle();
-
+		await toggleEncryptionCheckbox();
 		await userEvent.click(continueButton());
 
 		await waitFor(() => {

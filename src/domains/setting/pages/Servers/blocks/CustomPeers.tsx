@@ -23,6 +23,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
 import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 interface PeerRowProperties {
 	name: string;
@@ -226,7 +227,6 @@ const CustomPeersPeer: React.VFC<{
 	onUpdate: (network: NormalizedNetwork) => void;
 	onToggle: (isEnabled: boolean) => void;
 	// TODO: break it down into smaller components.
-	// eslint-disable-next-line sonarjs/cognitive-complexity
 }> = ({ normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
 	const { name, network, serverType, address, height, enabled } = normalizedNetwork;
@@ -439,17 +439,19 @@ const CustomPeers: React.VFC<{
 		{
 			Header: t("COMMON.HEIGHT"),
 			disableSortBy: true,
-			headerClassName: "hidden md:table-cell",
+			headerClassName: "hidden md:table-cell no-border",
 			minimumWidth: true,
 		},
 		{
 			Header: t("COMMON.TYPE"),
 			disableSortBy: true,
+			headerClassName: "no-border",
 			minimumWidth: true,
 		},
 		{
 			Header: t("COMMON.STATUS"),
 			disableSortBy: true,
+			headerClassName: "no-border",
 			minimumWidth: true,
 		},
 		{
@@ -467,23 +469,31 @@ const CustomPeers: React.VFC<{
 		}
 
 		return (
-			<Table columns={columns} data={networks} rowsPerPage={networks.length} hideHeader={isXs}>
-				{(network: NormalizedNetwork) => (
-					<CustomPeersPeer
-						profile={profile}
-						key={network.name}
-						onDelete={onDelete}
-						onUpdate={onUpdate}
-						onToggle={(isEnabled) => onToggle(isEnabled, network)}
-						normalizedNetwork={network}
-					/>
-				)}
-			</Table>
+			<TableWrapper>
+				<Table
+					columns={columns}
+					data={networks}
+					rowsPerPage={networks.length}
+					hideHeader={isXs}
+					className="with-x-padding"
+				>
+					{(network: NormalizedNetwork) => (
+						<CustomPeersPeer
+							profile={profile}
+							key={network.name}
+							onDelete={onDelete}
+							onUpdate={onUpdate}
+							onToggle={(isEnabled) => onToggle(isEnabled, network)}
+							normalizedNetwork={network}
+						/>
+					)}
+				</Table>
+			</TableWrapper>
 		);
 	};
 
 	return (
-		<div data-testid="CustomPeers--list" className={networks.length === 0 ? "mt-3" : "mt-1 sm:mt-3"}>
+		<div data-testid="CustomPeers--list">
 			{renderPeers()}
 
 			<Button

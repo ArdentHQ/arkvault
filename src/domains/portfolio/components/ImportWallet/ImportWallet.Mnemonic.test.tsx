@@ -28,7 +28,8 @@ const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
-const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
+const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+const toggleEncryptionCheckbox = () => userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
@@ -143,8 +144,8 @@ describe("ImportAddress", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
-
+		await enableEncryptionToggle();
+		await toggleEncryptionCheckbox();
 		await userEvent.click(continueButton());
 
 		await waitFor(() => {
@@ -192,11 +193,12 @@ describe("ImportAddress", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		expect(screen.getByTestId("ImportWallet__encryption-toggle")).not.toBeChecked();
+		expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked();
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
+		await toggleEncryptionCheckbox();
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeChecked());
+		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).toBeChecked());
 
 		await userEvent.click(screen.getByText(commonTranslations.BACK));
 
@@ -208,7 +210,7 @@ describe("ImportAddress", () => {
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__encryption-toggle")).not.toBeChecked());
+		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked());
 	});
 
 	it("should import by mnemonic with second signature and use password to encrypt both", async () => {
@@ -236,7 +238,8 @@ describe("ImportAddress", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
+		await toggleEncryptionCheckbox();
 
 		await userEvent.click(continueButton());
 
@@ -292,7 +295,8 @@ describe("ImportAddress", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
+		await toggleEncryptionCheckbox();
 
 		await userEvent.click(continueButton());
 
