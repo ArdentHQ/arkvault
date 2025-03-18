@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import "jest-styled-components";
 import { ExchangeView } from "./ExchangeView";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import * as themeUtils from "@/utils/theme";
 import * as ExchangeForm from "@/domains/exchange/components/ExchangeForm";
 import userEvent from "@testing-library/user-event";
@@ -28,7 +28,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 
 describe("ExchangeView", () => {
 	it("should render", async () => {
-		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
 
 		history.push(exchangeURL);
 
@@ -69,7 +69,7 @@ describe("ExchangeView", () => {
 	it.each(["light", "dark"])("should render %s theme", async (theme) => {
 		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
 
-		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
 
 		history.push(exchangeURL);
 
@@ -94,7 +94,7 @@ describe("ExchangeView", () => {
 	});
 
 	it("should render warning without exchange", async () => {
-		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=unknown`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=unknown`;
 
 		history.push(exchangeURL);
 
@@ -119,7 +119,7 @@ describe("ExchangeView", () => {
 	});
 
 	it("should fetch providers if not loaded yet", async () => {
-		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
 
 		history.push(exchangeURL);
 
@@ -142,7 +142,7 @@ describe("ExchangeView", () => {
 	});
 
 	it("should re-render exchange form when `reset()` called ", async () => {
-		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
 
 		history.push(exchangeURL);
 
@@ -185,7 +185,7 @@ describe("ExchangeView", () => {
 	});
 
 	it("should not pass down `orderId` when reset clicked", async () => {
-		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow&orderId=testOrderId`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow&orderId=testOrderId`;
 
 		history.push(exchangeURL);
 
