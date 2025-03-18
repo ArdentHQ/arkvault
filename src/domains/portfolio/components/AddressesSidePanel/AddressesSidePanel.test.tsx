@@ -1,10 +1,12 @@
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render } from "@/utils/testing-library";
 import { expect } from "vitest";
 import { AddressesSidePanel } from "./AddressesSidePanel";
 import userEvent from "@testing-library/user-event";
-import { waitFor } from "@testing-library/react";
+import { waitFor, screen } from "@testing-library/react";
+
+const getSearchInput = () => screen.getByTestId("AddressesPanel--SearchInput");
 
 describe("AddressesSidePanel", () => {
 	let profile: Contracts.IProfile;
@@ -215,7 +217,8 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), wallets.first().address());
+		await userEvent.type(getSearchInput(), "{enter}");
+		await userEvent.type(getSearchInput(), wallets.first().address());
 
 		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
 	});
@@ -233,9 +236,12 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), "WALLET 2");
+		await userEvent.type(getSearchInput(), "{enter}");
+		await userEvent.type(getSearchInput(), "Mainsail Wallet 1");
 
-		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+		await waitFor(() => {
+			expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+		})
 	});
 
 	it("should show a hint for `manage` button", async () => {

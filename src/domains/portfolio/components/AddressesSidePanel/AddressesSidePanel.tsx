@@ -10,7 +10,7 @@ import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
-import { useBreakpoint } from "@/app/hooks";
+import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
 
 export const AddressesSidePanel = ({
@@ -86,6 +86,8 @@ export const AddressesSidePanel = ({
 		setDeleteMode(false);
 	};
 
+	const { getWalletAlias } = useWalletAlias();
+
 	const addressesToShow = wallets.filter((wallet) => {
 		if (!searchQuery) {
 			return true;
@@ -93,7 +95,9 @@ export const AddressesSidePanel = ({
 
 		const query = searchQuery.toLowerCase();
 
-		return wallet.address().toLowerCase().startsWith(query) || wallet.displayName()?.toLowerCase().includes(query);
+		const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
+
+		return wallet.address().toLowerCase().startsWith(query) || (alias && alias.toLowerCase().includes(query));
 	});
 
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
