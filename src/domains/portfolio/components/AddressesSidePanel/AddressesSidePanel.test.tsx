@@ -239,7 +239,7 @@ describe("AddressesSidePanel", () => {
 
 		await waitFor(() => {
 			expect(getSearchInput()).toHaveValue("Mainsail Wallet 1");
-		})
+		});
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("AddressRow").length).toBe(1);
