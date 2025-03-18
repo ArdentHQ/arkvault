@@ -13,7 +13,8 @@ import {
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
-	triggerMessageSignOnce, MAINSAIL_MNEMONICS,
+	triggerMessageSignOnce,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
