@@ -6,7 +6,8 @@ import {
 	env,
 	getMainsailProfileId,
 	mockNanoXTransport,
-	triggerMessageSignOnce, getDefaultMainsailWalletMnemonic,
+	triggerMessageSignOnce,
+	getDefaultMainsailWalletMnemonic,
 } from "@/utils/testing-library";
 
 // Mock implementation of TextEncoder to always return Uint8Array.
@@ -42,8 +43,9 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			"signatory": "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
-			"signature": "dd6c2e62443bef9baa27178493184abb5320409d3b90314f64bbb527e838bd7b12599004762c2ff9ac0ed551e95a70ecd2b8d7c5d33aff30b8dd593489d573c2",
+			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
+			signature:
+				"dd6c2e62443bef9baa27178493184abb5320409d3b90314f64bbb527e838bd7b12599004762c2ff9ac0ed551e95a70ecd2b8d7c5d33aff30b8dd593489d573c2",
 		});
 	});
 
@@ -73,8 +75,9 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			"signatory": "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
-			"signature": "dd6c2e62443bef9baa27178493184abb5320409d3b90314f64bbb527e838bd7b12599004762c2ff9ac0ed551e95a70ecd2b8d7c5d33aff30b8dd593489d573c2",
+			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
+			signature:
+				"dd6c2e62443bef9baa27178493184abb5320409d3b90314f64bbb527e838bd7b12599004762c2ff9ac0ed551e95a70ecd2b8d7c5d33aff30b8dd593489d573c2",
 		});
 
 		walletActsWithMnemonicWithEncryption.mockRestore();
@@ -175,7 +178,7 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			"signatory": "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
+			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 			signature: "signature",
 		});
 
