@@ -9,7 +9,6 @@ import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
 	getMainsailProfileId,
-	MNEMONICS,
 	render,
 	screen,
 	waitFor,
