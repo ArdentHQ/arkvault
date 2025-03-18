@@ -241,7 +241,7 @@ describe("AddressesSidePanel", () => {
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("AddressRow").length).toBe(1);
-		})
+		});
 	});
 
 	it("should show a hint for `manage` button", async () => {
