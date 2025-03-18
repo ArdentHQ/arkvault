@@ -29,6 +29,7 @@ export {
 	mockLedgerDevicesList,
 } from "./ledger-test-helpers";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { DTO } from "@ardenthq/sdk-profiles";
 
 const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode; options?: Record<string, any> }) => {
@@ -204,7 +205,9 @@ export const MNEMONICS = [
 ];
 
 export const MAINSAIL_MNEMONICS = [
+	// 0x659A76be283644AEc2003aa8ba26485047fd1BFB
 	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
+	// 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
 	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
 ];
 
@@ -432,6 +435,48 @@ export const createTransactionMock = (
 		sender: () => transactionFixture.data.sender,
 		timestamp: () => DateTime.make(),
 		total: () => +transactionFixture.data.amount / 1e8 + +transactionFixture.data.fee / 1e8,
+		type: () => "transfer",
+		usesMultiSignature: () => false,
+		wallet: () => wallet,
+		...overrides,
+	} as any);
+
+/* istanbul ignore next -- @preserve */
+export const createMainsailTransactionMock = (
+	wallet: Contracts.IReadWriteWallet,
+	overrides: Partial<DTO.ExtendedSignedTransactionData> = {},
+) =>
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		amount: () => +mainsailTransactionFixture.data.amount / 1e18,
+		blockId: () => "1",
+		confirmations: () => BigNumber.make(154_178),
+		convertedAmount: () => BigNumber.make(10),
+		data: () => ({ data: () => mainsailTransactionFixture.data.data }),
+		explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${mainsailTransactionFixture.data.id}`,
+		explorerLinkForBlock: () =>
+			`https://mainsail-explorer.ihost.org/transactions/${mainsailTransactionFixture.data.id}`,
+		fee: () => +mainsailTransactionFixture.data.fee / 1e18,
+		id: () => mainsailTransactionFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => true,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
+		isMultiSignatureRegistration: () => false,
+		isSuccess: () => true,
+		isTransfer: () => true,
+		isUnvote: () => false,
+		isUsernameRegistration: () => false,
+		isUsernameResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
+		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
+		nonce: () => BigNumber.make(1),
+		recipient: () => mainsailTransactionFixture.data.recipient,
+		sender: () => mainsailTransactionFixture.data.senderAddress,
+		timestamp: () => DateTime.make(),
 		type: () => "transfer",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,

@@ -4,7 +4,7 @@ import React from "react";
 
 import { ExchangeTransactionsRow } from "./ExchangeTransactionsRow";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { env, getDefaultProfileId, render, screen, within } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, within } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
@@ -30,7 +30,7 @@ describe("ExchangeTransactionsRow", () => {
 	beforeAll(() => {
 		dateNowSpy = vi.spyOn(Date, "now").mockImplementation(() => new Date("2021-01-01").getTime());
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		exchangeTransaction = profile.exchangeTransactions().create(stubData);
 	});
 

@@ -136,10 +136,13 @@ export const translations = {
 
 		IMPORT_DETAIL_STEP: {
 			ENCRYPTION: {
+				CHECKBOX: "I understand and accept responsibility.",
 				DESCRIPTION:
-					"Set an encryption password to use in place of your mnemonic passphrase. Note that you must still record and keep your mnemonic passphrase safe as losing this will result in you losing all access to your funds.",
+					"Set an encryption password to replace your mnemonic passphrase when signing transactions and messages.",
 				NOT_AVAILABLE: "Encryption not available for this import type",
 				TITLE: "Use Wallet Encryption",
+				WARNING:
+					"You must still securely store your mnemonic passphrase. Losing it will result in permanent loss of access to your funds!",
 			},
 			MNEMONIC_TIP: {
 				GUIDELINES_1: "Ensure all words are in lowercase.",

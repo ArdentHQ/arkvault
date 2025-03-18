@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 
 import { useOrderStatus } from "./use-order-status";
-import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, waitFor } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
@@ -10,7 +10,7 @@ let exchangeTransaction: Contracts.IExchangeTransaction;
 
 describe("useOrderStatus", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
 				address: "inputAddress",
