@@ -1,5 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { useFormContext } from "react-hook-form";
@@ -19,7 +18,6 @@ import { useValidation, WalletAliasResult } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
-import { twMerge } from "tailwind-merge";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
@@ -58,15 +56,6 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 		</div>
 	);
 };
-
-const InputButtonStyled = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
-	<button
-		{...props}
-		className={twMerge(
-			"input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700",
-		)}
-	/>
-);
 
 export const AddRecipient: VFC<AddRecipientProperties> = ({
 	disableMultiPaymentOption,
@@ -359,12 +348,18 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									{isSenderFilled && !!remainingBalance && (
 										<span
 											data-testid="AddRecipient__available"
-											className="text-theme-secondary-700 dark:text-theme-dark-200" 
+											className="text-theme-secondary-700 dark:text-theme-dark-200"
 										>
-											{t("COMMON.BALANCE")}: <Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
+											{t("COMMON.BALANCE")}:{" "}
+											<Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
 										</span>
 									)}
-									{isSenderFilled && !!remainingBalance && isSingle && <div className="w-px h-3 bg-theme-secondary-300 dark:bg-theme-dark-700" data-testid="AddRecipient__divider"/>}
+									{isSenderFilled && !!remainingBalance && isSingle && (
+										<div
+											className="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
+											data-testid="AddRecipient__divider"
+										/>
+									)}
 									{isSingle && (
 										<span className="inline-flex">
 											<Button

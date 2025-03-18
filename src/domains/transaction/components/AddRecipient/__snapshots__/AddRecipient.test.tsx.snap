@@ -235,7 +235,8 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   data-testid="AddRecipient__available"
                 >
                   Balance
-                  : 
+                  :
+                   
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
@@ -244,7 +245,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   </span>
                 </span>
                 <div
-                  class="w-px h-3 bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -551,7 +552,8 @@ exports[`AddRecipient > should render 1`] = `
                   data-testid="AddRecipient__available"
                 >
                   Balance
-                  : 
+                  :
+                   
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
@@ -560,7 +562,7 @@ exports[`AddRecipient > should render 1`] = `
                   </span>
                 </span>
                 <div
-                  class="w-px h-3 bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -852,7 +854,8 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   data-testid="AddRecipient__available"
                 >
                   Balance
-                  : 
+                  :
+                   
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
@@ -861,7 +864,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   </span>
                 </span>
                 <div
-                  class="w-px h-3 bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -1153,7 +1156,8 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   data-testid="AddRecipient__available"
                 >
                   Balance
-                  : 
+                  :
+                   
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
@@ -1162,7 +1166,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   </span>
                 </span>
                 <div
-                  class="w-px h-3 bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -1454,7 +1458,8 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   data-testid="AddRecipient__available"
                 >
                   Balance
-                  : 
+                  :
+                   
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
@@ -1463,7 +1468,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   </span>
                 </span>
                 <div
-                  class="w-px h-3 bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
                   data-testid="AddRecipient__divider"
                 />
                 <span
@@ -1687,7 +1692,8 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   data-testid="AddRecipient__available"
                 >
                   Balance
-                  : 
+                  :
+                   
                   <span
                     class="whitespace-nowrap"
                     data-testid="Amount"
@@ -1696,7 +1702,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   </span>
                 </span>
                 <div
-                  class="w-px h-3 bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700"
                   data-testid="AddRecipient__divider"
                 />
                 <span
