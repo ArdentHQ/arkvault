@@ -354,33 +354,34 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 					<FormField name="amount">
 						<FormLabel>
 							<span className="items-centers flex w-full justify-between">
-								<span>
-									<span>{t("COMMON.AMOUNT")}</span>
-									{isSenderFilled && !!remainingNetBalance && (
+								<span>{t("COMMON.AMOUNT")}</span>
+								<div className="flex flex-row items-center gap-2">
+									{isSenderFilled && !!remainingBalance && (
 										<span
 											data-testid="AddRecipient__available"
-											className="ml-1 text-theme-secondary-500"
+											className="text-theme-secondary-700 dark:text-theme-dark-200" 
 										>
-											(<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
+											{t("COMMON.BALANCE")}: <Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
 										</span>
 									)}
-								</span>
-								{isSingle && (
-									<span className="inline-flex sm:hidden">
-										<Button
-											type="button"
-											variant="transparent"
-											disabled={!isSenderFilled}
-											className="p-0 text-sm text-theme-navy-600"
-											onClick={() => {
-												setValue("isSendAllSelected", !getValues("isSendAllSelected"));
-											}}
-											data-testid="AddRecipient__send-all_mobile"
-										>
-											{t("TRANSACTION.SEND_ALL")}
-										</Button>
-									</span>
-								)}
+									{isSenderFilled && !!remainingBalance && isSingle && <div className="w-px h-3 bg-theme-secondary-300 dark:bg-theme-dark-700" data-testid="AddRecipient__divider"/>}
+									{isSingle && (
+										<span className="inline-flex">
+											<Button
+												type="button"
+												variant="transparent"
+												disabled={!isSenderFilled}
+												className="p-0 text-sm text-theme-navy-600"
+												onClick={() => {
+													setValue("isSendAllSelected", !getValues("isSendAllSelected"));
+												}}
+												data-testid="AddRecipient__send-all"
+											>
+												{t("TRANSACTION.SEND_ALL")}
+											</Button>
+										</span>
+									)}
+								</div>
 							</span>
 						</FormLabel>
 
@@ -404,24 +405,6 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									}}
 								/>
 							</div>
-
-							{isSingle && (
-								<div className="hidden sm:inline-flex">
-									<InputButtonStyled
-										type="button"
-										disabled={!isSenderFilled}
-										className={cn({
-											active: getValues("isSendAllSelected"),
-										})}
-										onClick={() => {
-											setValue("isSendAllSelected", !getValues("isSendAllSelected"));
-										}}
-										data-testid="AddRecipient__send-all"
-									>
-										{t("TRANSACTION.SEND_ALL")}
-									</InputButtonStyled>
-								</div>
-							)}
 						</div>
 					</FormField>
 					{!isSingle && (
