@@ -144,7 +144,6 @@ export const PortfolioHeader = ({
 											name="DoubleChevron"
 											width={26}
 											height={26}
-											className="dark:text-theme-dark-200 text-theme-secondary-700"
 										/>
 									</Button>
 								</div>
