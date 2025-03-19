@@ -403,7 +403,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								</>
 							)}
 
-							<div className="flex items-center gap-2">
+							<div className="flex items-center gap-5">
 								<HideBalance className="hidden md-lg:flex" profile={profile} />
 								<UserMenu
 									userInitials={userInitials}

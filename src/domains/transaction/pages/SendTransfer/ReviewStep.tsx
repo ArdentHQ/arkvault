@@ -96,7 +96,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 					recipients={recipients}
 					profile={profile}
 					network={wallet.network()}
-					labelClassName="w-14 sm:w-36"
+					labelClassName="w-14 sm:min-w-[85px] sm:pr-6"
 				/>
 
 				<div className="space-y-3 sm:space-y-2">
@@ -107,7 +107,9 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 									className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 									data-testid="AmountSection"
 								>
-									<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.AMOUNT")}</DetailTitle>
+									<DetailTitle className="w-auto sm:min-w-[85px] sm:pr-6">
+										{t("COMMON.AMOUNT")}
+									</DetailTitle>
 
 									<div className="flex flex-row items-center gap-2">
 										<Amount ticker={ticker} value={amount} className="font-semibold" />
