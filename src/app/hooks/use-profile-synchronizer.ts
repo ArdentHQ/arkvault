@@ -170,10 +170,7 @@ export const useProfileSyncStatus = (profileId: string) => {
 		return !isSyncing() && !isRestoring() && !isSynced() && !isCompleted() && !profile.status().isRestored();
 	};
 
-	const shouldSync = () => {
-		const current = getCurrentState();
-		return !isSyncing() && !isRestoring() && !isSynced() && !isCompleted();
-	};
+	const shouldSync = () => !isSyncing() && !isRestoring() && !isSynced() && !isCompleted();
 
 	const shouldMarkCompleted = () => isSynced() && !isCompleted();
 
