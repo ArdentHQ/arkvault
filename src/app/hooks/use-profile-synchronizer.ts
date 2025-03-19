@@ -378,6 +378,10 @@ export const useProfileSynchronizer = ({
 			}
 
 			try {
+				// If the user only has one network, we skip the network selection
+				// step when creating or importing a wallet, which means we also
+				// skip that part of syncing network coin. The issues caused by that
+				// are solved by syncing the coin initially.
 				const availableNetworks = profileAllEnabledNetworks(profile);
 				const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
 				const activeNetwork = getActiveNetwork(profile);
@@ -469,6 +473,7 @@ export const useProfileSynchronizer = ({
 
 			const profileConfig = getProfileConfiguration(profileId);
 			if (shouldMarkCompleted() && profileConfig.profileIsSyncing) {
+				// for better performance no need to await
 				runAll();
 				start();
 				setStatus("completed");
