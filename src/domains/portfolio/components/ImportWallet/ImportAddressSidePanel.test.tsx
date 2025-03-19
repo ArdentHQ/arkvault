@@ -17,20 +17,19 @@ import {
 	screen,
 	waitFor,
 	mockNanoXTransport,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 
 const mnemonic = "buddy year cost vendor honey tonight viable nut female alarm duck symptom";
 const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
-const routeLedger = `/profiles/${fixtureProfileId}/dashboard/ledger`;
 const history = createHashHistory();
 
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
@@ -44,15 +43,18 @@ const privateKeyInput = () => screen.getByTestId("ImportWallet__privatekey-input
 const wifInput = () => screen.getByTestId("ImportWallet__wif-input");
 const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-input");
 
-const testNetwork = "ark.devnet";
+const testNetwork = "mainsail.devnet";
 let network;
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("ImportSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
-		network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
+		network = profile.availableNetworks().find((net) => net.coin() === "Mainsail" && net.id() === testNetwork);
 
 		await env.profiles().restore(profile);
 
@@ -298,7 +300,7 @@ describe("ImportSidePanel", () => {
 		};
 
 		it("when is valid", async () => {
-			const coin = profile.coins().get("ARK", testNetwork);
+			const coin = profile.coins().get("Mainsail", testNetwork);
 			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockResolvedValue({ address: "whatever" });
 
 			history.push(`/profiles/${profile.id()}`);
@@ -327,7 +329,7 @@ describe("ImportSidePanel", () => {
 		});
 
 		it("when is not valid", async () => {
-			const coin = profile.coins().get("ARK", testNetwork);
+			const coin = profile.coins().get("Mainsail", testNetwork);
 			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockImplementation(() => {
 				throw new Error("test");
 			});
@@ -382,7 +384,7 @@ describe("ImportSidePanel", () => {
 		};
 
 		it("with valid wif", async () => {
-			const coin = profile.coins().get("ARK", testNetwork);
+			const coin = profile.coins().get("Mainsail", testNetwork);
 			const coinMock = vi
 				.spyOn(coin.address(), "fromWIF")
 				.mockResolvedValue({ address: "whatever", type: "bip39" });
@@ -412,7 +414,7 @@ describe("ImportSidePanel", () => {
 		});
 
 		it("with invalid wif", async () => {
-			const coin = profile.coins().get("ARK", testNetwork);
+			const coin = profile.coins().get("Mainsail", testNetwork);
 
 			const coinMock = vi.spyOn(coin.address(), "fromWIF").mockImplementation(() => {
 				throw new Error("Something went wrong");
