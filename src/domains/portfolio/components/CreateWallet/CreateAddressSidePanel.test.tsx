@@ -13,7 +13,7 @@ import {
 	screen,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
@@ -22,7 +22,7 @@ import { expect } from "vitest";
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 const passphrase = "power return attend drink piece found tragic fire liar page disease combine";
 const encryptionPassword = "S3cUrePa$sword";
 
@@ -36,9 +36,9 @@ describe("CreateAddressSidePanel", () => {
 
 		const profile = env.profiles().findById(fixtureProfileId);
 		const walletMock = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic: passphrase,
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 
 		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(
@@ -69,9 +69,9 @@ describe("CreateAddressSidePanel", () => {
 		}
 
 		const networkWallet = await profile.walletFactory().fromAddress({
-			address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			coin: "ARK",
-			network: "ark.devnet",
+			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 		});
 
 		vi.spyOn(profile, "availableNetworks").mockReturnValue([networkWallet.network()]);
