@@ -4,16 +4,22 @@ import { twMerge } from "tailwind-merge";
 import { Button } from "@/app/components/Button";
 import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { Amount } from "@/app/components/Amount";
+import { useProfileBalance } from "@/app/hooks/use-profile-balance";
+import { useConfiguration } from "@/app/contexts";
 
 export const HideBalance = ({ profile, className }: { profile: Contracts.IProfile; className?: string }) => {
 	const { hideBalance, setHideBalance } = useBalanceVisibility({ profile });
+	const { profileIsSyncingExchangeRates } = useConfiguration();
+	const { convertedBalance } = useProfileBalance({ isLoading: profileIsSyncingExchangeRates, profile });
+	const ticker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) || "USD";
 
 	return (
 		<div className={twMerge("m-0 flex items-center gap-2 space-x-0", className)}>
 			<Button
 				variant="transparent"
 				onClick={() => setHideBalance(!hideBalance)}
-				className="p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+				className="group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
 				data-testid="HideBalance-button"
 			>
 				{hideBalance ? (
@@ -21,6 +27,10 @@ export const HideBalance = ({ profile, className }: { profile: Contracts.IProfil
 				) : (
 					<Icon name="Eye" size="lg" data-testid="HideBalance-icon-show" />
 				)}
+
+				<div className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex">
+					<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
+				</div>
 			</Button>
 		</div>
 	);
