@@ -47,7 +47,7 @@ describe("useProfileSyncStatus", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
 
 		expect(current.shouldRestore(profile)).toBe(true);
 
@@ -64,7 +64,7 @@ describe("useProfileSyncStatus", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
 
 		expect(current.isIdle()).toBe(true);
 		expect(current.shouldRestore(profile)).toBe(false);
@@ -80,7 +80,7 @@ describe("useProfileSyncStatus", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
 
 		act(() => {
 			current.setStatus("restoring");
@@ -100,7 +100,7 @@ describe("useProfileSyncStatus", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
 
 		act(() => {
 			current.markAsRestored(profile.id());
@@ -120,7 +120,7 @@ describe("useProfileSyncStatus", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
 
 		act(() => {
 			current.setStatus("idle");
@@ -141,7 +141,7 @@ describe("useProfileSyncStatus", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
 
 		act(() => {
 			current.setStatus("synced");
@@ -161,7 +161,7 @@ describe("useProfileSyncStatus", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
 
 		act(() => {
 			current.setStatus("completed");
@@ -356,7 +356,9 @@ describe("useProfileSynchronizer", () => {
 
 		await expect(screen.findByTestId("Dashboard")).resolves.toBeVisible();
 
-		await waitFor(() => expect(configuration.profileHasSyncedOnce).toBe(true));
+		await waitFor(() =>
+			expect(configuration.getProfileConfiguration(emptyProfile.id()).profileHasSyncedOnce).toBe(true),
+		);
 
 		expect(onProfileSyncStart).not.toHaveBeenCalled();
 	});
@@ -387,7 +389,9 @@ describe("useProfileSynchronizer", () => {
 
 		await expect(screen.findByTestId("ResetSyncProfile")).resolves.toBeVisible();
 
-		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(false));
+		await waitFor(() =>
+			expect(configuration.getProfileConfiguration(getDefaultProfileId()).isProfileInitialSync).toBe(false),
+		);
 		/*
 		await userEvent.click(screen.getByTestId("ResetSyncProfile"));
 
@@ -575,7 +579,7 @@ describe("useProfileRestore", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileRestore(), { wrapper });
+		} = renderHook(() => useProfileRestore(profile.id()), { wrapper });
 
 		let isRestored: boolean | undefined;
 
@@ -609,7 +613,7 @@ describe("useProfileRestore", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileRestore(), { wrapper });
+		} = renderHook(() => useProfileRestore(getDefaultProfileId()), { wrapper });
 
 		let isRestored: boolean | undefined;
 
