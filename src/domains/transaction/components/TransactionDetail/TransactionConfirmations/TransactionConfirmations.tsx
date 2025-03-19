@@ -67,12 +67,12 @@ export const TransactionConfirmations = ({
 				>
 					<div className="flex items-center space-x-2 text-theme-success-700">
 						<Icon name="CheckmarkDouble" size="lg" className="h-5" />
-						<p className="font-semibold">{t("COMMON.ALERT.SUCCESS")}</p>
+						<p className="text-sm font-semibold sm:text-base">{t("COMMON.ALERT.SUCCESS")}</p>
 					</div>
 
 					<Divider type="vertical" className="h-5 text-theme-success-200 dark:text-theme-secondary-800" />
 
-					<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600">
+					<p className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-success-600 sm:text-base">
 						<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
 					</p>
 				</div>
