@@ -72,7 +72,7 @@ export const TransactionConfirmations = ({
 
 					<Divider type="vertical" className="h-5 text-theme-success-200 dark:text-theme-secondary-800" />
 
-					<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600">
+					<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600 text-sm sm:text-base">
 						<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
 					</p>
 				</div>
