@@ -17,7 +17,6 @@ import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
 import { createHashHistory } from "history";
 import { within } from "@testing-library/react";
-import { useActiveProfile } from "@/app/hooks";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -33,10 +32,8 @@ const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
 
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
-	const activeProfile = useActiveProfile();
-
 	useEffect(() => {
-		setConfiguration(activeProfile.id(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(getDefaultProfileId(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return (
