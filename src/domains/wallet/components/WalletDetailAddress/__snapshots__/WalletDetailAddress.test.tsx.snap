@@ -57,11 +57,11 @@ exports[`WalletDetailAddress > should render 1`] = `
           class="flex items-center sm:hidden"
         >
           <div
-            class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+            class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -75,11 +75,11 @@ exports[`WalletDetailAddress > should render 1`] = `
           class="hidden sm:flex sm:items-center"
         >
           <div
-            class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+            class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
