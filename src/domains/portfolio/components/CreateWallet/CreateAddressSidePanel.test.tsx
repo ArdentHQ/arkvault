@@ -8,7 +8,6 @@ import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVe
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	waitFor,
