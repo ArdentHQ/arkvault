@@ -12,7 +12,8 @@ import {
 	screen,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
