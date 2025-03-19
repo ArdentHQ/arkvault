@@ -11,7 +11,6 @@ import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	renderResponsive,
 	screen,
