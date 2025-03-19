@@ -139,12 +139,9 @@ export const PortfolioHeader = ({
 							>
 								<div className="flex items-center gap-1">
 									<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
-									<Icon
-										name="DoubleChevron"
-										width={26}
-										height={26}
-										className="text-theme-dark-200 text-theme-secondary-700"
-									/>
+									<Button variant="primary-transparent" size="icon" className="h-6 w-6">
+										<Icon name="DoubleChevron" width={26} height={26} />
+									</Button>
 								</div>
 							</div>
 						</div>
