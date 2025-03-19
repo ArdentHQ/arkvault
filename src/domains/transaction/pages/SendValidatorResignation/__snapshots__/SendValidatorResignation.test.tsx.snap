@@ -577,7 +577,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -732,7 +732,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                           >
                             <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[178px]"
                             >
                               From
                             </div>
@@ -823,7 +823,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -848,7 +848,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -1904,7 +1904,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -2203,7 +2203,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -2228,7 +2228,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -2981,7 +2981,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -3136,7 +3136,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                           >
                             <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[178px]"
                             >
                               From
                             </div>
@@ -3227,7 +3227,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -3252,7 +3252,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -3326,7 +3326,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="false"
                               aria-label="0.00075"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3368,7 +3368,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="true"
                               aria-label="0.0007600051875"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3410,7 +3410,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="false"
                               aria-label="0.0009"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -4192,7 +4192,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -5176,7 +5176,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
