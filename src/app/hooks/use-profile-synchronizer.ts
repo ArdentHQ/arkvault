@@ -231,7 +231,7 @@ export const useProfileRestore = (profileId: string) => {
 		await env.profiles().restore(profile, password);
 		markAsRestored();
 
-		const activeProfile = getProfileFromUrl(env, history.location.pathname);
+		const activeProfile = getProfileFromUrl(env, history?.location?.pathname);
 		if (activeProfile?.id() !== profile.id()) {
 			return;
 		}
