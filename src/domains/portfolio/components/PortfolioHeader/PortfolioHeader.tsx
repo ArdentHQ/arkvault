@@ -95,10 +95,11 @@ export const PortfolioHeader = ({
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
-				<div className="flex w-full flex-row items-center justify-between px-4">
+				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
 					<Tooltip
 						visible={showHint}
 						interactive={true}
+
 						content={
 							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pb-px sm:pt-px">
 								<div className="mb-2 block sm:mb-0 sm:inline">
