@@ -209,6 +209,8 @@ export const MAINSAIL_MNEMONICS = [
 	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
 	// 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
 	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
+	// 0x393f3F74F0cd9e790B5192789F31E0A38159ae03
+	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury"
 ];
 
 export const breakpoints: {

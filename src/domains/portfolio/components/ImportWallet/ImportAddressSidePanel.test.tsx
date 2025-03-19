@@ -238,7 +238,7 @@ describe("ImportSidePanel", () => {
 
 		const history = createHashHistory();
 		history.push(route);
-		const randomNewAddress = "DHnF7Ycv16QxQQNGDUdGzWGh5n3ym424UW";
+		const randomNewAddress = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
 
 		const onOpenChangeMock = vi.fn();
 

@@ -6,10 +6,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
-	getDefaultProfileId,
 	MNEMONICS,
 	render,
 	screen,
@@ -143,7 +141,7 @@ describe("ImportAddress", () => {
 		expect(mnemonicInput()).toBeInTheDocument();
 
 		await userEvent.clear(mnemonicInput());
-		await userEvent.type(mnemonicInput(), MNEMONICS[3]);
+		await userEvent.type(mnemonicInput(), MAINSAIL_MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 

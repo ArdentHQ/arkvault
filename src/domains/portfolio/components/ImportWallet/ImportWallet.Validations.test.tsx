@@ -12,13 +12,13 @@ import {
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId, MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 
 let profile: Contracts.IProfile;
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 
 const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
 
@@ -37,7 +37,10 @@ const toggleEncryptionCheckbox = async () =>
 
 const secretInputID = "ImportWallet__secret-input";
 const errorText = "data-errortext";
-const testNetwork = "ark.devnet";
+const testNetwork = "mainsail.devnet";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("ImportAddress Validations", () => {
 	let resetProfileNetworksMock: () => void;
@@ -66,7 +69,7 @@ describe("ImportAddress Validations", () => {
 	});
 
 	it("should error if address cannot be created", async () => {
-		const coin = profile.coins().get("ARK", testNetwork);
+		const coin = profile.coins().get("Mainsail", testNetwork);
 		const coinMock = vi.spyOn(coin.address(), "fromSecret").mockImplementationOnce(() => {
 			throw new Error("test");
 		});
@@ -129,78 +132,79 @@ describe("ImportAddress Validations", () => {
 		await waitFor(() => expect(continueButton()).not.toBeEnabled());
 	});
 
-	it("should show an error message for invalid second secret", async () => {
-		const walletId = profile
-			.wallets()
-			.findByAddressWithNetwork("DNTwQTSp999ezQ425utBsWetcmzDuCn2pN", testNetwork)
-			?.id();
-
-		if (walletId) {
-			profile.wallets().forget(walletId);
-		}
-
-		const wallet = await profile.walletFactory().fromSecret({
-			coin: "ARK",
-			network: "ark.devnet",
-			secret: "abc",
-		});
-
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(commonTranslations.SECRET));
-
-		expect(detailStep()).toBeInTheDocument();
-
-		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
-
-		const passphraseInput = screen.getByTestId(secretInputID);
-
-		expect(passphraseInput).toBeInTheDocument();
-
-		await userEvent.clear(passphraseInput);
-		await userEvent.type(passphraseInput, "abc");
-
-		await waitFor(() => {
-			expect(passphraseInput).toHaveValue("abc");
-		});
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await enableEncryptionToggle();
-		await toggleEncryptionCheckbox();
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
-		});
-
-		const fromSecretMock = vi.spyOn(wallet.coin().address(), "fromSecret").mockImplementationOnce(() => {
-			throw new Error("test");
-		});
-
-		await userEvent.clear(screen.getByTestId("EncryptPassword__second-secret"));
-		await userEvent.type(screen.getByTestId("EncryptPassword__second-secret"), "invalid second secret");
-
-		expect(screen.getByTestId("EncryptPassword__second-secret")).toHaveValue("invalid second secret");
-		expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveAttribute("aria-invalid");
-
-		fromSecretMock.mockRestore();
-	});
+	// @TODO enable when we have 2nd signature enabled
+	// it("should show an error message for invalid second secret", async () => {
+	// 	const walletId = profile
+	// 		.wallets()
+	// 		.findByAddressWithNetwork("0xfb36D3cc82953351A7f9a0Fd09c17D271ecBEB03", testNetwork)
+	// 		?.id();
+	//
+	// 	if (walletId) {
+	// 		profile.wallets().forget(walletId);
+	// 	}
+	//
+	// 	const wallet = await profile.walletFactory().fromSecret({
+	// 		coin: "Mainsail",
+	// 		network: "mainsail.devnet",
+	// 		secret: "abc",
+	// 	});
+	//
+	// 	render(
+	// 		<Route path="/profiles/:profileId/dashboard">
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+	// 		</Route>,
+	// 		{
+	// 			route: route,
+	// 		},
+	// 	);
+	//
+	// 	expect(methodStep()).toBeInTheDocument();
+	//
+	// 	await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
+	//
+	// 	await userEvent.click(screen.getByText(commonTranslations.SECRET));
+	//
+	// 	expect(detailStep()).toBeInTheDocument();
+	//
+	// 	await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
+	//
+	// 	const passphraseInput = screen.getByTestId(secretInputID);
+	//
+	// 	expect(passphraseInput).toBeInTheDocument();
+	//
+	// 	await userEvent.clear(passphraseInput);
+	// 	await userEvent.type(passphraseInput, "abc");
+	//
+	// 	await waitFor(() => {
+	// 		expect(passphraseInput).toHaveValue("abc");
+	// 	});
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	await enableEncryptionToggle();
+	// 	await toggleEncryptionCheckbox();
+	// 	await userEvent.click(continueButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+	// 	});
+	//
+	// 	const fromSecretMock = vi.spyOn(wallet.coin().address(), "fromSecret").mockImplementationOnce(() => {
+	// 		throw new Error("test");
+	// 	});
+	//
+	// 	await userEvent.clear(screen.getByTestId("EncryptPassword__second-secret"));
+	// 	await userEvent.type(screen.getByTestId("EncryptPassword__second-secret"), "invalid second secret");
+	//
+	// 	expect(screen.getByTestId("EncryptPassword__second-secret")).toHaveValue("invalid second secret");
+	// 	expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveAttribute("aria-invalid");
+	//
+	// 	fromSecretMock.mockRestore();
+	// });
 
 	it("should show an error message for duplicate address when importing by mnemonic", async () => {
 		const generated = await profile.walletFactory().generate({
-			coin: "ARK",
+			coin: "Mainsail",
 			network: testNetwork,
 		});
 
@@ -316,11 +320,11 @@ describe("ImportAddress Validations", () => {
 		await env.profiles().restore(emptyProfile);
 		await emptyProfile.sync();
 
-		const randomNewAddress = "D6pPxYLwwCptuhVRvLQQYXEQiQMB5x6iY3";
+		const randomNewAddress = "0x393f3F74F0cd9e790B5192789F31E0A38159ae03";
 
 		const wallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[1],
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[1],
 			network: testNetwork,
 		});
 
@@ -352,6 +356,7 @@ describe("ImportAddress Validations", () => {
 		await userEvent.clear(await addressInput());
 		await userEvent.type(await addressInput(), randomNewAddress);
 
+		screen.debug(screen.getByTestId("ImportAddressSidePanel"), Infinity)
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await userEvent.click(continueButton());
 
