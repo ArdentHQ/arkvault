@@ -6,7 +6,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { ThemeIcon } from "@/app/components/Icon";
-import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
+import { getVoteCategory, VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import cn from "classnames";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -35,6 +35,8 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 		[unvotes, votes, wallet],
 	);
 
+	const voteCategory = getVoteCategory(votes, unvotes);
+
 	return (
 		<section data-testid="SendVote__review-step">
 			<StepHeader
@@ -47,7 +49,14 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
 				<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 					<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:gap-0 sm:space-x-0">
-						<DetailTitle className={cn("w-auto sm:min-w-36")}>{t("COMMON.FROM")}</DetailTitle>
+						<DetailTitle
+							className={cn("w-auto", {
+								"sm:min-w-[132px]": voteCategory === "swap",
+								"sm:min-w-[93px]": voteCategory !== "swap",
+							})}
+						>
+							{t("COMMON.FROM")}
+						</DetailTitle>
 						<Address
 							address={wallet.address()}
 							walletName={wallet.alias()}

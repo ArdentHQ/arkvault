@@ -9,11 +9,11 @@ exports[`VoteList > should render in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -52,11 +52,11 @@ exports[`VoteList > should render in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -95,11 +95,11 @@ exports[`VoteList > should render in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -147,11 +147,11 @@ exports[`VoteList > should render in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -190,11 +190,11 @@ exports[`VoteList > should render in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -233,11 +233,11 @@ exports[`VoteList > should render in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -310,11 +310,11 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -353,11 +353,11 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -396,11 +396,11 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -423,11 +423,11 @@ exports[`VoteList > should render in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -466,11 +466,11 @@ exports[`VoteList > should render in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -509,11 +509,11 @@ exports[`VoteList > should render in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -586,11 +586,11 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -629,11 +629,11 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -672,11 +672,11 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -699,11 +699,11 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -752,11 +752,11 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -805,11 +805,11 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -867,11 +867,11 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -920,11 +920,11 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -973,11 +973,11 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1070,11 +1070,11 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1123,11 +1123,11 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -1176,11 +1176,11 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1203,11 +1203,11 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1256,11 +1256,11 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -1309,11 +1309,11 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1406,11 +1406,11 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1459,11 +1459,11 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -1512,11 +1512,11 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"

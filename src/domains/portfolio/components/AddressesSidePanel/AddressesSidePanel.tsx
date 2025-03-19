@@ -201,10 +201,10 @@ export const AddressesSidePanel = ({
 							<Button
 								data-testid="ManageAddresses"
 								size="icon"
-								variant="transparent"
+								variant="primary-transparent"
 								onClick={() => setDeleteMode(true)}
 								className={cn(
-									"p-2 py-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5",
+									"p-2 py-[3px] text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5",
 									{
 										"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
 											showManageHint,

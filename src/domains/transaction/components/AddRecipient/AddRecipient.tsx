@@ -1,5 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { useFormContext } from "react-hook-form";
@@ -19,7 +18,6 @@ import { useValidation, WalletAliasResult } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
-import { twMerge } from "tailwind-merge";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
@@ -58,15 +56,6 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 		</div>
 	);
 };
-
-const InputButtonStyled = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
-	<button
-		{...props}
-		className={twMerge(
-			"input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700",
-		)}
-	/>
-);
 
 export const AddRecipient: VFC<AddRecipientProperties> = ({
 	disableMultiPaymentOption,
@@ -354,33 +343,45 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 					<FormField name="amount">
 						<FormLabel>
 							<span className="items-centers flex w-full justify-between">
-								<span>
+								<div className="flex flex-row items-center gap-1.5">
 									<span>{t("COMMON.AMOUNT")}</span>
-									{isSenderFilled && !!remainingNetBalance && (
-										<span
+									<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden">
+										(<Amount value={+remainingBalance} ticker={ticker} showTicker={false} />)
+									</span>
+								</div>
+								<div className="flex flex-row items-center gap-2">
+									{isSenderFilled && !!remainingBalance && (
+										<div
 											data-testid="AddRecipient__available"
-											className="ml-1 text-theme-secondary-500"
+											className="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
 										>
-											(<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
+											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
+											<Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
+										</div>
+									)}
+									{isSenderFilled && !!remainingBalance && isSingle && (
+										<div
+											className="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
+											data-testid="AddRecipient__divider"
+										/>
+									)}
+									{isSingle && (
+										<span className="inline-flex">
+											<Button
+												type="button"
+												variant="transparent"
+												disabled={!isSenderFilled}
+												className="p-0 text-sm text-theme-navy-600"
+												onClick={() => {
+													setValue("isSendAllSelected", !getValues("isSendAllSelected"));
+												}}
+												data-testid="AddRecipient__send-all"
+											>
+												{t("TRANSACTION.SEND_ALL")}
+											</Button>
 										</span>
 									)}
-								</span>
-								{isSingle && (
-									<span className="inline-flex sm:hidden">
-										<Button
-											type="button"
-											variant="transparent"
-											disabled={!isSenderFilled}
-											className="p-0 text-sm text-theme-navy-600"
-											onClick={() => {
-												setValue("isSendAllSelected", !getValues("isSendAllSelected"));
-											}}
-											data-testid="AddRecipient__send-all_mobile"
-										>
-											{t("TRANSACTION.SEND_ALL")}
-										</Button>
-									</span>
-								)}
+								</div>
 							</span>
 						</FormLabel>
 
@@ -404,24 +405,6 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									}}
 								/>
 							</div>
-
-							{isSingle && (
-								<div className="hidden sm:inline-flex">
-									<InputButtonStyled
-										type="button"
-										disabled={!isSenderFilled}
-										className={cn({
-											active: getValues("isSendAllSelected"),
-										})}
-										onClick={() => {
-											setValue("isSendAllSelected", !getValues("isSendAllSelected"));
-										}}
-										data-testid="AddRecipient__send-all"
-									>
-										{t("TRANSACTION.SEND_ALL")}
-									</InputButtonStyled>
-								</div>
-							)}
 						</div>
 					</FormField>
 					{!isSingle && (

@@ -599,13 +599,13 @@ exports[`Dashboard > should render 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -644,6 +644,16 @@ exports[`Dashboard > should render 1`] = `
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -653,28 +663,18 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
@@ -746,35 +746,42 @@ exports[`Dashboard > should render 1`] = `
                           </span>
                         </span>
                       </div>
-                      <div
-                        class="text-theme-dark-200 text-theme-secondary-700"
+                      <button
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 hover:dark:text-theme-dark-50 hover:bg-theme-primary-200 hover:dark:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 h-6 w-6"
+                        type="button"
                       >
                         <div
-                          style="height: 26px; width: 26px;"
+                          class="flex items-center space-x-2"
                         >
-                          <svg
-                            fill="none"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="1.6"
-                            />
-                            <path
-                              d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="1.6"
-                            />
-                          </svg>
+                          <div>
+                            <div
+                              style="height: 26px; width: 26px;"
+                            >
+                              <svg
+                                fill="none"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
+                                />
+                                <path
+                                  d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
+                                />
+                              </svg>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
