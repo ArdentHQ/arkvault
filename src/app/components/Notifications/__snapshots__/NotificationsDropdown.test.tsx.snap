@@ -852,7 +852,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <p
-                                class="font-semibold"
+                                class="text-sm font-semibold sm:text-base"
                               >
                                 Success
                               </p>
