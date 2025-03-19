@@ -861,7 +861,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-success-200 dark:text-theme-secondary-800"
                             />
                             <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
+                              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-success-600 sm:text-base"
                             >
                               <span>
                                 1 Confirmations
