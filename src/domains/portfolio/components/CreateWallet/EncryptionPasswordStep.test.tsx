@@ -10,7 +10,9 @@ import {
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId, MAINSAIL_MNEMONICS,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
@@ -47,12 +49,13 @@ describe("EncryptionPasswordStep", () => {
 		});
 
 		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(
-			async () => new Promise((resolve) => {
-				resolve({
-					mnemonic: passphrase,
-					wallet: walletMock,
-				});
-			}),
+			async () =>
+				new Promise((resolve) => {
+					resolve({
+						mnemonic: passphrase,
+						wallet: walletMock,
+					});
+				}),
 		);
 
 		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
@@ -75,10 +78,7 @@ describe("EncryptionPasswordStep", () => {
 
 		render(
 			<Route path="/profiles/:profileId">
-				<CreateAddressesSidePanel
-					open={true}
-					onOpenChange={vi.fn()}
-				/>
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -157,7 +157,7 @@ describe("EncryptionPasswordStep", () => {
 
 		render(
 			<Route path="/profiles/:profileId">
-				<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock}/>
+				<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />
 			</Route>,
 			{
 				history,
