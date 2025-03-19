@@ -23,7 +23,7 @@ const Wrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
 
 	useEffect(() => {
-		setConfiguration({ profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return <Route path="/profiles/:profileId">{children}</Route>;

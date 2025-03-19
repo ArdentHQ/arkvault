@@ -10,8 +10,11 @@ import { useConfiguration } from "@/app/contexts";
 
 export const HideBalance = ({ profile, className }: { profile: Contracts.IProfile; className?: string }) => {
 	const { hideBalance, setHideBalance } = useBalanceVisibility({ profile });
-	const { profileIsSyncingExchangeRates } = useConfiguration();
-	const { convertedBalance } = useProfileBalance({ isLoading: profileIsSyncingExchangeRates, profile });
+	const { profileIsSyncingExchangeRates } = useConfiguration().getProfileConfiguration(profile.id());
+	const { convertedBalance } = useProfileBalance({
+		isLoading: profileIsSyncingExchangeRates,
+		profile,
+	});
 	const ticker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) || "USD";
 
 	return (

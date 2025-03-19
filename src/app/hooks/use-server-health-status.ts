@@ -2,12 +2,13 @@ import { useTranslation } from "react-i18next";
 import { useMemo } from "react";
 import { useConfiguration } from "@/app/contexts";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { useActiveProfile } from "@/app/hooks";
 
 export const useServerHealthStatus = () => {
 	const { t } = useTranslation();
-	const { serverStatus } = useConfiguration();
+	const profile = useActiveProfile();
+	const { serverStatus } = useConfiguration().getProfileConfiguration(profile.id());
 
-	// eslint-disable-next-line sonarjs/cognitive-complexity
 	const status = useMemo(() => {
 		const getOverallStatus = (serverStatus: any) => {
 			const peersByNetwork = Object.values(serverStatus);

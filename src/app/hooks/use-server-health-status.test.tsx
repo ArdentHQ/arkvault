@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import React, { useEffect } from "react";
 import { createHashHistory } from "history";
 import { useConfiguration, ConfigurationProvider } from "@/app/contexts";
@@ -20,7 +19,7 @@ describe("useServerHealthStatus", () => {
 		const { status } = useServerHealthStatus();
 
 		useEffect(() => {
-			setConfiguration({ serverStatus });
+			setConfiguration(getDefaultProfileId(), { serverStatus });
 		}, []);
 
 		return <div data-testid={`ServerHealthStatus--${status.value}`} />;

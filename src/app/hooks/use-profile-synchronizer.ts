@@ -15,10 +15,8 @@ import {
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-
 import { ProfilePeers } from "@/utils/profile-peers";
 import { delay } from "@/utils/delay";
-
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { getActiveNetwork } from "./use-active-network";
@@ -33,39 +31,35 @@ enum Intervals {
 
 const useProfileWatcher = () => {
 	const location = useLocation();
-
 	const { env } = useEnvironmentContext();
-
 	const pathname = (location as any).location?.pathname || location.pathname;
 	const match = useMemo(() => matchPath(pathname, { path: "/profiles/:profileId" }), [pathname]);
 	const profileId = (match?.params as any)?.profileId;
 	const allProfilesCount = env.profiles().count();
 
-	return useMemo(() => getProfileById(env, profileId), [profileId, env, allProfilesCount]); // eslint-disable-line react-hooks/exhaustive-deps
+	return useMemo(() => getProfileById(env, profileId), [profileId, env, allProfilesCount]);
 };
 
 export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any> => {
 	const { env } = useEnvironmentContext();
 	const { setConfiguration } = useConfiguration();
-
 	const walletsCount = profile?.wallets().count();
+	const profileId = profile?.id();
 
 	return useMemo(() => {
-		if (!profile) {
+		if (!profile || !profileId) {
 			return [];
 		}
 
 		const syncProfileWallets = {
 			callback: async (reset = false) => {
 				try {
-					setConfiguration({
+					setConfiguration(profileId, {
 						profileIsSyncingWallets: true,
 						...(reset && { isProfileInitialSync: true }),
 					});
-
 					const activeNetwork = getActiveNetwork(profile);
 					await profile.sync({ networkId: activeNetwork?.id(), ttl: 15_000 });
-
 					const walletIdentifiers: Services.WalletIdentifier[] = profile
 						.wallets()
 						.values()
@@ -77,20 +71,14 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 							type: "address",
 							value: wallet.address(),
 						}));
-
-					// Update dashboard transactions
-					await profile.notifications().transactions().sync({
-						identifiers: walletIdentifiers,
-					});
+					await profile.notifications().transactions().sync({ identifiers: walletIdentifiers });
 				} finally {
-					setConfiguration({ profileIsSyncingWallets: false });
+					setConfiguration(profileId, { profileIsSyncingWallets: false });
 				}
 			},
 			interval: Intervals.VeryShort,
 		};
 
-		// Syncing delegates is necessary for every domain not only votes,
-		// Because it's used in wallet and transaction lists
 		const syncDelegates = {
 			callback: () => env.delegates().syncAll(profile),
 			interval: Intervals.Long,
@@ -98,15 +86,12 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 		const syncExchangeRates = {
 			callback: async () => {
-				setConfiguration({ profileIsSyncingExchangeRates: true });
-
+				setConfiguration(profileId, { profileIsSyncingExchangeRates: true });
 				const currencies = Object.keys(profile.coins().all());
 				const allRates = await Promise.all(
 					currencies.map((currency) => env.exchangeRates().syncAll(profile, currency)),
 				);
-
-				setConfiguration({ profileIsSyncingExchangeRates: false });
-
+				setConfiguration(profileId, { profileIsSyncingExchangeRates: false });
 				return allRates;
 			},
 			interval: Intervals.Long,
@@ -129,7 +114,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 		const syncServerStatus = {
 			callback: async () => {
-				setConfiguration({ serverStatus: await ProfilePeers(env, profile).healthStatusByNetwork() });
+				setConfiguration(profileId, { serverStatus: await ProfilePeers(env, profile).healthStatusByNetwork() });
 			},
 			interval: Intervals.Long,
 		};
@@ -148,7 +133,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			syncProfileWallets: syncProfileWallets.callback,
 			syncServerStatus: syncServerStatus.callback,
 		};
-	}, [env, profile, walletsCount, setConfiguration]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [env, profile, walletsCount, setConfiguration, profileId]);
 };
 
 interface ProfileSyncState {
@@ -156,62 +141,67 @@ interface ProfileSyncState {
 	restored: string[];
 }
 
-export const useProfileSyncStatus = () => {
-	const { profileIsRestoring, setConfiguration } = useConfiguration();
-	const { current } = useRef<ProfileSyncState>({
-		restored: [],
-		status: "idle",
-	});
+export const useProfileSyncStatus = (profileId: string) => {
+	const { getProfileConfiguration, setConfiguration } = useConfiguration();
+	const syncStates = useRef<Map<string, ProfileSyncState>>(new Map());
 
-	const isIdle = () => current.status === "idle";
-	const isRestoring = () => profileIsRestoring || current.status === "restoring";
-	const isSyncing = () => current.status === "syncing";
-	const isSynced = () => current.status === "synced";
-	const isCompleted = () => current.status === "completed";
+	const getCurrentState = (): ProfileSyncState => {
+		if (!syncStates.current.has(profileId)) {
+			syncStates.current.set(profileId, { restored: [], status: "idle" });
+		}
+		return syncStates.current.get(profileId)!;
+	};
+
+	const isIdle = () => getCurrentState().status === "idle";
+	const isRestoring = () =>
+		getProfileConfiguration(profileId).profileIsRestoring || getCurrentState().status === "restoring";
+	const isSyncing = () => getCurrentState().status === "syncing";
+	const isSynced = () => getCurrentState().status === "synced";
+	const isCompleted = () => getCurrentState().status === "completed";
 
 	const shouldRestore = (profile: Contracts.IProfile) => {
-		// For unit tests only. This flag prevents from running restore multiple times
-		// as the profiles are all restored before all (see vi.setup)
+		if (profile.id() !== profileId) {
+			return false;
+		}
 		const isRestoredInTests = process.env.TEST_PROFILES_RESTORE_STATUS === "restored";
 		if (isRestoredInTests) {
 			return false;
 		}
-
 		return !isSyncing() && !isRestoring() && !isSynced() && !isCompleted() && !profile.status().isRestored();
 	};
 
-	const shouldSync = () => !isSyncing() && !isRestoring() && !isSynced() && !isCompleted();
+	const shouldSync = () => {
+		const current = getCurrentState();
+		return !isSyncing() && !isRestoring() && !isSynced() && !isCompleted();
+	};
 
 	const shouldMarkCompleted = () => isSynced() && !isCompleted();
 
-	const markAsRestored = (profileId: string) => {
+	const markAsRestored = () => {
+		const current = getCurrentState();
 		current.status = "restored";
 		current.restored.push(profileId);
-		setConfiguration({ profileIsRestoring: false });
+		setConfiguration(profileId, { profileIsRestoring: false });
 	};
 
-	const resetStatuses = (profiles: Contracts.IProfile[]) => {
+	const resetStatuses = () => {
+		const current = getCurrentState();
 		current.status = "idle";
 		current.restored = [];
-		setConfiguration({ profileIsRestoring: false, profileIsSyncing: true });
-		for (const profile of profiles) {
-			profile.status().reset();
-			profile.password().forget();
-		}
+		setConfiguration(profileId, { profileIsRestoring: false, profileIsSyncing: true });
 	};
 
 	const setStatus = (status: string) => {
+		const current = getCurrentState();
 		current.status = status;
 		if (status === "restoring") {
-			setConfiguration({ profileIsRestoring: true, profileIsSyncingExchangeRates: true });
+			setConfiguration(profileId, { profileIsRestoring: true, profileIsSyncingExchangeRates: true });
 		}
-
 		if (status === "syncing") {
-			setConfiguration({ profileIsSyncingExchangeRates: true });
+			setConfiguration(profileId, { profileIsSyncingExchangeRates: true });
 		}
-
 		if (status === "idle") {
-			setConfiguration({ profileIsSyncingExchangeRates: true });
+			setConfiguration(profileId, { profileIsSyncingExchangeRates: true });
 		}
 	};
 
@@ -224,12 +214,12 @@ export const useProfileSyncStatus = () => {
 		shouldMarkCompleted,
 		shouldRestore,
 		shouldSync,
-		status: () => current.status,
+		status: () => getCurrentState().status,
 	};
 };
 
-export const useProfileRestore = () => {
-	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus();
+export const useProfileRestore = (profileId: string) => {
+	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus(profileId);
 	const { persist, env } = useEnvironmentContext();
 	const history = useHistory();
 
@@ -241,28 +231,20 @@ export const useProfileRestore = () => {
 		const password = passwordInput || getProfileStoredPassword(profile);
 
 		setStatus("restoring");
-
-		// Reset profile normally (passwordless or not)
 		await env.profiles().restore(profile, password);
-		markAsRestored(profile.id());
+		markAsRestored();
 
-		// Restore profile's config
-
-		// Profile restore finished but url changed in the meanwhile.
-		// Prevent from unnecessary save of old profile.
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-		const activeProfile = getProfileFromUrl(env, history?.location?.pathname);
+		const activeProfile = getProfileFromUrl(env, history.location.pathname);
 		if (activeProfile?.id() !== profile.id()) {
 			return;
 		}
 
 		await persist();
+
 		return true;
 	};
 
-	return {
-		restoreProfile,
-	};
+	return { restoreProfile };
 };
 
 interface ProfileStatusWatcherProperties {
@@ -278,42 +260,34 @@ export const useProfileStatusWatcher = ({
 	onProfileSyncError,
 	onProfileSyncComplete,
 }: ProfileStatusWatcherProperties) => {
-	const {
-		setConfiguration,
-		profileIsSyncing,
-		profileIsSyncingWallets,
-		profileHasSyncedOnce,
-		profileErroredNetworks,
-		isProfileInitialSync,
-	} = useConfiguration();
+	const { setConfiguration, getProfileConfiguration } = useConfiguration();
+	const profileId = profile?.id();
+	const profileConfig = profileId ? getProfileConfiguration(profileId) : {};
 
-	const previousErroredNetworks = usePrevious(profileErroredNetworks) || [];
-
+	const previousErroredNetworks = usePrevious(profileConfig.profileErroredNetworks) || [];
 	const walletsCount = profile?.wallets().count();
 
 	useEffect(() => {
-		if (!profile || walletsCount === 0) {
+		if (!profile || !profileId || walletsCount === 0) {
 			return;
 		}
 
-		if (!profileHasSyncedOnce || profileIsSyncingWallets) {
+		if (!profileConfig.profileHasSyncedOnce || profileConfig.profileIsSyncingWallets) {
 			return;
 		}
 
 		const { erroredNetworks } = getErroredNetworks(profile);
 		const isStatusChanged = !isEqual(erroredNetworks, previousErroredNetworks);
 
-		// Prevent from showing network status toasts on every sync.
-		// Show them only on the initial sync and then when failed networks change.
-		if (!isProfileInitialSync && !isStatusChanged) {
+		if (!profileConfig.isProfileInitialSync && !isStatusChanged) {
 			return;
 		}
 
-		setConfiguration({ profileErroredNetworks: erroredNetworks });
+		setConfiguration(profileId, { profileErroredNetworks: erroredNetworks });
 
 		if (erroredNetworks.length > 0) {
 			onProfileSyncError?.(erroredNetworks, () => {
-				setConfiguration({ isProfileInitialSync: true });
+				setConfiguration(profileId, { isProfileInitialSync: true });
 			});
 		}
 
@@ -321,8 +295,17 @@ export const useProfileStatusWatcher = ({
 			onProfileSyncComplete?.();
 		}
 
-		setConfiguration({ isProfileInitialSync: false });
-	}, [profileIsSyncingWallets, profileIsSyncing, profileHasSyncedOnce, profile, walletsCount]); // eslint-disable-line react-hooks/exhaustive-deps
+		setConfiguration(profileId, { isProfileInitialSync: false });
+	}, [
+		profileConfig,
+		profile,
+		walletsCount,
+		profileId,
+		setConfiguration,
+		onProfileSyncError,
+		onProfileSyncComplete,
+		previousErroredNetworks,
+	]);
 };
 
 interface ProfileSynchronizerProperties {
@@ -346,14 +329,15 @@ export const useProfileSynchronizer = ({
 }: ProfileSynchronizerProperties = {}) => {
 	const location = useLocation();
 	const { env, persist } = useEnvironmentContext();
-	const { setConfiguration, profileIsSyncing, profileHasSyncedOnce } = useConfiguration();
-	const { restoreProfile } = useProfileRestore();
+	const { setConfiguration, getProfileConfiguration } = useConfiguration();
 	const profile = useProfileWatcher();
+	const profileId = profile?.id() || "";
 	const { hideSupportChat } = useZendesk();
 
 	const { shouldRestore, shouldSync, shouldMarkCompleted, setStatus, status, markAsRestored, resetStatuses } =
-		useProfileSyncStatus();
+		useProfileSyncStatus(profileId);
 
+	const { restoreProfile } = useProfileRestore(profileId);
 	const { allJobs, syncProfileWallets } = useProfileJobs(profile);
 	const { start, stop, runAll } = useSynchronizer(allJobs);
 	const { setProfileTheme, resetTheme } = useTheme();
@@ -391,22 +375,18 @@ export const useProfileSynchronizer = ({
 
 			setStatus("syncing");
 
-			if (profile.wallets().count() > 0 && !profileHasSyncedOnce) {
+			const profileConfig = getProfileConfiguration(profileId);
+			if (profile.wallets().count() > 0 && !profileConfig.profileHasSyncedOnce) {
 				onProfileSyncStart?.();
 			}
 
 			try {
-				// If the user only has one network, we skip the network selection
-				// step when creating or importing a wallet, which means we also
-				// skip that part of syncing network coin. The issues caused by that
-				// are solved by syncing the coin initially.
 				const availableNetworks = profileAllEnabledNetworks(profile);
 				const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
 				const activeNetwork = getActiveNetwork(profile);
 
 				if (onlyHasOneNetwork) {
 					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());
-
 					await Promise.all([
 						coin.__construct(),
 						profile.sync({ networkId: activeNetwork?.id(), ttl: 10_000 }),
@@ -416,6 +396,7 @@ export const useProfileSynchronizer = ({
 				}
 
 				await persist();
+
 				setStatus("synced");
 			} catch {
 				const { erroredNetworks } = getErroredNetworks(profile);
@@ -432,7 +413,8 @@ export const useProfileSynchronizer = ({
 			onProfileSyncError,
 			onProfileSyncStart,
 			persist,
-			profileHasSyncedOnce,
+			getProfileConfiguration,
+			profileId,
 			setStatus,
 			shouldSync,
 			syncProfileWallets,
@@ -448,10 +430,8 @@ export const useProfileSynchronizer = ({
 			hideSupportChat();
 			resetTheme();
 			resetIdleTimer();
-
-			resetStatuses(env.profiles().values());
-			setConfiguration({ profileErroredNetworks: [] });
-
+			resetStatuses();
+			setConfiguration(profileId, { profileErroredNetworks: [] });
 			stop({ clearTimers: true });
 		};
 
@@ -463,9 +443,7 @@ export const useProfileSynchronizer = ({
 
 				onProfileSignOut?.();
 				clearProfileSyncStatus();
-
 				lastPathname.current = location.pathname;
-
 				return;
 			}
 
@@ -482,9 +460,7 @@ export const useProfileSynchronizer = ({
 
 			if (shouldRestore(profile)) {
 				await restoreProfile(profile);
-
 				setProfileTheme(profile);
-
 				startIdleTimer();
 
 				if (hasIncompatibleLedgerWallets(profile)) {
@@ -494,15 +470,12 @@ export const useProfileSynchronizer = ({
 
 			await profileSyncing(profile);
 
-			if (shouldMarkCompleted() && profileIsSyncing) {
-				// for better performance no need to await
+			const profileConfig = getProfileConfiguration(profileId);
+			if (shouldMarkCompleted() && profileConfig.profileIsSyncing) {
 				runAll();
-
-				// Start background jobs after initial sync
 				start();
-
 				setStatus("completed");
-				setConfiguration({ profileHasSyncedOnce: true, profileIsSyncing: false });
+				setConfiguration(profileId, { profileHasSyncedOnce: true, profileIsSyncing: false });
 			}
 		};
 
@@ -517,11 +490,12 @@ export const useProfileSynchronizer = ({
 		start,
 		persist,
 		setConfiguration,
+		getProfileConfiguration,
+		profileId,
 		shouldMarkCompleted,
 		shouldRestore,
 		shouldSync,
 		setStatus,
-		profileIsSyncing,
 		markAsRestored,
 		restoreProfile,
 		status,
@@ -534,10 +508,9 @@ export const useProfileSynchronizer = ({
 		onProfileSignOut,
 		getErroredNetworks,
 		syncProfileWallets,
-		profileHasSyncedOnce,
 		stop,
 		profileSyncing,
 	]);
 
-	return { profile, profileIsSyncing };
+	return { profile, profileIsSyncing: getProfileConfiguration(profileId).profileIsSyncing };
 };

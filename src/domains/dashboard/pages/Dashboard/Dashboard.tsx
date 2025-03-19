@@ -34,7 +34,7 @@ export const Dashboard = ({
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const { profileIsSyncing } = useConfiguration();
+	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(activeProfile.id());
 
 	const { selectedWallets, selectedWallet } = usePortfolio({ profile: activeProfile });
 
