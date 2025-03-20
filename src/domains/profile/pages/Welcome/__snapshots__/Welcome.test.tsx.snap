@@ -548,7 +548,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -673,7 +673,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -1378,7 +1378,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -1473,7 +1473,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -1598,7 +1598,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2303,7 +2303,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2398,7 +2398,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2523,7 +2523,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -3228,7 +3228,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -3323,7 +3323,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -3448,7 +3448,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4153,7 +4153,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4248,7 +4248,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4373,7 +4373,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -5078,7 +5078,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -5173,7 +5173,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -5298,7 +5298,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -6003,7 +6003,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -6128,7 +6128,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -6833,7 +6833,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -6928,7 +6928,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -7053,7 +7053,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div

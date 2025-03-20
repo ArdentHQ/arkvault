@@ -21,17 +21,17 @@ const wallets = [
 	"0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
 ];
 
-export const mainsailDevnetHandlers = [
+export const mainsailMainnetHandlers = [
 	...endpoints.map((endpoint) =>
-		http.get(`https://dwallets-evm.mainsailhq.com/api${endpoint.path}`, () => {
+		http.get(`https://wallets-evm.mainsailhq.com/api${endpoint.path}`, () => {
 			return HttpResponse.json(endpoint.data);
 		}),
 	),
-	http.get("https://dwallets-evm.mainsailhq.com/", () => {
+	http.get("https://wallets-evm.mainsailhq.com/", () => {
 		return HttpResponse.json({ data: "Hello World!" });
 	}),
 	http.get(
-		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
+		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/mainnet/known-wallets-extended.json",
 		() => {
 			return HttpResponse.json([
 				{
@@ -52,7 +52,7 @@ export const mainsailDevnetHandlers = [
 			]);
 		},
 	),
-	http.post("https://dwallets-evm.mainsailhq.com/evm/api", async ({ request }) => {
+	http.post("https://wallets-evm.mainsailhq.com/evm/api", async ({ request }) => {
 		const body = await request.json();
 
 		// if `to` is `username` abi
@@ -70,7 +70,7 @@ export const mainsailDevnetHandlers = [
 			result: "0x0",
 		});
 	}),
-	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier", (request) => {
+	http.get("https://wallets-evm.mainsailhq.com/api/wallets/:identifier", (request) => {
 		const address = request.params.identifier as string;
 
 		if (!address) {
