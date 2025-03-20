@@ -18,7 +18,10 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 	const renderSubtitle = () => (
 		<>
 			{subtitle && (
-				<div className="flex text-sm items-center leading-5 text-theme-secondary-text md:text-base" data-testid="header__subtitle">
+				<div
+					className="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+					data-testid="header__subtitle"
+				>
 					{subtitle}
 				</div>
 			)}
