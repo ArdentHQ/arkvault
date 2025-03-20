@@ -18,7 +18,7 @@ const UploadButtonWrapper = ({ ...props }: React.HTMLAttributes<HTMLDivElement>)
 const ProfileImageStyled = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => (
 	<div
 		{...props}
-		className="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
+		className="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2 focus-within:ring-theme-primary-400"
 	/>
 );
 
@@ -56,7 +56,7 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 
 						<button
 							type="button"
-							className="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+							className="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
 							onClick={handleOpenFile}
 							data-testid="SelectProfileImage__upload-button"
 						>

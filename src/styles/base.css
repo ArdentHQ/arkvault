@@ -161,10 +161,6 @@ main {
 	@apply h-full w-full focus:ring-0;
 }
 
-.profile-image:hover .upload-button-overlay {
-	@apply opacity-100;
-}
-
 .toggle-input:checked ~ .toggle-handle .handle-inner {
 	@apply translate-x-full bg-theme-primary-600;
 }
