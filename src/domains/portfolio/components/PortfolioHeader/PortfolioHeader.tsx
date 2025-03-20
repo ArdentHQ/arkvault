@@ -99,7 +99,6 @@ export const PortfolioHeader = ({
 					<Tooltip
 						visible={showHint}
 						interactive={true}
-
 						content={
 							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pb-px sm:pt-px">
 								<div className="mb-2 block sm:mb-0 sm:inline">
