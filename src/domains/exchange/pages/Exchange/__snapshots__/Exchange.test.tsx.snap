@@ -627,7 +627,7 @@ exports[`Exchange > should render empty 1`] = `
                 </h1>
               </div>
               <div
-                class="flex items-center leading-5 text-theme-secondary-text"
+                class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                 data-testid="header__subtitle"
               >
                 Choose one of the exchange providers below to swap directly from within the wallet.
@@ -1332,7 +1332,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 </h1>
               </div>
               <div
-                class="flex items-center leading-5 text-theme-secondary-text"
+                class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                 data-testid="header__subtitle"
               >
                 Choose one of the exchange providers below to swap directly from within the wallet.

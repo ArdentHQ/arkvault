@@ -217,9 +217,10 @@ export const ImportAddressesSidePanel = ({
 	};
 
 	const isNextDisabled = useMemo(() => {
-		if (activeTab === Step.ImportDetailStep) {
-			return useEncryption && !acceptResponsibility;
+		if (activeTab === Step.ImportDetailStep && useEncryption) {
+			return !isValid || !acceptResponsibility;
 		}
+
 		if (activeTab < Step.EncryptPasswordStep) {
 			return isDirty ? !isValid || isImporting : true;
 		}
