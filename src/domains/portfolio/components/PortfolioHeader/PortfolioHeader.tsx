@@ -9,7 +9,6 @@ import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use
 import { Dropdown } from "@/app/components/Dropdown";
 import { t } from "i18next";
 import { Amount } from "@/app/components/Amount";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
@@ -56,7 +55,6 @@ export const PortfolioHeader = ({
 	assertWallet(wallet);
 
 	const isRestored = wallet.hasBeenFullyRestored();
-	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions(...selectedWallets);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
