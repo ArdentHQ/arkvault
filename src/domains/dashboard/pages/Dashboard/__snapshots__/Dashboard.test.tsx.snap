@@ -712,7 +712,7 @@ exports[`Dashboard > should render 1`] = `
               class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
             >
               <div
-                class="flex w-full flex-row items-center justify-between px-4"
+                class="z-30 flex w-full flex-row items-center justify-between px-4"
               >
                 <div
                   aria-expanded="false"
