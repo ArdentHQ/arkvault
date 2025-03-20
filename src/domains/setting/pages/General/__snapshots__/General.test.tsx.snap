@@ -606,13 +606,13 @@ exports[`General Settings > should disable submit button when profile is not res
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -651,6 +651,16 @@ exports[`General Settings > should disable submit button when profile is not res
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -660,28 +670,18 @@ exports[`General Settings > should disable submit button when profile is not res
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
@@ -777,7 +777,7 @@ exports[`General Settings > should disable submit button when profile is not res
                   </h1>
                    
                   <div
-                    class="flex items-center leading-5 text-theme-secondary-text"
+                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -1010,7 +1010,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 fill="#A5ADB9"
                               />
                               <g
-                                clip-path="url(#clip0_26230_4123)"
+                                clip-path="url(#clip0_26230_4274)"
                               >
                                 <path
                                   d="M124.611 22L120.8 25.8112C120.775 25.836 120.746 25.8556 120.713 25.869C120.681 25.8824 120.646 25.8893 120.611 25.8893C120.576 25.8893 120.542 25.8824 120.509 25.869C120.477 25.8556 120.448 25.836 120.423 25.8112L116.611 22"
@@ -1027,7 +1027,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 x="152"
                               />
                               <g
-                                clip-path="url(#clip1_26230_4123)"
+                                clip-path="url(#clip1_26230_4274)"
                               >
                                 <path
                                   d="M189.146 19.0009C186.011 18.9505 182.768 21.0373 180.73 23.1744C180.516 23.4007 180.397 23.6944 180.397 23.9989C180.397 24.3034 180.516 24.5971 180.73 24.8234C182.724 26.9153 185.957 29.0502 189.146 28.9991C192.335 29.0502 195.569 26.9153 197.565 24.8234C197.779 24.5971 197.897 24.3034 197.897 23.9989C197.897 23.6944 197.779 23.4007 197.565 23.1744C195.524 21.0373 192.282 18.9505 189.146 19.0009Z"
@@ -1064,11 +1064,9 @@ exports[`General Settings > should disable submit button when profile is not res
                                 d="M243.604 24.6367L243.719 22.6232L242.028 23.7319L241.422 22.6779L243.226 21.7731L241.422 20.8683L242.028 19.8143L243.719 20.9229L243.604 18.9094H244.812L244.703 20.9229L246.393 19.8143L247 20.8683L245.19 21.7731L247 22.6779L246.393 23.7319L244.703 22.6232L244.812 24.6367H243.604Z"
                                 fill="#A5ADB9"
                               />
-                              <circle
-                                cx="277"
-                                cy="24"
-                                fill="#0D7ED6"
-                                r="12"
+                              <path
+                                d="M265 16C265 13.7909 266.791 12 269 12H285C287.209 12 289 13.7909 289 16V32C289 34.2091 287.209 36 285 36H269C266.791 36 265 34.2091 265 32V16Z"
+                                fill="#5CA4EC"
                               />
                               <path
                                 d="M276.5 21.5V24.5"
@@ -1088,17 +1086,18 @@ exports[`General Settings > should disable submit button when profile is not res
                                 stroke-linecap="round"
                                 stroke-width="2"
                               />
-                              <circle
-                                cx="276.5"
-                                cy="24"
-                                r="20"
+                              <rect
+                                height="40"
+                                rx="8"
                                 stroke="#5CA4EC"
-                                stroke-linecap="round"
                                 stroke-width="2"
+                                width="40"
+                                x="256"
+                                y="4"
                               />
                               <defs>
                                 <clippath
-                                  id="clip0_26230_4123"
+                                  id="clip0_26230_4274"
                                 >
                                   <rect
                                     fill="white"
@@ -1108,7 +1107,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   />
                                 </clippath>
                                 <clippath
-                                  id="clip1_26230_4123"
+                                  id="clip1_26230_4274"
                                 >
                                   <rect
                                     fill="white"
@@ -1151,11 +1150,9 @@ exports[`General Settings > should disable submit button when profile is not res
                                 d="M49.688 30.7727V18.0455H50.5034V30.7727H49.688ZM52.0396 22.1172C51.9932 21.683 51.7976 21.3449 51.4529 21.103C51.1116 20.861 50.6674 20.7401 50.1206 20.7401C49.7361 20.7401 49.4063 20.7981 49.1312 20.9141C48.8561 21.0301 48.6457 21.1875 48.4998 21.3864C48.354 21.5852 48.2794 21.8123 48.2761 22.0675C48.2761 22.2796 48.3242 22.4635 48.4203 22.6193C48.5197 22.7751 48.6539 22.9077 48.823 23.017C48.992 23.1231 49.1793 23.2126 49.3848 23.2855C49.5903 23.3584 49.7974 23.4197 50.0062 23.4695L50.9608 23.7081C51.3452 23.7976 51.7148 23.9186 52.0694 24.071C52.4274 24.2235 52.7472 24.4157 53.0289 24.6477C53.314 24.8797 53.5394 25.1598 53.7051 25.4879C53.8708 25.8161 53.9537 26.2005 53.9537 26.6413C53.9537 27.2379 53.8012 27.7633 53.4963 28.2173C53.1913 28.6681 52.7505 29.0211 52.1738 29.2763C51.6004 29.5282 50.9061 29.6541 50.0907 29.6541C49.2986 29.6541 48.6109 29.5315 48.0275 29.2862C47.4475 29.041 46.9934 28.683 46.6653 28.2124C46.3405 27.7417 46.1648 27.1683 46.1383 26.4922H47.9529C47.9795 26.8468 48.0888 27.1418 48.2811 27.3771C48.4733 27.6125 48.7235 27.7881 49.0318 27.9041C49.3433 28.0201 49.6913 28.0781 50.0758 28.0781C50.4769 28.0781 50.8282 28.0185 51.1298 27.8991C51.4347 27.7765 51.6734 27.6075 51.8457 27.392C52.0181 27.1733 52.1059 26.9181 52.1092 26.6264C52.1059 26.3613 52.028 26.1425 51.8755 25.9702C51.7231 25.7945 51.5093 25.6487 51.2342 25.5327C50.9624 25.4134 50.6442 25.3073 50.2797 25.2145L49.1213 24.9162C48.2827 24.7008 47.6199 24.3743 47.1326 23.9368C46.6487 23.496 46.4068 22.911 46.4068 22.1818C46.4068 21.5819 46.5692 21.0566 46.894 20.6058C47.2221 20.1551 47.6679 19.8054 48.2314 19.5568C48.7948 19.3049 49.4328 19.179 50.1454 19.179C50.868 19.179 51.501 19.3049 52.0446 19.5568C52.5914 19.8054 53.0207 20.1518 53.3322 20.5959C53.6438 21.0367 53.8045 21.5438 53.8145 22.1172H52.0396ZM57.7905 25.0455L57.9048 23.032L56.2145 24.1406L55.608 23.0866L57.4126 22.1818L55.608 21.277L56.2145 20.223L57.9048 21.3317L57.7905 19.3182H58.9986L58.8892 21.3317L60.5795 20.223L61.1861 21.277L59.3764 22.1818L61.1861 23.0866L60.5795 24.1406L58.8892 23.032L58.9986 25.0455H57.7905ZM65.392 25.0455L65.5064 23.032L63.8161 24.1406L63.2095 23.0866L65.0142 22.1818L63.2095 21.277L63.8161 20.223L65.5064 21.3317L65.392 19.3182H66.6001L66.4908 21.3317L68.1811 20.223L68.7876 21.277L66.978 22.1818L68.7876 23.0866L68.1811 24.1406L66.4908 23.032L66.6001 25.0455H65.392ZM72.9936 25.0455L73.108 23.032L71.4176 24.1406L70.8111 23.0866L72.6158 22.1818L70.8111 21.277L71.4176 20.223L73.108 21.3317L72.9936 19.3182H74.2017L74.0923 21.3317L75.7827 20.223L76.3892 21.277L74.5795 22.1818L76.3892 23.0866L75.7827 24.1406L74.0923 23.032L74.2017 25.0455H72.9936ZM80.5952 25.0455L80.7095 23.032L79.0192 24.1406L78.4126 23.0866L80.2173 22.1818L78.4126 21.277L79.0192 20.223L80.7095 21.3317L80.5952 19.3182H81.8033L81.6939 21.3317L83.3842 20.223L83.9908 21.277L82.1811 22.1818L83.9908 23.0866L83.3842 24.1406L81.6939 23.032L81.8033 25.0455H80.5952Z"
                                 fill="#A5ADB9"
                               />
-                              <circle
-                                cx="113"
-                                cy="24"
-                                fill="#0D7ED6"
-                                r="12"
+                              <path
+                                d="M101 16C101 13.7909 102.791 12 105 12H121C123.209 12 125 13.7909 125 16V32C125 34.2091 123.209 36 121 36H105C102.791 36 101 34.2091 101 32V16Z"
+                                fill="#5CA4EC"
                               />
                               <path
                                 d="M112.5 21.5V24.5"
@@ -1175,13 +1172,14 @@ exports[`General Settings > should disable submit button when profile is not res
                                 stroke-linecap="round"
                                 stroke-width="2"
                               />
-                              <circle
-                                cx="113.5"
-                                cy="24"
-                                r="20"
+                              <rect
+                                height="40"
+                                rx="8"
                                 stroke="#5CA4EC"
-                                stroke-linecap="round"
                                 stroke-width="2"
+                                width="40"
+                                x="93"
+                                y="4"
                               />
                             </svg>
                           </div>
@@ -3131,13 +3129,13 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -3176,6 +3174,16 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -3185,28 +3193,18 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
@@ -3304,7 +3302,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   </h1>
                    
                   <div
-                    class="flex items-center leading-5 text-theme-secondary-text"
+                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -3537,7 +3535,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 fill="#A5ADB9"
                               />
                               <g
-                                clip-path="url(#clip0_26230_4123)"
+                                clip-path="url(#clip0_26230_4274)"
                               >
                                 <path
                                   d="M124.611 22L120.8 25.8112C120.775 25.836 120.746 25.8556 120.713 25.869C120.681 25.8824 120.646 25.8893 120.611 25.8893C120.576 25.8893 120.542 25.8824 120.509 25.869C120.477 25.8556 120.448 25.836 120.423 25.8112L116.611 22"
@@ -3554,7 +3552,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 x="152"
                               />
                               <g
-                                clip-path="url(#clip1_26230_4123)"
+                                clip-path="url(#clip1_26230_4274)"
                               >
                                 <path
                                   d="M189.146 19.0009C186.011 18.9505 182.768 21.0373 180.73 23.1744C180.516 23.4007 180.397 23.6944 180.397 23.9989C180.397 24.3034 180.516 24.5971 180.73 24.8234C182.724 26.9153 185.957 29.0502 189.146 28.9991C192.335 29.0502 195.569 26.9153 197.565 24.8234C197.779 24.5971 197.897 24.3034 197.897 23.9989C197.897 23.6944 197.779 23.4007 197.565 23.1744C195.524 21.0373 192.282 18.9505 189.146 19.0009Z"
@@ -3591,11 +3589,9 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 d="M243.604 24.6367L243.719 22.6232L242.028 23.7319L241.422 22.6779L243.226 21.7731L241.422 20.8683L242.028 19.8143L243.719 20.9229L243.604 18.9094H244.812L244.703 20.9229L246.393 19.8143L247 20.8683L245.19 21.7731L247 22.6779L246.393 23.7319L244.703 22.6232L244.812 24.6367H243.604Z"
                                 fill="#A5ADB9"
                               />
-                              <circle
-                                cx="277"
-                                cy="24"
-                                fill="#0D7ED6"
-                                r="12"
+                              <path
+                                d="M265 16C265 13.7909 266.791 12 269 12H285C287.209 12 289 13.7909 289 16V32C289 34.2091 287.209 36 285 36H269C266.791 36 265 34.2091 265 32V16Z"
+                                fill="#5CA4EC"
                               />
                               <path
                                 d="M276.5 21.5V24.5"
@@ -3615,17 +3611,18 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 stroke-linecap="round"
                                 stroke-width="2"
                               />
-                              <circle
-                                cx="276.5"
-                                cy="24"
-                                r="20"
+                              <rect
+                                height="40"
+                                rx="8"
                                 stroke="#5CA4EC"
-                                stroke-linecap="round"
                                 stroke-width="2"
+                                width="40"
+                                x="256"
+                                y="4"
                               />
                               <defs>
                                 <clippath
-                                  id="clip0_26230_4123"
+                                  id="clip0_26230_4274"
                                 >
                                   <rect
                                     fill="white"
@@ -3635,7 +3632,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   />
                                 </clippath>
                                 <clippath
-                                  id="clip1_26230_4123"
+                                  id="clip1_26230_4274"
                                 >
                                   <rect
                                     fill="white"
@@ -3678,11 +3675,9 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 d="M49.688 30.7727V18.0455H50.5034V30.7727H49.688ZM52.0396 22.1172C51.9932 21.683 51.7976 21.3449 51.4529 21.103C51.1116 20.861 50.6674 20.7401 50.1206 20.7401C49.7361 20.7401 49.4063 20.7981 49.1312 20.9141C48.8561 21.0301 48.6457 21.1875 48.4998 21.3864C48.354 21.5852 48.2794 21.8123 48.2761 22.0675C48.2761 22.2796 48.3242 22.4635 48.4203 22.6193C48.5197 22.7751 48.6539 22.9077 48.823 23.017C48.992 23.1231 49.1793 23.2126 49.3848 23.2855C49.5903 23.3584 49.7974 23.4197 50.0062 23.4695L50.9608 23.7081C51.3452 23.7976 51.7148 23.9186 52.0694 24.071C52.4274 24.2235 52.7472 24.4157 53.0289 24.6477C53.314 24.8797 53.5394 25.1598 53.7051 25.4879C53.8708 25.8161 53.9537 26.2005 53.9537 26.6413C53.9537 27.2379 53.8012 27.7633 53.4963 28.2173C53.1913 28.6681 52.7505 29.0211 52.1738 29.2763C51.6004 29.5282 50.9061 29.6541 50.0907 29.6541C49.2986 29.6541 48.6109 29.5315 48.0275 29.2862C47.4475 29.041 46.9934 28.683 46.6653 28.2124C46.3405 27.7417 46.1648 27.1683 46.1383 26.4922H47.9529C47.9795 26.8468 48.0888 27.1418 48.2811 27.3771C48.4733 27.6125 48.7235 27.7881 49.0318 27.9041C49.3433 28.0201 49.6913 28.0781 50.0758 28.0781C50.4769 28.0781 50.8282 28.0185 51.1298 27.8991C51.4347 27.7765 51.6734 27.6075 51.8457 27.392C52.0181 27.1733 52.1059 26.9181 52.1092 26.6264C52.1059 26.3613 52.028 26.1425 51.8755 25.9702C51.7231 25.7945 51.5093 25.6487 51.2342 25.5327C50.9624 25.4134 50.6442 25.3073 50.2797 25.2145L49.1213 24.9162C48.2827 24.7008 47.6199 24.3743 47.1326 23.9368C46.6487 23.496 46.4068 22.911 46.4068 22.1818C46.4068 21.5819 46.5692 21.0566 46.894 20.6058C47.2221 20.1551 47.6679 19.8054 48.2314 19.5568C48.7948 19.3049 49.4328 19.179 50.1454 19.179C50.868 19.179 51.501 19.3049 52.0446 19.5568C52.5914 19.8054 53.0207 20.1518 53.3322 20.5959C53.6438 21.0367 53.8045 21.5438 53.8145 22.1172H52.0396ZM57.7905 25.0455L57.9048 23.032L56.2145 24.1406L55.608 23.0866L57.4126 22.1818L55.608 21.277L56.2145 20.223L57.9048 21.3317L57.7905 19.3182H58.9986L58.8892 21.3317L60.5795 20.223L61.1861 21.277L59.3764 22.1818L61.1861 23.0866L60.5795 24.1406L58.8892 23.032L58.9986 25.0455H57.7905ZM65.392 25.0455L65.5064 23.032L63.8161 24.1406L63.2095 23.0866L65.0142 22.1818L63.2095 21.277L63.8161 20.223L65.5064 21.3317L65.392 19.3182H66.6001L66.4908 21.3317L68.1811 20.223L68.7876 21.277L66.978 22.1818L68.7876 23.0866L68.1811 24.1406L66.4908 23.032L66.6001 25.0455H65.392ZM72.9936 25.0455L73.108 23.032L71.4176 24.1406L70.8111 23.0866L72.6158 22.1818L70.8111 21.277L71.4176 20.223L73.108 21.3317L72.9936 19.3182H74.2017L74.0923 21.3317L75.7827 20.223L76.3892 21.277L74.5795 22.1818L76.3892 23.0866L75.7827 24.1406L74.0923 23.032L74.2017 25.0455H72.9936ZM80.5952 25.0455L80.7095 23.032L79.0192 24.1406L78.4126 23.0866L80.2173 22.1818L78.4126 21.277L79.0192 20.223L80.7095 21.3317L80.5952 19.3182H81.8033L81.6939 21.3317L83.3842 20.223L83.9908 21.277L82.1811 22.1818L83.9908 23.0866L83.3842 24.1406L81.6939 23.032L81.8033 25.0455H80.5952Z"
                                 fill="#A5ADB9"
                               />
-                              <circle
-                                cx="113"
-                                cy="24"
-                                fill="#0D7ED6"
-                                r="12"
+                              <path
+                                d="M101 16C101 13.7909 102.791 12 105 12H121C123.209 12 125 13.7909 125 16V32C125 34.2091 123.209 36 121 36H105C102.791 36 101 34.2091 101 32V16Z"
+                                fill="#5CA4EC"
                               />
                               <path
                                 d="M112.5 21.5V24.5"
@@ -3702,13 +3697,14 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 stroke-linecap="round"
                                 stroke-width="2"
                               />
-                              <circle
-                                cx="113.5"
-                                cy="24"
-                                r="20"
+                              <rect
+                                height="40"
+                                rx="8"
                                 stroke="#5CA4EC"
-                                stroke-linecap="round"
                                 stroke-width="2"
+                                width="40"
+                                x="93"
+                                y="4"
                               />
                             </svg>
                           </div>
@@ -3719,7 +3715,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               class="relative z-0 h-[92px] w-[92px]"
                             >
                               <div
-                                class="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md after:absolute after:inset-1 after:rounded-full after:shadow-[0_0_0_25px_rgba(0,0,0,0.4)] after:content-[''] focus-within:ring-2 focus-within:ring-theme-primary-400"
+                                class="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2 focus-within:ring-theme-primary-400"
                               >
                                 <img
                                   alt="Avatar"
@@ -3728,7 +3724,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   src="data:image/png;base64,"
                                 />
                                 <button
-                                  class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+                                  class="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
                                   data-testid="SelectProfileImage__upload-button"
                                   type="button"
                                 >
@@ -5702,13 +5698,13 @@ exports[`General Settings > should render 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -5747,6 +5743,16 @@ exports[`General Settings > should render 1`] = `
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -5756,28 +5762,18 @@ exports[`General Settings > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
@@ -5875,7 +5871,7 @@ exports[`General Settings > should render 1`] = `
                   </h1>
                    
                   <div
-                    class="flex items-center leading-5 text-theme-secondary-text"
+                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -6108,7 +6104,7 @@ exports[`General Settings > should render 1`] = `
                                 fill="#A5ADB9"
                               />
                               <g
-                                clip-path="url(#clip0_26230_4123)"
+                                clip-path="url(#clip0_26230_4274)"
                               >
                                 <path
                                   d="M124.611 22L120.8 25.8112C120.775 25.836 120.746 25.8556 120.713 25.869C120.681 25.8824 120.646 25.8893 120.611 25.8893C120.576 25.8893 120.542 25.8824 120.509 25.869C120.477 25.8556 120.448 25.836 120.423 25.8112L116.611 22"
@@ -6125,7 +6121,7 @@ exports[`General Settings > should render 1`] = `
                                 x="152"
                               />
                               <g
-                                clip-path="url(#clip1_26230_4123)"
+                                clip-path="url(#clip1_26230_4274)"
                               >
                                 <path
                                   d="M189.146 19.0009C186.011 18.9505 182.768 21.0373 180.73 23.1744C180.516 23.4007 180.397 23.6944 180.397 23.9989C180.397 24.3034 180.516 24.5971 180.73 24.8234C182.724 26.9153 185.957 29.0502 189.146 28.9991C192.335 29.0502 195.569 26.9153 197.565 24.8234C197.779 24.5971 197.897 24.3034 197.897 23.9989C197.897 23.6944 197.779 23.4007 197.565 23.1744C195.524 21.0373 192.282 18.9505 189.146 19.0009Z"
@@ -6162,11 +6158,9 @@ exports[`General Settings > should render 1`] = `
                                 d="M243.604 24.6367L243.719 22.6232L242.028 23.7319L241.422 22.6779L243.226 21.7731L241.422 20.8683L242.028 19.8143L243.719 20.9229L243.604 18.9094H244.812L244.703 20.9229L246.393 19.8143L247 20.8683L245.19 21.7731L247 22.6779L246.393 23.7319L244.703 22.6232L244.812 24.6367H243.604Z"
                                 fill="#A5ADB9"
                               />
-                              <circle
-                                cx="277"
-                                cy="24"
-                                fill="#0D7ED6"
-                                r="12"
+                              <path
+                                d="M265 16C265 13.7909 266.791 12 269 12H285C287.209 12 289 13.7909 289 16V32C289 34.2091 287.209 36 285 36H269C266.791 36 265 34.2091 265 32V16Z"
+                                fill="#5CA4EC"
                               />
                               <path
                                 d="M276.5 21.5V24.5"
@@ -6186,17 +6180,18 @@ exports[`General Settings > should render 1`] = `
                                 stroke-linecap="round"
                                 stroke-width="2"
                               />
-                              <circle
-                                cx="276.5"
-                                cy="24"
-                                r="20"
+                              <rect
+                                height="40"
+                                rx="8"
                                 stroke="#5CA4EC"
-                                stroke-linecap="round"
                                 stroke-width="2"
+                                width="40"
+                                x="256"
+                                y="4"
                               />
                               <defs>
                                 <clippath
-                                  id="clip0_26230_4123"
+                                  id="clip0_26230_4274"
                                 >
                                   <rect
                                     fill="white"
@@ -6206,7 +6201,7 @@ exports[`General Settings > should render 1`] = `
                                   />
                                 </clippath>
                                 <clippath
-                                  id="clip1_26230_4123"
+                                  id="clip1_26230_4274"
                                 >
                                   <rect
                                     fill="white"
@@ -6249,11 +6244,9 @@ exports[`General Settings > should render 1`] = `
                                 d="M49.688 30.7727V18.0455H50.5034V30.7727H49.688ZM52.0396 22.1172C51.9932 21.683 51.7976 21.3449 51.4529 21.103C51.1116 20.861 50.6674 20.7401 50.1206 20.7401C49.7361 20.7401 49.4063 20.7981 49.1312 20.9141C48.8561 21.0301 48.6457 21.1875 48.4998 21.3864C48.354 21.5852 48.2794 21.8123 48.2761 22.0675C48.2761 22.2796 48.3242 22.4635 48.4203 22.6193C48.5197 22.7751 48.6539 22.9077 48.823 23.017C48.992 23.1231 49.1793 23.2126 49.3848 23.2855C49.5903 23.3584 49.7974 23.4197 50.0062 23.4695L50.9608 23.7081C51.3452 23.7976 51.7148 23.9186 52.0694 24.071C52.4274 24.2235 52.7472 24.4157 53.0289 24.6477C53.314 24.8797 53.5394 25.1598 53.7051 25.4879C53.8708 25.8161 53.9537 26.2005 53.9537 26.6413C53.9537 27.2379 53.8012 27.7633 53.4963 28.2173C53.1913 28.6681 52.7505 29.0211 52.1738 29.2763C51.6004 29.5282 50.9061 29.6541 50.0907 29.6541C49.2986 29.6541 48.6109 29.5315 48.0275 29.2862C47.4475 29.041 46.9934 28.683 46.6653 28.2124C46.3405 27.7417 46.1648 27.1683 46.1383 26.4922H47.9529C47.9795 26.8468 48.0888 27.1418 48.2811 27.3771C48.4733 27.6125 48.7235 27.7881 49.0318 27.9041C49.3433 28.0201 49.6913 28.0781 50.0758 28.0781C50.4769 28.0781 50.8282 28.0185 51.1298 27.8991C51.4347 27.7765 51.6734 27.6075 51.8457 27.392C52.0181 27.1733 52.1059 26.9181 52.1092 26.6264C52.1059 26.3613 52.028 26.1425 51.8755 25.9702C51.7231 25.7945 51.5093 25.6487 51.2342 25.5327C50.9624 25.4134 50.6442 25.3073 50.2797 25.2145L49.1213 24.9162C48.2827 24.7008 47.6199 24.3743 47.1326 23.9368C46.6487 23.496 46.4068 22.911 46.4068 22.1818C46.4068 21.5819 46.5692 21.0566 46.894 20.6058C47.2221 20.1551 47.6679 19.8054 48.2314 19.5568C48.7948 19.3049 49.4328 19.179 50.1454 19.179C50.868 19.179 51.501 19.3049 52.0446 19.5568C52.5914 19.8054 53.0207 20.1518 53.3322 20.5959C53.6438 21.0367 53.8045 21.5438 53.8145 22.1172H52.0396ZM57.7905 25.0455L57.9048 23.032L56.2145 24.1406L55.608 23.0866L57.4126 22.1818L55.608 21.277L56.2145 20.223L57.9048 21.3317L57.7905 19.3182H58.9986L58.8892 21.3317L60.5795 20.223L61.1861 21.277L59.3764 22.1818L61.1861 23.0866L60.5795 24.1406L58.8892 23.032L58.9986 25.0455H57.7905ZM65.392 25.0455L65.5064 23.032L63.8161 24.1406L63.2095 23.0866L65.0142 22.1818L63.2095 21.277L63.8161 20.223L65.5064 21.3317L65.392 19.3182H66.6001L66.4908 21.3317L68.1811 20.223L68.7876 21.277L66.978 22.1818L68.7876 23.0866L68.1811 24.1406L66.4908 23.032L66.6001 25.0455H65.392ZM72.9936 25.0455L73.108 23.032L71.4176 24.1406L70.8111 23.0866L72.6158 22.1818L70.8111 21.277L71.4176 20.223L73.108 21.3317L72.9936 19.3182H74.2017L74.0923 21.3317L75.7827 20.223L76.3892 21.277L74.5795 22.1818L76.3892 23.0866L75.7827 24.1406L74.0923 23.032L74.2017 25.0455H72.9936ZM80.5952 25.0455L80.7095 23.032L79.0192 24.1406L78.4126 23.0866L80.2173 22.1818L78.4126 21.277L79.0192 20.223L80.7095 21.3317L80.5952 19.3182H81.8033L81.6939 21.3317L83.3842 20.223L83.9908 21.277L82.1811 22.1818L83.9908 23.0866L83.3842 24.1406L81.6939 23.032L81.8033 25.0455H80.5952Z"
                                 fill="#A5ADB9"
                               />
-                              <circle
-                                cx="113"
-                                cy="24"
-                                fill="#0D7ED6"
-                                r="12"
+                              <path
+                                d="M101 16C101 13.7909 102.791 12 105 12H121C123.209 12 125 13.7909 125 16V32C125 34.2091 123.209 36 121 36H105C102.791 36 101 34.2091 101 32V16Z"
+                                fill="#5CA4EC"
                               />
                               <path
                                 d="M112.5 21.5V24.5"
@@ -6273,13 +6266,14 @@ exports[`General Settings > should render 1`] = `
                                 stroke-linecap="round"
                                 stroke-width="2"
                               />
-                              <circle
-                                cx="113.5"
-                                cy="24"
-                                r="20"
+                              <rect
+                                height="40"
+                                rx="8"
                                 stroke="#5CA4EC"
-                                stroke-linecap="round"
                                 stroke-width="2"
+                                width="40"
+                                x="93"
+                                y="4"
                               />
                             </svg>
                           </div>

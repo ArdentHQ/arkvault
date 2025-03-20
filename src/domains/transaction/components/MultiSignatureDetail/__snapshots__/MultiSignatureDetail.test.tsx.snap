@@ -1303,7 +1303,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                             </h1>
                           </div>
                           <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
+                            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                             data-testid="header__subtitle"
                           >
                             Connect your Ledger Nano X and confirm input.
