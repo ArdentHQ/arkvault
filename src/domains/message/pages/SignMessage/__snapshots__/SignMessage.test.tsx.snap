@@ -815,7 +815,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                               </h1>
                             </div>
                             <div
-                              class="flex items-center leading-5 text-theme-secondary-text"
+                              class="flex text-sm items-center leading-5 text-theme-secondary-text md:text-base"
                               data-testid="header__subtitle"
                             >
                               Provide a message below and sign with your mnemonic passphrase.
@@ -1898,7 +1898,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                               </h1>
                             </div>
                             <div
-                              class="flex items-center leading-5 text-theme-secondary-text"
+                              class="flex text-sm items-center leading-5 text-theme-secondary-text md:text-base"
                               data-testid="header__subtitle"
                             >
                               Provide a message below and sign with your mnemonic passphrase.
