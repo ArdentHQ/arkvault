@@ -250,7 +250,9 @@ export const PortfolioHeader = ({
 						/>
 						<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
 							<div className="flex flex-col gap-2" data-testid="WalletHeader__balance">
-								<p className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">{t("COMMON.TOTAL_BALANCE")}</p>
+								<p className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+									{t("COMMON.TOTAL_BALANCE")}
+								</p>
 
 								<div className="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 md:text-2xl md:leading-[29px]">
 									{isRestored && selectedWallets.length === 1 && (
@@ -276,8 +278,10 @@ export const PortfolioHeader = ({
 											value={balance.totalConverted().toNumber()}
 											ticker={wallet.exchangeCurrency()}
 											className={cn({
-												"hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block": selectedWallets.length === 1,
-												"text-theme-primary-900 dark:text-theme-dark-50": selectedWallets.length !== 1,
+												"hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block":
+													selectedWallets.length === 1,
+												"text-theme-primary-900 dark:text-theme-dark-50":
+													selectedWallets.length !== 1,
 											})}
 											allowHideBalance
 											profile={profile}
