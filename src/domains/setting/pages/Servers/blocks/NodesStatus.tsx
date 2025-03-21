@@ -70,7 +70,7 @@ const NodeStatusNode: React.VFC<{
 	return (
 		<div
 			data-testid="NodesStatus--node"
-			className="flex items-center space-x-3 rounded-lg border border-theme-secondary-300 px-4 py-3.5 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200"
+			className="flex items-center space-x-3 rounded-lg border border-theme-secondary-300 px-4 py-3 leading-none text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200"
 		>
 			<div className="flex shrink-0">
 				<NetworkIcon network={network} size="sm" className="" showTooltip={false} isCompact />
