@@ -5,7 +5,7 @@ import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
-import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
+import { useConfiguration, useEnvironmentContext, useNavigationContext } from "@/app/contexts";
 import { useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
@@ -58,17 +58,18 @@ const Main: React.VFC = () => {
 
 	const { t } = useTranslation();
 
-	useProfileSynchronizer({
+	const { profile } = useProfileSynchronizer({
 		onLedgerCompatibilityError: () => {
 			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR_LONG"), { autoClose: false });
 		},
-		onProfileRestoreError: () =>
+		onProfileRestoreError: () => {
 			history.push({
 				pathname: "/",
 				state: {
 					from: history.location.pathname + history.location.search,
 				},
-			}),
+			});
+		},
 		onProfileSignOut: () => {
 			resetTheme();
 			toasts.dismiss();
@@ -90,6 +91,8 @@ const Main: React.VFC = () => {
 			history.replace("/");
 		},
 	});
+
+	const { profileHasSyncedOnce } = useConfiguration().getProfileConfiguration(profile?.id());
 
 	const { showBoundary } = useErrorBoundary();
 
@@ -128,7 +131,7 @@ const Main: React.VFC = () => {
 		}
 
 		/* istanbul ignore else -- @preserve */
-		if (isEnvironmentBooted) {
+		if (isEnvironmentBooted && (!profile || profileHasSyncedOnce)) {
 			return <RouterView routes={routes} middlewares={middlewares} />;
 		}
 

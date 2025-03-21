@@ -22,7 +22,8 @@ export const useWalletConfig = ({
 		...defaults,
 	};
 
-	const { dashboard, setConfiguration } = useConfiguration();
+	const { setConfiguration, getProfileConfiguration } = useConfiguration();
+	const { dashboard } = getProfileConfiguration(profile.id());
 	const profileDefaults = useMemo(
 		() =>
 			profile
@@ -36,7 +37,7 @@ export const useWalletConfig = ({
 	const setValue = async (key: string, value: any) => {
 		dashboardConfiguration[key] = value;
 
-		setConfiguration({ dashboard: dashboardConfiguration });
+		setConfiguration(profile.id(), { dashboard: dashboardConfiguration });
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, dashboardConfiguration);
 		await environment.persist();
 	};

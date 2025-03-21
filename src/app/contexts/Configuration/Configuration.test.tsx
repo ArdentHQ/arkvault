@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { ConfigurationProvider, useConfiguration } from "./Configuration";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Configuration Context", () => {
 	it("should render the wrapper properly", () => {
@@ -45,11 +45,12 @@ describe("Configuration Context", () => {
 
 	it("should update configuration", async () => {
 		const Test = () => {
-			const { dashboard, setConfiguration } = useConfiguration();
+			const { setConfiguration, getProfileConfiguration } = useConfiguration();
+			const { dashboard } = getProfileConfiguration(getDefaultProfileId());
 			return (
 				<div
 					data-testid="Configuration__consumer"
-					onClick={() => setConfiguration({ dashboard: { viewType: "list" } })}
+					onClick={() => setConfiguration(getDefaultProfileId(), { dashboard: { viewType: "list" } })}
 				>
 					Configuration content
 					{dashboard && dashboard.viewType === "list" && <div data-testid="Configuration__list" />}

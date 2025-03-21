@@ -10,7 +10,7 @@ import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { useConfiguration } from "@/app/contexts";
 import { pingServerAddress } from "@/utils/peers";
-import { useBreakpoint } from "@/app/hooks";
+import { useBreakpoint, useActiveProfile } from "@/app/hooks";
 
 const NodeStatusNode: React.VFC<{
 	network: Networks.Network;
@@ -20,7 +20,11 @@ const NodeStatusNode: React.VFC<{
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 
-	const { serverStatus, setConfiguration } = useConfiguration();
+	const profile = useActiveProfile();
+
+	const { setConfiguration, getProfileConfiguration } = useConfiguration();
+
+	const { serverStatus } = getProfileConfiguration(profile.id());
 
 	const [isOnline, setIsOnline] = useState<boolean | undefined>(undefined);
 
@@ -42,7 +46,7 @@ const NodeStatusNode: React.VFC<{
 
 		setIsOnline(updatedServerStatus[network.id()][host.host]);
 
-		setConfiguration({
+		setConfiguration(profile.id(), {
 			serverStatus: updatedServerStatus,
 		});
 	}, [network]);
