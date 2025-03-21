@@ -77,8 +77,7 @@ export const CSVSettings = () => {
 								value={watch("delimiter")}
 								onSelect={(delimiter) => setValue("delimiter", delimiter)}
 							/>
-						),
-						wrapperClass: "pt-4",
+						)
 					},
 				]}
 			/>
