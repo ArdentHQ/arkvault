@@ -403,6 +403,40 @@ const CustomPeersPeer: React.VFC<{
 	);
 };
 
+const CustomPeersTableFooter = ({
+	totalColumns,
+	addNewServerHandler,
+	isEmpty,
+}: {
+	totalColumns: number;
+	isEmpty: boolean;
+	addNewServerHandler: () => void;
+}) => {
+	const { t } = useTranslation();
+
+	return (
+		<tr data-testid="EmptyResults">
+			<td colSpan={totalColumns}>
+				{isEmpty && (
+					<div className="py-3 text-center text-theme-secondary-700 dark:text-theme-dark-200">
+						{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}
+					</div>
+				)}
+				<div className="border-t border-theme-secondary-300 px-6 pb-2 pt-3 dark:border-theme-dark-700">
+					<Button
+						data-testid="CustomPeers--addnew"
+						onClick={addNewServerHandler}
+						variant="secondary"
+						className="w-full space-x-2"
+					>
+						<Icon name="Plus" />
+						<span>{t("COMMON.ADD_NEW")}</span>
+					</Button>
+				</div>
+			</td>
+		</tr>
+	);
+};
 const CustomPeers: React.VFC<{
 	addNewServerHandler: () => void;
 	networks: NormalizedNetwork[];
@@ -453,52 +487,39 @@ const CustomPeers: React.VFC<{
 		},
 	];
 
-	const renderPeers = () => {
-		if (networks.length === 0) {
-			return <EmptyBlock>{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}</EmptyBlock>;
-		}
+	const renderPeers = () => (
+		// if (networks.length === 0) {
+		// 	return <EmptyBlock>{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}</EmptyBlock>
+		// }
 
-		const tableFooter = () => (
-			<tr data-testid="EmptyResults" className="border-t border-theme-secondary-300 dark:border-theme-dark-700">
-				<td colSpan={columns.length} className="px-6 pb-2 pt-3">
-					<Button
-						data-testid="CustomPeers--addnew"
-						onClick={addNewServerHandler}
-						variant="secondary"
-						className="w-full space-x-2"
-					>
-						<Icon name="Plus" />
-						<span>{t("COMMON.ADD_NEW")}</span>
-					</Button>
-				</td>
-			</tr>
-		);
-
-		return (
-			<TableWrapper noBorder>
-				<Table
-					columns={columns}
-					data={networks}
-					rowsPerPage={networks.length}
-					hideHeader={isXs}
-					className="with-x-padding"
-					footer={tableFooter()}
-				>
-					{(network: NormalizedNetwork) => (
-						<CustomPeersPeer
-							profile={profile}
-							key={network.name}
-							onDelete={onDelete}
-							onUpdate={onUpdate}
-							onToggle={(isEnabled) => onToggle(isEnabled, network)}
-							normalizedNetwork={network}
-						/>
-					)}
-				</Table>
-			</TableWrapper>
-		);
-	};
-
+		<TableWrapper noBorder>
+			<Table
+				columns={columns}
+				data={networks}
+				rowsPerPage={networks.length}
+				hideHeader={isXs}
+				className="with-x-padding"
+				footer={
+					<CustomPeersTableFooter
+						isEmpty={networks.length === 0}
+						totalColumns={columns.length}
+						addNewServerHandler={addNewServerHandler}
+					/>
+				}
+			>
+				{(network: NormalizedNetwork) => (
+					<CustomPeersPeer
+						profile={profile}
+						key={network.name}
+						onDelete={onDelete}
+						onUpdate={onUpdate}
+						onToggle={(isEnabled) => onToggle(isEnabled, network)}
+						normalizedNetwork={network}
+					/>
+				)}
+			</Table>
+		</TableWrapper>
+	);
 	return <div data-testid="CustomPeers--list">{renderPeers()}</div>;
 };
 
