@@ -132,7 +132,7 @@ const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) 
 	}
 
 	return (
-		<div data-testid="NodesStatus" className="mt-3 gap-3 sm:grid sm:grid-cols-2">
+		<div data-testid="NodesStatus" className="mt-3 grid gap-3 md:grid-cols-2">
 			{hostGroups.map((hostGroup) =>
 				hostGroup.hosts.map((host) => (
 					<NodeStatusNode
