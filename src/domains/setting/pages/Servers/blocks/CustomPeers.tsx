@@ -102,14 +102,19 @@ const PeerRow = ({
 
 					<div className="flex flex-col overflow-auto">
 						<div
-							className={cn("cursor-pointer truncate font-semibold transition-colors duration-100", {
-								"text-theme-primary-600": checked,
-								"text-theme-secondary-900 dark:text-theme-secondary-200": !checked,
-							})}
+							className={cn(
+								"cursor-pointer truncate text-sm font-semibold transition-colors duration-100",
+								{
+									"text-theme-primary-600": checked,
+									"text-theme-secondary-900 dark:text-theme-dark-50": !checked,
+								},
+							)}
 						>
 							<TruncateEnd text={name} maxChars={20} />
 						</div>
-						<div className="truncate text-sm font-semibold text-theme-secondary-500">{address}</div>
+						<div className="truncate text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200">
+							{address}
+						</div>
 					</div>
 				</div>
 			</TableCell>
@@ -288,7 +293,7 @@ const CustomPeersPeer: React.VFC<{
 							<div
 								className={cn("truncate font-semibold", {
 									"text-theme-primary-600": enabled,
-									"text-theme-secondary-900 dark:text-theme-secondary-200": !enabled,
+									"text-theme-secondary-900 dark:text-theme-dark-50": !enabled,
 								})}
 							>
 								{name}
