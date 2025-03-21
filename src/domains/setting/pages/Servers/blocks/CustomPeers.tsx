@@ -338,6 +338,24 @@ const CustomPeersPeer: React.VFC<{
 								</div>
 							</div>
 						</MobileTableElementRow>
+
+						<div className="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden">
+							<Button variant="secondary" size="sm" onClick={() => handleSelectOption({ value: "edit" })}>
+								<Icon name="Pencil" />
+							</Button>
+
+							<Button
+								variant="secondary"
+								size="sm"
+								onClick={() => handleSelectOption({ value: "refresh" })}
+							>
+								<Icon name="ArrowRotateLeft" />
+							</Button>
+
+							<Button variant="danger" size="sm" onClick={() => handleSelectOption({ value: "delete" })}>
+								<Icon name="Trash" />
+							</Button>
+						</div>
 					</MobileTableElement>
 				</td>
 			</tr>
