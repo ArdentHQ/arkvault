@@ -65,12 +65,7 @@ const PeerRow = ({
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
 			<TableCell variant="start" innerClassName={rowColor}>
 				<div className="flex flex-col overflow-auto">
-					<div
-						className={cn("cursor-pointer truncate text-sm font-semibold transition-colors duration-100", {
-							"text-theme-primary-600": checked,
-							"text-theme-secondary-900 dark:text-theme-dark-50": !checked,
-						})}
-					>
+					<div className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50">
 						<TruncateEnd text={name} maxChars={20} />
 					</div>
 					<div className="truncate text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden">
@@ -80,26 +75,13 @@ const PeerRow = ({
 			</TableCell>
 
 			<TableCell className="hidden md-lg:table-cell" innerClassName={rowColor}>
-				<div
-					className={cn(
-						"cursor-pointer overflow-auto truncate text-sm font-semibold transition-colors duration-100",
-						{
-							"text-theme-primary-600": checked,
-							"text-theme-secondary-900 dark:text-theme-dark-50": !checked,
-						},
-					)}
-				>
+				<div className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50">
 					{address}
 				</div>
 			</TableCell>
 
 			<TableCell innerClassName={rowColor}>
-				<div
-					className={cn("flex h-11 items-center", {
-						"text-theme-primary-600": checked,
-						"text-theme-secondary-900 dark:text-theme-dark-50": !checked,
-					})}
-				>
+				<div className="flex h-11 items-center text-theme-secondary-900 dark:text-theme-dark-50">
 					{height === undefined ? (
 						<span className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</span>
 					) : (
@@ -369,12 +351,7 @@ const CustomPeersPeer: React.VFC<{
 										<NetworkIcon network={network} showTooltip={false} isCompact />
 									</div>
 
-									<div
-										className={cn("truncate font-semibold", {
-											"text-theme-primary-600": enabled,
-											"text-theme-secondary-900 dark:text-theme-dark-50": !enabled,
-										})}
-									>
+									<div className="truncate font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
 										{name}
 									</div>
 
