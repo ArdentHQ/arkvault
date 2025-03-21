@@ -5,9 +5,7 @@ import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { Numeral } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
-
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Button } from "@/app/components/Button";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { Icon } from "@/app/components/Icon";
@@ -487,40 +485,37 @@ const CustomPeers: React.VFC<{
 		},
 	];
 
-	const renderPeers = () => (
-		// if (networks.length === 0) {
-		// 	return <EmptyBlock>{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}</EmptyBlock>
-		// }
-
-		<TableWrapper noBorder>
-			<Table
-				columns={columns}
-				data={networks}
-				rowsPerPage={networks.length}
-				hideHeader={isXs}
-				className="with-x-padding"
-				footer={
-					<CustomPeersTableFooter
-						isEmpty={networks.length === 0}
-						totalColumns={columns.length}
-						addNewServerHandler={addNewServerHandler}
-					/>
-				}
-			>
-				{(network: NormalizedNetwork) => (
-					<CustomPeersPeer
-						profile={profile}
-						key={network.name}
-						onDelete={onDelete}
-						onUpdate={onUpdate}
-						onToggle={(isEnabled) => onToggle(isEnabled, network)}
-						normalizedNetwork={network}
-					/>
-				)}
-			</Table>
-		</TableWrapper>
+	return (
+		<div data-testid="CustomPeers--list">
+			<TableWrapper noBorder>
+				<Table
+					columns={columns}
+					data={networks}
+					rowsPerPage={networks.length}
+					hideHeader={isXs}
+					className="with-x-padding"
+					footer={
+						<CustomPeersTableFooter
+							isEmpty={networks.length === 0}
+							totalColumns={columns.length}
+							addNewServerHandler={addNewServerHandler}
+						/>
+					}
+				>
+					{(network: NormalizedNetwork) => (
+						<CustomPeersPeer
+							profile={profile}
+							key={network.name}
+							onDelete={onDelete}
+							onUpdate={onUpdate}
+							onToggle={(isEnabled) => onToggle(isEnabled, network)}
+							normalizedNetwork={network}
+						/>
+					)}
+				</Table>
+			</TableWrapper>
+		</div>
 	);
-	return <div data-testid="CustomPeers--list">{renderPeers()}</div>;
 };
 
 export default CustomPeers;
