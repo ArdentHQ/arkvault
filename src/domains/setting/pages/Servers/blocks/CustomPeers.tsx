@@ -202,13 +202,14 @@ const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 };
 
 const CustomPeersPeer: React.VFC<{
+	index: number;
 	profile: Contracts.IProfile;
 	normalizedNetwork: NormalizedNetwork;
 	onDelete: (network: NormalizedNetwork) => void;
 	onUpdate: (network: NormalizedNetwork) => void;
 	onToggle: (isEnabled: boolean) => void;
 	// TODO: break it down into smaller components.
-}> = ({ normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
+}> = ({ index, normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
 	const { name, network, serverType, address, height, enabled } = normalizedNetwork;
 
@@ -255,7 +256,7 @@ const CustomPeersPeer: React.VFC<{
 	if (isSm) {
 		return (
 			<tr>
-				<td>
+				<td className={cn({ "pt-3": index !== 0 })}>
 					<MobileTableElement
 						title={name}
 						titleExtra={
@@ -307,12 +308,12 @@ const CustomPeersPeer: React.VFC<{
 						</MobileTableElementRow>
 						<MobileTableElementRow title={t("COMMON.TYPE")}>
 							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
-								<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
 								<Icon
 									className="text-theme-secondary-700"
 									size="lg"
 									name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
 								/>
+								<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
 							</div>
 						</MobileTableElementRow>
 					</MobileTableElement>
@@ -503,7 +504,7 @@ const CustomPeersTableFooter = ({
 						{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}
 					</div>
 				)}
-				<div className="border-t border-theme-secondary-300 px-6 pb-2 pt-3 dark:border-theme-dark-700">
+				<div className="hidden border-t border-theme-secondary-300 px-6 pb-2 pt-3 dark:border-theme-dark-700 md:block">
 					<Button
 						data-testid="CustomPeers--addnew"
 						onClick={addNewServerHandler}
@@ -585,8 +586,9 @@ const CustomPeers: React.VFC<{
 						/>
 					}
 				>
-					{(network: NormalizedNetwork) => (
+					{(network: NormalizedNetwork, index: number) => (
 						<CustomPeersPeer
+							index={index}
 							profile={profile}
 							key={network.name}
 							onDelete={onDelete}
