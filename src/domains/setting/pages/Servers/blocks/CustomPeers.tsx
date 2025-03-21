@@ -18,9 +18,6 @@ import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { Toggle } from "@/app/components/Toggle";
 import { useServerStatus } from "@/domains/setting/pages/Servers/hooks/use-server-status";
 import { useEnvironmentContext } from "@/app/contexts";
-import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
-import { networkDisplayName } from "@/utils/network-utils";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
 
@@ -140,16 +137,6 @@ const PeerRow = ({
 	);
 };
 
-const CustomPeersPeerMobileRow: React.VFC<{
-	label: string;
-	children: React.ReactNode;
-}> = ({ label, children }) => (
-	<div className="flex items-start space-x-3 border-t border-dashed border-theme-secondary-300 py-4 dark:border-theme-secondary-800">
-		<div className="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">{label}</div>
-		<div className="flex flex-1 justify-end text-theme-secondary-700 dark:text-theme-secondary-500">{children}</div>
-	</div>
-);
-
 const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 	const { t } = useTranslation();
 
@@ -193,7 +180,7 @@ const CustomPeersPeer: React.VFC<{
 	// TODO: break it down into smaller components.
 }> = ({ index, normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
-	const { name, network, serverType, address, height, enabled } = normalizedNetwork;
+	const { name, serverType, address, height, enabled } = normalizedNetwork;
 
 	const { t } = useTranslation();
 
