@@ -458,14 +458,31 @@ const CustomPeers: React.VFC<{
 			return <EmptyBlock>{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}</EmptyBlock>;
 		}
 
+		const tableFooter = () => (
+			<tr data-testid="EmptyResults" className="border-t border-theme-secondary-300 dark:border-theme-dark-700">
+				<td colSpan={columns.length} className="px-6 pb-2 pt-3">
+					<Button
+						data-testid="CustomPeers--addnew"
+						onClick={addNewServerHandler}
+						variant="secondary"
+						className="w-full space-x-2"
+					>
+						<Icon name="Plus" />
+						<span>{t("COMMON.ADD_NEW")}</span>
+					</Button>
+				</td>
+			</tr>
+		);
+
 		return (
-			<TableWrapper>
+			<TableWrapper noBorder>
 				<Table
 					columns={columns}
 					data={networks}
 					rowsPerPage={networks.length}
 					hideHeader={isXs}
 					className="with-x-padding"
+					footer={tableFooter()}
 				>
 					{(network: NormalizedNetwork) => (
 						<CustomPeersPeer
@@ -482,21 +499,7 @@ const CustomPeers: React.VFC<{
 		);
 	};
 
-	return (
-		<div data-testid="CustomPeers--list">
-			{renderPeers()}
-
-			<Button
-				data-testid="CustomPeers--addnew"
-				onClick={addNewServerHandler}
-				variant="secondary"
-				className="mt-6 w-full space-x-2 sm:mt-3"
-			>
-				<Icon name="Plus" />
-				<span>{t("COMMON.ADD_NEW")}</span>
-			</Button>
-		</div>
-	);
+	return <div data-testid="CustomPeers--list">{renderPeers()}</div>;
 };
 
 export default CustomPeers;
