@@ -80,6 +80,8 @@ export const translations = {
 	CURRENCY: "Currency",
 	CURRENT: "Current",
 	DATE: "Date",
+	DATE_FROM: "Date From",
+	DATE_TO: "Date To",
 	DATETIME: {
 		DAYS_AGO_one: "A day ago",
 		DAYS_AGO_other: "{{count}} days ago",
