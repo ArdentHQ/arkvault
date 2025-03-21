@@ -253,7 +253,7 @@ const CustomPeersPeer: React.VFC<{
 
 	const { isExpanded, handleHeaderClick } = useAccordion(`${profile.id()}_custom_peers`);
 
-	if (isSm) {
+	if (isSm || isXs) {
 		return (
 			<tr>
 				<td className={cn({ "pt-3": index !== 0 })}>
@@ -261,9 +261,11 @@ const CustomPeersPeer: React.VFC<{
 						title={name}
 						titleExtra={
 							<div className="flex items-center gap-1">
-								<CustomPeerStatusIcon status={serverStatus} />
+								<div className="hidden items-center gap-1 sm:flex">
+									<CustomPeerStatusIcon status={serverStatus} />
 
-								<Divider type="vertical" />
+									<Divider type="vertical" />
+								</div>
 
 								<Toggle
 									data-testid="CustomPeers-toggle"
@@ -301,11 +303,13 @@ const CustomPeersPeer: React.VFC<{
 								{address}
 							</span>
 						</MobileTableElementRow>
+
 						<MobileTableElementRow title={t("COMMON.HEIGHT")}>
 							<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
 								{height}
 							</span>
 						</MobileTableElementRow>
+
 						<MobileTableElementRow title={t("COMMON.TYPE")}>
 							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
 								<Icon
@@ -314,6 +318,25 @@ const CustomPeersPeer: React.VFC<{
 									name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
 								/>
 								<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
+							</div>
+						</MobileTableElementRow>
+
+						<MobileTableElementRow title={t("COMMON.STATUS")} className="sm:hidden">
+							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								<CustomPeerStatusIcon status={serverStatus} />
+								<div>
+									{serverStatus === true && (
+										<span className="truncate">
+											{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}
+										</span>
+									)}
+
+									{serverStatus === false && (
+										<span className="truncate">
+											{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}
+										</span>
+									)}
+								</div>
 							</div>
 						</MobileTableElementRow>
 					</MobileTableElement>
@@ -571,7 +594,7 @@ const CustomPeers: React.VFC<{
 
 	return (
 		<div data-testid="CustomPeers--list">
-			<TableWrapper noBorder>
+			<TableWrapper noBorder className="-mb-2 md:-mb-0">
 				<Table
 					columns={columns}
 					data={networks}
