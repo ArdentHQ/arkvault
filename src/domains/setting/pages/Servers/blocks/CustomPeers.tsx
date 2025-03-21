@@ -22,6 +22,7 @@ import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/compo
 import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
 
 interface PeerRowProperties {
 	name: string;
@@ -32,6 +33,7 @@ interface PeerRowProperties {
 	serverType: Networks.NetworkHost["type"];
 	onToggle: (isEnabled: boolean) => void;
 	onSelectOption: ({ value }: DropdownOption) => void;
+	dropdownOptions: DropdownOption[];
 }
 
 const PeerRow = ({
@@ -43,14 +45,9 @@ const PeerRow = ({
 	serverType,
 	onToggle,
 	onSelectOption,
+	dropdownOptions,
 }: PeerRowProperties) => {
 	const { t } = useTranslation();
-
-	const dropdownOptions: DropdownOption[] = [
-		{ icon: "Pencil", iconPosition: "start", label: t("COMMON.EDIT"), value: "edit" },
-		{ icon: "Trash", iconPosition: "start", label: t("COMMON.DELETE"), value: "delete" },
-		{ icon: "ArrowRotateLeft", iconPosition: "start", label: t("COMMON.REFRESH"), value: "refresh" },
-	];
 
 	const formattedHeight = useMemo(() => Numeral.make("en").format(height || 0), [height]);
 
@@ -215,12 +212,18 @@ const CustomPeersPeer: React.VFC<{
 	const { persist } = useEnvironmentContext();
 	const { name, network, serverType, address, height, enabled } = normalizedNetwork;
 
+	const { t } = useTranslation();
+
 	const { serverStatus, syncStatus } = useServerStatus({
 		network: normalizedNetwork,
 		profile,
 	});
 
-	const { t } = useTranslation();
+	const dropdownOptions: DropdownOption[] = [
+		{ icon: "Pencil", iconPosition: "start", label: t("COMMON.EDIT"), value: "edit" },
+		{ icon: "Trash", iconPosition: "start", label: t("COMMON.DELETE"), value: "delete" },
+		{ icon: "ArrowRotateLeft", iconPosition: "start", label: t("COMMON.REFRESH"), value: "refresh" },
+	];
 
 	useEffect(() => {
 		const interval = setInterval(() => syncStatus(), 60 * 1000 * 5);
@@ -245,145 +248,224 @@ const CustomPeersPeer: React.VFC<{
 		}
 	};
 
-	const { isXs } = useBreakpoint();
+	const { isXs, isSm } = useBreakpoint();
 
 	const { isExpanded, handleHeaderClick } = useAccordion(`${profile.id()}_custom_peers`);
 
-	if (isXs) {
+	if (isSm) {
 		return (
-			<div className="-mx-8">
-				<AccordionWrapper
-					data-testid={
-						enabled ? "CustomPeers-network-item--mobile--checked" : "CustomPeers-network-item--mobile"
-					}
-					isCollapsed={!isExpanded}
-				>
-					<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
-						<div
-							className={cn("flex w-0 flex-grow items-center space-x-3", {
-								"text-theme-primary-600": network.isLive(),
-								"text-theme-secondary-700": !network.isLive(),
-							})}
-						>
-							<div className="flex shrink-0 items-center">
-								<NetworkIcon network={network} showTooltip={false} isCompact />
-							</div>
+			<tr>
+				<td>
+					<MobileTableElement
+						title={name}
+						titleExtra={
+							<div className="flex items-center gap-1">
+								<CustomPeerStatusIcon status={serverStatus} />
 
-							<div
-								className={cn("truncate font-semibold", {
-									"text-theme-primary-600": enabled,
-									"text-theme-secondary-900 dark:text-theme-dark-50": !enabled,
-								})}
-							>
-								{name}
-							</div>
+								<Divider type="vertical" />
 
-							{network.isTest() && (
-								<Tooltip content={t("COMMON.TEST_NETWORK")}>
-									<span>
-										<Icon
-											className="text-theme-secondary-500 dark:text-theme-secondary-700"
-											name="Code"
-											size="md"
-										/>
-									</span>
-								</Tooltip>
-							)}
-						</div>
+								<Toggle
+									data-testid="CustomPeers-toggle"
+									defaultChecked={enabled}
+									onClick={(event: React.MouseEvent | React.KeyboardEvent) => event.stopPropagation()}
+									onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+										onToggle(event.target.checked)
+									}
+								/>
 
-						<div className="ml-5 flex items-center space-x-3">
-							<CustomPeerStatusIcon status={serverStatus} />
+								<Divider type="vertical" />
 
-							<Divider type="vertical" />
-
-							<Toggle
-								data-testid="CustomPeers-toggle"
-								defaultChecked={enabled}
-								onClick={(event: React.MouseEvent | React.KeyboardEvent) => event.stopPropagation()}
-								onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-									onToggle(event.target.checked)
-								}
-							/>
-
-							<Divider type="vertical" />
-						</div>
-					</AccordionHeader>
-
-					{isExpanded && (
-						<AccordionContent data-testid="CustomPeers-network-item--mobile--expanded">
-							<div className="flex flex-col">
-								<CustomPeersPeerMobileRow label={t("COMMON.NETWORK")}>
-									<div className="break-all text-right">{networkDisplayName(network)}</div>
-								</CustomPeersPeerMobileRow>
-
-								<CustomPeersPeerMobileRow label={t("COMMON.TYPE")}>
-									<div className="flex items-center space-x-3">
-										<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
-										<Icon
-											className="text-theme-secondary-700"
-											size="lg"
-											name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
-										/>
-									</div>
-								</CustomPeersPeerMobileRow>
-
-								<CustomPeersPeerMobileRow label={t("COMMON.ADDRESS")}>
-									<div className="break-all text-right">{address}</div>
-								</CustomPeersPeerMobileRow>
-
-								<CustomPeersPeerMobileRow label={t("COMMON.STATUS")}>
-									<div className="flex w-0 flex-1 items-center justify-end space-x-3 overflow-hidden">
-										{serverStatus === true && (
-											<span className="truncate">
-												{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}
-											</span>
-										)}
-
-										{serverStatus === false && (
-											<span className="truncate">
-												{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}
-											</span>
-										)}
-
-										<CustomPeerStatusIcon status={serverStatus} />
-									</div>
-								</CustomPeersPeerMobileRow>
-
-								<div className="mt-3 flex space-x-3">
-									<Button
-										data-testid="CustomPeers-network-item--mobile--delete"
-										variant="danger"
-										onClick={(event) => {
-											handleSelectOption({ value: "delete" });
-											handleHeaderClick(event);
-										}}
-									>
-										<Icon name="Trash" />
-									</Button>
-
-									<Button
-										data-testid="CustomPeers-network-item--mobile--refresh"
-										variant="secondary"
-										onClick={() => handleSelectOption({ value: "refresh" })}
-									>
-										<Icon name="ArrowRotateLeft" />
-									</Button>
-
-									<Button
-										data-testid="CustomPeers-network-item--mobile--edit"
-										className="w-full"
-										variant="secondary"
-										onClick={() => handleSelectOption({ value: "edit" })}
-									>
-										<Icon name="Pencil" />
-										<span>{t("COMMON.EDIT")}</span>
-									</Button>
+								<div className="h-4">
+									<Dropdown
+										data-testid="CustomPeers--dropdown"
+										toggleContent={
+											<Button
+												variant="transparent"
+												size="icon"
+												className="-m-3 text-theme-secondary-700 dark:text-theme-dark-200"
+											>
+												<Icon name="EllipsisVerticalFilled" size="md" />
+											</Button>
+										}
+										onSelect={handleSelectOption}
+										options={dropdownOptions}
+									/>
 								</div>
 							</div>
-						</AccordionContent>
-					)}
-				</AccordionWrapper>
-			</div>
+						}
+						bodyClassName="sm:grid-cols-3"
+					>
+						<MobileTableElementRow title={t("COMMON.IP_ADDRESS")}>
+							<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								{address}
+							</span>
+						</MobileTableElementRow>
+						<MobileTableElementRow title={t("COMMON.HEIGHT")}>
+							<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								{height}
+							</span>
+						</MobileTableElementRow>
+						<MobileTableElementRow title={t("COMMON.TYPE")}>
+							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
+								<Icon
+									className="text-theme-secondary-700"
+									size="lg"
+									name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
+								/>
+							</div>
+						</MobileTableElementRow>
+					</MobileTableElement>
+				</td>
+			</tr>
+		);
+	}
+
+	if (isXs) {
+		return (
+			<tr>
+				<td>
+					<div className="-mx-8">
+						<AccordionWrapper
+							data-testid={
+								enabled
+									? "CustomPeers-network-item--mobile--checked"
+									: "CustomPeers-network-item--mobile"
+							}
+							isCollapsed={!isExpanded}
+						>
+							<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
+								<div
+									className={cn("flex w-0 flex-grow items-center space-x-3", {
+										"text-theme-primary-600": network.isLive(),
+										"text-theme-secondary-700": !network.isLive(),
+									})}
+								>
+									<div className="flex shrink-0 items-center">
+										<NetworkIcon network={network} showTooltip={false} isCompact />
+									</div>
+
+									<div
+										className={cn("truncate font-semibold", {
+											"text-theme-primary-600": enabled,
+											"text-theme-secondary-900 dark:text-theme-dark-50": !enabled,
+										})}
+									>
+										{name}
+									</div>
+
+									{network.isTest() && (
+										<Tooltip content={t("COMMON.TEST_NETWORK")}>
+											<span>
+												<Icon
+													className="text-theme-secondary-500 dark:text-theme-secondary-700"
+													name="Code"
+													size="md"
+												/>
+											</span>
+										</Tooltip>
+									)}
+								</div>
+
+								<div className="ml-5 flex items-center space-x-3">
+									<CustomPeerStatusIcon status={serverStatus} />
+
+									<Divider type="vertical" />
+
+									<Toggle
+										data-testid="CustomPeers-toggle"
+										defaultChecked={enabled}
+										onClick={(event: React.MouseEvent | React.KeyboardEvent) =>
+											event.stopPropagation()
+										}
+										onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+											onToggle(event.target.checked)
+										}
+									/>
+
+									<Divider type="vertical" />
+								</div>
+							</AccordionHeader>
+
+							{isExpanded && (
+								<AccordionContent data-testid="CustomPeers-network-item--mobile--expanded">
+									<div className="flex flex-col">
+										<CustomPeersPeerMobileRow label={t("COMMON.NETWORK")}>
+											<div className="break-all text-right">{networkDisplayName(network)}</div>
+										</CustomPeersPeerMobileRow>
+
+										<CustomPeersPeerMobileRow label={t("COMMON.TYPE")}>
+											<div className="flex items-center space-x-3">
+												<div>
+													{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}
+												</div>
+												<Icon
+													className="text-theme-secondary-700"
+													size="lg"
+													name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
+												/>
+											</div>
+										</CustomPeersPeerMobileRow>
+
+										<CustomPeersPeerMobileRow label={t("COMMON.ADDRESS")}>
+											<div className="break-all text-right">{address}</div>
+										</CustomPeersPeerMobileRow>
+
+										<CustomPeersPeerMobileRow label={t("COMMON.STATUS")}>
+											<div className="flex w-0 flex-1 items-center justify-end space-x-3 overflow-hidden">
+												{serverStatus === true && (
+													<span className="truncate">
+														{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}
+													</span>
+												)}
+
+												{serverStatus === false && (
+													<span className="truncate">
+														{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}
+													</span>
+												)}
+
+												<CustomPeerStatusIcon status={serverStatus} />
+											</div>
+										</CustomPeersPeerMobileRow>
+
+										<div className="mt-3 flex space-x-3">
+											<Button
+												data-testid="CustomPeers-network-item--mobile--delete"
+												variant="danger"
+												onClick={(event) => {
+													handleSelectOption({ value: "delete" });
+													handleHeaderClick(event);
+												}}
+											>
+												<Icon name="Trash" />
+											</Button>
+
+											<Button
+												data-testid="CustomPeers-network-item--mobile--refresh"
+												variant="secondary"
+												onClick={() => handleSelectOption({ value: "refresh" })}
+											>
+												<Icon name="ArrowRotateLeft" />
+											</Button>
+
+											<Button
+												data-testid="CustomPeers-network-item--mobile--edit"
+												className="w-full"
+												variant="secondary"
+												onClick={() => handleSelectOption({ value: "edit" })}
+											>
+												<Icon name="Pencil" />
+												<span>{t("COMMON.EDIT")}</span>
+											</Button>
+										</div>
+									</div>
+								</AccordionContent>
+							)}
+						</AccordionWrapper>
+					</div>
+				</td>
+			</tr>
 		);
 	}
 
@@ -397,6 +479,7 @@ const CustomPeersPeer: React.VFC<{
 			serverType={serverType}
 			onToggle={onToggle}
 			onSelectOption={handleSelectOption}
+			dropdownOptions={dropdownOptions}
 		/>
 	);
 };
@@ -445,7 +528,7 @@ const CustomPeers: React.VFC<{
 }> = ({ addNewServerHandler, networks, onDelete, onUpdate, profile, onToggle }) => {
 	const { t } = useTranslation();
 
-	const { isXs } = useBreakpoint();
+	const { isXs, isSm } = useBreakpoint();
 
 	const columns: Column[] = [
 		{
@@ -491,8 +574,8 @@ const CustomPeers: React.VFC<{
 				<Table
 					columns={columns}
 					data={networks}
+					hideHeader={isXs || isSm}
 					rowsPerPage={networks.length}
-					hideHeader={isXs}
 					className="with-x-padding"
 					footer={
 						<CustomPeersTableFooter
