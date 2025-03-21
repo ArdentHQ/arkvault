@@ -176,9 +176,9 @@ describe("WalletListItem.blocks", () => {
 
 	it("should render Currency", () => {
 		const useConfigurationReturn = { profileIsSyncingExchangeRates: true };
-		const useConfigurationSpy = vi
-			.spyOn(useConfigurationModule, "useConfiguration")
-			.mockReturnValue(useConfigurationReturn);
+		const useConfigurationSpy = vi.spyOn(useConfigurationModule, "useConfiguration").mockReturnValue({
+			getProfileConfiguration: () => useConfigurationReturn,
+		});
 
 		let walletSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
 

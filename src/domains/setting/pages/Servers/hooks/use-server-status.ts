@@ -9,7 +9,9 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 	const [serverStatus, setServerStatus] = useState<boolean | undefined>(undefined);
 	const { updateNetwork } = useHosts({ profile });
 
-	const { serverStatus: serverStatusByNetwork, setConfiguration } = useConfiguration();
+	const { setConfiguration, getProfileConfiguration } = useConfiguration();
+
+	const { serverStatus: serverStatusByNetwork } = getProfileConfiguration(profile.id());
 
 	const syncStatus = useCallback(async () => {
 		setServerStatus(undefined);
@@ -34,7 +36,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 
 		updatedServerStatus[network.network.id()][network.address] = isOnline;
 
-		setConfiguration({
+		setConfiguration(profile.id(), {
 			serverStatus: updatedServerStatus,
 		});
 	}, [profile, network]);

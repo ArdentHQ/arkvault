@@ -9,7 +9,7 @@ export const useWelcomeModal = (environment: Environment, profile: Contracts.IPr
 	const [show, setShow] = useState<boolean>(false);
 	const [step, setStep] = useState<WelcomeModalStep>(WelcomeModalStep.Introduction);
 	const [showAgain, setShowAgain] = useState(true);
-	const { profileIsSyncing } = useConfiguration();
+	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(profile.id());
 
 	useEffect(() => {
 		if (profileIsSyncing) {

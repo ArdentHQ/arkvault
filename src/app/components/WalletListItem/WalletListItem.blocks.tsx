@@ -177,8 +177,9 @@ export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLarg
 };
 
 export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLargeScreen = true }) => {
-	const { profileIsSyncingExchangeRates } = useConfiguration();
 	const { t } = useTranslation();
+	const profile = useActiveProfile();
+	const { profileIsSyncingExchangeRates } = useConfiguration().getProfileConfiguration(profile.id());
 
 	const renderCurrency = () => {
 		if (wallet.network().isTest()) {
