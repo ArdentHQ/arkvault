@@ -241,9 +241,15 @@ const CustomPeersPeer: React.VFC<{
 				<td className={cn({ "pt-3": index !== 0 })}>
 					<MobileTableElement
 						title={name}
+						onHeaderClick={handleHeaderClick}
 						titleExtra={
 							<div className="flex items-center gap-1">
-								<div className="hidden items-center gap-1 sm:flex">
+								<div
+									className={cn("items-center gap-1", {
+										flex: !isExpanded,
+										"hidden sm:flex": isExpanded,
+									})}
+								>
 									<CustomPeerStatusIcon status={serverStatus} />
 
 									<Divider type="vertical" />
@@ -260,7 +266,7 @@ const CustomPeersPeer: React.VFC<{
 
 								<Divider type="vertical" />
 
-								<div className="h-4">
+								<div className="hidden h-4 sm:block">
 									<Dropdown
 										data-testid="CustomPeers--dropdown"
 										toggleContent={
@@ -276,9 +282,20 @@ const CustomPeersPeer: React.VFC<{
 										options={dropdownOptions}
 									/>
 								</div>
+
+								<div className="sm:hidden">
+									<Icon
+										name="ChevronDownSmall"
+										className={cn(
+											"text-theme-secondary-700 transition-transform dark:text-theme-dark-200",
+											{ "rotate-180": isExpanded },
+										)}
+										size="sm"
+									/>
+								</div>
 							</div>
 						}
-						bodyClassName="sm:grid-cols-3"
+						bodyClassName={cn("sm:grid-cols-3", { "hidden sm:grid": !isExpanded })}
 					>
 						<MobileTableElementRow title={t("COMMON.IP_ADDRESS")}>
 							<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
@@ -519,6 +536,7 @@ const CustomPeersTableFooter = ({
 		</tr>
 	);
 };
+
 const CustomPeers: React.VFC<{
 	addNewServerHandler: () => void;
 	networks: NormalizedNetwork[];

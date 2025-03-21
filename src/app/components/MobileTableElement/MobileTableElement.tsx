@@ -14,6 +14,7 @@ interface MobileTableElementProperties extends Omit<React.HTMLAttributes<HTMLDiv
 	titleExtra?: React.ReactNode;
 	variant?: MobileTableElementVariant;
 	bodyClassName?: string;
+	onHeaderClick?: (event: React.MouseEvent) => void;
 }
 
 interface MobileTableElementRowProperties extends React.HTMLAttributes<HTMLDivElement> {
@@ -40,6 +41,7 @@ export const MobileTableElement = ({
 	title,
 	titleExtra,
 	children,
+	onHeaderClick,
 	...properties
 }: MobileTableElementProperties) => (
 	<div
@@ -66,6 +68,7 @@ export const MobileTableElement = ({
 				"bg-theme-success-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.success,
 				"bg-theme-warning-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.warning,
 			})}
+			onClick={onHeaderClick}
 		>
 			<span className="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">
 				{title}
