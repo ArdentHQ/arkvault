@@ -207,6 +207,7 @@ export const translations = {
 	INSTALL_ARKVAULT_STEP1: "1. Press the share button",
 	INSTALL_ARKVAULT_STEP2: `2. Select "Add to Home Screen"`,
 	INSTALL_ARKVAULT_STEP3: `3. Press the "Add" button`,
+	IP_ADDRESS: "IP Address",
 	IS_MARKET_CHART_ENABLED: "Price chart on the dashboard",
 	I_ACCEPT: "I Accept",
 	I_DECLINE: "I Decline",

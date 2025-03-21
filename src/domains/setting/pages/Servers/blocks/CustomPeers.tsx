@@ -30,7 +30,6 @@ interface PeerRowProperties {
 	address: string;
 	checked: boolean;
 	height: number | undefined;
-	network: Networks.Network;
 	serverStatus?: boolean;
 	serverType: Networks.NetworkHost["type"];
 	onToggle: (isEnabled: boolean) => void;
@@ -42,7 +41,6 @@ const PeerRow = ({
 	address,
 	checked,
 	height,
-	network,
 	serverStatus,
 	serverType,
 	onToggle,
@@ -70,69 +68,52 @@ const PeerRow = ({
 
 	return (
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
-			<TableCell variant="start" innerClassName={cn("py-3 border-2 border-r-0 border-transparent", rowColor)}>
-				<div className="flex h-11 w-full items-center space-x-3">
+			<TableCell variant="start" innerClassName={rowColor}>
+				<div className="flex flex-col overflow-auto">
 					<div
-						className={cn(
-							"relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800",
-							{
-								"bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent": network.isLive(),
-								"bg-theme-secondary-100 text-theme-secondary-700 dark:bg-transparent": network.isTest(),
-							},
-						)}
+						className={cn("cursor-pointer truncate text-sm font-semibold transition-colors duration-100", {
+							"text-theme-primary-600": checked,
+							"text-theme-secondary-900 dark:text-theme-dark-50": !checked,
+						})}
 					>
-						<NetworkIcon network={network} showTooltip={false} isCompact />
-
-						{network.isTest() && (
-							<Tooltip content={t("COMMON.TEST_NETWORK")}>
-								<span
-									className={cn(
-										"absolute bottom-0 right-0 -mb-2 -mr-2 flex h-6 w-6 items-center justify-center rounded-full",
-										{
-											"bg-theme-background": !checked,
-											"bg-theme-primary-50 dark:bg-theme-background": checked,
-										},
-									)}
-								>
-									<Icon className="text-theme-secondary-500" name="Code" size="md" />
-								</span>
-							</Tooltip>
-						)}
+						<TruncateEnd text={name} maxChars={20} />
 					</div>
-
-					<div className="flex flex-col overflow-auto">
-						<div
-							className={cn(
-								"cursor-pointer truncate text-sm font-semibold transition-colors duration-100",
-								{
-									"text-theme-primary-600": checked,
-									"text-theme-secondary-900 dark:text-theme-dark-50": !checked,
-								},
-							)}
-						>
-							<TruncateEnd text={name} maxChars={20} />
-						</div>
-						<div className="truncate text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200">
-							{address}
-						</div>
+					<div className="truncate text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden">
+						{address}
 					</div>
 				</div>
 			</TableCell>
 
-			<TableCell
-				className="hidden md:table-cell"
-				innerClassName={cn("py-3 justify-center border-t-2 border-b-2 border-transparent", rowColor)}
-			>
-				<div className="flex h-11 items-center">
+			<TableCell className="hidden md-lg:table-cell" innerClassName={rowColor}>
+				<div
+					className={cn(
+						"cursor-pointer overflow-auto truncate text-sm font-semibold transition-colors duration-100",
+						{
+							"text-theme-primary-600": checked,
+							"text-theme-secondary-900 dark:text-theme-dark-50": !checked,
+						},
+					)}
+				>
+					{address}
+				</div>
+			</TableCell>
+
+			<TableCell innerClassName={rowColor}>
+				<div
+					className={cn("flex h-11 items-center", {
+						"text-theme-primary-600": checked,
+						"text-theme-secondary-900 dark:text-theme-dark-50": !checked,
+					})}
+				>
 					{height === undefined ? (
 						<span className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</span>
 					) : (
-						<span>{formattedHeight}</span>
+						<span className="text-sm font-semibold">{formattedHeight}</span>
 					)}
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName={cn("py-3 justify-center border-t-2 border-b-2 border-transparent", rowColor)}>
+			<TableCell innerClassName={rowColor}>
 				<div className="flex h-11 items-center">
 					<Tooltip content={serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}>
 						<div className="flex cursor-pointer justify-center">
@@ -146,13 +127,13 @@ const PeerRow = ({
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName={cn("py-3 justify-center border-t-2 border-b-2 border-transparent", rowColor)}>
+			<TableCell innerClassName={rowColor}>
 				<div className="flex h-11 items-center">
 					<CustomPeerStatusIcon status={serverStatus} />
 				</div>
 			</TableCell>
 
-			<TableCell variant="end" innerClassName={cn("py-3 border-2 border-l-0 border-transparent", rowColor)}>
+			<TableCell variant="end" innerClassName={rowColor}>
 				<div className="flex h-11 items-center">
 					<div className="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
 						<Toggle
@@ -168,9 +149,9 @@ const PeerRow = ({
 							<Button
 								variant="transparent"
 								size="icon"
-								className="text-theme-primary-300 hover:text-theme-primary-600"
+								className="text-theme-secondary-700 dark:text-theme-dark-200"
 							>
-								<Icon name="EllipsisVertical" size="md" />
+								<Icon name="EllipsisVerticalFilled" size="md" />
 							</Button>
 						}
 						onSelect={onSelectOption}
@@ -412,7 +393,6 @@ const CustomPeersPeer: React.VFC<{
 		<PeerRow
 			name={name}
 			address={address}
-			network={network}
 			checked={enabled}
 			height={height}
 			serverStatus={serverStatus}
@@ -442,9 +422,14 @@ const CustomPeers: React.VFC<{
 			headerClassName: "no-border",
 		},
 		{
+			Header: t("COMMON.IP_ADDRESS"),
+			disableSortBy: true,
+			headerClassName: "hidden md-lg:table-cell no-border",
+		},
+		{
 			Header: t("COMMON.HEIGHT"),
 			disableSortBy: true,
-			headerClassName: "hidden md:table-cell no-border",
+			headerClassName: "no-border",
 			minimumWidth: true,
 		},
 		{
