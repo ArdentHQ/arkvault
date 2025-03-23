@@ -1,5 +1,5 @@
 import { Services } from "@ardenthq/sdk";
-import { upperFirst } from "@ardenthq/sdk-helpers";
+import { isLessThan, upperFirst } from "@ardenthq/sdk-helpers";
 import { Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
 
 import { useLedgerContext } from "@/app/contexts";
@@ -19,6 +19,7 @@ const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileC
 	const signature = await wallet
 		.signatory()
 		.ledger(wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath)!);
+	console.log({ input, signature })
 	// Prevents "The device is already open" exception when running the signing function
 	await wallet.ledger().disconnect();
 
@@ -43,9 +44,17 @@ export const useTransactionBuilder = () => {
 
 		const service = wallet.transaction();
 
+		console.log({ input })
+
 		// @ts-ignore
 		const signFunction = (service[`sign${upperFirst(type)}`] as SignFunction).bind(service);
-		let data = { ...input };
+		let data = {
+			...input,
+			gasLimit: 21_000,
+			gasPrice: 10,
+		};
+
+		console.log({ data })
 
 		if (wallet.isMultiSignature()) {
 			data = await prepareMultiSignature(data, wallet);
@@ -53,9 +62,12 @@ export const useTransactionBuilder = () => {
 
 		if (wallet.isLedger()) {
 			data = await withAbortPromise(options?.abortSignal, abortConnectionRetry)(prepareLedger(data, wallet));
+			console.log("1", { data })
 		}
 
+
 		const uuid = await signFunction(data);
+		console.log({ uuid })
 
 		return {
 			transaction: wallet.transaction().transaction(uuid),

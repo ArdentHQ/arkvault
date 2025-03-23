@@ -105,6 +105,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			setLastEstimatedExpiration(data.expiration);
 
 			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory };
+			console.log({ transactionInput })
 
 			const abortSignal = abortReference.current.signal;
 			const { uuid, transaction } = await transactionBuilder.build(

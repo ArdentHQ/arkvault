@@ -142,6 +142,7 @@ export const LedgerTabs = ({
 					<ListenLedger
 						noHeading
 						onDeviceAvailable={() => {
+							console.log("=======================")
 							setActiveTab(LedgerTabStep.LedgerConnectionStep);
 							onStepChange?.(LedgerTabStep.LedgerConnectionStep);
 						}}

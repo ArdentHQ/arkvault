@@ -16,8 +16,10 @@ export const ListenLedger = ({
 	noHeading?: boolean;
 }) => {
 	const { t } = useTranslation();
+	console.log("listen device")
 
 	const { listenDevice, hasDeviceAvailable, error: ledgerError, resetConnectionState } = useLedgerContext();
+	console.log({ hasDeviceAvailable, ledgerError })
 
 	useEffect(() => {
 		listenDevice();
@@ -32,6 +34,8 @@ export const ListenLedger = ({
 			"Failed to execute 'requestDevice' on 'HID'",
 			// User clicked cancel or permission dialog was closed.
 			"Access denied to use Ledger device",
+
+			"Cannot read properties of null"
 		];
 
 		if (
