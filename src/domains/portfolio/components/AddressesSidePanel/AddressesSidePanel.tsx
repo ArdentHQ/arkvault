@@ -5,18 +5,23 @@ import { Icon } from "@/app/components/Icon";
 import { Checkbox } from "@/app/components/Checkbox";
 import { t } from "i18next";
 import { Button } from "@/app/components/Button";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
 import cn from "classnames";
 import { Tooltip } from "@/app/components/Tooltip";
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { useLocalStorage } from "usehooks-ts";
 import { useBreakpoint } from "@/app/hooks";
 import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
+import { Tab } from "@/app/components/Tabs";
+import { TabList } from "@/app/components/Tabs";
+import { Tabs } from "@/app/components/Tabs";
+import { TabId } from "@/app/components/Tabs/useTab";
 
 export const AddressesSidePanel = ({
 	profile,
 	wallets,
 	defaultSelectedAddresses = [],
+	defaultSelectedWallet,
 	open,
 	onOpenChange,
 	onClose,
@@ -25,13 +30,12 @@ export const AddressesSidePanel = ({
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
 	defaultSelectedAddresses: string[];
+	defaultSelectedWallet?: Contracts.IReadWriteWallet;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	onClose: (addresses: string[]) => void;
 	onDelete?: (addresses: string) => void;
 }): JSX.Element => {
-	const [searchQuery, setSearchQuery] = useState<string>("");
-	const [selectedAddresses, onSetSelectedAddresses] = useState(defaultSelectedAddresses);
 	const [isAnimating, setIsAnimating] = useState(false);
 
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
@@ -41,14 +45,90 @@ export const AddressesSidePanel = ({
 	const [showManageHint, setShowManageHint] = useState<boolean>(false);
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
 
+	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [addressViewPreference, setAddressViewPreference] = useLocalStorage<"single" | "multiple">(
+		"address-view-preference",
+		"multiple",
+	);
+	const [multiSelectedAddresses, setMultiSelectedAddresses] = useState<string[]>(defaultSelectedAddresses);
+	const [singleSelectedAddress, setSingleSelectedAddress] = useState<string[]>(
+		defaultSelectedWallet ? [defaultSelectedWallet.address()] : [],
+	);
+	const [activeMode, setActiveMode] = useState<"single" | "multiple">(addressViewPreference);
+	const [selectedAddresses, setSelectedAddresses] = useState<string[]>(
+		activeMode === "single" ? singleSelectedAddress : multiSelectedAddresses,
+	);
+
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
 
 	const selectedAddressesString = selectedAddresses.join("-");
 
+	const tabOptions = [
+		{
+			active: activeMode === "single",
+			label: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.SINGLE_VIEW"),
+			value: "single",
+		},
+		{
+			active: activeMode === "multiple",
+			label: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
+			value: "multiple",
+		},
+	];
+
+	const handleViewToggle = (newMode: "single" | "multiple") => {
+		if (newMode === activeMode) {
+			return;
+		}
+
+		if (activeMode === "multiple") {
+			setMultiSelectedAddresses(selectedAddresses);
+
+			// Replace nested ternary with more readable logic
+			let newSelection: string[] = [];
+			if (singleSelectedAddress.length > 0) {
+				newSelection = singleSelectedAddress;
+			} else if (selectedAddresses.length > 0) {
+				newSelection = [selectedAddresses[0]];
+			}
+			setSelectedAddresses(newSelection);
+		} else {
+			setSingleSelectedAddress(selectedAddresses);
+			setSelectedAddresses(multiSelectedAddresses.length > 0 ? multiSelectedAddresses : selectedAddresses);
+		}
+
+		setActiveMode(newMode);
+		setAddressViewPreference(newMode); // persist user preference
+	};
+
+	const activeModeChangeHandler = useCallback(
+		(activeTab: TabId) => {
+			handleViewToggle(activeTab as "single" | "multiple");
+		},
+		[activeMode, selectedAddresses, multiSelectedAddresses, singleSelectedAddress],
+	);
+
+	const toggleAddressSelection = (address: string) => {
+		if (isDeleteMode) {
+			return;
+		}
+
+		if (activeMode === "single") {
+			setSelectedAddresses([address]);
+			setSingleSelectedAddress([address]);
+		} else {
+			if (selectedAddresses.includes(address)) {
+				setSelectedAddresses(selectedAddresses.filter((a) => a !== address));
+			} else {
+				setSelectedAddresses([...selectedAddresses, address]);
+			}
+		}
+	};
+
 	useEffect(() => {
 		if (!open) {
-			onSetSelectedAddresses(defaultSelectedAddresses);
+			setSelectedAddresses(defaultSelectedAddresses);
 		}
 	}, [selectedAddressesString, open, defaultSelectedAddresses]);
 
@@ -66,20 +146,6 @@ export const AddressesSidePanel = ({
 			clearTimeout(id);
 		};
 	}, [manageHintHasShown, open]);
-
-	const toggleAddressSelection = (address: string) => {
-		if (isDeleteMode) {
-			return;
-		}
-
-		if (selectedAddresses.includes(address)) {
-			const remainingAddresses = selectedAddresses.filter((a) => a !== address);
-			onSetSelectedAddresses(remainingAddresses);
-			return;
-		}
-
-		onSetSelectedAddresses([...selectedAddresses, address]);
-	};
 
 	const resetDeleteState = () => {
 		setAddressToDelete(undefined);
@@ -127,6 +193,22 @@ export const AddressesSidePanel = ({
 			}}
 			dataTestId="AddressesSidePanel"
 		>
+			<Tabs
+				className={cn("mb-3", {
+					hidden: wallets.length === 1,
+				})}
+				activeId={activeMode}
+				onChange={activeModeChangeHandler}
+			>
+				<TabList className="grid h-10 w-full grid-cols-2">
+					{tabOptions.map((option) => (
+						<Tab tabId={option.value} key={option.value} className="">
+							<span>{option.label}</span>
+						</Tab>
+					))}
+				</TabList>
+			</Tabs>
+
 			<Input
 				placeholder={t("WALLETS.ADDRESSES_SIDE_PANEL.SEARCH_BY")}
 				innerClassName="font-normal"
@@ -141,12 +223,18 @@ export const AddressesSidePanel = ({
 			/>
 
 			<div className="-mx-3 my-3 rounded-r-sm border-l-2 border-theme-info-400 bg-theme-secondary-100 px-3 py-2.5 dark:bg-theme-dark-950 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0 sm:dark:bg-transparent">
-				<div className="flex justify-between sm:px-4">
+				<div
+					className={cn("flex sm:px-4", {
+						"justify-between": activeMode === "multiple",
+						"justify-end": activeMode === "single",
+					})}
+				>
 					<label
 						data-testid="SelectAllAddresses"
 						className={cn(
 							"flex cursor-pointer items-center space-x-3 text-sm leading-[17px] sm:text-base sm:leading-5",
 							{
+								hidden: activeMode === "single",
 								"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
 								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
 									!isSelectAllDisabled,
@@ -160,8 +248,8 @@ export const AddressesSidePanel = ({
 							checked={!isSelectAllDisabled && selectedAddresses.length === addressesToShow.length}
 							onChange={() => {
 								selectedAddresses.length === addressesToShow.length
-									? onSetSelectedAddresses([])
-									: onSetSelectedAddresses(addressesToShow.map((w) => w.address()));
+									? setSelectedAddresses([])
+									: setSelectedAddresses(addressesToShow.map((w) => w.address()));
 							}}
 						/>
 						<span className="font-semibold">{t("COMMON.SELECT_ALL")}</span>
@@ -262,6 +350,7 @@ export const AddressesSidePanel = ({
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
 						isSelected={isSelected(wallet)}
+						isSingleView={activeMode === "single"}
 						usesDeleteMode={isDeleteMode}
 						onDelete={(address: string) => setAddressToDelete(address)}
 						deleteContent={
