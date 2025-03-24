@@ -6,7 +6,7 @@ import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import { env, getDefaultProfileId, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
 
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json" with { type: "json" };
 import { requestMock, server } from "@/tests/mocks/server";
 
 let allPendingTransactions: PendingTransaction[];

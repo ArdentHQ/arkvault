@@ -6,7 +6,7 @@ import { ValidatorFooter } from "./ValidatorFooter";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { translations as voteTranslations } from "@/domains/vote/i18n";
-import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import data from "@/tests/fixtures/coins/ark/devnet/delegates.json" with { type: "json" };
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;

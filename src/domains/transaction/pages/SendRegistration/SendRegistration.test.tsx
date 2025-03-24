@@ -8,8 +8,8 @@ import { Route } from "react-router-dom";
 
 import { SendRegistration } from "./SendRegistration";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json" with { type: "json" };
+import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json" with { type: "json" };
 import {
 	act,
 	env,

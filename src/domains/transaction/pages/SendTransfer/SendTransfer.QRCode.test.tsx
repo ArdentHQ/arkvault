@@ -22,8 +22,8 @@ import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters
 import { toasts } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json" with { type: "json" };
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json" with { type: "json" };
 
 vi.mock("react-qr-reader", () => ({
 	QrReader: vi.fn().mockImplementation(() => null),

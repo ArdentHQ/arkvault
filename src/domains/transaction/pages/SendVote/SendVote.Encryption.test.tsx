@@ -10,9 +10,9 @@ import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as validatorData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import  data as validatorData  from "@/tests/fixtures/coins/ark/devnet/delegates.json" with { type: "json" };
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json" with { type: "json" };
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json" with { type: "json" };
 import {
 	act,
 	env,

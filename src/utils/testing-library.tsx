@@ -14,9 +14,9 @@ import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 import { i18n } from "@/app/i18n";
 import { httpClient } from "@/app/services";
 import { LayoutBreakpoint } from "@/types";
-import fixtureData from "@/tests/fixtures/env/storage.json";
-import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import fixtureData from "@/tests/fixtures/env/storage.json" with { type: "json" };
+import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json" with { type: "json" };
+import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json" with { type: "json" };
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import { BigNumber } from "@ardenthq/sdk-helpers";
@@ -28,8 +28,8 @@ export {
 	mockConnectedTransport,
 	mockLedgerDevicesList,
 } from "./ledger-test-helpers";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json" with { type: "json" };
+import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json" with { type: "json" };
 import { DTO } from "@ardenthq/sdk-profiles";
 
 const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode; options?: Record<string, any> }) => {
@@ -75,7 +75,7 @@ export function renderWithForm(
 	let responsiveRenderFunction: any;
 
 	if (options?.breakpoint) {
-		responsiveRenderFunction = (options?.withProviders ?? true) ? renderResponsiveWithRoute : renderResponsive;
+		responsiveRenderFunction = (options.withProviders ?? true) ? renderResponsiveWithRoute : renderResponsive;
 	} else {
 		renderFunction = (options?.withProviders ?? true) ? renderWithRouter : render;
 	}

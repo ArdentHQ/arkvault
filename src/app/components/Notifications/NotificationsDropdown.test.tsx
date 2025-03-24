@@ -9,8 +9,8 @@ import { env, getDefaultProfileId, renderResponsive, render, screen, waitFor } f
 
 import { server, requestMock } from "@/tests/mocks/server";
 
-import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
-import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json" with { type: "json" };
+import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json" with { type: "json" };
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;

@@ -1,7 +1,7 @@
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
-import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import data from "@/tests/fixtures/coins/ark/devnet/delegates.json" with { type: "json" };
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 import { ValidatorRowMobile } from "./ValidatorRowMobile";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";

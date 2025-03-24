@@ -29,8 +29,8 @@ import { httpClient, toasts } from "@/app/services";
 import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 import * as useQueryParameters from "@/app/hooks/use-query-parameters";
 
-import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
-import order from "@/tests/fixtures/exchange/changenow/order.json";
+import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json" with { type: "json" };
+import order from "@/tests/fixtures/exchange/changenow/order.json" with { type: "json" };
 import * as SendExchangeTransfer from "@/domains/exchange/components/SendExchangeTransfer";
 
 let profile: Contracts.IProfile;

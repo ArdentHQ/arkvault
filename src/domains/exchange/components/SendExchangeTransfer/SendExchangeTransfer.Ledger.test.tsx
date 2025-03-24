@@ -14,7 +14,7 @@ import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import { afterAll, expect, MockInstance } from "vitest";
 import * as environmentHooks from "@/app/hooks/env";
 import { renderHook } from "@testing-library/react";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json" with { type: "json" };
 import { useTranslation } from "react-i18next";
 
 let profile: Contracts.IProfile;

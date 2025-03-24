@@ -12,9 +12,9 @@ import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import  data as delegateData  from "@/tests/fixtures/coins/ark/devnet/delegates.json" with { type: "json" };
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json" with { type: "json" };
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json" with { type: "json" };
 import {
 	act,
 	env,

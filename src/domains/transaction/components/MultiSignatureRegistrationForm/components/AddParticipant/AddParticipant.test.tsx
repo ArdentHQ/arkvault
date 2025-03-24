@@ -8,8 +8,8 @@ import { Route } from "react-router-dom";
 
 import { AddParticipant } from "./AddParticipant";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
-import coldWalletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json";
+import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json" with { type: "json" };
+import coldWalletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json" with { type: "json" };
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 

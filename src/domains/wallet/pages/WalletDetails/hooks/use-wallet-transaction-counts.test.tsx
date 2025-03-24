@@ -5,7 +5,7 @@ import { useWalletTransactionCounts } from "./use-wallet-transaction-counts";
 import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json" with { type: "json" };
 
 describe("Wallet transaction counts", () => {
 	let wallet: Contracts.IReadWriteWallet;

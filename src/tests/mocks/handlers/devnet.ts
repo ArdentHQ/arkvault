@@ -1,6 +1,6 @@
 import { http, HttpResponse } from "msw";
 
-import delegate from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
+import delegate from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json" with { type: "json" };
 
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/ark/devnet/blockchain.json") },

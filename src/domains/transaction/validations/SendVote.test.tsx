@@ -3,7 +3,7 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 
 import { sendVote } from "./SendVote";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import  data as delegateData  from "@/tests/fixtures/coins/ark/devnet/delegates.json" with { type: "json" };
 
 let profile: Contracts.IProfile;
 let translationMock: any;

@@ -7,7 +7,7 @@ import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testi
 
 import { server, requestMock } from "@/tests/mocks/server";
 
-import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json" with { type: "json" };
 
 let profile: Contracts.IProfile;
 let notification: any;

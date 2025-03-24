@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
 import { useNetworks } from "@/app/hooks";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json" with { type: "json" };
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 

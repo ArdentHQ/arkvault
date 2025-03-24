@@ -9,8 +9,8 @@ import { env, getDefaultProfileId, render, screen, waitFor, renderResponsive } f
 
 import { server, requestMock } from "@/tests/mocks/server";
 
-import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
-import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json" with { type: "json" };
+import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json" with { type: "json" };
 
 let profile: Contracts.IProfile;
 let notificationTransaction: DTO.ExtendedConfirmedTransactionData;

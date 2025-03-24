@@ -6,7 +6,7 @@ import React from "react";
 
 import { useTransactionBuilder } from "./use-transaction-builder";
 import { LedgerProvider } from "@/app/contexts";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json" with { type: "json" };
 import { env, getDefaultProfileId, getDefaultWalletMnemonic, waitFor, WithProviders } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 

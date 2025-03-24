@@ -7,7 +7,7 @@ import { Route } from "react-router-dom";
 import { MultiSignatureDetail } from "./MultiSignatureDetail";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json" with { type: "json" };
 import {
 	env,
 	getDefaultProfileId,

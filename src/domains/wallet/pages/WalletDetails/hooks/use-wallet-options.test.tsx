@@ -6,7 +6,7 @@ import { useWalletOptions } from "./use-wallet-options";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json" with { type: "json" };
 
 describe("Wallet Options Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;

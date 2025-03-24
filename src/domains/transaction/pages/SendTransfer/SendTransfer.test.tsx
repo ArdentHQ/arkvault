@@ -15,9 +15,9 @@ import { NetworkStep } from "./NetworkStep";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { minVersionList, StepsProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json" with { type: "json" };
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json" with { type: "json" };
+import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json" with { type: "json" };
 
 import {
 	env,

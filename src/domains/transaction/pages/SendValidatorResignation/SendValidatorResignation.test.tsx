@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 
 import { SendValidatorResignation } from "./SendValidatorResignation";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json" with { type: "json" };
 import {
 	env,
 	render,

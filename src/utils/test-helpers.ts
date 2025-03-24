@@ -2,8 +2,8 @@ import { Environment, StorageData } from "@ardenthq/sdk-profiles";
 import { base64 } from "@scure/base";
 import { utf8ToBytes } from "@noble/hashes/utils";
 
-import fixtureData from "@/tests/fixtures/env/storage.json";
-import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
+import fixtureData from "@/tests/fixtures/env/storage.json" with { type: "json" };
+import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json" with { type: "json" };
 
 export const bootEnvironmentWithProfileFixtures = async ({
 	env,

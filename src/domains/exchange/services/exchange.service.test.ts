@@ -1,7 +1,7 @@
 import { exchangeHost, ExchangeService } from "./exchange.service";
 import { httpClient } from "@/app/services";
 
-import orderStatus from "@/tests/fixtures/exchange/changenow/status.json";
+import orderStatus from "@/tests/fixtures/exchange/changenow/status.json" with { type: "json" };
 import { requestMock, server } from "@/tests/mocks/server";
 
 let subject: ExchangeService;
