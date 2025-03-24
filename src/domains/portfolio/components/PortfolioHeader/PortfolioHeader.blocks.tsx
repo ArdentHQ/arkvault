@@ -3,13 +3,16 @@ import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
+import cn from 'classnames';
 
 export const ViewingAddressInfo = ({
 	profile,
 	wallets,
+	availableWallets,
 }: {
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
+	availableWallets: number;
 }) => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -28,7 +31,9 @@ export const ViewingAddressInfo = ({
 				walletName={alias}
 				truncateOnTable
 				maxNameChars={20}
-				walletNameClass="text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400"
+				walletNameClass={cn("text-sm leading-[17px] sm:text-base sm:leading-5", {
+					"text-theme-primary-600 dark:text-theme-dark-navy-400": availableWallets > 1,
+				})}
 			/>
 		);
 	}

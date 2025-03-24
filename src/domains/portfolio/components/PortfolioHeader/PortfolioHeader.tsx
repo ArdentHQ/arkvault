@@ -97,12 +97,10 @@ export const PortfolioHeader = ({
 		await persist();
 	};
 
-	const handleViewAddresses = () => {
-		if (selectedWallets.length === 1) {
-			return;
+	const handleViewAddress = () => {
+		if (allWallets.length > 1) {
+			setShowAddressesPanel(true);
 		}
-
-		setShowAddressesPanel(true);
 	};
 
 	return (
@@ -144,20 +142,21 @@ export const PortfolioHeader = ({
 								{t("COMMON.VIEWING")}:
 							</p>
 							<div
-								onClick={handleViewAddresses}
+								onClick={handleViewAddress}
 								tabIndex={0}
-								onKeyPress={handleViewAddresses}
+								onKeyPress={handleViewAddress}
 								className={cn("rounded-r", {
-									"cursor-not-allowed": selectedWallets.length === 1,
-									"cursor-pointer": selectedWallets.length > 1,
+									"cursor-pointer": allWallets.length > 1,
 								})}
 								data-testid="ShowAddressesPanel"
 							>
 								<div className="flex items-center gap-1">
-									<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
-									<Button variant="primary-transparent" size="icon" className="h-6 w-6" disabled={selectedWallets.length === 1}>
-										<Icon name="DoubleChevron" width={26} height={26} />
-									</Button>
+									<ViewingAddressInfo availableWallets={allWallets.length} wallets={selectedWallets} profile={profile} />
+									{allWallets.length > 1 && (
+										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
+											<Icon name="DoubleChevron" width={26} height={26} />
+										</Button>
+									)}
 								</div>
 							</div>
 						</div>
