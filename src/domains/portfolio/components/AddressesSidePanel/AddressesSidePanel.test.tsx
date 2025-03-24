@@ -217,7 +217,7 @@ describe("AddressesSidePanel", () => {
 
 		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), wallets.first().address());
 
-		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+		expect(screen.getAllByTestId("AddressRow").length).toBe(2);
 	});
 
 	it("should filter wallets by displayName", async () => {
@@ -235,7 +235,7 @@ describe("AddressesSidePanel", () => {
 
 		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), "WALLET 2");
 
-		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+		expect(screen.getAllByTestId("AddressRow").length).toBe(2);
 	});
 
 	it("should show a hint for `manage` button", async () => {
@@ -305,5 +305,26 @@ describe("AddressesSidePanel", () => {
 
 		setItemSpy.mockRestore();
 		getItemSpy.mockRestore();
+	});
+
+	it("should toggle between single and multiple view", async () => {
+		render(
+			<AddressesSidePanel
+				profile={profile}
+				wallets={wallets.values()}
+				defaultSelectedAddresses={[]}
+				open={true}
+				onClose={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDelete={vi.fn()}
+			/>,
+		);
+
+		
+		expect(screen.getByTestId("tabs__tab-button-single")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("tabs__tab-button-single"));
+
+		expect(screen.getByTestId("tabs__tab-button-multiple")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("tabs__tab-button-multiple"));
 	});
 });
