@@ -17,6 +17,8 @@ import { TabList } from "@/app/components/Tabs";
 import { Tabs } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 
+export type AddressViewType = "single" | "multiple";
+
 export const AddressesSidePanel = ({
 	profile,
 	wallets,
@@ -48,7 +50,7 @@ export const AddressesSidePanel = ({
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 
-	const [addressViewPreference, setAddressViewPreference] = useLocalStorage<"single" | "multiple">(
+	const [addressViewPreference, setAddressViewPreference] = useLocalStorage<AddressViewType>(
 		viewPreferenceKey,
 		"multiple",
 	);
@@ -61,7 +63,7 @@ export const AddressesSidePanel = ({
 		defaultSelectedWallet ? [defaultSelectedWallet.address()] : [],
 	);
 
-	const [activeMode, setActiveMode] = useState<"single" | "multiple">(addressViewPreference);
+	const [activeMode, setActiveMode] = useState<AddressViewType>(addressViewPreference);
 	const [selectedAddresses, setSelectedAddresses] = useState<string[]>(
 		activeMode === "single" ? singleSelectedAddress : multiSelectedAddresses,
 	);
@@ -84,7 +86,7 @@ export const AddressesSidePanel = ({
 		},
 	];
 
-	const handleViewToggle = (newMode: "single" | "multiple") => {
+	const handleViewToggle = (newMode: AddressViewType) => {
 		if (newMode === activeMode) {
 			return;
 		}
@@ -110,7 +112,7 @@ export const AddressesSidePanel = ({
 
 	const activeModeChangeHandler = useCallback(
 		(activeTab: TabId) => {
-			handleViewToggle(activeTab as "single" | "multiple");
+			handleViewToggle(activeTab as AddressViewType);
 		},
 		[activeMode, selectedAddresses, multiSelectedAddresses, singleSelectedAddress],
 	);
@@ -201,11 +203,7 @@ export const AddressesSidePanel = ({
 			}}
 			dataTestId="AddressesSidePanel"
 		>
-			<Tabs
-				className={cn("mb-3", { hidden: wallets.length === 1 })}
-				activeId={activeMode}
-				onChange={activeModeChangeHandler}
-			>
+			<Tabs className={cn("mb-3", { hidden: wallets.length === 1 })} activeId={activeMode} onChange={activeModeChangeHandler}>
 				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
 						<Tab tabId={option.value} key={option.value} className="">
