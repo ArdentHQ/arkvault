@@ -1,6 +1,6 @@
 import { ARK } from "@ardenthq/sdk-ark";
 import { Environment } from "@ardenthq/sdk-profiles";
-// import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import { httpClient } from "@/app/services";
@@ -17,7 +17,7 @@ export const initializeEnvironment = (): Environment => {
 	const env = new Environment({
 		coins: {
 			ARK,
-			// Mainsail,
+			Mainsail,
 		},
 		httpClient,
 		ledgerTransportFactory,
