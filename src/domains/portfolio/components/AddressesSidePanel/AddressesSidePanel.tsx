@@ -203,7 +203,11 @@ export const AddressesSidePanel = ({
 			}}
 			dataTestId="AddressesSidePanel"
 		>
-			<Tabs className={cn("mb-3", { hidden: wallets.length === 1 })} activeId={activeMode} onChange={activeModeChangeHandler}>
+			<Tabs
+				className={cn("mb-3", { hidden: wallets.length === 1 })}
+				activeId={activeMode}
+				onChange={activeModeChangeHandler}
+			>
 				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
 						<Tab tabId={option.value} key={option.value} className="">
