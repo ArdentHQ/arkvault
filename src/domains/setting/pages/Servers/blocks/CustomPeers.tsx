@@ -14,7 +14,6 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Spinner } from "@/app/components/Spinner";
 import { useAccordion, useBreakpoint } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
-import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { Toggle } from "@/app/components/Toggle";
 import { useServerStatus } from "@/domains/setting/pages/Servers/hooks/use-server-status";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -61,12 +60,14 @@ const PeerRow = ({
 	return (
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
 			<TableCell variant="start" innerClassName={rowColor}>
-				<div className="flex flex-col overflow-auto">
-					<div className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50">
-						<TruncateEnd text={name} maxChars={20} />
-					</div>
-					<div className="truncate text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden">
-						{address}
+				<div className="relative flex w-full flex-col md-lg:h-5 md-lg:overflow-hidden">
+					<div className="md:lg flex flex-col md-lg:absolute md-lg:inset-0">
+						<div className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50">
+							{name}
+						</div>
+						<div className="truncate text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden">
+							{address}
+						</div>
 					</div>
 				</div>
 			</TableCell>
@@ -417,7 +418,7 @@ const CustomPeers: React.VFC<{
 		{
 			Header: t("COMMON.NETWORK"),
 			disableSortBy: true,
-			headerClassName: "no-border",
+			headerClassName: "no-border w-1/3",
 		},
 		{
 			Header: t("COMMON.IP_ADDRESS"),
