@@ -4,6 +4,10 @@ export const translations = {
 		MANAGE_HINT: "You can manage and remove your addresses here.",
 		SEARCH_BY: "Search by Name or Address",
 		TITLE: "Choose Address",
+		TOGGLE: {
+			SINGLE_VIEW: "Single View",
+			MULTIPLE_VIEW: "Multiple View",
+		},
 	},
 	CONNECT_LEDGER: {
 		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.",
