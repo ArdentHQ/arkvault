@@ -49,9 +49,18 @@ export const AddressesSidePanel = ({
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 
-	const [addressViewPreference, setAddressViewPreference] = useLocalStorage<"single" | "multiple">(viewPreferenceKey, "multiple");
-	const [multiSelectedAddresses, setMultiSelectedAddresses] = useLocalStorage<string[]>(multiSelectedKey, defaultSelectedAddresses);
-	const [singleSelectedAddress, setSingleSelectedAddress] = useLocalStorage<string[]>(singleSelectedKey, defaultSelectedWallet ? [defaultSelectedWallet.address()] : []);
+	const [addressViewPreference, setAddressViewPreference] = useLocalStorage<"single" | "multiple">(
+		viewPreferenceKey,
+		"multiple",
+	);
+	const [multiSelectedAddresses, setMultiSelectedAddresses] = useLocalStorage<string[]>(
+		multiSelectedKey,
+		defaultSelectedAddresses,
+	);
+	const [singleSelectedAddress, setSingleSelectedAddress] = useLocalStorage<string[]>(
+		singleSelectedKey,
+		defaultSelectedWallet ? [defaultSelectedWallet.address()] : [],
+	);
 
 	const [activeMode, setActiveMode] = useState<"single" | "multiple">(addressViewPreference);
 	const [selectedAddresses, setSelectedAddresses] = useState<string[]>(
@@ -77,21 +86,23 @@ export const AddressesSidePanel = ({
 	];
 
 	const handleViewToggle = (newMode: "single" | "multiple") => {
-		if (newMode === activeMode) return;
+		if (newMode === activeMode) {
+			return;
+		}
 
 		if (activeMode === "multiple") {
 			setMultiSelectedAddresses(selectedAddresses);
 
 			let newSelection: string[] = [];
-			if (singleSelectedAddress.length) {
+			if (singleSelectedAddress.length > 0) {
 				newSelection = singleSelectedAddress;
-			} else if (selectedAddresses.length) {
+			} else if (selectedAddresses.length > 0) {
 				newSelection = [selectedAddresses[0]];
 			}
 			setSelectedAddresses(newSelection);
 		} else {
 			setSingleSelectedAddress(selectedAddresses);
-			setSelectedAddresses(multiSelectedAddresses.length ? multiSelectedAddresses : selectedAddresses);
+			setSelectedAddresses(multiSelectedAddresses.length > 0 ? multiSelectedAddresses : selectedAddresses);
 		}
 
 		setActiveMode(newMode);
@@ -106,7 +117,9 @@ export const AddressesSidePanel = ({
 	);
 
 	const toggleAddressSelection = (address: string) => {
-		if (isDeleteMode) return;
+		if (isDeleteMode) {
+			return;
+		}
 
 		if (activeMode === "single") {
 			setSelectedAddresses([address]);
@@ -189,8 +202,12 @@ export const AddressesSidePanel = ({
 			}}
 			dataTestId="AddressesSidePanel"
 		>
-			<Tabs className={cn("mb-3", { hidden: wallets.length === 1 })} activeId={activeMode} onChange={activeModeChangeHandler}>
-				<TabList className="h-10 w-full grid grid-cols-2">
+			<Tabs
+				className={cn("mb-3", { hidden: wallets.length === 1 })}
+				activeId={activeMode}
+				onChange={activeModeChangeHandler}
+			>
+				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
 						<Tab tabId={option.value} key={option.value} className="">
 							<span>{option.label}</span>
@@ -215,8 +232,8 @@ export const AddressesSidePanel = ({
 			<div className="-mx-3 my-3 rounded-r-sm border-l-2 border-theme-info-400 bg-theme-secondary-100 px-3 py-2.5 dark:bg-theme-dark-950 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0 sm:dark:bg-transparent">
 				<div
 					className={cn("flex sm:px-4", {
-						"justify-end": activeMode === "single",
 						"justify-between": activeMode === "multiple",
+						"justify-end": activeMode === "single",
 					})}
 				>
 					<label
@@ -224,10 +241,10 @@ export const AddressesSidePanel = ({
 						className={cn(
 							"flex cursor-pointer items-center space-x-3 text-sm leading-[17px] sm:text-base sm:leading-5",
 							{
+								hidden: activeMode === "single",
 								"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
 								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
 									!isSelectAllDisabled,
-								"hidden": activeMode === "single",
 							},
 						)}
 					>

@@ -320,7 +320,6 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		
 		expect(screen.getByTestId("tabs__tab-button-single")).toBeInTheDocument();
 		await userEvent.click(screen.getByTestId("tabs__tab-button-single"));
 
