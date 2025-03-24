@@ -36,24 +36,23 @@ export const AddressesSidePanel = ({
 	onClose: (addresses: string[]) => void;
 	onDelete?: (addresses: string) => void;
 }): JSX.Element => {
+	// Build dynamic keys based on the profile ID.
+	const profileId = profile.id();
+	const multiSelectedKey = `multi-selected-addresses-${profileId}`;
+	const singleSelectedKey = `single-selected-address-${profileId}`;
+	const viewPreferenceKey = `address-view-preference-${profileId}`;
+
 	const [isAnimating, setIsAnimating] = useState(false);
-
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
-
 	const [addressToDelete, setAddressToDelete] = useState<string | undefined>(undefined);
-
 	const [showManageHint, setShowManageHint] = useState<boolean>(false);
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
-
 	const [searchQuery, setSearchQuery] = useState<string>("");
-	const [addressViewPreference, setAddressViewPreference] = useLocalStorage<"single" | "multiple">(
-		"address-view-preference",
-		"multiple",
-	);
-	const [multiSelectedAddresses, setMultiSelectedAddresses] = useState<string[]>(defaultSelectedAddresses);
-	const [singleSelectedAddress, setSingleSelectedAddress] = useState<string[]>(
-		defaultSelectedWallet ? [defaultSelectedWallet.address()] : [],
-	);
+
+	const [addressViewPreference, setAddressViewPreference] = useLocalStorage<"single" | "multiple">(viewPreferenceKey, "multiple");
+	const [multiSelectedAddresses, setMultiSelectedAddresses] = useLocalStorage<string[]>(multiSelectedKey, defaultSelectedAddresses);
+	const [singleSelectedAddress, setSingleSelectedAddress] = useLocalStorage<string[]>(singleSelectedKey, defaultSelectedWallet ? [defaultSelectedWallet.address()] : []);
+
 	const [activeMode, setActiveMode] = useState<"single" | "multiple">(addressViewPreference);
 	const [selectedAddresses, setSelectedAddresses] = useState<string[]>(
 		activeMode === "single" ? singleSelectedAddress : multiSelectedAddresses,
@@ -78,28 +77,25 @@ export const AddressesSidePanel = ({
 	];
 
 	const handleViewToggle = (newMode: "single" | "multiple") => {
-		if (newMode === activeMode) {
-			return;
-		}
+		if (newMode === activeMode) return;
 
 		if (activeMode === "multiple") {
 			setMultiSelectedAddresses(selectedAddresses);
 
-			// Replace nested ternary with more readable logic
 			let newSelection: string[] = [];
-			if (singleSelectedAddress.length > 0) {
+			if (singleSelectedAddress.length) {
 				newSelection = singleSelectedAddress;
-			} else if (selectedAddresses.length > 0) {
+			} else if (selectedAddresses.length) {
 				newSelection = [selectedAddresses[0]];
 			}
 			setSelectedAddresses(newSelection);
 		} else {
 			setSingleSelectedAddress(selectedAddresses);
-			setSelectedAddresses(multiSelectedAddresses.length > 0 ? multiSelectedAddresses : selectedAddresses);
+			setSelectedAddresses(multiSelectedAddresses.length ? multiSelectedAddresses : selectedAddresses);
 		}
 
 		setActiveMode(newMode);
-		setAddressViewPreference(newMode); // persist user preference
+		setAddressViewPreference(newMode); // Persist the user’s view preference per profile.
 	};
 
 	const activeModeChangeHandler = useCallback(
@@ -110,18 +106,20 @@ export const AddressesSidePanel = ({
 	);
 
 	const toggleAddressSelection = (address: string) => {
-		if (isDeleteMode) {
-			return;
-		}
+		if (isDeleteMode) return;
 
 		if (activeMode === "single") {
 			setSelectedAddresses([address]);
 			setSingleSelectedAddress([address]);
 		} else {
 			if (selectedAddresses.includes(address)) {
-				setSelectedAddresses(selectedAddresses.filter((a) => a !== address));
+				const newSelection = selectedAddresses.filter((a) => a !== address);
+				setSelectedAddresses(newSelection);
+				setMultiSelectedAddresses(newSelection);
 			} else {
-				setSelectedAddresses([...selectedAddresses, address]);
+				const newSelection = [...selectedAddresses, address];
+				setSelectedAddresses(newSelection);
+				setMultiSelectedAddresses(newSelection);
 			}
 		}
 	};
@@ -158,12 +156,10 @@ export const AddressesSidePanel = ({
 		}
 
 		const query = searchQuery.toLowerCase();
-
 		return wallet.address().toLowerCase().startsWith(query) || wallet.displayName()?.toLowerCase().includes(query);
 	});
 
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
-
 	const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
 	const hasSelectedAddresses = () => selectedAddresses.length > 0;
 
@@ -193,14 +189,8 @@ export const AddressesSidePanel = ({
 			}}
 			dataTestId="AddressesSidePanel"
 		>
-			<Tabs
-				className={cn("mb-3", {
-					hidden: wallets.length === 1,
-				})}
-				activeId={activeMode}
-				onChange={activeModeChangeHandler}
-			>
-				<TabList className="grid h-10 w-full grid-cols-2">
+			<Tabs className={cn("mb-3", { hidden: wallets.length === 1 })} activeId={activeMode} onChange={activeModeChangeHandler}>
+				<TabList className="h-10 w-full grid grid-cols-2">
 					{tabOptions.map((option) => (
 						<Tab tabId={option.value} key={option.value} className="">
 							<span>{option.label}</span>
@@ -225,8 +215,8 @@ export const AddressesSidePanel = ({
 			<div className="-mx-3 my-3 rounded-r-sm border-l-2 border-theme-info-400 bg-theme-secondary-100 px-3 py-2.5 dark:bg-theme-dark-950 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0 sm:dark:bg-transparent">
 				<div
 					className={cn("flex sm:px-4", {
-						"justify-between": activeMode === "multiple",
 						"justify-end": activeMode === "single",
+						"justify-between": activeMode === "multiple",
 					})}
 				>
 					<label
@@ -234,10 +224,10 @@ export const AddressesSidePanel = ({
 						className={cn(
 							"flex cursor-pointer items-center space-x-3 text-sm leading-[17px] sm:text-base sm:leading-5",
 							{
-								hidden: activeMode === "single",
 								"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
 								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
 									!isSelectAllDisabled,
+								"hidden": activeMode === "single",
 							},
 						)}
 					>
