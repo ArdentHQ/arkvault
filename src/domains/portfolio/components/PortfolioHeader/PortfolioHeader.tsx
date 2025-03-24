@@ -48,8 +48,15 @@ export const PortfolioHeader = ({
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets, allWallets, removeSelectedAddresses } =
-		usePortfolio({ profile });
+	const {
+		balance,
+		setSelectedAddresses,
+		selectedAddresses,
+		selectedWallets,
+		allWallets,
+		removeSelectedAddresses,
+		selectedWallet,
+	} = usePortfolio({ profile });
 
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
@@ -360,6 +367,7 @@ export const PortfolioHeader = ({
 				profile={profile}
 				wallets={allWallets}
 				defaultSelectedAddresses={selectedAddresses}
+				defaultSelectedWallet={selectedWallet}
 				onClose={(addresses) => {
 					setSelectedAddresses(addresses);
 				}}
