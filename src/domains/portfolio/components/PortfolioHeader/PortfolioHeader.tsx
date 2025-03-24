@@ -97,6 +97,14 @@ export const PortfolioHeader = ({
 		await persist();
 	};
 
+	const handleViewAddresses = () => {
+		if (selectedWallets.length === 1) {
+			return;
+		}
+
+		setShowAddressesPanel(true);
+	};
+
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
@@ -136,15 +144,18 @@ export const PortfolioHeader = ({
 								{t("COMMON.VIEWING")}:
 							</p>
 							<div
-								onClick={() => setShowAddressesPanel(true)}
+								onClick={handleViewAddresses}
 								tabIndex={0}
-								onKeyPress={() => setShowAddressesPanel(true)}
-								className="cursor-pointer rounded-r"
+								onKeyPress={handleViewAddresses}
+								className={cn("rounded-r", {
+									"cursor-not-allowed": selectedWallets.length === 1,
+									"cursor-pointer": selectedWallets.length > 1,
+								})}
 								data-testid="ShowAddressesPanel"
 							>
 								<div className="flex items-center gap-1">
 									<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
-									<Button variant="primary-transparent" size="icon" className="h-6 w-6">
+									<Button variant="primary-transparent" size="icon" className="h-6 w-6" disabled={selectedWallets.length === 1}>
 										<Icon name="DoubleChevron" width={26} height={26} />
 									</Button>
 								</div>
