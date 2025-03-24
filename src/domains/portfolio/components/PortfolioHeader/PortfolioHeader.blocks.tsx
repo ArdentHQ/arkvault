@@ -3,7 +3,7 @@ import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
-import cn from 'classnames';
+import cn from "classnames";
 
 export const ViewingAddressInfo = ({
 	profile,

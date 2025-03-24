@@ -151,7 +151,11 @@ export const PortfolioHeader = ({
 								data-testid="ShowAddressesPanel"
 							>
 								<div className="flex items-center gap-1">
-									<ViewingAddressInfo availableWallets={allWallets.length} wallets={selectedWallets} profile={profile} />
+									<ViewingAddressInfo
+										availableWallets={allWallets.length}
+										wallets={selectedWallets}
+										profile={profile}
+									/>
 									{allWallets.length > 1 && (
 										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
 											<Icon name="DoubleChevron" width={26} height={26} />
