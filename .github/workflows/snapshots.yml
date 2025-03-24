@@ -9,7 +9,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22.14.0]
 
         concurrency:
             group: ${{ github.head_ref }}-snapshots
@@ -48,5 +48,5 @@ jobs:
 
             - uses: stefanzweifel/git-auto-commit-action@v4
               with:
-                commit_message: "chore: update snapshots"
-                branch: ${{ github.head_ref }}
+                  commit_message: "chore: update snapshots"
+                  branch: ${{ github.head_ref }}
