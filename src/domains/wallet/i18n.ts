@@ -5,8 +5,8 @@ export const translations = {
 		SEARCH_BY: "Search by Name or Address",
 		TITLE: "Choose Address",
 		TOGGLE: {
-			SINGLE_VIEW: "Single View",
 			MULTIPLE_VIEW: "Multiple View",
+			SINGLE_VIEW: "Single View",
 		},
 	},
 	CONNECT_LEDGER: {
