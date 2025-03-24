@@ -36,7 +36,6 @@ export const AddressesSidePanel = ({
 	onClose: (addresses: string[]) => void;
 	onDelete?: (addresses: string) => void;
 }): JSX.Element => {
-	// Build dynamic keys based on the profile ID.
 	const profileId = profile.id();
 	const multiSelectedKey = `multi-selected-addresses-${profileId}`;
 	const singleSelectedKey = `single-selected-address-${profileId}`;
@@ -95,7 +94,7 @@ export const AddressesSidePanel = ({
 		}
 
 		setActiveMode(newMode);
-		setAddressViewPreference(newMode); // Persist the user’s view preference per profile.
+		setAddressViewPreference(newMode);
 	};
 
 	const activeModeChangeHandler = useCallback(
