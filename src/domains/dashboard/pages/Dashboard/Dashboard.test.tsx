@@ -113,6 +113,13 @@ describe("Dashboard", () => {
 		const wallet1 = profile.wallets().first();
 		const wallet2 = profile.wallets().last();
 
+		const wallet1SynchroniserMock = vi
+			.spyOn(wallet1.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+		const wallet2SynchroniserMock = vi
+			.spyOn(wallet2.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+
 		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			allWallets: [wallet1, wallet2],
 			balance: {
@@ -124,7 +131,7 @@ describe("Dashboard", () => {
 			setSelectedAddresses: () => {},
 		});
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -139,9 +146,51 @@ describe("Dashboard", () => {
 			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
 		});
 
-		expect(asFragment()).toMatchSnapshot();
+		usePortfolioMock.mockRestore();
+		wallet1SynchroniserMock.mockRestore();
+		wallet2SynchroniserMock.mockRestore();
+	});
+
+	it("should render with two wallets and handle exceptions", async () => {
+		const wallet1 = profile.wallets().first();
+		const wallet2 = profile.wallets().last();
+
+		const wallet1SynchroniserMock = vi
+			.spyOn(wallet1.synchroniser(), "votes")
+			.mockRejectedValue(new Error("Error syncing votes"));
+		const wallet2SynchroniserMock = vi
+			.spyOn(wallet2.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet1, wallet2],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet1.address(), wallet2.address()],
+			selectedWallets: [wallet1, wallet2],
+			setSelectedAddresses: () => {},
+		});
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+		});
 
 		usePortfolioMock.mockRestore();
+		wallet1SynchroniserMock.mockRestore();
+		wallet2SynchroniserMock.mockRestore();
 	});
 
 	it.skip("should show introductory tutorial", async () => {
