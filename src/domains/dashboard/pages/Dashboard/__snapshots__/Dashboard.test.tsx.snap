@@ -7200,7 +7200,6 @@ exports[`Dashboard > should render with two wallets 1`] = `
                   >
                     <div
                       class="w-full"
-                      data-testid="WalletVote--multiple"
                     >
                       <p
                         class="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
