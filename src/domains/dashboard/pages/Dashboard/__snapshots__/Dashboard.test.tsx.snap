@@ -6159,3 +6159,5 @@ exports[`Dashboard > should render 1`] = `
 `;
 
 exports[`Dashboard > should render with no wallets 1`] = `<DocumentFragment />`;
+
+exports[`Dashboard > should render with two wallets 1`] = `<DocumentFragment />`;

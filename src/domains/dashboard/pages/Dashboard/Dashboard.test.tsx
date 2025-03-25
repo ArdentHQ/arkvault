@@ -133,6 +133,37 @@ describe("Dashboard", () => {
 		usePortfolioMock.mockRestore();
 	});
 
+	it("should render with two wallets", () => {
+		const wallet1 = profile.wallets().first();
+		const wallet2 = profile.wallets().last();
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet1, wallet2],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet1.address(), wallet2.address()],
+			selectedWallets: [wallet1, wallet2],
+			setSelectedAddresses: () => {},
+		});
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		usePortfolioMock.mockRestore();
+	});
+
 	it.skip("should show introductory tutorial", async () => {
 		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 
