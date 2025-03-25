@@ -50,9 +50,9 @@ export const CreateProfile = () => {
 			pageTitle={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 			navbarVariant="logo-only"
 			title={<Trans i18nKey="COMMON.APP_NAME" />}
-			wrapperClassName="pb-32 sm:pb-16"
+			wrapperClassName="pb-32 sm:pb-0"
 		>
-			<div className="flex h-page sm:items-center" data-testid="CreateProfile">
+			<div className="flex min-h-page sm:items-center" data-testid="CreateProfile">
 				<div className="mx-auto max-w-172 px-6">
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
