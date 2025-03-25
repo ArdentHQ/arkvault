@@ -91,6 +91,12 @@ export const ImportAddressesSidePanel = ({
 	}, [open]);
 
 	useEffect(() => {
+		if (activeTab === Step.MethodStep) {
+			setImportedWallet(undefined);
+		}
+	}, [activeTab]);
+
+	useEffect(() => {
 		if (value !== undefined) {
 			setWalletGenerationInput(value);
 		}
