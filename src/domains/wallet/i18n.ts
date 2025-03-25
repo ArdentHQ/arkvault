@@ -187,7 +187,7 @@ export const translations = {
 			SECRET_DESCRIPTION: "Import an address by entering your custom password",
 			SECRET_TITLE: "Import Secret",
 			SUBTITLE: "Select the method you want to use to import your address.",
-			TITLE: "Import Ledger",
+			TITLE: "Import",
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {
