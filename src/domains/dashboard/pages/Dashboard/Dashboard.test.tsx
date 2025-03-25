@@ -42,19 +42,6 @@ describe("Dashboard", () => {
 
 		await syncDelegates(profile);
 
-		const wallet = profile.wallets().first();
-
-		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			allWallets: [wallet],
-			balance: {
-				total: () => BigNumber.make("25"),
-				totalConverted: () => BigNumber.make("45"),
-			},
-			selectedAddresses: [wallet.address()],
-			selectedWallets: [wallet],
-			setSelectedAddresses: () => {},
-		});
-
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -85,6 +72,19 @@ describe("Dashboard", () => {
 	});
 
 	it("should render", async () => {
+		const wallet = profile.wallets().first();
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet.address()],
+			selectedWallets: [wallet],
+			setSelectedAddresses: () => {},
+		});
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
@@ -101,6 +101,36 @@ describe("Dashboard", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+
+		usePortfolioMock.mockRestore();
+	});
+
+	it.only("should render with no wallets", async () => {
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [],
+			selectedWallets: [],
+			setSelectedAddresses: () => {},
+		});
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		usePortfolioMock.mockRestore();
 	});
 
 	it.skip("should show introductory tutorial", async () => {
