@@ -21,7 +21,7 @@ const ButtonGroupOptionStyled = ({ variant, ...props }: ButtonGroupOptionStyledP
 		className={twMerge(
 			"flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50",
 			cn({
-				"h-14 rounded-xl": variant === "modern",
+				"h-11 rounded-xl": variant === "modern",
 				rounded: variant === "default",
 			}),
 			props.className,
