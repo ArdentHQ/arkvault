@@ -11,15 +11,14 @@ export const TruncatedWithTooltip = ({ className, text, ...properties }: Truncat
 	const [isTruncated, setIsTruncated] = useState(false);
 
 	useEffect(() => {
-		const checkTruncation = () => {
-			if (ref.current) {
-				setIsTruncated(ref.current.scrollWidth > ref.current.clientWidth);
-			}
+		const checkTruncation: ResizeObserverCallback = (entries) => {
+			const element = entries[0].target;
+
+			setIsTruncated(element.scrollWidth > element.clientWidth);
 		};
 
-		checkTruncation();
-
 		const resizeObserver = new ResizeObserver(checkTruncation);
+
 		if (ref.current) {
 			resizeObserver.observe(ref.current);
 		}

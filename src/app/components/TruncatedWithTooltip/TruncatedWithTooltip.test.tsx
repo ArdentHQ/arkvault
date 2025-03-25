@@ -1,70 +1,129 @@
-import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 import React from "react";
-import { render, screen, fireEvent } from "@/utils/testing-library";
+import { render, screen, waitFor, act } from "@testing-library/react";
 import { TruncatedWithTooltip } from "./TruncatedWithTooltip";
+import * as TooltipMock from "@/app/components/Tooltip";
 
 describe("TruncatedWithTooltip", () => {
-	it("should truncate text when it overflows", () => {
+	beforeAll(() => {
+		vi.spyOn(TooltipMock, "Tooltip").mockImplementation(({ content, disabled, children }) => (
+			<span data-testid="tooltip-wrapper">
+				{children}
+				{!disabled && <span data-testid="tooltip-content">{content}</span>}
+			</span>
+		));
+	});
+
+	afterAll(() => {
+		vi.restoreAllMocks();
+	});
+
+	it("shows tooltip when text is truncated", async () => {
+		let observerCallback;
+		const ResizeObserverSpy = vi.fn().mockImplementation((callback) => {
+			observerCallback = callback;
+			return {
+				disconnect: vi.fn(),
+				observe: vi.fn(),
+				unobserve: vi.fn(),
+			};
+		});
+		global.ResizeObserver = ResizeObserverSpy;
+
 		render(
-			<div style={{ width: "100px" }}>
-				<TruncatedWithTooltip text="ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT" />
+			<div style={{ width: "50px" }}>
+				<TruncatedWithTooltip text="LongTextForTruncation123" />
 			</div>,
 		);
 
-		const span = screen.getByText("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
-		expect(span).toHaveClass("truncate");
-		expect(span).toHaveTextContent("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
+		const textSpan = screen.getByText("LongTextForTruncation123");
+		vi.spyOn(textSpan, "scrollWidth", "get").mockReturnValue(300);
+		vi.spyOn(textSpan, "clientWidth", "get").mockReturnValue(40);
+
+		act(() => {
+			observerCallback([{ target: textSpan }]);
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("tooltip-content")).toBeInTheDocument();
+		});
 	});
 
-	it("should not truncate text when it does not overflow", () => {
+	it("does not show tooltip when text is not truncated", async () => {
+		let observerCallback;
+		const ResizeObserverSpy = vi.fn().mockImplementation((callback) => {
+			observerCallback = callback;
+			return {
+				disconnect: vi.fn(),
+				observe: vi.fn(),
+				unobserve: vi.fn(),
+			};
+		});
+		global.ResizeObserver = ResizeObserverSpy;
+
 		render(
-			<div style={{ width: "500px" }}>
-				<TruncatedWithTooltip text="Short text" />
+			<div style={{ width: "400px" }}>
+				<TruncatedWithTooltip text="LongTextForTruncation123" />
 			</div>,
 		);
 
-		const span = screen.getByText("Short text");
-		expect(span).toHaveTextContent("Short text");
+		const textSpan = screen.getByText("LongTextForTruncation123");
+		vi.spyOn(textSpan, "scrollWidth", "get").mockReturnValue(300);
+		vi.spyOn(textSpan, "clientWidth", "get").mockReturnValue(400);
+
+		act(() => {
+			observerCallback([{ target: textSpan }]);
+		});
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("tooltip-content")).not.toBeInTheDocument();
+		});
 	});
 
-	it("should show tooltip when text is truncated", async () => {
-		const { baseElement } = render(
-			<div style={{ width: "100px" }}>
-				<TruncatedWithTooltip text="ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT" />
+	it("updates tooltip state on resize", async () => {
+		let observerCallback;
+		const ResizeObserverSpy = vi.fn().mockImplementation((callback) => {
+			observerCallback = callback;
+			return {
+				disconnect: vi.fn(),
+				observe: vi.fn(),
+				unobserve: vi.fn(),
+			};
+		});
+		global.ResizeObserver = ResizeObserverSpy;
+
+		const { rerender } = render(
+			<div style={{ width: "50px" }}>
+				<TruncatedWithTooltip text="LongTextForTruncation123" />
 			</div>,
 		);
 
-		const span = screen.getByText("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
-		await userEvent.hover(span);
+		const textSpan = screen.getByText("LongTextForTruncation123");
+		vi.spyOn(textSpan, "scrollWidth", "get").mockReturnValue(300);
+		vi.spyOn(textSpan, "clientWidth", "get").mockReturnValue(40);
 
-		expect(baseElement).toHaveTextContent("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
-	});
+		act(() => {
+			observerCallback([{ target: textSpan }]);
+		});
 
-	it("should not show tooltip when text is not truncated", async () => {
-		const { baseElement } = render(
-			<div style={{ width: "500px" }}>
-				<TruncatedWithTooltip text="Short text" />
+		await waitFor(() => {
+			expect(screen.getByTestId("tooltip-content")).toBeInTheDocument();
+		});
+
+		vi.spyOn(textSpan, "clientWidth", "get").mockReturnValue(400);
+
+		rerender(
+			<div style={{ width: "400px" }}>
+				<TruncatedWithTooltip text="LongTextForTruncation123" />
 			</div>,
 		);
 
-		const span = screen.getByText("Short text");
-		await userEvent.hover(span);
+		act(() => {
+			observerCallback([{ target: textSpan }]);
+		});
 
-		expect(baseElement.querySelector(".tooltip")).toBeNull();
-	});
-
-	it("should update truncation on resize", () => {
-		render(
-			<div style={{ width: "100px" }}>
-				<TruncatedWithTooltip text="ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT" />
-			</div>,
-		);
-
-		const span = screen.getByText("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
-		expect(span).toHaveClass("truncate");
-
-		fireEvent(window, new Event("resize"));
-
-		expect(span).toHaveTextContent("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
+		await waitFor(() => {
+			expect(screen.queryByTestId("tooltip-content")).not.toBeInTheDocument();
+		});
 	});
 });
