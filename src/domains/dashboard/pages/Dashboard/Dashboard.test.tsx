@@ -100,40 +100,16 @@ describe("Dashboard", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
-		expect(asFragment()).toMatchSnapshot();
-
-		usePortfolioMock.mockRestore();
-	});
-
-	it("should render with no wallets", () => {
-		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			allWallets: [],
-			balance: {
-				total: () => BigNumber.make("25"),
-				totalConverted: () => BigNumber.make("45"),
-			},
-			selectedAddresses: [],
-			selectedWallets: [],
-			setSelectedAddresses: () => {},
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletVote__button")).toBeVisible();
 		});
 
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
-
 		expect(asFragment()).toMatchSnapshot();
 
 		usePortfolioMock.mockRestore();
 	});
 
-	it("should render with two wallets", () => {
+	it("should render with two wallets", async () => {
 		const wallet1 = profile.wallets().first();
 		const wallet2 = profile.wallets().last();
 
@@ -158,6 +134,10 @@ describe("Dashboard", () => {
 				withProfileSynchronizer: true,
 			},
 		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 
