@@ -105,7 +105,7 @@ describe("Dashboard", () => {
 		usePortfolioMock.mockRestore();
 	});
 
-	it.only("should render with no wallets", () => {
+	it("should render with no wallets", () => {
 		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			allWallets: [],
 			balance: {
