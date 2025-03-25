@@ -19,6 +19,7 @@ import { useServerStatus } from "@/domains/setting/pages/Servers/hooks/use-serve
 import { useEnvironmentContext } from "@/app/contexts";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
+import { TruncatedWithTooltip } from "@/app/components/TruncatedWithTooltip";
 
 interface PeerRowProperties {
 	name: string;
@@ -61,21 +62,25 @@ const PeerRow = ({
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
 			<TableCell variant="start" innerClassName={rowColor}>
 				<div className="relative flex w-full flex-col md-lg:h-5 md-lg:overflow-hidden">
-					<div className="md:lg flex flex-col md-lg:absolute md-lg:inset-0">
-						<div className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50">
-							{name}
-						</div>
-						<div className="truncate text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden">
-							{address}
-						</div>
+					<div className="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full">
+						<TruncatedWithTooltip
+							className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50"
+							text={name}
+						/>
+
+						<TruncatedWithTooltip
+							className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden"
+							text={address}
+						/>
 					</div>
 				</div>
 			</TableCell>
 
 			<TableCell className="hidden md-lg:table-cell" innerClassName={rowColor}>
-				<div className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50">
-					{address}
-				</div>
+				<TruncatedWithTooltip
+					text={address}
+					className="cursor-pointer text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-72 lg:max-w-44 xl:max-w-72"
+				/>
 			</TableCell>
 
 			<TableCell innerClassName={rowColor}>
@@ -285,12 +290,17 @@ const CustomPeersPeer: React.VFC<{
 								</div>
 							</div>
 						}
-						bodyClassName={cn("sm:grid-cols-3", { "hidden sm:grid": !isExpanded })}
+						bodyClassName={cn("overflow-auto sm:grid-cols-3", { "hidden sm:grid": !isExpanded })}
 					>
-						<MobileTableElementRow title={t("COMMON.IP_ADDRESS")}>
-							<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
-								{address}
-							</span>
+						<MobileTableElementRow
+							title={t("COMMON.IP_ADDRESS")}
+							className="overflow-auto"
+							bodyClassName="overflow-auto"
+						>
+							<TruncatedWithTooltip
+								text={address}
+								className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+							/>
 						</MobileTableElementRow>
 
 						<MobileTableElementRow title={t("COMMON.HEIGHT")}>

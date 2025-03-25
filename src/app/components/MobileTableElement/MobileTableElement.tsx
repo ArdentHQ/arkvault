@@ -19,18 +19,20 @@ interface MobileTableElementProperties extends Omit<React.HTMLAttributes<HTMLDiv
 
 interface MobileTableElementRowProperties extends React.HTMLAttributes<HTMLDivElement> {
 	title: string;
+	bodyClassName?: string;
 }
 
 export const MobileTableElementRow = ({
 	title,
 	children,
 	className,
+	bodyClassName,
 	...properties
 }: MobileTableElementRowProperties) => (
 	<div className={twMerge("grid grid-cols-1 gap-2", className)} {...properties}>
 		<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200">{title}</div>
 
-		<div>{children}</div>
+		<div className={bodyClassName}>{children}</div>
 	</div>
 );
 
