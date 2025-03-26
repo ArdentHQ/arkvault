@@ -125,6 +125,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 						className={twMerge(
 							"z-40 w-full sm:w-auto",
 							classNames({
+								"min-w-52": variant === "options",
 								"px-5 sm:px-0": variant !== "navbar",
 								"rounded-none sm:mt-2": variant === "navbar",
 							}),
@@ -136,7 +137,13 @@ export const Dropdown: FC<DropdownProperties> = ({
 					>
 						<Wrapper
 							variant={options && variant === undefined ? "options" : variant}
-							className="dropdown-body overflow-hidden rounded bg-white p-1 shadow-xl outline-none dark:bg-theme-dark-900"
+							className={cn(
+								"dropdown-body overflow-hidden bg-white p-1 shadow-xl outline-none dark:bg-theme-dark-900",
+								{
+									rounded: variant !== "options",
+									"rounded-xl": variant === "options",
+								},
+							)}
 						>
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options, variant })}
