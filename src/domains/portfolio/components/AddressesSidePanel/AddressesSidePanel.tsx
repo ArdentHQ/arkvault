@@ -154,27 +154,21 @@ export const AddressesSidePanel = ({
 	useEffect(() => {
 		const initializeAddresses = async () => {
 			if (activeMode === AddressViewSelection.single) {
-				// If no single address is selected but we have a default wallet, use it
 				if (singleSelectedAddress.length === 0) {
-					let addressToUse: string[] = [];
+					const addressToUse =
+						defaultSelectedWallet?.address() || // default single address, or
+						defaultSelectedAddresses[0] || // default multi addresses, or
+						(wallets.length > 0 ? wallets[0].address() : undefined); // default to first known address
 
-					if (defaultSelectedWallet) {
-						addressToUse = [defaultSelectedWallet.address()];
-					} else if (defaultSelectedAddresses.length > 0) {
-						addressToUse = [defaultSelectedAddresses[0]];
-					} else if (wallets.length > 0) {
-						addressToUse = [wallets[0].address()];
-					}
-
-					if (addressToUse.length > 0) {
-						setSelectedAddresses(addressToUse);
-						await setSingleSelectedAddress(addressToUse);
+					if (addressToUse) {
+						setSelectedAddresses([addressToUse]);
+						await setSingleSelectedAddress([addressToUse]);
 					}
 				} else {
 					setSelectedAddresses(singleSelectedAddress);
 				}
 			} else if (activeMode === AddressViewSelection.multiple) {
-				// If no multiple addresses are selected, use defaults
+				// For multiple selection mode
 				if (multiSelectedAddresses.length === 0 && defaultSelectedAddresses.length > 0) {
 					setSelectedAddresses(defaultSelectedAddresses);
 					await setMultiSelectedAddresses(defaultSelectedAddresses);
