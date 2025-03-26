@@ -18,7 +18,6 @@ import cn from "classnames";
 import { t } from "i18next";
 import { useBreakpoint } from "@/app/hooks";
 import { useLocalStorage } from "usehooks-ts";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export enum AddressViewSelection {
 	single = "single",
@@ -53,8 +52,6 @@ export const AddressesSidePanel = ({
 		setMultiSelectedAddresses,
 	} = useAddressesPanel({ profile });
 
-	const { selectedAddresses, setSelectedAddresses } = usePortfolio({ profile });
-
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
 	const [addressToDelete, setAddressToDelete] = useState<string | undefined>(undefined);
@@ -63,6 +60,9 @@ export const AddressesSidePanel = ({
 	const [searchQuery, setSearchQuery] = useState<string>("");
 
 	const [activeMode, setActiveMode] = useState<AddressViewType>(addressViewPreference);
+	const [selectedAddresses, setSelectedAddresses] = useState<string[]>(
+		activeMode === AddressViewSelection.single ? singleSelectedAddress : multiSelectedAddresses,
+	);
 
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
