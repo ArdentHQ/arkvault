@@ -150,31 +150,43 @@ export const AddressesSidePanel = ({
 		}
 	};
 
-	// Initialize selected addresses on component mount
 	useEffect(() => {
+		const handleSingleViewInitialization = async () => {
+			if (singleSelectedAddress.length > 0) {
+				setSelectedAddresses(singleSelectedAddress);
+				return;
+			}
+
+			const addressToUse = findFirstAvailableAddress();
+
+			if (addressToUse) {
+				setSelectedAddresses([addressToUse]);
+				await setSingleSelectedAddress([addressToUse]);
+			}
+		};
+
+		const findFirstAvailableAddress = () => {
+			return (
+				defaultSelectedWallet?.address() ||
+				defaultSelectedAddresses[0] ||
+				(wallets.length > 0 ? wallets[0].address() : undefined)
+			);
+		};
+
+		const handleMultipleViewInitialization = async () => {
+			if (multiSelectedAddresses.length === 0 && defaultSelectedAddresses.length > 0) {
+				setSelectedAddresses(defaultSelectedAddresses);
+				await setMultiSelectedAddresses(defaultSelectedAddresses);
+			} else {
+				setSelectedAddresses(multiSelectedAddresses);
+			}
+		};
+
 		const initializeAddresses = async () => {
 			if (activeMode === AddressViewSelection.single) {
-				if (singleSelectedAddress.length === 0) {
-					const addressToUse =
-						defaultSelectedWallet?.address() || // default single address, or
-						defaultSelectedAddresses[0] || // default multi addresses, or
-						(wallets.length > 0 ? wallets[0].address() : undefined); // default to first known address
-
-					if (addressToUse) {
-						setSelectedAddresses([addressToUse]);
-						await setSingleSelectedAddress([addressToUse]);
-					}
-				} else {
-					setSelectedAddresses(singleSelectedAddress);
-				}
+				await handleSingleViewInitialization();
 			} else if (activeMode === AddressViewSelection.multiple) {
-				// For multiple selection mode
-				if (multiSelectedAddresses.length === 0 && defaultSelectedAddresses.length > 0) {
-					setSelectedAddresses(defaultSelectedAddresses);
-					await setMultiSelectedAddresses(defaultSelectedAddresses);
-				} else {
-					setSelectedAddresses(multiSelectedAddresses);
-				}
+				await handleMultipleViewInitialization();
 			}
 		};
 
