@@ -195,12 +195,12 @@ export const AddressesSidePanel = ({
 
 	// Reset selected addresses when panel closes
 	useEffect(() => {
-		if (!open) {
+		if (open) {
+			setSelectedAddresses(selectedAddressesFromPortfolio);
+		} else {
 			setSelectedAddresses(
 				activeMode === AddressViewSelection.single ? singleSelectedAddress : multiSelectedAddresses,
 			);
-		} else {
-			setSelectedAddresses(selectedAddressesFromPortfolio);
 		}
 	}, [open]);
 
