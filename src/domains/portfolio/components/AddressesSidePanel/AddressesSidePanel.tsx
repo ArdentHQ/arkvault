@@ -165,13 +165,10 @@ export const AddressesSidePanel = ({
 			}
 		};
 
-		const findFirstAvailableAddress = () => {
-			return (
-				defaultSelectedWallet?.address() ||
-				defaultSelectedAddresses[0] ||
-				(wallets.length > 0 ? wallets[0].address() : undefined)
-			);
-		};
+		const findFirstAvailableAddress = () =>
+			defaultSelectedWallet?.address() ||
+			defaultSelectedAddresses[0] ||
+			(wallets.length > 0 ? wallets[0].address() : undefined);
 
 		const handleMultipleViewInitialization = async () => {
 			if (multiSelectedAddresses.length === 0 && defaultSelectedAddresses.length > 0) {

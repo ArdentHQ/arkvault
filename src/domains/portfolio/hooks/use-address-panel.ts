@@ -21,8 +21,8 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 	const getAddressPanelSettings = (): AddressesPanelSettings => {
 		const defaultSettings: AddressesPanelSettings = {
 			addressViewPreference: AddressViewSelection.multiple,
-			singleSelectedAddress: [],
 			multiSelectedAddresses: [],
+			singleSelectedAddress: [],
 		};
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
@@ -44,8 +44,8 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 		if (!config.addressPanelSettings) {
 			config.addressPanelSettings = {
 				addressViewPreference: AddressViewSelection.multiple,
-				singleSelectedAddress: [],
 				multiSelectedAddresses: [],
+				singleSelectedAddress: [],
 			};
 		}
 
@@ -94,10 +94,10 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 
 	return {
 		addressViewPreference,
-		singleSelectedAddress,
 		multiSelectedAddresses,
 		setAddressViewPreference,
-		setSingleSelectedAddress,
 		setMultiSelectedAddresses,
+		setSingleSelectedAddress,
+		singleSelectedAddress,
 	};
 };
