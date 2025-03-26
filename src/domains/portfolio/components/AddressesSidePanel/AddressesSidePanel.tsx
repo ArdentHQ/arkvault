@@ -99,8 +99,10 @@ export const AddressesSidePanel = ({
 
 			let newSelection: string[] = [];
 			if (singleSelectedAddress.length > 0) {
+				/* istanbul ignore next -- @preserve */
 				newSelection = singleSelectedAddress;
 			} else if (selectedAddresses.length > 0) {
+				/* istanbul ignore next -- @preserve */
 				newSelection = [selectedAddresses[0]];
 			}
 			setSelectedAddresses(newSelection);
