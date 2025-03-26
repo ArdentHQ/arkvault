@@ -177,7 +177,12 @@ export const TransactionRow = memo(
 					})}
 				>
 					<div className="flex flex-col items-end gap-1">
-						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} profile={profile} />
+						<TransactionTotalLabel
+							transaction={transaction}
+							hideStyles={!hideSender}
+							profile={profile}
+							mode={mode}
+						/>
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
@@ -214,6 +219,7 @@ export const TransactionRow = memo(
 								transaction={transaction}
 								hideStyles={!hideSender}
 								profile={profile}
+								mode={mode}
 							/>
 							<span
 								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
