@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { useTheme, useWalletAlias } from "@/app/hooks";
@@ -180,6 +181,7 @@ export const TransactionRowAddressing = ({
 		mode !== "sent" && transaction.isSent(),
 		mode === "sent" && !transaction.isSent(),
 	].some(Boolean);
+
 	const isContract = isContractTransaction(transaction);
 
 	let direction: Direction = isNegative ? "sent" : "received";
@@ -274,7 +276,6 @@ export const TransactionRowAddressing = ({
 				className="flex w-full flex-row gap-2"
 				data-testid="TransactionRowAddressing__container_advanced_recipient"
 			>
-				{mode}
 				<TransactionRowLabel direction="sent" style="return" />
 				<FormattedAddress address={recipientAddress} alias={recipientAlias} />
 			</div>
