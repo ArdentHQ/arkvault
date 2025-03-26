@@ -62,4 +62,3 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 		return templateColumns;
 	}, [t, coinLabel, hideSender]);
 };
-
