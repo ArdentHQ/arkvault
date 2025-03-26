@@ -277,7 +277,7 @@ export const AddressesSidePanel = ({
 				activeId={activeMode}
 				onChange={activeModeChangeHandler}
 			>
-				<TabList className="grid w-full h-10 grid-cols-2">
+				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
 						<Tab tabId={option.value} key={option.value} className="">
 							<span>{option.label}</span>
@@ -345,7 +345,7 @@ export const AddressesSidePanel = ({
 							maxWidth={isXs ? 264 : "none"}
 							content={
 								<div className="px-[3px] pb-1.5 text-sm leading-5 sm:space-x-4 sm:pb-px sm:pt-px">
-									<span className="block mb-2 sm:mb-0 sm:inline">
+									<span className="mb-2 block sm:mb-0 sm:inline">
 										{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}
 									</span>
 									<Button
@@ -405,7 +405,7 @@ export const AddressesSidePanel = ({
 			</div>
 
 			{isDeleteMode && (
-				<div className="flex flex-col my-2 overflow-hidden rounded bg-theme-info-50 dark:bg-theme-dark-800 sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
+				<div className="my-2 flex flex-col overflow-hidden rounded bg-theme-info-50 dark:bg-theme-dark-800 sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
 					<div className="flex w-full items-center space-x-2 bg-theme-info-100 px-4 py-2 dark:bg-theme-info-600 sm:w-auto sm:space-x-0 sm:py-4.5">
 						<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
 						<span className="text-sm font-semibold leading-[17px] text-theme-info-700 dark:text-white sm:hidden">
