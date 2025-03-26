@@ -339,7 +339,7 @@ describe("AddressesSidePanel", () => {
 				onClose={onClose}
 				onOpenChange={vi.fn()}
 				onDelete={vi.fn()}
-			/>
+			/>,
 		);
 
 		const singleTabButton = screen.getByTestId("tabs__tab-button-single");
