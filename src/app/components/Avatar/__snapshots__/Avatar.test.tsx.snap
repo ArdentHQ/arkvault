@@ -11,7 +11,7 @@ exports[`Avatar > should render 1`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -30,7 +30,7 @@ exports[`Avatar > should render with custom shadow color 1`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -49,7 +49,7 @@ exports[`Avatar > should render with highlight 1`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -68,7 +68,7 @@ exports[`Avatar > should render with highlight and custom shadow color 1`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -87,7 +87,7 @@ exports[`Avatar > should render with size 1`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -106,7 +106,7 @@ exports[`Avatar > should render with size 2`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -125,7 +125,7 @@ exports[`Avatar > should render with size 3`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -144,7 +144,7 @@ exports[`Avatar > should render with size 4`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -163,7 +163,7 @@ exports[`Avatar > should render with size 5`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -182,7 +182,7 @@ exports[`Avatar > should render without shadow 1`] = `
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2230%22%20fill%3D%22rgb(244%2C%2067%2C%2054)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2280%22%20cy%3D%2240%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3C%2Fsvg%3E"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
