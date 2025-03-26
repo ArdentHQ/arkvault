@@ -92,6 +92,7 @@ export const TransactionRowMobile = memo(
 									transaction={transaction}
 									hideStyles={!hideSender}
 									profile={profile}
+									mode={mode}
 								/>
 							</MobileSection>
 
