@@ -15,14 +15,12 @@ let wallet: Contracts.IReadWriteWallet;
 const setSelectedAddressesMock = vi.fn();
 const selectedAddressesMock: string[] = [];
 
-vi.mock("@/domains/portfolio/hooks/use-portfolio", () => {
-	return {
-		usePortfolio: () => ({
-			selectedAddresses: selectedAddressesMock,
-			setSelectedAddresses: setSelectedAddressesMock,
-		}),
-	};
-});
+vi.mock("@/domains/portfolio/hooks/use-portfolio", () => ({
+	usePortfolio: () => ({
+		selectedAddresses: selectedAddressesMock,
+		setSelectedAddresses: setSelectedAddressesMock,
+	}),
+}));
 
 describe("useWalletImport", () => {
 	const wrapper = ({ children }: any) => (
@@ -209,14 +207,15 @@ describe("useWalletImport", () => {
 	it("should set imported wallet as the only selected wallet when view preference is set to single", async () => {
 		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
 
-		const wallets = await act(async () => {
-			return await walletImport.current.importWallets({
-				encryptedWif: "",
-				networks: [network],
-				type: OptionsValue.BIP39,
-				value: MNEMONICS[1],
-			});
-		});
+		const wallets = await act(
+			async () =>
+				await walletImport.current.importWallets({
+					encryptedWif: "",
+					networks: [network],
+					type: OptionsValue.BIP39,
+					value: MNEMONICS[1],
+				}),
+		);
 
 		expect(wallets).toHaveLength(1);
 		const importedWallet = wallets[0];
@@ -230,14 +229,15 @@ describe("useWalletImport", () => {
 	it("should append imported wallet to the selected addresses when view preference is set to multiple", async () => {
 		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
 
-		const wallets = await act(async () => {
-			return await walletImport.current.importWallets({
-				encryptedWif: "",
-				networks: [network],
-				type: OptionsValue.BIP39,
-				value: MNEMONICS[2],
-			});
-		});
+		const wallets = await act(
+			async () =>
+				await walletImport.current.importWallets({
+					encryptedWif: "",
+					networks: [network],
+					type: OptionsValue.BIP39,
+					value: MNEMONICS[2],
+				}),
+		);
 
 		expect(wallets).toHaveLength(1);
 		const importedWallet = wallets[0];
