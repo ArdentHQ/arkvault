@@ -71,12 +71,12 @@ export const AddressesSidePanel = ({
 		{
 			active: activeMode === AddressViewSelection.single,
 			label: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.SINGLE_VIEW"),
-			value: "single",
+			value: AddressViewSelection.single,
 		},
 		{
 			active: activeMode === AddressViewSelection.multiple,
 			label: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
-			value: "multiple",
+			value: AddressViewSelection.multiple,
 		},
 	];
 
@@ -104,7 +104,7 @@ export const AddressesSidePanel = ({
 			// Switching from single to multiple
 			await setSingleSelectedAddress(selectedAddresses);
 
-			let newSelection;
+			let newSelection: string[];
 
 			if (multiSelectedAddresses.length > 0) {
 				newSelection = multiSelectedAddresses;

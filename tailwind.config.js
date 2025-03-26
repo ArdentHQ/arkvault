@@ -213,6 +213,7 @@ module.exports = {
 				11: "2.75rem",
 				16: "3.5rem",
 				17.5: "4.375rem",
+				page: "calc(100vh - var(--nav-height))",
 			},
 			minWidth: {
 				"200px": "200px",
