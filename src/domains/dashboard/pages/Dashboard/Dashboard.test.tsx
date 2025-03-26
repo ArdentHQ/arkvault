@@ -42,19 +42,6 @@ describe("Dashboard", () => {
 
 		await syncDelegates(profile);
 
-		const wallet = profile.wallets().first();
-
-		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			allWallets: [wallet],
-			balance: {
-				total: () => BigNumber.make("25"),
-				totalConverted: () => BigNumber.make("45"),
-			},
-			selectedAddresses: [wallet.address()],
-			selectedWallets: [wallet],
-			setSelectedAddresses: () => {},
-		});
-
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -85,6 +72,19 @@ describe("Dashboard", () => {
 	});
 
 	it("should render", async () => {
+		const wallet = profile.wallets().first();
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet.address()],
+			selectedWallets: [wallet],
+			setSelectedAddresses: () => {},
+		});
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
@@ -100,7 +100,97 @@ describe("Dashboard", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletVote__button")).toBeVisible();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
+
+		usePortfolioMock.mockRestore();
+	});
+
+	it("should render with two wallets", async () => {
+		const wallet1 = profile.wallets().first();
+		const wallet2 = profile.wallets().last();
+
+		const wallet1SynchroniserMock = vi
+			.spyOn(wallet1.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+		const wallet2SynchroniserMock = vi
+			.spyOn(wallet2.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet1, wallet2],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet1.address(), wallet2.address()],
+			selectedWallets: [wallet1, wallet2],
+			setSelectedAddresses: () => {},
+		});
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+		});
+
+		usePortfolioMock.mockRestore();
+		wallet1SynchroniserMock.mockRestore();
+		wallet2SynchroniserMock.mockRestore();
+	});
+
+	it("should render with two wallets and handle exceptions", async () => {
+		const wallet1 = profile.wallets().first();
+		const wallet2 = profile.wallets().last();
+
+		const wallet1SynchroniserMock = vi
+			.spyOn(wallet1.synchroniser(), "votes")
+			.mockRejectedValue(new Error("Error syncing votes"));
+		const wallet2SynchroniserMock = vi
+			.spyOn(wallet2.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet1, wallet2],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet1.address(), wallet2.address()],
+			selectedWallets: [wallet1, wallet2],
+			setSelectedAddresses: () => {},
+		});
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+		});
+
+		usePortfolioMock.mockRestore();
+		wallet1SynchroniserMock.mockRestore();
+		wallet2SynchroniserMock.mockRestore();
 	});
 
 	it.skip("should show introductory tutorial", async () => {

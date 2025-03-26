@@ -27,7 +27,14 @@ const renderIcon = (option: DropdownOption) => {
 const isOptionGroup = (options: DropdownOption[] | DropdownOptionGroup[]) =>
 	options.length > 0 && options[0].key !== undefined;
 
-const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: DropdownOptionGroup) => {
+const renderOptionGroup = ({
+	key,
+	hasDivider,
+	title,
+	options,
+	onSelect,
+	variant,
+}: DropdownOptionGroup & { variant?: string }) => {
 	if (options.length === 0 || !onSelect) {
 		return;
 	}
@@ -45,7 +52,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 						{title}
 					</li>
 				)}
-				{renderOptions({ key, onSelect, options })}
+				{renderOptions({ key, onSelect, options, variant })}
 			</ul>
 		</div>
 	);
@@ -70,7 +77,7 @@ export const renderOptions = ({ options, key, onSelect, variant }: OptionsProper
 		return (
 			<div>
 				{(options as DropdownOptionGroup[]).map((optionGroup: DropdownOptionGroup) =>
-					renderOptionGroup({ ...optionGroup, onSelect }),
+					renderOptionGroup({ ...optionGroup, onSelect, variant }),
 				)}
 			</div>
 		);
@@ -94,16 +101,25 @@ export const renderOptions = ({ options, key, onSelect, variant }: OptionsProper
 					}}
 				>
 					{option.iconPosition === "start" && renderIcon(option)}
-					<span>
+					<span className="flex w-full items-center justify-between">
 						{option.element}
-						{option.label}
+						<span>{option.label}</span>
 						{option.secondaryLabel && (
-							<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600">
+							<span className="ml-1 pr-4 text-theme-secondary-500 dark:text-theme-secondary-600">
 								{renderSecondaryLabel(option.secondaryLabel, !!option.active)}
 							</span>
 						)}
 					</span>
 					{option.iconPosition !== "start" && renderIcon(option)}
+					<div className="h-4 w-4">
+						{option.active && variant === "options" && (
+							<Icon
+								name={"CheckmarkDouble"}
+								size="md"
+								className="text-theme-primary-600 dark:text-theme-secondary-200"
+							/>
+						)}
+					</div>
 				</DropdownItem>
 			))}
 		</ul>

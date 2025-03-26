@@ -49,7 +49,7 @@ export const translations = {
 			COMMA: "Comma",
 			CRYPTO_AMOUNT: "Crypto Amount",
 			CSV_SETTINGS: "CSV Settings",
-			CURRENT_MONTH: "Month to Date",
+			CURRENT_MONTH: "Current Month",
 			CURRENT_QUARTER: "Quarter to Date",
 			CURRENT_YEAR: "Year to Date",
 			CUSTOM: "Custom",
