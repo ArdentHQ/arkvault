@@ -72,7 +72,7 @@ exports[`TransactionExportModal > should render 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="space-y-5 mt-8"
+              class="space-y-5 mt-4"
               data-testid="Form"
             >
               <div>
@@ -101,7 +101,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transactions
@@ -114,14 +114,14 @@ exports[`TransactionExportModal > should render 1`] = `
                             >
                               <div>
                                 <div
-                                  class="inline-flex w-full items-center space-x-3"
+                                  class="inline-flex w-full items-center space-x-2"
                                   data-testid="ButtonGroup"
                                   role="radiogroup"
                                 >
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -135,7 +135,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -149,7 +149,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -167,7 +167,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -181,7 +181,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Date Range
@@ -211,7 +211,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                       <div
                                         class="whitespace-nowrap leading-tight"
                                       >
-                                        Month to Date
+                                        Current Month
                                       </div>
                                     </span>
                                     <span
@@ -276,7 +276,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Include Header Row
@@ -309,7 +309,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -323,7 +323,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Delimiter
@@ -425,7 +425,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transaction ID
@@ -458,7 +458,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -472,7 +472,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transaction Date
@@ -505,7 +505,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -519,7 +519,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Sender / Recipient
@@ -552,7 +552,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -566,7 +566,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Crypto Amount
@@ -709,7 +709,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="space-y-5 mt-8"
+              class="space-y-5 mt-4"
               data-testid="Form"
             >
               <div>
@@ -738,7 +738,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transactions
@@ -751,14 +751,14 @@ exports[`TransactionExportModal > should render error status 1`] = `
                             >
                               <div>
                                 <div
-                                  class="inline-flex w-full items-center space-x-3"
+                                  class="inline-flex w-full items-center space-x-2"
                                   data-testid="ButtonGroup"
                                   role="radiogroup"
                                 >
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -772,7 +772,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -786,7 +786,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -804,7 +804,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -818,7 +818,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Date Range
@@ -848,7 +848,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                       <div
                                         class="whitespace-nowrap leading-tight"
                                       >
-                                        Month to Date
+                                        Current Month
                                       </div>
                                     </span>
                                     <span
@@ -913,7 +913,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Include Header Row
@@ -946,7 +946,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -960,7 +960,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Delimiter
@@ -1062,7 +1062,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transaction ID
@@ -1095,7 +1095,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -1109,7 +1109,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transaction Date
@@ -1142,7 +1142,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -1156,7 +1156,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Sender / Recipient
@@ -1189,7 +1189,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -1203,7 +1203,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Crypto Amount
@@ -1346,7 +1346,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="space-y-5 mt-8"
+              class="space-y-5 mt-4"
               data-testid="Form"
             >
               <div>
@@ -1634,7 +1634,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
               Export your wallet's transaction history.
             </div>
             <form
-              class="space-y-5 mt-8"
+              class="space-y-5 mt-4"
               data-testid="Form"
             >
               <div>
@@ -1922,7 +1922,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
               Export your wallet's transaction history.
             </div>
             <form
-              class="space-y-5 mt-8"
+              class="space-y-5 mt-4"
               data-testid="Form"
             >
               <div>
@@ -2210,7 +2210,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="space-y-5 mt-8"
+              class="space-y-5 mt-4"
               data-testid="Form"
             >
               <div>
@@ -2239,7 +2239,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transactions
@@ -2252,14 +2252,14 @@ exports[`TransactionExportModal > should render success status 1`] = `
                             >
                               <div>
                                 <div
-                                  class="inline-flex w-full items-center space-x-3"
+                                  class="inline-flex w-full items-center space-x-2"
                                   data-testid="ButtonGroup"
                                   role="radiogroup"
                                 >
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2273,7 +2273,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2287,7 +2287,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2305,7 +2305,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -2319,7 +2319,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Date Range
@@ -2349,7 +2349,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                       <div
                                         class="whitespace-nowrap leading-tight"
                                       >
-                                        Month to Date
+                                        Current Month
                                       </div>
                                     </span>
                                     <span
@@ -2414,7 +2414,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Include Header Row
@@ -2447,7 +2447,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -2461,7 +2461,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Delimiter
@@ -2563,7 +2563,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transaction ID
@@ -2596,7 +2596,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -2610,7 +2610,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transaction Date
@@ -2643,7 +2643,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -2657,7 +2657,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Sender / Recipient
@@ -2690,7 +2690,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -2704,7 +2704,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Crypto Amount
@@ -2847,7 +2847,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
               Export your wallet's transaction history.
             </div>
             <form
-              class="space-y-5 mt-8"
+              class="space-y-5 mt-4"
               data-testid="Form"
             >
               <div>
@@ -2876,7 +2876,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transactions
@@ -2889,14 +2889,14 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                             >
                               <div>
                                 <div
-                                  class="inline-flex w-full items-center space-x-3"
+                                  class="inline-flex w-full items-center space-x-2"
                                   data-testid="ButtonGroup"
                                   role="radiogroup"
                                 >
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2910,7 +2910,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2924,7 +2924,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded-xl"
+                                    class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 h-14 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2942,7 +2942,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -2956,7 +2956,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Date Range
@@ -2986,7 +2986,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                       <div
                                         class="whitespace-nowrap leading-tight"
                                       >
-                                        Month to Date
+                                        Current Month
                                       </div>
                                     </span>
                                     <span
@@ -3051,7 +3051,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Include Header Row
@@ -3084,7 +3084,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -3098,7 +3098,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Delimiter
@@ -3200,7 +3200,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transaction ID
@@ -3233,7 +3233,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -3247,7 +3247,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Transaction Date
@@ -3280,7 +3280,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -3294,7 +3294,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Sender / Recipient
@@ -3327,7 +3327,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col py-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -3341,7 +3341,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Crypto Amount
@@ -3374,7 +3374,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex w-full flex-col pt-4"
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -3388,7 +3388,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               class="flex items-center justify-between space-x-5"
                             >
                               <span
-                                class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                 data-testid="list-divided-item__label"
                               >
                                 Fiat Amount
