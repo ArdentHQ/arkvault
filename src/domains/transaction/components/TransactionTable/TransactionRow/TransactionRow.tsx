@@ -26,6 +26,7 @@ export const TransactionRow = memo(
 		isLoading = false,
 		profile,
 		hideSender = false,
+		mode,
 		...properties
 	}: TransactionRowProperties) => {
 		const { getLabel } = useTransactionTypes();
@@ -41,6 +42,7 @@ export const TransactionRow = memo(
 					exchangeCurrency={exchangeCurrency}
 					profile={profile}
 					hideSender={hideSender}
+					mode={mode}
 				/>
 			);
 		}
@@ -122,6 +124,7 @@ export const TransactionRow = memo(
 							profile={profile}
 							isAdvanced
 							variant="sender"
+							mode={mode}
 						/>
 						<div className="md-lg:hidden">
 							<TransactionRowAddressing
@@ -129,6 +132,7 @@ export const TransactionRow = memo(
 								profile={profile}
 								isAdvanced
 								variant="recipient"
+								mode={mode}
 							/>
 						</div>
 					</div>
@@ -148,6 +152,7 @@ export const TransactionRow = memo(
 						profile={profile}
 						isAdvanced
 						variant="recipient"
+						mode={mode}
 					/>
 				</TableCell>
 
@@ -157,7 +162,12 @@ export const TransactionRow = memo(
 					})}
 					innerClassName="space-x-4 items-start my-1 pt-2 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
 				>
-					<TransactionRowAddressing transaction={transaction} profile={profile} isAdvanced={false} />
+					<TransactionRowAddressing
+						transaction={transaction}
+						profile={profile}
+						isAdvanced={false}
+						mode={mode}
+					/>
 				</TableCell>
 
 				<TableCell

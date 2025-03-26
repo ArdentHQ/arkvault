@@ -16,10 +16,12 @@ export const PendingTransferRow = ({
 	transaction,
 	onRowClick,
 	wallet,
+	mode,
 }: {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	onRowClick?: (transaction: DTO.ExtendedConfirmedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
+	mode?: string;
 }) => {
 	const { t } = useTranslation();
 	const { getLabel } = useTransactionTypes();
@@ -91,7 +93,11 @@ export const PendingTransferRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11">
-				<TransactionRowAddressing transaction={transaction} profile={transaction.wallet().profile()} />
+				<TransactionRowAddressing
+					transaction={transaction}
+					profile={transaction.wallet().profile()}
+					mode={mode}
+				/>
 			</TableCell>
 
 			<TableCell

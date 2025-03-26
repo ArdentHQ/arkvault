@@ -8,4 +8,5 @@ export type TransactionRowProperties = {
 	isLoading?: boolean;
 	profile: Contracts.IProfile;
 	hideSender?: boolean;
+	mode?: string;
 } & React.HTMLProps<any>;

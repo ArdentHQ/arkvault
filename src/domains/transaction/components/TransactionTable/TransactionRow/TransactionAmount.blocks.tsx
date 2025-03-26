@@ -75,10 +75,12 @@ export const TransactionTotalLabel = ({
 	transaction,
 	hideStyles = false,
 	profile,
+	mode,
 }: {
 	transaction: ExtendedTransactionData;
 	hideStyles?: boolean;
 	profile?: Contracts.IProfile;
+	mode?: string;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -100,10 +102,14 @@ export const TransactionTotalLabel = ({
 		);
 	}
 
+	const isNegative = [mode !== "sent" && transaction.isSent(), mode === "sent" && !transaction.isSent()].some(
+		Boolean,
+	);
+
 	return (
 		<AmountLabel
 			value={transaction.total()}
-			isNegative={transaction.isSent()}
+			isNegative={isNegative}
 			ticker={currency}
 			hideSign={transaction.isReturn()}
 			isCompact

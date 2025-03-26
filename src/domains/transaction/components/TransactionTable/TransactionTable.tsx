@@ -18,6 +18,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	onRowClick,
 	profile,
 	hideSender = false,
+	mode,
 }) => {
 	const [coinName, setCoinName] = useState<string>();
 	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
@@ -63,6 +64,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				exchangeCurrency={exchangeCurrency}
 				profile={profile}
 				hideSender={hideSender}
+				mode={mode}
 			/>
 		),
 		[showSkeleton, onRowClick, exchangeCurrency, profile, hideSender],

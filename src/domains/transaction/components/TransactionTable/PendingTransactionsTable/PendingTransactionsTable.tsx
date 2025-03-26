@@ -20,6 +20,7 @@ export const PendingTransactions = ({
 	onRemove,
 	onPendingTransactionClick,
 	pendingTransactions,
+	mode,
 }: Properties) => {
 	const { t } = useTranslation();
 	const [pendingRemovalTransaction, setPendingRemovalTransaction] = useState<DTO.ExtendedSignedTransactionData>();
@@ -49,6 +50,7 @@ export const PendingTransactions = ({
 						wallet={wallet}
 						transaction={transaction.transaction as DTO.ExtendedConfirmedTransactionData}
 						onRowClick={onPendingTransactionClick}
+						mode={mode}
 					/>
 				);
 			}
@@ -60,6 +62,7 @@ export const PendingTransactions = ({
 						wallet={wallet}
 						onRowClick={onClick}
 						onRemovePendingTransaction={setPendingRemovalTransaction}
+						mode={mode}
 					/>
 				);
 			}
@@ -70,6 +73,7 @@ export const PendingTransactions = ({
 					wallet={wallet}
 					onRowClick={onClick}
 					onRemovePendingTransaction={setPendingRemovalTransaction}
+					mode={mode}
 				/>
 			);
 		},

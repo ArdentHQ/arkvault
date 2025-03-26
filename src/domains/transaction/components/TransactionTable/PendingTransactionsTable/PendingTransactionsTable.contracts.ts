@@ -16,6 +16,7 @@ interface Properties {
 	onClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onRemove?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onPendingTransactionClick?: (transaction: DTO.ExtendedConfirmedTransactionData) => void;
+	mode?: string;
 }
 
 export type { PendingTransaction, Properties };

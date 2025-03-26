@@ -23,6 +23,7 @@ interface SignedTransactionRowProperties {
 	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onRemovePendingTransaction?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
+	mode?: string;
 }
 
 interface SignButtonProperties {
@@ -84,6 +85,7 @@ export const SignedTransactionRow = ({
 	onRowClick,
 	wallet,
 	onRemovePendingTransaction,
+	mode,
 }: SignedTransactionRowProperties) => {
 	const { t } = useTranslation();
 	const { getLabel } = useTransactionTypes();
@@ -147,7 +149,11 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11">
-				<TransactionRowAddressing transaction={transaction} profile={transaction.wallet().profile()} />
+				<TransactionRowAddressing
+					transaction={transaction}
+					profile={transaction.wallet().profile()}
+					mode={mode}
+				/>
 			</TableCell>
 
 			<TableCell

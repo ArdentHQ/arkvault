@@ -22,6 +22,7 @@ export const TransactionRowMobile = memo(
 		profile,
 		exchangeCurrency,
 		hideSender = false,
+		mode,
 		...properties
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
@@ -62,7 +63,7 @@ export const TransactionRowMobile = memo(
 								data-testid="TransactionRowMobile__label"
 							>
 								{hideSender ? (
-									<TransactionRowAddressing transaction={transaction} profile={profile} />
+									<TransactionRowAddressing transaction={transaction} profile={profile} mode={mode} />
 								) : (
 									<div className="flex flex-col gap-2">
 										<TransactionRowAddressing
@@ -70,12 +71,14 @@ export const TransactionRowMobile = memo(
 											profile={profile}
 											isAdvanced
 											variant="sender"
+											mode={mode}
 										/>
 										<TransactionRowAddressing
 											transaction={transaction}
 											profile={profile}
 											isAdvanced
 											variant="recipient"
+											mode={mode}
 										/>
 									</div>
 								)}

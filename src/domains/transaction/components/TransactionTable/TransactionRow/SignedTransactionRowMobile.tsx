@@ -22,6 +22,7 @@ interface SignedTransactionRowMobileProperties {
 	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onRemovePendingTransaction?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
+	mode?: string;
 }
 
 export const SignedTransactionRowMobile = ({
@@ -29,6 +30,7 @@ export const SignedTransactionRowMobile = ({
 	onRowClick,
 	wallet,
 	onRemovePendingTransaction,
+	mode,
 }: SignedTransactionRowMobileProperties) => {
 	const { t } = useTranslation();
 	const timeStamp = transaction.timestamp();
@@ -114,6 +116,7 @@ export const SignedTransactionRowMobile = ({
 							<TransactionRowAddressing
 								transaction={transaction}
 								profile={transaction.wallet().profile()}
+								mode={mode}
 							/>
 						</MobileSection>
 

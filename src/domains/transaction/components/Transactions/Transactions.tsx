@@ -249,6 +249,7 @@ export const Transactions = memo(function Transactions({
 					onRowClick={setTransactionModalItem}
 					profile={profile}
 					hideSender={selectedWallets === 1}
+					mode={activeMode}
 				/>
 
 				{hasEmptyResults && (

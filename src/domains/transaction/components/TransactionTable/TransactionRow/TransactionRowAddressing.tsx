@@ -157,11 +157,13 @@ export const TransactionRowAddressing = ({
 	profile,
 	variant = "sender",
 	isAdvanced,
+	mode,
 }: {
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 	variant?: "sender" | "recipient";
 	isAdvanced?: boolean;
+	mode?: string;
 }): JSX.Element => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -173,7 +175,11 @@ export const TransactionRowAddressing = ({
 		!transaction.isMultiSignatureRegistration(),
 	].every(Boolean);
 
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+	const isNegative = [
+		isMusigTransfer,
+		mode !== "sent" && transaction.isSent(),
+		mode === "sent" && !transaction.isSent(),
+	].some(Boolean);
 	const isContract = isContractTransaction(transaction);
 
 	let direction: Direction = isNegative ? "sent" : "received";
@@ -268,6 +274,7 @@ export const TransactionRowAddressing = ({
 				className="flex w-full flex-row gap-2"
 				data-testid="TransactionRowAddressing__container_advanced_recipient"
 			>
+				{mode}
 				<TransactionRowLabel direction="sent" style="return" />
 				<FormattedAddress address={recipientAddress} alias={recipientAlias} />
 			</div>
