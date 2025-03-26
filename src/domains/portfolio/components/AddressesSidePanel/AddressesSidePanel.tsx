@@ -17,7 +17,11 @@ import { TabList } from "@/app/components/Tabs";
 import { Tabs } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 
-export type AddressViewType = "single" | "multiple";
+
+export enum AddressViewType {
+	Single = "single",
+	Multiple = "multiple",
+}
 
 export const AddressesSidePanel = ({
 	profile,
@@ -52,7 +56,7 @@ export const AddressesSidePanel = ({
 
 	const [addressViewPreference, setAddressViewPreference] = useLocalStorage<AddressViewType>(
 		viewPreferenceKey,
-		"multiple",
+		AddressViewType.Multiple,
 	);
 	const [multiSelectedAddresses, setMultiSelectedAddresses] = useLocalStorage<string[]>(
 		multiSelectedKey,
@@ -65,7 +69,7 @@ export const AddressesSidePanel = ({
 
 	const [activeMode, setActiveMode] = useState<AddressViewType>(addressViewPreference);
 	const [selectedAddresses, setSelectedAddresses] = useState<string[]>(
-		activeMode === "single" ? singleSelectedAddress : multiSelectedAddresses,
+		activeMode === AddressViewType.Single ? singleSelectedAddress : multiSelectedAddresses,
 	);
 
 	/* istanbul ignore next -- @preserve */
@@ -75,14 +79,14 @@ export const AddressesSidePanel = ({
 
 	const tabOptions = [
 		{
-			active: activeMode === "single",
+			active: activeMode === AddressViewType.Single,
 			label: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.SINGLE_VIEW"),
-			value: "single",
+			value: AddressViewType.Single,
 		},
 		{
-			active: activeMode === "multiple",
+			active: activeMode === AddressViewType.Multiple,
 			label: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
-			value: "multiple",
+			value: AddressViewType.Multiple,
 		},
 	];
 
@@ -91,7 +95,7 @@ export const AddressesSidePanel = ({
 			return;
 		}
 
-		if (activeMode === "multiple") {
+		if (activeMode === AddressViewType.Multiple) {
 			setMultiSelectedAddresses(selectedAddresses);
 
 			let newSelection: string[] = [];
@@ -122,7 +126,7 @@ export const AddressesSidePanel = ({
 			return;
 		}
 
-		if (activeMode === "single") {
+		if (activeMode === AddressViewType.Single) {
 			setSelectedAddresses([address]);
 			setSingleSelectedAddress([address]);
 		} else {
@@ -233,8 +237,8 @@ export const AddressesSidePanel = ({
 			<div className="-mx-3 my-3 rounded-r-sm border-l-2 border-theme-info-400 bg-theme-secondary-100 px-3 py-2.5 dark:bg-theme-dark-950 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0 sm:dark:bg-transparent">
 				<div
 					className={cn("flex sm:px-4", {
-						"justify-between": activeMode === "multiple",
-						"justify-end": activeMode === "single",
+						"justify-between": activeMode === AddressViewType.Multiple,
+						"justify-end": activeMode === AddressViewType.Single,
 					})}
 				>
 					<label
@@ -242,7 +246,7 @@ export const AddressesSidePanel = ({
 						className={cn(
 							"flex cursor-pointer items-center space-x-3 text-sm leading-[17px] sm:text-base sm:leading-5",
 							{
-								hidden: activeMode === "single",
+								hidden: activeMode === AddressViewType.Single,
 								"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
 								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
 									!isSelectAllDisabled,
@@ -358,7 +362,7 @@ export const AddressesSidePanel = ({
 						wallet={wallet}
 						toggleAddress={toggleAddressSelection}
 						isSelected={isSelected(wallet)}
-						isSingleView={activeMode === "single"}
+						isSingleView={activeMode === AddressViewType.Single}
 						usesDeleteMode={isDeleteMode}
 						onDelete={(address: string) => setAddressToDelete(address)}
 						deleteContent={
