@@ -17,7 +17,6 @@ import { TabList } from "@/app/components/Tabs";
 import { Tabs } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 
-
 export enum AddressViewType {
 	Single = "single",
 	Multiple = "multiple",
