@@ -209,17 +209,18 @@ export const SendTransfer = () => {
 		(activeTab === SendTransferStep.AuthenticationStep && wallet?.isLedger());
 
 	const isNextDisabled = useMemo<boolean>(() => {
-		const network = getValues("network");
-
-		if (activeTab === SendTransferStep.NetworkStep && typeof network?.isLive === "function") {
-			return false;
-		}
-
-		if (!isDirty) {
-			return true;
-		}
-
-		return !isValid;
+		return false
+		//const network = getValues("network");
+		//
+		//if (activeTab === SendTransferStep.NetworkStep && typeof network?.isLive === "function") {
+		//	return false;
+		//}
+		//
+		//if (!isDirty) {
+		//	return true;
+		//}
+		//
+		//return !isValid;
 	}, [activeTab, getValues, isDirty, isValid]);
 
 	const currentFormData: TransferFormData = {

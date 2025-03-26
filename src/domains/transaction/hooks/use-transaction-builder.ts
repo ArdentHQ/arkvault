@@ -4,6 +4,7 @@ import { Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
 
 import { useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";
+import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
 
 type SignFunction = (input: any) => Promise<string>;
 
@@ -15,13 +16,18 @@ const prepareMultiSignature = async (
 	signatory: await wallet.signatory().multiSignature(wallet.multiSignature().all() as Services.MultiSignatureAsset),
 });
 
+
 const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileContracts.IReadWriteWallet) => {
+	await accessLedgerApp({ coin: wallet.coin() })
+
 	const signature = await wallet
 		.signatory()
 		.ledger(wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath)!);
+
 	console.log({ input, signature })
+
 	// Prevents "The device is already open" exception when running the signing function
-	await wallet.ledger().disconnect();
+	//await wallet.ledger().disconnect();
 
 	return {
 		...input,
