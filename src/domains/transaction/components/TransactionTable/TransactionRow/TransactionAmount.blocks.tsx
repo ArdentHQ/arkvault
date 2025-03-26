@@ -87,6 +87,10 @@ export const TransactionTotalLabel = ({
 	const currency = transaction.wallet().currency();
 	const returnedAmount = calculateReturnedAmount(transaction);
 
+	const isNegative = [mode !== "sent" && transaction.isSent(), mode === "sent" && !transaction.isSent()].some(
+		Boolean,
+	);
+
 	if (hideStyles) {
 		return (
 			<Amount
@@ -94,17 +98,13 @@ export const TransactionTotalLabel = ({
 				showTicker={false}
 				ticker={currency}
 				value={transaction.total()}
-				isNegative={transaction.isSent()}
+				isNegative={isNegative}
 				className="text-sm font-semibold"
 				allowHideBalance
 				profile={profile}
 			/>
 		);
 	}
-
-	const isNegative = [mode !== "sent" && transaction.isSent(), mode === "sent" && !transaction.isSent()].some(
-		Boolean,
-	);
 
 	return (
 		<AmountLabel
