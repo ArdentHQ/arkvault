@@ -1,4 +1,4 @@
-import { AddressViewType, useAddressesPanel } from "../../hooks/use-address-panel";
+import { AddressViewType, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
 import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
 
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
@@ -67,8 +67,6 @@ export const AddressesSidePanel = ({
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
 
-	const selectedAddressesString = selectedAddresses.join("-");
-
 	const tabOptions = [
 		{
 			active: activeMode === AddressViewSelection.single,
@@ -106,12 +104,15 @@ export const AddressesSidePanel = ({
 			// Switching from single to multiple
 			await setSingleSelectedAddress(selectedAddresses);
 
-			const newSelection =
-				multiSelectedAddresses.length > 0
-					? multiSelectedAddresses
-					: selectedAddresses.length > 0
-						? selectedAddresses
-						: defaultSelectedAddresses;
+			let newSelection;
+
+			if (multiSelectedAddresses.length > 0) {
+				newSelection = multiSelectedAddresses;
+			} else if (selectedAddresses.length > 0) {
+				newSelection = selectedAddresses;
+			} else {
+				newSelection = defaultSelectedAddresses;
+			}
 
 			setSelectedAddresses(newSelection);
 			await setMultiSelectedAddresses(newSelection);

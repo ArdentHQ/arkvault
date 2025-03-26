@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
-import { AddressViewSelection } from "../components/AddressesSidePanel";
+import { AddressViewSelection } from "@/domains/portfolio/components/AddressesSidePanel";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
-import { usePortfolio } from "./use-portfolio";
 
 export type AddressViewType = "single" | "multiple";
 
@@ -18,7 +17,6 @@ export interface AddressesPanelSettings {
 export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { persist } = useEnvironmentContext();
 	const { activeNetwork } = useActiveNetwork({ profile });
-	const { selectedAddresses, setSelectedAddresses } = usePortfolio({ profile });
 
 	const getAddressPanelSettings = (): AddressesPanelSettings => {
 		const defaultSettings: AddressesPanelSettings = {
@@ -101,8 +99,5 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 		setAddressViewPreference,
 		setSingleSelectedAddress,
 		setMultiSelectedAddresses,
-		// Also expose the portfolio selected addresses for convenience
-		selectedAddresses,
-		setSelectedAddresses,
 	};
 };
