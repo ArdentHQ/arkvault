@@ -792,7 +792,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                               class="mt-2"
                             >
                               <div
-                                class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
+                                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
                                 data-testid="TableWrapper"
                               >
                                 <div
@@ -1643,7 +1643,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                         class="mt-2"
                       >
                         <div
-                          class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
+                          class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
                           data-testid="TableWrapper"
                         >
                           <div
@@ -2142,7 +2142,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                         class="mt-2"
                       >
                         <div
-                          class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
+                          class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
                           data-testid="TableWrapper"
                         >
                           <div

@@ -25,7 +25,7 @@ const DateRangeSelection = ({ className, minStartDate }: { className?: string; m
 		>
 			<div className="md:flex-1">
 				<FormField name="from">
-					<FormLabel label={t("COMMON.FROM")} />
+					<FormLabel label={t("COMMON.DATE_FROM")} />
 					<InputDate
 						selectsStart
 						minDate={minStartDate}
@@ -37,7 +37,7 @@ const DateRangeSelection = ({ className, minStartDate }: { className?: string; m
 
 			<div className="md:flex-1">
 				<FormField name="to">
-					<FormLabel label={t("COMMON.TO")} />
+					<FormLabel label={t("COMMON.DATE_TO")} />
 					<InputDate
 						placement="bottom-end"
 						selectsEnd
@@ -64,8 +64,8 @@ const TransactionTypeOptions = () => {
 		<div>
 			<ButtonGroup
 				className={cn({
-					"mt-4 flex flex-col space-y-3": isXs,
-					"space-x-3": !isXs,
+					"mt-4 flex flex-col space-y-2": isXs,
+					"space-x-2": !isXs,
 				})}
 			>
 				{transactionTypeOptions.map(({ label, value, active }) => (
@@ -75,6 +75,7 @@ const TransactionTypeOptions = () => {
 						isSelected={() => active}
 						setSelectedValue={() => form.setValue("transactionType", value)}
 						value={value}
+						className="rounded"
 						variant="modern"
 					>
 						<div className="px-2">{label}</div>
@@ -133,7 +134,6 @@ export const BasicSettings = ({ minStartDate }: { minStartDate?: Date }) => {
 			content: isCustom && <DateRangeSelection minStartDate={minStartDate} className="mt-4" />,
 			label: t("TRANSACTION.EXPORT.FORM.DATE_RANGE"),
 			value: <DateRangeOptions isDisabled={!minStartDate} />,
-			wrapperClass: "pt-4",
 		},
 	];
 

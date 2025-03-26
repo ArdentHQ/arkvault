@@ -87,6 +87,7 @@ export const ImportAddressesSidePanel = ({
 		}
 
 		setActiveTab(Step.MethodStep);
+		setImportedWallet(undefined);
 		form.reset();
 	}, [open]);
 
@@ -161,7 +162,7 @@ export const ImportAddressesSidePanel = ({
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		if (activeTab === Step.EncryptPasswordStep) {
+		if (activeTab === Step.EncryptPasswordStep && importedWallet) {
 			forgetImportedWallets(importedWallet);
 		}
 
@@ -310,10 +311,12 @@ export const ImportAddressesSidePanel = ({
 							</TabPanel>
 
 							<TabPanel tabId={Step.SummaryStep}>
-								<SuccessStep
-									importedWallet={importedWallet}
-									onClickEditAlias={() => setIsEditAliasModalOpen(true)}
-								/>
+								{importedWallet && (
+									<SuccessStep
+										importedWallet={importedWallet}
+										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+									/>
+								)}
 							</TabPanel>
 						</div>
 					</Tabs>
