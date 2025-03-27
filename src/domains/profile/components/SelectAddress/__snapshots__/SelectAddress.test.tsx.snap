@@ -310,7 +310,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
           class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
           data-testid="Address__address"
         >
-          0x393f3F74F0cd9e790B5192789F31E0A38159ae03
+          0x659A76be283644AEc2003aa8ba26485047fd1BFB
         </span>
       </div>
     </span>
@@ -325,9 +325,9 @@ exports[`SelectAddress > should render with preselected address 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x393f3F74F0cd9e790B5192789F31E0A38159ae03"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(205, 220, 57)"/><circle r="35" cx="100" cy="50" fill="rgb(0, 150, 136)"/><circle r="40" cx="90" cy="40" fill="rgb(139, 195, 74)"/></svg>"
-            title="0x393f3F74F0cd9e790B5192789F31E0A38159ae03"
+            alt="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="60" cx="0" cy="50" fill="rgb(33, 150, 243)"/><circle r="50" cx="50" cy="60" fill="rgb(205, 220, 57)"/><circle r="35" cx="10" cy="30" fill="rgb(0, 188, 212)"/></svg>"
+            title="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
           />
         </div>
       </div>
@@ -340,7 +340,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
-          value="0x393f3F74F0cd9e790B5192789F31E0A38159ae03"
+          value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
         />
       </div>
       <div

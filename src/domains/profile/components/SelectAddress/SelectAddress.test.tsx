@@ -26,7 +26,7 @@ describe("SelectAddress", () => {
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "Mainsail",
-			mnemonic: MAINSAIL_MNEMONICS[2],
+			mnemonic: MAINSAIL_MNEMONICS[0],
 			network: "mainsail.devnet",
 		});
 
