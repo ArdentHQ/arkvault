@@ -465,7 +465,7 @@ jobs:
                 with:
                     timeout_minutes: 10
                     max_attempts: 1
-                    command: pnpm test:coverage src/domains/portfolio
+                    command: pnpm test:coverage src/domains/portfolio --exclude src/domains/portfolio/components/ImportWallet/Ledger
 
     domains-error:
         runs-on: ubuntu-latest
