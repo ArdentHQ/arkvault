@@ -24,6 +24,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
+import { TransferBuilder, UnitConverter } from "@arkecosystem/typescript-crypto";
 
 export const PortfolioHeader = ({
 	profile,
@@ -70,6 +71,24 @@ export const PortfolioHeader = ({
 
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("multiple-addresses-hint", undefined);
+
+	useEffect(() => {
+		const test = async () => {
+			console.log("test")
+			const builder = await TransferBuilder
+				.new()
+				.recipientAddress("0xb693449AdDa7EFc015D87944EAE8b7C37EB1690A")
+				.value(UnitConverter.parseUnits(10, "ark").toString())
+				.gasPrice(UnitConverter.parseUnits(5, "gwei").toString())
+				.gasLimit("21_000")
+				.nonce("0");
+
+			builder.transaction.data["id"] = builder.transaction.getId();
+			console.log({ builder })
+		}
+
+		test();
+	})
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;

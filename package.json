@@ -50,6 +50,7 @@
 		"@ardenthq/sdk-intl": "2.0.0-alpha.61",
 		"@ardenthq/sdk-mainsail": "2.0.0-alpha.61",
 		"@ardenthq/sdk-profiles": "2.0.0-alpha.61",
+		"@arkecosystem/typescript-crypto": "^0.0.1",
 		"@faustbrian/node-haveibeenpwned": "^1.1.0",
 		"@floating-ui/react": "^0.26.25",
 		"@konforti/react-truncate": "^1.1.0",
