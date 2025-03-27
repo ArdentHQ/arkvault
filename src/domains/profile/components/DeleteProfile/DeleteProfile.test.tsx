@@ -3,13 +3,13 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { DeleteProfile } from "./DeleteProfile";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
 describe("DeleteProfile", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it("should render", async () => {

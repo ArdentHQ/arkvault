@@ -10,11 +10,11 @@ exports[`Avatar > should render with profile image 1`] = `
       class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
-        alt="John Doe"
+        alt="Foo Bar"
         class="h-20 w-20 rounded bg-cover bg-center bg-no-repeat object-cover"
         data-testid="ProfileAvatar__image"
         src="avatarImage"
-        title="John Doe"
+        title="Foo Bar"
       />
     </div>
   </div>
@@ -31,15 +31,15 @@ exports[`Avatar > should render with svg 1`] = `
       class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
-        alt="John Doe"
+        alt="Foo Bar"
         data-testid="ProfileAvatar__svg"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-        title="John Doe"
+        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+        title="Foo Bar"
       />
       <span
         class="absolute font-semibold text-white"
       >
-        JO
+        FO
       </span>
     </div>
   </div>

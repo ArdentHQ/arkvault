@@ -1,13 +1,13 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { ProfileRow, ProfileRowSkeleton, ProfilesSliderSkeleton } from "./ProfileRow";
 
 let profile: Contracts.IProfile;
 
 describe("ProfileRow", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it("should render", () => {
