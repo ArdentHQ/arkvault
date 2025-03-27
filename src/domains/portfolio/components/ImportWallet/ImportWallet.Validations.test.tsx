@@ -11,7 +11,9 @@ import {
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId, MAINSAIL_MNEMONICS,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";

@@ -111,7 +111,9 @@ describe("ImportWallet WIF", () => {
 		});
 
 		await waitFor(() => {
-			expect(profile.wallets().findByAddressWithNetwork("0x393f3F74F0cd9e790B5192789F31E0A38159ae03", testNetwork)).toBeInstanceOf(Wallet);
+			expect(
+				profile.wallets().findByAddressWithNetwork("0x393f3F74F0cd9e790B5192789F31E0A38159ae03", testNetwork),
+			).toBeInstanceOf(Wallet);
 		});
 
 		fromWifMock.mockRestore();
