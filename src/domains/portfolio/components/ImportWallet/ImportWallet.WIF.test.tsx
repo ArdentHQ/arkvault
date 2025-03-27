@@ -1,12 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
-import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { ImportDetailStep } from "./ImportDetailStep";
-import { EnvironmentProvider } from "@/app/contexts";
-import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
 import {
 	env,
 	render,
@@ -24,8 +20,6 @@ let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
 
 const randomAddress = "0x659A76be283644AEc2003aa8ba26485047fd1BFB";
-
-const history = createHashHistory();
 
 const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");

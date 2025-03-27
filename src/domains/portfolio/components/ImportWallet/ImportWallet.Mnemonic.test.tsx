@@ -36,7 +36,6 @@ const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
 const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
 
-const errorText = "data-errortext";
 const password = "S3cUrePa$sword";
 const testNetwork = "mainsail.devnet";
 

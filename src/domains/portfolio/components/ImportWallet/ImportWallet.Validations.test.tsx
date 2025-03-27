@@ -7,7 +7,6 @@ import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
-	getDefaultProfileId,
 	MNEMONICS,
 	render,
 	screen,
