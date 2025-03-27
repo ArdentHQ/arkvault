@@ -508,7 +508,7 @@ exports[`SelectProfileImage > should render with value svg 1`] = `
       class="h-[92px] w-[92px] rounded-lg border border-theme-secondary-300 p-1.5 focus-within:border-solid focus-within:border-theme-primary-400 dark:border-theme-dark-700"
     >
       <div
-        class="h-full overflow-hidden rounded-full"
+        class="h-full overflow-hidden rounded"
       >
         <div
           class="upload-button-wrapper h-full w-full"
