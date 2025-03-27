@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import { AddressViewSelection } from "@/domains/portfolio/components/AddressesSidePanel";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -12,6 +11,11 @@ export interface AddressesPanelSettings {
 	addressViewPreference: AddressViewType;
 	singleSelectedAddress: string[];
 	multiSelectedAddresses: string[];
+}
+
+export enum AddressViewSelection {
+	single = "single",
+	multiple = "multiple",
 }
 
 export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) => {
