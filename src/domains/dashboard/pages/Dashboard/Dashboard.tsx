@@ -63,10 +63,6 @@ export const Dashboard = ({
 	useEffect(() => {
 		const syncVotes = async () => {
 			try {
-				if (selectedWallets.length === 0) {
-					setIsLoadingVotes(false);
-					return;
-				}
 				setIsLoadingVotes(true);
 
 				// Sync votes for all selected wallets
