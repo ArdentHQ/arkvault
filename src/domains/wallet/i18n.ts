@@ -4,6 +4,10 @@ export const translations = {
 		MANAGE_HINT: "You can manage and remove your addresses here.",
 		SEARCH_BY: "Search by Name or Address",
 		TITLE: "Choose Address",
+		TOGGLE: {
+			MULTIPLE_VIEW: "Multiple View",
+			SINGLE_VIEW: "Single View",
+		},
 	},
 	CONNECT_LEDGER: {
 		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.",
@@ -178,16 +182,16 @@ export const translations = {
 		},
 
 		METHOD_STEP: {
-			ADDRESS_DESCRIPTION: "Enter the public address to add it",
-			LEDGER_DESCRIPTION: "Import via your Ledger hardware wallet",
-			MNEMONIC_DESCRIPTION: "Import using 12 or 24 mnemonic passphrase",
+			ADDRESS_DESCRIPTION: "Import an address by entering your public address",
+			LEDGER_DESCRIPTION: "Import address(es) via your Ledger hardware wallet",
+			MNEMONIC_DESCRIPTION: "Import an address by entering your 12 or 24 mnemonic phrase",
 			MNEMONIC_TITLE: "Import Mnemonic",
-			PUBLIC_KEY_DESCRIPTION: "Enter the public key of the address to add it",
+			PUBLIC_KEY_DESCRIPTION: "Import an address by entering your public key",
 			PUBLIC_KEY_TITLE: "Import Public Key",
-			SECRET_DESCRIPTION: "Import using a custom password",
+			SECRET_DESCRIPTION: "Import an address by entering your custom password",
 			SECRET_TITLE: "Import Secret",
 			SUBTITLE: "Select the method you want to use to import your address.",
-			TITLE: "Import Ledger",
+			TITLE: "Import",
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {

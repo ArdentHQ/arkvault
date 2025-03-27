@@ -812,7 +812,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                             </h1>
                           </div>
                           <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
+                            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                             data-testid="header__subtitle"
                           >
                             Authenticate a message from an address below.
@@ -1799,7 +1799,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                             </h1>
                           </div>
                           <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
+                            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                             data-testid="header__subtitle"
                           >
                             Authenticate a message from an address below.

@@ -712,7 +712,7 @@ exports[`Dashboard > should render 1`] = `
               class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
             >
               <div
-                class="flex w-full flex-row items-center justify-between px-4"
+                class="z-30 flex w-full flex-row items-center justify-between px-4"
               >
                 <div
                   aria-expanded="false"
@@ -724,7 +724,7 @@ exports[`Dashboard > should render 1`] = `
                     Viewing:
                   </p>
                   <div
-                    class="cursor-pointer rounded-r"
+                    class="rounded-r"
                     data-testid="ShowAddressesPanel"
                     tabindex="0"
                   >
@@ -735,7 +735,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                       >
                         <span
-                          class="font-semibold text-base text-theme-primary-600 text-sm leading-[17px] sm:text-base sm:leading-5 dark:textdark-theme-dark-navy-400"
+                          class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="Address__alias"
                         >
                           <span
@@ -746,42 +746,6 @@ exports[`Dashboard > should render 1`] = `
                           </span>
                         </span>
                       </div>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 hover:dark:text-theme-dark-50 hover:bg-theme-primary-200 hover:dark:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 h-6 w-6"
-                        type="button"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          <div>
-                            <div
-                              style="height: 26px; width: 26px;"
-                            >
-                              <svg
-                                fill="none"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="1.6"
-                                />
-                                <path
-                                  d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="1.6"
-                                />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -1045,25 +1009,14 @@ exports[`Dashboard > should render 1`] = `
                     class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
                   >
                     <div
-                      class="flex flex-col gap-3 sm:gap-2"
+                      class="flex flex-col gap-2"
                       data-testid="WalletHeader__balance"
                     >
-                      <div
-                        class="flex flex-row items-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                      <p
+                        class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
                       >
-                        <p>
-                          Total Balance
-                        </p>
-                        <div
-                          class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-3 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:hidden"
-                        />
-                        <span
-                          class="whitespace-nowrap md-lg:hidden"
-                          data-testid="Amount"
-                        >
-                          0 BTC
-                        </span>
-                      </div>
+                        Total Balance
+                      </p>
                       <div
                         class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 md:text-2xl md:leading-[29px]"
                       >
@@ -1163,57 +1116,57 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="WalletVote"
                   >
                     <div
-                      class="flex w-full flex-row items-center justify-start xs:justify-center md:justify-start"
-                      data-testid="EmptyVotes"
+                      class="mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-dark-700 md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
                     >
                       <div
-                        class="px-[22px] pb-4 text-center text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:mt-0 md:px-0 md:pb-0 md:text-left"
+                        class="flex w-full flex-row items-center gap-2 bg-theme-secondary-100 p-3 text-sm font-semibold leading-[17px] dark:bg-theme-dark-950 md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                       >
-                        You have not voted for a Delegate yet. 
-                        <a
-                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="Link"
-                          href="https://arkvault.io/docs/transactions/vote"
-                          rel="noopener noreferrer"
+                        <p
+                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5"
                         >
-                          <span
-                            class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                          Voting for
+                        </p>
+                        <div
+                          class="max-w-28 truncate xs:max-w-32 sm:max-w-40 md:max-w-48"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="text-base leading-5"
+                              class="no-ligatures min-w-0 overflow-hidden text-sm dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
+                              data-testid="Address__address"
                             >
-                              Learn more
+                              0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                             </span>
-                          </span>
-                          <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                            data-testid="Link__external"
-                          >
-                            <div
-                              style="height: 12px; width: 12px;"
-                            >
-                              <svg
-                                id="arrow-external"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <path
-                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
-                            </div>
                           </div>
-                        </a>
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col gap-2 px-4 py-3 text-base font-semibold leading-5 md:flex-row md:px-0 md:py-0"
+                      >
+                        <p
+                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5"
+                        >
+                          Rank
+                        </p>
+                        <p
+                          class="mb-2 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 md:mb-0 md:text-base md:leading-5"
+                        >
+                          #1
+                        </p>
+                        <p
+                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:hidden"
+                        >
+                          Delegate Status
+                        </p>
+                        <div
+                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid dark:border-theme-success-800"
+                        >
+                          Active
+                        </div>
+                        <div
+                          class="relative mx-2 border-l border-t-0 border-solid align-middle ml-1 mr-3 hidden h-5 border-theme-secondary-300 p-0 dark:border-s-theme-dark-700 md:flex"
+                        />
                       </div>
                     </div>
                     <div
@@ -1527,7 +1480,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+              class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
               data-testid="TableWrapper"
             >
               <div

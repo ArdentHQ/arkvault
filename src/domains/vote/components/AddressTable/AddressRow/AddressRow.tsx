@@ -102,8 +102,10 @@ export const WalletAvatar = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet })
 
 export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProperties) => {
 	const { t } = useTranslation();
-	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
 	const activeProfile = useActiveProfile();
+	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration().getProfileConfiguration(
+		activeProfile.id(),
+	);
 
 	const { getWalletAlias } = useWalletAlias();
 	const { alias } = useMemo(

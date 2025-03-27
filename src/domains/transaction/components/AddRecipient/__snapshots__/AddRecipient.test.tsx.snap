@@ -247,11 +247,11 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
-                    class="hidden sm:inline pr-1"
+                    class="hidden pr-1 sm:inline"
                   >
                     Balance
                     :
@@ -583,11 +583,11 @@ exports[`AddRecipient > should render 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
-                    class="hidden sm:inline pr-1"
+                    class="hidden pr-1 sm:inline"
                   >
                     Balance
                     :
@@ -904,11 +904,11 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
-                    class="hidden sm:inline pr-1"
+                    class="hidden pr-1 sm:inline"
                   >
                     Balance
                     :
@@ -1225,11 +1225,11 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
-                    class="hidden sm:inline pr-1"
+                    class="hidden pr-1 sm:inline"
                   >
                     Balance
                     :
@@ -1546,11 +1546,11 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
-                    class="hidden sm:inline pr-1"
+                    class="hidden pr-1 sm:inline"
                   >
                     Balance
                     :
@@ -1799,11 +1799,11 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
-                    class="hidden sm:inline pr-1"
+                    class="hidden pr-1 sm:inline"
                   >
                     Balance
                     :

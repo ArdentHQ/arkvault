@@ -20,7 +20,7 @@ describe("Server Status Indicator", () => {
 		const { setConfiguration } = useConfiguration();
 
 		useEffect(() => {
-			setConfiguration({ serverStatus });
+			setConfiguration(profile.id(), { serverStatus });
 		}, []);
 
 		return <ServerStatusIndicator profile={profile} />;

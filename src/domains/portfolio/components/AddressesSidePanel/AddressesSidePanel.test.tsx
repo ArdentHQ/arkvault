@@ -219,7 +219,7 @@ describe("AddressesSidePanel", () => {
 
 		await userEvent.type(getSearchInput(), wallets.first().address());
 
-		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+		expect(screen.getAllByTestId("AddressRow").length).toBe(2);
 	});
 
 	it("should filter wallets by displayName", async () => {
@@ -242,7 +242,7 @@ describe("AddressesSidePanel", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+			expect(screen.getAllByTestId("AddressRow").length).toBe(2);
 		});
 	});
 
@@ -313,5 +313,52 @@ describe("AddressesSidePanel", () => {
 
 		setItemSpy.mockRestore();
 		getItemSpy.mockRestore();
+	});
+
+	it("should toggle between single and multiple view", async () => {
+		render(
+			<AddressesSidePanel
+				profile={profile}
+				wallets={wallets.values()}
+				defaultSelectedAddresses={[]}
+				open={true}
+				onClose={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDelete={vi.fn()}
+			/>,
+		);
+
+		expect(screen.getByTestId("tabs__tab-button-single")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("tabs__tab-button-single"));
+
+		expect(screen.getByTestId("tabs__tab-button-multiple")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("tabs__tab-button-multiple"));
+	});
+
+	it("should select only one address when in single view", async () => {
+		const onClose = vi.fn();
+		render(
+			<AddressesSidePanel
+				profile={profile}
+				wallets={[profile.wallets().first(), profile.wallets().last()]}
+				defaultSelectedAddresses={[profile.wallets().first().address(), profile.wallets().last().address()]}
+				defaultSelectedWallet={profile.wallets().first()}
+				open={true}
+				onClose={onClose}
+				onOpenChange={vi.fn()}
+				onDelete={vi.fn()}
+			/>,
+		);
+
+		const singleTabButton = screen.getByTestId("tabs__tab-button-single");
+		await userEvent.click(singleTabButton);
+
+		const addressRows = screen.getAllByTestId("AddressRow");
+		await userEvent.click(addressRows[0]);
+
+		const closeButton = screen.getByTestId(sidePanelCloseButton);
+		await userEvent.click(closeButton);
+
+		expect(onClose).toHaveBeenCalledWith([profile.wallets().first().address()]);
 	});
 });

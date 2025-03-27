@@ -8,6 +8,7 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { MobileAddressRow } from "@/domains/portfolio/components/AddressesSidePanel/MobileAddressRow";
+import { RadioButton } from "@/app/components/RadioButton";
 
 export const AddressRow = ({
 	profile,
@@ -17,6 +18,7 @@ export const AddressRow = ({
 	usesDeleteMode,
 	onDelete,
 	isError = false,
+	isSingleView = false,
 	errorMessage,
 	deleteContent,
 }: {
@@ -28,6 +30,7 @@ export const AddressRow = ({
 	usesDeleteMode: boolean;
 	errorMessage?: string;
 	onDelete: (address: string) => void;
+	isSingleView?: boolean;
 	deleteContent?: React.ReactNode;
 }): JSX.Element => {
 	const { isXs } = useBreakpoint();
@@ -87,7 +90,18 @@ export const AddressRow = ({
 					/>
 				)}
 
-				{!usesDeleteMode && (
+				{isSingleView && !usesDeleteMode && (
+					<RadioButton
+						name="single"
+						data-testid="AddressRow--radio"
+						color="info"
+						className="m-0.5"
+						checked={isSelected}
+						onChange={() => toggleAddress(wallet.address())}
+					/>
+				)}
+
+				{!usesDeleteMode && !isSingleView && (
 					<Checkbox
 						name="all"
 						data-testid="AddressRow--checkbox"

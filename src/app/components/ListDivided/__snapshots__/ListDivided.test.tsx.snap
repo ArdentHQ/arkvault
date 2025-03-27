@@ -31,7 +31,7 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
             class="flex items-center justify-between space-x-5"
           >
             <span
-              class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+              class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
               data-testid="list-divided-item__label"
             >
               New Profile
@@ -92,7 +92,7 @@ exports[`ListDivided > should render an list divided with lastBorder = true 1`] 
             class="flex items-center justify-between space-x-5"
           >
             <span
-              class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+              class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
               data-testid="list-divided-item__label"
             >
               New Profile

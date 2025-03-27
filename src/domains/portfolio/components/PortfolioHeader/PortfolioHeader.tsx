@@ -9,7 +9,6 @@ import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use
 import { Dropdown } from "@/app/components/Dropdown";
 import { t } from "i18next";
 import { Amount } from "@/app/components/Amount";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { Copy } from "@/app/components/Copy";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
@@ -49,14 +48,20 @@ export const PortfolioHeader = ({
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-	const { balance, setSelectedAddresses, selectedAddresses, selectedWallets, allWallets, removeSelectedAddresses } =
-		usePortfolio({ profile });
+	const {
+		balance,
+		setSelectedAddresses,
+		selectedAddresses,
+		selectedWallets,
+		allWallets,
+		removeSelectedAddresses,
+		selectedWallet,
+	} = usePortfolio({ profile });
 
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
 
 	const isRestored = wallet.hasBeenFullyRestored();
-	const { convert } = useExchangeRate({ exchangeTicker: wallet.exchangeCurrency(), ticker: wallet.currency() });
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions(...selectedWallets);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
@@ -92,10 +97,16 @@ export const PortfolioHeader = ({
 		await persist();
 	};
 
+	const handleViewAddress = () => {
+		if (allWallets.length > 1) {
+			setShowAddressesPanel(true);
+		}
+	};
+
 	return (
 		<header data-testid="WalletHeader" className="lg:container md:px-10 md:pt-8">
 			<div className="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl">
-				<div className="flex w-full flex-row items-center justify-between px-4">
+				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
 					<Tooltip
 						visible={showHint}
 						interactive={true}
@@ -131,17 +142,25 @@ export const PortfolioHeader = ({
 								{t("COMMON.VIEWING")}:
 							</p>
 							<div
-								onClick={() => setShowAddressesPanel(true)}
+								onClick={handleViewAddress}
 								tabIndex={0}
-								onKeyPress={() => setShowAddressesPanel(true)}
-								className="cursor-pointer rounded-r"
+								onKeyPress={handleViewAddress}
+								className={cn("rounded-r", {
+									"cursor-pointer": allWallets.length > 1,
+								})}
 								data-testid="ShowAddressesPanel"
 							>
 								<div className="flex items-center gap-1">
-									<ViewingAddressInfo wallets={selectedWallets} profile={profile} />
-									<Button variant="primary-transparent" size="icon" className="h-6 w-6">
-										<Icon name="DoubleChevron" width={26} height={26} />
-									</Button>
+									<ViewingAddressInfo
+										availableWallets={allWallets.length}
+										wallets={selectedWallets}
+										profile={profile}
+									/>
+									{allWallets.length > 1 && (
+										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
+											<Icon name="DoubleChevron" width={26} height={26} />
+										</Button>
+									)}
 								</div>
 							</div>
 						</div>
@@ -251,21 +270,10 @@ export const PortfolioHeader = ({
 							className="my-0 h-px border-dashed border-theme-secondary-300 dark:border-theme-dark-700"
 						/>
 						<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
-							<div className="flex flex-col gap-3 sm:gap-2" data-testid="WalletHeader__balance">
-								<div className="flex flex-row items-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
-									<p>{t("COMMON.TOTAL_BALANCE")}</p>
-									<Divider
-										type="vertical"
-										className="h-3 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:hidden"
-									/>
-									<Amount
-										value={convert(wallet.balance())}
-										ticker={wallet.exchangeCurrency()}
-										className="md-lg:hidden"
-										allowHideBalance
-										profile={profile}
-									/>
-								</div>
+							<div className="flex flex-col gap-2" data-testid="WalletHeader__balance">
+								<p className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+									{t("COMMON.TOTAL_BALANCE")}
+								</p>
 
 								<div className="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 md:text-2xl md:leading-[29px]">
 									{isRestored && selectedWallets.length === 1 && (
@@ -290,7 +298,12 @@ export const PortfolioHeader = ({
 										<Amount
 											value={balance.totalConverted().toNumber()}
 											ticker={wallet.exchangeCurrency()}
-											className="hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block"
+											className={cn({
+												"hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block":
+													selectedWallets.length === 1,
+												"text-theme-primary-900 dark:text-theme-dark-50":
+													selectedWallets.length !== 1,
+											})}
 											allowHideBalance
 											profile={profile}
 										/>
@@ -368,6 +381,7 @@ export const PortfolioHeader = ({
 				profile={profile}
 				wallets={allWallets}
 				defaultSelectedAddresses={selectedAddresses}
+				defaultSelectedWallet={selectedWallet}
 				onClose={(addresses) => {
 					setSelectedAddresses(addresses);
 				}}

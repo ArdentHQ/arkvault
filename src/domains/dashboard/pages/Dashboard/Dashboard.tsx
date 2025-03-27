@@ -34,7 +34,7 @@ export const Dashboard = ({
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const { profileIsSyncing } = useConfiguration();
+	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(activeProfile.id());
 
 	const { selectedWallets, selectedWallet } = usePortfolio({ profile: activeProfile });
 
@@ -63,18 +63,34 @@ export const Dashboard = ({
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const networkAllowsVoting = useMemo(() => selectedWallet?.network().allowsVoting(), [selectedWallet]);
 
+	const selectedWalletsUniqueKeys = useMemo<string>(
+		() => selectedWallets.map((wallet) => wallet.id()).join(","),
+		[selectedWallets],
+	);
+
 	useEffect(() => {
-		const syncVotes = async (wallet) => {
+		const syncVotes = async () => {
 			try {
-				if (!wallet) {
+				if (selectedWallets.length === 0) {
+					setIsLoadingVotes(false);
 					return;
 				}
 				setIsLoadingVotes(true);
 
-				await env.delegates().sync(activeProfile, wallet.coinId(), wallet.networkId());
-				await wallet.synchroniser().votes();
+				// Sync votes for all selected wallets
+				await Promise.all(
+					selectedWallets.map(async (wallet) => {
+						await env.delegates().sync(activeProfile, wallet.coinId(), wallet.networkId());
+						await wallet.synchroniser().votes();
+					}),
+				);
 
-				setVotes(wallet.voting().current());
+				// If there's only one wallet selected, show its votes
+				if (selectedWallets.length === 1) {
+					setVotes(selectedWallets[0].voting().current());
+				} else {
+					setVotes([]);
+				}
 			} catch {
 				setVotes([]);
 			}
@@ -82,13 +98,8 @@ export const Dashboard = ({
 			setIsLoadingVotes(false);
 		};
 
-		if (!selectedWallet) {
-			setIsLoadingVotes(false);
-			return;
-		}
-
-		void syncVotes(selectedWallet);
-	}, [selectedWallet, env, activeProfile]);
+		void syncVotes();
+	}, [selectedWalletsUniqueKeys, env, activeProfile]);
 
 	useEffect(() => {
 		if (!isUpdatingTransactions) {

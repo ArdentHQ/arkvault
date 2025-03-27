@@ -33,7 +33,7 @@ exports[`InputDate > should render 1`] = `
               class=""
             >
               <button
-                class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
+                class="ring-focus relative flex h-full w-full items-center justify-center text-2xl text-theme-secondary-700 focus:outline-none dark:text-theme-secondary-200"
                 data-ring-focus-margin="-m-1"
                 data-testid="InputDate__calendar"
                 type="button"

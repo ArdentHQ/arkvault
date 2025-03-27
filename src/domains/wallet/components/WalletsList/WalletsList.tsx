@@ -6,7 +6,7 @@ import { Table } from "@/app/components/Table";
 import { WalletListItem, WalletListItemProperties } from "@/app/components/WalletListItem";
 import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
 import { useConfiguration } from "@/app/contexts";
-import { useBreakpoint } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { WalletsListProperties } from "@/domains/wallet/components/WalletsList/WalletsList.contracts";
 import { Pagination } from "@/app/components/Pagination";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -50,7 +50,8 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 }) => {
 	const { isMdAndAbove } = useBreakpoint();
 	const { t } = useTranslation();
-	const { profileIsSyncing } = useConfiguration();
+	const activeProfile = useActiveProfile();
+	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(activeProfile.id());
 
 	const showSkeletons = profileIsSyncing && wallets.length === 0;
 

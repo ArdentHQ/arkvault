@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
-import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
@@ -10,17 +9,19 @@ import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { useConfiguration } from "@/app/contexts";
 import { pingServerAddress } from "@/utils/peers";
-import { useBreakpoint } from "@/app/hooks";
+import { useActiveProfile } from "@/app/hooks";
 
 const NodeStatusNode: React.VFC<{
 	network: Networks.Network;
 	host: Networks.NetworkHost;
-	lastRow: boolean;
-}> = ({ network, host, lastRow }) => {
+}> = ({ network, host }) => {
 	const { t } = useTranslation();
-	const { isXs } = useBreakpoint();
 
-	const { serverStatus, setConfiguration } = useConfiguration();
+	const profile = useActiveProfile();
+
+	const { setConfiguration, getProfileConfiguration } = useConfiguration();
+
+	const { serverStatus } = getProfileConfiguration(profile.id());
 
 	const [isOnline, setIsOnline] = useState<boolean | undefined>(undefined);
 
@@ -42,7 +43,7 @@ const NodeStatusNode: React.VFC<{
 
 		setIsOnline(updatedServerStatus[network.id()][host.host]);
 
-		setConfiguration({
+		setConfiguration(profile.id(), {
 			serverStatus: updatedServerStatus,
 		});
 	}, [network]);
@@ -68,32 +69,23 @@ const NodeStatusNode: React.VFC<{
 	return (
 		<div
 			data-testid="NodesStatus--node"
-			className={cn(
-				"flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800",
-				{
-					"border-b": !isXs && !lastRow,
-					"border-b last:border-b-0": isXs,
-				},
-			)}
+			className="flex items-center space-x-3 rounded-lg border border-theme-secondary-300 px-4 py-3 leading-none text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200"
 		>
 			<div className="flex shrink-0">
-				<NetworkIcon
-					network={network}
-					size="sm"
-					className="text-theme-secondary-700 dark:text-theme-secondary-500"
-					showTooltip={false}
-					isCompact
-				/>
+				<NetworkIcon network={network} size="sm" className="" showTooltip={false} isCompact />
 			</div>
 
-			<div className="flex-grow font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
-				{renderDisplayName()}
-			</div>
+			<div className="flex-grow font-semibold">{renderDisplayName()}</div>
+
 			<div className="cursor-pointer">
 				{isOnline === true && (
 					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.HEALTHY")}>
 						<div data-testid="NodeStatus--statusok">
-							<Icon name="StatusOk" className="text-theme-success-600" size="lg" />
+							<Icon
+								name="StatusOk"
+								className="text-theme-success-600 dark:text-theme-success-500"
+								size="lg"
+							/>
 						</div>
 					</Tooltip>
 				)}
@@ -114,16 +106,13 @@ const NodeStatusNode: React.VFC<{
 			<Divider type="vertical" />
 
 			<div className="flex items-center">
-				<button type="button" onClick={checkNetworkStatus} disabled={isOnline === undefined}>
-					<Icon
-						name="ArrowRotateLeft"
-						className={cn({
-							"text-theme-primary-300 hover:text-theme-primary-400 dark:text-theme-secondary-600 hover:dark:text-theme-secondary-200":
-								isOnline !== undefined,
-							"text-theme-secondary-600 dark:text-theme-secondary-800": isOnline === undefined,
-						})}
-						size="md"
-					/>
+				<button
+					type="button"
+					onClick={checkNetworkStatus}
+					disabled={isOnline === undefined}
+					className="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+				>
+					<Icon name="ArrowRotateLeft" size="md" />
 				</button>
 			</div>
 		</div>
@@ -131,9 +120,6 @@ const NodeStatusNode: React.VFC<{
 };
 
 const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => {
-	let count = 0;
-	let index = 0;
-
 	const hostGroups: { network: Networks.Network; hosts: Networks.NetworkHost[] }[] = [];
 
 	for (const network of networks) {
@@ -141,26 +127,19 @@ const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) 
 
 		if (networkHosts.length > 0) {
 			hostGroups.push({ hosts: networkHosts, network });
-
-			count += networkHosts.length;
 		}
 	}
 
 	return (
-		<div data-testid="NodesStatus" className="mt-3 sm:grid sm:grid-cols-2 sm:gap-x-6">
+		<div data-testid="NodesStatus" className="mt-3 grid gap-3 md:grid-cols-2">
 			{hostGroups.map((hostGroup) =>
-				hostGroup.hosts.map((host) => {
-					index++;
-
-					return (
-						<NodeStatusNode
-							key={`${hostGroup.network.id()}-${host.type}`}
-							network={hostGroup.network}
-							host={host}
-							lastRow={index === count || (count % 2 === 0 && index === count - 1)}
-						/>
-					);
-				}),
+				hostGroup.hosts.map((host) => (
+					<NodeStatusNode
+						key={`${hostGroup.network.id()}-${host.type}`}
+						network={hostGroup.network}
+						host={host}
+					/>
+				)),
 			)}
 		</div>
 	);

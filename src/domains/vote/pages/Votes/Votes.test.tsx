@@ -37,7 +37,7 @@ const Wrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
 
 	useEffect(() => {
-		setConfiguration({ profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return children;
