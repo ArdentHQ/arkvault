@@ -11,7 +11,7 @@ import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet
 
 interface WalletVoteProperties {
 	wallet: IReadWriteWallet | undefined;
-	onButtonClick: (address?: string) => void;
+	onButtonClick: () => void;
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
 	wallets?: Contracts.IReadWriteWallet[];
@@ -41,7 +41,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 			return <EmptyVotes />;
 		}
 
-		return <Votes wallet={wallet} votes={votes} activeDelegates={activeDelegates} onButtonClick={onButtonClick} />;
+		return <Votes votes={votes} activeDelegates={activeDelegates} />;
 	};
 
 	return (
