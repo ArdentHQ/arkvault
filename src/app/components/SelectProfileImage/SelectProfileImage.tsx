@@ -87,7 +87,7 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 
 		return (
 			<div className="h-[92px] w-[92px] rounded-lg border border-theme-secondary-300 p-1.5 focus-within:border-solid focus-within:border-theme-primary-400 dark:border-theme-dark-700">
-				<div className="h-full overflow-hidden rounded-full">
+				<div className="h-full overflow-hidden rounded">
 					<UploadButtonWrapper>
 						<Button
 							variant="secondary"
