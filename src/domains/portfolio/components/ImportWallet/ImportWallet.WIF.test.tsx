@@ -73,12 +73,12 @@ describe("ImportWallet WIF", () => {
 	it("should import with valid wif", async () => {
 		const coin = profile.coins().get("Mainsail", testNetwork);
 
-		const fromWifMock= vi.spyOn(coin.address(), "fromWIF").mockResolvedValue({
+		const fromWifMock = vi.spyOn(coin.address(), "fromWIF").mockResolvedValue({
 			address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",
 			type: "bip39",
 		});
 
-		const publicKeyMock= vi.spyOn(coin.publicKey(), "fromWIF").mockResolvedValue("public-key");
+		const publicKeyMock = vi.spyOn(coin.publicKey(), "fromWIF").mockResolvedValue("public-key");
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
