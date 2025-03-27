@@ -356,7 +356,6 @@ describe("ImportAddress Validations", () => {
 		await userEvent.clear(await addressInput());
 		await userEvent.type(await addressInput(), randomNewAddress);
 
-		screen.debug(screen.getByTestId("ImportAddressSidePanel"), Infinity)
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await userEvent.click(continueButton());
 

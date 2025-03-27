@@ -422,9 +422,9 @@ describe("CreateAddressSidePanel", () => {
 
 	it("should show an error message for duplicate name", async () => {
 		const wallet = await profile.walletFactory().fromAddress({
-			address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			coin: "ARK",
-			network: "ark.devnet",
+			address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
