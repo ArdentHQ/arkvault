@@ -62,8 +62,6 @@ describe("AddressesSidePanel", () => {
 		expect(onClose).toHaveBeenCalledWith([wallets.first().address()]);
 	});
 
-
-
 	it("should select all displayed addresses when `select all` clicked", async () => {
 		const onClose = vi.fn();
 
@@ -294,6 +292,27 @@ describe("AddressesSidePanel", () => {
 
 		setItemSpy.mockRestore();
 		getItemSpy.mockRestore();
+	});
+
+	it("should deselect an address when AddressRow is clicked", async () => {
+		const onClose = vi.fn();
+
+		render(
+			<AddressesSidePanel
+				profile={profile}
+				wallets={wallets.values()}
+				defaultSelectedAddresses={[wallets.first().address(), wallets.last().address()]}
+				open={true}
+				onClose={onClose}
+				onOpenChange={vi.fn()}
+				onDelete={vi.fn()}
+			/>,
+		);
+
+		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
+		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
+
+		expect(onClose).toHaveBeenCalledWith([wallets.last().address()]);
 	});
 
 	it("should toggle between single and multiple view", async () => {
