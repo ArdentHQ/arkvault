@@ -1,0 +1,137 @@
+{
+	"coin": "Mainsail",
+	"constants": {
+		"epoch": "2023-12-21T00:00:00.000Z",
+		"slip44": 111
+	},
+	"currency": {
+		"decimals": 18,
+		"symbol": "TѦ",
+		"ticker": "ARK"
+	},
+	"explorer": {
+		"block": "blocks/{0}",
+		"transaction": "transactions/{0}",
+		"wallet": "wallets/{0}"
+	},
+	"featureFlags": {
+		"Address": ["mnemonic.bip39", "multiSignature", "privateKey", "publicKey", "validate", "wif"],
+		"Client": [
+			"transaction",
+			"transactions",
+			"wallet",
+			"wallets",
+			"delegate",
+			"delegates",
+			"votes",
+			"voters",
+			"broadcast"
+		],
+		"Fee": ["all", "calculate"],
+		"KeyPair": ["mnemonic.bip39", "privateKey", "wif"],
+		"Ledger": ["getVersion", "getPublicKey", "signTransaction", "signMessage"],
+		"Message": ["sign", "verify"],
+		"PrivateKey": ["mnemonic.bip39", "wif"],
+		"PublicKey": ["mnemonic.bip39", "multiSignature", "wif"],
+		"Transaction": [
+			"delegateRegistration",
+			"delegateResignation",
+			"estimateExpiration",
+			"ipfs.ledgerS",
+			"ipfs.ledgerX",
+			"ipfs.musig",
+			"ipfs",
+			"multiPayment.musig",
+			"multiPayment",
+			"multiSignature.ledgerX",
+			"multiSignature.musig",
+			"multiSignature",
+			"secondSignature",
+			"transfer.ledgerS",
+			"transfer.ledgerX",
+			"transfer.musig",
+			"transfer",
+			"vote.ledgerS",
+			"vote.ledgerX",
+			"vote.musig",
+			"vote"
+		],
+		"WIF": ["mnemonic.bip39"]
+	},
+	"governance": {
+		"delegateCount": 53,
+		"votesPerTransaction": 1,
+		"votesPerWallet": 1
+	},
+	"hosts": [
+		{
+			"host": "https://dwallets-evm.mainsailhq.com/api",
+			"type": "full"
+		},
+		{
+			"host": "https://dwallets-evm.mainsailhq.com/tx/api",
+			"type": "tx"
+		},
+		{
+			"host": "https://musig-demo.mainsailhq.com",
+			"type": "musig"
+		},
+		{
+			"host": "https://explorer-evm-test.mainsailhq.com",
+			"type": "explorer"
+		},
+		{
+			"host": "https://dwallets-evm.mainsailhq.com/evm/api",
+			"type": "evm"
+		}
+	],
+	"id": "mainsail.devnet",
+	"importMethods": {
+		"address": {
+			"default": false,
+			"permissions": ["read"]
+		},
+		"bip39": {
+			"canBeEncrypted": true,
+			"default": true,
+			"permissions": ["read", "write"]
+		},
+		"publicKey": {
+			"default": false,
+			"permissions": ["read"]
+		},
+		"secret": {
+			"canBeEncrypted": true,
+			"default": false,
+			"permissions": ["read", "write"]
+		}
+	},
+	"knownWallets": "https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
+	"meta": {
+		"chainId": 10000,
+		"nethash": "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+		"slip44": 111,
+		"wif": 186
+	},
+	"name": "Devnet",
+	"transactions": {
+		"expirationType": "height",
+		"fees": {
+			"ticker": "ARK",
+			"type": "dynamic"
+		},
+		"memo": true,
+		"multiPaymentRecipients": 128,
+		"types": [
+			"delegateRegistration",
+			"delegateResignation",
+			"ipfs",
+			"multiPayment",
+			"multiSignature",
+			"secondSignature",
+			"transfer",
+			"vote"
+		]
+	},
+	"type": "test"
+}

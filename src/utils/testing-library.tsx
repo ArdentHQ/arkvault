@@ -17,6 +17,7 @@ import { LayoutBreakpoint } from "@/types";
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import { BigNumber } from "@ardenthq/sdk-helpers";
@@ -266,7 +267,7 @@ const publicNetworksStub: any = {
 	},
 	mainsail: {
 		mainnet: {
-			...DefaultManifest,
+			...MainsailDefaultManifest,
 			coin: "Mainsail",
 			currency: {
 				ticker: "ARK",
@@ -298,15 +299,15 @@ const testNetworksStub: any = {
 	},
 	mainsail: {
 		devnet: {
-			...DefaultManifest,
+			...MainsailDefaultManifest,
 			coin: "Mainsail",
 			currency: {
 				ticker: "DARK",
 			},
 			id: "mainsail.devnet",
 			meta: {
-				...DefaultManifest.meta,
-				nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				...MainsailDefaultManifest.meta,
+				nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 				version: 30,
 			},
 			name: "Devnet",
