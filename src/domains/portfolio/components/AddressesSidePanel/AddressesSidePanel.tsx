@@ -1,3 +1,9 @@
+import { AddressViewType, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
+import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
+
+import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
+import { Button } from "@/app/components/Button";
+import { Checkbox } from "@/app/components/Checkbox";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
 import { Icon } from "@/app/components/Icon";
@@ -13,6 +19,11 @@ import { t } from "i18next";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useLocalStorage } from "usehooks-ts";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+
+export enum AddressViewSelection {
+	single = "single",
+	multiple = "multiple",
+}
 
 export enum AddressViewSelection {
 	single = "single",
