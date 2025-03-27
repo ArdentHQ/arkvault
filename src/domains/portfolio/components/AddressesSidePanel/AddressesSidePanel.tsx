@@ -25,11 +25,6 @@ export enum AddressViewSelection {
 	multiple = "multiple",
 }
 
-export enum AddressViewSelection {
-	single = "single",
-	multiple = "multiple",
-}
-
 export const AddressesSidePanel = ({
 	profile,
 	wallets,
