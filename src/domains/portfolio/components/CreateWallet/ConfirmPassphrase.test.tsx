@@ -36,7 +36,7 @@ describe("ConfirmPassphraseStep", () => {
 			</FormProvider>,
 		);
 
-		// This is silence `act` warning due to `register` call
+		// This is to silence `act` warning due to `register` call
 		// https://github.com/testing-library/react-testing-library/issues/1051#issuecomment-1111625962
 		act(async () => {
 			await new Promise((resolve) => {
