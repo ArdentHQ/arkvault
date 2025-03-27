@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { SelectRecipient } from "./SelectRecipient";
-import { env, getDefaultProfileId, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
