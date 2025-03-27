@@ -74,9 +74,8 @@ export const PortfolioHeader = ({
 
 	useEffect(() => {
 		const test = async () => {
-			console.log("test")
-			const builder = await TransferBuilder
-				.new()
+			console.log("test");
+			const builder = await TransferBuilder.new()
 				.recipientAddress("0xb693449AdDa7EFc015D87944EAE8b7C37EB1690A")
 				.value(UnitConverter.parseUnits(10, "ark").toString())
 				.gasPrice(UnitConverter.parseUnits(5, "gwei").toString())
@@ -84,11 +83,11 @@ export const PortfolioHeader = ({
 				.nonce("0");
 
 			builder.transaction.data["id"] = builder.transaction.getId();
-			console.log({ builder })
-		}
+			console.log({ builder });
+		};
 
 		test();
-	})
+	});
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
