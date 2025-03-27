@@ -40,18 +40,22 @@ export const Dashboard = ({
 
 	const handleVoteButton = (filter?: string) => {
 		if (selectedWallets.length > 1) {
-			return history.push({
+			history.push({
 				pathname: `/profiles/${activeProfile.id()}/votes`,
 			});
+
+			return;
 		}
 
 		const wallet = selectedWallets.at(0);
 		/* istanbul ignore else -- @preserve */
 		if (filter) {
-			return history.push({
+			history.push({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`,
 				search: `?filter=${filter}`,
 			});
+
+			return;
 		}
 
 		history.push(`/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`);
