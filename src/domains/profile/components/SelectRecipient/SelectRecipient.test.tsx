@@ -203,7 +203,13 @@ describe("SelectRecipient", () => {
 	it("should call onChange prop only when values change", async () => {
 		const onChange = vi.fn();
 
-		render(<SelectRecipient profile={profile} onChange={onChange} address="0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da" />);
+		render(
+			<SelectRecipient
+				profile={profile}
+				onChange={onChange}
+				address="0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da"
+			/>,
+		);
 
 		const selectedAddressValue = profile.contacts().values()[0].addresses().values()[0].address();
 

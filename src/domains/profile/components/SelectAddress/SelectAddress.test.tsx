@@ -3,13 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { SelectAddress } from "./SelectAddress";
-import {
-	env,
-	getMainsailProfileId, MAINSAIL_MNEMONICS,
-	render,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
