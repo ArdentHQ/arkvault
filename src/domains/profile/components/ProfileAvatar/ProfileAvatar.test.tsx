@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 
 import { ProfileAvatar } from "./ProfileAvatar";
-import { env, getDefaultProfileId, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 

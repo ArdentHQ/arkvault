@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-import { env, getDefaultProfileId, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { Profiles } from "./Profiles";
 
 let profile: Contracts.IProfile;

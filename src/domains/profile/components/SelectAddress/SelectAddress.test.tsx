@@ -5,9 +5,7 @@ import React from "react";
 import { SelectAddress } from "./SelectAddress";
 import {
 	env,
-	getDefaultProfileId,
 	getMainsailProfileId, MAINSAIL_MNEMONICS,
-	MNEMONICS,
 	render,
 	screen,
 	waitFor,
