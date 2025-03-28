@@ -217,7 +217,7 @@ exports[`General Settings > should disable submit button when profile is not res
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -228,7 +228,7 @@ exports[`General Settings > should disable submit button when profile is not res
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -239,7 +239,7 @@ exports[`General Settings > should disable submit button when profile is not res
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -250,7 +250,7 @@ exports[`General Settings > should disable submit button when profile is not res
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -343,13 +343,6 @@ exports[`General Settings > should disable submit button when profile is not res
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
                       </div>
                     </div>
                   </button>
@@ -685,7 +678,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -1196,12 +1189,12 @@ exports[`General Settings > should disable submit button when profile is not res
                                   alt="Avatar"
                                   class="min-h-full object-cover"
                                   data-testid="SelectProfileImage__avatar-identicon"
-                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                                 />
                                 <span
                                   class="absolute text-2xl font-semibold text-white"
                                 >
-                                  JO
+                                  FO
                                 </span>
                                 <button
                                   class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
@@ -1272,7 +1265,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   data-testid="General-settings__input--name"
                                   name="name"
                                   type="text"
-                                  value="John Doe"
+                                  value="Foo Bar"
                                 />
                               </div>
                             </div>
@@ -2186,7 +2179,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Viewing Mode
@@ -2320,7 +2313,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Address Naming
@@ -2391,7 +2384,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Show Development Network
@@ -2441,7 +2434,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Reset Settings
@@ -2554,8 +2547,9 @@ exports[`General Settings > should not update the uploaded avatar when removing 
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
+          disabled=""
           type="button"
         >
           <div
@@ -2631,8 +2625,9 @@ exports[`General Settings > should not update the uploaded avatar when removing 
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
+          disabled=""
           type="button"
         >
           <div
@@ -2751,7 +2746,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -2762,7 +2757,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -2773,7 +2768,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -2784,7 +2779,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -2878,13 +2873,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -2955,8 +2943,9 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -3007,8 +2996,9 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -3217,12 +3207,12 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
-                          JO
+                          FO
                         </span>
                       </div>
                     </div>
@@ -3842,7 +3832,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   data-testid="General-settings__input--name"
                                   name="name"
                                   type="text"
-                                  value="John Doe"
+                                  value="Foo Bar"
                                 />
                               </div>
                             </div>
@@ -4756,7 +4746,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Viewing Mode
@@ -4890,7 +4880,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Address Naming
@@ -4961,7 +4951,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Show Development Network
@@ -5011,7 +5001,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Reset Settings
@@ -5123,8 +5113,9 @@ exports[`General Settings > should render 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
+          disabled=""
           type="button"
         >
           <div
@@ -5200,8 +5191,9 @@ exports[`General Settings > should render 1`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
+          disabled=""
           type="button"
         >
           <div
@@ -5320,7 +5312,7 @@ exports[`General Settings > should render 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -5331,7 +5323,7 @@ exports[`General Settings > should render 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -5342,7 +5334,7 @@ exports[`General Settings > should render 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -5353,7 +5345,7 @@ exports[`General Settings > should render 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -5447,13 +5439,6 @@ exports[`General Settings > should render 1`] = `
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -5524,8 +5509,9 @@ exports[`General Settings > should render 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -5576,8 +5562,9 @@ exports[`General Settings > should render 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -5786,12 +5773,12 @@ exports[`General Settings > should render 1`] = `
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
-                          JO
+                          FO
                         </span>
                       </div>
                     </div>
@@ -6299,12 +6286,12 @@ exports[`General Settings > should render 1`] = `
                                   alt="Avatar"
                                   class="min-h-full object-cover"
                                   data-testid="SelectProfileImage__avatar-identicon"
-                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                                 />
                                 <span
                                   class="absolute text-2xl font-semibold text-white"
                                 >
-                                  JO
+                                  FO
                                 </span>
                                 <button
                                   class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
@@ -6375,7 +6362,7 @@ exports[`General Settings > should render 1`] = `
                                   data-testid="General-settings__input--name"
                                   name="name"
                                   type="text"
-                                  value="John Doe"
+                                  value="Foo Bar"
                                 />
                               </div>
                             </div>
@@ -7289,7 +7276,7 @@ exports[`General Settings > should render 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Viewing Mode
@@ -7423,7 +7410,7 @@ exports[`General Settings > should render 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Address Naming
@@ -7494,7 +7481,7 @@ exports[`General Settings > should render 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Show Development Network
@@ -7544,7 +7531,7 @@ exports[`General Settings > should render 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Reset Settings
@@ -7657,8 +7644,9 @@ exports[`General Settings > should show identicon when removing image if name is
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
+          disabled=""
           type="button"
         >
           <div
@@ -7734,8 +7722,9 @@ exports[`General Settings > should show identicon when removing image if name is
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
+          disabled=""
           type="button"
         >
           <div
@@ -7854,7 +7843,7 @@ exports[`General Settings > should show identicon when removing image if name is
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -7865,7 +7854,7 @@ exports[`General Settings > should show identicon when removing image if name is
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -7876,7 +7865,7 @@ exports[`General Settings > should show identicon when removing image if name is
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -7887,7 +7876,7 @@ exports[`General Settings > should show identicon when removing image if name is
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -7981,13 +7970,6 @@ exports[`General Settings > should show identicon when removing image if name is
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -8058,8 +8040,9 @@ exports[`General Settings > should show identicon when removing image if name is
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -8110,8 +8093,9 @@ exports[`General Settings > should show identicon when removing image if name is
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -8320,12 +8304,12 @@ exports[`General Settings > should show identicon when removing image if name is
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
-                          JO
+                          FO
                         </span>
                       </div>
                     </div>
@@ -8833,12 +8817,12 @@ exports[`General Settings > should show identicon when removing image if name is
                                   alt="Avatar"
                                   class="min-h-full object-cover"
                                   data-testid="SelectProfileImage__avatar-identicon"
-                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                                 />
                                 <span
                                   class="absolute text-2xl font-semibold text-white"
                                 >
-                                  JO
+                                  FO
                                 </span>
                                 <button
                                   class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
@@ -8909,7 +8893,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                   data-testid="General-settings__input--name"
                                   name="name"
                                   type="text"
-                                  value="John Doe"
+                                  value="Foo Bar"
                                 />
                               </div>
                             </div>
@@ -9823,7 +9807,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Viewing Mode
@@ -9957,7 +9941,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Address Naming
@@ -10028,7 +10012,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Show Development Network
@@ -10078,7 +10062,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Reset Settings
@@ -10191,8 +10175,9 @@ exports[`General Settings > should update profile 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
+          disabled=""
           type="button"
         >
           <div
@@ -10268,8 +10253,9 @@ exports[`General Settings > should update profile 1`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
+          disabled=""
           type="button"
         >
           <div
@@ -10388,7 +10374,7 @@ exports[`General Settings > should update profile 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -10399,7 +10385,7 @@ exports[`General Settings > should update profile 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -10410,7 +10396,7 @@ exports[`General Settings > should update profile 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -10421,7 +10407,7 @@ exports[`General Settings > should update profile 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -10515,13 +10501,6 @@ exports[`General Settings > should update profile 1`] = `
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -10592,8 +10571,9 @@ exports[`General Settings > should update profile 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -10644,8 +10624,9 @@ exports[`General Settings > should update profile 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -10859,7 +10840,7 @@ exports[`General Settings > should update profile 1`] = `
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
-                          JO
+                          FO
                         </span>
                       </div>
                     </div>
@@ -11443,7 +11424,7 @@ exports[`General Settings > should update profile 1`] = `
                                   data-testid="General-settings__input--name"
                                   name="name"
                                   type="text"
-                                  value="John Doe"
+                                  value="Foo Bar"
                                 />
                               </div>
                             </div>
@@ -12357,7 +12338,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Viewing Mode
@@ -12491,7 +12472,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Address Naming
@@ -12562,7 +12543,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Show Development Network
@@ -12612,7 +12593,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Reset Settings
@@ -12725,8 +12706,9 @@ exports[`General Settings > should update the avatar when removing focus from na
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
+          disabled=""
           type="button"
         >
           <div
@@ -12802,8 +12784,9 @@ exports[`General Settings > should update the avatar when removing focus from na
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
+          disabled=""
           type="button"
         >
           <div
@@ -12922,7 +12905,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -12933,7 +12916,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -12944,7 +12927,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -12955,7 +12938,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -13049,13 +13032,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -13126,8 +13102,9 @@ exports[`General Settings > should update the avatar when removing focus from na
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -13178,8 +13155,9 @@ exports[`General Settings > should update the avatar when removing focus from na
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -13388,12 +13366,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
-                          JO
+                          FO
                         </span>
                       </div>
                     </div>
@@ -13977,7 +13955,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   data-testid="General-settings__input--name"
                                   name="name"
                                   type="text"
-                                  value="John Doe"
+                                  value="Foo Bar"
                                 />
                               </div>
                             </div>
@@ -14891,7 +14869,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Viewing Mode
@@ -15025,7 +15003,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Address Naming
@@ -15096,7 +15074,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Show Development Network
@@ -15146,7 +15124,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Reset Settings
@@ -15258,8 +15236,9 @@ exports[`General Settings > should update the avatar when removing focus from na
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
+          disabled=""
           type="button"
         >
           <div
@@ -15335,8 +15314,9 @@ exports[`General Settings > should update the avatar when removing focus from na
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
+          disabled=""
           type="button"
         >
           <div
@@ -15455,7 +15435,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -15466,7 +15446,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -15477,7 +15457,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -15488,7 +15468,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -15582,13 +15562,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -15659,8 +15632,9 @@ exports[`General Settings > should update the avatar when removing focus from na
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -15711,8 +15685,9 @@ exports[`General Settings > should update the avatar when removing focus from na
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
+                    disabled=""
                     type="button"
                   >
                     <div
@@ -15921,12 +15896,12 @@ exports[`General Settings > should update the avatar when removing focus from na
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
-                          JO
+                          FO
                         </span>
                       </div>
                     </div>
@@ -16504,7 +16479,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   data-testid="General-settings__input--name"
                                   name="name"
                                   type="text"
-                                  value="John Doe"
+                                  value="Foo Bar"
                                 />
                               </div>
                               <div
@@ -17468,7 +17443,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Viewing Mode
@@ -17602,7 +17577,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Address Naming
@@ -17673,7 +17648,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Show Development Network
@@ -17723,7 +17698,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                                   data-testid="list-divided-item__label"
                                 >
                                   Reset Settings

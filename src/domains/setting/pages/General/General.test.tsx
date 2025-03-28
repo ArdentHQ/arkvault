@@ -11,7 +11,17 @@ import { useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import GeneralSettings from "@/domains/setting/pages/General";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	getMainsailProfileId,
+	render,
+	screen,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { renderHook } from "@testing-library/react";
 
@@ -39,7 +49,7 @@ vi.mock("@/utils/delay", () => ({
 
 describe("General Settings", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});

@@ -8,7 +8,7 @@ import { Route } from "react-router-dom";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import PasswordSettings from "@/domains/setting/pages/Password";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 const translations = buildTranslations();
 const history = createHashHistory();
 
@@ -30,7 +30,7 @@ const secondaryPassword = "S3cUrePa$sword2different";
 
 describe("Password Settings", () => {
 	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await profile.sync();
 
