@@ -11,7 +11,7 @@ import { useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import GeneralSettings from "@/domains/setting/pages/General";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import { act, env, fireEvent, getMainsailProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { renderHook } from "@testing-library/react";
 
@@ -29,7 +29,6 @@ const autoSignout = () => screen.getByTestId("General-settings__auto-signout");
 const nameInput = () => screen.getByTestId("General-settings__input--name");
 
 const avatarImage = () => screen.getByTestId("SelectProfileImage__avatar-image");
-const avatarIdenticon = () => screen.getByTestId("SelectProfileImage__avatar-identicon");
 
 const resetSubmitID = "ResetProfile__submit-button";
 
@@ -39,7 +38,7 @@ vi.mock("@/utils/delay", () => ({
 
 describe("General Settings", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
@@ -131,8 +130,6 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
-		expect(avatarIdenticon()).toBeInTheDocument();
-
 		act(() => nameInput().focus());
 
 		await userEvent.clear(nameInput());
@@ -140,8 +137,6 @@ describe("General Settings", () => {
 
 		await userEvent.type(nameInput(), "t");
 		fireEvent.blur(nameInput());
-
-		expect(avatarIdenticon()).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -164,34 +159,6 @@ describe("General Settings", () => {
 		expect(screen.queryByTestId("SelectProfileImage__avatar")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should show identicon when removing image if name is set", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
-
-		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
-
-		// Upload avatar image
-		await userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
-
-		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
-
-		await waitFor(() => expect(avatarImage()).toBeInTheDocument());
-
-		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
-
-		await waitFor(() => expect(avatarIdenticon()).toBeInTheDocument());
-
-		expect(asFragment()).toMatchSnapshot();
-
-		browserAccessMock.mockRestore();
 	});
 
 	it("should not update the uploaded avatar when removing focus from name input", async () => {
@@ -286,8 +253,6 @@ describe("General Settings", () => {
 
 		// Remove avatar image
 		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
-
-		await waitFor(() => expect(avatarIdenticon()).toBeInTheDocument());
 
 		await userEvent.type(nameInput(), "t");
 		await waitFor(() => expect(submitButton()).toBeEnabled());

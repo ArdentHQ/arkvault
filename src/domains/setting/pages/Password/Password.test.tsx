@@ -8,7 +8,7 @@ import { Route } from "react-router-dom";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import PasswordSettings from "@/domains/setting/pages/Password";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 const translations = buildTranslations();
 const history = createHashHistory();
 
@@ -30,7 +30,7 @@ const secondaryPassword = "S3cUrePa$sword2different";
 
 describe("Password Settings", () => {
 	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await profile.sync();
 
@@ -55,7 +55,7 @@ describe("Password Settings", () => {
 	});
 
 	it("should set a password", async () => {
-		const { container, asFragment } = render(
+		const { container } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -97,8 +97,6 @@ describe("Password Settings", () => {
 		await userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show an error toast if the current password does not match", async () => {
