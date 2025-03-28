@@ -22,7 +22,8 @@ import {
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
-	act, getMainsailProfileId,
+	act,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getMainsailProfileId();
