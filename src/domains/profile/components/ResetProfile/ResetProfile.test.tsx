@@ -3,13 +3,15 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { ResetProfile } from "./ResetProfile";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("ResetProfile", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		profile.settings().set(Contracts.ProfileSetting.Theme, "dark");
 		env.persist();
 	});

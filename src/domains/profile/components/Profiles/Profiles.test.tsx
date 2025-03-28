@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { Profiles } from "./Profiles";
 
 let profile: Contracts.IProfile;
@@ -9,7 +9,7 @@ let sliderProfiles: Contracts.IProfile[];
 
 describe("Profiles", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		sliderProfiles = Array.from({ length: 8 }).fill(profile) as Contracts.IProfile[];
 	});
