@@ -170,14 +170,14 @@ export const Contacts: FC = () => {
 			searchPlaceholder={t("CONTACTS.CONTACTS_PAGE.SEARCH_PLACEHOLDER")}
 			extra={
 				<Button
-					className="mr-6 hidden h-8 py-0 leading-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 sm:block"
+					className="hidden h-8 py-0 mr-6 leading-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 sm:block"
 					data-testid="contacts__add-contact-btn"
 					onClick={() => setCreateIsOpen(true)}
 					variant="primary-transparent"
 					size="sm"
 					icon="Plus"
 				>
-					<span className="whitespace-nowrap text-base font-semibold">
+					<span className="text-base font-semibold whitespace-nowrap">
 						{t("CONTACTS.CONTACTS_PAGE.ADD_CONTACT")}
 					</span>
 				</Button>
@@ -202,17 +202,17 @@ export const Contacts: FC = () => {
 			<Page pageTitle={t("CONTACTS.CONTACTS_PAGE.TITLE")}>
 				<ContactsHeader />
 
-				<Section className="-mb-1 pb-0">
-					<div className="flex items-center rounded border border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden">
+				<Section className="py-0">
+					<div className="flex items-center border rounded border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden">
 						<Button
-							className="h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
+							className="w-full h-12 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
 							data-testid="contacts__add-contact-btn-mobile"
 							onClick={() => setCreateIsOpen(true)}
 							variant="primary-transparent"
 							size="sm"
 							icon="Plus"
 						>
-							<span className="whitespace-nowrap text-base font-semibold">
+							<span className="text-base font-semibold whitespace-nowrap">
 								{t("CONTACTS.CONTACTS_PAGE.ADD_CONTACT")}
 							</span>
 						</Button>
