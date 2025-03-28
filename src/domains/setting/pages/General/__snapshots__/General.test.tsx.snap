@@ -678,7 +678,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -3198,7 +3198,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -5764,7 +5764,7 @@ exports[`General Settings > should render 1`] = `
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
