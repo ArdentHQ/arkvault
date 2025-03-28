@@ -67,7 +67,7 @@ const OptionLabel = ({
 	);
 
 	return (
-		<div className="flex items-center space-x-2 leading-5 whitespace-nowrap">
+		<div className="flex items-center space-x-2 whitespace-nowrap leading-5">
 			<Address
 				address={address}
 				walletName={alias}
@@ -195,7 +195,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 				<div
 					ref={selectRecipientReference}
 					data-testid="SelectRecipient__wrapper"
-					className="relative flex items-center w-full text-left"
+					className="relative flex w-full items-center text-left"
 				>
 					<Select
 						id="SelectRecipient__dropdown"
