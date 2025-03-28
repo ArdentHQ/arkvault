@@ -6,7 +6,7 @@ import { WelcomeModal } from "./WelcomeModal";
 import { ConfigurationProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations } from "@/domains/profile/i18n";
-import { env, getDefaultProfileId, render, screen, within } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, within } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let mockHasCompletedTutorial: vi.SpyInstance<boolean, []>;
@@ -21,7 +21,7 @@ const nextButtonID = "WelcomeModal-next";
 
 describe("WelcomeModal", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	beforeEach(() => {

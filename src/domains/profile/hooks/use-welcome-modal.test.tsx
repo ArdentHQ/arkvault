@@ -5,7 +5,7 @@ import { act } from "react-test-renderer";
 
 import { useWelcomeModal } from "./use-welcome-modal";
 import { ConfigurationProvider } from "@/app/contexts/Configuration";
-import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -13,9 +13,11 @@ const wrapper = ({ children }: any) => (
 	<ConfigurationProvider defaultConfiguration={{ profileIsSyncing: false }}>{children}</ConfigurationProvider>
 );
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("useWelcomeModal", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	afterEach(() => {
