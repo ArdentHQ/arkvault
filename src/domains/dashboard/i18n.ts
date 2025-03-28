@@ -23,13 +23,6 @@ export const translations = {
 		TITLE: "Latest Transactions",
 	},
 
-	PORTFOLIO_BREAKDOWN: {
-		FILTERED: "Please enable at least one public network to display your portfolio report.",
-	},
-
-	PORTFOLIO_BREAKDOWN_DETAILS: {
-		TITLE: "Portfolio Breakdown",
-	},
 	WALLET_CONTROLS: {
 		CREATE: "Create",
 		CREATE_ADDRESS_DESCRIPTION:

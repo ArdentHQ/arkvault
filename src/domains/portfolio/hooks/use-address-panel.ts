@@ -79,7 +79,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 		setAddressViewPreferenceState(settings.addressViewPreference || AddressViewSelection.multiple);
 		setSingleSelectedAddressState(settings.singleSelectedAddress || []);
 		setMultiSelectedAddressesState(settings.multiSelectedAddresses || []);
-	}, [profile, activeNetwork]);
+	}, [profile.id(), activeNetwork.id()]);
 
 	const setAddressViewPreference = async (preference: AddressViewType): Promise<void> => {
 		setAddressViewPreferenceState(preference);

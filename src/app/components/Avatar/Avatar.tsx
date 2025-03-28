@@ -63,7 +63,9 @@ export const Avatar = ({
 					innerClassName,
 				)}
 			>
-				{svg && <img alt={address} title={address} src={`data:image/svg+xml;utf8,${svg}`} />}
+				{svg && (
+					<img alt={address} title={address} src={`data:image/svg+xml;utf8,${encodeURIComponent(svg)}`} />
+				)}
 				{children}
 			</div>
 		</AvatarWrapper>

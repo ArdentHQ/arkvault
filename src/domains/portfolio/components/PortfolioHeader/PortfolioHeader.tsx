@@ -40,7 +40,7 @@ export const PortfolioHeader = ({
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
 	isUpdatingTransactions: boolean;
-	handleVotesButtonClick: (address?: string) => void;
+	handleVotesButtonClick: () => void;
 	onUpdate?: (status: boolean) => void;
 	onCreateAddress?: (open: boolean) => void;
 	onImportAddress?: (open: boolean) => void;
