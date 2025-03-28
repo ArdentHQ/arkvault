@@ -314,12 +314,6 @@ export const useSearchParametersValidation = () => {
 
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
-			console.log(
-				"has nethash",
-				network?.id(),
-				nethash,
-				allEnabledNetworks.map((w) => w.meta().nethash),
-			);
 			if (!network) {
 				/* istanbul ignore next -- @preserve */
 				for (let { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {
