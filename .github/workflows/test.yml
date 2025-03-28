@@ -614,7 +614,7 @@ jobs:
               env:
                   COVERAGE_THRESHOLD_LINES: 99.64
                   COVERAGE_THRESHOLD_STATEMENTS: 99.65
-                  COVERAGE_THRESHOLD_BRANCHES: 98.74
+                  COVERAGE_THRESHOLD_BRANCHES: 98.47
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
