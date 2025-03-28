@@ -3,11 +3,7 @@ import { renderHook } from "@testing-library/react";
 
 import { truncate } from "@ardenthq/sdk-helpers";
 import { useSearchParametersValidation } from "./use-search-parameters-validation";
-import {
-	env,
-	getMainsailProfileId,
-	mockProfileWithPublicAndTestNetworks,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -175,7 +171,9 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error if recipient does not correspond to network", async () => {
-		const parameters = new URLSearchParams("coin=mainsail&network=mainsail.devnet&method=transfer&recipient=custom");
+		const parameters = new URLSearchParams(
+			"coin=mainsail&network=mainsail.devnet&method=transfer&recipient=custom",
+		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -341,7 +339,9 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should not allow both delegate name and public keys in the url", async () => {
-		const parameters = new URLSearchParams("coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=1&delegate=test");
+		const parameters = new URLSearchParams(
+			"coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=1&delegate=test",
+		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
