@@ -67,7 +67,7 @@ const OptionLabel = ({
 	);
 
 	return (
-		<div className="flex items-center space-x-2 whitespace-nowrap leading-5">
+		<div className="flex items-center space-x-2 leading-5 whitespace-nowrap">
 			<Address
 				address={address}
 				walletName={alias}
@@ -149,6 +149,12 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			onChangeAddress(address, false);
 		}, [address]); // eslint-disable-line react-hooks/exhaustive-deps
 
+		useEffect(() => {
+			if (!selectedAddress) {
+				setSelectedAddressAlias(undefined);
+			}
+		}, [selectedAddress]);
+
 		const { allAddresses } = useProfileAddresses({ network, profile }, exceptMultiSignature);
 
 		const recipientOptions = allAddresses.map(({ address }: AddressProperties) => ({
@@ -189,7 +195,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 				<div
 					ref={selectRecipientReference}
 					data-testid="SelectRecipient__wrapper"
-					className="relative flex w-full items-center text-left"
+					className="relative flex items-center w-full text-left"
 				>
 					<Select
 						id="SelectRecipient__dropdown"
