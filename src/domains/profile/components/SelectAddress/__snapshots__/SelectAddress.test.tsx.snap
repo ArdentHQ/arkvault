@@ -326,7 +326,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         >
           <img
             alt="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="60" cx="0" cy="50" fill="rgb(33, 150, 243)"/><circle r="50" cx="50" cy="60" fill="rgb(205, 220, 57)"/><circle r="35" cx="10" cy="30" fill="rgb(0, 188, 212)"/></svg>"
+            src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(103%2C%2058%2C%20183)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%220%22%20cy%3D%2250%22%20fill%3D%22rgb(33%2C%20150%2C%20243)%22%2F%3E%3Ccircle%20r%3D%2250%22%20cx%3D%2250%22%20cy%3D%2260%22%20fill%3D%22rgb(205%2C%20220%2C%2057)%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2210%22%20cy%3D%2230%22%20fill%3D%22rgb(0%2C%20188%2C%20212)%22%2F%3E%3C%2Fsvg%3E"
             title="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
           />
         </div>
