@@ -2,12 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 
 import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
-import {
-	env,
-	getDefaultPassword,
-	getMainsailProfileId,
-	getPasswordProtectedProfileId,
-} from "@/utils/testing-library";
+import { env, getDefaultPassword, getMainsailProfileId, getPasswordProtectedProfileId } from "@/utils/testing-library";
 
 describe("useProfileExport", () => {
 	let profile: Contracts.IProfile;
