@@ -784,7 +784,7 @@ describe("Welcome", () => {
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[0];
+		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[2];
 
 		await userEvent.click(profileCardMenu);
 
