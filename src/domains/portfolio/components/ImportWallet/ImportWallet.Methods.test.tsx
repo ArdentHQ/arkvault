@@ -8,20 +8,20 @@ import { Route } from "react-router-dom";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 
 let profile: Contracts.IProfile;
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 
-const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
-const randomPublicKey = "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192";
+const randomAddress = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
+const randomPublicKey = "02727d83862b9d429b91a0d06920d860c252893a25ec337fb30da87b119985c182";
 const randomPublicKeyInvalid = "a34151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
@@ -41,7 +41,10 @@ const publicKeyInput = () => screen.getByTestId("ImportWallet__publicKey-input")
 
 const secretInputID = "ImportWallet__secret-input";
 const password = "S3cUrePa$sword";
-const testNetwork = "ark.devnet";
+const testNetwork = "mainsail.devnet";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("ImportAddress Methods", () => {
 	let resetProfileNetworksMock: () => void;
@@ -143,38 +146,6 @@ describe("ImportAddress Methods", () => {
 		await waitFor(() => {
 			expect(profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)).toBeInstanceOf(Wallet);
 		});
-	});
-
-	it("should validate public key doesnt exist", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
-
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
-
-		expect(detailStep()).toBeInTheDocument();
-
-		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
-
-		const findAdressSpy = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue({} as any);
-
-		await userEvent.clear(publicKeyInput());
-		await userEvent.type(publicKeyInput(), randomPublicKey);
-
-		await waitFor(() => expect(continueButton()).toBeDisabled());
-
-		findAdressSpy.mockRestore();
 	});
 
 	it("should not allow importing from an invalid public key", async () => {
@@ -310,65 +281,66 @@ describe("ImportAddress Methods", () => {
 		);
 	});
 
-	it("should import by secret with second signature and use password to encrypt both", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
-
-		await waitFor(() => expect(() => methodStep()).not.toThrow());
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(commonTranslations.SECRET));
-
-		expect(detailStep()).toBeInTheDocument();
-
-		const passphraseInput = screen.getByTestId(secretInputID);
-
-		expect(passphraseInput).toBeInTheDocument();
-
-		await userEvent.clear(passphraseInput);
-		await userEvent.type(passphraseInput, "abc");
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await enableEncryptionToggle();
-		await toggleEncryptionCheckbox();
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
-		});
-
-		await userEvent.clear(screen.getByTestId("EncryptPassword__second-secret"));
-		await userEvent.type(screen.getByTestId("EncryptPassword__second-secret"), "abc");
-
-		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-
-		await expect(screen.findByTestId("EncryptPassword__second-secret")).resolves.toHaveValue("abc");
-		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
-
-		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
-		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
-			password,
-		);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(successStep()).toBeInTheDocument();
-		});
-	});
+	// @TODO enable it when we have 2nd signature implemented
+	// it("should import by secret with second signature and use password to encrypt both", async () => {
+	// 	render(
+	// 		<Route path="/profiles/:profileId/dashboard">
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+	// 		</Route>,
+	// 		{
+	// 			route: route,
+	// 		},
+	// 	);
+	//
+	// 	await waitFor(() => expect(() => methodStep()).not.toThrow());
+	//
+	// 	expect(methodStep()).toBeInTheDocument();
+	//
+	// 	await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
+	//
+	// 	await userEvent.click(screen.getByText(commonTranslations.SECRET));
+	//
+	// 	expect(detailStep()).toBeInTheDocument();
+	//
+	// 	const passphraseInput = screen.getByTestId(secretInputID);
+	//
+	// 	expect(passphraseInput).toBeInTheDocument();
+	//
+	// 	await userEvent.clear(passphraseInput);
+	// 	await userEvent.type(passphraseInput, "abc");
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	await enableEncryptionToggle();
+	// 	await toggleEncryptionCheckbox();
+	// 	await userEvent.click(continueButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+	// 	});
+	//
+	// 	await userEvent.clear(screen.getByTestId("EncryptPassword__second-secret"));
+	// 	await userEvent.type(screen.getByTestId("EncryptPassword__second-secret"), "abc");
+	//
+	// 	await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+	// 	await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+	//
+	// 	await expect(screen.findByTestId("EncryptPassword__second-secret")).resolves.toHaveValue("abc");
+	// 	await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
+	//
+	// 	await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+	// 	await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+	// 	await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
+	// 		password,
+	// 	);
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	// 	await userEvent.click(continueButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(successStep()).toBeInTheDocument();
+	// 	});
+	// });
 
 	it("forgets the imported wallet if back from encrypted password step", async () => {
 		render(
@@ -414,5 +386,37 @@ describe("ImportAddress Methods", () => {
 		expect(profileForgetWalletSpy).toHaveBeenCalledWith(expect.any(String));
 
 		profileForgetWalletSpy.mockRestore();
+	});
+
+	it("should validate public key doesnt exist", async () => {
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+			</Route>,
+			{
+				route: route,
+			},
+		);
+
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
+
+		expect(detailStep()).toBeInTheDocument();
+
+		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
+
+		const findAdressSpy = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue({} as any);
+
+		await userEvent.clear(publicKeyInput());
+		await userEvent.type(publicKeyInput(), randomPublicKey);
+
+		await waitFor(() => expect(continueButton()).toBeDisabled());
+
+		findAdressSpy.mockRestore();
 	});
 });

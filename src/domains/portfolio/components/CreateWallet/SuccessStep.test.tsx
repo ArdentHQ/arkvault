@@ -5,14 +5,17 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
 import { SuccessStep } from "./SuccessStep";
-import { env, getDefaultProfileId, renderResponsive, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, renderResponsive, screen } from "@/utils/testing-library";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("SuccessStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
 	beforeEach(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = profile.wallets().first();
 	});

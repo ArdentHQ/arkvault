@@ -1,4 +1,4 @@
-import { AddressViewType, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewSelection, AddressViewType, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
 import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
 
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
@@ -9,21 +9,14 @@ import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSi
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Tab } from "@/app/components/Tabs";
+import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
-import { TabList } from "@/app/components/Tabs";
-import { Tabs } from "@/app/components/Tabs";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { t } from "i18next";
-import { useBreakpoint } from "@/app/hooks";
+import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useLocalStorage } from "usehooks-ts";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
-
-export enum AddressViewSelection {
-	single = "single",
-	multiple = "multiple",
-}
 
 export const AddressesSidePanel = ({
 	profile,
@@ -233,13 +226,18 @@ export const AddressesSidePanel = ({
 		setDeleteMode(false);
 	};
 
+	const { getWalletAlias } = useWalletAlias();
+
 	const addressesToShow = wallets.filter((wallet) => {
 		if (!searchQuery) {
 			return true;
 		}
 
 		const query = searchQuery.toLowerCase();
-		return wallet.address().toLowerCase().startsWith(query) || wallet.displayName()?.toLowerCase().includes(query);
+
+		const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
+
+		return wallet.address().toLowerCase().startsWith(query) || (alias && alias.toLowerCase().includes(query));
 	});
 
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;

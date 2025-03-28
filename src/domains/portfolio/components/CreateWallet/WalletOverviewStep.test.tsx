@@ -9,7 +9,7 @@ import { Trans } from "react-i18next";
 
 import { WalletOverviewStep } from "./WalletOverviewStep";
 import { toasts } from "@/app/services";
-import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -17,7 +17,7 @@ const renderForm = () =>
 	renderHook(() =>
 		useForm({
 			defaultValues: {
-				mnemonic: MNEMONICS[0],
+				mnemonic: MAINSAIL_MNEMONICS[0],
 				wallet: {
 					address: () => "address",
 				},
@@ -25,9 +25,12 @@ const renderForm = () =>
 		}),
 	);
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("WalletOverviewStep", () => {
 	beforeEach(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		for (const wallet of profile.wallets().values()) {
 			profile.wallets().forget(wallet.id());
@@ -58,7 +61,7 @@ describe("WalletOverviewStep", () => {
 
 			await userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
-			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(MNEMONICS[0]));
+			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(MAINSAIL_MNEMONICS[0]));
 
 			// @ts-ignore
 			navigator.clipboard = clipboardOriginal;
