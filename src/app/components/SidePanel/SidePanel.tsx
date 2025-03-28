@@ -13,6 +13,7 @@ import React from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
+import { isUnit } from "@/utils/test-helpers";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -71,7 +72,7 @@ export const SidePanel = ({
 					<>
 						<div className="fixed inset-0 z-40 bg-[#212225] bg-opacity-10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
 						<FloatingOverlay className="z-50 transition-opacity duration-300" lockScroll>
-							<FloatingFocusManager context={context}>
+							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
 									data-testid={dataTestId}
 									className="Dialog"

@@ -5,29 +5,33 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { CreateWallet } from "./CreateWallet";
 import {
 	env,
-	getDefaultProfileId,
-	MNEMONICS,
 	render,
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
+import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
 
 const passphrase = "power return attend drink piece found tragic fire liar page disease combine";
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 const password = "S3cUrePa$sword";
 let resetProfileNetworksMock: () => void;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("EncryptionPasswordStep", () => {
-	beforeEach(() => {
+	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
 			setSelectedAddresses: () => {},
@@ -37,6 +41,22 @@ describe("EncryptionPasswordStep", () => {
 		for (const wallet of profile.wallets().values()) {
 			profile.wallets().forget(wallet.id());
 		}
+
+		const walletMock = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "Mainsail",
+			mnemonic: passphrase,
+			network: "mainsail.devnet",
+		});
+
+		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(
+			async () =>
+				new Promise((resolve) => {
+					resolve({
+						mnemonic: passphrase,
+						wallet: walletMock,
+					});
+				}),
+		);
 
 		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
 
@@ -53,12 +73,12 @@ describe("EncryptionPasswordStep", () => {
 
 	it("should fail creating a wallet with encryption password", async () => {
 		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		const createURL = `/profiles/${fixtureProfileId}`;
 		history.push(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
+			<Route path="/profiles/:profileId">
+				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -66,27 +86,16 @@ describe("EncryptionPasswordStep", () => {
 			},
 		);
 
-		const continueButton = screen.getByTestId("CreateWallet__continue-button");
-		const backButton = screen.getByTestId("CreateWallet__back-button");
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
+		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 
 		await userEvent.click(continueButton);
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
-
-		await userEvent.click(backButton);
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
-
-		await userEvent.click(continueButton);
-
-		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
@@ -137,17 +146,18 @@ describe("EncryptionPasswordStep", () => {
 
 		await waitFor(() => expect(walletSpy).toHaveBeenCalledWith());
 		walletSpy.mockRestore();
-		historySpy.mockRestore();
 	});
 
 	it("should create a wallet and use encryption password", async () => {
 		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		const createURL = `/profiles/${fixtureProfileId}`;
 		history.push(createURL);
 
+		const onOpenChangeMock = vi.fn();
+
 		render(
-			<Route path="/profiles/:profileId/wallets/create">
-				<CreateWallet />
+			<Route path="/profiles/:profileId">
+				<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />
 			</Route>,
 			{
 				history,
@@ -156,19 +166,12 @@ describe("EncryptionPasswordStep", () => {
 		);
 
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
-		const backButton = screen.getByTestId("CreateWallet__back-button");
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		await userEvent.click(continueButton);
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
-
-		await userEvent.click(backButton);
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
@@ -190,9 +193,9 @@ describe("EncryptionPasswordStep", () => {
 		await userEvent.click(continueButton);
 
 		const sampleWallet = profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.devnet",
 		});
 
 		//@ts-ignore
@@ -230,8 +233,6 @@ describe("EncryptionPasswordStep", () => {
 
 		await userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
-		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`));
-
-		historySpy.mockRestore();
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 	});
 });
