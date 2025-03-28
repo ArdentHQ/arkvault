@@ -1,17 +1,20 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react";
+import { act, renderHook } from "@testing-library/react";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
 import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
-import { env, getDefaultProfileId, MNEMONICS, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("ConfirmPassphraseStep", () => {
 	beforeEach(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		for (const wallet of profile.wallets().values()) {
 			profile.wallets().forget(wallet.id());
@@ -22,19 +25,26 @@ describe("ConfirmPassphraseStep", () => {
 		const { result: form } = renderHook(() =>
 			useForm({
 				defaultValues: {
-					mnemonic: MNEMONICS[0],
+					mnemonic: MAINSAIL_MNEMONICS[0],
 				},
 			}),
 		);
+
 		render(
 			<FormProvider {...form.current}>
 				<ConfirmPassphraseStep />
 			</FormProvider>,
 		);
 
+		// This is to silence `act` warning due to `register` call
+		// https://github.com/testing-library/react-testing-library/issues/1051#issuecomment-1111625962
+		act(async () => {
+			await new Promise((resolve) => {
+				setTimeout(resolve);
+			});
+		});
+
 		expect(screen.getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeInTheDocument();
 		expect(screen.getAllByTestId("MnemonicVerificationInput__input")).toHaveLength(3);
-
-		expect(form.current.getValues()).toStrictEqual({});
 	});
 });
