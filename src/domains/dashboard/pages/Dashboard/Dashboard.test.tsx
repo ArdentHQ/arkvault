@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-
+import userEvent from "@testing-library/user-event";
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
@@ -210,5 +210,90 @@ describe("Dashboard", () => {
 		await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
 
 		mockHasCompletedTutorial.mockRestore();
+	});
+
+	it("should navigate to wallet votes when more than one wallet is selected", async () => {
+		const wallet = profile.wallets().first();
+		const wallet2 = profile.wallets().last();
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet, wallet2],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet.address(), wallet2.address()],
+			selectedWallets: [wallet, wallet2],
+			setSelectedAddresses: () => {},
+		});
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletMyVotes__button")).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId("WalletMyVotes__button"));
+
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith({ pathname: `/profiles/${profile.id()}/votes` });
+		});
+
+		usePortfolioMock.mockRestore();
+
+		historySpy.mockRestore();
+	});
+
+	it("should navigate to wallet votes when one wallet is selected", async () => {
+		const wallet = profile.wallets().first();
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet.address()],
+			selectedWallets: [wallet],
+			setSelectedAddresses: () => {},
+		});
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletVote__button")).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId("WalletVote__button"));
+
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
+		});
+
+		usePortfolioMock.mockRestore();
+
+		historySpy.mockRestore();
 	});
 });

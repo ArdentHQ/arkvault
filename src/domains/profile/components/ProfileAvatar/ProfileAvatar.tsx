@@ -14,7 +14,7 @@ export const ProfileAvatar = ({ profile, size = "lg" }: ProfileAvatarProperties)
 		<Avatar size={size} noShadow innerClassName="rounded">
 			<img
 				data-testid="ProfileAvatar__svg"
-				src={`data:image/svg+xml;utf8,${profile.avatar()}`}
+				src={`data:image/svg+xml;utf8,${encodeURIComponent(profile.avatar())}`}
 				title={profile.name()}
 				alt={profile.name()}
 			/>
