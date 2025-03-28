@@ -66,7 +66,7 @@ const defaultNetworks = {
 	},
 	"mainsail.mainnet": {
 		displayName: "Mainsail",
-		nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+		nethash: "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 	},
 };
 
@@ -270,7 +270,7 @@ export const useSearchParametersValidation = () => {
 			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 
-		if (!allEnabledNetworks.some((item) => item.coin() === coin)) {
+		if (!allEnabledNetworks.some((item) => item.coin().toLowerCase() === coin.toLowerCase())) {
 			return { error: { type: SearchParametersError.CoinNotSupported, value: coin } };
 		}
 
@@ -314,6 +314,7 @@ export const useSearchParametersValidation = () => {
 
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
+			console.log("has nethash", network?.id(), nethash, allEnabledNetworks.map(w => w.meta().nethash));
 			if (!network) {
 				/* istanbul ignore next -- @preserve */
 				for (let { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {

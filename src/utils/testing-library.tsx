@@ -272,6 +272,11 @@ const publicNetworksStub: any = {
 			currency: {
 				ticker: "ARK",
 			},
+			meta: {
+				...MainsailDefaultManifest.meta,
+				nethash: "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+				version: 30,
+			},
 			id: "mainsail.mainnet",
 			name: "Mainnet",
 			type: "live",
